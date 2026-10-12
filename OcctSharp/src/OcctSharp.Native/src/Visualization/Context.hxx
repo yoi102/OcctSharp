@@ -4,6 +4,8 @@
 #include "OcctSharp.Native.h"
 #include "Visualization/RenderResources.hxx"
 #include <AIS_ColoredShape.hxx>
+#include <AIS_Shape.hxx>
+#include <AIS_ViewCube.hxx>
 #include <AIS_InteractiveContext.hxx>
 #include <AIS_Manipulator.hxx>
 #include <Aspect_DisplayConnection.hxx>
@@ -17,6 +19,8 @@
 #include <WNT_Window.hxx>
 #include <gp_Trsf.hxx>
 #include <thread>
+#include <memory>
+namespace OcctSharp::Native { struct ViewerSourceEntry; }
 #include <unordered_map>
 
 struct OcctSharp_ViewerHandle
@@ -40,8 +44,15 @@ struct OcctSharp_ViewerHandle
   opencascade::handle<V3d_Viewer> Viewer;
   opencascade::handle<AIS_InteractiveContext> Context;
   opencascade::handle<V3d_View> View;
+  opencascade::handle<AIS_ViewCube> ViewCube;
+  opencascade::handle<AIS_Shape> ViewCubeLeftArrow;
+  opencascade::handle<AIS_Shape> ViewCubeRightArrow;
+  double ViewCubeIdleTransparency = 0.55;
+  bool ViewCubeHovered = false;
   opencascade::handle<WNT_Window> Window;
   std::unordered_map<int64_t, opencascade::handle<AIS_ColoredShape>> Presentations;
+  std::unordered_map<int64_t, std::shared_ptr<OcctSharp::Native::ViewerSourceEntry>> Sources;
+  std::unordered_map<int64_t, std::shared_ptr<OcctSharp::Native::ViewerSourceEntry>> InstanceSources;
   std::unordered_map<int64_t, opencascade::handle<PrsDim_Dimension>> Dimensions;
   std::unordered_map<int64_t, opencascade::handle<Graphic3d_ClipPlane>> ClipPlanes;
   std::unordered_map<int64_t, ManipulatorEntry> Manipulators;

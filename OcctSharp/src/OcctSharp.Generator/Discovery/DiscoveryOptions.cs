@@ -6,4 +6,5 @@ public sealed record DiscoveryOptions(
     IReadOnlyDictionary<string, string>? ToolkitByPackage = null)
 {
     public IReadOnlyList<string> PreambleHeaders { get; init; } = [];
+    public IReadOnlyList<string> AdditionalIncludeDirectories { get; init; } = [];
 }

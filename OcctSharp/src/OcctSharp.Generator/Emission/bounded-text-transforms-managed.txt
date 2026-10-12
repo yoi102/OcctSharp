@@ -1,0 +1,47 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using System.Text;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Interop;
+namespace OcctSharp.BoundedText;
+#pragma warning disable CS1591
+public enum BoundedTextEncoding { Ascii=0,Unicode=1 }
+public enum BoundedTextOperation { Concatenate=0,Append=1,Assign=2,Overwrite=3,Prepend=4,ReplaceCharacter=5,RemoveCharacter=6,Token=7 }
+/// <summary>Private independent transform. Overwrite uses a one-based UTF16 position and may grow at the end. ReplaceCharacter uses Position/Character as non-NUL BMP scalars; RemoveCharacter uses Position. Token uses Other as a nonempty BMP separator set and Position as a one-based token ordinal.</summary>
+public sealed record BoundedTextTransform(string Input,BoundedTextOperation Operation,string Other="",BoundedTextEncoding Encoding=BoundedTextEncoding.Unicode,int Position=1,int Character=32);
+/// <summary>Every input/output is limited to 1 MiB UTF8. Batch reserves upper output sizes before native operations; overwrite conservatively reserves input plus replacement bytes.</summary>
+public sealed record BoundedTextBatchOptions(int MaximumItems=4096,int MaximumOutputBytes=8388608);
+public sealed record BoundedTextCopy(int InputOrdinal,string Text,int Utf16Units,int Utf8Bytes);
+internal sealed partial class BoundedTextHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal BoundedTextHandle(nint value):base(true){if(value==0)throw new InvalidDataException("Null bounded text result.");SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_bounded_text_release")]internal static partial void Release(nint value);
+}
+/// <summary>All inputs are bounded, validated and reserved before native execution. Results are published together only after every copy succeeds; errors never return a partial batch.</summary>
+public static partial class BoundedTextTransforms {
+ const int TextLimit=1048576;
+ static readonly UTF8Encoding Utf8=new(false,true);
+ static BoundedTextTransforms()=>NativeLibraryResolver.EnsureRegistered(typeof(BoundedTextTransforms).Assembly);
+ public static BoundedTextCopy Compute(BoundedTextTransform transform){ArgumentNullException.ThrowIfNull(transform);return ComputeBatch([transform],new(MaximumItems:1))[0];}
+ public static IReadOnlyList<BoundedTextCopy> ComputeBatch(IEnumerable<BoundedTextTransform> transforms,BoundedTextBatchOptions? options=null){
+  ArgumentNullException.ThrowIfNull(transforms);options??=new();if(options.MaximumItems<1||options.MaximumItems>4096||options.MaximumOutputBytes<0||options.MaximumOutputBytes>8388608)throw new ArgumentOutOfRangeException(nameof(options));
+  var input=new List<(BoundedTextTransform Transform,int Reservation)>();long total=0;using(var iterator=transforms.GetEnumerator()){while(iterator.MoveNext()){if(input.Count==options.MaximumItems)throw new ArgumentException("Text batch exceeds item budget.",nameof(transforms));var transform=iterator.Current;ArgumentNullException.ThrowIfNull(transform);int reservation=Validate(transform);total+=reservation;if(total>options.MaximumOutputBytes)throw new ArgumentException("Text batch output reservation exceeds budget.",nameof(transforms));input.Add((transform,reservation));}}
+  var output=new BoundedTextCopy[input.Count];for(int i=0;i<output.Length;++i)output[i]=Execute(input[i].Transform,input[i].Reservation,i+1);return Array.AsReadOnly(output);
+ }
+ static int TextBytes(string text,bool ascii){ArgumentNullException.ThrowIfNull(text);if(text.Length>TextLimit||text.Contains('\0'))throw new ArgumentException("Text units exceed limit or contain NUL.",nameof(text));int count=Utf8.GetByteCount(text);if(count>TextLimit||ascii&&text.Any(c=>c>127))throw new ArgumentException("Text UTF8 bytes exceed limit or contain non-ASCII characters.",nameof(text));return count;}
+ static void Boundary(string source,int at){if(at<0||at>source.Length||at>0&&at<source.Length&&char.IsHighSurrogate(source[at-1])&&char.IsLowSurrogate(source[at]))throw new ArgumentException("Text position is outside input or splits a surrogate pair.");}
+ static void Scalar(int value){if(value<1||value>65535||char.IsSurrogate((char)value))throw new ArgumentException("Text character requires a non-NUL BMP scalar.");}
+ static int Validate(BoundedTextTransform t){if(!Enum.IsDefined(t.Encoding)||!Enum.IsDefined(t.Operation))throw new ArgumentOutOfRangeException(nameof(t));bool ascii=t.Encoding==BoundedTextEncoding.Ascii;int source=TextBytes(t.Input,ascii),other=TextBytes(t.Other,ascii);long units=t.Input.Length,reservation=source;
+  if(t.Operation is BoundedTextOperation.Concatenate or BoundedTextOperation.Append or BoundedTextOperation.Prepend){units+=t.Other.Length;reservation+=other;}
+  else if(t.Operation==BoundedTextOperation.Assign){units=t.Other.Length;reservation=other;}
+  else if(t.Operation==BoundedTextOperation.Overwrite){if(t.Position<1||t.Position>(long)t.Input.Length+1)throw new ArgumentException("Text overwrite position outside input.");Boundary(t.Input,t.Position-1);Boundary(t.Input,(int)Math.Min(t.Input.Length,(long)t.Position-1+t.Other.Length));units=Math.Max(t.Input.Length,(long)t.Position-1+t.Other.Length);reservation+=other;}
+  if((int)t.Operation>=(int)BoundedTextOperation.Prepend&&ascii)throw new ArgumentException("This transform requires Unicode text.");
+  if(t.Operation==BoundedTextOperation.ReplaceCharacter){Scalar(t.Position);Scalar(t.Character);int oldSize=Utf8.GetByteCount(((char)t.Position).ToString()),newSize=Utf8.GetByteCount(((char)t.Character).ToString());reservation+=(long)t.Input.Count(c=>c==t.Position)*(newSize-oldSize);}
+  else if(t.Operation==BoundedTextOperation.RemoveCharacter)Scalar(t.Position);
+  else if(t.Operation==BoundedTextOperation.Token){if(t.Position<1||t.Position>TextLimit||t.Other.Length==0)throw new ArgumentException("Invalid Unicode token index/separators.");foreach(char c in t.Other)Scalar(c);}
+  if(units>TextLimit||reservation>TextLimit)throw new ArgumentException("Text output reservation exceeds per-item budget.");return checked((int)reservation);
+ }
+ static unsafe BoundedTextCopy Execute(BoundedTextTransform transform,int reservation,int ordinal){nint token;int bytes,units;fixed(char* a=transform.Input)fixed(char* b=transform.Other)NativeError.ThrowIfFailed(CreateNative((int)transform.Encoding,(int)transform.Operation,a,transform.Input.Length,b,transform.Other.Length,transform.Position,transform.Character,out token,out bytes,out units),"bounded_text_compute");BoundedTextHandle? owned=null;try{owned=new(token);if(bytes<0||bytes>reservation||units<0||units>TextLimit)throw new InvalidDataException("Invalid bounded text output lengths.");var storage=new byte[bytes+1];fixed(byte* p=storage)NativeError.ThrowIfFailed(CopyNative(owned,p,storage.Length),"bounded_text_copy");string text=Utf8.GetString(storage,0,bytes);if(storage[bytes]!=0||text.Length!=units||text.Contains('\0'))throw new InvalidDataException("Invalid bounded text copied output.");return new(ordinal,text,units,bytes);}finally{if(owned is null)BoundedTextHandle.Release(token);else owned.Dispose();}}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_bounded_text_compute")]private static unsafe partial NativeStatus CreateNative(int unicode,int operation,char* input,int inputCount,char* other,int otherCount,int position,int character,out nint result,out int bytes,out int units);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_bounded_text_copy")]private static unsafe partial NativeStatus CopyNative(BoundedTextHandle token,byte* values,int capacity);
+}

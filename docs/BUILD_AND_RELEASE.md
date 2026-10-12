@@ -11,7 +11,8 @@ Release evidence tooling is implemented inside batch B; public publication remai
 
 ## Validated baseline
 
-- Managed target: .NET 10 only (`net10.0`, SDK 10.0.400).
+- Managed target: .NET 10 only (`net10.0`); global.json selects the 10.0.400
+  feature band with latest-patch roll-forward. Preview.29 validation used 10.0.401.
 - Platform: Windows x64.
 - Native compiler: Visual Studio 2026/MSVC 19.51.
 - OCCT: 8.0.1 combined VC14 x64 distribution with Debug and Release libraries.
@@ -83,6 +84,12 @@ From the inner `OcctSharp/` workspace:
 .\eng\build.ps1 -Configuration Debug
 ```
 
+For a new native delivery candidate, preserve the prior immutable package/baseline,
+build the Release bridge, and run `eng/update-bundled-runtime.ps1 -PackageVersion`
+with the candidate version. The updater verifies the 62-DLL file set and unchanged
+notices/licenses, copies the built Release closure and regenerates its manifest.
+`verify-bundled-runtime.ps1 -CompareBuiltRuntime` still rejects any later mismatch.
+
 Whole-batch verification additionally checks the actual Debug native closure (the
 ordinary managed Debug build intentionally uses the bundled Release runtime):
 
@@ -110,7 +117,7 @@ documentation paths; STATUS remains repository-only to avoid a package-hash cycl
 
 The machine-specific OCCT and Visual Studio roots come from ignored
 `config/local.settings.json`, environment variable/parameters, and committed examples.
-`global.json` locks the .NET SDK to 10.0.400.
+`global.json` locks the .NET SDK feature band to 10.0.400 with latest-patch roll-forward.
 
 The script validates dependency and toolchain identities, restores and bootstraps the
 generator, regenerates committed native/managed raw source, configures and builds the

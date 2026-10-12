@@ -1,0 +1,1258 @@
+{
+  "baseline": "8.0.1-preview.36",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "inventorySha256": "0D671765142D30F5BF75D2D16787C6BBD4833088237C9F8FBEBE525FE88472D6",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "declarations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBoor#I#I#I#&1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildBoor",
+      "signature": "BSplCLib::BuildBoor: void (const int, const int, const int, const NCollection_Array1<double> &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "Packed scalar cache duplicates the admitted typed cache and has a separate dimension/stride layout."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "Packed scalar cache duplicates the admitted typed cache and has a separate dimension/stride layout."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#d#*1S1_#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildKnots#I#I#b#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::BuildKnots",
+      "signature": "BSplCLib::BuildKnots: void (const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S5_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S3_#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@GetPole#I#I#I#I#&d#&I#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::GetPole",
+      "signature": "BSplCLib::GetPole: void (const int, const int, const int, const int, double &, int &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&S1_#S5_#&S3_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#S4_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Intervals#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#I#d#d#d#*S1_#S",
+      "nativeName": "BSplCLib::Intervals",
+      "signature": "BSplCLib::Intervals: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, int, bool, int, double, double, double, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool, const int, const int, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#d#b#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const double, const bool, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const double, const bool, const int, const int, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MergeBSplineKnots#d#d#d#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#S0_#S2_#&I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#S",
+      "nativeName": "BSplCLib::MergeBSplineKnots",
+      "signature": "BSplCLib::MergeBSplineKnots: void (const double, const double, const double, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, int &, occ::handle<NCollection_HArray1<double>> &, occ::handle<NCollection_HArray1<int>> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Multiple retained numeric HArray outputs and combined degree/period capacities are outside AH scalar/curve-set publication profiles.",
+      "decision": "DEFERRED",
+      "reason": "Multiple retained numeric HArray outputs and combined degree/period capacities are outside AH scalar/curve-set publication profiles. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec &, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec2d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec2d &, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt2d> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec &, const gp_Vec &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec2d#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec2d &, const gp_Vec2d &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#I#&d#S0_#d#I#I#I#S0_#*1$@S@NCollection_Array1>#d#&1S2_#S0_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const int, double &, double &, const double, const int, const int, const int, double &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoMults#S",
+      "nativeName": "BSplCLib::NoMults",
+      "signature": "BSplCLib::NoMults: NCollection_Array1<int> *()",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Borrowed null/sentinel addresses do not represent an independently owned array.",
+      "decision": "DEFERRED",
+      "reason": "Borrowed null/sentinel addresses do not represent an independently owned array. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoWeights#S",
+      "nativeName": "BSplCLib::NoWeights",
+      "signature": "BSplCLib::NoWeights: NCollection_Array1<double> *()",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Borrowed null/sentinel addresses do not represent an independently owned array.",
+      "decision": "DEFERRED",
+      "reason": "Borrowed null/sentinel addresses do not represent an independently owned array. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareInsertKnots#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&I#S5_#d#b#S",
+      "nativeName": "BSplCLib::PrepareInsertKnots",
+      "signature": "BSplCLib::PrepareInsertKnots: bool (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, int &, int &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&d#I#I#*1$@S@NCollection_Array1>#d#&1S2_#I#d#S0_#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (double &, const int, const int, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@TangExtendToConstraint#&1$@S@NCollection_Array1>#d#d#I#&d#I#I#S0_#I#b#&I#S3_#S2_#S2_#S",
+      "nativeName": "BSplCLib::TangExtendToConstraint",
+      "signature": "BSplCLib::TangExtendToConstraint: void (const NCollection_Array1<double> &, const double, const int, double &, const int, const int, const NCollection_Array1<double> &, const int, const bool, int &, int &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#d#d#&S1_#&S3_#S4_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#S2_#&S1_#&S3_#S5_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@BuildCache#d#d#d#d#b#b#I#I#I#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S3_#*S6_#S",
+      "nativeName": "BSplSLib::BuildCache",
+      "signature": "BSplSLib::BuildCache: void (const double, const double, const double, const double, const bool, const bool, const int, const int, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@BuildCache#d#d#d#d#b#b#I#I#I#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S6_#S",
+      "nativeName": "BSplSLib::BuildCache",
+      "signature": "BSplSLib::BuildCache: void (const double, const double, const double, const double, const bool, const bool, const int, const int, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "One or more scalar-looking references address contiguous buffers; exact dimension/workspace capacities must be proved before emission.",
+      "decision": "DEFERRED",
+      "reason": "Packed scalar cache duplicates the admitted typed cache and has a separate dimension/stride layout."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD0#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#S",
+      "nativeName": "BSplSLib::CacheD0",
+      "signature": "BSplSLib::CacheD0: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD1#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplSLib::CacheD1",
+      "signature": "BSplSLib::CacheD1: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD2#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S6_#S6_#S",
+      "nativeName": "BSplSLib::CacheD2",
+      "signature": "BSplSLib::CacheD2: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD0#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#S",
+      "nativeName": "BSplSLib::CoefsD0",
+      "signature": "BSplSLib::CoefsD0: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Pinned inline CoefsD infers reversed U/V degrees from canonical coefficients; explicit CacheD adapter is used instead."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD1#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplSLib::CoefsD1",
+      "signature": "BSplSLib::CoefsD1: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Pinned inline CoefsD infers reversed U/V degrees from canonical coefficients; explicit CacheD adapter is used instead."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD2#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S6_#S6_#S",
+      "nativeName": "BSplSLib::CoefsD2",
+      "signature": "BSplSLib::CoefsD2: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Pinned inline CoefsD infers reversed U/V degrees from canonical coefficients; explicit CacheD adapter is used instead."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D0#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#S",
+      "nativeName": "BSplSLib::D0",
+      "signature": "BSplSLib::D0: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D1#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S",
+      "nativeName": "BSplSLib::D1",
+      "signature": "BSplSLib::D1: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D2#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S10_#S10_#S10_#S",
+      "nativeName": "BSplSLib::D2",
+      "signature": "BSplSLib::D2: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D3#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S10_#S10_#S10_#S10_#S10_#S10_#S10_#S",
+      "nativeName": "BSplSLib::D3",
+      "signature": "BSplSLib::D3: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@DN#d#d#I#I#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&$@S@gp_Vec#S",
+      "nativeName": "BSplSLib::DN",
+      "signature": "BSplSLib::DN: void (const double, const double, const int, const int, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@FunctionMultiply#&1$@S@BSplSLib_EvaluatorFunction#I#I#&1$@S@NCollection_Array1>#d#S2_#*1$@S@NCollection_Array1>#I#S4_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#S2_#S2_#I#I#&S7_#&S10_#&I#S",
+      "nativeName": "BSplSLib::FunctionMultiply",
+      "signature": "BSplSLib::FunctionMultiply: void (const BSplSLib_EvaluatorFunction &, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, const int, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts.",
+      "decision": "DEFERRED",
+      "reason": "Evaluator callbacks require retention, exception, reentrancy and trampoline contracts. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@HomogeneousD0#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&d#&S2_#S",
+      "nativeName": "BSplSLib::HomogeneousD0",
+      "signature": "BSplSLib::HomogeneousD0: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, double &, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@HomogeneousD1#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#&d#S12_#S12_#S",
+      "nativeName": "BSplSLib::HomogeneousD1",
+      "signature": "BSplSLib::HomogeneousD1: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@IncreaseDegree#b#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S6_#&S8_#S",
+      "nativeName": "BSplSLib::IncreaseDegree",
+      "signature": "BSplSLib::IncreaseDegree: void (const bool, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@InsertKnots#b#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S5_#*1S8_#&S1_#*S4_#&S6_#&S8_#d#b#S",
+      "nativeName": "BSplSLib::InsertKnots",
+      "signature": "BSplSLib::InsertKnots: void (const bool, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Contact-order and flat-knot dense/banded solve layouts plus error-status publication require a separate interpolation contract; owning HArray interpolation is available.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Iso#d#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#I#b#&$@S@NCollection_Array1>#S2_#*S6_#S",
+      "nativeName": "BSplSLib::Iso",
+      "signature": "BSplSLib::Iso: void (const double, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const int, const bool, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@MovePoint#d#d#&1$@S@gp_Vec#I#I#I#I#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S7_#&I#S9_#S9_#S9_#&S3_#S",
+      "nativeName": "BSplSLib::MovePoint",
+      "signature": "BSplSLib::MovePoint: void (const double, const double, const gp_Vec &, const int, const int, const int, const int, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, int &, int &, int &, int &, NCollection_Array2<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved.",
+      "decision": "DEFERRED",
+      "reason": "Owning geometry evaluation/editing closes the workflow; low-level output workspace and failure protocol remain unproved. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@NoWeights#S",
+      "nativeName": "BSplSLib::NoWeights",
+      "signature": "BSplSLib::NoWeights: NCollection_Array2<double> *()",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Borrowed null/sentinel addresses do not represent an independently owned array.",
+      "decision": "DEFERRED",
+      "reason": "Borrowed null/sentinel addresses do not represent an independently owned array. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@PolesCoefficients#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S1_#*S4_#S",
+      "nativeName": "BSplSLib::PolesCoefficients",
+      "signature": "BSplSLib::PolesCoefficients: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "ADMITTED",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@RemoveKnot#b#I#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S6_#&S8_#d#S",
+      "nativeName": "BSplSLib::RemoveKnot",
+      "signature": "BSplSLib::RemoveKnot: bool (const bool, const int, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Resolution#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#d#&d#S9_#S",
+      "nativeName": "BSplSLib::Resolution",
+      "signature": "BSplSLib::Resolution: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool, const bool, const bool, const double, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Unperiodize#b#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S1_#&S3_#&S5_#*S8_#S",
+      "nativeName": "BSplSLib::Unperiodize",
+      "signature": "BSplSLib::Unperiodize: void (const bool, const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "priorReason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow.",
+      "decision": "DEFERRED",
+      "reason": "Nullable weight/multiplicity pointers and compound workspace/output layouts need an explicit optional-copy contract; existing owning evaluators/editors supply the workflow. Outside the closed coefficient/cache/typed interpolation workflow; no automatic admission."
+    }
+  ],
+  "nativeImplementationDependencies": [
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#d#b#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const double, const bool, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "migrationClaim": false,
+      "reason": "Call-local helper using owning geometry or private one-based arrays; no separate public raw-pointer/reference binding is generated or counted."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Weights#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom2d_BezierCurve::Weights",
+      "signature": "Geom2d_BezierCurve::Weights: void (NCollection_Array1<double> &) const",
+      "baselineDisposition": "Blocked",
+      "migrationClaim": false,
+      "reason": "Call-local helper using owning geometry or private one-based arrays; no separate public raw-pointer/reference binding is generated or counted."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Weights#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BezierCurve::Weights",
+      "signature": "Geom_BezierCurve::Weights: void (NCollection_Array1<double> &) const",
+      "baselineDisposition": "Blocked",
+      "migrationClaim": false,
+      "reason": "Call-local helper using owning geometry or private one-based arrays; no separate public raw-pointer/reference binding is generated or counted."
+    }
+  ]
+}

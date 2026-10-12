@@ -1,0 +1,150 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.RepairWorkspaces;
+internal static unsafe partial class RepairInterop {
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_oriented_shape")]internal static partial NativeStatus OrientedShape(ShapeHandle shape,int orientation,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_analyze")]internal static partial NativeStatus WireAnalyze(RepairHandle data,ShapeHandle face,double precision,int closed,int mode3d,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_diagnostic_info")]internal static partial NativeStatus WireDiagnosticInfo(RepairHandle token,int selector,int index,out int value);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_diagnostic_face")]internal static partial NativeStatus WireDiagnosticFace(RepairHandle token,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_connect")]internal static partial NativeStatus WireConnect(RepairHandle token,ShapeHandle face,ShapeHandle other,double precision,double* distances,int capacity,out int connected);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_loops")]internal static partial NativeStatus WireLoops(RepairHandle token,ShapeHandle face,double precision,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_shell_analyze")]internal static partial NativeStatus ShellAnalyze(ShapeHandle source,int checkinternal,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_shell_diagnostic_info")]internal static partial NativeStatus ShellDiagnosticInfo(RepairHandle token,int selector,out int result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_shell_diagnostic_shapes")]internal static partial NativeStatus ShellDiagnosticShapes(RepairHandle token,int selector,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_freebounds")]internal static partial NativeStatus FreeShape(ShapeHandle source,nint input,int operation,double tolerance,int shared,int splitclosed,int splitopen,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_freebounds")]internal static partial NativeStatus FreeSet(nint source,TopologyCollectionHandle input,int operation,double tolerance,int shared,int splitclosed,int splitopen,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_edge_fix")]internal static partial NativeStatus EdgeFix(ShapeHandle edge,ShapeHandle face,int operation,double tolerance,int seam,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_edge_fix")]internal static partial NativeStatus EdgeFixWithoutFace(ShapeHandle edge,nint face,int operation,double tolerance,int seam,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_edge_split")]internal static partial NativeStatus SplitSingle(ShapeHandle edge,ShapeHandle face,ShapeHandle vertex,nint unused,int operation,double first,double last,double tolerance3d,double tolerance2d,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_edge_split")]internal static partial NativeStatus SplitSpan(ShapeHandle edge,ShapeHandle face,ShapeHandle vertex1,ShapeHandle vertex2,int operation,double first,double last,double tolerance3d,double tolerance2d,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_edge_split")]internal static partial NativeStatus CutEdge(ShapeHandle edge,ShapeHandle face,nint vertex1,nint vertex2,int operation,double first,double last,double tolerance3d,double tolerance2d,out nint result);
+}
+/// <summary>Native wire diagnostic status categories.</summary>
+public enum WireDiagnosticCheck {
+ /// <summary>Ordering.</summary>
+ Order,
+ /// <summary>Connections.</summary>
+ Connected,
+ /// <summary>Small edges.</summary>
+ Small,
+ /// <summary>Edge curves.</summary>
+ EdgeCurves,
+ /// <summary>Degeneration.</summary>
+ Degenerated,
+ /// <summary>Self intersection.</summary>
+ SelfIntersection,
+ /// <summary>Lacking edges.</summary>
+ Lacking,
+ /// <summary>Closure.</summary>
+ Closed
+}
+/// <summary>Owning copied wire order and diagnostic flags. The order retains signed native one-based indices.</summary>
+public sealed class RepairWireDiagnostics : IDisposable {
+ readonly RepairHandle handle;
+ RepairHandle NativeHandle=>handle.Live(this);
+ internal RepairWireDiagnostics(nint p)=>handle=RepairHandle.Own(p,5);
+ int Info(int selector,int index=0){RepairInterop.Check(RepairInterop.WireDiagnosticInfo(NativeHandle,selector,index,out var value));return value;}
+ /// <summary>Gets the number of ordered edges.</summary>
+ public int Count=>Info(0);
+ /// <summary>Reports that the original order requires repair.</summary>
+ public bool NeedsReorder=>Info(1)!=0;
+ /// <summary>Reports initialized wire and face support.</summary>
+ public bool IsReady=>Info(2)!=0;
+ /// <summary>Gets an owning diagnostic support face.</summary>
+ public Shape Face {get{RepairInterop.Check(RepairInterop.WireDiagnosticFace(NativeHandle,out var p));return ShapeFactory.FromNativeHandle(p,"repair_diagnostic_face");}}
+ /// <summary>Gets a signed native one-based source-edge index. Negative means reversed.</summary>
+ public int Ordered(int index)=>Info(3,index);
+ /// <summary>Queries copied native status flags for a category.</summary>
+ public bool Status(WireDiagnosticCheck check,ShapeExtendStatus status){int c=(int)check,s=(int)status;if(c<0 || c>7 || s<0 || s>18)throw new ArgumentOutOfRangeException(nameof(check));return Info(4,s*8+c)!=0;}
+ /// <summary>Releases diagnostic storage.</summary>
+ public void Dispose()=>handle.Dispose();
+}
+/// <summary>Owning copied shell diagnostics and shape-value containers.</summary>
+public sealed class RepairShellDiagnostics : IDisposable {
+ readonly RepairHandle handle;
+ RepairHandle NativeHandle=>handle.Live(this);
+ internal RepairShellDiagnostics(nint p)=>handle=RepairHandle.Own(p,6);
+ int Info(int selector){RepairInterop.Check(RepairInterop.ShellDiagnosticInfo(NativeHandle,selector,out var n));return n;}
+ OwnedShapeSet Set(int selector){RepairInterop.Check(RepairInterop.ShellDiagnosticShapes(NativeHandle,selector,out var p));return new(p);}
+ /// <summary>Gets loaded shell count.</summary>
+ public int Count=>Info(0);
+ /// <summary>Reports bad edges.</summary>
+ public bool HasBadEdges=>Info(1)!=0;
+ /// <summary>Reports free edges.</summary>
+ public bool HasFreeEdges=>Info(2)!=0;
+ /// <summary>Reports connected edges.</summary>
+ public bool HasConnectedEdges=>Info(3)!=0;
+ /// <summary>Reports whether the exact supplied shape itself was loaded as a shell.</summary>
+ public bool IsSourceLoaded=>Info(4)!=0;
+ /// <summary>Gets loaded shells in native order.</summary>
+ public OwnedShapeSet LoadedShells=>Set(0);
+ /// <summary>Gets copied bad-edge values.</summary>
+ public OwnedShapeSet BadEdges=>Set(1);
+ /// <summary>Gets copied free-edge values.</summary>
+ public OwnedShapeSet FreeEdges=>Set(2);
+ /// <summary>Releases diagnostic storage.</summary>
+ public void Dispose()=>handle.Dispose();
+}
+/// <summary>Copied native wire-to-shape connection distances.</summary>
+public readonly record struct RepairConnectionDistances(bool Connected,double TailHead,double TailTail,double HeadHead,double HeadTail);
+/// <summary>Audited edge-fix operation category. Every operation runs on privately copied input topology and geometry.</summary>
+public enum RepairEdgeOperation {
+ /// <summary>Add a missing 3D curve.</summary>
+ AddCurve3d,
+ /// <summary>Add a missing pcurve on a face.</summary>
+ AddPCurve,
+ /// <summary>Remove an invalid 3D curve.</summary>
+ RemoveCurve3d,
+ /// <summary>Remove an invalid pcurve on a face.</summary>
+ RemovePCurve,
+ /// <summary>Fix same-parameter without a face.</summary>
+ SameParameter,
+ /// <summary>Fix same-parameter on a face.</summary>
+ SameParameterOnFace,
+ /// <summary>Fix vertex tolerance.</summary>
+ VertexTolerance,
+ /// <summary>Fix vertex tolerance on a face.</summary>
+ VertexToleranceOnFace,
+ /// <summary>Fix reversed pcurve on a face.</summary>
+ Reversed2d
+}
+/// <summary>Call-local native diagnostics and independently copied edge/free-bound operations.</summary>
+public static unsafe class RepairDiagnostics {
+ /// <summary>Copies a TopoDS shape value with native orientation 0..3, retaining TShape and location without mutating the original.</summary>
+ public static Shape WithOrientation(Shape shape,int orientation){ArgumentNullException.ThrowIfNull(shape);RepairInterop.Check(RepairInterop.OrientedShape(shape.Handle,orientation,out var p));return ShapeFactory.FromNativeHandle(p,"repair_oriented_shape");}
+ /// <summary>Analyzes a detached ordered wire against a face, copying native order and all diagnostic statuses.</summary>
+ public static RepairWireDiagnostics AnalyzeWire(WireDataSnapshot data,Shape face,double precision=1e-6,bool closed=true,bool mode3d=true){ArgumentNullException.ThrowIfNull(data);ArgumentNullException.ThrowIfNull(face);RepairInterop.Check(RepairInterop.WireAnalyze(data.NativeHandle,face.Handle,precision,closed?1:0,mode3d?1:0,out var p));return new(p);}
+ /// <summary>Copies all coupled loop diagnostic collections. Shapes contains the indexed loop vertices.</summary>
+ public static RepairCoupledWorkspace WireLoops(WireDataSnapshot data,Shape face,double precision=1e-6){ArgumentNullException.ThrowIfNull(data);ArgumentNullException.ThrowIfNull(face);RepairInterop.Check(RepairInterop.WireLoops(data.NativeHandle,face.Handle,precision,out var p));return new(p);}
+ /// <summary>Checks wire-to-edge/wire connection and copies four endpoint distances.</summary>
+ public static RepairConnectionDistances CheckConnection(WireDataSnapshot data,Shape face,Shape other,double precision=1e-6){ArgumentNullException.ThrowIfNull(data);ArgumentNullException.ThrowIfNull(face);ArgumentNullException.ThrowIfNull(other);double* distances=stackalloc double[4];RepairInterop.Check(RepairInterop.WireConnect(data.NativeHandle,face.Handle,other.Handle,precision,distances,4,out var n));return new(n!=0,distances[0],distances[1],distances[2],distances[3]);}
+ /// <summary>Checks orientation, free edges and nonmanifold connections using a private analyzer.</summary>
+ public static RepairShellDiagnostics AnalyzeShell(Shape source,bool checkInternalEdges=false){ArgumentNullException.ThrowIfNull(source);RepairInterop.Check(RepairInterop.ShellAnalyze(source.Handle,checkInternalEdges?1:0,out var p));return new(p);}
+ /// <summary>Analyzes privately copied source geometry. Shapes contains the closed and open wire compounds.</summary>
+ public static RepairCoupledWorkspace FreeBounds(Shape source,double tolerance=1e-6,bool splitClosed=false,bool splitOpen=true){ArgumentNullException.ThrowIfNull(source);RepairInterop.Check(RepairInterop.FreeShape(source.Handle,0,0,tolerance,0,splitClosed?1:0,splitOpen?1:0,out var p));return new(p);}
+ static RepairCoupledWorkspace Free(OwnedShapeSet input,int operation,double tolerance,bool shared){ArgumentNullException.ThrowIfNull(input);RepairInterop.Check(RepairInterop.FreeSet(0,input.NativeHandle,operation,tolerance,shared?1:0,0,0,out var p));return new(p);}
+ /// <summary>Connects privately copied edges into wires with an explicit shared-vertex policy.</summary>
+ public static RepairCoupledWorkspace ConnectEdges(OwnedShapeSet edges,double tolerance=1e-6,bool shared=false)=>Free(edges,1,tolerance,shared);
+ /// <summary>Connects wires and returns the coupled vertex-replacement map in FirstMapKeys/FirstMapValues.</summary>
+ public static RepairCoupledWorkspace ConnectWires(OwnedShapeSet wires,double tolerance=1e-6,bool shared=false)=>Free(wires,2,tolerance,shared);
+ /// <summary>Dispatches wires into closed/open compounds in Shapes.</summary>
+ public static RepairCoupledWorkspace DispatchWires(OwnedShapeSet wires)=>Free(wires,3,1e-6,false);
+ /// <summary>Splits wires into closed PrimaryKeys and open SecondaryKeys.</summary>
+ public static RepairCoupledWorkspace SplitWires(OwnedShapeSet wires,double tolerance=1e-6,bool shared=false)=>Free(wires,4,tolerance,shared);
+ /// <summary>Fixes an independently copied edge. Face operations require exact source membership. Shapes contains the fixed edge and, when used, its coupled support face.</summary>
+ public static RepairCoupledWorkspace FixEdge(Shape edge,RepairEdgeOperation operation,Shape? face=null,double tolerance=1e-6,bool seam=false){ArgumentNullException.ThrowIfNull(edge);nint p;
+  if(face is null)RepairInterop.Check(RepairInterop.EdgeFixWithoutFace(edge.Handle,0,(int)operation,tolerance,seam?1:0,out p));else RepairInterop.Check(RepairInterop.EdgeFix(edge.Handle,face.Handle,(int)operation,tolerance,seam?1:0,out p));return new(p);}
+ /// <summary>Splits an exact face edge at its pcurve parameter, returning both new edges together on native success.</summary>
+ public static RepairCoupledWorkspace SplitEdge(Shape edge,Shape face,Shape vertex,double parameter,double tolerance3d=1e-6,double tolerance2d=1e-6){ArgumentNullException.ThrowIfNull(edge);ArgumentNullException.ThrowIfNull(face);ArgumentNullException.ThrowIfNull(vertex);RepairInterop.Check(RepairInterop.SplitSingle(edge.Handle,face.Handle,vertex.Handle,0,0,parameter,parameter,tolerance3d,tolerance2d,out var p));return new(p);}
+ /// <summary>Splits and cuts an exact face edge between two pcurve parameters.</summary>
+ public static RepairCoupledWorkspace SplitCutEdge(Shape edge,Shape face,Shape vertex,double first,double last,double tolerance3d=1e-6,double tolerance2d=1e-6){ArgumentNullException.ThrowIfNull(edge);ArgumentNullException.ThrowIfNull(face);ArgumentNullException.ThrowIfNull(vertex);RepairInterop.Check(RepairInterop.SplitSingle(edge.Handle,face.Handle,vertex.Handle,0,1,first,last,tolerance3d,tolerance2d,out var p));return new(p);}
+ /// <summary>Cuts a private edge copy; Shapes contains the result and SelectedNativeIndex copies the native cut-line flag.</summary>
+ public static RepairCoupledWorkspace CutEdge(Shape edge,Shape face,double end,double cut,double tolerance=1e-6){ArgumentNullException.ThrowIfNull(edge);ArgumentNullException.ThrowIfNull(face);RepairInterop.Check(RepairInterop.CutEdge(edge.Handle,face.Handle,0,0,2,end,cut,tolerance,tolerance,out var p));return new(p);}
+ /// <summary>Splits a span using two private vertex copies and a private ReShape context; returns every edge and the native selected span index.</summary>
+ public static RepairCoupledWorkspace SplitSpan(Shape edge,Shape face,Shape firstVertex,Shape lastVertex,double first,double last,double tolerance3d=1e-6,double tolerance2d=1e-6){ArgumentNullException.ThrowIfNull(edge);ArgumentNullException.ThrowIfNull(face);ArgumentNullException.ThrowIfNull(firstVertex);ArgumentNullException.ThrowIfNull(lastVertex);RepairInterop.Check(RepairInterop.SplitSpan(edge.Handle,face.Handle,firstVertex.Handle,lastVertex.Handle,3,first,last,tolerance3d,tolerance2d,out var p));return new(p);}
+ /// <summary>Creates and orients a solid from a privately copied valid shell.</summary>
+ public static Shape SolidFromShell(Shape shell){ArgumentNullException.ThrowIfNull(shell);RepairInterop.Check(RepairInterop.SolidFromShell(shell.Handle,out var p));return ShapeFactory.FromNativeHandle(p,"repair_solid_from_shell");}
+}

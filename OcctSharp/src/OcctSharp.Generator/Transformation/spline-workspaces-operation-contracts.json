@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@BuildCache#d#d#d#d#b#b#I#I#I#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S3_#*S6_#S",
+      "nativeName": "BSplSLib::BuildCache",
+      "signature": "BSplSLib::BuildCache: void (const double, const double, const double, const double, const bool, const bool, const int, const int, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD0#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#S",
+      "nativeName": "BSplSLib::CacheD0",
+      "signature": "BSplSLib::CacheD0: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD1#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplSLib::CacheD1",
+      "signature": "BSplSLib::CacheD1: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD2#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S6_#S6_#S",
+      "nativeName": "BSplSLib::CacheD2",
+      "signature": "BSplSLib::CacheD2: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, int &)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@PolesCoefficients#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S1_#*S4_#S",
+      "nativeName": "BSplSLib::PolesCoefficients",
+      "signature": "BSplSLib::PolesCoefficients: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "guard": "AMExact",
+      "reason": "ADR-0105: private bounded typed workspace; independent copied results and atomic publication."
+    }
+  ],
+  "supportingOperations": []
+}

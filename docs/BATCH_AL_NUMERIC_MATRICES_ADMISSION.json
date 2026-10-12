@@ -1,0 +1,1133 @@
+{
+  "baseline": "8.0.1-preview.35",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASS",
+  "inventorySha256": "0079A6D371A20433246CD265758C011AF1BF6759DBDCFC0364962D55F1778EA8",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "declarations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBSpMatrix#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#I#&$@S@math_Matrix#&I#S6_#S",
+      "nativeName": "BSplCLib::BuildBSpMatrix",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL206",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::BuildBSpMatrix: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const int, math_Matrix &, int &, int &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@EvalBsplineBasis#I#I#&1$@S@NCollection_Array1>#d#d#&I#&$@S@math_Matrix#b#S",
+      "nativeName": "BSplCLib::EvalBsplineBasis",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL206",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::EvalBsplineBasis: int (const int, const int, const NCollection_Array1<double> &, const double, int &, math_Matrix &, const bool)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt2d> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "ADMITTED",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "BSplCLib_2.cxx",
+        "BSplCLib.cxx",
+        "BSplCLib_CurveComputation.pxx"
+      ],
+      "sdkSourceSha256": {
+        "BSplCLib_2.cxx": "9413F4CA3C0E7B941D9FB1F487285756903796E46BF726C0361BAF91B52AB2F2",
+        "BSplCLib.cxx": "C1223C2EBF93202DEB3AB124C293B43E30C5029747C4DA7C36C2BDF5067D9A21",
+        "BSplCLib_CurveComputation.pxx": "3A97CB4C0505FC86FE31B8C49B4CB37128824DA094AEA060EDEB338693609ABD"
+      },
+      "sdkHeaderSha256": "83D3D7612CF92513DB5CB85A74C24726B6CD87331A773A88A4933A3FF013FFE6"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Determinant#1",
+      "nativeName": "math_Gauss::Determinant",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::Determinant: double () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Gauss::Dump",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "DEFERRED",
+      "signature": "math_Gauss::Dump: void (Standard_OStream &) const",
+      "reason": "Native stream output is outside the copied numerical result contract.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Invert#&$@S@math_Matrix#1",
+      "nativeName": "math_Gauss::Invert",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::Invert: void (math_Matrix &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@IsDone#1",
+      "nativeName": "math_Gauss::IsDone",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::IsDone: bool () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Gauss::Solve",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::Solve: void (math_Vector &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&1$@S@math_VectorBase>#d#&S1_#1",
+      "nativeName": "math_Gauss::Solve",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::Solve: void (const math_Vector &, math_Vector &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&&$@S@math_Gauss#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Gauss::math_Gauss: void (math_Gauss &&)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&1$@S@math_Gauss#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Gauss::math_Gauss: void (const math_Gauss &)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&1$@S@math_Matrix#d#&1$@S@Message_ProgressRange#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Gauss::math_Gauss: void (const math_Matrix &, const double, const Message_ProgressRange &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Gauss.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Gauss.cxx": "AF7D73C2953035E54D078F7AD3FD6F1738BA38981936578E90F02CF6E29E6016"
+      },
+      "sdkHeaderSha256": "F444EF46E719976A66171406ACB649A6D4D9E052A00D0DB21665D3FFE2492B6A"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@AllValues#1",
+      "nativeName": "math_Householder::AllValues",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::AllValues: const math_Matrix &() const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Householder::Dump",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "DEFERRED",
+      "signature": "math_Householder::Dump: void (Standard_OStream &) const",
+      "reason": "Native stream output is outside the copied numerical result contract.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@IsDone#1",
+      "nativeName": "math_Householder::IsDone",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::IsDone: bool () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@Value#&$@S@math_VectorBase>#d#I#1",
+      "nativeName": "math_Householder::Value",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::Value: void (math_Vector &, const int) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&&$@S@math_Householder#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Householder::math_Householder: void (math_Householder &&)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Householder#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Householder::math_Householder: void (const math_Householder &)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Vector &, const double)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#I#I#I#I#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Matrix &, const int, const int, const int, const int, const double)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Matrix &, const double)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Householder.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Householder.cxx": "12C08524CE0B338A60C565C21E47AF201F154693177B9A338B401EAB9CA66161"
+      },
+      "sdkHeaderSha256": "6157F7F0954677896E52E057699E35C06ABBF9AC480723D2506BF107FDD92C3F"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Added#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Added",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Added: math_Matrix (const math_Matrix &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Col#I#1",
+      "nativeName": "math_Matrix::Col",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Col: math_VectorBase<> (const int) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Divided#d#1",
+      "nativeName": "math_Matrix::Divided",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Divided: math_Matrix (const double) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Matrix::Dump",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "DEFERRED",
+      "signature": "math_Matrix::Dump: void (Standard_OStream &) const",
+      "reason": "Native stream output is outside the copied numerical result contract.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Initialized#&1$@S@math_Matrix#",
+      "nativeName": "math_Matrix::Initialized",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "DEFERRED",
+      "signature": "math_Matrix::Initialized: math_Matrix &(const math_Matrix &)",
+      "reason": "Returns a mutable self alias; use existing Init or a fresh fully initialized FromValues owner.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Inverse#1",
+      "nativeName": "math_Matrix::Inverse",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Inverse: math_Matrix () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Multiplied: math_Matrix (const math_Matrix &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Multiplied: math_VectorBase<> (const math_VectorBase<> &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Multiplied: math_Matrix (const double) const noexcept",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiply#&1$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "math_Matrix::Multiply",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Multiply: void (const math_VectorBase<> &, const math_VectorBase<> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Opposite#1",
+      "nativeName": "math_Matrix::Opposite",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Opposite: math_Matrix () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Row#I#1",
+      "nativeName": "math_Matrix::Row",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Row: math_VectorBase<> (const int) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetCol#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetCol",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::SetCol: void (const int, const math_VectorBase<> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetRow#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetRow",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::SetRow: void (const int, const math_VectorBase<> &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Subtracted#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Subtracted",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Subtracted: math_Matrix (const math_Matrix &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiplied#d#1",
+      "nativeName": "math_Matrix::TMultiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::TMultiplied: math_Matrix (const double) const noexcept",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiply#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::TMultiply",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::TMultiply: math_Matrix (const math_Matrix &) const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Transposed#1",
+      "nativeName": "math_Matrix::Transposed",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Transposed: math_Matrix () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Value#I#I#",
+      "nativeName": "math_Matrix::Value",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::Value: double &(const int, const int)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#&&$@S@math_Matrix#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Matrix::math_Matrix: void (math_Matrix &&) noexcept",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#&1$@S@math_Matrix#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::math_Matrix: void (const math_Matrix &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#*v#I#I#I#I#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_Matrix::math_Matrix: void (void *const, const int, const int, const int, const int)",
+      "reason": "External raw storage has no bounded independent ownership contract.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#I#I#I#I#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_Matrix::math_Matrix: void (const int, const int, const int, const int)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_Matrix.lxx",
+        "math_Matrix.cxx",
+        "math_DoubleTab.hxx"
+      ],
+      "sdkSourceSha256": {
+        "math_Matrix.lxx": "2AF1B9DA41632C77834E1A26906F104B7717DD1076C6A42431EA99CC02685F27",
+        "math_Matrix.cxx": "F29613D2B6156BBCD2188CD8859F3ADE0117822E1E15902A27862004524CA190",
+        "math_DoubleTab.hxx": "99A468C807BB46D75DA900CE4955779F873C7CFD06396F6449CA6CEEFA7BD301"
+      },
+      "sdkHeaderSha256": "DF1D7E1761162B1DFC1738D06EEDBA965F3E693733B07AAD9915DB6A02434D2D"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_SVD::Dump",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "DEFERRED",
+      "signature": "math_SVD::Dump: void (Standard_OStream &) const",
+      "reason": "Native stream output is outside the copied numerical result contract.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@IsDone#1",
+      "nativeName": "math_SVD::IsDone",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_SVD::IsDone: bool () const",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@PseudoInverse#&$@S@math_Matrix#d#",
+      "nativeName": "math_SVD::PseudoInverse",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_SVD::PseudoInverse: void (math_Matrix &, const double)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@Solve#&1$@S@math_VectorBase>#d#&S1_#d#",
+      "nativeName": "math_SVD::Solve",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "ADMITTED",
+      "signature": "math_SVD::Solve: void (const math_Vector &, math_Vector &, const double)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&&$@S@math_SVD#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_SVD::math_SVD: void (math_SVD &&)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&1$@S@math_Matrix#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "ADMITTED",
+      "signature": "math_SVD::math_SVD: void (const math_Matrix &)",
+      "reason": "Closed copied numeric adapter; normalized private solver or bounded band layout. Validated by AL source audit and Release/Debug/cold/actual-Debug suites.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&1$@S@math_SVD#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "DEFERRED",
+      "signature": "math_SVD::math_SVD: void (const math_SVD &)",
+      "reason": "Move or implicit solver copy retains mutable private decomposition state; create fresh state per public operation.",
+      "sdkSourceFiles": [
+        "math_SVD.cxx"
+      ],
+      "sdkSourceSha256": {
+        "math_SVD.cxx": "BCC6C7789ADC153E5E8C1A535B005E09BF0E08EBC25A6A664DC820B6BE0F704F"
+      },
+      "sdkHeaderSha256": "78F1A1B8358B93CFEF3940FCC02D08834613579A465516D7405E6E456CE1729C"
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@FactorBandedMatrix#&$@S@math_Matrix#I#I#&I#S",
+      "nativeName": "BSplCLib::FactorBandedMatrix",
+      "signature": "BSplCLib::FactorBandedMatrix: int (math_Matrix &, const int, const int, int &)",
+      "guard": "ALPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private checked one-based band matrix factorization; no mutable work buffer escapes."
+    }
+  ],
+  "reusedEmitted": [
+    "c:@S@math_Matrix@F@Add#&1$@S@math_Matrix#",
+    "c:@S@math_Matrix@F@Add#&1$@S@math_Matrix#S0_#",
+    "c:@S@math_Matrix@F@ColNumber#1",
+    "c:@S@math_Matrix@F@Determinant#1",
+    "c:@S@math_Matrix@F@Divide#d#",
+    "c:@S@math_Matrix@F@Init#d#",
+    "c:@S@math_Matrix@F@Invert#",
+    "c:@S@math_Matrix@F@LowerCol#1",
+    "c:@S@math_Matrix@F@LowerRow#1",
+    "c:@S@math_Matrix@F@Multiply#&1$@S@math_Matrix#",
+    "c:@S@math_Matrix@F@Multiply#&1$@S@math_Matrix#S0_#",
+    "c:@S@math_Matrix@F@Multiply#d#",
+    "c:@S@math_Matrix@F@RowNumber#1",
+    "c:@S@math_Matrix@F@Set#I#I#I#I#&1$@S@math_Matrix#",
+    "c:@S@math_Matrix@F@SetDiag#d#",
+    "c:@S@math_Matrix@F@Subtract#&1$@S@math_Matrix#",
+    "c:@S@math_Matrix@F@Subtract#&1$@S@math_Matrix#S0_#",
+    "c:@S@math_Matrix@F@SwapCol#I#I#",
+    "c:@S@math_Matrix@F@SwapRow#I#I#",
+    "c:@S@math_Matrix@F@TMultiply#&1$@S@math_Matrix#S0_#",
+    "c:@S@math_Matrix@F@Transpose#",
+    "c:@S@math_Matrix@F@UpperCol#1",
+    "c:@S@math_Matrix@F@UpperRow#1",
+    "c:@S@math_Matrix@F@Value#I#I#1",
+    "c:@S@math_Matrix@F@math_Matrix#I#I#I#I#d#"
+  ]
+}

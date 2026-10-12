@@ -1,0 +1,81 @@
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+#pragma warning disable CS1591
+
+/// <summary>One exact outer expression loop and its disjoint immediate holes.</summary>
+public sealed class SketchExpressionProfile2d
+{
+    private readonly SketchExpressionChain2d[] holes;
+    private SketchExpressionProfile2d(SketchExpressionChain2d outer, SketchExpressionChain2d[] holes, double tolerance) =>
+        (Outer, this.holes, Tolerance) = (outer, holes, tolerance);
+    public SketchExpressionChain2d Outer { get; }
+    public IReadOnlyList<SketchExpressionChain2d> Holes => Array.AsReadOnly((SketchExpressionChain2d[])holes.Clone());
+    public double Tolerance { get; }
+
+    public static SketchExpressionProfile2d Create(SketchExpressionChain2d outer,
+        IReadOnlyList<SketchExpressionChain2d>? holes = null, double tolerance = 1e-7)
+    {
+        ArgumentNullException.ThrowIfNull(outer);
+        SketchModeling.ValidateTolerance(tolerance, nameof(tolerance));
+        if ((holes?.Count ?? 0) > 255) throw new ArgumentException("A profile supports at most 255 immediate holes.", nameof(holes));
+        var inputs = new[] { outer }.Concat(holes ?? []).ToArray();
+        if (inputs.Any(value => value is null)) throw new ArgumentException("An expression loop is null.", nameof(holes));
+        var checkedLoops = inputs.Select(value => SketchExpressionChain2d.CreateOrdered(value.Curves, true, tolerance)).ToArray();
+        var region = SketchExpressionRegion2d.ClassifyChecked(checkedLoops, tolerance);
+        if (region.Profiles.Count != 1 || region.ParentIndices[0] != -1 || region.Depths[0] != 0 ||
+            region.ParentIndices.Skip(1).Any(value => value != 0))
+            throw new SketchValidationException([new(SketchDiagnosticCode.AmbiguousNesting,
+                "The supplied holes must be disjoint immediate children of the supplied outer loop; use region classification for islands.")]);
+        return region.Profiles[0];
+    }
+
+    internal static SketchExpressionProfile2d FromClassified(SketchExpressionChain2d outer,
+        SketchExpressionChain2d[] holes, double tolerance) => new(outer, holes, tolerance);
+
+    public unsafe Shape CreateFace(SketchPlane plane)
+    {
+        ArgumentNullException.ThrowIfNull(plane);
+        SketchCurveExpression2d.RequireRuntime(78);
+        using var outerWire = Outer.BuildWire(plane);
+        List<Shape> innerWires = [];
+        try
+        {
+            foreach (var hole in holes) innerWires.Add(hole.BuildWire(plane));
+            return ShapeFactory.WithBorrowedShapeHandles(innerWires, (pointers, count) =>
+            {
+                var placement=plane.ToRaw();
+                NativeError.ThrowIfFailed(NativeMethods.SketchExpressionProfileFace(outerWire.Handle, pointers, count, &placement,Tolerance,out nint face),
+                    "sketch_expression_profile_make_face");
+                return ShapeFactory.FromNativeHandle(face, "sketch_expression_profile_make_face");
+            });
+        }
+        finally { foreach (var wire in innerWires) wire.Dispose(); }
+    }
+
+    public Shape Extrude(SketchPlane plane, double distance)
+    {
+        ArgumentNullException.ThrowIfNull(plane);
+        if (!double.IsFinite(distance) || Math.Abs(distance) <= 1e-12) throw new ArgumentOutOfRangeException(nameof(distance));
+        using var face = CreateFace(plane);
+        using var direction = GpVec.Create(plane.Normal.X * distance, plane.Normal.Y * distance, plane.Normal.Z * distance);
+        return face.Extrude(direction);
+    }
+
+    public Shape Revolve(SketchPlane plane, SketchPoint2d axisOrigin, SketchDirection2d axisDirection,
+        double angleRadians = Math.Tau)
+    {
+        ArgumentNullException.ThrowIfNull(plane);
+        axisDirection.Validate();
+        if (!double.IsFinite(angleRadians) || Math.Abs(angleRadians) <= 1e-12 || Math.Abs(angleRadians) > Math.Tau + 1e-12)
+            throw new ArgumentOutOfRangeException(nameof(angleRadians));
+        var origin = plane.ToWorld(axisOrigin);
+        var direction = plane.ToWorldDirection(axisDirection);
+        using var face = CreateFace(plane);
+        using var axis = GpAx1.Create(origin.X, origin.Y, origin.Z, direction.X, direction.Y, direction.Z);
+        return face.Revolve(axis, angleRadians);
+    }
+}
+
+#pragma warning restore CS1591

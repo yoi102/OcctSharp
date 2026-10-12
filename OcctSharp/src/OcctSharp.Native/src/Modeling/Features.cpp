@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 // Native Modeling/Features implementation. Public contracts and ownership are unchanged.
 #include "Modeling/Features.hxx"
 #include "Modeling/Topology.hxx"
@@ -273,7 +274,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
       const double second = operation == 1 ? parameter(1) : first;
       if (first <= 0.0 || second <= 0.0)
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Fillet radii must be greater than zero.");
-      BRepFilletAPI_MakeFillet builder(inputs[0]);
+      OcctSharpGenerated::LocalMakeFilletBuilder builder(inputs[0]);
       std::vector<int32_t> sources{0};
       for (int32_t index = 1; index < shape_count; ++index)
       {
@@ -293,7 +294,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
       const double second = operation == 3 ? parameter(1) : first;
       if (first <= 0.0 || second <= 0.0)
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Chamfer distances must be greater than zero.");
-      BRepFilletAPI_MakeChamfer builder(inputs[0]);
+      OcctSharpGenerated::LocalMakeChamferBuilder builder(inputs[0]);
       std::vector<int32_t> sources{0};
       if (operation == 2)
       {
@@ -334,7 +335,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
       requireShapes(operation == 4 ? 2 : 3, "Planar finishing requires a face and vertex or edge selections.");
       if (inputs[0].ShapeType() != TopAbs_FACE)
         throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Planar finishing requires a face source.");
-      BRepFilletAPI_MakeFillet2d builder(TopoDS::Face(inputs[0]));
+      OcctSharpGenerated::LocalMakeFillet2dBuilder builder(TopoDS::Face(inputs[0]));
       std::vector<int32_t> sources{0};
       if (operation == 4)
       {
@@ -371,7 +372,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
       const gp_XYZ directionValue = xyz(0), originValue = xyz(1), normalValue = xyz(2);
       if (directionValue.SquareModulus() <= 0.0 || normalValue.SquareModulus() <= 0.0 || angle == 0.0)
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Draft direction, plane normal, and angle must be non-zero.");
-      BRepOffsetAPI_DraftAngle builder(inputs[0]);
+      OcctSharpGenerated::LocalDraftAngleBuilder builder(inputs[0]);
       std::vector<int32_t> sources{0};
       const gp_Dir direction(directionValue); const gp_Pln plane{gp_Pnt(originValue), gp_Dir(normalValue)};
       for (int32_t index = 1; index < shape_count; ++index)
@@ -439,7 +440,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
       requireShapes(3, "Pipe local feature requires a base, spine, and profile.");
       if (inputs[1].ShapeType() != TopAbs_WIRE)
         throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Pipe local feature requires a wire spine.");
-      BRepOffsetAPI_MakePipe pipe(TopoDS::Wire(inputs[1]), inputs[2]);
+      OcctSharpGenerated::LocalMakePipeBuilder pipe(TopoDS::Wire(inputs[1]), inputs[2]);
       if (!pipe.IsDone() || pipe.Shape().IsNull()) fail("OCCT could not construct the pipe feature tool.");
       else
       {

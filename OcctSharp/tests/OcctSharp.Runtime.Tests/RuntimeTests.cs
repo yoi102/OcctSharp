@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 72), info.AbiVersion);
-        Assert.Equal("0.80.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 117), info.AbiVersion);
+        Assert.Equal("0.132.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 
@@ -867,6 +867,9 @@ public sealed class RuntimeTests
             presentation.SetTransparency(0.25);
             presentation.SetDisplayMode(ViewerDisplayMode.Wireframe);
             presentation.SetDisplayMode(ViewerDisplayMode.Shaded);
+            presentation.SetOverlay(true);
+            viewer.Redraw();
+            presentation.SetOverlay(false);
             Assert.Throws<ArgumentOutOfRangeException>(() => presentation.SetColor(new ViewerColor(-1, 0, 0)));
             presentation.Hide();
             presentation.Show();

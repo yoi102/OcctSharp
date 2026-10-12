@@ -1,3 +1,4 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
 // Native Visualization/Clipping implementation. Public contracts and ownership are unchanged.
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
@@ -40,7 +41,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create_clip_plane(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const auto plane = new Graphic3d_ClipPlane(gp_Pln(a, b, c, d));
+    const auto plane = OcctSharpGenerated::ViewerAdapters::ConstructGraphic3dClipPlane(gp_Pln(a, b, c, d));
     const int64_t id = viewer->NextClipPlaneId++;
     viewer->ClipPlanes.emplace(id, plane);
     viewer->View->AddClipPlane(plane);
@@ -58,7 +59,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_update_clip_plane(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    FindClipPlane(viewer, clip_plane_id)->SetEquation(gp_Pln(a, b, c, d));
+    OcctSharpGenerated::ViewerAdapters::Graphic3d_ClipPlane_SetEquation_Bind(*(FindClipPlane(viewer, clip_plane_id)))(gp_Pln(a, b, c, d));
     viewer->View->Redraw();
   });
 }

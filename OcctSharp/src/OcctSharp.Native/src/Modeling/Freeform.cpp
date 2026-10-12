@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 // Native Modeling/Freeform implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Conversions.hxx"
 #include "Modeling/Freeform.hxx"
@@ -9,7 +10,7 @@
 #include "Runtime/Validation.hxx"
 #include <BRepAlgoAPI_Splitter.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepBuilderAPI_MakePolygon.hxx>
 #include <BRepBuilderAPI_MakeWire.hxx>
 #include <BRepCheck_Analyzer.hxx>
@@ -23,9 +24,8 @@
 #include <GeomAPI_ExtremaCurveCurve.hxx>
 #include <GeomAPI_IntCS.hxx>
 #include <GeomAPI_Interpolate.hxx>
-#include <GeomAPI_PointsToBSpline.hxx>
-#include <GeomAPI_PointsToBSplineSurface.hxx>
-#include <GeomAPI_ProjectPointOnCurve.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.FittingAdapters.Generated.hxx"
+#include "../../generated/Geometry/OcctSharp.Geometry.ProjectionAdapters.Generated.hxx"
 #include <Geom_BSplineCurve.hxx>
 #include <Geom_BSplineSurface.hxx>
 #include <Geom_BezierCurve.hxx>
@@ -194,7 +194,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_approximate(
     NCollection_Array1<gp_Pnt> native_points(1, point_count);
     for (int32_t index = 0; index < point_count; ++index)
       native_points.SetValue(index + 1, ToPoint(points[index], "Approximation points must be finite."));
-    GeomAPI_PointsToBSpline approximation(native_points, minimum_degree, maximum_degree, ToContinuity(continuity), tolerance);
+    OcctSharpGenerated::CurveFitter approximation(native_points, minimum_degree, maximum_degree, ToContinuity(continuity), tolerance);
     if (!approximation.IsDone() || approximation.Curve().IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT curve approximation did not complete.");
     BRepBuilderAPI_MakeEdge builder(approximation.Curve());
@@ -329,7 +329,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_project_count(
   if (out_count == nullptr) { SetLastError("The projection count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    GeomAPI_ProjectPointOnCurve projection(ToPoint(point, "The projection point must be finite."), GetEdgeCurve(edge));
+    OcctSharpGenerated::CurveProjector projection(ToPoint(point, "The projection point must be finite."), GetEdgeCurve(edge));
     *out_count = projection.NbPoints();
   });
 }
@@ -342,7 +342,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_project_copy(
   *out_written = 0;
   return Guard([&]
   {
-    GeomAPI_ProjectPointOnCurve projection(ToPoint(point, "The projection point must be finite."), GetEdgeCurve(edge));
+    OcctSharpGenerated::CurveProjector projection(ToPoint(point, "The projection point must be finite."), GetEdgeCurve(edge));
     ValidateOutputCapacity(capacity, projection.NbPoints(), solutions, "The projection output buffer is too small.");
     for (int32_t index = 1; index <= projection.NbPoints(); ++index)
     {
@@ -468,7 +468,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_planar_offset(
     ValidateUsableShape(wire);
     if (wire->Value.ShapeType() != TopAbs_WIRE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Planar offset requires a wire.");
-    BRepOffsetAPI_MakeOffset builder(TopoDS::Wire(wire->Value), static_cast<GeomAbs_JoinType>(join_type), false);
+    OcctSharpGenerated::LocalMakeOffsetBuilder builder(TopoDS::Wire(wire->Value), static_cast<GeomAbs_JoinType>(join_type), false);
     builder.Perform(distance, altitude);
     if (!builder.IsDone() || builder.Shape().IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT planar-wire offset did not complete.");
@@ -542,7 +542,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_create(
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Surface kind must be Bezier or B-spline.");
 
-    BRepBuilderAPI_MakeFace builder;
+    OcctSharpGenerated::FaceBuilder builder;
     if (bounds == nullptr) builder.Init(surface, true, tolerance);
     else
     {
@@ -572,12 +572,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_approximate(
     for (int32_t u = 0; u < u_count; ++u)
       for (int32_t v = 0; v < v_count; ++v)
         native_points.SetValue(u + 1, v + 1, ToPoint(points[u * v_count + v], "Surface approximation points must be finite."));
-    GeomAPI_PointsToBSplineSurface approximation;
+    OcctSharpGenerated::SurfaceFitter approximation;
     if (continuity == -1) approximation.Interpolate(native_points);
     else approximation.Init(native_points, minimum_degree, maximum_degree, ToContinuity(continuity), tolerance);
     if (!approximation.IsDone() || approximation.Surface().IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT surface approximation did not complete.");
-    BRepBuilderAPI_MakeFace builder(approximation.Surface(), tolerance);
+    OcctSharpGenerated::FaceBuilder builder(approximation.Surface(), tolerance);
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not build the approximated surface face.");
     *out_face = AllocateShape(builder.Face());
   });
@@ -664,7 +664,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_edit(
     else if (operation == 3) { if (!bezier.IsNull()) bezier->VReverse(); else bspline->VReverse(); }
     else if (operation != 4) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The surface edit operation is unknown.");
     opencascade::handle<Geom_Surface> result = !bezier.IsNull() ? opencascade::handle<Geom_Surface>(bezier) : opencascade::handle<Geom_Surface>(bspline);
-    BRepBuilderAPI_MakeFace builder;
+    OcctSharpGenerated::FaceBuilder builder;
     if (bounds != nullptr || operation == 4)
     {
       if (bounds == nullptr) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Surface segmentation requires four bounds.");
@@ -778,7 +778,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_pipe_shell(
   {
     ValidateUsableShape(spine);
     if (spine->Value.ShapeType() != TopAbs_WIRE) throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Pipe-shell construction requires a wire spine.");
-    BRepOffsetAPI_MakePipeShell pipe(TopoDS::Wire(spine->Value)); pipe.SetMode(frenet != 0);
+    OcctSharpGenerated::LocalMakePipeShellBuilder pipe(TopoDS::Wire(spine->Value)); pipe.SetMode(frenet != 0);
     pipe.SetTransitionMode(static_cast<BRepBuilderAPI_TransitionMode>(transition_mode));
     pipe.SetTolerance(tolerance, tolerance, 0.01); pipe.SetMaxDegree(maximum_degree); pipe.SetMaxSegments(maximum_segments); pipe.SetForceApproxC1(true);
     for (int32_t index = 0; index < profile_count; ++index) { ValidateUsableShape(profiles[index]); pipe.Add(profiles[index]->Value, false, true); }

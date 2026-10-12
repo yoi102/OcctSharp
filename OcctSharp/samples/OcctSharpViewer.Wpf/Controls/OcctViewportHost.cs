@@ -22,6 +22,8 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
     private const uint MessageSize = 0x0005;
     private const uint MessagePaint = 0x000F;
     private const uint MessageEraseBackground = 0x0014;
+    private const uint MessageCancelMode = 0x001F;
+    private const uint MessageKeyDown = 0x0100;
     private const uint MessageMouseMove = 0x0200;
     private const uint MessageLeftButtonDown = 0x0201;
     private const uint MessageLeftButtonUp = 0x0202;
@@ -49,6 +51,8 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
     private readonly List<ViewerPresentation> presentations = [];
     private ViewerDisplayMode displayMode = ViewerDisplayMode.Shaded;
     private ViewerPointerButton? capturedButton;
+    private bool cubePressed;
+    private int cubePressX, cubePressY;
 
     public event EventHandler? ViewerReady;
     public event Action<object?, int>? SelectionChanged;
@@ -79,6 +83,7 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
             viewer.SetBackgroundColor(new ViewerColor(0.055, 0.075, 0.095));
             viewer.SetProjection(ViewerProjection.Axonometric);
             viewer.ShowTrihedron(ViewerTrihedronPosition.LeftLower, new ViewerColor(0.9, 0.9, 0.9), 0.08);
+            viewer.SetViewCubeVisible(true);
             viewer.Resize();
         }
         catch
@@ -267,6 +272,11 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
             case MessageEraseBackground:
                 return 1;
             case MessageMouseMove:
+                if (cubePressed)
+                {
+                    activeViewer.MoveTo(GetX(longParameter), GetY(longParameter));
+                    return 0;
+                }
                 activeViewer.Input.PointerMoved(
                     GetX(longParameter),
                     GetY(longParameter),
@@ -297,8 +307,23 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
                 activeViewer.Input.MouseWheel(unchecked((short)((wordParameter >> 16) & 0xFFFF)), point.X, point.Y, GetModifiers());
                 return 0;
             case MessageCaptureChanged:
+                activeViewer.Input.CancelPointerGesture();
                 capturedButton = null;
+                cubePressed = false;
                 break;
+            case MessageCancelMode:
+                activeViewer.Input.CancelPointerGesture();
+                capturedButton = null;
+                cubePressed = false;
+                _ = NativeMethods.ReleaseCapture();
+                return 0;
+            case MessageKeyDown when wordParameter == 0x1B:
+                activeViewer.Input.KeyDown(ViewerInputKey.Escape, GetModifiers());
+                capturedButton = null;
+                cubePressed = false;
+                _ = NativeMethods.ReleaseCapture();
+                SelectionChanged?.Invoke(this, activeViewer.GetSelection().Count);
+                return 0;
         }
 
         return NativeMethods.DefWindowProc(windowHandle, message, wordParameter, longParameter);
@@ -309,11 +334,37 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
         _ = NativeMethods.SetFocus(windowHandle);
         _ = NativeMethods.SetCapture(windowHandle);
         capturedButton = button;
+        if (button == ViewerPointerButton.Left && GetViewer().HitViewCubeControl(GetX(coordinates), GetY(coordinates)) is not null)
+        {
+            cubePressed = true;
+            cubePressX = GetX(coordinates);
+            cubePressY = GetY(coordinates);
+            return;
+        }
         GetViewer().Input.PointerPressed(button, GetX(coordinates), GetY(coordinates), GetModifiers());
     }
 
     private void EndPointer(ViewerPointerButton button, nint coordinates)
     {
+        if (button == ViewerPointerButton.Left && cubePressed)
+        {
+            cubePressed = false;
+            if (Math.Abs(GetX(coordinates) - cubePressX) <= 2 &&
+                Math.Abs(GetY(coordinates) - cubePressY) <= 2 &&
+                GetViewer().HitViewCubeControl(GetX(coordinates), GetY(coordinates)) is { } hit)
+            {
+                if (hit.Orientation is { } orientation) GetViewer().SetCubeOrientation(orientation);
+                else if (hit.Turn != ViewerCubeTurn.None)
+                    GetViewer().RollCamera(hit.Turn == ViewerCubeTurn.Left ? -45 : 45);
+                GetViewer().Redraw();
+            }
+            if (capturedButton == button)
+            {
+                capturedButton = null;
+                _ = NativeMethods.ReleaseCapture();
+            }
+            return;
+        }
         IReadOnlyList<ViewerPresentation> selection = GetViewer().Input.PointerReleased(
             button, GetX(coordinates), GetY(coordinates), GetModifiers());
         if (capturedButton == button)

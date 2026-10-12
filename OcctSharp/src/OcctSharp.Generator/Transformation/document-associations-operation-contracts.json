@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TDF_Label@F@AttributesModified#1",
+      "nativeName": "TDF_Label::AttributesModified",
+      "signature": "TDF_Label::AttributesModified: bool () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Data#1",
+      "nativeName": "TDF_Label::Data",
+      "signature": "TDF_Label::Data: occ::handle<TDF_Data> () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsImported#1",
+      "nativeName": "TDF_Label::IsImported",
+      "signature": "TDF_Label::IsImported: bool () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@MayBeModified#1",
+      "nativeName": "TDF_Label::MayBeModified",
+      "signature": "TDF_Label::MayBeModified: bool () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@NbAttributes#1",
+      "nativeName": "TDF_Label::NbAttributes",
+      "signature": "TDF_Label::NbAttributes: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@NbChildren#1",
+      "nativeName": "TDF_Label::NbChildren",
+      "signature": "TDF_Label::NbChildren: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@NewChild#1",
+      "nativeName": "TDF_Label::NewChild",
+      "signature": "TDF_Label::NewChild: TDF_Label () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Transaction#1",
+      "nativeName": "TDF_Label::Transaction",
+      "signature": "TDF_Label::Transaction: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Append#&1$@N@opencascade@S@handle>#$@S@TNaming_NamedShape#",
+      "nativeName": "TNaming_Name::Append",
+      "signature": "TNaming_Name::Append: void (const occ::handle<TNaming_NamedShape> &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Arguments#1",
+      "nativeName": "TNaming_Name::Arguments",
+      "signature": "TNaming_Name::Arguments: const NCollection_List<occ::handle<TNaming_NamedShape>> &() const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@ContextLabel#&1$@S@TDF_Label#",
+      "nativeName": "TNaming_Name::ContextLabel",
+      "signature": "TNaming_Name::ContextLabel: void (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@ContextLabel#1",
+      "nativeName": "TNaming_Name::ContextLabel",
+      "signature": "TNaming_Name::ContextLabel: const TDF_Label &() const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Index#1",
+      "nativeName": "TNaming_Name::Index",
+      "signature": "TNaming_Name::Index: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Index#I#",
+      "nativeName": "TNaming_Name::Index",
+      "signature": "TNaming_Name::Index: void (const int)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Orientation#$@E@TopAbs_Orientation#",
+      "nativeName": "TNaming_Name::Orientation",
+      "signature": "TNaming_Name::Orientation: void (const TopAbs_Orientation)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Shape#&1$@S@TopoDS_Shape#",
+      "nativeName": "TNaming_Name::Shape",
+      "signature": "TNaming_Name::Shape: void (const TopoDS_Shape &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Shape#1",
+      "nativeName": "TNaming_Name::Shape",
+      "signature": "TNaming_Name::Shape: TopoDS_Shape () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@ShapeType#$@E@TopAbs_ShapeEnum#",
+      "nativeName": "TNaming_Name::ShapeType",
+      "signature": "TNaming_Name::ShapeType: void (const TopAbs_ShapeEnum)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@StopNamedShape#&1$@N@opencascade@S@handle>#$@S@TNaming_NamedShape#",
+      "nativeName": "TNaming_Name::StopNamedShape",
+      "signature": "TNaming_Name::StopNamedShape: void (const occ::handle<TNaming_NamedShape> &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@StopNamedShape#1",
+      "nativeName": "TNaming_Name::StopNamedShape",
+      "signature": "TNaming_Name::StopNamedShape: occ::handle<TNaming_NamedShape> () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@TNaming_Name#",
+      "nativeName": "TNaming_Name::TNaming_Name",
+      "signature": "TNaming_Name::TNaming_Name: void ()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Type#$@E@TNaming_NameType#",
+      "nativeName": "TNaming_Name::Type",
+      "signature": "TNaming_Name::Type: void (const TNaming_NameType)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@TNaming_Name@F@Type#1",
+      "nativeName": "TNaming_Name::Type",
+      "signature": "TNaming_Name::Type: TNaming_NameType () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@AddClippingPlane#&1$@S@gp_Pln#&1$@S@TCollection_ExtendedString#b#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::AddClippingPlane",
+      "signature": "XCAFDoc_ClippingPlaneTool::AddClippingPlane: TDF_Label (const gp_Pln &, const TCollection_ExtendedString &, const bool) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@GetCapping#&1$@S@TDF_Label#&b#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::GetCapping",
+      "signature": "XCAFDoc_ClippingPlaneTool::GetCapping: bool (const TDF_Label &, bool &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@GetCapping#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::GetCapping",
+      "signature": "XCAFDoc_ClippingPlaneTool::GetCapping: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@GetClippingPlane#&1$@S@TDF_Label#&$@S@gp_Pln#&$@S@TCollection_ExtendedString#&b#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::GetClippingPlane",
+      "signature": "XCAFDoc_ClippingPlaneTool::GetClippingPlane: bool (const TDF_Label &, gp_Pln &, TCollection_ExtendedString &, bool &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@IsClippingPlane#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::IsClippingPlane",
+      "signature": "XCAFDoc_ClippingPlaneTool::IsClippingPlane: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@SetCapping#&1$@S@TDF_Label#b#",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::SetCapping",
+      "signature": "XCAFDoc_ClippingPlaneTool::SetCapping: void (const TDF_Label &, const bool)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@UpdateClippingPlane#&1$@S@TDF_Label#&1$@S@gp_Pln#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_ClippingPlaneTool::UpdateClippingPlane",
+      "signature": "XCAFDoc_ClippingPlaneTool::UpdateClippingPlane: void (const TDF_Label &, const gp_Pln &, const TCollection_ExtendedString &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefDatumLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_DimTolTool::GetRefDatumLabel",
+      "signature": "XCAFDoc_DimTolTool::GetRefDatumLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefDimensionLabels#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_DimTolTool::GetRefDimensionLabels",
+      "signature": "XCAFDoc_DimTolTool::GetRefDimensionLabels: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefGeomToleranceLabels#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_DimTolTool::GetRefGeomToleranceLabels",
+      "signature": "XCAFDoc_DimTolTool::GetRefGeomToleranceLabels: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsLocked#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::IsLocked",
+      "signature": "XCAFDoc_DimTolTool::IsLocked: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@Lock#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::Lock",
+      "signature": "XCAFDoc_DimTolTool::Lock: void (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDimension#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_DimTolTool::SetDimension",
+      "signature": "XCAFDoc_DimTolTool::SetDimension: void (const TDF_Label &, const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDimension#&1$@S@TDF_Label#S0_#S0_#1",
+      "nativeName": "XCAFDoc_DimTolTool::SetDimension",
+      "signature": "XCAFDoc_DimTolTool::SetDimension: void (const TDF_Label &, const TDF_Label &, const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@Unlock#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::Unlock",
+      "signature": "XCAFDoc_DimTolTool::Unlock: void (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetComponents#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#b#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetComponents",
+      "signature": "XCAFDoc_ShapeTool::GetComponents: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &, const bool)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetReferredShape#&1$@S@TDF_Label#&S1_#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetReferredShape",
+      "signature": "XCAFDoc_ShapeTool::GetReferredShape: bool (const TDF_Label &, TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsAssembly#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsAssembly",
+      "signature": "XCAFDoc_ShapeTool::IsAssembly: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsCompound#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsCompound",
+      "signature": "XCAFDoc_ShapeTool::IsCompound: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsExternRef#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsExternRef",
+      "signature": "XCAFDoc_ShapeTool::IsExternRef: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsFree#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsFree",
+      "signature": "XCAFDoc_ShapeTool::IsFree: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSubShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsSubShape",
+      "signature": "XCAFDoc_ShapeTool::IsSubShape: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsTopLevel#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ShapeTool::IsTopLevel",
+      "signature": "XCAFDoc_ShapeTool::IsTopLevel: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@NbComponents#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_ShapeTool::NbComponents",
+      "signature": "XCAFDoc_ShapeTool::NbComponents: int (const TDF_Label &, const bool)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Exact live document/context labels, initialized private naming descriptor and copied bounded association diagnostics; atomic command-scoped edits only."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@TDF_Label@F@Depth#1",
+      "nativeName": "TDF_Label::Depth",
+      "signature": "TDF_Label::Depth: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@FindAttribute#&1$@S@Standard_GUID#&$@N@opencascade@S@handle>#$@S@TDF_Attribute#1",
+      "nativeName": "TDF_Label::FindAttribute",
+      "signature": "TDF_Label::FindAttribute: bool (const Standard_GUID &, occ::handle<TDF_Attribute> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAttribute#&1$@S@Standard_GUID#1",
+      "nativeName": "TDF_Label::ForgetAttribute",
+      "signature": "TDF_Label::ForgetAttribute: bool (const Standard_GUID &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Get#1",
+      "nativeName": "TDF_Reference::Get",
+      "signature": "TDF_Reference::Get: TDF_Label () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@GetID#S",
+      "nativeName": "TDF_Reference::GetID",
+      "signature": "TDF_Reference::GetID: const Standard_GUID &()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Set#&1$@S@TDF_Label#S0_#S",
+      "nativeName": "TDF_Reference::Set",
+      "signature": "TDF_Reference::Set: occ::handle<TDF_Reference> (const TDF_Label &, const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbLabels#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::NbLabels",
+      "signature": "TDF_Tool::NbLabels: int (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "nativeName": "TDataStd_Name::Set",
+      "signature": "TDataStd_Name::Set: occ::handle<TDataStd_Name> (const TDF_Label &, const TCollection_ExtendedString &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_NamedShape@F@Get#1",
+      "nativeName": "TNaming_NamedShape::Get",
+      "signature": "TNaming_NamedShape::Get: TopoDS_Shape () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_NamedShape@F@GetID#S",
+      "nativeName": "TNaming_NamedShape::GetID",
+      "signature": "TNaming_NamedShape::GetID: const Standard_GUID &()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_Naming@F@ChangeName#",
+      "nativeName": "TNaming_Naming::ChangeName",
+      "signature": "TNaming_Naming::ChangeName: TNaming_Name &()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_Naming@F@GetID#S",
+      "nativeName": "TNaming_Naming::GetID",
+      "signature": "TNaming_Naming::GetID: const Standard_GUID &()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_Naming@F@GetName#1",
+      "nativeName": "TNaming_Naming::GetName",
+      "signature": "TNaming_Naming::GetName: const TNaming_Name &() const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_Naming@F@Insert#&1$@S@TDF_Label#S",
+      "nativeName": "TNaming_Naming::Insert",
+      "signature": "TNaming_Naming::Insert: occ::handle<TNaming_Naming> (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TNaming_Naming@F@IsDefined#1",
+      "nativeName": "TNaming_Naming::IsDefined",
+      "signature": "TNaming_Naming::IsDefined: bool () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@AddDimension#",
+      "nativeName": "XCAFDoc_DimTolTool::AddDimension",
+      "signature": "XCAFDoc_DimTolTool::AddDimension: TDF_Label ()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefShapeLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S2_#S",
+      "nativeName": "XCAFDoc_DimTolTool::GetRefShapeLabel",
+      "signature": "XCAFDoc_DimTolTool::GetRefShapeLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsDimTol#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::IsDimTol",
+      "signature": "XCAFDoc_DimTolTool::IsDimTol: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsDimension#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::IsDimension",
+      "signature": "XCAFDoc_DimTolTool::IsDimension: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckClippingPlaneTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckClippingPlaneTool",
+      "signature": "XCAFDoc_DocumentTool::CheckClippingPlaneTool: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckDimTolTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckDimTolTool",
+      "signature": "XCAFDoc_DocumentTool::CheckDimTolTool: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckShapeTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckShapeTool",
+      "signature": "XCAFDoc_DocumentTool::CheckShapeTool: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckViewTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckViewTool",
+      "signature": "XCAFDoc_DocumentTool::CheckViewTool: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ClippingPlaneTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ClippingPlaneTool",
+      "signature": "XCAFDoc_DocumentTool::ClippingPlaneTool: occ::handle<XCAFDoc_ClippingPlaneTool> (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@DimTolTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::DimTolTool",
+      "signature": "XCAFDoc_DocumentTool::DimTolTool: occ::handle<XCAFDoc_DimTolTool> (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ShapeTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ShapeTool",
+      "signature": "XCAFDoc_DocumentTool::ShapeTool: occ::handle<XCAFDoc_ShapeTool> (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ViewTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ViewTool",
+      "signature": "XCAFDoc_DocumentTool::ViewTool: occ::handle<XCAFDoc_ViewTool> (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsShape",
+      "signature": "XCAFDoc_ShapeTool::IsShape: bool (const TDF_Label &)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefClippingPlaneLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_ViewTool::GetRefClippingPlaneLabel",
+      "signature": "XCAFDoc_ViewTool::GetRefClippingPlaneLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetViewLabelsForClippingPlane#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_ViewTool::GetViewLabelsForClippingPlane",
+      "signature": "XCAFDoc_ViewTool::GetViewLabelsForClippingPlane: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@IsView#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::IsView",
+      "signature": "XCAFDoc_ViewTool::IsView: bool (const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@SetClippingPlanes#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1S2_#1",
+      "nativeName": "XCAFDoc_ViewTool::SetClippingPlanes",
+      "signature": "XCAFDoc_ViewTool::SetClippingPlanes: void (const NCollection_Sequence<TDF_Label> &, const TDF_Label &) const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called exact label/attribute/tool completion or atomic structural association prerequisite; existing bindings reused."
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@Backup#",
+      "nativeName": "TDF_Attribute::Backup",
+      "signature": "TDF_Attribute::Backup: void ()",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called bounded graph traversal, explicit removal backup or existing close-safe native document factory prerequisite."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@SetUndoLimit#I#",
+      "nativeName": "TDocStd_Document::SetUndoLimit",
+      "signature": "TDocStd_Document::SetUndoLimit: void (const int)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called bounded graph traversal, explicit removal backup or existing close-safe native document factory prerequisite."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@Set#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_DocumentTool::Set",
+      "signature": "XCAFDoc_DocumentTool::Set: occ::handle<XCAFDoc_DocumentTool> (const TDF_Label &, const bool)",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called bounded graph traversal, explicit removal backup or existing close-safe native document factory prerequisite."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_GraphNode@F@NbChildren#1",
+      "nativeName": "XCAFDoc_GraphNode::NbChildren",
+      "signature": "XCAFDoc_GraphNode::NbChildren: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called bounded graph traversal, explicit removal backup or existing close-safe native document factory prerequisite."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_GraphNode@F@NbFathers#1",
+      "nativeName": "XCAFDoc_GraphNode::NbFathers",
+      "signature": "XCAFDoc_GraphNode::NbFathers: int () const",
+      "guard": "BCIdentityBoundAssociations",
+      "reason": "Actually called bounded graph traversal, explicit removal backup or existing close-safe native document factory prerequisite."
+    }
+  ]
+}

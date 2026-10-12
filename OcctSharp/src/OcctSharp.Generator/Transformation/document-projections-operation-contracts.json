@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TDF_Tool@F@Entry#&1$@S@TDF_Label#&$@S@TCollection_AsciiString#S",
+      "nativeName": "TDF_Tool::Entry",
+      "signature": "TDF_Tool::Entry: void (const TDF_Label &, TCollection_AsciiString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@IsSelfContained#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::IsSelfContained",
+      "signature": "TDF_Tool::IsSelfContained: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@Label#&1$@N@opencascade@S@handle>#$@S@TDF_Data#*1C#&$@S@TDF_Label#b#S",
+      "nativeName": "TDF_Tool::Label",
+      "signature": "TDF_Tool::Label: void (const occ::handle<TDF_Data> &, const char *const, TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbAttributes#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::NbAttributes",
+      "signature": "TDF_Tool::NbAttributes: int (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbLabels#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::NbLabels",
+      "signature": "TDF_Tool::NbLabels: int (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@TagList#&1$@S@TDF_Label#&$@S@NCollection_List>#I#S",
+      "nativeName": "TDF_Tool::TagList",
+      "signature": "TDF_Tool::TagList: void (const TDF_Label &, NCollection_List<int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeArraysOfIntegers#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeArraysOfIntegers",
+      "signature": "TDataStd_NamedData::ChangeArraysOfIntegers: void (const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<int>>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeArraysOfReals#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeArraysOfReals",
+      "signature": "TDataStd_NamedData::ChangeArraysOfReals: void (const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<double>>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeBytes#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#c#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeBytes",
+      "signature": "TDataStd_NamedData::ChangeBytes: void (const NCollection_DataMap<TCollection_ExtendedString, uint8_t> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeIntegers#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#I#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeIntegers",
+      "signature": "TDataStd_NamedData::ChangeIntegers: void (const NCollection_DataMap<TCollection_ExtendedString, int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeReals#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#d#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeReals",
+      "signature": "TDataStd_NamedData::ChangeReals: void (const NCollection_DataMap<TCollection_ExtendedString, double> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeStrings#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeStrings",
+      "signature": "TDataStd_NamedData::ChangeStrings: void (const NCollection_DataMap<TCollection_ExtendedString, TCollection_ExtendedString> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArraysOfIntegersContainer#",
+      "nativeName": "TDataStd_NamedData::GetArraysOfIntegersContainer",
+      "signature": "TDataStd_NamedData::GetArraysOfIntegersContainer: const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<int>>> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArraysOfRealsContainer#",
+      "nativeName": "TDataStd_NamedData::GetArraysOfRealsContainer",
+      "signature": "TDataStd_NamedData::GetArraysOfRealsContainer: const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<double>>> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetBytesContainer#",
+      "nativeName": "TDataStd_NamedData::GetBytesContainer",
+      "signature": "TDataStd_NamedData::GetBytesContainer: const NCollection_DataMap<TCollection_ExtendedString, uint8_t> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetIntegersContainer#",
+      "nativeName": "TDataStd_NamedData::GetIntegersContainer",
+      "signature": "TDataStd_NamedData::GetIntegersContainer: const NCollection_DataMap<TCollection_ExtendedString, int> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetRealsContainer#",
+      "nativeName": "TDataStd_NamedData::GetRealsContainer",
+      "signature": "TDataStd_NamedData::GetRealsContainer: const NCollection_DataMap<TCollection_ExtendedString, double> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetStringsContainer#",
+      "nativeName": "TDataStd_NamedData::GetStringsContainer",
+      "signature": "TDataStd_NamedData::GetStringsContainer: const NCollection_DataMap<TCollection_ExtendedString, TCollection_ExtendedString> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@TDF_Label@F@AddAttribute#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#b#1",
+      "nativeName": "TDF_Label::AddAttribute",
+      "signature": "TDF_Label::AddAttribute: void (const occ::handle<TDF_Attribute> &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAttribute#&1$@S@Standard_GUID#1",
+      "nativeName": "TDF_Label::ForgetAttribute",
+      "signature": "TDF_Label::ForgetAttribute: bool (const Standard_GUID &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Abort#",
+      "nativeName": "TDF_Transaction::Abort",
+      "signature": "TDF_Transaction::Abort: void ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Commit#b#",
+      "nativeName": "TDF_Transaction::Commit",
+      "signature": "TDF_Transaction::Commit: occ::handle<TDF_Delta> (const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Open#",
+      "nativeName": "TDF_Transaction::Open",
+      "signature": "TDF_Transaction::Open: int ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@TDF_Transaction#&1$@N@opencascade@S@handle>#$@S@TDF_Data#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TDF_Transaction::TDF_Transaction",
+      "signature": "TDF_Transaction::TDF_Transaction: void (const occ::handle<TDF_Data> &, const TCollection_AsciiString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetID#S",
+      "nativeName": "TDataStd_NamedData::GetID",
+      "signature": "TDataStd_NamedData::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@TDataStd_NamedData#",
+      "nativeName": "TDataStd_NamedData::TDataStd_NamedData",
+      "signature": "TDataStd_NamedData::TDataStd_NamedData: void ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetData#1",
+      "nativeName": "TDocStd_Document::GetData",
+      "signature": "TDocStd_Document::GetData: occ::handle<TDF_Data> () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@HasOpenCommand#1",
+      "nativeName": "TDocStd_Document::HasOpenCommand",
+      "signature": "TDocStd_Document::HasOpenCommand: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@Main#1",
+      "nativeName": "TDocStd_Document::Main",
+      "signature": "TDocStd_Document::Main: TDF_Label () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@SetUndoLimit#I#",
+      "nativeName": "TDocStd_Document::SetUndoLimit",
+      "signature": "TDocStd_Document::SetUndoLimit: void (const int)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@TDocStd_Document#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDocStd_Document::TDocStd_Document",
+      "signature": "TDocStd_Document::TDocStd_Document: void (const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    }
+  ]
+}

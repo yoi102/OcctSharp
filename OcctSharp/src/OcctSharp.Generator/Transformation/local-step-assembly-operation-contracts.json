@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetLabel#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetLabel",
+      "signature": "STEPCAFControl_ExternFile::GetLabel: TDF_Label () const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ChangeReader#",
+      "nativeName": "STEPCAFControl_Reader::ChangeReader",
+      "signature": "STEPCAFControl_Reader::ChangeReader: STEPControl_Reader &()",
+      "guard": "BJLocalStepGraph",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Reader::ExternFile",
+      "signature": "STEPCAFControl_Reader::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@TransferOneRoot#I#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::TransferOneRoot",
+      "signature": "STEPCAFControl_Reader::TransferOneRoot: bool (const int, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "guard": "BJLocalStepGraph",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@FileName#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::FileName",
+      "signature": "STEPConstruct_ExternRefs::FileName: const char *(const int) const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@Format#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::Format",
+      "signature": "STEPConstruct_ExternRefs::Format: occ::handle<TCollection_HAsciiString> (const int) const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@LoadExternRefs#",
+      "nativeName": "STEPConstruct_ExternRefs::LoadExternRefs",
+      "signature": "STEPConstruct_ExternRefs::LoadExternRefs: bool ()",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@NbExternRefs#1",
+      "nativeName": "STEPConstruct_ExternRefs::NbExternRefs",
+      "signature": "STEPConstruct_ExternRefs::NbExternRefs: int () const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@ProdDef#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::ProdDef",
+      "signature": "STEPConstruct_ExternRefs::ProdDef: occ::handle<StepBasic_ProductDefinition> (const int) const",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@STEPConstruct_ExternRefs#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#",
+      "nativeName": "STEPConstruct_ExternRefs::STEPConstruct_ExternRefs",
+      "signature": "STEPConstruct_ExternRefs::STEPConstruct_ExternRefs: void (const occ::handle<XSControl_WorkSession> &)",
+      "guard": "BJLocalStepGraph",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@DocFile#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::DocFile",
+      "signature": "STEPConstruct_ExternRefs::DocFile: occ::handle<StepBasic_DocumentFile> (const int) const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "guard": "BJLocalStepGraph"
+    },
+    {
+      "stableId": "c:@S@StepRepr_PropertyDefinition@F@Definition#1",
+      "nativeName": "StepRepr_PropertyDefinition::Definition",
+      "signature": "StepRepr_PropertyDefinition::Definition: StepRepr_CharacterizedDefinition () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "guard": "BJLocalStepGraph"
+    },
+    {
+      "stableId": "c:@S@StepRepr_PropertyDefinitionRepresentation@F@Definition#1",
+      "nativeName": "StepRepr_PropertyDefinitionRepresentation::Definition",
+      "signature": "StepRepr_PropertyDefinitionRepresentation::Definition: StepRepr_RepresentedDefinition () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "guard": "BJLocalStepGraph"
+    }
+  ],
+  "supportingOperations": []
+}

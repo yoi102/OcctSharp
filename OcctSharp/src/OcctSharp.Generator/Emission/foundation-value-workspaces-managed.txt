@@ -1,0 +1,201 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using System.Text;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Interop;
+namespace OcctSharp.FoundationValues;
+
+/// <summary>Private SDK string operations. Positions are one-based; Unicode positions count UTF16 code units and may not split surrogate pairs.</summary>
+public enum TextOperation {
+ /// <summary>Copy the input.</summary>
+ CopyInput=0,
+ /// <summary>Return concatenation.</summary>
+ Concatenate=1,
+ /// <summary>Append to a private copy.</summary>
+ Append=2,
+ /// <summary>Replace with the other input.</summary>
+ Assign=3,
+ /// <summary>Insert before Position.</summary>
+ Insert=4,
+ /// <summary>Prepend the other input.</summary>
+ Prepend=5,
+ /// <summary>Find the first occurrence; SDK returns -1 when absent.</summary>
+ Search=6,
+ /// <summary>Find the last occurrence.</summary>
+ SearchFromEnd=7,
+ /// <summary>Test a prefix.</summary>
+ StartsWith=8,
+ /// <summary>Test a suffix.</summary>
+ EndsWith=9,
+ /// <summary>Test equality.</summary>
+ Equal=10,
+ /// <summary>Test inequality.</summary>
+ Different=11,
+ /// <summary>Test lexicographic order.</summary>
+ Greater=12,
+ /// <summary>Test lexicographic order.</summary>
+ Less=13,
+ /// <summary>Copy inclusive Position through CountOrEnd.</summary>
+ Substring=14,
+ /// <summary>Split after Position code units; suffix is Remainder.</summary>
+ Split=15,
+ /// <summary>Remove CountOrEnd code units at Position.</summary>
+ Remove=16,
+ /// <summary>Retain Position code units.</summary>
+ Truncate=17,
+ /// <summary>Copy the character or UTF16 code unit at Position as Number.</summary>
+ CodeUnit=18,
+ /// <summary>Test SDK integer syntax.</summary>
+ IsInteger=19,
+ /// <summary>Parse a validated integer.</summary>
+ ParseInteger=20,
+ /// <summary>Test real syntax; CaseSensitive requests whole-input validation.</summary>
+ IsReal=21,
+ /// <summary>Parse a finite complete real value.</summary>
+ ParseReal=22,
+ /// <summary>Test case-aware equality.</summary>
+ SameString=23,
+ /// <summary>ASCII capitalize.</summary>
+ Capitalize=24,
+ /// <summary>ASCII clear.</summary>
+ Clear=25,
+ /// <summary>ASCII trim left spaces.</summary>
+ TrimStart=26,
+ /// <summary>ASCII trim right spaces.</summary>
+ TrimEnd=27,
+ /// <summary>ASCII lower case.</summary>
+ LowerCase=28,
+ /// <summary>ASCII upper case.</summary>
+ UpperCase=29,
+ /// <summary>ASCII center to Position width, using CountOrEnd character.</summary>
+ Center=30,
+ /// <summary>ASCII left justify.</summary>
+ LeftJustify=31,
+ /// <summary>ASCII right justify.</summary>
+ RightJustify=32,
+ /// <summary>ASCII replace Position character by CountOrEnd character.</summary>
+ ReplaceAll=33,
+ /// <summary>ASCII remove Position character.</summary>
+ RemoveAll=34,
+ /// <summary>ASCII token at Position, using Other as separator set.</summary>
+ Token=35,
+ /// <summary>ASCII insert after Position.</summary>
+ InsertAfter=36,
+ /// <summary>ASCII insert before Position.</summary>
+ InsertBefore=37,
+ /// <summary>Compare a copied string view with the other SDK string.</summary>
+ EqualViewToString=38,
+ /// <summary>Compare an SDK string with the copied other string view.</summary>
+ EqualStringToView=39
+}
+/// <summary>Pure path operations. No file lookup or environment expansion occurs.</summary>
+public enum PathOperation {
+ /// <summary>Copy path components.</summary>
+ Copy=0,
+ /// <summary>Set copied name.</summary>
+ SetName=1,
+ /// <summary>Set copied extension.</summary>
+ SetExtension=2,
+ /// <summary>Set copied internal trek.</summary>
+ SetTrek=3,
+ /// <summary>Append a trek component.</summary>
+ DownTrek=4,
+ /// <summary>Remove the final trek component.</summary>
+ UpTrek=5,
+ /// <summary>Copy the one-based trek component.</summary>
+ TrekValue=6,
+ /// <summary>Compute relative path syntax.</summary>
+ Relative=7,
+ /// <summary>Compute absolute path syntax.</summary>
+ Absolute=8
+}
+/// <summary>SDK color-space vector conversions.</summary>
+public enum ColorConversion {
+ /// <summary>sRGB to linear RGB.</summary>
+ SrgbToLinear=3,
+ /// <summary>Linear RGB to sRGB.</summary>
+ LinearToSrgb=4,
+ /// <summary>HLS to linear RGB.</summary>
+ HlsToLinear=5,
+ /// <summary>HLS to sRGB.</summary>
+ HlsToSrgb=6,
+ /// <summary>Lab to Lch.</summary>
+ LabToLch=7,
+ /// <summary>Lab to linear RGB.</summary>
+ LabToLinear=8,
+ /// <summary>Lch to Lab.</summary>
+ LchToLab=9,
+ /// <summary>Linear RGB to HLS.</summary>
+ LinearToHls=10,
+ /// <summary>Linear RGB to Lab.</summary>
+ LinearToLab=11,
+ /// <summary>sRGB to HLS.</summary>
+ SrgbToHls=12
+}
+/// <summary>Copied text result; Number holds the requested predicate, search, code unit or parsed scalar. All strings survive native cleanup.</summary>
+public sealed record TextValue(string Text,string Remainder,double Number,int Length,bool IsEmpty,bool IsAscii,int StorageLength);
+/// <summary>Copied path syntax and components. Traits describe the original input; FullName describes the edited copy.</summary>
+public sealed record PathValue(string FullName,string Node,string User,string Password,string Disk,string Trek,string Name,string Extension,string Projection,int TrekLength,IReadOnlyList<bool> Traits,bool SdkIsValid);
+/// <summary>Copied linear RGB, nearest SDK name and hex spelling.</summary>
+public sealed record ColorValue(double Red,double Green,double Blue,int NameOrdinal,string Hex,string Name) {
+ /// <summary>Create an independent existing owning color from these copied linear RGB components.</summary>
+ public OcctSharp.OwnedValues.QuantityColor CreateOwner()=>OcctSharp.OwnedValues.QuantityColor.Create(Red,Green,Blue,OcctSharp.QuantityTypeOfColor.Quantity_TOC_RGB);
+}
+/// <summary>Explicit unit conversion and nine copied dimension exponents in mass, length, time, current, temperature, amount, intensity, plane angle, solid angle order.</summary>
+public sealed record UnitValue(double Value,IReadOnlyList<double> Exponents);
+internal sealed partial class FoundationValueHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal FoundationValueHandle(nint token):base(true){SetHandle(token);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_foundation_values_release")]internal static partial void Release(nint token);
+}
+/// <summary>Call-private, bounded SDK value workflows. Strings prohibit NUL and invalid Unicode; every output is independent copied storage.</summary>
+public static partial class SdkValues {
+ static SdkValues()=>NativeLibraryResolver.EnsureRegistered(typeof(SdkValues).Assembly);
+ const int Limit=1048576;
+ static readonly UTF8Encoding Utf8=new(false,true);
+ sealed record Result(string[] Text,double[] Values);
+ static byte[] Encode(string value,bool ascii){ArgumentNullException.ThrowIfNull(value);if(value.Length>Limit||value.Contains('\0')||ascii&&value.Any(c=>c>127))throw new ArgumentException("Invalid bounded text input.",nameof(value));var bytes=Utf8.GetBytes(value);if(bytes.Length>Limit)throw new ArgumentException("UTF8 input exceeds capacity.",nameof(value));return bytes;}
+ static unsafe Result Run(int family,int op,string text,string other,int p=0,int q=32,int flags=1,double[]? numbers=null){
+  var first=Encode(text,family!=1);var second=Encode(other,family!=1);numbers??=[];nint token;
+  fixed(byte* a=first,b=second)fixed(double* n=numbers)NativeError.ThrowIfFailed(Execute(family,op,a,first.Length,b,second.Length,p,q,flags,n,numbers.Length,out token),"foundation_values_execute");
+  FoundationValueHandle? allocated=null;
+  try{
+   using var handle=allocated=new FoundationValueHandle(token);NativeError.ThrowIfFailed(Info(handle,out int texts,out int count),"foundation_values_info");
+   if(texts<0||texts>16||count<0||count>16)throw new InvalidOperationException("Invalid copied output count.");
+   var output=new string[texts];for(int i=0;i<texts;++i){NativeError.ThrowIfFailed(ReadText(handle,i,null,0,out int length),"foundation_values_text_size");if(length<0||length>Limit)throw new InvalidOperationException("Invalid copied text length.");var buffer=new byte[Math.Max(1,length)];fixed(byte* ptr=buffer)NativeError.ThrowIfFailed(ReadText(handle,i,ptr,buffer.Length,out length),"foundation_values_text");output[i]=Utf8.GetString(buffer,0,length);}
+   var values=new double[Math.Max(1,count)];fixed(double* ptr=values)NativeError.ThrowIfFailed(ReadNumbers(handle,ptr,values.Length),"foundation_values_numbers");return new(output,values[..count]);
+  }catch{if(allocated is null)FoundationValueHandle.Release(token);throw;}
+ }
+ /// <summary>Apply one SDK operation to a private ASCII or Unicode copy. Position is one-based except Split/Truncate and InsertAfter, which count retained code units. Padding defaults to space.</summary>
+ public static TextValue Text(string input,TextOperation operation=TextOperation.CopyInput,string other="",int position=0,int countOrEnd=32,bool caseSensitive=true,bool unicode=true){
+  var r=Run(unicode?1:0,(int)operation,input,other,position,countOrEnd,caseSensitive?1:0);var v=r.Values;return new(r.Text[0],r.Text[1],v[0],(int)v[1],v[2]!=0,v[3]!=0,(int)v[4]);
+ }
+ /// <summary>Remove one ASCII character using the SDK's default overload on a private copy.</summary>
+ public static TextValue RemoveAsciiCharacter(string input,char character){var r=Run(0,(int)TextOperation.RemoveAll,input,"",character,flags:2);var v=r.Values;return new(r.Text[0],r.Text[1],v[0],(int)v[1],v[2]!=0,v[3]!=0,(int)v[4]);}
+ /// <summary>Parse or edit pure path syntax; system is the SDK OSD_SysType ordinal, one selects the host default. TrekValue uses a one-based index.</summary>
+ public static PathValue Path(string input,PathOperation operation=PathOperation.Copy,string other="",int system=1,int index=1){var r=Run(2,(int)operation,input,other,system,index);var t=r.Text;return new(t[0],t[1],t[2],t[3],t[4],t[5],t[6],t[7],t[8],(int)r.Values[0],Array.AsReadOnly(r.Values[1..10].Select(x=>x!=0).ToArray()),r.Values[10]!=0);}
+ /// <summary>Parse an SDK hex color into copied linear RGB.</summary>
+ public static ColorValue ColorFromHex(string input,bool withHash=true)=>Color(Run(3,0,input,"",withHash?1:0));
+ /// <summary>Parse a named SDK color into copied linear RGB.</summary>
+ public static ColorValue ColorFromName(string input)=>Color(Run(3,1,input,"",1));
+ /// <summary>Project packed ARGB into RGB; alpha is not retained by Quantity_Color.</summary>
+ public static ColorValue ColorFromArgb(int input)=>Color(Run(3,2,"","",input));
+ static ColorValue Color(Result r)=>new(r.Values[0],r.Values[1],r.Values[2],(int)r.Values[3],r.Text[0],r.Text[1]);
+ /// <summary>Convert three finite color components with the selected SDK vector operation.</summary>
+ public static IReadOnlyList<double> ConvertColor(ColorConversion operation,double x,double y,double z)=>Array.AsReadOnly(Run(3,(int)operation,"","",numbers:[x,y,z]).Values);
+ /// <summary>Convert between proven compatible units; invalid units and incompatible dimensions throw, including when value is zero.</summary>
+ public static UnitValue ConvertUnits(double value,string from,string to)=>Unit(Run(4,0,from,to,numbers:[value]));
+ /// <summary>Convert a proven unit to SI.</summary>
+ public static UnitValue ToSi(double value,string unit)=>Unit(Run(4,1,unit,"",numbers:[value]));
+ /// <summary>Convert SI to a proven unit.</summary>
+ public static UnitValue FromSi(double value,string unit)=>Unit(Run(4,2,unit,"",numbers:[value]));
+ /// <summary>Copy one SDK fundamental dimension, zero dimensionless, then mass through solid angle.</summary>
+ public static UnitValue Dimension(int kind)=>Unit(Run(4,3,"","",kind,numbers:[0]));
+ /// <summary>Copy dimensions for an SDK quantity name.</summary>
+ public static UnitValue QuantityDimension(string quantity)=>Unit(Run(4,4,quantity,"",numbers:[0]));
+ static UnitValue Unit(Result r)=>new(r.Values[0],Array.AsReadOnly(r.Values[1..]));
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_foundation_values_execute")]private static unsafe partial NativeStatus Execute(int family,int operation,byte* text,int size,byte* other,int otherSize,int p,int q,int flags,double* values,int count,out nint token);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_foundation_values_info")]private static partial NativeStatus Info(FoundationValueHandle token,out int strings,out int values);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_foundation_values_text")]private static unsafe partial NativeStatus ReadText(FoundationValueHandle token,int index,byte* buffer,int capacity,out int written);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_foundation_values_numbers")]private static unsafe partial NativeStatus ReadNumbers(FoundationValueHandle token,double* buffer,int capacity);
+}

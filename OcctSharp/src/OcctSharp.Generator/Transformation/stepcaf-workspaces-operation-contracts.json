@@ -1,0 +1,386 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetColorMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetColorMode",
+      "signature": "STEPCAFControl_Reader::GetColorMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetGDTMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetGDTMode",
+      "signature": "STEPCAFControl_Reader::GetGDTMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetLayerMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetLayerMode",
+      "signature": "STEPCAFControl_Reader::GetLayerMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetMatMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetMatMode",
+      "signature": "STEPCAFControl_Reader::GetMatMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetMetaMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetMetaMode",
+      "signature": "STEPCAFControl_Reader::GetMetaMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetNameMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetNameMode",
+      "signature": "STEPCAFControl_Reader::GetNameMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetProductMetaMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetProductMetaMode",
+      "signature": "STEPCAFControl_Reader::GetProductMetaMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetPropsMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetPropsMode",
+      "signature": "STEPCAFControl_Reader::GetPropsMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetSHUOMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetSHUOMode",
+      "signature": "STEPCAFControl_Reader::GetSHUOMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetViewMode#1",
+      "nativeName": "STEPCAFControl_Reader::GetViewMode",
+      "signature": "STEPCAFControl_Reader::GetViewMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "STEPCAFControl_Reader::NbRootsForTransfer",
+      "signature": "STEPCAFControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "STEPCAFControl_Reader::ReadFile",
+      "signature": "STEPCAFControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void ()",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetColorMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetColorMode",
+      "signature": "STEPCAFControl_Reader::SetColorMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetGDTMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetGDTMode",
+      "signature": "STEPCAFControl_Reader::SetGDTMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetLayerMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetLayerMode",
+      "signature": "STEPCAFControl_Reader::SetLayerMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetMatMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetMatMode",
+      "signature": "STEPCAFControl_Reader::SetMatMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetMetaMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetMetaMode",
+      "signature": "STEPCAFControl_Reader::SetMetaMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetNameMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetNameMode",
+      "signature": "STEPCAFControl_Reader::SetNameMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetProductMetaMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetProductMetaMode",
+      "signature": "STEPCAFControl_Reader::SetProductMetaMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetPropsMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetPropsMode",
+      "signature": "STEPCAFControl_Reader::SetPropsMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetSHUOMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetSHUOMode",
+      "signature": "STEPCAFControl_Reader::SetSHUOMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetViewMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetViewMode",
+      "signature": "STEPCAFControl_Reader::SetViewMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Transfer",
+      "signature": "STEPCAFControl_Reader::Transfer: bool (const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetCleanDuplicates#1",
+      "nativeName": "STEPCAFControl_Writer::GetCleanDuplicates",
+      "signature": "STEPCAFControl_Writer::GetCleanDuplicates: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetColorMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetColorMode",
+      "signature": "STEPCAFControl_Writer::GetColorMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetDimTolMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetDimTolMode",
+      "signature": "STEPCAFControl_Writer::GetDimTolMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetLayerMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetLayerMode",
+      "signature": "STEPCAFControl_Writer::GetLayerMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetMaterialMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetMaterialMode",
+      "signature": "STEPCAFControl_Writer::GetMaterialMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetMetadataMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetMetadataMode",
+      "signature": "STEPCAFControl_Writer::GetMetadataMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetNameMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetNameMode",
+      "signature": "STEPCAFControl_Writer::GetNameMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetPropsMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetPropsMode",
+      "signature": "STEPCAFControl_Writer::GetPropsMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetSHUOMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetSHUOMode",
+      "signature": "STEPCAFControl_Writer::GetSHUOMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetVisualMaterialMode#1",
+      "nativeName": "STEPCAFControl_Writer::GetVisualMaterialMode",
+      "signature": "STEPCAFControl_Writer::GetVisualMaterialMode: bool () const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void ()",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetCleanDuplicates#b#",
+      "nativeName": "STEPCAFControl_Writer::SetCleanDuplicates",
+      "signature": "STEPCAFControl_Writer::SetCleanDuplicates: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetColorMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetColorMode",
+      "signature": "STEPCAFControl_Writer::SetColorMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetDimTolMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetDimTolMode",
+      "signature": "STEPCAFControl_Writer::SetDimTolMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetLayerMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetLayerMode",
+      "signature": "STEPCAFControl_Writer::SetLayerMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetMaterialMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetMaterialMode",
+      "signature": "STEPCAFControl_Writer::SetMaterialMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetMetadataMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetMetadataMode",
+      "signature": "STEPCAFControl_Writer::SetMetadataMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetNameMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetNameMode",
+      "signature": "STEPCAFControl_Writer::SetNameMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetPropsMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetPropsMode",
+      "signature": "STEPCAFControl_Writer::SetPropsMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetSHUOMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetSHUOMode",
+      "signature": "STEPCAFControl_Writer::SetSHUOMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetVisualMaterialMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetVisualMaterialMode",
+      "signature": "STEPCAFControl_Writer::SetVisualMaterialMode: void (const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const occ::handle<TDocStd_Document> &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Write#*1C#",
+      "nativeName": "STEPCAFControl_Writer::Write",
+      "signature": "STEPCAFControl_Writer::Write: IFSelect_ReturnStatus (const char *const)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@TDocStd_Document@F@BeforeClose#",
+      "nativeName": "TDocStd_Document::BeforeClose",
+      "signature": "TDocStd_Document::BeforeClose: void ()",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckShapeTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckShapeTool",
+      "signature": "XCAFDoc_DocumentTool::CheckShapeTool: bool (const TDF_Label &)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@Set#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_DocumentTool::Set",
+      "signature": "XCAFDoc_DocumentTool::Set: occ::handle<XCAFDoc_DocumentTool> (const TDF_Label &, const bool)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ShapeTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ShapeTool",
+      "signature": "XCAFDoc_DocumentTool::ShapeTool: occ::handle<XCAFDoc_ShapeTool> (const TDF_Label &)",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetFreeShapes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ShapeTool::GetFreeShapes",
+      "signature": "XCAFDoc_ShapeTool::GetFreeShapes: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXPrivateStepCaf",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const occ::handle<TDocStd_Document> &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "guard": "CDConfiguredStepWriter",
+      "reason": "Reused exact private operation for full-document schema/session-resolution writer; no SDK migration credit repeated."
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@InitFromStatic#",
+      "nativeName": "DESTEP_Parameters::InitFromStatic",
+      "signature": "DESTEP_Parameters::InitFromStatic: void ()",
+      "guard": "CDConfiguredStepWriter",
+      "reason": "Reused exact private operation for full-document schema/session-resolution writer; no SDK migration credit repeated."
+    }
+  ]
+}

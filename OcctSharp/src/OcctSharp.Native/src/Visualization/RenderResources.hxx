@@ -4,6 +4,7 @@
 #include <Graphic3d_CubeMap.hxx>
 #include <Graphic3d_Texture2D.hxx>
 #include <Image_PixMap.hxx>
+#include <AIS_ColoredShape.hxx>
 #include <Prs3d_Drawer.hxx>
 #include <Prs3d_ShadingAspect.hxx>
 #include <Graphic3d_TypeOfBackground.hxx>
@@ -51,6 +52,7 @@ opencascade::handle<Image_PixMap> FindTexture(OcctSharp_ViewerHandle* viewer, in
 opencascade::handle<Graphic3d_Texture2D> MakeReviewTexture(OcctSharp_ViewerHandle* viewer,
   const OcctSharp_Appearance& definition, const opencascade::handle<Image_PixMap>& image);
 void ResetReviewAppearance(OcctSharp_ViewerHandle* viewer, int64_t presentation);
+ViewerAppearanceEntry PrepareReviewAppearance(OcctSharp_ViewerHandle*, const opencascade::handle<AIS_ColoredShape>&, const OcctSharp_Appearance&, const ViewerAppearanceEntry* previous=nullptr);
 void ReplaceReviewTexture(OcctSharp_ViewerHandle* viewer, int64_t id,
   const opencascade::handle<Image_PixMap>& image);
 int32_t ReviewLayerId(OcctSharp_ViewerHandle* viewer, int64_t id);

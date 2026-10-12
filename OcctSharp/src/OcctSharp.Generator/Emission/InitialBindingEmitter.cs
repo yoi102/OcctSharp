@@ -44,7 +44,27 @@ public static class InitialBindingEmitter
         ArgumentNullException.ThrowIfNull(generatedPreambleHeaders);
 
         BindingModel valueEligibleModel = SimpleBindingEligibilityPass.Apply(report.Model);
-        BindingModel eligibleModel = SharedHandleBindingEligibilityPass.Apply(valueEligibleModel);
+        BindingModel privateEligibleModel = SharedHandleBindingEligibilityPass.Apply(valueEligibleModel);
+        // Existing broad emitters see the previous private disposition. The exact
+        // document profile receives the original model and owns its migration IDs.
+        BindingModel eligibleModel = new(privateEligibleModel.Declarations.Select(d =>
+            ClosedWorkflowOperationContract.DocumentAdapters.Contains(d)
+                && !ClosedWorkflowOperationContract.DocumentAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.XdeAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.XdeAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.StepAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.StepAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.MeshExchangeAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.MeshExchangeAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.MeshResourceAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.MeshResourceAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.ViewerAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.ViewerAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.DocumentIdentityAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.DocumentIdentityAdapters.Operations[d.StableId].Supporting
+                || ClosedWorkflowOperationContract.RenderResourceAdapters.Contains(d)
+                    && !ClosedWorkflowOperationContract.RenderResourceAdapters.Operations[d.StableId].Supporting
+                ? d with { SupportState = BindingSupportState.Manual } : d));
         InitialTypeMap typeMap = InitialTypeMap.FromModel(eligibleModel);
         BindingDeclaration pointConstructor = eligibleModel.Declarations.SingleOrDefault(
             declaration => IsPointCoordinateConstructor(declaration, typeMap))
@@ -153,6 +173,133 @@ public static class InitialBindingEmitter
             sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders);
         files.AddRange(ownedValueOperations.Files);
         sourceStableIds.AddRange(ownedValueOperations.SourceStableIds);
+        GeneratedBindingSet collectionOperations = CopiedCollectionOperationEmitter.Emit(report.OcctVersion, eligibleModel,
+            sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders);
+        files.AddRange(collectionOperations.Files);
+        sourceStableIds.AddRange(collectionOperations.SourceStableIds);
+        GeneratedBindingSet gridOperations = CopiedCollectionOperationEmitter.Emit(report.OcctVersion, eligibleModel,
+            sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders, grid: true);
+        files.AddRange(gridOperations.Files);
+        sourceStableIds.AddRange(gridOperations.SourceStableIds);
+        GeneratedBindingSet bulkOperations = CopiedCollectionOperationEmitter.Emit(report.OcctVersion, eligibleModel,
+            sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders, bulk: true);
+        files.AddRange(bulkOperations.Files); sourceStableIds.AddRange(bulkOperations.SourceStableIds);
+        GeneratedBindingSet curveConversions = CurveCollectionOperationEmitter.Emit(report.OcctVersion, eligibleModel, generatedPreambleHeaders);
+        files.AddRange(curveConversions.Files); sourceStableIds.AddRange(curveConversions.SourceStableIds);
+        GeneratedBindingSet topologyExchange = TopologyExchangeOperationEmitter.Emit(report.OcctVersion, eligibleModel, generatedPreambleHeaders);
+        files.AddRange(topologyExchange.Files); sourceStableIds.AddRange(topologyExchange.SourceStableIds);
+        GeneratedBindingSet repair = RepairWorkspaceOperationEmitter.Emit(report.OcctVersion, eligibleModel);
+        files.AddRange(repair.Files); sourceStableIds.AddRange(repair.SourceStableIds);
+        GeneratedBindingSet transfers = TransferRecordsOperationEmitter.Emit(report.OcctVersion, eligibleModel);
+        files.AddRange(transfers.Files); sourceStableIds.AddRange(transfers.SourceStableIds);
+        GeneratedBindingSet numeric = NumericMatricesOperationEmitter.Emit(report.OcctVersion, eligibleModel);
+        files.AddRange(numeric.Files); sourceStableIds.AddRange(numeric.SourceStableIds);
+        GeneratedBindingSet splines = SplineWorkspacesOperationEmitter.Emit(report.OcctVersion, eligibleModel);
+        files.AddRange(splines.Files); sourceStableIds.AddRange(splines.SourceStableIds);
+        GeneratedBindingSet writers = WriterDiagnosticsOperationEmitter.Emit(report.OcctVersion, eligibleModel);
+        files.AddRange(writers.Files); sourceStableIds.AddRange(writers.SourceStableIds);
+        GeneratedBindingSet modelingBuilders = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ModelingBuilders);
+        files.AddRange(modelingBuilders.Files); sourceStableIds.AddRange(modelingBuilders.SourceStableIds);
+        GeneratedBindingSet hatchingWorkspaces = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.HatchingWorkspaces);
+        files.AddRange(hatchingWorkspaces.Files); sourceStableIds.AddRange(hatchingWorkspaces.SourceStableIds);
+        GeneratedBindingSet polyData = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.PolyDataWorkspaces);
+        files.AddRange(polyData.Files); sourceStableIds.AddRange(polyData.SourceStableIds);
+        GeneratedBindingSet meshing = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.MeshingWorkspaces);
+        files.AddRange(meshing.Files); sourceStableIds.AddRange(meshing.SourceStableIds);
+        GeneratedBindingSet documentProjections = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.DocumentProjections);
+        files.AddRange(documentProjections.Files); sourceStableIds.AddRange(documentProjections.SourceStableIds);
+        GeneratedBindingSet xdeAttributes = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.XdeAttributeProjections);
+        files.AddRange(xdeAttributes.Files); sourceStableIds.AddRange(xdeAttributes.SourceStableIds);
+        GeneratedBindingSet exchangeSessions = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ExchangeSessions);
+        files.AddRange(exchangeSessions.Files); sourceStableIds.AddRange(exchangeSessions.SourceStableIds);
+        GeneratedBindingSet selectionWorkspaces = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.SelectionWorkspaces);
+        files.AddRange(selectionWorkspaces.Files); sourceStableIds.AddRange(selectionWorkspaces.SourceStableIds);
+        GeneratedBindingSet foundationValues = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.FoundationValues);
+        files.AddRange(foundationValues.Files); sourceStableIds.AddRange(foundationValues.SourceStableIds);
+        GeneratedBindingSet filling = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.FillingWorkspaces);
+        files.AddRange(filling.Files); sourceStableIds.AddRange(filling.SourceStableIds);
+        GeneratedBindingSet assembly = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.TopologyAssembly);
+        files.AddRange(assembly.Files); sourceStableIds.AddRange(assembly.SourceStableIds);
+        GeneratedBindingSet xdeMetadata = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.XdeMetadata);
+        files.AddRange(xdeMetadata.Files); sourceStableIds.AddRange(xdeMetadata.SourceStableIds);
+        GeneratedBindingSet stepCaf = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.StepCaf);
+        files.AddRange(stepCaf.Files); sourceStableIds.AddRange(stepCaf.SourceStableIds);
+        GeneratedBindingSet polygonBoundary = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.PolygonBoundary);
+        files.AddRange(polygonBoundary.Files); sourceStableIds.AddRange(polygonBoundary.SourceStableIds);
+        GeneratedBindingSet foundationDiagnostics = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.FoundationDiagnostics);
+        files.AddRange(foundationDiagnostics.Files); sourceStableIds.AddRange(foundationDiagnostics.SourceStableIds);
+        GeneratedBindingSet assemblyDiagnostics = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.AssemblyDiagnostics);
+        files.AddRange(assemblyDiagnostics.Files); sourceStableIds.AddRange(assemblyDiagnostics.SourceStableIds);
+        GeneratedBindingSet curveSampling = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.CurveSampling);
+        files.AddRange(curveSampling.Files); sourceStableIds.AddRange(curveSampling.SourceStableIds);
+        GeneratedBindingSet documentAssociations = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.DocumentAssociations);
+        files.AddRange(documentAssociations.Files); sourceStableIds.AddRange(documentAssociations.SourceStableIds);
+        GeneratedBindingSet exchangeRoots = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ExchangeRoots);
+        files.AddRange(exchangeRoots.Files); sourceStableIds.AddRange(exchangeRoots.SourceStableIds);
+        GeneratedBindingSet meshBoundaryDiagnostics = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.MeshBoundaryDiagnostics);
+        files.AddRange(meshBoundaryDiagnostics.Files); sourceStableIds.AddRange(meshBoundaryDiagnostics.SourceStableIds);
+        GeneratedBindingSet numericResults = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.NumericResults);
+        files.AddRange(numericResults.Files); sourceStableIds.AddRange(numericResults.SourceStableIds);
+        GeneratedBindingSet modelingResults = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ModelingResults);
+        files.AddRange(modelingResults.Files); sourceStableIds.AddRange(modelingResults.SourceStableIds);
+        GeneratedBindingSet rayresults = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.RayResults);
+        files.AddRange(rayresults.Files); sourceStableIds.AddRange(rayresults.SourceStableIds);
+        GeneratedBindingSet surfaceintersections = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.SurfaceIntersections);
+        files.AddRange(surfaceintersections.Files); sourceStableIds.AddRange(surfaceintersections.SourceStableIds);
+        GeneratedBindingSet directCollections = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.DirectCollections);
+        files.AddRange(directCollections.Files); sourceStableIds.AddRange(directCollections.SourceStableIds);
+        GeneratedBindingSet localStep = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.LocalStepAssembly);
+        files.AddRange(localStep.Files); sourceStableIds.AddRange(localStep.SourceStableIds);
+        GeneratedBindingSet meshConfig = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.MeshExchangeConfig);
+        files.AddRange(meshConfig.Files); sourceStableIds.AddRange(meshConfig.SourceStableIds);
+        GeneratedBindingSet construction = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ParameterizedConstruction);
+        files.AddRange(construction.Files); sourceStableIds.AddRange(construction.SourceStableIds);
+        GeneratedBindingSet extrema = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.FiniteExtrema);
+        files.AddRange(extrema.Files); sourceStableIds.AddRange(extrema.SourceStableIds);
+        GeneratedBindingSet textTransforms = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.BoundedTextTransforms);
+        files.AddRange(textTransforms.Files); sourceStableIds.AddRange(textTransforms.SourceStableIds);
+        GeneratedBindingSet proximity = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.MeshProximity);
+        files.AddRange(proximity.Files); sourceStableIds.AddRange(proximity.SourceStableIds);
+        GeneratedBindingSet localExport = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.LocalStepExport);
+        files.AddRange(localExport.Files); sourceStableIds.AddRange(localExport.SourceStableIds);
+        GeneratedBindingSet knots = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.LegacyKnotBuffers);
+        files.AddRange(knots.Files); sourceStableIds.AddRange(knots.SourceStableIds);
+        GeneratedBindingSet constraints = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.CoupledConstraints);
+        files.AddRange(constraints.Files); sourceStableIds.AddRange(constraints.SourceStableIds);
+        GeneratedBindingSet projectors = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.ProjectionAdapters);
+        files.AddRange(projectors.Files); sourceStableIds.AddRange(projectors.SourceStableIds);
+        GeneratedBindingSet fitters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.FittingAdapters);
+        files.AddRange(fitters.Files); sourceStableIds.AddRange(fitters.SourceStableIds);
+        GeneratedBindingSet faceBuilders = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.TopologyFaceAdapters);
+        files.AddRange(faceBuilders.Files); sourceStableIds.AddRange(faceBuilders.SourceStableIds);
+        GeneratedBindingSet booleanRepair = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.BooleanRepairAdapters);
+        files.AddRange(booleanRepair.Files); sourceStableIds.AddRange(booleanRepair.SourceStableIds);
+        GeneratedBindingSet localFeatures = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.LocalFeatureAdapters);
+        files.AddRange(localFeatures.Files); sourceStableIds.AddRange(localFeatures.SourceStableIds);
+        GeneratedBindingSet meshAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, eligibleModel, ClosedWorkflowOperationContract.MeshAdapters);
+        files.AddRange(meshAdapters.Files); sourceStableIds.AddRange(meshAdapters.SourceStableIds);
+        GeneratedBindingSet documentAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.DocumentAdapters);
+        files.AddRange(documentAdapters.Files); sourceStableIds.AddRange(documentAdapters.SourceStableIds);
+        GeneratedBindingSet xdeAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.XdeAdapters);
+        files.AddRange(xdeAdapters.Files); sourceStableIds.AddRange(xdeAdapters.SourceStableIds);
+        GeneratedBindingSet stepAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.StepAdapters);
+        files.AddRange(stepAdapters.Files); sourceStableIds.AddRange(stepAdapters.SourceStableIds);
+        GeneratedBindingSet meshExchangeAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.MeshExchangeAdapters);
+        files.AddRange(meshExchangeAdapters.Files); sourceStableIds.AddRange(meshExchangeAdapters.SourceStableIds);
+        GeneratedBindingSet meshResourceAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.MeshResourceAdapters);
+        files.AddRange(meshResourceAdapters.Files); sourceStableIds.AddRange(meshResourceAdapters.SourceStableIds);
+        GeneratedBindingSet viewerAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.ViewerAdapters);
+        files.AddRange(viewerAdapters.Files); sourceStableIds.AddRange(viewerAdapters.SourceStableIds);
+        GeneratedBindingSet documentIdentityAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.DocumentIdentityAdapters);
+        files.AddRange(documentIdentityAdapters.Files); sourceStableIds.AddRange(documentIdentityAdapters.SourceStableIds);
+        GeneratedBindingSet renderResourceAdapters = ClosedWorkflowOperationEmitter.Emit(report.OcctVersion, privateEligibleModel, ClosedWorkflowOperationContract.RenderResourceAdapters);
+        files.AddRange(renderResourceAdapters.Files); sourceStableIds.AddRange(renderResourceAdapters.SourceStableIds);
+        files.AddRange(UnitDiagnosticSupportEmitter.Emit(eligibleModel));
+        // The compatibility bridge belongs to the full Foundation discovery profile,
+        // not minimal geometry-only generator consumers.
+        if (eligibleModel.Declarations.Any(static d => d.Kind == BindingDeclarationKind.Record
+                && d.NativeName == "TCollection_AsciiString"))
+            files.AddRange(LegacyFoundationSupportEmitter.Emit());
         sourceStableIds.AddRange(eligibleModel.Declarations
             .Where(static declaration =>
                 declaration.Kind == BindingDeclarationKind.Enum
@@ -198,7 +345,7 @@ public static class InitialBindingEmitter
             static {{module}}GeneratedNativeMethods() =>
                 global::OcctSharp.Interop.NativeLibraryResolver.EnsureRegistered(typeof({{module}}GeneratedNativeMethods).Assembly);
         }
-        """ + Environment.NewLine;
+        """.Replace("\r\n", "\n", StringComparison.Ordinal) + Environment.NewLine;
 
     private static string UseModuleNativeMethods(string source, OcctProductModule module) =>
         source.Replace(

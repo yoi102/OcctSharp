@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #pragma once
 
 // Private native Exchange/ShapeExchange contract; never a public ABI or a second owner.
@@ -56,7 +57,7 @@ OcctSharp_Status WriteMeshExchangeShape(
   {
     ValidateUsableShape(shape);
     ValidatePath(file_path);
-    BRepMesh_IncrementalMesh mesh(shape->Value, 0.1, false, 0.5, true);
+    OcctSharpGenerated::PrivateMeshBuilder mesh(shape->Value, 0.1, false, 0.5, true);
     if (!mesh.IsDone())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT meshing did not complete before mesh exchange.");
     if (!provider.Write(TCollection_AsciiString(file_path), shape->Value))

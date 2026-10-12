@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #include "Mesh/MeshAuthoring.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Shape.hxx"
@@ -67,9 +68,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_existing_snapshot(const OcctSharp
       for (int i = 1; i <= mesh->NbNodes(); ++i) {
         gp_Pnt p = mesh->Node(i).Transformed(transform); OcctSharp_AuthoredVertex value{};
         value.x = p.X(); value.y = p.Y(); value.z = p.Z();
-        if (mesh->HasUVNodes()) { const auto uv = mesh->UVNode(i); value.u = uv.X(); value.v = uv.Y(); value.flags |= 2; }
+        if (mesh->HasUVNodes()) { const auto uv = OcctSharpGenerated::MeshUVNode(*mesh, i); value.u = uv.X(); value.v = uv.Y(); value.flags |= 2; }
         if (mesh->HasNormals()) {
-          value.flags |= 4; NCollection_Vec3<float> raw; mesh->Normal(i, raw);
+          value.flags |= 4; NCollection_Vec3<float> raw; OcctSharpGenerated::MeshNormal(*mesh, i, raw);
           gp_XYZ n(raw.x(), raw.y(), raw.z());
           if (n.SquareModulus() > 0) {
             n.Multiply(normalTransform); n.Normalize(); if (reversed) n.Reverse();
@@ -80,7 +81,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_existing_snapshot(const OcctSharp
       }
       bool reverseTriangles = reversed != transform.IsNegative();
       for (int i = 1; i <= mesh->NbTriangles(); ++i) {
-        int a, b, c; mesh->Triangle(i).Get(a, b, c); if (reverseTriangles) std::swap(b, c);
+        int a, b, c; OcctSharpGenerated::MeshTriangle(*mesh, i).Get(a, b, c); if (reverseTriangles) std::swap(b, c);
         facets.push_back({a - 1 + offset, b - 1 + offset, c - 1 + offset, faceIndex - 1});
       }
     }
@@ -123,7 +124,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_remesh_faces(const OcctSharp_Shap
     BRepBuilderAPI_Copy copy(source->Value, true, true); Require(copy.IsDone(), "Independent remeshing copy failed.");
     for (int index : unique) {
       TopoDS_Face face = TopoDS::Face(copy.ModifiedShape(faces(index + 1))); Require(!face.IsNull(), "Copied face mapping is unavailable.");
-      BRepTools::Clean(face, true); BRepMesh_IncrementalMesh mesher(face, linear, false, angular, false);
+      BRepTools::Clean(face, true); OcctSharpGenerated::PrivateMeshBuilder mesher(face, linear, false, angular, false);
       Require(mesher.IsDone(), "Selected exact-face remeshing failed."); TopLoc_Location location;
       Require(!BRep_Tool::Triangulation(face, location).IsNull(), "Selected remeshing produced no triangulation.");
     }
@@ -137,7 +138,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_poly_connect(const OcctSharp_Auth
     ValidateVertices(vertices, vertexCount); ValidateTriangles(triangles, triangleCount, vertexCount);
     Require(capacity >= triangleCount * 3 && (triangleCount == 0 || neighbors), "Connectivity output capacity is too small.");
     if (triangleCount == 0) return;
-    ValidateCoherent(triangles, triangleCount); Poly_Connect connect(Build(vertices, vertexCount, triangles, triangleCount));
+    ValidateCoherent(triangles, triangleCount); OcctSharpGenerated::PrivatePolyConnect connect(Build(vertices, vertexCount, triangles, triangleCount));
     std::vector<int> result(triangleCount * 3);
     for (int i = 1; i <= triangleCount; ++i) {
       int a, b, c; connect.Triangles(i, a, b, c);

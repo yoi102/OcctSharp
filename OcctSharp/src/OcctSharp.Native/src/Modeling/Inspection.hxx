@@ -12,4 +12,9 @@ BRepExtrema_DistShapeShape ComputeExactDistance(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second);
 
 void CopyInertia(const gp_Mat& matrix, OcctSharp_InspectionProperties& properties);
+bool RequiresInspectionSpanPartition(const TopoDS_Shape& shape);
+
+// Partitions copied knot spans before adaptive integration. The source is never modified.
+double ComputeAdaptiveProperties(const TopoDS_Shape& shape, int32_t propertyKind,
+  double relativeTolerance, OcctSharp_InspectionProperties& properties);
 }

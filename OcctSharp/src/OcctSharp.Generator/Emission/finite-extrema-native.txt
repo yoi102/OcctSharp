@@ -1,0 +1,97 @@
+#include "OcctSharp.Native.Internal.hxx"
+#include "../Modeling/OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include <GeomAdaptor_Curve.hxx>
+#include <GeomAdaptor_Surface.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <Geom_BezierCurve.hxx>
+#include <Geom_TrimmedCurve.hxx>
+#include <Geom_OffsetCurve.hxx>
+#include <Geom_BSplineSurface.hxx>
+#include <Geom_BezierSurface.hxx>
+#include <Geom_RectangularTrimmedSurface.hxx>
+#include <Geom_OffsetSurface.hxx>
+#include <Extrema_ExtCC.hxx>
+#include <Extrema_ExtCS.hxx>
+#include <Extrema_ExtSS.hxx>
+#include <Extrema_POnCurv.hxx>
+#include <Extrema_POnSurf.hxx>
+#include <BRep_Tool.hxx>
+#include <TopoDS.hxx>
+#include <array>
+#include <set>
+#include <mutex>
+using namespace OcctSharpTopologyCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_GeomCurveHandle* ValidateGeomCurve(const OcctSharp_GeomCurveHandle*);
+const OcctSharp_GeomSurfaceHandle* ValidateGeomSurface(const OcctSharp_GeomSurfaceHandle*);
+OcctSharp_GeomCurveHandle* AllocateGeomCurve(opencascade::handle<Geom_Curve>);
+}
+namespace {
+using ExtRow=std::array<double,12>;
+struct FiniteExtremaOutput {
+ mutable std::mutex evaluation;
+ int kind=0; bool done=false,parallel=false,single=false;
+ std::array<opencascade::handle<Geom_Curve>,2> curves;
+ std::array<opencascade::handle<Geom_Surface>,2> surfaces;
+ std::array<double,8> bounds{};
+ std::vector<ExtRow> rows,endpoints;
+};
+void ExtScalar(double value){Require(std::isfinite(value)&&std::abs(value)<=1e12,"Nonfinite/excessive extrema value.");}
+void ExtCurveBudget(const opencascade::handle<Geom_Curve>& source){
+ auto curve=source;std::set<const Geom_Curve*> seen;
+ for(int depth=0;;++depth){Require(!curve.IsNull()&&depth<=8&&seen.insert(curve.get()).second,"Curve nesting/cycle exceeds budget.");
+  auto trim=opencascade::handle<Geom_TrimmedCurve>::DownCast(curve);if(!trim.IsNull()){curve=trim->BasisCurve();continue;}
+  auto offset=opencascade::handle<Geom_OffsetCurve>::DownCast(curve);if(!offset.IsNull()){ExtScalar(offset->Offset());curve=offset->BasisCurve();continue;}
+  GeomAdaptor_Curve view(curve);auto type=view.GetType();Require(type!=GeomAbs_OtherCurve,"Unaudited extrema curve type.");
+  if(type==GeomAbs_BSplineCurve||type==GeomAbs_BezierCurve)Require(view.NbPoles()<=256&&view.Degree()<=14,"Extrema curve complexity exceeds budget.");break;
+ }
+}
+void ExtSurfaceBudget(const opencascade::handle<Geom_Surface>& source){
+ auto surface=source;std::set<const Geom_Surface*> seen;
+ for(int depth=0;;++depth){Require(!surface.IsNull()&&depth<=8&&seen.insert(surface.get()).second,"Surface nesting/cycle exceeds budget.");
+  auto trim=opencascade::handle<Geom_RectangularTrimmedSurface>::DownCast(surface);if(!trim.IsNull()){surface=trim->BasisSurface();continue;}
+  auto offset=opencascade::handle<Geom_OffsetSurface>::DownCast(surface);if(!offset.IsNull()){ExtScalar(offset->Offset());surface=offset->BasisSurface();continue;}
+  GeomAdaptor_Surface view(surface);auto type=view.GetType();Require(type==GeomAbs_Plane||type==GeomAbs_Cylinder||type==GeomAbs_Cone||type==GeomAbs_Sphere||type==GeomAbs_Torus||type==GeomAbs_BSplineSurface||type==GeomAbs_BezierSurface,"Unaudited extrema surface type.");
+  if(type==GeomAbs_BSplineSurface||type==GeomAbs_BezierSurface)Require(static_cast<int64_t>(view.NbUPoles())*view.NbVPoles()<=256&&view.UDegree()<=8&&view.VDegree()<=8,"Extrema surface complexity exceeds budget.");break;
+ }
+}
+opencascade::handle<Geom_Curve> ExtCurve(const OcctSharp_GeomCurveHandle* token){auto source=OcctSharpGenerated::ValidateGeomCurve(token)->Value;ExtCurveBudget(source);auto copy=opencascade::handle<Geom_Curve>::DownCast(source->Copy());Require(!copy.IsNull(),"Extrema curve copy failed.");return copy;}
+opencascade::handle<Geom_Surface> ExtSurface(const OcctSharp_GeomSurfaceHandle* token){auto source=OcctSharpGenerated::ValidateGeomSurface(token)->Value;ExtSurfaceBudget(source);auto copy=opencascade::handle<Geom_Surface>::DownCast(source->Copy());Require(!copy.IsNull(),"Extrema surface copy failed.");return copy;}
+ExtRow ExtPair(double distance,const gp_Pnt& a,double u,double v,const gp_Pnt& b,double s,double t){ExtRow row={distance,1,a.X(),a.Y(),a.Z(),u,v,b.X(),b.Y(),b.Z(),s,t};for(double x:row)ExtScalar(x);Require(distance>=0,"Negative square distance.");return row;}
+template<class Solver,class Capture> void ExtCapture(Solver& solver,FiniteExtremaOutput& output,int budget,Capture capture){
+ output.done=solver.IsDone();if(!output.done)return;output.parallel=solver.IsParallel();int count=solver.NbExt();Require(count>=0&&count<=budget,"Extrema result count exceeds budget.");
+ for(int i=1;i<=count;++i){double d=solver.SquareDistance(i);ExtScalar(d);Require(d>=0,"Negative square distance.");if(output.parallel){ExtRow row{};row[0]=d;output.rows.push_back(row);}else output.rows.push_back(capture(i,d));}
+}
+void ExtRange(double first,double last){ExtScalar(first);ExtScalar(last);Require(first<last&&last-first<=1e6,"Invalid/excessive finite extrema interval.");}
+void ExtCurveDomain(const opencascade::handle<Geom_Curve>& curve,double first,double last){ExtRange(first,last);Require(curve->IsPeriodic()||(first>=curve->FirstParameter()&&last<=curve->LastParameter()),"Curve domain exceeds source bounds.");}
+void ExtSurfaceDomain(const opencascade::handle<Geom_Surface>& surface,const double* bounds){ExtRange(bounds[0],bounds[1]);ExtRange(bounds[2],bounds[3]);double u0,u1,v0,v1;surface->Bounds(u0,u1,v0,v1);Require((surface->IsUPeriodic()||(bounds[0]>=u0&&bounds[1]<=u1))&&(surface->IsVPeriodic()||(bounds[2]>=v0&&bounds[3]<=v1)),"Surface domain exceeds source bounds.");}
+}
+void OCCTSHARP_CALL occtsharp_finite_extrema_release(void* token){OcctSharpOwned::Release(token,typeid(FiniteExtremaOutput));}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_finite_extrema_copy_curve(const OcctSharp_ShapeHandle* token,OcctSharp_GeomCurveHandle** result){if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto edge=ShapeValue(token);Require(edge.ShapeType()==TopAbs_EDGE,"Curve source must be an edge.");TopLoc_Location location;double first,last;auto curve=BRep_Tool::Curve(TopoDS::Edge(edge),location,first,last);ExtCurveBudget(curve);auto copy=opencascade::handle<Geom_Curve>::DownCast(curve->Copy());Require(!copy.IsNull(),"Edge curve copy failed.");copy->Transform(location.Transformation());*result=OcctSharpGenerated::AllocateGeomCurve(copy);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_finite_extrema_compute(int32_t kind,const OcctSharp_GeomCurveHandle* firstCurve,const OcctSharp_GeomCurveHandle* secondCurve,const OcctSharp_GeomSurfaceHandle* firstSurface,const OcctSharp_GeomSurfaceHandle* secondSurface,const double* bounds,int32_t capacity,double firstTolerance,double secondTolerance,int32_t budget,int32_t single,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(kind>=0&&kind<=2&&bounds&&capacity>=8&&budget>=1&&budget<=4096&&(single==0||single==1),"Invalid finite extrema arguments/budget.");ExtScalar(firstTolerance);ExtScalar(secondTolerance);Require(firstTolerance>=1e-12&&firstTolerance<=.1&&secondTolerance>=1e-12&&secondTolerance<=.1,"Extrema tolerance outside supported range.");Require(kind==0||single==0,"Single solution flag is curve/curve only.");
+  auto output=std::make_shared<FiniteExtremaOutput>();output->kind=kind;std::copy(bounds,bounds+8,output->bounds.begin());for(double x:output->bounds)ExtScalar(x);
+  if(kind<=1)output->curves[0]=ExtCurve(firstCurve);else output->surfaces[0]=ExtSurface(firstSurface);
+  if(kind==0)output->curves[1]=ExtCurve(secondCurve);else output->surfaces[1]=ExtSurface(secondSurface);
+  if(kind==0){
+   ExtCurveDomain(output->curves[0],bounds[0],bounds[1]);ExtCurveDomain(output->curves[1],bounds[4],bounds[5]);GeomAdaptor_Curve a(output->curves[0],bounds[0],bounds[1]),b(output->curves[1],bounds[4],bounds[5]);
+   Extrema_ExtCC solver(firstTolerance,secondTolerance);solver.Initialize(a,b,bounds[0],bounds[1],bounds[4],bounds[5],firstTolerance,secondTolerance);solver.SetSingleSolutionFlag(single!=0);output->single=solver.GetSingleSolutionFlag();solver.Perform();
+   ExtCapture(solver,*output,budget,[&](int i,double d){Extrema_POnCurv p,q;solver.Points(i,p,q);return ExtPair(d,p.Value(),p.Parameter(),0,q.Value(),q.Parameter(),0);});
+   double d11,d12,d21,d22;gp_Pnt p11,p12,p21,p22;solver.TrimmedSquareDistances(d11,d12,d21,d22,p11,p12,p21,p22);
+   output->endpoints={ExtPair(d11,p11,bounds[0],0,p21,bounds[4],0),ExtPair(d12,p11,bounds[0],0,p22,bounds[5],0),ExtPair(d21,p12,bounds[1],0,p21,bounds[4],0),ExtPair(d22,p12,bounds[1],0,p22,bounds[5],0)};
+  }else if(kind==1){
+   ExtCurveDomain(output->curves[0],bounds[0],bounds[1]);ExtSurfaceDomain(output->surfaces[1],bounds+4);GeomAdaptor_Curve a(output->curves[0],bounds[0],bounds[1]);GeomAdaptor_Surface b(output->surfaces[1],bounds[4],bounds[5],bounds[6],bounds[7]);
+   Extrema_ExtCS solver(a,b,bounds[0],bounds[1],bounds[4],bounds[5],bounds[6],bounds[7],firstTolerance,secondTolerance);
+   ExtCapture(solver,*output,budget,[&](int i,double d){Extrema_POnCurv p;Extrema_POnSurf q;solver.Points(i,p,q);double u,v;q.Parameter(u,v);return ExtPair(d,p.Value(),p.Parameter(),0,q.Value(),u,v);});
+  }else{
+   ExtSurfaceDomain(output->surfaces[0],bounds);ExtSurfaceDomain(output->surfaces[1],bounds+4);GeomAdaptor_Surface a(output->surfaces[0],bounds[0],bounds[1],bounds[2],bounds[3]),b(output->surfaces[1],bounds[4],bounds[5],bounds[6],bounds[7]);
+   Extrema_ExtSS solver(a,b,bounds[0],bounds[1],bounds[2],bounds[3],bounds[4],bounds[5],bounds[6],bounds[7],firstTolerance,secondTolerance);
+   ExtCapture(solver,*output,budget,[&](int i,double d){Extrema_POnSurf p,q;solver.Points(i,p,q);double u,v,s,t;p.Parameter(u,v);q.Parameter(s,t);return ExtPair(d,p.Value(),u,v,q.Value(),s,t);});
+  }
+  Publication<FiniteExtremaOutput> publication(output);*result=publication.Commit();
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_finite_extrema_snapshot(const void* token,int32_t* values,int32_t capacity){return Guard([&]{Require(values&&capacity>=6,"Insufficient extrema snapshot buffer.");auto output=OcctSharpOwned::Lease<const FiniteExtremaOutput>(token);int32_t data[]={output->kind,output->done?1:0,output->parallel?1:0,output->single?1:0,static_cast<int>(output->rows.size()),static_cast<int>(output->endpoints.size())};std::copy(std::begin(data),std::end(data),values);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_finite_extrema_row(const void* token,int32_t endpoint,int32_t index,double* values,int32_t capacity){return Guard([&]{Require((endpoint==0||endpoint==1)&&values&&capacity>=12,"Invalid extrema row buffer.");auto output=OcctSharpOwned::Lease<const FiniteExtremaOutput>(token);const auto& rows=endpoint?output->endpoints:output->rows;Require(index>=0&&static_cast<size_t>(index)<rows.size(),"Extrema row index outside range.");std::copy(rows[index].begin(),rows[index].end(),values);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_finite_extrema_sample(const void* token,int32_t side,double first,double second,double* values,int32_t capacity){return Guard([&]{Require(side>=0&&side<=1&&values&&capacity>=3,"Invalid extrema sample buffer/side.");ExtScalar(first);ExtScalar(second);auto output=OcctSharpOwned::Lease<const FiniteExtremaOutput>(token);std::lock_guard<std::mutex> lock(output->evaluation);auto offset=side*4;Require(first>=output->bounds[offset]&&first<=output->bounds[offset+1],"Extrema sample parameter outside finite domain.");gp_Pnt point;if(!output->curves[side].IsNull())point=output->curves[side]->Value(first);else{Require(second>=output->bounds[offset+2]&&second<=output->bounds[offset+3],"Extrema sample V outside finite domain.");point=output->surfaces[side]->Value(first,second);}double data[]={point.X(),point.Y(),point.Z()};for(double x:data)ExtScalar(x);std::copy(std::begin(data),std::end(data),values);});}

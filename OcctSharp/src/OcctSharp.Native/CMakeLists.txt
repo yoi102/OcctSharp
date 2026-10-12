@@ -9,9 +9,6 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Runtime/Registry.cpp
   src/Runtime/Shape.cpp
   src/Runtime/Validation.cpp
-  src/Foundation/Collections.cpp
-  src/Foundation/Text.cpp
-  src/Foundation/Transient.cpp
   src/Geometry/Conversions.cpp
   src/Geometry/Transforms.cpp
   src/Geometry/Values.cpp
@@ -23,6 +20,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/VolumeConstruction.cpp
   src/Modeling/LocalFeatureData.cpp
   src/Modeling/BooleanTopologyHistory.cpp
+  src/Modeling/ShapeTopologyHistory.cpp
   src/Modeling/ContourFinishing.cpp
   src/Modeling/ChamferContours.cpp
   src/Modeling/LocalDraft.cpp
@@ -37,6 +35,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/GuidedLoft.cpp
   src/Modeling/GeometryInspection.cpp
   src/Modeling/Inspection.cpp
+  src/Modeling/InspectionIntegration.cpp
   src/Modeling/Operations.cpp
   src/Modeling/Properties.cpp
   src/Modeling/RepairData.cpp
@@ -47,12 +46,14 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/RepairSewing.cpp
   src/Modeling/TopologyNormalization.cpp
   src/Modeling/Sketch.cpp
+  src/Modeling/SketchIntersectionInspection.cpp
   src/Modeling/Topology.cpp
   src/Mesh/Triangulation.cpp
   src/Mesh/MeshAuthoring.cpp
   src/Mesh/MeshEditing.cpp
   src/Mesh/MeshTopology.cpp
   src/Documents/Lifecycle.cpp
+    src/Documents/NamedDataPersistence.cpp
   src/Documents/State.cpp
   src/Documents/FunctionGraph.cpp
   src/Documents/ParametricState.cpp
@@ -64,11 +65,14 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Xde/Pmi.cpp
   src/Xde/SavedViews.cpp
   src/Xde/Structure.cpp
+  src/Xde/TransformedCopy.cpp
+  src/Xde/PresentationMetadata.cpp
   src/Xde/RepairPublication.cpp
   src/Exchange/ShapeExchange.cpp
   src/Exchange/MeshExchange.cpp
   src/Exchange/StepAssembly.cpp
   src/Exchange/XdeExchange.cpp
+  src/Exchange/IgesExportCopy.cpp
   src/Visualization/Clipping.cpp
   src/Visualization/Context.cpp
   src/Visualization/Dimensions.cpp
@@ -96,6 +100,14 @@ list(APPEND OCCTSHARP_MANUAL_NATIVE_SOURCES
 # Prove each manual responsibility declares its own dependencies. Generated shards
 # retain their existing PCH for build cost, but manual files cannot depend on it.
 set_source_files_properties(${OCCTSHARP_MANUAL_NATIVE_SOURCES}
+  PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
+
+# Compatibility adapters retain their independently verified include boundaries.
+set_source_files_properties(
+  generated/Foundation/OcctSharp.Foundation.LegacyCollections.Generated.cpp
+  generated/Foundation/OcctSharp.Foundation.LegacyText.Generated.cpp
+  generated/Foundation/OcctSharp.Foundation.LegacyTransient.Generated.cpp
+  generated/Geometry/OcctSharp.Geometry.LegacyKnotBuffers.Generated.cpp
   PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
 
 add_library(OcctSharp.Native SHARED
@@ -186,6 +198,9 @@ set(OCCTSHARP_CORE_TOOLKITS
   TKDEPLY)
 
 target_link_libraries(OcctSharp.Native PRIVATE ${OCCTSHARP_CORE_TOOLKITS})
+if(WIN32)
+    target_link_libraries(OcctSharp.Native PRIVATE bcrypt)
+endif()
 
 set_target_properties(OcctSharp.Native PROPERTIES
   UNITY_BUILD OFF

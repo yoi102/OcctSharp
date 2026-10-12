@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@CoordinateSystemConverter#1",
+      "nativeName": "RWGltf_CafWriter::CoordinateSystemConverter",
+      "signature": "RWGltf_CafWriter::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@DefaultStyle#1",
+      "nativeName": "RWGltf_CafWriter::DefaultStyle",
+      "signature": "RWGltf_CafWriter::DefaultStyle: const XCAFPrs_Style &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetDefaultStyle#&1$@S@XCAFPrs_Style#",
+      "nativeName": "RWGltf_CafWriter::SetDefaultStyle",
+      "signature": "RWGltf_CafWriter::SetDefaultStyle: void (const XCAFPrs_Style &)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@CoordinateSystemConverter#1",
+      "nativeName": "RWMesh_CafReader::CoordinateSystemConverter",
+      "signature": "RWMesh_CafReader::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@ExternalFiles#1",
+      "nativeName": "RWMesh_CafReader::ExternalFiles",
+      "signature": "RWMesh_CafReader::ExternalFiles: const NCollection_IndexedMap<TCollection_AsciiString> &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@Metadata#1",
+      "nativeName": "RWMesh_CafReader::Metadata",
+      "signature": "RWMesh_CafReader::Metadata: const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@Perform#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWMesh_CafReader::Perform",
+      "signature": "RWMesh_CafReader::Perform: bool (const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWMesh_CafReader::SetCoordinateSystemConverter",
+      "signature": "RWMesh_CafReader::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SingleShape#1",
+      "nativeName": "RWMesh_CafReader::SingleShape",
+      "signature": "RWMesh_CafReader::SingleShape: TopoDS_Shape () const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@CoordinateSystemConverter#1",
+      "nativeName": "RWObj_CafWriter::CoordinateSystemConverter",
+      "signature": "RWObj_CafWriter::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@DefaultStyle#1",
+      "nativeName": "RWObj_CafWriter::DefaultStyle",
+      "signature": "RWObj_CafWriter::DefaultStyle: const XCAFPrs_Style &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetDefaultStyle#&1$@S@XCAFPrs_Style#",
+      "nativeName": "RWObj_CafWriter::SetDefaultStyle",
+      "signature": "RWObj_CafWriter::SetDefaultStyle: void (const XCAFPrs_Style &)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@CommonMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::CommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::CommonMaterial: const XCAFDoc_VisMaterialCommon &() const",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@GetID#S",
+      "nativeName": "XCAFDoc_VisMaterial::GetID",
+      "signature": "XCAFDoc_VisMaterial::GetID: const Standard_GUID &()",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@SetCommonMaterial#&1$@S@XCAFDoc_VisMaterialCommon#",
+      "nativeName": "XCAFDoc_VisMaterial::SetCommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::SetCommonMaterial: void (const XCAFDoc_VisMaterialCommon &)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@SetLengthUnit#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#d#S",
+      "nativeName": "XCAFDoc_DocumentTool::SetLengthUnit",
+      "signature": "XCAFDoc_DocumentTool::SetLengthUnit: void (const occ::handle<TDocStd_Document> &, const double)",
+      "guard": "BKConfiguredMesh",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit."
+    }
+  ],
+  "supportingOperations": []
+}

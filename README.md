@@ -5,31 +5,35 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview target: `8.0.1-preview.28` for Windows x64 (validation status in
-[STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
-modules, the `OcctSharp` compatibility/facade package, and one shared
-`OcctSharp.Native.win-x64` runtime package. The native package places the complete
-62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
-or `PATH` change is required.
+Current local package candidate: `8.0.1-preview.45` for Windows x64; complete local
+gates pass, with final delivery freeze tracked in STATUS. [STATUS](docs/STATUS.md) records full gates. The NuGet graph
+contains 12 managed modules, the `OcctSharp` facade, and one shared
+`OcctSharp.Native.win-x64` package with 62 DLLs in the application's `occt/`
+directory. No machine-wide OCCT installation or PATH change is required.
 
-Preview.28 adds 225 audited owned utility classes and 1,924 generated declarations
-across nine modules, including geometry, modeling and STEP SELECT containers.
-See [Batch AC changes](docs/BATCH_AC_OWNED_UTILITY_EXPANSION.md) for scope and limitations.
+[Batch AT](docs/BATCH_AT_EXCHANGE_SESSIONS.md) adds private STEP/IGES file sessions,
+copied headers and checks, domain-scoped entity selections, and restored metadata
+export. It reuses existing transfer/writer workflows; schemas and geometry units
+remain read-only. AP–AT are delivered. [AU](docs/BATCH_AU_SELECTION_WORKSPACES.md)
+adds parent-bound selecting volumes and world-hit diagnostics; its visible-frame
+and final delivery gates are still open.
+Declaration migration coverage and product completion are separate; external
+CAD, hosted CI, signing and public publication have their own acceptance gates.
 
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.28 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.55 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.28 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.55 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.28 is a local package build; publication is outside this batch. Create the
+Preview.45 passes local gates; its final identity freeze is tracked in STATUS. Public publication is a separate gate. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 

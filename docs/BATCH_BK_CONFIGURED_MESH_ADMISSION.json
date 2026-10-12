@@ -1,0 +1,753 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.60",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "612EDB93A560BF9AB95E6B60375526CEE1725A6D6B1C4E39D0908343EE0936C3",
+  "declarations": [
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@ChangeCoordinateSystemConverter#",
+      "nativeName": "RWGltf_CafWriter::ChangeCoordinateSystemConverter",
+      "signature": "RWGltf_CafWriter::ChangeCoordinateSystemConverter: RWMesh_CoordinateSystemConverter &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@CompressionParameters#1",
+      "nativeName": "RWGltf_CafWriter::CompressionParameters",
+      "signature": "RWGltf_CafWriter::CompressionParameters: const RWGltf_DracoParameters &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@CoordinateSystemConverter#1",
+      "nativeName": "RWGltf_CafWriter::CoordinateSystemConverter",
+      "signature": "RWGltf_CafWriter::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@DefaultStyle#1",
+      "nativeName": "RWGltf_CafWriter::DefaultStyle",
+      "signature": "RWGltf_CafWriter::DefaultStyle: const XCAFPrs_Style &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@get_type_descriptor#S",
+      "nativeName": "RWGltf_CafWriter::get_type_descriptor",
+      "signature": "RWGltf_CafWriter::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@get_type_name#S",
+      "nativeName": "RWGltf_CafWriter::get_type_name",
+      "signature": "RWGltf_CafWriter::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_Sequence>#$@S@TDF_Label#*1$@S@NCollection_Map>#$@S@TCollection_AsciiString#$@S@NCollection_DefaultHasher>#S8_#&1$@S@NCollection_IndexedDataMap>#S8_#S8_#S9_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWGltf_CafWriter::Perform",
+      "signature": "RWGltf_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_Sequence<TDF_Label> &, const NCollection_Map<TCollection_AsciiString> *, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@RWGltf_CafWriter#",
+      "nativeName": "RWGltf_CafWriter::RWGltf_CafWriter",
+      "signature": "RWGltf_CafWriter::RWGltf_CafWriter: void (const RWGltf_CafWriter &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCompressionParameters#&1$@S@RWGltf_DracoParameters#",
+      "nativeName": "RWGltf_CafWriter::SetCompressionParameters",
+      "signature": "RWGltf_CafWriter::SetCompressionParameters: void (const RWGltf_DracoParameters &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetDefaultStyle#&1$@S@XCAFPrs_Style#",
+      "nativeName": "RWGltf_CafWriter::SetDefaultStyle",
+      "signature": "RWGltf_CafWriter::SetDefaultStyle: void (const XCAFPrs_Style &)",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@CoordinateSystemConverter#1",
+      "nativeName": "RWMesh_CafReader::CoordinateSystemConverter",
+      "signature": "RWMesh_CafReader::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@ExternalFiles#1",
+      "nativeName": "RWMesh_CafReader::ExternalFiles",
+      "signature": "RWMesh_CafReader::ExternalFiles: const NCollection_IndexedMap<TCollection_AsciiString> &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@get_type_descriptor#S",
+      "nativeName": "RWMesh_CafReader::get_type_descriptor",
+      "signature": "RWMesh_CafReader::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@get_type_name#S",
+      "nativeName": "RWMesh_CafReader::get_type_name",
+      "signature": "RWMesh_CafReader::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@Metadata#1",
+      "nativeName": "RWMesh_CafReader::Metadata",
+      "signature": "RWMesh_CafReader::Metadata: const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@Perform#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#&1$@S@Message_ProgressRange#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWMesh_CafReader::Perform",
+      "signature": "RWMesh_CafReader::Perform: bool (std::istream &, const Message_ProgressRange &, const TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@Perform#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWMesh_CafReader::Perform",
+      "signature": "RWMesh_CafReader::Perform: bool (const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@ProbeHeader#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWMesh_CafReader::ProbeHeader",
+      "signature": "RWMesh_CafReader::ProbeHeader: bool (std::istream &, const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@ProbeHeader#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWMesh_CafReader::ProbeHeader",
+      "signature": "RWMesh_CafReader::ProbeHeader: bool (const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@RootPrefix#1",
+      "nativeName": "RWMesh_CafReader::RootPrefix",
+      "signature": "RWMesh_CafReader::RootPrefix: const TCollection_AsciiString &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWMesh_CafReader::SetCoordinateSystemConverter",
+      "signature": "RWMesh_CafReader::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetRootPrefix#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWMesh_CafReader::SetRootPrefix",
+      "signature": "RWMesh_CafReader::SetRootPrefix: void (const TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SingleShape#1",
+      "nativeName": "RWMesh_CafReader::SingleShape",
+      "signature": "RWMesh_CafReader::SingleShape: TopoDS_Shape () const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@RWMesh_CoordinateSystemConverter#&&$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter",
+      "signature": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter: void (RWMesh_CoordinateSystemConverter &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@RWMesh_CoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter",
+      "signature": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@ChangeCoordinateSystemConverter#",
+      "nativeName": "RWObj_CafWriter::ChangeCoordinateSystemConverter",
+      "signature": "RWObj_CafWriter::ChangeCoordinateSystemConverter: RWMesh_CoordinateSystemConverter &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@CoordinateSystemConverter#1",
+      "nativeName": "RWObj_CafWriter::CoordinateSystemConverter",
+      "signature": "RWObj_CafWriter::CoordinateSystemConverter: const RWMesh_CoordinateSystemConverter &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@DefaultStyle#1",
+      "nativeName": "RWObj_CafWriter::DefaultStyle",
+      "signature": "RWObj_CafWriter::DefaultStyle: const XCAFPrs_Style &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@get_type_descriptor#S",
+      "nativeName": "RWObj_CafWriter::get_type_descriptor",
+      "signature": "RWObj_CafWriter::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@get_type_name#S",
+      "nativeName": "RWObj_CafWriter::get_type_name",
+      "signature": "RWObj_CafWriter::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_Sequence>#$@S@TDF_Label#*1$@S@NCollection_Map>#$@S@TCollection_AsciiString#$@S@NCollection_DefaultHasher>#S8_#&1$@S@NCollection_IndexedDataMap>#S8_#S8_#S9_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_CafWriter::Perform",
+      "signature": "RWObj_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_Sequence<TDF_Label> &, const NCollection_Map<TCollection_AsciiString> *, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@RWObj_CafWriter#",
+      "nativeName": "RWObj_CafWriter::RWObj_CafWriter",
+      "signature": "RWObj_CafWriter::RWObj_CafWriter: void (const RWObj_CafWriter &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetDefaultStyle#&1$@S@XCAFPrs_Style#",
+      "nativeName": "RWObj_CafWriter::SetDefaultStyle",
+      "signature": "RWObj_CafWriter::SetDefaultStyle: void (const XCAFPrs_Style &)",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@CommonMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::CommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::CommonMaterial: const XCAFDoc_VisMaterialCommon &() const",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@ConvertToCommonMaterial#",
+      "nativeName": "XCAFDoc_VisMaterial::ConvertToCommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::ConvertToCommonMaterial: XCAFDoc_VisMaterialCommon ()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "XCAFDoc_VisMaterial::DumpJson",
+      "signature": "XCAFDoc_VisMaterial::DumpJson: void (Standard_OStream &, int) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@FillMaterialAspect#&$@S@Graphic3d_MaterialAspect#1",
+      "nativeName": "XCAFDoc_VisMaterial::FillMaterialAspect",
+      "signature": "XCAFDoc_VisMaterial::FillMaterialAspect: void (Graphic3d_MaterialAspect &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_VisMaterial::get_type_descriptor",
+      "signature": "XCAFDoc_VisMaterial::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@get_type_name#S",
+      "nativeName": "XCAFDoc_VisMaterial::get_type_name",
+      "signature": "XCAFDoc_VisMaterial::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@GetID#S",
+      "nativeName": "XCAFDoc_VisMaterial::GetID",
+      "signature": "XCAFDoc_VisMaterial::GetID: const Standard_GUID &()",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@ID#1",
+      "nativeName": "XCAFDoc_VisMaterial::ID",
+      "signature": "XCAFDoc_VisMaterial::ID: const Standard_GUID &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@SetCommonMaterial#&1$@S@XCAFDoc_VisMaterialCommon#",
+      "nativeName": "XCAFDoc_VisMaterial::SetCommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::SetCommonMaterial: void (const XCAFDoc_VisMaterialCommon &)",
+      "decision": "ADMITTED",
+      "reason": "Private initialized converter/style/material receiver; bounded copied configuration, Common values, reader diagnostics or close-safe complete mesh output."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@XCAFDoc_VisMaterial#&&$@S@XCAFDoc_VisMaterial#",
+      "nativeName": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial",
+      "signature": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial: void (XCAFDoc_VisMaterial &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@XCAFDoc_VisMaterial#&1$@S@XCAFDoc_VisMaterial#",
+      "nativeName": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial",
+      "signature": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial: void (const XCAFDoc_VisMaterial &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@AddMaterial#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::AddMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::AddMaterial: TDF_Label (const TCollection_AsciiString &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@BaseLabel#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::BaseLabel",
+      "signature": "XCAFDoc_VisMaterialTool::BaseLabel: TDF_Label () const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::get_type_descriptor",
+      "signature": "XCAFDoc_VisMaterialTool::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@get_type_name#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::get_type_name",
+      "signature": "XCAFDoc_VisMaterialTool::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetID#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetID",
+      "signature": "XCAFDoc_VisMaterialTool::GetID: const Standard_GUID &()",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetShapeMaterial#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::GetShapeMaterial: occ::handle<XCAFDoc_VisMaterial> (const TopoDS_Shape &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetShapeMaterial#&1$@S@TopoDS_Shape#&$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::GetShapeMaterial: bool (const TopoDS_Shape &, TDF_Label &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@ID#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::ID",
+      "signature": "XCAFDoc_VisMaterialTool::ID: const Standard_GUID &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@IsSetShapeMaterial#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::IsSetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::IsSetShapeMaterial: bool (const TDF_Label &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@IsSetShapeMaterial#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_VisMaterialTool::IsSetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::IsSetShapeMaterial: bool (const TopoDS_Shape &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@RemoveMaterial#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::RemoveMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::RemoveMaterial: void (const TDF_Label &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::Set",
+      "signature": "XCAFDoc_VisMaterialTool::Set: occ::handle<XCAFDoc_VisMaterialTool> (const TDF_Label &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@SetShapeMaterial#&1$@S@TopoDS_Shape#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_VisMaterialTool::SetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::SetShapeMaterial: bool (const TopoDS_Shape &, const TDF_Label &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@UnSetShapeMaterial#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::UnSetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::UnSetShapeMaterial: void (const TDF_Label &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@UnSetShapeMaterial#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_VisMaterialTool::UnSetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::UnSetShapeMaterial: bool (const TopoDS_Shape &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@XCAFDoc_VisMaterialTool#&&$@S@XCAFDoc_VisMaterialTool#",
+      "nativeName": "XCAFDoc_VisMaterialTool::XCAFDoc_VisMaterialTool",
+      "signature": "XCAFDoc_VisMaterialTool::XCAFDoc_VisMaterialTool: void (XCAFDoc_VisMaterialTool &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@XCAFDoc_VisMaterialTool#&1$@S@XCAFDoc_VisMaterialTool#",
+      "nativeName": "XCAFDoc_VisMaterialTool::XCAFDoc_VisMaterialTool",
+      "signature": "XCAFDoc_VisMaterialTool::XCAFDoc_VisMaterialTool: void (const XCAFDoc_VisMaterialTool &)",
+      "decision": "DEFERRED",
+      "reason": "No additional admitted workflow for streams, compression/textures, copy/move, mutable converter references, subset writers, root prefixes or material table operations."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@SetLengthUnit#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#d#S",
+      "nativeName": "XCAFDoc_DocumentTool::SetLengthUnit",
+      "signature": "XCAFDoc_DocumentTool::SetLengthUnit: void (const occ::handle<TDocStd_Document> &, const double)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit."
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafReader@F@RWGltf_CafReader#",
+      "nativeName": "RWGltf_CafReader::RWGltf_CafReader",
+      "signature": "RWGltf_CafReader::RWGltf_CafReader: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWGltf_CafWriter::Perform",
+      "signature": "RWGltf_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "RWGltf_CafWriter::RWGltf_CafWriter",
+      "signature": "RWGltf_CafWriter::RWGltf_CafWriter: void (const TCollection_AsciiString &, bool)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWGltf_CafWriter::SetCoordinateSystemConverter",
+      "signature": "RWGltf_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@ExtraStatus#1",
+      "nativeName": "RWMesh_CafReader::ExtraStatus",
+      "signature": "RWMesh_CafReader::ExtraStatus: int () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetDocument#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#",
+      "nativeName": "RWMesh_CafReader::SetDocument",
+      "signature": "RWMesh_CafReader::SetDocument: void (const occ::handle<TDocStd_Document> &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetFillIncompleteDocument#b#",
+      "nativeName": "RWMesh_CafReader::SetFillIncompleteDocument",
+      "signature": "RWMesh_CafReader::SetFillIncompleteDocument: void (bool)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CafReader@F@SetMemoryLimitMiB#I#",
+      "nativeName": "RWMesh_CafReader::SetMemoryLimitMiB",
+      "signature": "RWMesh_CafReader::SetMemoryLimitMiB: void (int)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@HasInputCoordinateSystem#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::HasInputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::HasInputCoordinateSystem: bool () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@HasOutputCoordinateSystem#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::HasOutputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::HasOutputCoordinateSystem: bool () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@InputLengthUnit#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::InputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::InputLengthUnit: double () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@OutputLengthUnit#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::OutputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::OutputLengthUnit: double () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter",
+      "signature": "RWMesh_CoordinateSystemConverter::RWMesh_CoordinateSystemConverter: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit: void (double)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit: void (double)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafReader@F@RWObj_CafReader#",
+      "nativeName": "RWObj_CafReader::RWObj_CafReader",
+      "signature": "RWObj_CafReader::RWObj_CafReader: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_CafWriter::Perform",
+      "signature": "RWObj_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWObj_CafWriter::RWObj_CafWriter",
+      "signature": "RWObj_CafWriter::RWObj_CafWriter: void (const TCollection_AsciiString &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWObj_CafWriter::SetCoordinateSystemConverter",
+      "signature": "RWObj_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@Set#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_DocumentTool::Set",
+      "signature": "XCAFDoc_DocumentTool::Set: occ::handle<XCAFDoc_DocumentTool> (const TDF_Label &, const bool)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ShapeTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ShapeTool",
+      "signature": "XCAFDoc_DocumentTool::ShapeTool: occ::handle<XCAFDoc_ShapeTool> (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@VisMaterialTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::VisMaterialTool",
+      "signature": "XCAFDoc_DocumentTool::VisMaterialTool: occ::handle<XCAFDoc_VisMaterialTool> (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetComponents#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#b#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetComponents",
+      "signature": "XCAFDoc_ShapeTool::GetComponents: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &, const bool)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetFreeShapes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ShapeTool::GetFreeShapes",
+      "signature": "XCAFDoc_ShapeTool::GetFreeShapes: void (NCollection_Sequence<TDF_Label> &) const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetReferredShape#&1$@S@TDF_Label#&S1_#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetReferredShape",
+      "signature": "XCAFDoc_ShapeTool::GetReferredShape: bool (const TDF_Label &, TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetShape",
+      "signature": "XCAFDoc_ShapeTool::GetShape: TopoDS_Shape (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsAssembly#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsAssembly",
+      "signature": "XCAFDoc_ShapeTool::IsAssembly: bool (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsReference#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsReference",
+      "signature": "XCAFDoc_ShapeTool::IsReference: bool (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSimpleShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsSimpleShape",
+      "signature": "XCAFDoc_ShapeTool::IsSimpleShape: bool (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsTopLevel#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ShapeTool::IsTopLevel",
+      "signature": "XCAFDoc_ShapeTool::IsTopLevel: bool (const TDF_Label &) const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_ShapeTool::SetShape",
+      "signature": "XCAFDoc_ShapeTool::SetShape: void (const TDF_Label &, const TopoDS_Shape &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@UpdateAssemblies#",
+      "nativeName": "XCAFDoc_ShapeTool::UpdateAssemblies",
+      "signature": "XCAFDoc_ShapeTool::UpdateAssemblies: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@HasCommonMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::HasCommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::HasCommonMaterial: bool () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@HasPbrMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::HasPbrMaterial",
+      "signature": "XCAFDoc_VisMaterial::HasPbrMaterial: bool () const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@PbrMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::PbrMaterial",
+      "signature": "XCAFDoc_VisMaterial::PbrMaterial: const XCAFDoc_VisMaterialPBR &() const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@XCAFDoc_VisMaterial#",
+      "nativeName": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial",
+      "signature": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetMaterial#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::GetMaterial: occ::handle<XCAFDoc_VisMaterial> (const TDF_Label &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetMaterials#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetMaterials",
+      "signature": "XCAFDoc_VisMaterialTool::GetMaterials: void (NCollection_Sequence<TDF_Label> &) const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFPrs_Style@F@Material#1",
+      "nativeName": "XCAFPrs_Style::Material",
+      "signature": "XCAFPrs_Style::Material: const occ::handle<XCAFDoc_VisMaterial> &() const",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFPrs_Style@F@SetMaterial#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#",
+      "nativeName": "XCAFPrs_Style::SetMaterial",
+      "signature": "XCAFPrs_Style::SetMaterial: void (const occ::handle<XCAFDoc_VisMaterial> &)",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFPrs_Style@F@XCAFPrs_Style#",
+      "nativeName": "XCAFPrs_Style::XCAFPrs_Style",
+      "signature": "XCAFPrs_Style::XCAFPrs_Style: void ()",
+      "reason": "Required private initialized mesh converter/reader/style or exact definition writeback dependency. Existing operations are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

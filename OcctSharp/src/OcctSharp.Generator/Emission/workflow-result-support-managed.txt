@@ -1,0 +1,20 @@
+#nullable enable
+namespace OcctSharp.WorkflowResults;
+/// <summary>Bounded copies shared by generated private workflow adapters.</summary>
+internal static class WorkflowCopies {
+ internal static T[] Bounded<T>(IEnumerable<T> input,int limit) {
+  ArgumentNullException.ThrowIfNull(input);
+  ArgumentOutOfRangeException.ThrowIfNegative(limit);
+  if(limit==int.MaxValue)throw new ArgumentOutOfRangeException(nameof(limit));
+  if(input.TryGetNonEnumeratedCount(out int count)&&count>limit)throw new ArgumentOutOfRangeException(nameof(input));
+  var copy=input.Take(limit+1).ToArray();
+  if(copy.Length>limit)throw new ArgumentOutOfRangeException(nameof(input));
+  return copy;
+ }
+ internal static void Finite(IEnumerable<double> values) {
+  if(values.Any(x=>!double.IsFinite(x)))throw new ArgumentException("Workflow input contains a nonfinite value.",nameof(values));
+ }
+ internal static void Count(int actual,int expected) {
+  if(actual!=expected)throw new InvalidDataException("Native workflow output count differs from its initialized profile.");
+ }
+}

@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBSpMatrix#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#I#&$@S@math_Matrix#&I#S6_#S",
+      "nativeName": "BSplCLib::BuildBSpMatrix",
+      "signature": "BSplCLib::BuildBSpMatrix: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const int, math_Matrix &, int &, int &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@EvalBsplineBasis#I#I#&1$@S@NCollection_Array1>#d#d#&I#&$@S@math_Matrix#b#S",
+      "nativeName": "BSplCLib::EvalBsplineBasis",
+      "signature": "BSplCLib::EvalBsplineBasis: int (const int, const int, const NCollection_Array1<double> &, const double, int &, math_Matrix &, const bool)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Determinant#1",
+      "nativeName": "math_Gauss::Determinant",
+      "signature": "math_Gauss::Determinant: double () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Invert#&$@S@math_Matrix#1",
+      "nativeName": "math_Gauss::Invert",
+      "signature": "math_Gauss::Invert: void (math_Matrix &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@IsDone#1",
+      "nativeName": "math_Gauss::IsDone",
+      "signature": "math_Gauss::IsDone: bool () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Gauss::Solve",
+      "signature": "math_Gauss::Solve: void (math_Vector &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&1$@S@math_VectorBase>#d#&S1_#1",
+      "nativeName": "math_Gauss::Solve",
+      "signature": "math_Gauss::Solve: void (const math_Vector &, math_Vector &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&1$@S@math_Matrix#d#&1$@S@Message_ProgressRange#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "signature": "math_Gauss::math_Gauss: void (const math_Matrix &, const double, const Message_ProgressRange &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@AllValues#1",
+      "nativeName": "math_Householder::AllValues",
+      "signature": "math_Householder::AllValues: const math_Matrix &() const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@IsDone#1",
+      "nativeName": "math_Householder::IsDone",
+      "signature": "math_Householder::IsDone: bool () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@Value#&$@S@math_VectorBase>#d#I#1",
+      "nativeName": "math_Householder::Value",
+      "signature": "math_Householder::Value: void (math_Vector &, const int) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Vector &, const double)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#I#I#I#I#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Matrix &, const int, const int, const int, const int, const double)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "signature": "math_Householder::math_Householder: void (const math_Matrix &, const math_Matrix &, const double)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Added#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Added",
+      "signature": "math_Matrix::Added: math_Matrix (const math_Matrix &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Col#I#1",
+      "nativeName": "math_Matrix::Col",
+      "signature": "math_Matrix::Col: math_VectorBase<> (const int) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Divided#d#1",
+      "nativeName": "math_Matrix::Divided",
+      "signature": "math_Matrix::Divided: math_Matrix (const double) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Inverse#1",
+      "nativeName": "math_Matrix::Inverse",
+      "signature": "math_Matrix::Inverse: math_Matrix () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "signature": "math_Matrix::Multiplied: math_Matrix (const math_Matrix &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "signature": "math_Matrix::Multiplied: math_VectorBase<> (const math_VectorBase<> &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "signature": "math_Matrix::Multiplied: math_Matrix (const double) const noexcept",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiply#&1$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "math_Matrix::Multiply",
+      "signature": "math_Matrix::Multiply: void (const math_VectorBase<> &, const math_VectorBase<> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Opposite#1",
+      "nativeName": "math_Matrix::Opposite",
+      "signature": "math_Matrix::Opposite: math_Matrix () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Row#I#1",
+      "nativeName": "math_Matrix::Row",
+      "signature": "math_Matrix::Row: math_VectorBase<> (const int) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetCol#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetCol",
+      "signature": "math_Matrix::SetCol: void (const int, const math_VectorBase<> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetRow#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetRow",
+      "signature": "math_Matrix::SetRow: void (const int, const math_VectorBase<> &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Subtracted#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Subtracted",
+      "signature": "math_Matrix::Subtracted: math_Matrix (const math_Matrix &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiplied#d#1",
+      "nativeName": "math_Matrix::TMultiplied",
+      "signature": "math_Matrix::TMultiplied: math_Matrix (const double) const noexcept",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiply#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::TMultiply",
+      "signature": "math_Matrix::TMultiply: math_Matrix (const math_Matrix &) const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Transposed#1",
+      "nativeName": "math_Matrix::Transposed",
+      "signature": "math_Matrix::Transposed: math_Matrix () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Value#I#I#",
+      "nativeName": "math_Matrix::Value",
+      "signature": "math_Matrix::Value: double &(const int, const int)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#&1$@S@math_Matrix#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "signature": "math_Matrix::math_Matrix: void (const math_Matrix &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#I#I#I#I#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "signature": "math_Matrix::math_Matrix: void (const int, const int, const int, const int)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@IsDone#1",
+      "nativeName": "math_SVD::IsDone",
+      "signature": "math_SVD::IsDone: bool () const",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@PseudoInverse#&$@S@math_Matrix#d#",
+      "nativeName": "math_SVD::PseudoInverse",
+      "signature": "math_SVD::PseudoInverse: void (math_Matrix &, const double)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@Solve#&1$@S@math_VectorBase>#d#&S1_#d#",
+      "nativeName": "math_SVD::Solve",
+      "signature": "math_SVD::Solve: void (const math_Vector &, math_Vector &, const double)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&1$@S@math_Matrix#",
+      "nativeName": "math_SVD::math_SVD",
+      "signature": "math_SVD::math_SVD: void (const math_Matrix &)",
+      "guard": "ALExact",
+      "reason": "ADR-0104: copied finite numeric values, checked storage arithmetic, private decomposition and atomic publication."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@FactorBandedMatrix#&$@S@math_Matrix#I#I#&I#S",
+      "nativeName": "BSplCLib::FactorBandedMatrix",
+      "signature": "BSplCLib::FactorBandedMatrix: int (math_Matrix &, const int, const int, int &)",
+      "guard": "ALPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private checked one-based band matrix factorization; no mutable work buffer escapes."
+    }
+  ]
+}

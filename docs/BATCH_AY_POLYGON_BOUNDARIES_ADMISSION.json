@@ -1,0 +1,482 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.48",
+  "inventorySha256": "823D6033574ACCFEA6DA00E8E38DBA8C5F54274627A8D87105409942B1C1CD9E",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "32D34664F9BDD7425E6FD8660AC3969BFCBB8B3A672F7B19267AFE100C2E4608",
+  "declarations": [
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@AddLink#&1$@S@Poly_MakeLoops@S@Link#",
+      "nativeName": "Poly_MakeLoops::AddLink",
+      "signature": "Poly_MakeLoops::AddLink: void (const Link &)",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetHangingLinks#&$@S@NCollection_List>#$@S@Poly_MakeLoops@S@Link#1",
+      "nativeName": "Poly_MakeLoops::GetHangingLinks",
+      "signature": "Poly_MakeLoops::GetHangingLinks: void (ListOfLink &) const",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetLoop#I#1",
+      "nativeName": "Poly_MakeLoops::GetLoop",
+      "signature": "Poly_MakeLoops::GetLoop: const Loop &(int) const",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetNbHanging#1",
+      "nativeName": "Poly_MakeLoops::GetNbHanging",
+      "signature": "Poly_MakeLoops::GetNbHanging: int () const",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetNbLoops#1",
+      "nativeName": "Poly_MakeLoops::GetNbLoops",
+      "signature": "Poly_MakeLoops::GetNbLoops: int () const",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@Perform#",
+      "nativeName": "Poly_MakeLoops::Perform",
+      "signature": "Poly_MakeLoops::Perform: int ()",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Nodes#1",
+      "nativeName": "Poly_Polygon3D::Nodes",
+      "signature": "Poly_Polygon3D::Nodes: const NCollection_Array1<gp_Pnt> &() const",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Parameters#1",
+      "nativeName": "Poly_Polygon3D::Parameters",
+      "signature": "Poly_Polygon3D::Parameters: const NCollection_Array1<double> &() const",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Nodes#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Nodes",
+      "signature": "Poly_PolygonOnTriangulation::Nodes: const NCollection_Array1<int> &() const",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameters#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Parameters",
+      "signature": "Poly_PolygonOnTriangulation::Parameters: const occ::handle<NCollection_HArray1<double>> &() const",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@FindLink#&1$@S@Poly_MakeLoops@S@Link#1",
+      "nativeName": "Poly_MakeLoops::FindLink",
+      "signature": "Poly_MakeLoops::FindLink: Link (const Link &) const",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@ReplaceLink#&1$@S@Poly_MakeLoops@S@Link#S0_#",
+      "nativeName": "Poly_MakeLoops::ReplaceLink",
+      "signature": "Poly_MakeLoops::ReplaceLink: void (const Link &, const Link &)",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@Reset#*1$@S@Poly_MakeLoops@S@Helper#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+      "nativeName": "Poly_MakeLoops::Reset",
+      "signature": "Poly_MakeLoops::Reset: void (const Helper *, const occ::handle<NCollection_BaseAllocator> &)",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@SetLinkOrientation#&1$@S@Poly_MakeLoops@S@Link#$@S@Poly_MakeLoops@E@LinkFlag#",
+      "nativeName": "Poly_MakeLoops::SetLinkOrientation",
+      "signature": "Poly_MakeLoops::SetLinkOrientation: LinkFlag (const Link &, const LinkFlag)",
+      "header": "Poly_MakeLoops.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@ChangeNodes#",
+      "nativeName": "Poly_Polygon3D::ChangeNodes",
+      "signature": "Poly_Polygon3D::ChangeNodes: NCollection_Array1<gp_Pnt> &()",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@ChangeParameters#1",
+      "nativeName": "Poly_Polygon3D::ChangeParameters",
+      "signature": "Poly_Polygon3D::ChangeParameters: NCollection_Array1<double> &() const",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "Poly_Polygon3D::DumpJson",
+      "signature": "Poly_Polygon3D::DumpJson: void (Standard_OStream &, int) const",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&&$@S@Poly_Polygon3D#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (Poly_Polygon3D &&)",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@Poly_Polygon3D#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const Poly_Polygon3D &)",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@get_type_descriptor#S",
+      "nativeName": "Poly_Polygon3D::get_type_descriptor",
+      "signature": "Poly_Polygon3D::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@get_type_name#S",
+      "nativeName": "Poly_Polygon3D::get_type_name",
+      "signature": "Poly_Polygon3D::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodeArray#",
+      "nativeName": "Poly_PolygonOnTriangulation::ChangeNodeArray",
+      "signature": "Poly_PolygonOnTriangulation::ChangeNodeArray: NCollection_Array1<int> &()",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodes#",
+      "nativeName": "Poly_PolygonOnTriangulation::ChangeNodes",
+      "signature": "Poly_PolygonOnTriangulation::ChangeNodes: NCollection_Array1<int> &()",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameterArray#",
+      "nativeName": "Poly_PolygonOnTriangulation::ChangeParameterArray",
+      "signature": "Poly_PolygonOnTriangulation::ChangeParameterArray: NCollection_Array1<double> &()",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameters#",
+      "nativeName": "Poly_PolygonOnTriangulation::ChangeParameters",
+      "signature": "Poly_PolygonOnTriangulation::ChangeParameters: NCollection_Array1<double> &()",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "Poly_PolygonOnTriangulation::DumpJson",
+      "signature": "Poly_PolygonOnTriangulation::DumpJson: void (Standard_OStream &, int) const",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&&$@S@Poly_PolygonOnTriangulation#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (Poly_PolygonOnTriangulation &&)",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@Poly_PolygonOnTriangulation#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const Poly_PolygonOnTriangulation &)",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::SetParameters",
+      "signature": "Poly_PolygonOnTriangulation::SetParameters: void (const occ::handle<NCollection_HArray1<double>> &)",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_descriptor#S",
+      "nativeName": "Poly_PolygonOnTriangulation::get_type_descriptor",
+      "signature": "Poly_PolygonOnTriangulation::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_name#S",
+      "nativeName": "Poly_PolygonOnTriangulation::get_type_name",
+      "signature": "Poly_PolygonOnTriangulation::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AYCopiedBoundary",
+      "reason": "Mutable borrowed arrays, uninitialized value copies, callback/branch path choices, redundant private mutators and stream diagnostics remain deferred."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Copy#1",
+      "nativeName": "Poly_Polygon3D::Copy",
+      "signature": "Poly_Polygon3D::Copy: occ::handle<Poly_Polygon3D> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Deflection#1",
+      "nativeName": "Poly_Polygon3D::Deflection",
+      "signature": "Poly_Polygon3D::Deflection: double () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Deflection#d#",
+      "nativeName": "Poly_Polygon3D::Deflection",
+      "signature": "Poly_Polygon3D::Deflection: void (const double)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@HasParameters#1",
+      "nativeName": "Poly_Polygon3D::HasParameters",
+      "signature": "Poly_Polygon3D::HasParameters: bool () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@NbNodes#1",
+      "nativeName": "Poly_Polygon3D::NbNodes",
+      "signature": "Poly_Polygon3D::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Copy#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Copy",
+      "signature": "Poly_PolygonOnTriangulation::Copy: occ::handle<Poly_PolygonOnTriangulation> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Deflection#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Deflection",
+      "signature": "Poly_PolygonOnTriangulation::Deflection: double () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Deflection#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Deflection",
+      "signature": "Poly_PolygonOnTriangulation::Deflection: void (const double)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@HasParameters#1",
+      "nativeName": "Poly_PolygonOnTriangulation::HasParameters",
+      "signature": "Poly_PolygonOnTriangulation::HasParameters: bool () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@NbNodes#1",
+      "nativeName": "Poly_PolygonOnTriangulation::NbNodes",
+      "signature": "Poly_PolygonOnTriangulation::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Node#I#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Node",
+      "signature": "Poly_PolygonOnTriangulation::Node: int (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameter#I#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Parameter",
+      "signature": "Poly_PolygonOnTriangulation::Parameter: double (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &, const NCollection_Array1<double> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Copy#1",
+      "nativeName": "Poly_Triangulation::Copy",
+      "signature": "Poly_Triangulation::Copy: occ::handle<Poly_Triangulation> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Node#I#1",
+      "nativeName": "Poly_Triangulation::Node",
+      "signature": "Poly_Triangulation::Node: gp_Pnt (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

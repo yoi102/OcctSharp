@@ -97,6 +97,13 @@ internal static partial class NativeMethods
     internal static unsafe partial NativeStatus BooleanTopologyHistory(nint* inputs, int count,
         int argumentCount, int operation, out nint result);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_transform_history")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ShapeTransformHistory(ShapeHandle source, TransformHandle transform, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_compound_history")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus ShapeCompoundHistory(nint* inputs, int count, out nint result);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_local_feature_source_subshape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus LocalFeatureSourceSubshape(ShapeHandle source, int index, out nint result);

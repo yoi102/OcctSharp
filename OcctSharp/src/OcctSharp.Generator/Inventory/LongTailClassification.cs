@@ -375,23 +375,38 @@ public static class LongTailClassification
     private static OcctHeaderDisposition ClassifyHeaderFailure(OcctInventoryFailure failure)
     {
         string header = failure.Header;
-        if (header.StartsWith("IVtk", StringComparison.Ordinal))
+        string error = failure.Error.Replace('\\', '/');
+        bool Missing(string dependency) => error.Contains("'" + dependency + "' file not found", StringComparison.Ordinal);
+        if (header.StartsWith("IVtk", StringComparison.Ordinal)
+            && error.Contains("error: 'vtk", StringComparison.Ordinal)
+            && error.Contains("file not found", StringComparison.Ordinal))
         {
             return new OcctHeaderDisposition(header, "BlockedExternalDependency", "HD001", "MissingVtk");
         }
-        if (header.Equals("OpenGl_GLESExtensions.hxx", StringComparison.Ordinal))
+        if (header.Equals("OpenGl_GLESExtensions.hxx", StringComparison.Ordinal)
+            && (error.Contains("GL_APIENTRYP", StringComparison.Ordinal)
+                || error.Contains("unknown type name 'GLenum'", StringComparison.Ordinal)
+                || error.Contains("unknown type name 'GLuint'", StringComparison.Ordinal)))
         {
             return new OcctHeaderDisposition(header, "BlockedExternalDependency", "HD002", "MissingEglGlesContext");
         }
-        if (header.Equals("RWGltf_GltfOStreamWriter.hxx", StringComparison.Ordinal))
+        if (header.Equals("RWGltf_GltfOStreamWriter.hxx", StringComparison.Ordinal)
+            && (Missing("rapidjson/prettywriter.h") || Missing("rapidjson/ostreamwrapper.h")))
         {
             return new OcctHeaderDisposition(header, "BlockedExternalDependency", "HD003", "MissingRapidJson");
         }
-        if (header.Equals("NCollection_Haft.h", StringComparison.Ordinal))
+        if (header.Equals("NCollection_Haft.h", StringComparison.Ordinal)
+            && error.Contains("This file is usable only in C++/CLI (.NET) programs", StringComparison.Ordinal))
         {
             return new OcctHeaderDisposition(header, "ExcludedLanguage", "HD004", "CppCliOnly");
         }
-        if (failure.Error.Contains("file not found", StringComparison.Ordinal))
+        bool knownAlias = header is "BOPDS_DataMapOfIntegerListOfPaveBlock.hxx"
+            or "BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx"
+            or "BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx"
+            or "BOPDS_VectorOfListOfPaveBlock.hxx";
+        if (knownAlias && Missing("BOPDS_ListOfPaveBlock.hxx")
+            || header == "Graphic3d_MapIteratorOfMapOfStructure.hxx" && Missing("Graphic3d_MapOfStructure.hxx")
+            || header == "TObj_Container.hxx" && Missing("TObj_SequenceOfObject.hxx"))
         {
             return new OcctHeaderDisposition(header, "UnavailableInArtifact", "HD005", "MissingOcctGeneratedHeader");
         }

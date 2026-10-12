@@ -993,6 +993,8 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_candidate
   int32_t* out_axis_comparison_count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
   const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_self_interference(
+  const OcctSharp_ShapeHandle* shape, int32_t* out_self_fault_count, int32_t* out_other_fault_count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_summary(
   const OcctSharp_ShapeHandle* shape, OcctSharp_ShapeTopologySummary* out_summary);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_validation_issue_count(
@@ -1058,6 +1060,9 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_pair_anal
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
   const OcctSharp_ShapeHandle* shape, int32_t property_kind,
   OcctSharp_InspectionProperties* properties);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_adaptive_inspection_properties(
+  const OcctSharp_ShapeHandle* shape, int32_t property_kind, double relative_tolerance,
+  OcctSharp_InspectionProperties* properties, double* estimated_relative_error);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_angle(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
   double* radians);
@@ -1203,6 +1208,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_trsf_create_translation_
   double rotation_axis_y,
   double rotation_axis_z,
   double rotation_angle_radians,
+  OcctSharp_TrsfHandle** out_transform);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_trsf_create_plane_mirror(
+  double origin_x, double origin_y, double origin_z,
+  double normal_x, double normal_y, double normal_z,
   OcctSharp_TrsfHandle** out_transform);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_trsf_clone(
@@ -1355,6 +1365,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_extended_value(
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_extended_to_ascii(
   const OcctSharp_ExtendedStringHandle* string, OcctSharp_AsciiStringHandle** out_string);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_extended_release(OcctSharp_ExtendedStringHandle* string);
+
+// Copies all 2 * (degree + 1) flat Bezier knots; no OCCT static-array address escapes.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_bsplclib_flat_bezier_knots(
+  int32_t degree, double* knots, int32_t capacity, int32_t* written);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_real_sequence_create(
   const double* values, int32_t count, OcctSharp_RealSequenceHandle** out_sequence);
@@ -1828,11 +1842,32 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_clone_subtree(
   char* result_entry_buffer,
   int32_t result_entry_capacity,
   int32_t* result_entry_written);
+// Copies a simple definition and its metadata, then uses exact transform history
+// for each labeled subshape. The destination must have an open transaction.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_copy_transformed_definition(
+  OcctSharp_OcafDocumentHandle* destination,
+  const OcctSharp_OcafDocumentHandle* source,
+  const char* entry,
+  const OcctSharp_TrsfHandle* transform,
+  char* result_entry,
+  int32_t capacity,
+  int32_t* written);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_external_references(
   OcctSharp_OcafDocumentHandle* document,
   const char* entry,
   const char* const* references,
   int32_t count);
+// Copied direct channels; presentation copying requires a fresh target in an open transaction.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color_channel(
+  const OcctSharp_OcafDocumentHandle* document,const char* entry,int32_t channel,
+  int32_t* assigned,OcctSharp_XdeColor* color,int32_t* visible);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_color_channel(
+  OcctSharp_OcafDocumentHandle* document,const char* entry,int32_t channel,int32_t assigned,OcctSharp_XdeColor color);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_visibility(
+  OcctSharp_OcafDocumentHandle* document,const char* entry,int32_t visible);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_copy_presentation_metadata(
+  OcctSharp_OcafDocumentHandle* destination,const char* destination_entry,
+  const OcctSharp_OcafDocumentHandle* source,const char* source_entry);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_count(
   const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_utf8_length(
@@ -2055,6 +2090,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_
   OcctSharp_ViewerHandle* viewer,
   int64_t presentation_id,
   int32_t display_mode);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_overlay(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id,
+  int32_t enabled);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_selection_kind(
   OcctSharp_ViewerHandle* viewer,
   int64_t presentation_id,
@@ -2107,6 +2146,28 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_resize(
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_projection(
   OcctSharp_ViewerHandle* viewer,
   int32_t projection);
+// Computes a canonical orientation on a detached camera without changing the displayed view.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_get_projection_target_camera(
+  OcctSharp_ViewerHandle* viewer, int32_t projection, OcctSharp_ViewerCamera* camera);
+// View cube is owned by the viewer. A hit returns the OCCT orientation (0..25), or -1.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_view_cube_visible(
+  OcctSharp_ViewerHandle* viewer, int32_t visible);
+// UTF-8 labels and font name are copied. The viewer owns the configured cube.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_view_cube_appearance(
+  OcctSharp_ViewerHandle* viewer, const char* front, const char* back,
+  const char* left, const char* right, const char* top, const char* bottom,
+  const char* font, double font_height, double idle_transparency);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_view_cube_hovered(
+  OcctSharp_ViewerHandle* viewer, int32_t hovered);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_hit_view_cube(
+  OcctSharp_ViewerHandle* viewer, int32_t x, int32_t y, int32_t* orientation);
+// Returns -1 for no hit, 0..25 for a cube direction, 26/27 for left/right roll.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_hit_view_cube_control(
+  OcctSharp_ViewerHandle* viewer, int32_t x, int32_t y, int32_t* action);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_cube_orientation(
+  OcctSharp_ViewerHandle* viewer, int32_t orientation);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_get_cube_target_camera(
+  OcctSharp_ViewerHandle* viewer, int32_t orientation, OcctSharp_ViewerCamera* camera);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_zoom(
   OcctSharp_ViewerHandle* viewer,
   double factor);
@@ -2240,6 +2301,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_background_co
   double red,
   double green,
   double blue);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_background_gradient(
+  OcctSharp_ViewerHandle* viewer,
+  double top_red, double top_green, double top_blue,
+  double bottom_red, double bottom_green, double bottom_blue);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create_clip_plane(
   OcctSharp_ViewerHandle* viewer,
   double a,

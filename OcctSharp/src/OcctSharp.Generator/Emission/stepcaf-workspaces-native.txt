@@ -1,0 +1,37 @@
+#include "../Documents/OcctSharp.Documents.ProjectionSupport.Generated.hxx"
+#include "OcctSharp.Xde.DocumentLifetimeSupport.Generated.hxx"
+#include <STEPCAFControl_Reader.hxx>
+#include <STEPCAFControl_Writer.hxx>
+#include <XCAFDoc_DocumentTool.hxx>
+#include <XCAFDoc_ShapeTool.hxx>
+#include <TDataStd_Name.hxx>
+#include <TDocStd_Application.hxx>
+#include <XCAFApp_Application.hxx>
+#include <DESTEP_Parameters.hxx>
+#include <StepData_StepModel.hxx>
+#include "../DataExchange/OcctSharp.DataExchange.StepAdapters.Generated.hxx"
+#include "OcctSharp.Xde.XdeAdapters.Generated.hxx"
+using namespace OcctSharpDocumentProjections;
+namespace {
+void Options(STEPCAFControl_Reader& reader,int flags){Require(flags>=0&&flags<=1023,"Invalid STEPCAF reader modes.");
+ reader.SetColorMode((flags&1)!=0);reader.SetNameMode((flags&2)!=0);reader.SetLayerMode((flags&4)!=0);reader.SetPropsMode((flags&8)!=0);reader.SetMetaMode((flags&16)!=0);reader.SetProductMetaMode((flags&32)!=0);reader.SetSHUOMode((flags&64)!=0);reader.SetGDTMode((flags&128)!=0);reader.SetMatMode((flags&256)!=0);reader.SetViewMode((flags&512)!=0);
+ int observed=(reader.GetColorMode()?1:0)|(reader.GetNameMode()?2:0)|(reader.GetLayerMode()?4:0)|(reader.GetPropsMode()?8:0)|(reader.GetMetaMode()?16:0)|(reader.GetProductMetaMode()?32:0)|(reader.GetSHUOMode()?64:0)|(reader.GetGDTMode()?128:0)|(reader.GetMatMode()?256:0)|(reader.GetViewMode()?512:0);Require(observed==flags,"STEPCAF reader modes did not apply.");}
+void Options(STEPCAFControl_Writer& writer,int flags){Require(flags>=0&&flags<=1023,"Invalid STEPCAF writer modes.");
+ writer.SetColorMode((flags&1)!=0);writer.SetNameMode((flags&2)!=0);writer.SetLayerMode((flags&4)!=0);writer.SetPropsMode((flags&8)!=0);writer.SetMetadataMode((flags&16)!=0);writer.SetSHUOMode((flags&32)!=0);writer.SetDimTolMode((flags&64)!=0);writer.SetMaterialMode((flags&128)!=0);writer.SetVisualMaterialMode((flags&256)!=0);writer.SetCleanDuplicates((flags&512)!=0);
+ int observed=(writer.GetColorMode()?1:0)|(writer.GetNameMode()?2:0)|(writer.GetLayerMode()?4:0)|(writer.GetPropsMode()?8:0)|(writer.GetMetadataMode()?16:0)|(writer.GetSHUOMode()?32:0)|(writer.GetDimTolMode()?64:0)|(writer.GetMaterialMode()?128:0)|(writer.GetVisualMaterialMode()?256:0)|(writer.GetCleanDuplicates()?512:0);Require(observed==flags,"STEPCAF writer modes did not apply.");}
+void Path(const char* path){Require(path&&*path&&std::strlen(path)<=EntryLimit,"Invalid bounded STEPCAF path.");Utf8(path);}
+Writer Roots(const occ::handle<TDocStd_Document>& doc,int modes,int count,int kind=40){Writer out(2);out.Number<int32_t>(kind);out.Number<int32_t>(modes);out.Number<int32_t>(count);auto tool=XCAFDoc_DocumentTool::ShapeTool(doc->Main());NCollection_Sequence<TDF_Label> labels;BoundedTree(tool->Label());tool->GetFreeShapes(labels);Require(labels.Length()>0&&labels.Length()<=EntryLimit,"Missing/excess STEPCAF free roots.");out.Number<int32_t>(labels.Length());for(int n=1;n<=labels.Length();++n){auto label=labels.Value(n);Require(label.Data()==doc->GetData(),"Foreign STEPCAF root.");out.Text(Entry(label));occ::handle<TDataStd_Name> name;out.Text(label.FindAttribute(TDataStd_Name::GetID(),name)?OcctSharp::Native::ExtendedToUtf8(name->Get()):std::string());}return out;}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_stepcaf_workspace_write_configured(const void* document,int32_t domain,const char* path,int32_t flags,int32_t schema,double precision,void** result){if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{
+ Path(path);Require(schema>=3&&schema<=5,"Unsupported configured STEP schema.");Require(std::isfinite(precision)&&precision>0,"STEP precision must be positive and finite.");
+ auto doc=Document(document,domain);Require(!doc->HasOpenCommand(),"Commit XCAF changes before exporting.");Require(XCAFDoc_DocumentTool::CheckShapeTool(doc->Main()),"No XCAF shape tool.");
+ auto output=Roots(doc,flags,0,41);STEPCAFControl_Writer writer;Options(writer,flags);DESTEP_Parameters parameters;
+ OcctSharpGenerated::StepAdapters::DESTEP_Parameters_InitFromStatic_Bind(parameters)();parameters.WriteSchema=static_cast<DESTEP_Parameters::WriteMode_StepSchema>(schema);parameters.WritePrecisionMode=DESTEP_Parameters::WriteMode_PrecisionMode_Session;parameters.WritePrecisionVal=precision;
+ Require(OcctSharpGenerated::XdeAdapters::STEPCAFControl_Writer_Transfer_Bind(writer)(doc,parameters,STEPControl_AsIs,nullptr,Message_ProgressRange()),"Configured STEPCAF document transfer failed.");
+ auto model=writer.ChangeWriter().Model();Require(!model.IsNull(),"Missing configured STEP model.");const auto& observed=model->InternalParameters;
+ Require(static_cast<int>(observed.WriteSchema)==schema&&observed.WritePrecisionMode==DESTEP_Parameters::WriteMode_PrecisionMode_Session&&observed.WritePrecisionVal==precision,"STEP writer configuration did not apply.");
+ output.Number<int32_t>(static_cast<int>(observed.WriteSchema));output.Number<double>(observed.WritePrecisionVal);
+ const auto status=writer.Write(path);if(status!=IFSelect_RetDone){const std::string message="Configured STEPCAF file write failed with IFSelect status "+std::to_string(static_cast<int>(status))+".";throw OcctSharp::Native::OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR,message.c_str());}*result=Publish(std::move(output),2);
+ });}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_stepcaf_workspace_write(const void* document,int32_t domain,const char* path,int32_t flags,void** result){if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{Path(path);auto doc=Document(document,domain);Require(!doc->HasOpenCommand(),"Commit XCAF changes before exporting.");Require(XCAFDoc_DocumentTool::CheckShapeTool(doc->Main()),"No XCAF shape tool.");auto output=Roots(doc,flags,0);STEPCAFControl_Writer writer;Options(writer,flags);Require(writer.Transfer(doc,STEPControl_AsIs,nullptr,Message_ProgressRange()),"STEPCAF document transfer failed.");Require(writer.Write(path)==IFSelect_RetDone,"STEPCAF file write failed.");*result=Publish(std::move(output),2);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_stepcaf_workspace_read(const char* path,int32_t flags,void** document,void** result){if(!document||!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*document=nullptr;*result=nullptr;return Guard([&]{Path(path);STEPCAFControl_Reader reader;Options(reader,flags);Require(reader.ReadFile(path)==IFSelect_RetDone,"STEPCAF file read failed.");int count=reader.NbRootsForTransfer();Require(count>0&&count<=EntryLimit,"STEPCAF root count outside bounds.");occ::handle<TDocStd_Document> doc=new OcctSharpXdeWorkspaces::CloseSafeDocument();XCAFDoc_DocumentTool::Set(doc->Main());doc->SetUndoLimit(32);void* payload=nullptr;try{Require(reader.Transfer(doc,Message_ProgressRange()),"STEPCAF transfer failed.");auto output=Roots(doc,flags,count);payload=Publish(std::move(output),2);*document=OcctSharpGenerated::AllocateTDocStdDocument(doc);*result=payload;}catch(...){Release(payload,2);throw;}});}

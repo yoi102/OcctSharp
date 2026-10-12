@@ -4,6 +4,9 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Fixtures/mesh-resource-model.json" />
+    <EmbeddedResource Include="Fixtures/viewer-adapter-model.json" />
+    <EmbeddedResource Include="Fixtures/render-resource-adapter-model.json" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio">

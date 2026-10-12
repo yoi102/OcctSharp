@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@AddLink#&1$@S@Poly_MakeLoops@S@Link#",
+      "nativeName": "Poly_MakeLoops::AddLink",
+      "signature": "Poly_MakeLoops::AddLink: void (const Link &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetHangingLinks#&$@S@NCollection_List>#$@S@Poly_MakeLoops@S@Link#1",
+      "nativeName": "Poly_MakeLoops::GetHangingLinks",
+      "signature": "Poly_MakeLoops::GetHangingLinks: void (ListOfLink &) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetLoop#I#1",
+      "nativeName": "Poly_MakeLoops::GetLoop",
+      "signature": "Poly_MakeLoops::GetLoop: const Loop &(int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetNbHanging#1",
+      "nativeName": "Poly_MakeLoops::GetNbHanging",
+      "signature": "Poly_MakeLoops::GetNbHanging: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@GetNbLoops#1",
+      "nativeName": "Poly_MakeLoops::GetNbLoops",
+      "signature": "Poly_MakeLoops::GetNbLoops: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_MakeLoops@F@Perform#",
+      "nativeName": "Poly_MakeLoops::Perform",
+      "signature": "Poly_MakeLoops::Perform: int ()",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Nodes#1",
+      "nativeName": "Poly_Polygon3D::Nodes",
+      "signature": "Poly_Polygon3D::Nodes: const NCollection_Array1<gp_Pnt> &() const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Parameters#1",
+      "nativeName": "Poly_Polygon3D::Parameters",
+      "signature": "Poly_Polygon3D::Parameters: const NCollection_Array1<double> &() const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Nodes#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Nodes",
+      "signature": "Poly_PolygonOnTriangulation::Nodes: const NCollection_Array1<int> &() const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameters#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Parameters",
+      "signature": "Poly_PolygonOnTriangulation::Parameters: const occ::handle<NCollection_HArray1<double>> &() const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Private initialized polygon or bounded native-only unique-cycle helper; no borrowed storage or branch choice escapes."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Copy#1",
+      "nativeName": "Poly_Polygon3D::Copy",
+      "signature": "Poly_Polygon3D::Copy: occ::handle<Poly_Polygon3D> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Deflection#1",
+      "nativeName": "Poly_Polygon3D::Deflection",
+      "signature": "Poly_Polygon3D::Deflection: double () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Deflection#d#",
+      "nativeName": "Poly_Polygon3D::Deflection",
+      "signature": "Poly_Polygon3D::Deflection: void (const double)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@HasParameters#1",
+      "nativeName": "Poly_Polygon3D::HasParameters",
+      "signature": "Poly_Polygon3D::HasParameters: bool () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@NbNodes#1",
+      "nativeName": "Poly_Polygon3D::NbNodes",
+      "signature": "Poly_Polygon3D::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Copy#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Copy",
+      "signature": "Poly_PolygonOnTriangulation::Copy: occ::handle<Poly_PolygonOnTriangulation> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Deflection#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Deflection",
+      "signature": "Poly_PolygonOnTriangulation::Deflection: double () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Deflection#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Deflection",
+      "signature": "Poly_PolygonOnTriangulation::Deflection: void (const double)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@HasParameters#1",
+      "nativeName": "Poly_PolygonOnTriangulation::HasParameters",
+      "signature": "Poly_PolygonOnTriangulation::HasParameters: bool () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@NbNodes#1",
+      "nativeName": "Poly_PolygonOnTriangulation::NbNodes",
+      "signature": "Poly_PolygonOnTriangulation::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Node#I#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Node",
+      "signature": "Poly_PolygonOnTriangulation::Node: int (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameter#I#1",
+      "nativeName": "Poly_PolygonOnTriangulation::Parameter",
+      "signature": "Poly_PolygonOnTriangulation::Parameter: double (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &, const NCollection_Array1<double> &)",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Copy#1",
+      "nativeName": "Poly_Triangulation::Copy",
+      "signature": "Poly_Triangulation::Copy: occ::handle<Poly_Triangulation> () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Node#I#1",
+      "nativeName": "Poly_Triangulation::Node",
+      "signature": "Poly_Triangulation::Node: gp_Pnt (int) const",
+      "guard": "AYCopiedBoundary",
+      "reason": "Actually called copied native boundary prerequisite; initialized storage and exact triangulation domain."
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Error",
+      "signature": "BRepBuilderAPI_MakeEdge::Error: BRepBuilderAPI_EdgeError () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const double, const double)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const double, const double)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Vertex1#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Vertex1",
+      "signature": "BRepBuilderAPI_MakeEdge::Vertex1: const TopoDS_Vertex &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Vertex2#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Vertex2",
+      "signature": "BRepBuilderAPI_MakeEdge::Vertex2: const TopoDS_Vertex &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Add",
+      "signature": "BRepBuilderAPI_MakeWire::Add: void (const TopoDS_Wire &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Edge#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Edge",
+      "signature": "BRepBuilderAPI_MakeWire::Edge: const TopoDS_Edge &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Error",
+      "signature": "BRepBuilderAPI_MakeWire::Error: BRepBuilderAPI_WireError () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Vertex#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Vertex",
+      "signature": "BRepBuilderAPI_MakeWire::Vertex: const TopoDS_Vertex &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@Init#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "BRepCheck_Analyzer::Init",
+      "signature": "BRepCheck_Analyzer::Init: void (const TopoDS_Shape &, const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsExactMethod#",
+      "nativeName": "BRepCheck_Analyzer::IsExactMethod",
+      "signature": "BRepCheck_Analyzer::IsExactMethod: bool ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsParallel#",
+      "nativeName": "BRepCheck_Analyzer::IsParallel",
+      "signature": "BRepCheck_Analyzer::IsParallel: bool ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool (const TopoDS_Shape &) const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@SetExactMethod#b#",
+      "nativeName": "BRepCheck_Analyzer::SetExactMethod",
+      "signature": "BRepCheck_Analyzer::SetExactMethod: void (const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@SetParallel#b#",
+      "nativeName": "BRepCheck_Analyzer::SetParallel",
+      "signature": "BRepCheck_Analyzer::SetParallel: void (const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const TopoDS_Wire &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSmallArea#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSmallArea",
+      "signature": "ShapeAnalysis_Wire::CheckSmallArea: bool (const TopoDS_Wire &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Load#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::Load",
+      "signature": "ShapeAnalysis_Wire::Load: void (const TopoDS_Wire &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetFace#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeAnalysis_Wire::SetFace",
+      "signature": "ShapeAnalysis_Wire::SetFace: void (const TopoDS_Face &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Edge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Edge",
+      "signature": "BRepBuilderAPI_MakeEdge::Edge: const TopoDS_Edge &()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::IsDone",
+      "signature": "BRepBuilderAPI_MakeEdge::IsDone: bool () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const TopoDS_Wire &, const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Error",
+      "signature": "BRepBuilderAPI_MakeFace::Error: BRepBuilderAPI_FaceError () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Face",
+      "signature": "BRepBuilderAPI_MakeFace::Face: const TopoDS_Face &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::IsDone",
+      "signature": "BRepBuilderAPI_MakeFace::IsDone: bool () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Add",
+      "signature": "BRepBuilderAPI_MakeWire::Add: void (const TopoDS_Edge &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::IsDone",
+      "signature": "BRepBuilderAPI_MakeWire::IsDone: bool () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Wire",
+      "signature": "BRepBuilderAPI_MakeWire::Wire: const TopoDS_Wire &()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib@F@BuildCurve3d#&1$@S@TopoDS_Edge#d#$@E@GeomAbs_Shape#I#I#S",
+      "nativeName": "BRepLib::BuildCurve3d",
+      "signature": "BRepLib::BuildCurve3d: bool (const TopoDS_Edge &, const double, const GeomAbs_Shape, const int, const int)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const TopoDS_Edge &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Edge#1",
+      "nativeName": "BRepLib_MakeWire::Edge",
+      "signature": "BRepLib_MakeWire::Edge: const TopoDS_Edge &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Error#1",
+      "nativeName": "BRepLib_MakeWire::Error",
+      "signature": "BRepLib_MakeWire::Error: BRepLib_WireError () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Vertex#1",
+      "nativeName": "BRepLib_MakeWire::Vertex",
+      "signature": "BRepLib_MakeWire::Vertex: const TopoDS_Vertex &() const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Wire#",
+      "nativeName": "BRepLib_MakeWire::Wire",
+      "signature": "BRepLib_MakeWire::Wire: const TopoDS_Wire &()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@Geom2d_Line@F@Geom2d_Line#&1$@S@gp_Pnt2d#&1$@S@gp_Dir2d#",
+      "nativeName": "Geom2d_Line::Geom2d_Line",
+      "signature": "Geom2d_Line::Geom2d_Line: void (const gp_Pnt2d &, const gp_Dir2d &)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@IsReady#1",
+      "nativeName": "ShapeAnalysis_Wire::IsReady",
+      "signature": "ShapeAnalysis_Wire::IsReady: bool () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@LastCheckStatus#$@E@ShapeExtend_Status#1",
+      "nativeName": "ShapeAnalysis_Wire::LastCheckStatus",
+      "signature": "ShapeAnalysis_Wire::LastCheckStatus: bool (const ShapeExtend_Status) const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@NbEdges#1",
+      "nativeName": "ShapeAnalysis_Wire::NbEdges",
+      "signature": "ShapeAnalysis_Wire::NbEdges: int () const",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetPrecision#d#",
+      "nativeName": "ShapeAnalysis_Wire::SetPrecision",
+      "signature": "ShapeAnalysis_Wire::SetPrecision: void (const double)",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void ()",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite."
+    }
+  ]
+}

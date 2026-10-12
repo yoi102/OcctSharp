@@ -1,0 +1,428 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AIS_ViewController#",
+      "nativeName": "AIS_ViewController::AIS_ViewController",
+      "signature": "AIS_ViewController::AIS_ViewController: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@GravityPoint#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::GravityPoint",
+      "signature": "AIS_ViewController::GravityPoint: gp_Pnt (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PickAxis#&$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Ax1#",
+      "nativeName": "AIS_ViewController::PickAxis",
+      "signature": "AIS_ViewController::PickAxis: bool (gp_Pnt &, const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const gp_Ax1 &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PickPoint#&$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@NCollection_Vec2>#I#b#",
+      "nativeName": "AIS_ViewController::PickPoint",
+      "signature": "AIS_ViewController::PickPoint: bool (gp_Pnt &, const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const NCollection_Vec2<int> &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ActiveVolume#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ActiveVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::ActiveVolume: const occ::handle<SelectMgr_BaseIntersector> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@AllowOverlapDetection#b#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::AllowOverlapDetection",
+      "signature": "SelectMgr_SelectingVolumeManager::AllowOverlapDetection: void (const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@BuildSelectingVolume#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@Camera#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::Camera",
+      "signature": "SelectMgr_SelectingVolumeManager::Camera: const occ::handle<Graphic3d_Camera> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@DetectedPoint#d#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::DetectedPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::DetectedPoint: gp_Pnt (const double) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@DistToGeometryCenter#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::DistToGeometryCenter",
+      "signature": "SelectMgr_SelectingVolumeManager::DistToGeometryCenter: double (const gp_Pnt &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetActiveSelectionType#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetActiveSelectionType",
+      "signature": "SelectMgr_SelectingVolumeManager::GetActiveSelectionType: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetFarPickedPnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetFarPickedPnt",
+      "signature": "SelectMgr_SelectingVolumeManager::GetFarPickedPnt: gp_Pnt () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetMousePosition#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetMousePosition",
+      "signature": "SelectMgr_SelectingVolumeManager::GetMousePosition: gp_Pnt2d () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetNearPickedPnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetNearPickedPnt",
+      "signature": "SelectMgr_SelectingVolumeManager::GetNearPickedPnt: gp_Pnt () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetPlanes#&$@S@NCollection_DynamicArray>#$@S@NCollection_Vec4>#d#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetPlanes",
+      "signature": "SelectMgr_SelectingVolumeManager::GetPlanes: void (NCollection_DynamicArray<NCollection_Vec4<double>> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetVertices#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetVertices",
+      "signature": "SelectMgr_SelectingVolumeManager::GetVertices: const gp_Pnt *() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetViewRayDirection#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetViewRayDirection",
+      "signature": "SelectMgr_SelectingVolumeManager::GetViewRayDirection: gp_Dir () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitBoxSelectingVolume#&1$@S@gp_Pnt2d#S0_#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitBoxSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitBoxSelectingVolume: void (const gp_Pnt2d &, const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitPointSelectingVolume#&1$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitPointSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitPointSelectingVolume: void (const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@IsOverlapAllowed#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::IsOverlapAllowed",
+      "signature": "SelectMgr_SelectingVolumeManager::IsOverlapAllowed: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@IsScalableActiveVolume#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::IsScalableActiveVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::IsScalableActiveVolume: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsBox",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsBox",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPoint#&1$@S@gp_Pnt#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPoint: bool (const gp_Pnt &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPoint#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPoint: bool (const gp_Pnt &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPolygon#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPolygon",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPolygon: bool (const NCollection_Array1<gp_Pnt> &, int, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSegment#&1$@S@gp_Pnt#S0_#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSegment",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSegment: bool (const gp_Pnt &, const gp_Pnt &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSphere#&1$@S@gp_Pnt#d#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSphere",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSphere: bool (const gp_Pnt &, const double, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSphere#&1$@S@gp_Pnt#d#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSphere",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSphere: bool (const gp_Pnt &, const double, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsTriangle#&1$@S@gp_Pnt#S0_#S0_#I#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsTriangle",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsTriangle: bool (const gp_Pnt &, const gp_Pnt &, const gp_Pnt &, int, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SelectMgr_SelectingVolumeManager#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager",
+      "signature": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetCamera",
+      "signature": "SelectMgr_SelectingVolumeManager::SetCamera: void (const occ::handle<Graphic3d_Camera> &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetPixelTolerance#I#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetPixelTolerance",
+      "signature": "SelectMgr_SelectingVolumeManager::SetPixelTolerance: void (const int)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetWindowSize#I#I#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetWindowSize",
+      "signature": "SelectMgr_SelectingVolumeManager::SetWindowSize: void (const int, const int)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@WindowSize#&I#S0_#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::WindowSize",
+      "signature": "SelectMgr_SelectingVolumeManager::WindowSize: void (int &, int &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@BackgroundColor#1",
+      "nativeName": "V3d_View::BackgroundColor",
+      "signature": "V3d_View::BackgroundColor: Quantity_Color () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@DiagnosticInformation#&$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#$@E@Graphic3d_DiagnosticInfo#1",
+      "nativeName": "V3d_View::DiagnosticInformation",
+      "signature": "V3d_View::DiagnosticInformation: void (NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, Graphic3d_DiagnosticInfo) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GradientBackgroundColors#&$@S@Quantity_Color#S0_#1",
+      "nativeName": "V3d_View::GradientBackgroundColors",
+      "signature": "V3d_View::GradientBackgroundColors: void (Quantity_Color &, Quantity_Color &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@StatisticInformation#&$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "V3d_View::StatisticInformation",
+      "signature": "V3d_View::StatisticInformation: void (NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@ActivatedModes#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&$@S@NCollection_List>#I#1",
+      "nativeName": "AIS_InteractiveContext::ActivatedModes",
+      "signature": "AIS_InteractiveContext::ActivatedModes: void (const occ::handle<AIS_InteractiveObject> &, NCollection_List<int> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@IsDisplayed#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1",
+      "nativeName": "AIS_InteractiveContext::IsDisplayed",
+      "signature": "AIS_InteractiveContext::IsDisplayed: bool (const occ::handle<AIS_InteractiveObject> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@IsDisplayed#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#1",
+      "nativeName": "AIS_InteractiveContext::IsDisplayed",
+      "signature": "AIS_InteractiveContext::IsDisplayed: bool (const occ::handle<AIS_InteractiveObject> &, const int) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@MainSelector#1",
+      "nativeName": "AIS_InteractiveContext::MainSelector",
+      "signature": "AIS_InteractiveContext::MainSelector: const occ::handle<StdSelect_ViewerSelector3d> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@PixelTolerance#1",
+      "nativeName": "AIS_InteractiveContext::PixelTolerance",
+      "signature": "AIS_InteractiveContext::PixelTolerance: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@UpdateCurrentViewer#",
+      "nativeName": "AIS_InteractiveContext::UpdateCurrentViewer",
+      "signature": "AIS_InteractiveContext::UpdateCurrentViewer: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@AIS_Shape@F@Shape#1",
+      "nativeName": "AIS_Shape::Shape",
+      "signature": "AIS_Shape::Shape: const TopoDS_Shape &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Graphic3d_Camera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#",
+      "nativeName": "Graphic3d_Camera::Graphic3d_Camera",
+      "signature": "Graphic3d_Camera::Graphic3d_Camera: void (const occ::handle<Graphic3d_Camera> &)",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@IsStereo#1",
+      "nativeName": "Graphic3d_Camera::IsStereo",
+      "signature": "Graphic3d_Camera::IsStereo: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@ProjectionState#1",
+      "nativeName": "Graphic3d_Camera::ProjectionState",
+      "signature": "Graphic3d_Camera::ProjectionState: size_t () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@WorldViewState#1",
+      "nativeName": "Graphic3d_Camera::WorldViewState",
+      "signature": "Graphic3d_Camera::WorldViewState: size_t () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@Depth#1",
+      "nativeName": "SelectBasics_PickResult::Depth",
+      "signature": "SelectBasics_PickResult::Depth: double () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@HasPickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::HasPickedPoint",
+      "signature": "SelectBasics_PickResult::HasPickedPoint: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@IsValid#1",
+      "nativeName": "SelectBasics_PickResult::IsValid",
+      "signature": "SelectBasics_PickResult::IsValid: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@PickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::PickedPoint",
+      "signature": "SelectBasics_PickResult::PickedPoint: const gp_Pnt &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#",
+      "nativeName": "SelectBasics_PickResult::SelectBasics_PickResult",
+      "signature": "SelectBasics_PickResult::SelectBasics_PickResult: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_EntityOwner@F@Selectable#1",
+      "nativeName": "SelectMgr_EntityOwner::Selectable",
+      "signature": "SelectMgr_EntityOwner::Selectable: occ::handle<SelectMgr_SelectableObject> () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewerSelector@F@NbPicked#1",
+      "nativeName": "SelectMgr_ViewerSelector::NbPicked",
+      "signature": "SelectMgr_ViewerSelector::NbPicked: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewerSelector@F@Picked#I#1",
+      "nativeName": "SelectMgr_ViewerSelector::Picked",
+      "signature": "SelectMgr_ViewerSelector::Picked: occ::handle<SelectMgr_EntityOwner> (const int) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Camera#1",
+      "nativeName": "V3d_View::Camera",
+      "signature": "V3d_View::Camera: const occ::handle<Graphic3d_Camera> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Window#1",
+      "nativeName": "V3d_View::Window",
+      "signature": "V3d_View::Window: const occ::handle<Aspect_Window> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.RenderResourceAdapters.Generated.hxx"
 #include "Visualization/Context.hxx"
 #include "Visualization/Presentations.hxx"
 #include "Runtime/Error.hxx"
@@ -30,7 +31,7 @@ OcctSharp_RenderCaps ReadRenderCaps(OcctSharp_ViewerHandle* viewer) {
   c.srgb = driver->InquireLimit(Graphic3d_TypeOfLimit_HasSRGB);
   c.oit = driver->InquireLimit(Graphic3d_TypeOfLimit_HasBlendedOit);
   c.oit_msaa = driver->InquireLimit(Graphic3d_TypeOfLimit_HasBlendedOitMsaa);
-  const auto& context = driver->GetSharedContext();
+  const auto& context = OcctSharpGenerated::RenderResourceAdapters::OpenGl_GraphicDriver_GetSharedContext_Bind(*(driver))();
   c.max_anisotropy = context.IsNull() ? 1.0 : context->MaxDegreeOfAnisotropy();
   return c;
 }
@@ -51,7 +52,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_render_profile(OcctSharp_Viewer
   const OcctSharp_RenderProfile* requested, OcctSharp_RenderProfile* effective) {
   return Guard([&] {
     ValidateViewerThread(viewer); RequireRender(effective != nullptr, "Null effective profile output.");
-    auto p = viewer->View->RenderingParams();
+    auto p = OcctSharpGenerated::RenderResourceAdapters::V3d_View_RenderingParams_Bind(*(viewer->View))();
     if (requested != nullptr) {
       const auto& r = *requested; const auto caps = ReadRenderCaps(viewer);
       RequireRender(r.reserved == 0 && (r.shading == 0 || r.shading == 3 || r.shading == 4), "Invalid view shading pipeline.");
@@ -88,7 +89,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_render_profile(OcctSharp_Viewer
       p.PbrEnvPow2Size = r.environment_power; p.PbrEnvSpecMapNbLevels = r.environment_levels;
       p.PbrEnvBakingDiffNbSamples = r.diffuse_samples; p.PbrEnvBakingSpecNbSamples = r.specular_samples;
       p.PbrEnvBakingProbability = static_cast<float>(r.bake_probability);
-      viewer->View->ChangeRenderingParams() = p;
+      OcctSharpGenerated::RenderResourceAdapters::V3d_View_ChangeRenderingParams_Bind(*(viewer->View))() = p;
       viewer->View->SetShadingModel(static_cast<Graphic3d_TypeOfShadingModel>(r.shading)); viewer->View->Invalidate();
     }
     *effective = { p.Method == Graphic3d_RM_RAYTRACING ? 1 : 0, p.NbMsaaSamples,
@@ -104,13 +105,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_layer_set(OcctSharp_ViewerHandl
   return Guard([&] {
     ValidateViewerThread(viewer); RequireRender(input && output, "Null layer input/output.");
     RenderFlag(input->depth_test); RenderFlag(input->depth_write); RenderFlag(input->clear_depth); RenderFlag(input->immediate);
-    Graphic3d_ZLayerSettings settings; settings.SetEnableDepthTest(input->depth_test != 0);
-    settings.SetEnableDepthWrite(input->depth_write != 0); settings.SetClearDepth(input->clear_depth != 0);
-    settings.SetImmediate(input->immediate != 0);
-    if (id != 0) viewer->Viewer->SetZLayerSettings(ReviewLayerId(viewer, id), settings);
+    Graphic3d_ZLayerSettings settings = OcctSharpGenerated::RenderResourceAdapters::ConstructGraphic3dZLayerSettings(); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_ZLayerSettings_SetEnableDepthTest_Bind(settings)(input->depth_test != 0);
+    OcctSharpGenerated::RenderResourceAdapters::Graphic3d_ZLayerSettings_SetEnableDepthWrite_Bind(settings)(input->depth_write != 0); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_ZLayerSettings_SetClearDepth_Bind(settings)(input->clear_depth != 0);
+    OcctSharpGenerated::RenderResourceAdapters::Graphic3d_ZLayerSettings_SetImmediate_Bind(settings)(input->immediate != 0);
+    if (id != 0) OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_SetZLayerSettings_Bind(*(viewer->Viewer))(ReviewLayerId(viewer, id), settings);
     else {
       RequireRender(viewer->Rendering.Layers.size() < 64, "Review layer budget exceeded.");
-      int nativeId = 0; RequireRender(viewer->Viewer->AddZLayer(nativeId, settings), "Could not allocate review layer.");
+      int nativeId = 0; RequireRender(OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_AddZLayer_Bind(*(viewer->Viewer))(nativeId, settings), "Could not allocate review layer.");
       id = viewer->Rendering.NextId;
       try { viewer->Rendering.Layers.emplace(id, nativeId); }
       catch (...) { viewer->Viewer->RemoveZLayer(nativeId); throw; }

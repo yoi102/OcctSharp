@@ -1,0 +1,887 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TransferBRep@F@ShapeResult#&1$@N@opencascade@S@handle>#$@S@Transfer_Binder#S",
+      "nativeName": "TransferBRep::ShapeResult",
+      "signature": "TransferBRep::ShapeResult: TopoDS_Shape (const occ::handle<Transfer_Binder> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@ShapeResult#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#S",
+      "nativeName": "TransferBRep::ShapeResult",
+      "signature": "TransferBRep::ShapeResult: TopoDS_Shape (const occ::handle<Transfer_TransientProcess> &, const occ::handle<Standard_Transient> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@Shapes#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#S",
+      "nativeName": "TransferBRep::Shapes",
+      "signature": "TransferBRep::Shapes: occ::handle<NCollection_HSequence<TopoDS_Shape>> (const occ::handle<Transfer_TransientProcess> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@Shapes#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#b#S",
+      "nativeName": "TransferBRep::Shapes",
+      "signature": "TransferBRep::Shapes: occ::handle<NCollection_HSequence<TopoDS_Shape>> (const occ::handle<Transfer_TransientProcess> &, const bool)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@TransferResultInfo#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@TransferBRep_TransferResultInfo#S",
+      "nativeName": "TransferBRep::TransferResultInfo",
+      "signature": "TransferBRep::TransferResultInfo: void (const occ::handle<Transfer_TransientProcess> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, occ::handle<NCollection_HSequence<occ::handle<TransferBRep_TransferResultInfo>>> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@CheckListResult#1",
+      "nativeName": "TransferBRep_Reader::CheckListResult",
+      "signature": "TransferBRep_Reader::CheckListResult: Interface_CheckIterator () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@CheckStatusResult#b#1",
+      "nativeName": "TransferBRep_Reader::CheckStatusResult",
+      "signature": "TransferBRep_Reader::CheckStatusResult: bool (const bool) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@EndTransfer#",
+      "nativeName": "TransferBRep_Reader::EndTransfer",
+      "signature": "TransferBRep_Reader::EndTransfer: void ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@IsDone#1",
+      "nativeName": "TransferBRep_Reader::IsDone",
+      "signature": "TransferBRep_Reader::IsDone: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@NbShapes#1",
+      "nativeName": "TransferBRep_Reader::NbShapes",
+      "signature": "TransferBRep_Reader::NbShapes: int () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@NbTransients#1",
+      "nativeName": "TransferBRep_Reader::NbTransients",
+      "signature": "TransferBRep_Reader::NbTransients: int () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@SetFileStatus#I#",
+      "nativeName": "TransferBRep_Reader::SetFileStatus",
+      "signature": "TransferBRep_Reader::SetFileStatus: void (const int)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@SetModel#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#",
+      "nativeName": "TransferBRep_Reader::SetModel",
+      "signature": "TransferBRep_Reader::SetModel: void (const occ::handle<Interface_InterfaceModel> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@Shape#I#1",
+      "nativeName": "TransferBRep_Reader::Shape",
+      "signature": "TransferBRep_Reader::Shape: const TopoDS_Shape &(const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@ShapeResult#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "TransferBRep_Reader::ShapeResult",
+      "signature": "TransferBRep_Reader::ShapeResult: TopoDS_Shape (const occ::handle<Standard_Transient> &) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@Shapes#1",
+      "nativeName": "TransferBRep_Reader::Shapes",
+      "signature": "TransferBRep_Reader::Shapes: occ::handle<NCollection_HSequence<TopoDS_Shape>> () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@TransferBRep_Reader#",
+      "nativeName": "TransferBRep_Reader::TransferBRep_Reader",
+      "signature": "TransferBRep_Reader::TransferBRep_Reader: void ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@Transient#I#1",
+      "nativeName": "TransferBRep_Reader::Transient",
+      "signature": "TransferBRep_Reader::Transient: occ::handle<Standard_Transient> (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_Reader@F@Transients#1",
+      "nativeName": "TransferBRep_Reader::Transients",
+      "signature": "TransferBRep_Reader::Transients: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@AddResult#&1$@S@TopoDS_Shape#",
+      "nativeName": "TransferBRep_ShapeListBinder::AddResult",
+      "signature": "TransferBRep_ShapeListBinder::AddResult: void (const TopoDS_Shape &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@CompSolid#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::CompSolid",
+      "signature": "TransferBRep_ShapeListBinder::CompSolid: TopoDS_CompSolid (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Compound#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Compound",
+      "signature": "TransferBRep_ShapeListBinder::Compound: TopoDS_Compound (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Edge#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Edge",
+      "signature": "TransferBRep_ShapeListBinder::Edge: TopoDS_Edge (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Face#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Face",
+      "signature": "TransferBRep_ShapeListBinder::Face: TopoDS_Face (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Result#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Result",
+      "signature": "TransferBRep_ShapeListBinder::Result: occ::handle<NCollection_HSequence<TopoDS_Shape>> () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@ResultTypeName#1",
+      "nativeName": "TransferBRep_ShapeListBinder::ResultTypeName",
+      "signature": "TransferBRep_ShapeListBinder::ResultTypeName: const char *() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@SetResult#I#&1$@S@TopoDS_Shape#",
+      "nativeName": "TransferBRep_ShapeListBinder::SetResult",
+      "signature": "TransferBRep_ShapeListBinder::SetResult: void (const int, const TopoDS_Shape &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Shape#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Shape",
+      "signature": "TransferBRep_ShapeListBinder::Shape: const TopoDS_Shape &(const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Shell#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Shell",
+      "signature": "TransferBRep_ShapeListBinder::Shell: TopoDS_Shell (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Solid#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Solid",
+      "signature": "TransferBRep_ShapeListBinder::Solid: TopoDS_Solid (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@TransferBRep_ShapeListBinder#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#",
+      "nativeName": "TransferBRep_ShapeListBinder::TransferBRep_ShapeListBinder",
+      "signature": "TransferBRep_ShapeListBinder::TransferBRep_ShapeListBinder: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Vertex#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Vertex",
+      "signature": "TransferBRep_ShapeListBinder::Vertex: TopoDS_Vertex (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_ShapeListBinder@F@Wire#I#1",
+      "nativeName": "TransferBRep_ShapeListBinder::Wire",
+      "signature": "TransferBRep_ShapeListBinder::Wire: TopoDS_Wire (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@NoResult#",
+      "nativeName": "TransferBRep_TransferResultInfo::NoResult",
+      "signature": "TransferBRep_TransferResultInfo::NoResult: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@NoResultFail#",
+      "nativeName": "TransferBRep_TransferResultInfo::NoResultFail",
+      "signature": "TransferBRep_TransferResultInfo::NoResultFail: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@NoResultWarning#",
+      "nativeName": "TransferBRep_TransferResultInfo::NoResultWarning",
+      "signature": "TransferBRep_TransferResultInfo::NoResultWarning: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@NoResultWarningFail#",
+      "nativeName": "TransferBRep_TransferResultInfo::NoResultWarningFail",
+      "signature": "TransferBRep_TransferResultInfo::NoResultWarningFail: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@Result#",
+      "nativeName": "TransferBRep_TransferResultInfo::Result",
+      "signature": "TransferBRep_TransferResultInfo::Result: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@ResultFail#",
+      "nativeName": "TransferBRep_TransferResultInfo::ResultFail",
+      "signature": "TransferBRep_TransferResultInfo::ResultFail: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@ResultWarning#",
+      "nativeName": "TransferBRep_TransferResultInfo::ResultWarning",
+      "signature": "TransferBRep_TransferResultInfo::ResultWarning: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@TransferBRep_TransferResultInfo@F@ResultWarningFail#",
+      "nativeName": "TransferBRep_TransferResultInfo::ResultWarningFail",
+      "signature": "TransferBRep_TransferResultInfo::ResultWarningFail: int &()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@AddFail#*1C#S0_#",
+      "nativeName": "Transfer_Binder::AddFail",
+      "signature": "Transfer_Binder::AddFail: void (const char *const, const char *const)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@AddWarning#*1C#S0_#",
+      "nativeName": "Transfer_Binder::AddWarning",
+      "signature": "Transfer_Binder::AddWarning: void (const char *const, const char *const)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@AbnormalResult#1",
+      "nativeName": "Transfer_ProcessForTransient::AbnormalResult",
+      "signature": "Transfer_ProcessForTransient::AbnormalResult: Transfer_IteratorOfProcessForTransient () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@CheckList#b#1",
+      "nativeName": "Transfer_ProcessForTransient::CheckList",
+      "signature": "Transfer_ProcessForTransient::CheckList: Interface_CheckIterator (const bool) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@CompleteResult#b#1",
+      "nativeName": "Transfer_ProcessForTransient::CompleteResult",
+      "signature": "Transfer_ProcessForTransient::CompleteResult: Transfer_IteratorOfProcessForTransient (const bool) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@RootResult#b#1",
+      "nativeName": "Transfer_ProcessForTransient::RootResult",
+      "signature": "Transfer_ProcessForTransient::RootResult: Transfer_IteratorOfProcessForTransient (const bool) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@CheckList#b#I#1",
+      "nativeName": "Transfer_ResultFromModel::CheckList",
+      "signature": "Transfer_ResultFromModel::CheckList: Interface_CheckIterator (const bool, const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@CheckedList#$@E@Interface_CheckStatus#b#1",
+      "nativeName": "Transfer_ResultFromModel::CheckedList",
+      "signature": "Transfer_ResultFromModel::CheckedList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const Interface_CheckStatus, const bool) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@FileName#1",
+      "nativeName": "Transfer_ResultFromModel::FileName",
+      "signature": "Transfer_ResultFromModel::FileName: const char *() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@MainLabel#1",
+      "nativeName": "Transfer_ResultFromModel::MainLabel",
+      "signature": "Transfer_ResultFromModel::MainLabel: const char *() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@Results#I#1",
+      "nativeName": "Transfer_ResultFromModel::Results",
+      "signature": "Transfer_ResultFromModel::Results: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@SetFileName#*1C#",
+      "nativeName": "Transfer_ResultFromModel::SetFileName",
+      "signature": "Transfer_ResultFromModel::SetFileName: void (const char *const)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@TransferredList#I#1",
+      "nativeName": "Transfer_ResultFromModel::TransferredList",
+      "signature": "Transfer_ResultFromModel::TransferredList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@AddItem#&1$@N@opencascade@S@handle>#$@S@Transfer_Binder#",
+      "nativeName": "Transfer_TransferIterator::AddItem",
+      "signature": "Transfer_TransferIterator::AddItem: void (const occ::handle<Transfer_Binder> &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Check#1",
+      "nativeName": "Transfer_TransferIterator::Check",
+      "signature": "Transfer_TransferIterator::Check: const occ::handle<Interface_Check> () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@HasFails#1",
+      "nativeName": "Transfer_TransferIterator::HasFails",
+      "signature": "Transfer_TransferIterator::HasFails: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@HasResult#1",
+      "nativeName": "Transfer_TransferIterator::HasResult",
+      "signature": "Transfer_TransferIterator::HasResult: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@HasTransientResult#1",
+      "nativeName": "Transfer_TransferIterator::HasTransientResult",
+      "signature": "Transfer_TransferIterator::HasTransientResult: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@HasUniqueResult#1",
+      "nativeName": "Transfer_TransferIterator::HasUniqueResult",
+      "signature": "Transfer_TransferIterator::HasUniqueResult: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@HasWarnings#1",
+      "nativeName": "Transfer_TransferIterator::HasWarnings",
+      "signature": "Transfer_TransferIterator::HasWarnings: bool () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@More#",
+      "nativeName": "Transfer_TransferIterator::More",
+      "signature": "Transfer_TransferIterator::More: bool ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Next#",
+      "nativeName": "Transfer_TransferIterator::Next",
+      "signature": "Transfer_TransferIterator::Next: void ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Number#1",
+      "nativeName": "Transfer_TransferIterator::Number",
+      "signature": "Transfer_TransferIterator::Number: int () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@ResultType#1",
+      "nativeName": "Transfer_TransferIterator::ResultType",
+      "signature": "Transfer_TransferIterator::ResultType: occ::handle<Standard_Type> () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Start#",
+      "nativeName": "Transfer_TransferIterator::Start",
+      "signature": "Transfer_TransferIterator::Start: void ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Status#1",
+      "nativeName": "Transfer_TransferIterator::Status",
+      "signature": "Transfer_TransferIterator::Status: Transfer_StatusExec () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Transfer_TransferIterator#",
+      "nativeName": "Transfer_TransferIterator::Transfer_TransferIterator",
+      "signature": "Transfer_TransferIterator::Transfer_TransferIterator: void ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@TransientResult#1",
+      "nativeName": "Transfer_TransferIterator::TransientResult",
+      "signature": "Transfer_TransferIterator::TransientResult: const occ::handle<Standard_Transient> &() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferIterator@F@Value#1",
+      "nativeName": "Transfer_TransferIterator::Value",
+      "signature": "Transfer_TransferIterator::Value: const occ::handle<Transfer_Binder> &() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientProcess@F@RootsForTransfer#",
+      "nativeName": "Transfer_TransientProcess::RootsForTransfer",
+      "signature": "Transfer_TransientProcess::RootsForTransfer: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> ()",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@CheckList#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#1",
+      "nativeName": "XSControl_TransferReader::CheckList",
+      "signature": "XSControl_TransferReader::CheckList: Interface_CheckIterator (const occ::handle<Standard_Transient> &, const int) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@FileName#1",
+      "nativeName": "XSControl_TransferReader::FileName",
+      "signature": "XSControl_TransferReader::FileName: const char *() const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@FinalEntityLabel#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "XSControl_TransferReader::FinalEntityLabel",
+      "signature": "XSControl_TransferReader::FinalEntityLabel: const char *(const occ::handle<Standard_Transient> &) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@LastCheckList#1",
+      "nativeName": "XSControl_TransferReader::LastCheckList",
+      "signature": "XSControl_TransferReader::LastCheckList: Interface_CheckIterator () const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@SetFileName#*1C#",
+      "nativeName": "XSControl_TransferReader::SetFileName",
+      "signature": "XSControl_TransferReader::SetFileName: void (const char *const)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@ShapeResult#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "XSControl_TransferReader::ShapeResult",
+      "signature": "XSControl_TransferReader::ShapeResult: TopoDS_Shape (const occ::handle<Standard_Transient> &) const",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@TransferOne#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_TransferReader::TransferOne",
+      "signature": "XSControl_TransferReader::TransferOne: int (const occ::handle<Standard_Transient> &, const bool, const Message_ProgressRange &)",
+      "guard": "AKExact",
+      "reason": "Audited private single-epoch transfer, bounded binder traversal, copied immutable diagnostics and retained shape/entity values; ADR-0103."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_WorkSession@F@TransferReader#1",
+      "nativeName": "XSControl_WorkSession::TransferReader",
+      "signature": "XSControl_WorkSession::TransferReader: const occ::handle<XSControl_TransferReader> &() const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@TransientProcess#1",
+      "nativeName": "XSControl_TransferReader::TransientProcess",
+      "signature": "XSControl_TransferReader::TransientProcess: const occ::handle<Transfer_TransientProcess> &() const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@FinalResult#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "XSControl_TransferReader::FinalResult",
+      "signature": "XSControl_TransferReader::FinalResult: occ::handle<Transfer_ResultFromModel> (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@NbMapped#1",
+      "nativeName": "Transfer_ProcessForTransient::NbMapped",
+      "signature": "Transfer_ProcessForTransient::NbMapped: int () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@MapItem#I#1",
+      "nativeName": "Transfer_ProcessForTransient::MapItem",
+      "signature": "Transfer_ProcessForTransient::MapItem: occ::handle<Transfer_Binder> (const int) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@Mapped#I#1",
+      "nativeName": "Transfer_ProcessForTransient::Mapped",
+      "signature": "Transfer_ProcessForTransient::Mapped: const occ::handle<Standard_Transient> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ProcessForTransient@F@MapIndex#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Transfer_ProcessForTransient::MapIndex",
+      "signature": "Transfer_ProcessForTransient::MapIndex: int (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_IteratorOfProcessForTransient@F@HasStarting#1",
+      "nativeName": "Transfer_IteratorOfProcessForTransient::HasStarting",
+      "signature": "Transfer_IteratorOfProcessForTransient::HasStarting: bool () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_IteratorOfProcessForTransient@F@Starting#1",
+      "nativeName": "Transfer_IteratorOfProcessForTransient::Starting",
+      "signature": "Transfer_IteratorOfProcessForTransient::Starting: const occ::handle<Standard_Transient> &() const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@MainResult#1",
+      "nativeName": "Transfer_ResultFromModel::MainResult",
+      "signature": "Transfer_ResultFromModel::MainResult: occ::handle<Transfer_ResultFromTransient> () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromTransient@F@NbSubResults#1",
+      "nativeName": "Transfer_ResultFromTransient::NbSubResults",
+      "signature": "Transfer_ResultFromTransient::NbSubResults: int () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromTransient@F@Binder#1",
+      "nativeName": "Transfer_ResultFromTransient::Binder",
+      "signature": "Transfer_ResultFromTransient::Binder: occ::handle<Transfer_Binder> () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@NextResult#1",
+      "nativeName": "Transfer_Binder::NextResult",
+      "signature": "Transfer_Binder::NextResult: occ::handle<Transfer_Binder> () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@Check#1",
+      "nativeName": "Transfer_Binder::Check",
+      "signature": "Transfer_Binder::Check: const occ::handle<Interface_Check> () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@HasResult#1",
+      "nativeName": "Transfer_Binder::HasResult",
+      "signature": "Transfer_Binder::HasResult: bool () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Transfer_Binder@F@StatusExec#1",
+      "nativeName": "Transfer_Binder::StatusExec",
+      "signature": "Transfer_Binder::StatusExec: Transfer_StatusExec () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbFails#1",
+      "nativeName": "Interface_Check::NbFails",
+      "signature": "Interface_Check::NbFails: int () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbWarnings#1",
+      "nativeName": "Interface_Check::NbWarnings",
+      "signature": "Interface_Check::NbWarnings: int () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@HasFailed#1",
+      "nativeName": "Interface_Check::HasFailed",
+      "signature": "Interface_Check::HasFailed: bool () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@HasWarnings#1",
+      "nativeName": "Interface_Check::HasWarnings",
+      "signature": "Interface_Check::HasWarnings: bool () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CFail#I#b#1",
+      "nativeName": "Interface_Check::CFail",
+      "signature": "Interface_Check::CFail: const char *(const int, const bool) const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CWarning#I#b#1",
+      "nativeName": "Interface_Check::CWarning",
+      "signature": "Interface_Check::CWarning: const char *(const int, const bool) const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Start#1",
+      "nativeName": "Interface_CheckIterator::Start",
+      "signature": "Interface_CheckIterator::Start: void () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@More#1",
+      "nativeName": "Interface_CheckIterator::More",
+      "signature": "Interface_CheckIterator::More: bool () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Next#1",
+      "nativeName": "Interface_CheckIterator::Next",
+      "signature": "Interface_CheckIterator::Next: void () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Number#1",
+      "nativeName": "Interface_CheckIterator::Number",
+      "signature": "Interface_CheckIterator::Number: int () const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Value#1",
+      "nativeName": "Interface_CheckIterator::Value",
+      "signature": "Interface_CheckIterator::Value: const occ::handle<Interface_Check> &() const",
+      "baselineDisposition": "Blocked",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NbEntities#1",
+      "nativeName": "Interface_InterfaceModel::NbEntities",
+      "signature": "Interface_InterfaceModel::NbEntities: int () const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Number#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_InterfaceModel::Number",
+      "signature": "Interface_InterfaceModel::Number: int (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Value#I#1",
+      "nativeName": "Interface_InterfaceModel::Value",
+      "signature": "Interface_InterfaceModel::Value: const occ::handle<Standard_Transient> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@STEPControl_Reader#",
+      "nativeName": "STEPControl_Reader::STEPControl_Reader",
+      "signature": "STEPControl_Reader::STEPControl_Reader: void ()",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESControl_Reader#",
+      "nativeName": "IGESControl_Reader::IGESControl_Reader",
+      "signature": "IGESControl_Reader::IGESControl_Reader: void ()",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "baselineDisposition": "Manual",
+      "specialCaseId": "SC-051",
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GiveList#*1C#S0_#",
+      "nativeName": "XSControl_Reader::GiveList",
+      "signature": "XSControl_Reader::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const char *const)",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Private default file root selection."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@TransferList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_TransferReader::TransferList",
+      "signature": "XSControl_TransferReader::TransferList: int (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Emitted",
+      "specialCaseId": null,
+      "guard": "AKPrerequisite",
+      "reason": "Exact invoked support operation; baseline Manual/Emitted classifications are preserved."
+    }
+  ]
+}

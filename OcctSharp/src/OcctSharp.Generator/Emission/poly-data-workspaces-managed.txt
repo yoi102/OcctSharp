@@ -1,0 +1,83 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Interop;
+namespace OcctSharp.PolyWorkspaces;
+#pragma warning disable CS1591
+/// <summary>Why Poly's single-neighbor projection is unavailable. Use existing full MeshConnectivity on Mesh.</summary>
+public enum PolyConnectivityDisposition { Available=0, Empty=1, Degenerate=2, NonManifold=3, InconsistentOrientation=4, IncompleteVertexFan=5 }
+/// <summary>Zero-based native neighboring triangles and their opposite nodes. Missing neighbors are -1.</summary>
+public readonly record struct PolyTriangleNeighbors(int FirstTriangle,int SecondTriangle,int ThirdTriangle,int FirstOppositeNode,int SecondOppositeNode,int ThirdOppositeNode);
+internal sealed partial class PolyDataHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal PolyDataHandle(nint value):base(true){SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_release")]internal static partial void Release(nint token);
+}
+/// <summary>Owns copied native triangulation; immutable Mesh/channels/diagnostics survive disposal. Each owning native query deep-copies.</summary>
+public sealed partial class PolyDataSnapshot:IDisposable {
+ readonly PolyDataHandle handle;
+ internal unsafe PolyDataSnapshot(nint token,AuthoredMesh? source) {
+  PolyDataHandle? allocated=null;
+  try {
+   handle=allocated=new(token);int* info=stackalloc int[8];double* metadata=stackalloc double[7];
+   NativeError.ThrowIfFailed(InfoNative(handle,info,8,metadata,7),"polydata_info");
+   int nodes=info[0],facets=info[1];if(nodes<0||facets<0||(long)nodes+facets>1048576)throw new OcctException("InvalidMeshResult","Invalid copied Poly cardinality.");
+   var vertices=new double[checked(nodes*8)];var indices=new int[checked(facets*3)];
+   fixed(double* v=vertices)NativeError.ThrowIfFailed(VerticesNative(handle,v,vertices.Length),"polydata_vertices");
+   fixed(int* t=indices)NativeError.ThrowIfFailed(TrianglesNative(handle,t,indices.Length),"polydata_triangles");
+   var points=new GpPoint[nodes];var triangles=new MeshTriangle[facets];MeshNormal[]? normals=info[3]!=0?new MeshNormal[nodes]:null;MeshUv[]? uv=info[2]!=0?new MeshUv[nodes]:null;
+   for(int n=0;n<nodes;++n){int start=n*8;points[n]=new(vertices[start],vertices[start+1],vertices[start+2]);
+    if(normals is not null){double x=vertices[start+3],y=vertices[start+4],z=vertices[start+5];normals[n]=x==0&&y==0&&z==0?MeshNormal.Undefined:new(x,y,z);}
+    if(uv is not null)uv[n]=new(vertices[start+6],vertices[start+7]);}
+   if(source is not null&&(source.Positions.Count!=nodes||source.Triangles.Count!=facets))throw new OcctException("InvalidMeshResult","Copied Poly cardinalities changed.");
+   for(int t=0;t<facets;++t)triangles[t]=new(indices[t*3],indices[t*3+1],indices[t*3+2],source?.Triangles[t].Group??0);
+   Mesh=source is null?new(points,triangles,normals,uv):new(points,triangles,normals,uv,source.Groups,source.Polylines,source.Coordinates,new(Guid.NewGuid(),0),source.VertexOrigins);
+   SourceRevision=source?.Revision;IsDoublePrecision=info[4]!=0;MeshPurpose=unchecked((uint)info[5]);Deflection=metadata[0];
+   Bounds=info[7]!=0?new(new(metadata[1],metadata[2],metadata[3]),new(metadata[4],metadata[5],metadata[6])):null;
+   ConnectivityDisposition=(PolyConnectivityDisposition)info[6];
+   if(ConnectivityDisposition==PolyConnectivityDisposition.Available){var raw=new int[checked(facets*6)];fixed(int* values=raw)NativeError.ThrowIfFailed(AdjacencyNative(handle,values,raw.Length),"polydata_adjacency");
+    var neighbors=new PolyTriangleNeighbors[facets];for(int t=0;t<facets;++t){int i=t*6;neighbors[t]=new(raw[i],raw[i+1],raw[i+2],raw[i+3],raw[i+4],raw[i+5]);}
+    Neighbors=Array.AsReadOnly(neighbors);var incident=new IReadOnlyList<int>[nodes];
+    for(int n=0;n<nodes;++n){NativeError.ThrowIfFailed(IncidentNative(handle,n,null,0,out int count),"polydata_incident_count");if(count<0||count>facets)throw new OcctException("InvalidMeshResult","Invalid incident count.");var values=new int[count];
+     fixed(int* p=values){NativeError.ThrowIfFailed(IncidentNative(handle,n,p,values.Length,out int actual),"polydata_incident");if(actual!=count)throw new OcctException("InvalidMeshResult","Incident count changed.");}incident[n]=Array.AsReadOnly(values);}
+    IncidentTriangles=Array.AsReadOnly(incident);
+   }
+  }catch{allocated?.Dispose();throw;}
+ }
+ public AuthoredMesh Mesh {get;}
+ public MeshRevision? SourceRevision {get;}
+ public bool IsDoublePrecision {get;}
+ public uint MeshPurpose {get;}
+ public double Deflection {get;}
+ public AuthoredMeshBounds? Bounds {get;}
+ public PolyConnectivityDisposition ConnectivityDisposition {get;}
+ public IReadOnlyList<PolyTriangleNeighbors>? Neighbors {get;}
+ public IReadOnlyList<IReadOnlyList<int>>? IncidentTriangles {get;}
+ /// <summary>Copies all native data/initial parameters. Output survives snapshot disposal. Empty native triangulations are valid.</summary>
+ public PolyTriangulation CopyTriangulation(){ObjectDisposedException.ThrowIf(handle.IsClosed,this);NativeError.ThrowIfFailed(CopyNative(handle,out var result),"polydata_triangulation");return PolyTriangulation.FromNative(result,"polydata_triangulation")??throw new OcctException("InvalidMeshResult","Null Poly result.");}
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_info")]private static unsafe partial NativeStatus InfoNative(PolyDataHandle token,int* info,int capacity,double* values,int valueCapacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_vertices")]private static unsafe partial NativeStatus VerticesNative(PolyDataHandle token,double* values,int capacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_triangles")]private static unsafe partial NativeStatus TrianglesNative(PolyDataHandle token,int* values,int capacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_adjacency")]private static unsafe partial NativeStatus AdjacencyNative(PolyDataHandle token,int* values,int capacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_incident")]private static unsafe partial NativeStatus IncidentNative(PolyDataHandle token,int node,int* values,int capacity,out int count);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_triangulation")]private static partial NativeStatus CopyNative(PolyDataHandle token,out nint result);
+}
+/// <summary>Copied and bounded Poly workflows. Source mutation must be synchronized while copying, and all source channel/index values initialized.</summary>
+public static partial class PolyDataWorkspaces {
+ static PolyDataWorkspaces()=>NativeLibraryResolver.EnsureRegistered(typeof(PolyDataWorkspaces).Assembly);
+ /// <summary>Preserves index/group/logical origins; float storage quantizes nodes/UVs and rejects overflow. Native normals use float storage.</summary>
+ public static unsafe PolyDataSnapshot FromMesh(AuthoredMesh source,bool doublePrecision=true) {
+  ArgumentNullException.ThrowIfNull(source);int nodes=source.Positions.Count,facets=source.Triangles.Count;if((long)nodes+facets>1048576)throw new ArgumentOutOfRangeException(nameof(source));
+  var positions=new double[checked(nodes*3)];var indices=new int[checked(facets*3)];double[]? uv=source.UVs is null?null:new double[checked(nodes*2)];double[]? normals=source.Normals is null?null:new double[checked(nodes*3)];
+  for(int n=0;n<nodes;++n){var p=source.Positions[n];positions[n*3]=p.X;positions[n*3+1]=p.Y;positions[n*3+2]=p.Z;
+   if(uv is not null){uv[n*2]=source.UVs![n].U;uv[n*2+1]=source.UVs[n].V;}
+   if(normals is not null){var normal=source.Normals![n];normals[n*3]=normal.X;normals[n*3+1]=normal.Y;normals[n*3+2]=normal.Z;}}
+  for(int t=0;t<facets;++t){var value=source.Triangles[t];indices[t*3]=value.A;indices[t*3+1]=value.B;indices[t*3+2]=value.C;}
+  fixed(double* p=positions)fixed(int* t=indices)fixed(double* u=uv)fixed(double* n=normals){NativeError.ThrowIfFailed(CreateNative(p,nodes,t,facets,u,n,doublePrecision?1:0,out var result),"polydata_create");return new(result,source);}
+ }
+ /// <summary>Deep-copies initialized source geometry/channels. Deferred geometry must first be materialized by the caller.</summary>
+ public static PolyDataSnapshot Copy(PolyTriangulation source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(SourceNative(source.NativeHandle,out var result),"polydata_copy");return new(result,null);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_create")]private static unsafe partial NativeStatus CreateNative(double* points,int nodes,int* indices,int triangles,double* uv,double* normals,int useDouble,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_polydata_copy")]private static partial NativeStatus SourceNative(Generated.PolyTriangulationHandle source,out nint result);
+}

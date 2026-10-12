@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF>
+    <CopyOcctSharpNativeRuntime Condition="'$(OcctSharpWpfUsePackages)' != 'true'">true</CopyOcctSharpNativeRuntime>
+    <ManagePackageVersionsCentrally Condition="'$(OcctSharpWpfUsePackages)' == 'true'">false</ManagePackageVersionsCentrally>
+    <RestoreAdditionalProjectSources Condition="'$(OcctSharpWpfUsePackages)' == 'true'">$(MSBuildThisFileDirectory)../../artifacts/packages</RestoreAdditionalProjectSources>
+    <ApplicationManifest>../../samples/OcctSharpViewer.Wpf/app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/OcctSharp/OcctSharp.csproj" Condition="'$(OcctSharpWpfUsePackages)' != 'true'" />
+    <PackageReference Include="OcctSharp" Version="$(OcctSharpPackageVersion)" Condition="'$(OcctSharpWpfUsePackages)' == 'true'" />
+    <PackageReference Include="OcctSharp.Native.win-x64" Version="$(OcctSharpPackageVersion)" Condition="'$(OcctSharpWpfUsePackages)' == 'true'" />
+    <Compile Include="../../samples/OcctSharpViewer.Wpf/Controls/OcctViewportHost.cs" Link="Production/OcctViewportHost.cs" />
+    <Compile Include="../../samples/OcctSharpViewer.Wpf/Services/IViewerService.cs" Link="Production/IViewerService.cs" />
+    <Compile Include="../Shared/BatchAUDesktopCapture.cs" Link="Acceptance/BatchAUDesktopCapture.cs" />
+  </ItemGroup>
+</Project>

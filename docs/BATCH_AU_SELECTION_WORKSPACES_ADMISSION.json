@@ -1,0 +1,2312 @@
+{
+  "schemaVersion": "1.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.44",
+  "inventorySha256": "CE73563B66D1E6608DF950D4846A9F7827AE333727D4CD212487EE22BE4DB507",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "F58FBF9F361F9D7F439EE46AD32A2E2FDD3ADAB569FA417B26BFE9C49C056D1A",
+  "declarations": [
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AIS_ViewController#",
+      "nativeName": "AIS_ViewController::AIS_ViewController",
+      "signature": "AIS_ViewController::AIS_ViewController: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AbortViewAnimation#",
+      "nativeName": "AIS_ViewController::AbortViewAnimation",
+      "signature": "AIS_ViewController::AbortViewAnimation: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AddTouchPoint#k#&1$@S@NCollection_Vec2>#d#b#",
+      "nativeName": "AIS_ViewController::AddTouchPoint",
+      "signature": "AIS_ViewController::AddTouchPoint: void (size_t, const NCollection_Vec2<double> &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeInputBuffer#$@E@AIS_ViewInputBufferType#",
+      "nativeName": "AIS_ViewController::ChangeInputBuffer",
+      "signature": "AIS_ViewController::ChangeInputBuffer: AIS_ViewInputBuffer &(AIS_ViewInputBufferType)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeMouseGestureMap#",
+      "nativeName": "AIS_ViewController::ChangeMouseGestureMap",
+      "signature": "AIS_ViewController::ChangeMouseGestureMap: NCollection_DataMap<unsigned int, AIS_MouseGesture> &()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeMouseSelectionSchemes#",
+      "nativeName": "AIS_ViewController::ChangeMouseSelectionSchemes",
+      "signature": "AIS_ViewController::ChangeMouseSelectionSchemes: NCollection_DataMap<unsigned int, AIS_SelectionScheme> &()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FetchNavigationKeys#d#d#",
+      "nativeName": "AIS_ViewController::FetchNavigationKeys",
+      "signature": "AIS_ViewController::FetchNavigationKeys: AIS_WalkDelta (double, double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FitAllAuto#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::FitAllAuto",
+      "signature": "AIS_ViewController::FitAllAuto: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FlushViewEvents#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#",
+      "nativeName": "AIS_ViewController::FlushViewEvents",
+      "signature": "AIS_ViewController::FlushViewEvents: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@GravityPoint#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::GravityPoint",
+      "signature": "AIS_ViewController::GravityPoint: gp_Pnt (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@HandleViewEvents#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::HandleViewEvents",
+      "signature": "AIS_ViewController::HandleViewEvents: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@HasPreviousMoveTo#1",
+      "nativeName": "AIS_ViewController::HasPreviousMoveTo",
+      "signature": "AIS_ViewController::HasPreviousMoveTo: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@InputBuffer#$@E@AIS_ViewInputBufferType#1",
+      "nativeName": "AIS_ViewController::InputBuffer",
+      "signature": "AIS_ViewController::InputBuffer: const AIS_ViewInputBuffer &(AIS_ViewInputBufferType) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@IsContinuousRedraw#1",
+      "nativeName": "AIS_ViewController::IsContinuousRedraw",
+      "signature": "AIS_ViewController::IsContinuousRedraw: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyDown#i#d#d#",
+      "nativeName": "AIS_ViewController::KeyDown",
+      "signature": "AIS_ViewController::KeyDown: void (Aspect_VKey, double, double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyFromAxis#i#i#d#d#",
+      "nativeName": "AIS_ViewController::KeyFromAxis",
+      "signature": "AIS_ViewController::KeyFromAxis: void (Aspect_VKey, Aspect_VKey, double, double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyUp#i#d#",
+      "nativeName": "AIS_ViewController::KeyUp",
+      "signature": "AIS_ViewController::KeyUp: void (Aspect_VKey, double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MinZoomDistance#1",
+      "nativeName": "AIS_ViewController::MinZoomDistance",
+      "signature": "AIS_ViewController::MinZoomDistance: double () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseAcceleration#1",
+      "nativeName": "AIS_ViewController::MouseAcceleration",
+      "signature": "AIS_ViewController::MouseAcceleration: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseDoubleClickInterval#1",
+      "nativeName": "AIS_ViewController::MouseDoubleClickInterval",
+      "signature": "AIS_ViewController::MouseDoubleClickInterval: double () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseGestureMap#1",
+      "nativeName": "AIS_ViewController::MouseGestureMap",
+      "signature": "AIS_ViewController::MouseGestureMap: const NCollection_DataMap<unsigned int, AIS_MouseGesture> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseSelectionSchemes#1",
+      "nativeName": "AIS_ViewController::MouseSelectionSchemes",
+      "signature": "AIS_ViewController::MouseSelectionSchemes: const NCollection_DataMap<unsigned int, AIS_SelectionScheme> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@NavigationMode#1",
+      "nativeName": "AIS_ViewController::NavigationMode",
+      "signature": "AIS_ViewController::NavigationMode: AIS_NavigationMode () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ObjectsAnimation#1",
+      "nativeName": "AIS_ViewController::ObjectsAnimation",
+      "signature": "AIS_ViewController::ObjectsAnimation: const occ::handle<AIS_Animation> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnObjectDragged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_DragAction#",
+      "nativeName": "AIS_ViewController::OnObjectDragged",
+      "signature": "AIS_ViewController::OnObjectDragged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, AIS_DragAction)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnSelectionChanged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::OnSelectionChanged",
+      "signature": "AIS_ViewController::OnSelectionChanged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnSubviewChanged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#S3_#",
+      "nativeName": "AIS_ViewController::OnSubviewChanged",
+      "signature": "AIS_ViewController::OnSubviewChanged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OrbitAcceleration#1",
+      "nativeName": "AIS_ViewController::OrbitAcceleration",
+      "signature": "AIS_ViewController::OrbitAcceleration: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PickAxis#&$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Ax1#",
+      "nativeName": "AIS_ViewController::PickAxis",
+      "signature": "AIS_ViewController::PickAxis: bool (gp_Pnt &, const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const gp_Ax1 &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PickPoint#&$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@NCollection_Vec2>#I#b#",
+      "nativeName": "AIS_ViewController::PickPoint",
+      "signature": "AIS_ViewController::PickPoint: bool (gp_Pnt &, const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const NCollection_Vec2<int> &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PreviousMoveTo#1",
+      "nativeName": "AIS_ViewController::PreviousMoveTo",
+      "signature": "AIS_ViewController::PreviousMoveTo: const NCollection_Vec2<int> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessClose#",
+      "nativeName": "AIS_ViewController::ProcessClose",
+      "signature": "AIS_ViewController::ProcessClose: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessConfigure#b#",
+      "nativeName": "AIS_ViewController::ProcessConfigure",
+      "signature": "AIS_ViewController::ProcessConfigure: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessExpose#",
+      "nativeName": "AIS_ViewController::ProcessExpose",
+      "signature": "AIS_ViewController::ProcessExpose: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessFocus#b#",
+      "nativeName": "AIS_ViewController::ProcessFocus",
+      "signature": "AIS_ViewController::ProcessFocus: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessInput#",
+      "nativeName": "AIS_ViewController::ProcessInput",
+      "signature": "AIS_ViewController::ProcessInput: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@RemoveTouchPoint#k#b#",
+      "nativeName": "AIS_ViewController::RemoveTouchPoint",
+      "signature": "AIS_ViewController::RemoveTouchPoint: bool (size_t, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ResetPreviousMoveTo#",
+      "nativeName": "AIS_ViewController::ResetPreviousMoveTo",
+      "signature": "AIS_ViewController::ResetPreviousMoveTo: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ResetViewInput#",
+      "nativeName": "AIS_ViewController::ResetViewInput",
+      "signature": "AIS_ViewController::ResetViewInput: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@RotationMode#1",
+      "nativeName": "AIS_ViewController::RotationMode",
+      "signature": "AIS_ViewController::RotationMode: AIS_RotationMode () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SelectInViewer#&1$@S@NCollection_Sequence>#$@S@NCollection_Vec2>#I#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_ViewController::SelectInViewer",
+      "signature": "AIS_ViewController::SelectInViewer: void (const NCollection_Sequence<NCollection_Vec2<int>> &, const AIS_SelectionScheme)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SelectInViewer#&1$@S@NCollection_Vec2>#I#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_ViewController::SelectInViewer",
+      "signature": "AIS_ViewController::SelectInViewer: void (const NCollection_Vec2<int> &, const AIS_SelectionScheme)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowDragging#b#",
+      "nativeName": "AIS_ViewController::SetAllowDragging",
+      "signature": "AIS_ViewController::SetAllowDragging: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowHighlight#b#",
+      "nativeName": "AIS_ViewController::SetAllowHighlight",
+      "signature": "AIS_ViewController::SetAllowHighlight: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowPanning#b#",
+      "nativeName": "AIS_ViewController::SetAllowPanning",
+      "signature": "AIS_ViewController::SetAllowPanning: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowRotation#b#",
+      "nativeName": "AIS_ViewController::SetAllowRotation",
+      "signature": "AIS_ViewController::SetAllowRotation: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowTouchZRotation#b#",
+      "nativeName": "AIS_ViewController::SetAllowTouchZRotation",
+      "signature": "AIS_ViewController::SetAllowTouchZRotation: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowZFocus#b#",
+      "nativeName": "AIS_ViewController::SetAllowZFocus",
+      "signature": "AIS_ViewController::SetAllowZFocus: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowZooming#b#",
+      "nativeName": "AIS_ViewController::SetAllowZooming",
+      "signature": "AIS_ViewController::SetAllowZooming: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetContinuousRedraw#b#",
+      "nativeName": "AIS_ViewController::SetContinuousRedraw",
+      "signature": "AIS_ViewController::SetContinuousRedraw: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetDisplayXRAuxDevices#b#",
+      "nativeName": "AIS_ViewController::SetDisplayXRAuxDevices",
+      "signature": "AIS_ViewController::SetDisplayXRAuxDevices: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetDisplayXRHands#b#",
+      "nativeName": "AIS_ViewController::SetDisplayXRHands",
+      "signature": "AIS_ViewController::SetDisplayXRHands: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetInvertPitch#b#",
+      "nativeName": "AIS_ViewController::SetInvertPitch",
+      "signature": "AIS_ViewController::SetInvertPitch: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetLockOrbitZUp#b#",
+      "nativeName": "AIS_ViewController::SetLockOrbitZUp",
+      "signature": "AIS_ViewController::SetLockOrbitZUp: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMinZoomDistance#d#",
+      "nativeName": "AIS_ViewController::SetMinZoomDistance",
+      "signature": "AIS_ViewController::SetMinZoomDistance: void (double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMouseAcceleration#f#",
+      "nativeName": "AIS_ViewController::SetMouseAcceleration",
+      "signature": "AIS_ViewController::SetMouseAcceleration: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMouseDoubleClickInterval#d#",
+      "nativeName": "AIS_ViewController::SetMouseDoubleClickInterval",
+      "signature": "AIS_ViewController::SetMouseDoubleClickInterval: void (double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetNavigationMode#$@E@AIS_NavigationMode#",
+      "nativeName": "AIS_ViewController::SetNavigationMode",
+      "signature": "AIS_ViewController::SetNavigationMode: void (AIS_NavigationMode)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetObjectsAnimation#&1$@N@opencascade@S@handle>#$@S@AIS_Animation#",
+      "nativeName": "AIS_ViewController::SetObjectsAnimation",
+      "signature": "AIS_ViewController::SetObjectsAnimation: void (const occ::handle<AIS_Animation> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetOrbitAcceleration#f#",
+      "nativeName": "AIS_ViewController::SetOrbitAcceleration",
+      "signature": "AIS_ViewController::SetOrbitAcceleration: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetPauseObjectsAnimation#b#",
+      "nativeName": "AIS_ViewController::SetPauseObjectsAnimation",
+      "signature": "AIS_ViewController::SetPauseObjectsAnimation: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetRotationMode#$@E@AIS_RotationMode#",
+      "nativeName": "AIS_ViewController::SetRotationMode",
+      "signature": "AIS_ViewController::SetRotationMode: void (AIS_RotationMode)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetShowPanAnchorPoint#b#",
+      "nativeName": "AIS_ViewController::SetShowPanAnchorPoint",
+      "signature": "AIS_ViewController::SetShowPanAnchorPoint: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetShowRotateCenter#b#",
+      "nativeName": "AIS_ViewController::SetShowRotateCenter",
+      "signature": "AIS_ViewController::SetShowRotateCenter: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetStickToRayOnRotation#b#",
+      "nativeName": "AIS_ViewController::SetStickToRayOnRotation",
+      "signature": "AIS_ViewController::SetStickToRayOnRotation: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetStickToRayOnZoom#b#",
+      "nativeName": "AIS_ViewController::SetStickToRayOnZoom",
+      "signature": "AIS_ViewController::SetStickToRayOnZoom: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetThrustSpeed#f#",
+      "nativeName": "AIS_ViewController::SetThrustSpeed",
+      "signature": "AIS_ViewController::SetThrustSpeed: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetTouchToleranceScale#f#",
+      "nativeName": "AIS_ViewController::SetTouchToleranceScale",
+      "signature": "AIS_ViewController::SetTouchToleranceScale: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetViewAnimation#&1$@N@opencascade@S@handle>#$@S@AIS_AnimationCamera#",
+      "nativeName": "AIS_ViewController::SetViewAnimation",
+      "signature": "AIS_ViewController::SetViewAnimation: void (const occ::handle<AIS_AnimationCamera> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetWalkSpeedAbsolute#f#",
+      "nativeName": "AIS_ViewController::SetWalkSpeedAbsolute",
+      "signature": "AIS_ViewController::SetWalkSpeedAbsolute: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetWalkSpeedRelative#f#",
+      "nativeName": "AIS_ViewController::SetWalkSpeedRelative",
+      "signature": "AIS_ViewController::SetWalkSpeedRelative: void (float)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ThrustSpeed#1",
+      "nativeName": "AIS_ViewController::ThrustSpeed",
+      "signature": "AIS_ViewController::ThrustSpeed: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowDragging#1",
+      "nativeName": "AIS_ViewController::ToAllowDragging",
+      "signature": "AIS_ViewController::ToAllowDragging: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowHighlight#1",
+      "nativeName": "AIS_ViewController::ToAllowHighlight",
+      "signature": "AIS_ViewController::ToAllowHighlight: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowPanning#1",
+      "nativeName": "AIS_ViewController::ToAllowPanning",
+      "signature": "AIS_ViewController::ToAllowPanning: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowRotation#1",
+      "nativeName": "AIS_ViewController::ToAllowRotation",
+      "signature": "AIS_ViewController::ToAllowRotation: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowTouchZRotation#1",
+      "nativeName": "AIS_ViewController::ToAllowTouchZRotation",
+      "signature": "AIS_ViewController::ToAllowTouchZRotation: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowZFocus#1",
+      "nativeName": "AIS_ViewController::ToAllowZFocus",
+      "signature": "AIS_ViewController::ToAllowZFocus: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowZooming#1",
+      "nativeName": "AIS_ViewController::ToAllowZooming",
+      "signature": "AIS_ViewController::ToAllowZooming: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToDisplayXRAuxDevices#1",
+      "nativeName": "AIS_ViewController::ToDisplayXRAuxDevices",
+      "signature": "AIS_ViewController::ToDisplayXRAuxDevices: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToDisplayXRHands#1",
+      "nativeName": "AIS_ViewController::ToDisplayXRHands",
+      "signature": "AIS_ViewController::ToDisplayXRHands: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToInvertPitch#1",
+      "nativeName": "AIS_ViewController::ToInvertPitch",
+      "signature": "AIS_ViewController::ToInvertPitch: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToLockOrbitZUp#1",
+      "nativeName": "AIS_ViewController::ToLockOrbitZUp",
+      "signature": "AIS_ViewController::ToLockOrbitZUp: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToPauseObjectsAnimation#1",
+      "nativeName": "AIS_ViewController::ToPauseObjectsAnimation",
+      "signature": "AIS_ViewController::ToPauseObjectsAnimation: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToShowPanAnchorPoint#1",
+      "nativeName": "AIS_ViewController::ToShowPanAnchorPoint",
+      "signature": "AIS_ViewController::ToShowPanAnchorPoint: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToShowRotateCenter#1",
+      "nativeName": "AIS_ViewController::ToShowRotateCenter",
+      "signature": "AIS_ViewController::ToShowRotateCenter: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToStickToRayOnRotation#1",
+      "nativeName": "AIS_ViewController::ToStickToRayOnRotation",
+      "signature": "AIS_ViewController::ToStickToRayOnRotation: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToStickToRayOnZoom#1",
+      "nativeName": "AIS_ViewController::ToStickToRayOnZoom",
+      "signature": "AIS_ViewController::ToStickToRayOnZoom: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@TouchToleranceScale#1",
+      "nativeName": "AIS_ViewController::TouchToleranceScale",
+      "signature": "AIS_ViewController::TouchToleranceScale: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@Update3dMouse#&1$@S@WNT_HIDSpaceMouse#",
+      "nativeName": "AIS_ViewController::Update3dMouse",
+      "signature": "AIS_ViewController::Update3dMouse: bool (const WNT_HIDSpaceMouse &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseButtons#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMouseButtons",
+      "signature": "AIS_ViewController::UpdateMouseButtons: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseClick#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMouseClick",
+      "signature": "AIS_ViewController::UpdateMouseClick: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMousePosition#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMousePosition",
+      "signature": "AIS_ViewController::UpdateMousePosition: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseScroll#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::UpdateMouseScroll",
+      "signature": "AIS_ViewController::UpdateMouseScroll: bool (const Aspect_ScrollDelta &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdatePolySelection#&1$@S@NCollection_Vec2>#I#b#",
+      "nativeName": "AIS_ViewController::UpdatePolySelection",
+      "signature": "AIS_ViewController::UpdatePolySelection: void (const NCollection_Vec2<int> &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateRubberBand#&1$@S@NCollection_Vec2>#I#S0_#",
+      "nativeName": "AIS_ViewController::UpdateRubberBand",
+      "signature": "AIS_ViewController::UpdateRubberBand: void (const NCollection_Vec2<int> &, const NCollection_Vec2<int> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateTouchPoint#k#&1$@S@NCollection_Vec2>#d#",
+      "nativeName": "AIS_ViewController::UpdateTouchPoint",
+      "signature": "AIS_ViewController::UpdateTouchPoint: void (size_t, const NCollection_Vec2<double> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateViewOrientation#$@E@V3d_TypeOfOrientation#b#",
+      "nativeName": "AIS_ViewController::UpdateViewOrientation",
+      "signature": "AIS_ViewController::UpdateViewOrientation: void (V3d_TypeOfOrientation, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateZRotation#d#",
+      "nativeName": "AIS_ViewController::UpdateZRotation",
+      "signature": "AIS_ViewController::UpdateZRotation: bool (double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateZoom#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::UpdateZoom",
+      "signature": "AIS_ViewController::UpdateZoom: bool (const Aspect_ScrollDelta &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ViewAnimation#1",
+      "nativeName": "AIS_ViewController::ViewAnimation",
+      "signature": "AIS_ViewController::ViewAnimation: const occ::handle<AIS_AnimationCamera> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@WalkSpeedAbsolute#1",
+      "nativeName": "AIS_ViewController::WalkSpeedAbsolute",
+      "signature": "AIS_ViewController::WalkSpeedAbsolute: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@WalkSpeedRelative#1",
+      "nativeName": "AIS_ViewController::WalkSpeedRelative",
+      "signature": "AIS_ViewController::WalkSpeedRelative: float () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleCameraActions#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@AIS_WalkDelta#",
+      "nativeName": "AIS_ViewController::handleCameraActions",
+      "signature": "AIS_ViewController::handleCameraActions: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const AIS_WalkDelta &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleMoveTo#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleMoveTo",
+      "signature": "AIS_ViewController::handleMoveTo: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleNavigationKeys#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleNavigationKeys",
+      "signature": "AIS_ViewController::handleNavigationKeys: AIS_WalkDelta (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleOrbitRotation#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Pnt#b#",
+      "nativeName": "AIS_ViewController::handleOrbitRotation",
+      "signature": "AIS_ViewController::handleOrbitRotation: void (const occ::handle<V3d_View> &, const gp_Pnt &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handlePanning#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handlePanning",
+      "signature": "AIS_ViewController::handlePanning: void (const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewOrientationKeys#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleViewOrientationKeys",
+      "signature": "AIS_ViewController::handleViewOrientationKeys: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewRedraw#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleViewRedraw",
+      "signature": "AIS_ViewController::handleViewRedraw: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewRotation#&1$@N@opencascade@S@handle>#$@S@V3d_View#d#d#d#b#",
+      "nativeName": "AIS_ViewController::handleViewRotation",
+      "signature": "AIS_ViewController::handleViewRotation: void (const occ::handle<V3d_View> &, double, double, double, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRHighlight#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRHighlight",
+      "signature": "AIS_ViewController::handleXRHighlight: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRInput#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@AIS_WalkDelta#",
+      "nativeName": "AIS_ViewController::handleXRInput",
+      "signature": "AIS_ViewController::handleXRInput: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const AIS_WalkDelta &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRMoveTo#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Trsf#b#",
+      "nativeName": "AIS_ViewController::handleXRMoveTo",
+      "signature": "AIS_ViewController::handleXRMoveTo: int (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const gp_Trsf &, const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRPicking#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRPicking",
+      "signature": "AIS_ViewController::handleXRPicking: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRPresentations#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRPresentations",
+      "signature": "AIS_ViewController::handleXRPresentations: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRTeleport#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRTeleport",
+      "signature": "AIS_ViewController::handleXRTeleport: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRTurnPad#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRTurnPad",
+      "signature": "AIS_ViewController::handleXRTurnPad: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZFocusScroll#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::handleZFocusScroll",
+      "signature": "AIS_ViewController::handleZFocusScroll: void (const occ::handle<V3d_View> &, const Aspect_ScrollDelta &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZRotate#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleZRotate",
+      "signature": "AIS_ViewController::handleZRotate: void (const occ::handle<V3d_View> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZoom#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@Aspect_ScrollDelta#*1$@S@gp_Pnt#",
+      "nativeName": "AIS_ViewController::handleZoom",
+      "signature": "AIS_ViewController::handleZoom: void (const occ::handle<V3d_View> &, const Aspect_ScrollDelta &, const gp_Pnt *)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@hasPanningAnchorPoint#1",
+      "nativeName": "AIS_ViewController::hasPanningAnchorPoint",
+      "signature": "AIS_ViewController::hasPanningAnchorPoint: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@panningAnchorPoint#1",
+      "nativeName": "AIS_ViewController::panningAnchorPoint",
+      "signature": "AIS_ViewController::panningAnchorPoint: const gp_Pnt &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@setAskNextFrame#b#",
+      "nativeName": "AIS_ViewController::setAskNextFrame",
+      "signature": "AIS_ViewController::setAskNextFrame: void (bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@setPanningAnchorPoint#&1$@S@gp_Pnt#",
+      "nativeName": "AIS_ViewController::setPanningAnchorPoint",
+      "signature": "AIS_ViewController::setPanningAnchorPoint: void (const gp_Pnt &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@toAskNextFrame#1",
+      "nativeName": "AIS_ViewController::toAskNextFrame",
+      "signature": "AIS_ViewController::toAskNextFrame: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ActiveVolume#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ActiveVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::ActiveVolume: const occ::handle<SelectMgr_BaseIntersector> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@AllowOverlapDetection#b#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::AllowOverlapDetection",
+      "signature": "SelectMgr_SelectingVolumeManager::AllowOverlapDetection: void (const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@BuildSelectingVolume#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@BuildSelectingVolume#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@BuildSelectingVolume#&1$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume: void (const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@BuildSelectingVolume#&1$@S@gp_Pnt2d#S0_#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::BuildSelectingVolume: void (const gp_Pnt2d &, const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@Camera#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::Camera",
+      "signature": "SelectMgr_SelectingVolumeManager::Camera: const occ::handle<Graphic3d_Camera> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@CopyWithBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::CopyWithBuilder",
+      "signature": "SelectMgr_SelectingVolumeManager::CopyWithBuilder: SelectMgr_SelectingVolumeManager (const occ::handle<SelectMgr_FrustumBuilder> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@DetectedPoint#d#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::DetectedPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::DetectedPoint: gp_Pnt (const double) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@DistToGeometryCenter#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::DistToGeometryCenter",
+      "signature": "SelectMgr_SelectingVolumeManager::DistToGeometryCenter: double (const gp_Pnt &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::DumpJson",
+      "signature": "SelectMgr_SelectingVolumeManager::DumpJson: void (Standard_OStream &, int) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetActiveSelectionType#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetActiveSelectionType",
+      "signature": "SelectMgr_SelectingVolumeManager::GetActiveSelectionType: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetFarPickedPnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetFarPickedPnt",
+      "signature": "SelectMgr_SelectingVolumeManager::GetFarPickedPnt: gp_Pnt () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetMousePosition#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetMousePosition",
+      "signature": "SelectMgr_SelectingVolumeManager::GetMousePosition: gp_Pnt2d () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetNearPickedPnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetNearPickedPnt",
+      "signature": "SelectMgr_SelectingVolumeManager::GetNearPickedPnt: gp_Pnt () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetPlanes#&$@S@NCollection_DynamicArray>#$@S@NCollection_Vec4>#d#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetPlanes",
+      "signature": "SelectMgr_SelectingVolumeManager::GetPlanes: void (NCollection_DynamicArray<NCollection_Vec4<double>> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetVertices#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetVertices",
+      "signature": "SelectMgr_SelectingVolumeManager::GetVertices: const gp_Pnt *() const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@GetViewRayDirection#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::GetViewRayDirection",
+      "signature": "SelectMgr_SelectingVolumeManager::GetViewRayDirection: gp_Dir () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitAxisSelectingVolume#&1$@S@gp_Ax1#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitAxisSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitAxisSelectingVolume: void (const gp_Ax1 &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitBoxSelectingVolume#&1$@S@gp_Pnt2d#S0_#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitBoxSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitBoxSelectingVolume: void (const gp_Pnt2d &, const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitPointSelectingVolume#&1$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitPointSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitPointSelectingVolume: void (const gp_Pnt2d &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitPolylineSelectingVolume#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitPolylineSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitPolylineSelectingVolume: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@InitSelectingVolume#&1$@N@opencascade@S@handle>#$@S@SelectMgr_BaseIntersector#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::InitSelectingVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::InitSelectingVolume: void (const occ::handle<SelectMgr_BaseIntersector> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@IsOverlapAllowed#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::IsOverlapAllowed",
+      "signature": "SelectMgr_SelectingVolumeManager::IsOverlapAllowed: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@IsScalableActiveVolume#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::IsScalableActiveVolume",
+      "signature": "SelectMgr_SelectingVolumeManager::IsScalableActiveVolume: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ObjectClipping#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ObjectClipping",
+      "signature": "SelectMgr_SelectingVolumeManager::ObjectClipping: const occ::handle<Graphic3d_SequenceOfHClipPlane> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsBox",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsBox",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsCircle",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsCircle: bool (const double, const gp_Trsf &, const bool, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsCircle",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsCircle: bool (const double, const gp_Trsf &, const bool, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsCylinder",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsCylinder: bool (const double, const double, const double, const gp_Trsf &, const bool, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsCylinder",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsCylinder: bool (const double, const double, const double, const gp_Trsf &, const bool, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPoint#&1$@S@gp_Pnt#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPoint: bool (const gp_Pnt &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPoint#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPoint",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPoint: bool (const gp_Pnt &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsPolygon#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsPolygon",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsPolygon: bool (const NCollection_Array1<gp_Pnt> &, int, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSegment#&1$@S@gp_Pnt#S0_#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSegment",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSegment: bool (const gp_Pnt &, const gp_Pnt &, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSphere#&1$@S@gp_Pnt#d#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSphere",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSphere: bool (const gp_Pnt &, const double, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsSphere#&1$@S@gp_Pnt#d#*b#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsSphere",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsSphere: bool (const gp_Pnt &, const double, bool *) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@OverlapsTriangle#&1$@S@gp_Pnt#S0_#S0_#I#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::OverlapsTriangle",
+      "signature": "SelectMgr_SelectingVolumeManager::OverlapsTriangle: bool (const gp_Pnt &, const gp_Pnt &, const gp_Pnt &, int, SelectBasics_PickResult &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ScaleAndTransform#I#&1$@S@gp_GTrsf#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ScaleAndTransform",
+      "signature": "SelectMgr_SelectingVolumeManager::ScaleAndTransform: SelectMgr_SelectingVolumeManager (const int, const gp_GTrsf &, const occ::handle<SelectMgr_FrustumBuilder> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SelectMgr_SelectingVolumeManager#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager",
+      "signature": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SelectMgr_SelectingVolumeManager#&1$@S@SelectMgr_SelectingVolumeManager#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager",
+      "signature": "SelectMgr_SelectingVolumeManager::SelectMgr_SelectingVolumeManager: void (const SelectMgr_SelectingVolumeManager &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetCamera",
+      "signature": "SelectMgr_SelectingVolumeManager::SetCamera: void (const occ::handle<Graphic3d_Camera> &)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetPixelTolerance#I#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetPixelTolerance",
+      "signature": "SelectMgr_SelectingVolumeManager::SetPixelTolerance: void (const int)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetViewClipRanges#&1$@S@SelectMgr_ViewClipRange#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetViewClipRanges",
+      "signature": "SelectMgr_SelectingVolumeManager::SetViewClipRanges: void (const SelectMgr_ViewClipRange &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetViewClipping#&1$@N@opencascade@S@handle>#$@S@Graphic3d_SequenceOfHClipPlane#S0_#*1$@S@SelectMgr_SelectingVolumeManager#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetViewClipping",
+      "signature": "SelectMgr_SelectingVolumeManager::SetViewClipping: void (const occ::handle<Graphic3d_SequenceOfHClipPlane> &, const occ::handle<Graphic3d_SequenceOfHClipPlane> &, const SelectMgr_SelectingVolumeManager *)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetViewClipping#&1$@S@SelectMgr_SelectingVolumeManager#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetViewClipping",
+      "signature": "SelectMgr_SelectingVolumeManager::SetViewClipping: void (const SelectMgr_SelectingVolumeManager &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetViewport#d#d#d#d#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetViewport",
+      "signature": "SelectMgr_SelectingVolumeManager::SetViewport: void (const double, const double, const double, const double)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@SetWindowSize#I#I#",
+      "nativeName": "SelectMgr_SelectingVolumeManager::SetWindowSize",
+      "signature": "SelectMgr_SelectingVolumeManager::SetWindowSize: void (const int, const int)",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ViewClipRanges#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ViewClipRanges",
+      "signature": "SelectMgr_SelectingVolumeManager::ViewClipRanges: const SelectMgr_ViewClipRange &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@ViewClipping#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::ViewClipping",
+      "signature": "SelectMgr_SelectingVolumeManager::ViewClipping: const occ::handle<Graphic3d_SequenceOfHClipPlane> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_SelectingVolumeManager@F@WindowSize#&I#S0_#1",
+      "nativeName": "SelectMgr_SelectingVolumeManager::WindowSize",
+      "signature": "SelectMgr_SelectingVolumeManager::WindowSize: void (int &, int &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized private point/box frustum with copied camera, eight copied vertices/planes and bounded primitive probes; creating-thread viewer binding and exact conservative source stamp.",
+      "header": "SelectMgr_SelectingVolumeManager.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ActiveLight#1",
+      "nativeName": "V3d_View::ActiveLight",
+      "signature": "V3d_View::ActiveLight: const occ::handle<V3d_Light> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ActiveLightIterator#1",
+      "nativeName": "V3d_View::ActiveLightIterator",
+      "signature": "V3d_View::ActiveLightIterator: NCollection_List<occ::handle<Graphic3d_CLight>>::Iterator () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@BackgroundColor#1",
+      "nativeName": "V3d_View::BackgroundColor",
+      "signature": "V3d_View::BackgroundColor: Quantity_Color () const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@BackgroundSkydome#1",
+      "nativeName": "V3d_View::BackgroundSkydome",
+      "signature": "V3d_View::BackgroundSkydome: const Aspect_SkydomeBackground &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ConvertToGrid#I#I#&$@S@Graphic3d_Vertex#1",
+      "nativeName": "V3d_View::ConvertToGrid",
+      "signature": "V3d_View::ConvertToGrid: bool (const int, const int, Graphic3d_Vertex &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ConvertToGridEcho#I#I#&$@S@Graphic3d_Vertex#S0_#1",
+      "nativeName": "V3d_View::ConvertToGridEcho",
+      "signature": "V3d_View::ConvertToGridEcho: bool (const int, const int, Graphic3d_Vertex &, Graphic3d_Vertex &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@DiagnosticInformation#&$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#$@E@Graphic3d_DiagnosticInfo#1",
+      "nativeName": "V3d_View::DiagnosticInformation",
+      "signature": "V3d_View::DiagnosticInformation: void (NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, Graphic3d_DiagnosticInfo) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "V3d_View::DumpJson",
+      "signature": "V3d_View::DumpJson: void (Standard_OStream &, int) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@FitAll#&1$@S@Bnd_Box#d#b#",
+      "nativeName": "V3d_View::FitAll",
+      "signature": "V3d_View::FitAll: void (const Bnd_Box &, const double, const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@FitMinMax#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#&1$@S@Bnd_Box#d#d#b#1",
+      "nativeName": "V3d_View::FitMinMax",
+      "signature": "V3d_View::FitMinMax: bool (const occ::handle<Graphic3d_Camera> &, const Bnd_Box &, const double, const double, const bool) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GetGraduatedTrihedron#1",
+      "nativeName": "V3d_View::GetGraduatedTrihedron",
+      "signature": "V3d_View::GetGraduatedTrihedron: const Graphic3d_GraduatedTrihedron &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GradientBackground#1",
+      "nativeName": "V3d_View::GradientBackground",
+      "signature": "V3d_View::GradientBackground: Aspect_GradientBackground () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GradientBackgroundColors#&$@S@Quantity_Color#S0_#1",
+      "nativeName": "V3d_View::GradientBackgroundColors",
+      "signature": "V3d_View::GradientBackgroundColors: void (Quantity_Color &, Quantity_Color &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GraduatedTrihedronDisplay#&1$@S@Graphic3d_GraduatedTrihedron#",
+      "nativeName": "V3d_View::GraduatedTrihedronDisplay",
+      "signature": "V3d_View::GraduatedTrihedronDisplay: void (const Graphic3d_GraduatedTrihedron &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GridDisplay#&1$@S@Aspect_GridParams#",
+      "nativeName": "V3d_View::GridDisplay",
+      "signature": "V3d_View::GridDisplay: void (const Aspect_GridParams &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@GridDisplay#&1$@S@Aspect_GridParams#&1$@S@gp_Ax3#",
+      "nativeName": "V3d_View::GridDisplay",
+      "signature": "V3d_View::GridDisplay: void (const Aspect_GridParams &, const gp_Ax3 &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ParentView#",
+      "nativeName": "V3d_View::ParentView",
+      "signature": "V3d_View::ParentView: V3d_View *()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@PickSubview#&1$@S@NCollection_Vec2>#I#1",
+      "nativeName": "V3d_View::PickSubview",
+      "signature": "V3d_View::PickSubview: occ::handle<V3d_View> (const NCollection_Vec2<int> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@RemoveSubview#*1$@S@V3d_View#",
+      "nativeName": "V3d_View::RemoveSubview",
+      "signature": "V3d_View::RemoveSubview: bool (const V3d_View *)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetBackgroundColor#&1$@S@Quantity_Color#",
+      "nativeName": "V3d_View::SetBackgroundColor",
+      "signature": "V3d_View::SetBackgroundColor: void (const Quantity_Color &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetBackgroundImage#*1C#$@E@Aspect_FillMethod#b#",
+      "nativeName": "V3d_View::SetBackgroundImage",
+      "signature": "V3d_View::SetBackgroundImage: void (const char *const, const Aspect_FillMethod, const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetBackgroundSkydome#&1$@S@Aspect_SkydomeBackground#b#",
+      "nativeName": "V3d_View::SetBackgroundSkydome",
+      "signature": "V3d_View::SetBackgroundSkydome: void (const Aspect_SkydomeBackground &, bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetBgGradientColors#&1$@S@Quantity_Color#S0_#$@E@Aspect_GradientFillMethod#b#",
+      "nativeName": "V3d_View::SetBgGradientColors",
+      "signature": "V3d_View::SetBgGradientColors: void (const Quantity_Color &, const Quantity_Color &, const Aspect_GradientFillMethod, const bool)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetLightOff#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_View::SetLightOff",
+      "signature": "V3d_View::SetLightOff: void (const occ::handle<V3d_Light> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetWindow#&1$@N@opencascade@S@handle>#$@S@Aspect_Window#*v#",
+      "nativeName": "V3d_View::SetWindow",
+      "signature": "V3d_View::SetWindow: void (const occ::handle<Aspect_Window> &, const Aspect_RenderingContext)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetWindow#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@NCollection_Vec2>#d#$@E@Aspect_TypeOfTriedronPosition#S3_#&1$@S@NCollection_Vec2>#I#",
+      "nativeName": "V3d_View::SetWindow",
+      "signature": "V3d_View::SetWindow: void (const occ::handle<V3d_View> &, const NCollection_Vec2<double> &, Aspect_TypeOfTriedronPosition, const NCollection_Vec2<double> &, const NCollection_Vec2<int> &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@StatisticInformation#&$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "V3d_View::StatisticInformation",
+      "signature": "V3d_View::StatisticInformation: void (NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Initialized call-private controller or copied existing-view diagnostics; no actors, callbacks or input buffers escape.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@StatisticInformation#1",
+      "nativeName": "V3d_View::StatisticInformation",
+      "signature": "V3d_View::StatisticInformation: TCollection_AsciiString () const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Subviews#1",
+      "nativeName": "V3d_View::Subviews",
+      "signature": "V3d_View::Subviews: const NCollection_Sequence<occ::handle<V3d_View>> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ToPixMap#&$@S@Image_PixMap#I#I#&1$@E@Graphic3d_BufferType#b#I#I#$@E@V3d_StereoDumpOptions#*1C#",
+      "nativeName": "V3d_View::ToPixMap",
+      "signature": "V3d_View::ToPixMap: bool (Image_PixMap &, const int, const int, const Graphic3d_BufferType &, const bool, const Graphic3d_ZLayerId, const int, const V3d_StereoDumpOptions, const char *const)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@TriedronDisplay#$@E@Aspect_TypeOfTriedronPosition#&1$@S@Quantity_Color#d#$@E@V3d_TypeOfVisualization#",
+      "nativeName": "V3d_View::TriedronDisplay",
+      "signature": "V3d_View::TriedronDisplay: void (const Aspect_TypeOfTriedronPosition, const Quantity_Color &, const double, const V3d_TypeOfVisualization)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@V3d_View#&1$@S@V3d_View#",
+      "nativeName": "V3d_View::V3d_View",
+      "signature": "V3d_View::V3d_View: void (const V3d_View &)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ZBufferTriedronSetup#&1$@S@Quantity_Color#S0_#S0_#d#d#I#",
+      "nativeName": "V3d_View::ZBufferTriedronSetup",
+      "signature": "V3d_View::ZBufferTriedronSetup: void (const Quantity_Color &, const Quantity_Color &, const Quantity_Color &, const double, const double, const int)",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "V3d_View.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@get_type_descriptor#S",
+      "nativeName": "V3d_View::get_type_descriptor",
+      "signature": "V3d_View::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@get_type_name#S",
+      "nativeName": "V3d_View::get_type_name",
+      "signature": "V3d_View::get_type_name: const char *()",
+      "guard": "AUParentSelection",
+      "reason": "Custom intersectors, animation/touch/callback buffers, external mutable cameras/windows, borrowed resources, unproved transform/clipping combinations, redundant builders or repeated existing rendering features remain deferred.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@ActivatedModes#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&$@S@NCollection_List>#I#1",
+      "nativeName": "AIS_InteractiveContext::ActivatedModes",
+      "signature": "AIS_InteractiveContext::ActivatedModes: void (const occ::handle<AIS_InteractiveObject> &, NCollection_List<int> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@MainSelector#1",
+      "nativeName": "AIS_InteractiveContext::MainSelector",
+      "signature": "AIS_InteractiveContext::MainSelector: const occ::handle<StdSelect_ViewerSelector3d> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Blocked"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@IsDisplayed#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1",
+      "nativeName": "AIS_InteractiveContext::IsDisplayed",
+      "signature": "AIS_InteractiveContext::IsDisplayed: bool (const occ::handle<AIS_InteractiveObject> &) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@IsDisplayed#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#1",
+      "nativeName": "AIS_InteractiveContext::IsDisplayed",
+      "signature": "AIS_InteractiveContext::IsDisplayed: bool (const occ::handle<AIS_InteractiveObject> &, const int) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@PixelTolerance#1",
+      "nativeName": "AIS_InteractiveContext::PixelTolerance",
+      "signature": "AIS_InteractiveContext::PixelTolerance: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@UpdateCurrentViewer#",
+      "nativeName": "AIS_InteractiveContext::UpdateCurrentViewer",
+      "signature": "AIS_InteractiveContext::UpdateCurrentViewer: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@AIS_Shape@F@Shape#1",
+      "nativeName": "AIS_Shape::Shape",
+      "signature": "AIS_Shape::Shape: const TopoDS_Shape &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Graphic3d_Camera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#",
+      "nativeName": "Graphic3d_Camera::Graphic3d_Camera",
+      "signature": "Graphic3d_Camera::Graphic3d_Camera: void (const occ::handle<Graphic3d_Camera> &)",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@IsStereo#1",
+      "nativeName": "Graphic3d_Camera::IsStereo",
+      "signature": "Graphic3d_Camera::IsStereo: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@ProjectionState#1",
+      "nativeName": "Graphic3d_Camera::ProjectionState",
+      "signature": "Graphic3d_Camera::ProjectionState: size_t () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@WorldViewState#1",
+      "nativeName": "Graphic3d_Camera::WorldViewState",
+      "signature": "Graphic3d_Camera::WorldViewState: size_t () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@Depth#1",
+      "nativeName": "SelectBasics_PickResult::Depth",
+      "signature": "SelectBasics_PickResult::Depth: double () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@HasPickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::HasPickedPoint",
+      "signature": "SelectBasics_PickResult::HasPickedPoint: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@IsValid#1",
+      "nativeName": "SelectBasics_PickResult::IsValid",
+      "signature": "SelectBasics_PickResult::IsValid: bool () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@PickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::PickedPoint",
+      "signature": "SelectBasics_PickResult::PickedPoint: const gp_Pnt &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#",
+      "nativeName": "SelectBasics_PickResult::SelectBasics_PickResult",
+      "signature": "SelectBasics_PickResult::SelectBasics_PickResult: void ()",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_EntityOwner@F@Selectable#1",
+      "nativeName": "SelectMgr_EntityOwner::Selectable",
+      "signature": "SelectMgr_EntityOwner::Selectable: occ::handle<SelectMgr_SelectableObject> () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewerSelector@F@NbPicked#1",
+      "nativeName": "SelectMgr_ViewerSelector::NbPicked",
+      "signature": "SelectMgr_ViewerSelector::NbPicked: int () const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewerSelector@F@Picked#I#1",
+      "nativeName": "SelectMgr_ViewerSelector::Picked",
+      "signature": "SelectMgr_ViewerSelector::Picked: occ::handle<SelectMgr_EntityOwner> (const int) const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Camera#1",
+      "nativeName": "V3d_View::Camera",
+      "signature": "V3d_View::Camera: const occ::handle<Graphic3d_Camera> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Window#1",
+      "nativeName": "V3d_View::Window",
+      "signature": "V3d_View::Window: const occ::handle<Aspect_Window> &() const",
+      "guard": "AUParentSelection",
+      "reason": "Private source-stamp/selection/copy prerequisite; already bound declarations count only as reuse.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

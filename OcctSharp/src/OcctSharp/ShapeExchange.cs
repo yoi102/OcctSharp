@@ -55,7 +55,8 @@ public static class ShapeExchange
     {
         string fullPath = ResolveInputPath(filePath);
         OcctRuntime.EnsureCompatible();
-        NativeError.ThrowIfFailed(NativeMethods.ReadStl(fullPath, out nint nativeShape), "shape_read_stl");
+        using ExchangePathStage stage = ExchangePathStage.ForInput(fullPath);
+        NativeError.ThrowIfFailed(NativeMethods.ReadStl(stage.NativePath, out nint nativeShape), "shape_read_stl");
         return ShapeFactory.FromNativeHandle(nativeShape, "shape_read_stl");
     }
 
@@ -92,14 +93,16 @@ public static class ShapeExchange
         ArgumentNullException.ThrowIfNull(shape);
         string fullPath = PrepareOutputPath(filePath);
         StlWriteOptions effectiveOptions = options ?? StlWriteOptions.Default;
+        using ExchangePathStage stage = ExchangePathStage.ForOutput(fullPath);
         NativeError.ThrowIfFailed(
             NativeMethods.WriteStl(
                 shape.Handle,
-                fullPath,
+                stage.NativePath,
                 effectiveOptions.LinearDeflection,
                 effectiveOptions.AngularDeflection,
                 effectiveOptions.Binary ? 1 : 0),
             "shape_write_stl");
+        stage.Complete();
         return fullPath;
     }
 

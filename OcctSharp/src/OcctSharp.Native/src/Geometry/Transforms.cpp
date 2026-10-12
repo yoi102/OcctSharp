@@ -10,6 +10,7 @@
 #include <TopoDS_Shape.hxx>
 #include <cmath>
 #include <gp_Ax1.hxx>
+#include <gp_Ax2.hxx>
 #include <gp_Dir.hxx>
 #include <gp_Mat.hxx>
 #include <gp_Pnt.hxx>
@@ -296,6 +297,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_trsf_create_translation_rotation(
       rotation_axis_y,
       rotation_axis_z,
       rotation_angle_radians));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_trsf_create_plane_mirror(
+  const double origin_x, const double origin_y, const double origin_z,
+  const double normal_x, const double normal_y, const double normal_z,
+  OcctSharp_TrsfHandle** out_transform)
+{
+  if (out_transform == nullptr)
+  {
+    SetLastError("The output transform pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_transform = nullptr;
+  return Guard([&]
+  {
+    ValidateFinite(origin_x, "Mirror origin X must be finite.");
+    ValidateFinite(origin_y, "Mirror origin Y must be finite.");
+    ValidateFinite(origin_z, "Mirror origin Z must be finite.");
+    ValidateFinite(normal_x, "Mirror normal X must be finite.");
+    ValidateFinite(normal_y, "Mirror normal Y must be finite.");
+    ValidateFinite(normal_z, "Mirror normal Z must be finite.");
+    const double squared = normal_x*normal_x + normal_y*normal_y + normal_z*normal_z;
+    if (!std::isfinite(squared) || squared <= 0)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Mirror normal must be finite and nonzero.");
+    gp_Trsf mirror;
+    mirror.SetMirror(gp_Ax2(gp_Pnt(origin_x,origin_y,origin_z),gp_Dir(normal_x,normal_y,normal_z)));
+    *out_transform = AllocateTransform(mirror);
   });
 }
 

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const TDF_Label &, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFiles",
+      "signature": "STEPCAFControl_Writer::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::Init",
+      "signature": "STEPCAFControl_Writer::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Writer#1",
+      "nativeName": "STEPCAFControl_Writer::Writer",
+      "signature": "STEPCAFControl_Writer::Writer: const STEPControl_Writer &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@DESTEP_Parameters#",
+      "nativeName": "DESTEP_Parameters::DESTEP_Parameters",
+      "signature": "DESTEP_Parameters::DESTEP_Parameters: void ()",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPControl_Writer::GetShapeFixParameters",
+      "signature": "STEPControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPControl_Writer::SetShapeFixParameters",
+      "signature": "STEPControl_Writer::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Location@F@Get#1",
+      "nativeName": "XCAFDoc_Location::Get",
+      "signature": "XCAFDoc_Location::Get: const TopLoc_Location &() const",
+      "guard": "BPLocalStepExport",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    }
+  ],
+  "supportingOperations": []
+}

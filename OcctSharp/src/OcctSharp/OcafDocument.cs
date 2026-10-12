@@ -14,6 +14,20 @@ public sealed class OcafDocument : IDisposable
 
     internal OcafDocumentHandle Handle { get; }
 
+    private DocumentProjections.DocumentProjectionContext? projectionContext;
+
+    /// <summary>Gets a borrowing view of copied generic label data, using this document's existing transactions and history.</summary>
+    public DocumentProjections.DocumentProjectionContext Projections
+    {
+        get
+        {
+            ThrowIfDisposed();
+            if (projectionContext is null || projectionContext.IsDisposed)
+                projectionContext = DocumentProjections.DocumentProjectionContext.BindLegacy(Handle);
+            return projectionContext;
+        }
+    }
+
     /// <summary>Gets the document's main label. The label is parent-bound to this document.</summary>
     public OcafLabel RootLabel { get; }
 

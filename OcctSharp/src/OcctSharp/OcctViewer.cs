@@ -3,7 +3,7 @@ using OcctSharp.Interop;
 namespace OcctSharp;
 
 /// <summary>Owns an OCCT AIS/V3d viewer bound to an existing Windows HWND.</summary>
-public sealed class OcctViewer : IDisposable
+public sealed partial class OcctViewer : IDisposable
 {
     private readonly int _ownerThreadId;
     private readonly Dictionary<long, ViewerPresentation> _presentations = [];
@@ -19,6 +19,7 @@ public sealed class OcctViewer : IDisposable
         _ownerThreadId = Environment.CurrentManagedThreadId;
         Input = new ViewerInputController(this);
         Rendering = new ViewerRendering(this);
+        SelectionQueries = new SelectionWorkspaces.ViewerSelectionWorkspace(this);
     }
 
     internal ViewerHandle Handle { get; }
@@ -28,6 +29,17 @@ public sealed class OcctViewer : IDisposable
 
     /// <summary>Gets the parent/thread-bound light, appearance, render-resource and copied-frame controller.</summary>
     public ViewerRendering Rendering { get; }
+
+    /// <summary>Gets parent/thread-bound copied selecting volumes and exact world scene queries.</summary>
+    public SelectionWorkspaces.ViewerSelectionWorkspace SelectionQueries { get; }
+
+    internal ViewerPresentation ResolveSelectionPresentation(long id)
+    {
+        EnsureThread();
+        if (!_presentations.TryGetValue(id, out ViewerPresentation? presentation) || presentation.IsRemoved)
+            throw new InvalidOperationException("Scene pick refers to a removed or unregistered presentation.");
+        return presentation;
+    }
 
     /// <summary>Creates a viewer for a non-zero HWND on the calling UI thread.</summary>
     public static OcctViewer Create(nint windowHandle)
@@ -179,6 +191,118 @@ public sealed class OcctViewer : IDisposable
         if (!Enum.IsDefined(projection)) throw new ArgumentOutOfRangeException(nameof(projection));
         EnsureThread();
         NativeError.ThrowIfFailed(NativeMethods.SetViewerProjection(Handle, (int)projection), "viewer_set_projection");
+    }
+
+    /// <summary>Computes a standard-view orientation around the current target without changing the displayed view.</summary>
+    public ViewerCameraState GetProjectionTargetCamera(ViewerProjection projection)
+    {
+        if (!Enum.IsDefined(projection)) throw new ArgumentOutOfRangeException(nameof(projection));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerProjectionTargetCamera(Handle, (int)projection, out ViewerCameraRaw raw),
+            "viewer_get_projection_target_camera");
+        return new(ToPoint(raw.Eye), ToPoint(raw.Target), ToXyz(raw.Up), ToXyz(raw.Projection));
+    }
+
+    /// <summary>Shows or hides the viewer-owned, upper-right OCCT view cube.</summary>
+    public void SetViewCubeVisible(bool visible)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerViewCubeVisible(Handle, visible ? 1 : 0), "viewer_set_view_cube_visible");
+    }
+
+    /// <summary>Sets localized face labels and the idle visual style. Labels are copied by the viewer.</summary>
+    public void SetViewCubeAppearance(ViewerCubeAppearance appearance)
+    {
+        ArgumentNullException.ThrowIfNull(appearance);
+        foreach (string value in new[] { appearance.Front, appearance.Back, appearance.Left,
+                     appearance.Right, appearance.Top, appearance.Bottom, appearance.FontFamily })
+            if (string.IsNullOrWhiteSpace(value) || System.Text.Encoding.UTF8.GetByteCount(value) > 64)
+                throw new ArgumentException("View cube text must contain 1..64 UTF-8 bytes.", nameof(appearance));
+        if (!double.IsFinite(appearance.FontHeight) || appearance.FontHeight is < 8 or > 30 ||
+            !double.IsFinite(appearance.IdleTransparency) || appearance.IdleTransparency is < 0 or > 0.9)
+            throw new ArgumentOutOfRangeException(nameof(appearance));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerViewCubeAppearance(Handle, appearance.Front,
+            appearance.Back, appearance.Left, appearance.Right, appearance.Top, appearance.Bottom,
+            appearance.FontFamily, appearance.FontHeight, appearance.IdleTransparency),
+            "viewer_set_view_cube_appearance");
+    }
+
+    /// <summary>Shows the cube at full opacity while the pointer is over a cube control.</summary>
+    public void SetViewCubeHovered(bool hovered)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerViewCubeHovered(Handle, hovered ? 1 : 0),
+            "viewer_set_view_cube_hovered");
+    }
+
+    /// <summary>Returns the face, edge, or corner orientation under a client pixel, if any.</summary>
+    public ViewerCubeOrientation? HitViewCube(int x, int y)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.HitViewerViewCube(Handle, x, y, out int orientation), "viewer_hit_view_cube");
+        return orientation < 0 ? null : (ViewerCubeOrientation)orientation;
+    }
+
+    /// <summary>Hit-tests a cube direction or one of the two curved roll arrows.</summary>
+    public ViewerCubeHit? HitViewCubeControl(int x, int y)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.HitViewerViewCubeControl(Handle, x, y, out int action), "viewer_hit_view_cube_control");
+        return action switch
+        {
+            >= 0 and <= 25 => new((ViewerCubeOrientation)action, ViewerCubeTurn.None),
+            26 => new(null, ViewerCubeTurn.Left),
+            27 => new(null, ViewerCubeTurn.Right),
+            _ => null
+        };
+    }
+
+    /// <summary>Computes a camera roll without changing the displayed view.</summary>
+    public ViewerCameraState GetRolledCamera(double angleDegrees)
+    {
+        if (!double.IsFinite(angleDegrees) || Math.Abs(angleDegrees) > 360)
+            throw new ArgumentOutOfRangeException(nameof(angleDegrees));
+        ViewerCameraState camera = GetCamera();
+        double bx = camera.Eye.X - camera.Target.X;
+        double by = camera.Eye.Y - camera.Target.Y;
+        double bz = camera.Eye.Z - camera.Target.Z;
+        double length = Math.Sqrt(bx * bx + by * by + bz * bz);
+        bx /= length; by /= length; bz /= length;
+        double radians = angleDegrees * Math.PI / 180.0;
+        double cosine = Math.Cos(radians), sine = Math.Sin(radians);
+        GpXyz up = camera.Up;
+        double dot = bx * up.X + by * up.Y + bz * up.Z;
+        GpXyz rotated = new(
+            up.X * cosine + (by * up.Z - bz * up.Y) * sine + bx * dot * (1 - cosine),
+            up.Y * cosine + (bz * up.X - bx * up.Z) * sine + by * dot * (1 - cosine),
+            up.Z * cosine + (bx * up.Y - by * up.X) * sine + bz * dot * (1 - cosine));
+        return camera with { Up = rotated };
+    }
+
+    /// <summary>Rolls the camera around its current view axis without moving eye or target.</summary>
+    public void RollCamera(double angleDegrees)
+    {
+        SetCamera(GetRolledCamera(angleDegrees));
+        Redraw();
+    }
+
+    /// <summary>Sets one of the view cube's 26 OCCT camera directions.</summary>
+    public void SetCubeOrientation(ViewerCubeOrientation orientation)
+    {
+        if (!Enum.IsDefined(orientation)) throw new ArgumentOutOfRangeException(nameof(orientation));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerCubeOrientation(Handle, (int)orientation), "viewer_set_cube_orientation");
+    }
+
+    /// <summary>Computes a cube direction around the current target without changing the displayed view.</summary>
+    public ViewerCameraState GetCubeTargetCamera(ViewerCubeOrientation orientation)
+    {
+        if (!Enum.IsDefined(orientation)) throw new ArgumentOutOfRangeException(nameof(orientation));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerCubeTargetCamera(Handle, (int)orientation, out ViewerCameraRaw raw),
+            "viewer_get_cube_target_camera");
+        return new(ToPoint(raw.Eye), ToPoint(raw.Target), ToXyz(raw.Up), ToXyz(raw.Projection));
     }
 
     /// <summary>Applies a positive zoom factor relative to the current interaction start.</summary>
@@ -556,6 +680,18 @@ public sealed class OcctViewer : IDisposable
             "viewer_set_background_color");
     }
 
+    /// <summary>Sets a vertical background gradient. Colors use linear RGB; the first color is at the top.</summary>
+    public void SetBackgroundGradient(ViewerColor top, ViewerColor bottom)
+    {
+        top.Validate();
+        bottom.Validate();
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerBackgroundGradient(Handle,
+                top.Red, top.Green, top.Blue, bottom.Red, bottom.Green, bottom.Blue),
+            "viewer_set_background_gradient");
+    }
+
     /// <summary>Creates an enabled parent-bound clipping plane.</summary>
     public ViewerClipPlane CreateClipPlane(ViewerPlaneEquation equation)
     {
@@ -714,6 +850,14 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(
             NativeMethods.SetViewerPresentationDisplayMode(Handle, presentation.Id, (int)displayMode),
             "viewer_set_presentation_display_mode");
+    }
+
+    internal void SetOverlay(ViewerPresentation presentation, bool enabled)
+    {
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationOverlay(Handle, presentation.Id, enabled ? 1 : 0),
+            "viewer_set_presentation_overlay");
     }
 
     internal void SetSelectionKind(ViewerPresentation presentation, ShapeKind? kind)
@@ -1007,10 +1151,12 @@ public sealed class OcctViewer : IDisposable
         if (IsDisposed) return;
         EnsureThread();
         foreach (ViewerPresentation presentation in _presentations.Values) presentation.MarkRemoved();
+        foreach(ViewerSource source in _sources.Values) source.MarkRemoved();
         foreach (ViewerClipPlane plane in _clipPlanes.Values) plane.MarkRemoved();
         foreach (ViewerDimension dimension in _dimensions.Values) dimension.MarkRemoved();
         foreach (ViewerManipulator manipulator in _manipulators.Values) manipulator.MarkDetached();
         _presentations.Clear();
+        _sources.Clear();
         _clipPlanes.Clear();
         _dimensions.Clear();
         _manipulators.Clear();

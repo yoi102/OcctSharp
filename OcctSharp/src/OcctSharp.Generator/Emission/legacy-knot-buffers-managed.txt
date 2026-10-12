@@ -1,0 +1,38 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+/// <summary>Copied knot buffers for OCCT B-spline utilities.</summary>
+public static class BSplineKnotBuffers
+{
+    /// <summary>Returns the complete flat knot sequence for a Bezier curve of the given degree.</summary>
+    public static unsafe double[] FlatBezierKnots(int degree)
+    {
+        if (degree < 1 || degree > GeometryGeneratedNativeMethods.BSplCLibStaticMaxDegree0())
+            throw new ArgumentOutOfRangeException(nameof(degree));
+
+        // Both sides check the OCCT degree bound before allocating or reading its static array.
+        int count = checked(2 * (degree + 1));
+        double[] knots = new double[count];
+        fixed (double* buffer = knots)
+        {
+            NativeError.ThrowIfFailed(BSplineKnotInterop.FlatBezierKnots(degree, buffer, count, out int written),
+                "bsplclib_flat_bezier_knots");
+            if (written != count)
+                throw new OcctException("NativeContract", "Native flat Bezier knot count did not match the requested degree.");
+        }
+        return knots;
+    }
+}
+
+internal static partial class BSplineKnotInterop
+{
+    static BSplineKnotInterop() => NativeLibraryResolver.EnsureRegistered(typeof(BSplineKnotInterop).Assembly);
+
+    [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_bsplclib_flat_bezier_knots")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus FlatBezierKnots(int degree, double* knots, int capacity, out int written);
+}

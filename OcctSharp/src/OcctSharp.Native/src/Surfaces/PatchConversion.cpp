@@ -1,6 +1,6 @@
 #include "Modeling/GuidedAuthoring.hxx"
 #include <BRepBuilderAPI_MakeEdge.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepTools.hxx>
 #include <Geom_BSplineCurve.hxx>
 #include <Geom_BSplineSurface.hxx>
@@ -12,8 +12,7 @@
 #include <GeomConvert_CompCurveToBSplineCurve.hxx>
 #include <GeomConvert_BSplineCurveToBezierCurve.hxx>
 #include <GeomConvert_BSplineSurfaceToBezierSurface.hxx>
-#include <GeomFill_BSplineCurves.hxx>
-#include <GeomFill_BezierCurves.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.FittingAdapters.Generated.hxx"
 #include <NCollection_Array1.hxx>
 #include <TopoDS_Edge.hxx>
 #include <TopoDS_Face.hxx>
@@ -50,7 +49,7 @@ TopoDS_Shape Edge(const opencascade::handle<Geom_Curve>& curve) {
   BRepBuilderAPI_MakeEdge builder(curve); Require(builder.IsDone(), "Converted curve could not become an edge."); return builder.Shape();
 }
 TopoDS_Shape Face(const opencascade::handle<Geom_Surface>& surface, double tolerance, int orientation) {
-  BRepBuilderAPI_MakeFace builder(surface, tolerance); Require(builder.IsDone(), "Converted surface could not become a face.");
+  OcctSharpGenerated::FaceBuilder builder(surface, tolerance); Require(builder.IsDone(), "Converted surface could not become a face.");
   auto shape = builder.Shape(); shape.Orientation(static_cast<TopAbs_Orientation>(orientation)); return shape;
 }
 }
@@ -82,13 +81,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_patch_convert(const OcctSharp_ShapeHan
           GeomConvert_BSplineCurveToBezierCurve converter(curve); Require(converter.NbArcs() == 1, "Bezier patch boundaries must each be one polynomial/rational span.");
           bezier.push_back(converter.Arc(1));
         }
-        GeomFill_BezierCurves fill;
+        OcctSharpGenerated::BezierPatchFitter fill;
         if (inputCount == 2) fill.Init(bezier[0], bezier[1], style);
         else if (inputCount == 3) fill.Init(bezier[0], bezier[1], bezier[2], style);
         else fill.Init(bezier[0], bezier[1], bezier[2], bezier[3], style);
         patch = fill.Surface();
       } else {
-        GeomFill_BSplineCurves fill;
+        OcctSharpGenerated::BSplinePatchFitter fill;
         if (inputCount == 2) fill.Init(curves[0], curves[1], style);
         else if (inputCount == 3) fill.Init(curves[0], curves[1], curves[2], style);
         else fill.Init(curves[0], curves[1], curves[2], curves[3], style);

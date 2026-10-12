@@ -1,0 +1,96 @@
+#include "OcctSharp.Modeling.RepairSupport.Generated.hxx"
+#include <ShapeAnalysis_Wire.hxx>
+#include <ShapeAnalysis_WireOrder.hxx>
+#include <ShapeAnalysis_Shell.hxx>
+#include <ShapeAnalysis_FreeBounds.hxx>
+using namespace OcctSharpRepair;
+namespace {
+struct WireDiagnostic { std::vector<int32_t> order,status;TopoDS_Face face;bool changed=false,ready=false; };
+struct ShellDiagnostic { std::vector<TopoDS_Shape> loaded;TopoDS_Shape bad,free;bool flags[4]={}; };
+void WireStatuses(ShapeAnalysis_Wire& analyzer,WireDiagnostic& output) {
+ for(int s=0;s<=18;++s){auto status=static_cast<ShapeExtend_Status>(s);
+  output.status.push_back(analyzer.StatusOrder(status));output.status.push_back(analyzer.StatusConnected(status));
+  output.status.push_back(analyzer.StatusSmall(status));output.status.push_back(analyzer.StatusEdgeCurves(status));
+  output.status.push_back(analyzer.StatusDegenerated(status));output.status.push_back(analyzer.StatusSelfIntersection(status));
+  output.status.push_back(analyzer.StatusLacking(status));output.status.push_back(analyzer.StatusClosed(status));}
+}
+}
+void OCCTSHARP_CALL occtsharp_repair_diagnostic_release(void* token,int32_t kind) {
+ if(kind==0)OcctSharpOwned::Release(token,typeid(WireDiagnostic));if(kind==1)OcctSharpOwned::Release(token,typeid(ShellDiagnostic));
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wire_analyze(const void* token,const OcctSharp_ShapeHandle* face,double precision,int32_t closed,int32_t mode3d,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckPrecision(precision);Flag(closed);Flag(mode3d);auto data=OcctSharpOwned::Lease<const WireData>(token);Require(data->value->NbEdges()>0,"Empty diagnostic wire.");
+  auto f=TopoDS::Face(Typed(face,TopAbs_FACE));auto copy=CopyWireData(data->value);
+  ShapeAnalysis_Wire analyzer(copy,f,precision);auto report=std::make_shared<WireDiagnostic>();
+  report->face=analyzer.Face();report->ready=analyzer.IsReady();
+  ShapeAnalysis_WireOrder order;report->changed=analyzer.CheckOrder(order,closed!=0,mode3d!=0,false);
+  Require(order.IsDone(),"Wire order analysis did not complete.");
+  for(int i=1;i<=copy->NbEdges();++i)report->order.push_back(order.Ordered(i));
+  analyzer.Perform();WireStatuses(analyzer,*report);Publication<WireDiagnostic> publication(report);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wire_diagnostic_info(const void* token,int32_t selector,int32_t index,int32_t* value) {
+ if(!value)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*value=0;
+ return Guard([&]{auto report=OcctSharpOwned::Lease<const WireDiagnostic>(token);
+  if(selector==0)*value=static_cast<int>(report->order.size());else if(selector==1)*value=report->changed?1:0;
+  else if(selector==2)*value=report->ready?1:0;else if(selector==3){Index(index,static_cast<int>(report->order.size()));*value=report->order[index-1];}
+  else {Require(selector==4 && index>=0 && index<static_cast<int>(report->status.size()),"Invalid wire status index.");*value=report->status[index];}});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wire_diagnostic_face(const void* token,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto report=OcctSharpOwned::Lease<const WireDiagnostic>(token);*result=OcctSharp_Internal_AllocateShape(report->face);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wire_connect(const void* token,const OcctSharp_ShapeHandle* face,const OcctSharp_ShapeHandle* other,double precision,double* distances,int32_t capacity,int32_t* connected) {
+ if(!connected)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*connected=0;if(!distances || capacity!=4)return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+ return Guard([&]{CheckPrecision(precision);auto data=OcctSharpOwned::Lease<const WireData>(token);Require(data->value->NbEdges()>0,"Empty wire.");
+  auto f=TopoDS::Face(Typed(face,TopAbs_FACE));auto shape=ShapeValue(other);Require(shape.ShapeType()==TopAbs_EDGE || shape.ShapeType()==TopAbs_WIRE,"Connection needs edge or wire.");
+  ShapeAnalysis_Wire analyzer;analyzer.Init(CopyWireData(data->value),f,precision);double values[4]={};
+  bool flag=analyzer.CheckShapeConnect(values[0],values[1],values[2],values[3],shape,precision);std::copy(values,values+4,distances);*connected=flag?1:0;});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wire_loops(const void* token,const OcctSharp_ShapeHandle* face,double precision,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckPrecision(precision);auto data=OcctSharpOwned::Lease<const WireData>(token);Require(data->value->NbEdges()>0,"Empty wire.");
+  auto f=TopoDS::Face(Typed(face,TopAbs_FACE));ShapeAnalysis_Wire analyzer(CopyWireData(data->value),f,precision);
+  auto workspace=std::make_shared<Workspace>();workspace->kind=2;NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> vertices;
+  workspace->changed=analyzer.CheckLoop(vertices,workspace->edgeFaces,workspace->small,workspace->multiple);
+  for(int i=1;i<=vertices.Extent();++i)workspace->shapes.push_back(vertices(i));MapWorkspace(*workspace);
+  DetachWorkspace(*workspace);Publication<Workspace> publication(workspace);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_shell_analyze(const OcctSharp_ShapeHandle* source,int32_t checkinternal,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Flag(checkinternal);auto shape=ShapeValue(source);ShapeAnalysis_Shell analyzer;analyzer.Clear();analyzer.LoadShells(shape);
+  analyzer.CheckOrientedShells(shape,true,checkinternal!=0);auto report=std::make_shared<ShellDiagnostic>();
+  Require(analyzer.NbLoaded()<=MaxItems,"Too many shells.");for(int i=1;i<=analyzer.NbLoaded();++i)report->loaded.push_back(analyzer.Loaded(i));
+  report->bad=analyzer.BadEdges();report->free=analyzer.FreeEdges();report->flags[0]=analyzer.HasBadEdges();report->flags[1]=analyzer.HasFreeEdges();report->flags[2]=analyzer.HasConnectedEdges();report->flags[3]=analyzer.IsLoaded(shape);
+  Publication<ShellDiagnostic> publication(report);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_shell_diagnostic_info(const void* token,int32_t selector,int32_t* result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=0;
+ return Guard([&]{auto report=OcctSharpOwned::Lease<const ShellDiagnostic>(token);Require(selector>=0 && selector<=4,"Invalid shell diagnostic selector.");*result=selector==0?static_cast<int>(report->loaded.size()):report->flags[selector-1]?1:0;});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_shell_diagnostic_shapes(const void* token,int32_t selector,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto report=OcctSharpOwned::Lease<const ShellDiagnostic>(token);Require(selector>=0 && selector<=2,"Invalid shell set selector.");
+  if(selector==0)*result=PublishValues(report->loaded);else{std::vector<TopoDS_Shape> edges;for(TopExp_Explorer i(selector==1?report->bad:report->free,TopAbs_EDGE);i.More();i.Next())edges.push_back(i.Current());*result=PublishValues(std::move(edges));}});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_freebounds(const OcctSharp_ShapeHandle* source,const void* input,int32_t operation,double tolerance,int32_t shared,int32_t splitclosed,int32_t splitopen,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckPrecision(tolerance);Flag(shared);Flag(splitclosed);Flag(splitopen);Require(operation>=0 && operation<=4,"Unknown free-bound operation.");
+  auto workspace=std::make_shared<Workspace>();workspace->kind=3;
+  if(operation==0){ShapeAnalysis_FreeBounds analyzer(DeepCopy(ShapeValue(source)),tolerance,splitclosed!=0,splitopen!=0);workspace->shapes={analyzer.GetClosedWires(),analyzer.GetOpenWires()};}
+  else{auto set=OcctSharpOwned::Lease<const ShapeSet>(input);Require(set->values.size()<=MaxItems,"Too many free-bound inputs.");
+   for(const auto& shape:set->values)Require(shape.ShapeType()==(operation==1?TopAbs_EDGE:TopAbs_WIRE),"Free-bound input type mismatch.");
+   BRep_Builder builder;TopoDS_Compound all;builder.MakeCompound(all);for(const auto& s:set->values)builder.Add(all,s);
+   BRepBuilderAPI_Copy copier(all,true,false);Require(copier.IsDone(),"Free-bound input copy failed.");
+   ShapeSequence sequence=new NCollection_HSequence<TopoDS_Shape>();for(const auto& s:set->values)sequence->Append(copier.ModifiedShape(s));ShapeSequence closed,open;
+   if(operation==1){auto wires=ShapeAnalysis_FreeBounds::ConnectEdgesToWires(sequence,tolerance,shared!=0);if(!wires.IsNull())for(int i=1;i<=wires->Length();++i)workspace->shapes.push_back(wires->Value(i));}
+   else if(operation==2){NCollection_DataMap<TopoDS_Shape,TopoDS_Shape,TopTools_ShapeMapHasher> vertices;
+    auto wires=ShapeAnalysis_FreeBounds::ConnectWiresToWires(sequence,tolerance,shared!=0,vertices);
+    if(!wires.IsNull())for(int i=1;i<=wires->Length();++i)workspace->shapes.push_back(wires->Value(i));
+    for(decltype(vertices)::Iterator it(vertices);it.More();it.Next()){NCollection_List<TopoDS_Shape> value;value.Append(it.Value());workspace->edgeFaces.Bind(it.Key(),value);}}
+   else if(operation==3){TopoDS_Compound c,o;ShapeAnalysis_FreeBounds::DispatchWires(sequence,c,o);workspace->shapes={c,o};}
+   else{ShapeAnalysis_FreeBounds::SplitWires(sequence,tolerance,shared!=0,closed,open);
+    if(!closed.IsNull())for(int i=1;i<=closed->Length();++i)workspace->small.Add(closed->Value(i));
+    if(!open.IsNull())for(int i=1;i<=open->Length();++i)workspace->multiple.Add(open->Value(i));}}
+  Require(workspace->shapes.size()<=MaxItems,"Too many free-bound results.");MapWorkspace(*workspace);DetachWorkspace(*workspace);Publication<Workspace> publication(workspace);*result=publication.Commit();});
+}

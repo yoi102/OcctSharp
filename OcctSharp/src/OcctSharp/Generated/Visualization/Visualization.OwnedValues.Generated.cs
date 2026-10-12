@@ -1118,3 +1118,194 @@ public sealed partial class Graphic3dZLayerSettings : IDisposable {
     return managedResult;
   }
 }
+/// <summary>Owns a stable-address SelectBasics_PickResult. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class SelectBasicsPickResult : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private SelectBasicsPickResult(OwnedHandle handle) => _handle = handle;
+  static SelectBasicsPickResult() => NativeLibraryResolver.EnsureRegistered(typeof(SelectBasicsPickResult).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static SelectBasicsPickResult FromNative(nint value) {
+    try { return new SelectBasicsPickResult(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@SelectBasics_PickResult@F@Depth#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_depth_0")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_depth_0(OwnedHandle receiver, out double result);
+  /// <summary>Invokes SelectBasics_PickResult::Depth. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Depth() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_depth_0(NativeHandle, out double result), "occtsharp_owned_selectbasics_pickresult_depth_0");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@DistToGeomCenter#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_disttogeomcenter_1")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_disttogeomcenter_1(OwnedHandle receiver, out double result);
+  /// <summary>Invokes SelectBasics_PickResult::DistToGeomCenter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double DistToGeomCenter() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_disttogeomcenter_1(NativeHandle, out double result), "occtsharp_owned_selectbasics_pickresult_disttogeomcenter_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@HasPickedPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_haspickedpoint_2")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_haspickedpoint_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes SelectBasics_PickResult::HasPickedPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasPickedPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_haspickedpoint_2(NativeHandle, out int result), "occtsharp_owned_selectbasics_pickresult_haspickedpoint_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@Invalidate#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_invalidate_3")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_invalidate_3(OwnedHandle receiver);
+  /// <summary>Invokes SelectBasics_PickResult::Invalidate. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Invalidate() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_invalidate_3(NativeHandle), "occtsharp_owned_selectbasics_pickresult_invalidate_3");
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@IsValid#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_isvalid_4")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_isvalid_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes SelectBasics_PickResult::IsValid. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsValid() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_isvalid_4(NativeHandle, out int result), "occtsharp_owned_selectbasics_pickresult_isvalid_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@Min#&1$@S@SelectBasics_PickResult#S0_#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_min_5")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_min_5(SelectBasicsPickResult.OwnedHandle arg0, SelectBasicsPickResult.OwnedHandle arg1, out nint result);
+  /// <summary>Invokes SelectBasics_PickResult::Min. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static SelectBasicsPickResult Min(SelectBasicsPickResult arg0, SelectBasicsPickResult arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_min_5(arg0.NativeHandle, arg1.NativeHandle, out nint result), "occtsharp_owned_selectbasics_pickresult_min_5");
+    var managedResult = SelectBasicsPickResult.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@PickedPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_pickedpoint_6")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_pickedpoint_6(OwnedHandle receiver, out Point3dRaw result);
+  /// <summary>Invokes SelectBasics_PickResult::PickedPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d PickedPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_pickedpoint_6(NativeHandle, out Point3dRaw result), "occtsharp_owned_selectbasics_pickresult_pickedpoint_6");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_create_7")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_create_7(out nint result);
+  /// <summary>Invokes SelectBasics_PickResult::SelectBasics_PickResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static SelectBasicsPickResult Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_create_7(out nint result), "occtsharp_owned_selectbasics_pickresult_create_7");
+    var managedResult = SelectBasicsPickResult.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#d#d#&1$@S@gp_Pnt#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_create_8")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_create_8(double arg0, double arg1, Point3dRaw arg2, out nint result);
+  /// <summary>Invokes SelectBasics_PickResult::SelectBasics_PickResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static SelectBasicsPickResult Create(double arg0, double arg1, Point3d arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_create_8(arg0, arg1, new Point3dRaw(arg2.X, arg2.Y, arg2.Z), out nint result), "occtsharp_owned_selectbasics_pickresult_create_8");
+    var managedResult = SelectBasicsPickResult.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SetDepth#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_setdepth_9")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_setdepth_9(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes SelectBasics_PickResult::SetDepth. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDepth(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_setdepth_9(NativeHandle, arg0), "occtsharp_owned_selectbasics_pickresult_setdepth_9");
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SetDistToGeomCenter#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_setdisttogeomcenter_10")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_setdisttogeomcenter_10(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes SelectBasics_PickResult::SetDistToGeomCenter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDistToGeomCenter(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_setdisttogeomcenter_10(NativeHandle, arg0), "occtsharp_owned_selectbasics_pickresult_setdisttogeomcenter_10");
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SetPickedPoint#&1$@S@gp_Pnt#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_setpickedpoint_11")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_setpickedpoint_11(OwnedHandle receiver, Point3dRaw arg0);
+  /// <summary>Invokes SelectBasics_PickResult::SetPickedPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPickedPoint(Point3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_setpickedpoint_11(NativeHandle, new Point3dRaw(arg0.X, arg0.Y, arg0.Z)), "occtsharp_owned_selectbasics_pickresult_setpickedpoint_11");
+  }
+  // Source: c:@S@SelectBasics_PickResult@F@SetSurfaceNormal#&1$@S@gp_Vec#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectbasics_pickresult_setsurfacenormal_12")]
+  private static partial NativeStatus Native_occtsharp_owned_selectbasics_pickresult_setsurfacenormal_12(OwnedHandle receiver, global::OcctSharp.Values.Vector3d arg0);
+  /// <summary>Invokes SelectBasics_PickResult::SetSurfaceNormal. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSurfaceNormal(global::OcctSharp.Values.Vector3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectbasics_pickresult_setsurfacenormal_12(NativeHandle, arg0), "occtsharp_owned_selectbasics_pickresult_setsurfacenormal_12");
+  }
+}
+/// <summary>Owns a stable-address SelectMgr_ViewClipRange. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class SelectMgrViewClipRange : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private SelectMgrViewClipRange(OwnedHandle handle) => _handle = handle;
+  static SelectMgrViewClipRange() => NativeLibraryResolver.EnsureRegistered(typeof(SelectMgrViewClipRange).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static SelectMgrViewClipRange FromNative(nint value) {
+    try { return new SelectMgrViewClipRange(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@SelectMgr_ViewClipRange@F@AddClipSubRange#&1$@S@Bnd_Range#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_addclipsubrange_0")]
+  private static partial NativeStatus Native_occtsharp_owned_selectmgr_viewcliprange_addclipsubrange_0(OwnedHandle receiver, BndRange.OwnedHandle arg0);
+  /// <summary>Invokes SelectMgr_ViewClipRange::AddClipSubRange. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddClipSubRange(BndRange arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectmgr_viewcliprange_addclipsubrange_0(NativeHandle, arg0.NativeHandle), "occtsharp_owned_selectmgr_viewcliprange_addclipsubrange_0");
+  }
+  // Source: c:@S@SelectMgr_ViewClipRange@F@GetNearestDepth#&1$@S@Bnd_Range#&d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_getnearestdepth_1")]
+  private static partial NativeStatus Native_occtsharp_owned_selectmgr_viewcliprange_getnearestdepth_1(OwnedHandle receiver, BndRange.OwnedHandle arg0, double arg1, out double updatedArg1, out int result);
+  /// <summary>Invokes SelectMgr_ViewClipRange::GetNearestDepth. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool GetNearestDepth(BndRange arg0, ref double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectmgr_viewcliprange_getnearestdepth_1(NativeHandle, arg0.NativeHandle, arg1, out double updatedArg1, out int result), "occtsharp_owned_selectmgr_viewcliprange_getnearestdepth_1");
+    var managedResult = result != 0;
+    arg1 = updatedArg1;
+    return managedResult;
+  }
+  // Source: c:@S@SelectMgr_ViewClipRange@F@IsClipped#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_isclipped_2")]
+  private static partial NativeStatus Native_occtsharp_owned_selectmgr_viewcliprange_isclipped_2(OwnedHandle receiver, double arg0, out int result);
+  /// <summary>Invokes SelectMgr_ViewClipRange::IsClipped. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsClipped(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectmgr_viewcliprange_isclipped_2(NativeHandle, arg0, out int result), "occtsharp_owned_selectmgr_viewcliprange_isclipped_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@SelectMgr_ViewClipRange@F@SelectMgr_ViewClipRange#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_selectmgr_viewcliprange_create_3(out nint result);
+  /// <summary>Invokes SelectMgr_ViewClipRange::SelectMgr_ViewClipRange. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static SelectMgrViewClipRange Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectmgr_viewcliprange_create_3(out nint result), "occtsharp_owned_selectmgr_viewcliprange_create_3");
+    var managedResult = SelectMgrViewClipRange.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@SelectMgr_ViewClipRange@F@SetVoid#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_selectmgr_viewcliprange_setvoid_4")]
+  private static partial NativeStatus Native_occtsharp_owned_selectmgr_viewcliprange_setvoid_4(OwnedHandle receiver);
+  /// <summary>Invokes SelectMgr_ViewClipRange::SetVoid. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetVoid() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_selectmgr_viewcliprange_setvoid_4(NativeHandle), "occtsharp_owned_selectmgr_viewcliprange_setvoid_4");
+  }
+}

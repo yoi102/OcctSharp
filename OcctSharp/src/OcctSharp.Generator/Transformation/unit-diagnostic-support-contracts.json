@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyFromSI#d#*1C#S",
+      "nativeName": "UnitsAPI::AnyFromSI",
+      "signature": "UnitsAPI::AnyFromSI: double (const double, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToAny#d#*1C#S0_#S",
+      "nativeName": "UnitsAPI::AnyToAny",
+      "signature": "UnitsAPI::AnyToAny: double (const double, const char *const, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToSI#d#*1C#&$@N@opencascade@S@handle>#$@S@Units_Dimensions#S",
+      "nativeName": "UnitsAPI::AnyToSI",
+      "signature": "UnitsAPI::AnyToSI: double (const double, const char *const, occ::handle<Units_Dimensions> &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToSI#d#*1C#S",
+      "nativeName": "UnitsAPI::AnyToSI",
+      "signature": "UnitsAPI::AnyToSI: double (const double, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionAmountOfSubstance#S",
+      "nativeName": "UnitsAPI::DimensionAmountOfSubstance",
+      "signature": "UnitsAPI::DimensionAmountOfSubstance: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionElectricCurrent#S",
+      "nativeName": "UnitsAPI::DimensionElectricCurrent",
+      "signature": "UnitsAPI::DimensionElectricCurrent: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLength#S",
+      "nativeName": "UnitsAPI::DimensionLength",
+      "signature": "UnitsAPI::DimensionLength: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLess#S",
+      "nativeName": "UnitsAPI::DimensionLess",
+      "signature": "UnitsAPI::DimensionLess: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLuminousIntensity#S",
+      "nativeName": "UnitsAPI::DimensionLuminousIntensity",
+      "signature": "UnitsAPI::DimensionLuminousIntensity: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionMass#S",
+      "nativeName": "UnitsAPI::DimensionMass",
+      "signature": "UnitsAPI::DimensionMass: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionPlaneAngle#S",
+      "nativeName": "UnitsAPI::DimensionPlaneAngle",
+      "signature": "UnitsAPI::DimensionPlaneAngle: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionSolidAngle#S",
+      "nativeName": "UnitsAPI::DimensionSolidAngle",
+      "signature": "UnitsAPI::DimensionSolidAngle: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionThermodynamicTemperature#S",
+      "nativeName": "UnitsAPI::DimensionThermodynamicTemperature",
+      "signature": "UnitsAPI::DimensionThermodynamicTemperature: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionTime#S",
+      "nativeName": "UnitsAPI::DimensionTime",
+      "signature": "UnitsAPI::DimensionTime: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@Dimensions#*1C#S",
+      "nativeName": "UnitsAPI::Dimensions",
+      "signature": "UnitsAPI::Dimensions: occ::handle<Units_Dimensions> (const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const TCollection_ExtendedString &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#I#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const int)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#d#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Get#",
+      "nativeName": "Message_Msg::Get",
+      "signature": "Message_Msg::Get: const TCollection_ExtendedString &()",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@IsEdited#1",
+      "nativeName": "Message_Msg::IsEdited",
+      "signature": "Message_Msg::IsEdited: bool () const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void ()",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#&1$@S@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void (const Message_Msg &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Original#1",
+      "nativeName": "Message_Msg::Original",
+      "signature": "Message_Msg::Original: const TCollection_ExtendedString &() const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Set#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Set",
+      "signature": "Message_Msg::Set: void (const TCollection_ExtendedString &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Value#1",
+      "nativeName": "Message_Msg::Value",
+      "signature": "Message_Msg::Value: const TCollection_ExtendedString &() const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    }
+  ]
+}

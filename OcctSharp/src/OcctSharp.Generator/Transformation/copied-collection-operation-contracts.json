@@ -1,0 +1,537 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [
+    {
+      "nativeName": "GeomAPI_PointsToBSpline",
+      "header": "GeomAPI_PointsToBSpline.hxx",
+      "reason": "Algorithm owns result handle; input arrays are consumed during Init; no external array member."
+    },
+    {
+      "nativeName": "Geom2dAPI_PointsToBSpline",
+      "header": "Geom2dAPI_PointsToBSpline.hxx",
+      "reason": "Algorithm owns result handle; input arrays are consumed during Init; no external array member."
+    }
+  ],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@MaxKnotMult#&1$@S@NCollection_Array1>#I#I#I#S",
+      "nativeName": "BSplCLib::MaxKnotMult",
+      "signature": "BSplCLib::MaxKnotMult: int (const NCollection_Array1<int> &, const int, const int)",
+      "guard": "MaxKnotMult",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reparametrize#d#d#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::Reparametrize",
+      "signature": "BSplCLib::Reparametrize: void (const double, const double, NCollection_Array1<double> &)",
+      "guard": "Reparametrize",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reverse#&$@S@NCollection_Array1>#$@S@gp_Pnt#I#S",
+      "nativeName": "BSplCLib::Reverse",
+      "signature": "BSplCLib::Reverse: void (NCollection_Array1<gp_Pnt> &, const int)",
+      "guard": "Reverse",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reverse#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#S",
+      "nativeName": "BSplCLib::Reverse",
+      "signature": "BSplCLib::Reverse: void (NCollection_Array1<gp_Pnt2d> &, const int)",
+      "guard": "Reverse",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reverse#&$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::Reverse",
+      "signature": "BSplCLib::Reverse: void (NCollection_Array1<int> &)",
+      "guard": "Reverse",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reverse#&$@S@NCollection_Array1>#d#I#S",
+      "nativeName": "BSplCLib::Reverse",
+      "signature": "BSplCLib::Reverse: void (NCollection_Array1<double> &, const int)",
+      "guard": "Reverse",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Reverse#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::Reverse",
+      "signature": "BSplCLib::Reverse: void (NCollection_Array1<double> &)",
+      "guard": "Reverse",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void ()",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt2d> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt2d> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#d#d#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void (const NCollection_Array1<double> &, const double, const double, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Init",
+      "signature": "Geom2dAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt2d> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Init",
+      "signature": "Geom2dAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Init",
+      "signature": "Geom2dAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt2d> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Init",
+      "signature": "Geom2dAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt2d> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#d#d#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Init",
+      "signature": "Geom2dAPI_PointsToBSpline::Init: void (const NCollection_Array1<double> &, const double, const double, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@InsertKnots#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#",
+      "nativeName": "Geom2d_BSplineCurve::InsertKnots",
+      "signature": "Geom2d_BSplineCurve::InsertKnots: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool)",
+      "guard": "InsertKnots",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@KnotSequence#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom2d_BSplineCurve::KnotSequence",
+      "signature": "Geom2d_BSplineCurve::KnotSequence: void (NCollection_Array1<double> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@KnotSequence#1",
+      "nativeName": "Geom2d_BSplineCurve::KnotSequence",
+      "signature": "Geom2d_BSplineCurve::KnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Knots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom2d_BSplineCurve::Knots",
+      "signature": "Geom2d_BSplineCurve::Knots: void (NCollection_Array1<double> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Knots#1",
+      "nativeName": "Geom2d_BSplineCurve::Knots",
+      "signature": "Geom2d_BSplineCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Multiplicities#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "Geom2d_BSplineCurve::Multiplicities",
+      "signature": "Geom2d_BSplineCurve::Multiplicities: void (NCollection_Array1<int> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Multiplicities#1",
+      "nativeName": "Geom2d_BSplineCurve::Multiplicities",
+      "signature": "Geom2d_BSplineCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Poles#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#1",
+      "nativeName": "Geom2d_BSplineCurve::Poles",
+      "signature": "Geom2d_BSplineCurve::Poles: void (NCollection_Array1<gp_Pnt2d> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Poles#1",
+      "nativeName": "Geom2d_BSplineCurve::Poles",
+      "signature": "Geom2d_BSplineCurve::Poles: const NCollection_Array1<gp_Pnt2d> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@SetKnots#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom2d_BSplineCurve::SetKnots",
+      "signature": "Geom2d_BSplineCurve::SetKnots: void (const NCollection_Array1<double> &)",
+      "guard": "SetKnots",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@WeightsArray#1",
+      "nativeName": "Geom2d_BSplineCurve::WeightsArray",
+      "signature": "Geom2d_BSplineCurve::WeightsArray: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@KnotSequence#1",
+      "nativeName": "Geom2d_BezierCurve::KnotSequence",
+      "signature": "Geom2d_BezierCurve::KnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Knots#1",
+      "nativeName": "Geom2d_BezierCurve::Knots",
+      "signature": "Geom2d_BezierCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Multiplicities#1",
+      "nativeName": "Geom2d_BezierCurve::Multiplicities",
+      "signature": "Geom2d_BezierCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Poles#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#1",
+      "nativeName": "Geom2d_BezierCurve::Poles",
+      "signature": "Geom2d_BezierCurve::Poles: void (NCollection_Array1<gp_Pnt2d> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Poles#1",
+      "nativeName": "Geom2d_BezierCurve::Poles",
+      "signature": "Geom2d_BezierCurve::Poles: const NCollection_Array1<gp_Pnt2d> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@WeightsArray#1",
+      "nativeName": "Geom2d_BezierCurve::WeightsArray",
+      "signature": "Geom2d_BezierCurve::WeightsArray: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void ()",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::Init",
+      "signature": "GeomAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::Init",
+      "signature": "GeomAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::Init",
+      "signature": "GeomAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Init#&1$@S@NCollection_Array1>#$@S@gp_Pnt#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::Init",
+      "signature": "GeomAPI_PointsToBSpline::Init: void (const NCollection_Array1<gp_Pnt> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@GeomLib@F@FuseIntervals#&1$@S@NCollection_Array1>#d#S0_#&$@S@NCollection_Sequence>#d#d#b#S",
+      "nativeName": "GeomLib::FuseIntervals",
+      "signature": "GeomLib::FuseIntervals: void (const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Sequence<double> &, const double, const bool)",
+      "guard": "FuseIntervals",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@InsertKnots#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#",
+      "nativeName": "Geom_BSplineCurve::InsertKnots",
+      "signature": "Geom_BSplineCurve::InsertKnots: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool)",
+      "guard": "InsertKnots",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@KnotSequence#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineCurve::KnotSequence",
+      "signature": "Geom_BSplineCurve::KnotSequence: void (NCollection_Array1<double> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@KnotSequence#1",
+      "nativeName": "Geom_BSplineCurve::KnotSequence",
+      "signature": "Geom_BSplineCurve::KnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Knots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineCurve::Knots",
+      "signature": "Geom_BSplineCurve::Knots: void (NCollection_Array1<double> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Knots#1",
+      "nativeName": "Geom_BSplineCurve::Knots",
+      "signature": "Geom_BSplineCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Multiplicities#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "Geom_BSplineCurve::Multiplicities",
+      "signature": "Geom_BSplineCurve::Multiplicities: void (NCollection_Array1<int> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Multiplicities#1",
+      "nativeName": "Geom_BSplineCurve::Multiplicities",
+      "signature": "Geom_BSplineCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Poles#&$@S@NCollection_Array1>#$@S@gp_Pnt#1",
+      "nativeName": "Geom_BSplineCurve::Poles",
+      "signature": "Geom_BSplineCurve::Poles: void (NCollection_Array1<gp_Pnt> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Poles#1",
+      "nativeName": "Geom_BSplineCurve::Poles",
+      "signature": "Geom_BSplineCurve::Poles: const NCollection_Array1<gp_Pnt> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@SetKnots#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineCurve::SetKnots",
+      "signature": "Geom_BSplineCurve::SetKnots: void (const NCollection_Array1<double> &)",
+      "guard": "SetKnots",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@WeightsArray#1",
+      "nativeName": "Geom_BSplineCurve::WeightsArray",
+      "signature": "Geom_BSplineCurve::WeightsArray: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@KnotSequence#1",
+      "nativeName": "Geom_BezierCurve::KnotSequence",
+      "signature": "Geom_BezierCurve::KnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Knots#1",
+      "nativeName": "Geom_BezierCurve::Knots",
+      "signature": "Geom_BezierCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Multiplicities#1",
+      "nativeName": "Geom_BezierCurve::Multiplicities",
+      "signature": "Geom_BezierCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Poles#&$@S@NCollection_Array1>#$@S@gp_Pnt#1",
+      "nativeName": "Geom_BezierCurve::Poles",
+      "signature": "Geom_BezierCurve::Poles: void (NCollection_Array1<gp_Pnt> &) const",
+      "guard": "CurveOutputLength",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Poles#1",
+      "nativeName": "Geom_BezierCurve::Poles",
+      "signature": "Geom_BezierCurve::Poles: const NCollection_Array1<gp_Pnt> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@WeightsArray#1",
+      "nativeName": "Geom_BezierCurve::WeightsArray",
+      "signature": "Geom_BezierCurve::WeightsArray: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited copied collection workflow; native storage owns every element and publishes independent results."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Curve#1",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Curve",
+      "signature": "Geom2dAPI_PointsToBSpline::Curve: const occ::handle<Geom2d_BSplineCurve> &() const",
+      "guard": "Done",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline",
+      "signature": "Geom2dAPI_PointsToBSpline::Geom2dAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt2d> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_PointsToBSpline@F@IsDone#1",
+      "nativeName": "Geom2dAPI_PointsToBSpline::IsDone",
+      "signature": "Geom2dAPI_PointsToBSpline::IsDone: bool () const",
+      "guard": "None",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Curve#1",
+      "nativeName": "GeomAPI_PointsToBSpline::Curve",
+      "signature": "GeomAPI_PointsToBSpline::Curve: const occ::handle<Geom_BSplineCurve> &() const",
+      "guard": "Done",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "Fit",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@IsDone#1",
+      "nativeName": "GeomAPI_PointsToBSpline::IsDone",
+      "signature": "GeomAPI_PointsToBSpline::IsDone: bool () const",
+      "guard": "None",
+      "reason": "Compatible entry for complete fitting workflow; existing Manual disposition is preserved."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#",
+      "nativeName": "Geom2d_BSplineCurve::Geom2d_BSplineCurve",
+      "signature": "Geom2d_BSplineCurve::Geom2d_BSplineCurve: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool)",
+      "guard": "SplineCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#I#b#",
+      "nativeName": "Geom2d_BSplineCurve::Geom2d_BSplineCurve",
+      "signature": "Geom2d_BSplineCurve::Geom2d_BSplineCurve: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool)",
+      "guard": "SplineCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Geom2d_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "Geom2d_BezierCurve::Geom2d_BezierCurve",
+      "signature": "Geom2d_BezierCurve::Geom2d_BezierCurve: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "BezierCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BezierCurve@F@Geom2d_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom2d_BezierCurve::Geom2d_BezierCurve",
+      "signature": "Geom2d_BezierCurve::Geom2d_BezierCurve: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &)",
+      "guard": "BezierCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Geom_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#",
+      "nativeName": "Geom_BSplineCurve::Geom_BSplineCurve",
+      "signature": "Geom_BSplineCurve::Geom_BSplineCurve: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool)",
+      "guard": "SplineCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Geom_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#I#b#b#",
+      "nativeName": "Geom_BSplineCurve::Geom_BSplineCurve",
+      "signature": "Geom_BSplineCurve::Geom_BSplineCurve: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool, const bool)",
+      "guard": "SplineCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Geom_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierCurve::Geom_BezierCurve",
+      "signature": "Geom_BezierCurve::Geom_BezierCurve: void (const NCollection_Array1<gp_Pnt> &)",
+      "guard": "BezierCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Geom_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierCurve::Geom_BezierCurve",
+      "signature": "Geom_BezierCurve::Geom_BezierCurve: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "BezierCreate",
+      "reason": "Existing manual curve constructor, compatible copied input entry; disposition retained."
+    }
+  ]
+}

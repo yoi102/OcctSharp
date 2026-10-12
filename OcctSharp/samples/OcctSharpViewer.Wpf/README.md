@@ -15,6 +15,10 @@ https://github.com/user-attachments/assets/2f3e5b9b-bc01-4aeb-b36e-64ade2463fe4
 - Preserve STEP/XDE assembly, part, face, edge, material, transparency, visibility, and
   disconnected presentation styles supported by the Preview.12 recovery path.
 - Fit the complete model and switch between axonometric, front, top, left, and right views.
+- Use the native ViewCube in the upper-right viewport corner; hovering highlights a face,
+  edge, corner, or curved arrow. Clicking the cube changes the camera direction without
+  selecting model geometry. On a straight-on face view, the two upper-right arrows roll
+  the camera left or right by 45 degrees; they hide on oblique views.
 - Switch all presentations between shaded and wireframe display.
 - Detect and select geometry with add, toggle, remove, and clear-selection behavior.
 - Rotate, pan, and zoom with the mouse.

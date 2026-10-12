@@ -1,0 +1,254 @@
+{
+  "state": "READ_ONLY_EXACT_CALLER_AUDIT",
+  "manualRows": [
+    {
+      "stableId": "c:@S@Quantity_Color@F@Blue#1",
+      "specialCaseId": "SC-060",
+      "nativeName": "Quantity_Color::Blue",
+      "nativeSignature": "Quantity_Color::Blue: double () const noexcept",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Copied linear RGB adapter is a generator candidate. XDE document command/epoch and Viewer thread/style receiver restrictions remain at callers; complete equivalence must be validated in CC/CF before changing the shared Manual classification.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Green#1",
+      "specialCaseId": "SC-060",
+      "nativeName": "Quantity_Color::Green",
+      "nativeSignature": "Quantity_Color::Green: double () const noexcept",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Copied linear RGB adapter is a generator candidate. XDE document command/epoch and Viewer thread/style receiver restrictions remain at callers; complete equivalence must be validated in CC/CF before changing the shared Manual classification.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Red#1",
+      "specialCaseId": "SC-060",
+      "nativeName": "Quantity_Color::Red",
+      "nativeSignature": "Quantity_Color::Red: double () const noexcept",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Copied linear RGB adapter is a generator candidate. XDE document command/epoch and Viewer thread/style receiver restrictions remain at callers; complete equivalence must be validated in CC/CF before changing the shared Manual classification.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@CheckGUIDFormat#*1C#S",
+      "specialCaseId": "SC-057",
+      "nativeName": "Standard_GUID::CheckGUIDFormat",
+      "nativeSignature": "Standard_GUID::CheckGUIDFormat: bool (const char *const)",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Validated GUID parsing and fixed37-byte text copying are generator candidates. SDK validation consumes a NUL-terminated input, constructor rejects invalid syntax, formatter requires fixed output capacity. Function registration requires open transaction and document-local scope; CB must prove rollback/epoch equivalence before shared Manual classification changes.",
+      "followupBatches": [
+        "CB"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Documents/FunctionGraph.cpp",
+          "sha256": "09D3AE2EE699C8877B1D412E60C2ED8B8949ED60351B0F7787B18336950274B0"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Documents/State.cpp",
+          "sha256": "AA6000173ACA82C2F04DE0E68B6356C79B5A555C2E0DE14BDB68799E537A1536"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Structure.cpp",
+          "sha256": "DD107820F683ECC91954B92DF51A12FD4B83B2AD82DCB1C9CF4B039A5A48DB7B"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@Standard_GUID#*1C#",
+      "specialCaseId": "SC-057",
+      "nativeName": "Standard_GUID::Standard_GUID",
+      "nativeSignature": "Standard_GUID::Standard_GUID: void (const char *const)",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Validated GUID parsing and fixed37-byte text copying are generator candidates. SDK validation consumes a NUL-terminated input, constructor rejects invalid syntax, formatter requires fixed output capacity. Function registration requires open transaction and document-local scope; CB must prove rollback/epoch equivalence before shared Manual classification changes.",
+      "followupBatches": [
+        "CB"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Documents/FunctionGraph.cpp",
+          "sha256": "09D3AE2EE699C8877B1D412E60C2ED8B8949ED60351B0F7787B18336950274B0"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Documents/State.cpp",
+          "sha256": "AA6000173ACA82C2F04DE0E68B6356C79B5A555C2E0DE14BDB68799E537A1536"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Structure.cpp",
+          "sha256": "DD107820F683ECC91954B92DF51A12FD4B83B2AD82DCB1C9CF4B039A5A48DB7B"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@Quantity_ColorRGBA#f#f#f#f#",
+      "specialCaseId": "SC-044",
+      "nativeName": "Quantity_ColorRGBA::Quantity_ColorRGBA",
+      "nativeSignature": "Quantity_ColorRGBA::Quantity_ColorRGBA: void (float, float, float, float)",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "RGBA construct/copy helper is a generator candidate. Preserve float rounding and linear RGB interpretation; GetRGB is borrowed from its value owner. Existing mutation/color-style callers require CC/CF owner and actual pixel checks before shared classification changes.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/PresentationMetadata.cpp",
+          "sha256": "3E827F32D6D5C465206DE812AD209F3B16C9BBD6039A4615C486238AED6B508E"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@GetRGB#1",
+      "specialCaseId": "SC-044",
+      "nativeName": "Quantity_ColorRGBA::GetRGB",
+      "nativeSignature": "Quantity_ColorRGBA::GetRGB: const Quantity_Color &() const noexcept",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "RGBA construct/copy helper is a generator candidate. Preserve float rounding and linear RGB interpretation; GetRGB is borrowed from its value owner. Existing mutation/color-style callers require CC/CF owner and actual pixel checks before shared classification changes.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/PresentationMetadata.cpp",
+          "sha256": "3E827F32D6D5C465206DE812AD209F3B16C9BBD6039A4615C486238AED6B508E"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@Alpha#1",
+      "specialCaseId": "SC-044",
+      "nativeName": "Quantity_ColorRGBA::Alpha",
+      "nativeSignature": "Quantity_ColorRGBA::Alpha: float () const noexcept",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "RGBA construct/copy helper is a generator candidate. Preserve float rounding and linear RGB interpretation; GetRGB is borrowed from its value owner. Existing mutation/color-style callers require CC/CF owner and actual pixel checks before shared classification changes.",
+      "followupBatches": [
+        "CC",
+        "CF"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Metadata.cpp",
+          "sha256": "CBC7AB3016AA3035C862719B00418277757EB10669F08CC5D0786EC4DAA03971"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/PresentationMetadata.cpp",
+          "sha256": "3E827F32D6D5C465206DE812AD209F3B16C9BBD6039A4615C486238AED6B508E"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Visualization/Presentations.cpp",
+          "sha256": "3357AD48FC008F08B963CE8C100CB4492C79799B19BD1F4A48D83428B4B7B5B4"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@DynamicType#1",
+      "specialCaseId": "SC-045",
+      "nativeName": "TDF_Attribute::DynamicType",
+      "nativeSignature": "TDF_Attribute::DynamicType: const occ::handle<Standard_Type> &() const",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "DynamicType copied-name helper is a generator candidate. Attribute enumeration sorts and copies under a live validated document; no borrowed Standard_Type handle may escape. CB must preserve attribute ordering, stale/cross-document rejection and copied text lifetime.",
+      "followupBatches": [
+        "CB"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Documents/State.cpp",
+          "sha256": "AA6000173ACA82C2F04DE0E68B6356C79B5A555C2E0DE14BDB68799E537A1536"
+        }
+      ]
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@ToCString#*C#1",
+      "specialCaseId": "SC-045",
+      "nativeName": "Standard_GUID::ToCString",
+      "nativeSignature": "Standard_GUID::ToCString: void (const Standard_PCharacter) const",
+      "module": "Foundation",
+      "disposition": "GENERATOR_HELPER_CANDIDATE_PENDING_OWNER_BATCH_EQUIVALENCE",
+      "reason": "Validated GUID parsing and fixed37-byte text copying are generator candidates. SDK validation consumes a NUL-terminated input, constructor rejects invalid syntax, formatter requires fixed output capacity. Function registration requires open transaction and document-local scope; CB must prove rollback/epoch equivalence before shared Manual classification changes.",
+      "followupBatches": [
+        "CB"
+      ],
+      "callerFiles": [
+        {
+          "path": "src/OcctSharp.Native/src/Documents/FunctionGraph.cpp",
+          "sha256": "09D3AE2EE699C8877B1D412E60C2ED8B8949ED60351B0F7787B18336950274B0"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Documents/State.cpp",
+          "sha256": "AA6000173ACA82C2F04DE0E68B6356C79B5A555C2E0DE14BDB68799E537A1536"
+        },
+        {
+          "path": "src/OcctSharp.Native/src/Xde/Structure.cpp",
+          "sha256": "DD107820F683ECC91954B92DF51A12FD4B83B2AD82DCB1C9CF4B039A5A48DB7B"
+        }
+      ]
+    }
+  ],
+  "reviewed": 10,
+  "migrated": 0,
+  "permanentlyUngeneratable": 0
+}

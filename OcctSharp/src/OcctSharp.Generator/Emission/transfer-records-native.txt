@@ -1,0 +1,216 @@
+#include "../Modeling/OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include <STEPControl_Reader.hxx>
+#include <IGESControl_Reader.hxx>
+#include <XSControl_WorkSession.hxx>
+#include <XSControl_TransferReader.hxx>
+#include <Transfer_TransientProcess.hxx>
+#include <Transfer_IteratorOfProcessForTransient.hxx>
+#include <Transfer_ResultFromModel.hxx>
+#include <Transfer_ResultFromTransient.hxx>
+#include <TransferBRep.hxx>
+#include <TransferBRep_Reader.hxx>
+#include <TransferBRep_ShapeListBinder.hxx>
+#include <TransferBRep_TransferResultInfo.hxx>
+#include <Interface_CheckIterator.hxx>
+#include <Interface_Check.hxx>
+#include <unordered_set>
+#include <sstream>
+using namespace OcctSharpTopologyCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_StandardTransientHandle* ValidateStandardTransient(const OcctSharp_StandardTransientHandle*);
+OcctSharp_StandardTransientHandle* AllocateStandardTransient(opencascade::handle<Standard_Transient>);
+}
+namespace {
+using Entity=opencascade::handle<Standard_Transient>;
+using Entities=opencascade::handle<NCollection_HSequence<Entity>>;
+constexpr int Limit=1048576;
+std::string Quoted(const char* value) {
+ std::string out="\"";if(value)for(const unsigned char c:std::string(value)) {
+  if(c=='"'||c=='\\'){out+='\\';out+=char(c);}else if(c<32){const char* h="0123456789abcdef";out+="\\u00";out+=h[c>>4];out+=h[c&15];}else out+=char(c);
+ }return out+'"';
+}
+std::string Checks(const opencascade::handle<Interface_Check>& check) {
+ std::string out="[";if(!check.IsNull()) {
+  Require(check->NbFails()<=Limit && check->NbWarnings()<=Limit,"Too many diagnostics.");
+  for(int kind=0;kind<2;++kind)for(int i=1;i<=(kind?check->NbWarnings():check->NbFails());++i) {
+   if(out.size()>1)out+=',';
+   out+="{\"Warning\":"+std::string(kind?"true":"false")+",\"Text\":"+Quoted(kind?check->CWarning(i):check->CFail(i))+"}";
+  }
+ }return out+"]";
+}
+std::string CheckList(Interface_CheckIterator list) {
+ std::string out="[";int count=0;
+ for(list.Start();list.More();list.Next()) {
+  Require(++count<=Limit,"Too many check entries.");if(out.size()>1)out+=',';
+  out+="{\"Number\":"+std::to_string(list.Number())+",\"Messages\":"+Checks(list.Value())+"}";
+ }return out+"]";
+}
+void CheckChain(const opencascade::handle<Transfer_Binder>& binder) {
+ std::unordered_set<const Transfer_Binder*> seen;
+ for(auto current=binder;!current.IsNull();current=current->NextResult())
+  Require(seen.size()<4096 && seen.insert(current.get()).second,"Cyclic or excessive binder chain.");
+}
+// Records made by this SDK's Fill have no children. Reject an SDK behavior change
+// before calling its recursive FillMap / CheckedList implementations.
+void CheckRecord(const opencascade::handle<Transfer_ResultFromModel>& record) {
+ Require(!record.IsNull() && !record->MainResult().IsNull(),"Missing main record.");
+ Require(record->MainResult()->NbSubResults()==0,"Nested records require a separately bounded traversal contract.");
+ CheckChain(record->MainResult()->Binder());
+}
+struct Snapshot {
+ std::string json;
+ std::vector<Entity> entities;
+ std::vector<TopoDS_Shape> mappedShapes;
+ ShapeSequence shapes=new NCollection_HSequence<TopoDS_Shape>();
+};
+struct Session {
+ std::mutex mutex;std::shared_ptr<XSControl_Reader> reader;std::string path;
+ bool attempted=false,failed=false;std::shared_ptr<Snapshot> snapshot;
+ void Valid()const{Require(!failed,"The failed transfer session is retired.");}
+ Entity At(int number)const{Require(number>0 && number<=reader->Model()->NbEntities(),"Model number outside bounds.");return reader->Model()->Value(number);}
+};
+struct ReaderProjection:TransferBRep_Reader {
+ void Attach(const opencascade::handle<Transfer_TransientProcess>& process){theProc=process;EndTransfer();}
+};
+std::string Numbers(const Entities& list,const opencascade::handle<Interface_InterfaceModel>& model) {
+ std::string out="[";if(!list.IsNull()){Require(list->Length()<=Limit,"Too many entities.");for(int i=1;i<=list->Length();++i){if(i>1)out+=',';out+=std::to_string(model->Number(list->Value(i)));}}return out+"]";
+}
+std::string IteratorIndices(Transfer_IteratorOfProcessForTransient iter,const opencascade::handle<Transfer_TransientProcess>& process) {
+ std::string out="[";Require(iter.Number()<=Limit,"Too many results.");
+ for(iter.Start();iter.More();iter.Next()) {Require(iter.HasStarting(),"Missing starting entity.");if(out.size()>1)out+=',';out+=std::to_string(process->MapIndex(iter.Starting()));}return out+"]";
+}
+std::shared_ptr<Snapshot> Capture(Session& session,const Entities& requested,int transferred) {
+ auto tr=session.reader->WS()->TransferReader();auto tp=tr->TransientProcess();auto model=session.reader->Model();
+ Require(!tp.IsNull() && tp->NbMapped()<=Limit && model->NbEntities()<=Limit,"Invalid or excessive transfer process.");
+ auto result=std::make_shared<Snapshot>();for(int i=1;i<=model->NbEntities();++i)result->entities.push_back(model->Value(i));
+ // CheckList can add an abnormal-status diagnostic. Run it once before freezing rows.
+ const std::string processChecks=CheckList(tp->CheckList(false));
+ const std::string lastChecks=CheckList(tr->LastCheckList());
+ for(int i=1;i<=tp->NbMapped();++i)CheckChain(tp->MapItem(i));
+ ReaderProjection projection;projection.SetModel(model);projection.SetFileStatus(0);projection.Attach(tp);
+ result->shapes=projection.Shapes(); // private projection dies; retained sequence is never mutated again
+ Require(result->shapes->Length()==projection.NbShapes(),"Inconsistent reader shape count.");
+ for(int i=1;i<=projection.NbShapes();++i)Require(projection.Shape(i).IsEqual(result->shapes->Value(i)),"Reader shape identity changed.");
+ auto transientResults=projection.Transients();
+ Require(transientResults->Length()==projection.NbTransients(),"Inconsistent transient count.");
+ for(int i=1;i<=projection.NbTransients();++i)Require(projection.Transient(i)==transientResults->Value(i),"Transient identity changed.");
+ std::string rows="[";
+ for(int i=1;i<=tp->NbMapped();++i) {
+  if(i>1)rows+=',';auto binder=tp->MapItem(i);auto entity=tp->Mapped(i);const int number=model->Number(entity);
+  TopoDS_Shape shape;std::string detail="\"HasBinder\":false,\"HasResult\":false,\"Unique\":false,\"Transient\":false,\"Status\":0,\"ResultType\":\"\",\"Messages\":[]";
+  if(!binder.IsNull()) {
+   Transfer_TransferIterator iter;iter.AddItem(binder);iter.Start();Require(iter.Number()==1 && iter.More(),"Missing private binder.");
+   auto type=iter.ResultType();bool transient=iter.HasTransientResult();if(transient)(void)iter.TransientResult();
+   Require(iter.Value()==binder,"Iterator identity changed.");
+   auto check=iter.Check();Require(iter.HasFails()==check->HasFailed() && iter.HasWarnings()==check->HasWarnings(),"Inconsistent diagnostics.");
+   detail="\"HasBinder\":true,\"HasResult\":"+std::string(iter.HasResult()?"true":"false")+",\"Unique\":"+(iter.HasUniqueResult()?"true":"false")+",\"Transient\":"+(transient?"true":"false")+",\"Status\":"+std::to_string(iter.Status())+",\"ResultType\":"+Quoted(type.IsNull()?"":type->Name())+",\"Messages\":"+Checks(check);
+   shape=TransferBRep::ShapeResult(binder);auto byEntity=TransferBRep::ShapeResult(tp,entity);
+   Require(shape.IsNull()==byEntity.IsNull() && (shape.IsNull() || shape.IsEqual(byEntity)),"Binder/entity shape identity mismatch.");
+  }
+  result->mappedShapes.push_back(shape);
+  rows+="{\"ModelNumber\":"+std::to_string(number)+",\"MapIndex\":"+std::to_string(i)+",\"EntityType\":"+Quoted(entity->DynamicType()->Name())+",\"HasShape\":"+(shape.IsNull()?"false":"true")+","+detail+"}";
+ }
+ rows+=']';std::string records="[";
+ for(int i=1;i<=requested->Length();++i) {
+  auto entity=requested->Value(i);auto record=tr->FinalResult(entity);if(i>1)records+=',';
+  records+="{\"ModelNumber\":"+std::to_string(model->Number(entity))+",\"Recorded\":"+(record.IsNull()?"false":"true");
+  if(!record.IsNull()) {
+   CheckRecord(record);record->SetFileName(session.path.c_str());auto level0=record->Results(0);auto level1=record->Results(1);
+   auto checked=record->CheckedList(Interface_CheckAny,false);
+   records+=",\"FileName\":"+Quoted(record->FileName())+",\"Label\":"+Quoted(record->MainLabel())+",\"ResultCounts\":["+std::to_string(level0->Length())+","+std::to_string(level1->Length())+"],\"Transferred\":"+Numbers(record->TransferredList(1),model)+",\"Checked\":"+Numbers(checked,model)+",\"Checks\":"+CheckList(record->CheckList(false,0));
+   // Use the same safe level-zero record path through the reader facade.
+   records+=",\"ReaderChecks\":"+CheckList(tr->CheckList(entity,0))+",\"ReaderLabel\":"+Quoted(tr->FinalEntityLabel(entity));
+   auto readerShape=tr->ShapeResult(entity);auto projectionShape=projection.ShapeResult(entity);
+   Require(readerShape.IsNull()==projectionShape.IsNull() && (readerShape.IsNull() || readerShape.IsEqual(projectionShape)),"Recorded shape identity mismatch.");
+  }records+='}';
+ }records+=']';
+ opencascade::handle<NCollection_HSequence<opencascade::handle<TransferBRep_TransferResultInfo>>> infos;
+ TransferBRep::TransferResultInfo(tp,requested,infos);Require(!infos.IsNull() && infos->Length()==requested->Length(),"Missing type statistics.");
+ std::string statistics="[";for(int i=1;i<=infos->Length();++i){auto info=infos->Value(i);if(i>1)statistics+=',';statistics+='[';
+  const int values[]={info->Result(),info->ResultWarning(),info->ResultFail(),info->ResultWarningFail(),info->NoResult(),info->NoResultWarning(),info->NoResultFail(),info->NoResultWarningFail()};
+  for(int j=0;j<8;++j){if(j)statistics+=',';statistics+=std::to_string(values[j]);}statistics+=']';}statistics+=']';
+ auto roots=tp->RootResult(true);auto complete=tp->CompleteResult(true);auto abnormal=tp->AbnormalResult();
+ // Both non-null inputs are guaranteed; SDK's Shapes(TP,list) has an && null guard.
+ auto selectedShapes=TransferBRep::Shapes(tp,requested);auto allShapes=TransferBRep::Shapes(tp,false);
+ result->json="{\"TransferredCount\":"+std::to_string(transferred)+",\"FileName\":"+Quoted(tr->FileName())+",\"ModelCount\":"+std::to_string(model->NbEntities())+",\"Mappings\":"+rows+",\"Records\":"+records+",\"Statistics\":"+statistics+",\"Roots\":"+IteratorIndices(roots,tp)+",\"Complete\":"+IteratorIndices(complete,tp)+",\"Abnormal\":"+IteratorIndices(abnormal,tp)+",\"ProcessChecks\":"+processChecks+",\"LastChecks\":"+lastChecks+",\"ReaderChecks\":"+CheckList(projection.CheckListResult())+",\"ReaderDone\":"+(projection.IsDone()?"true":"false")+",\"ReaderCheckOk\":"+(projection.CheckStatusResult(false)?"true":"false")+",\"ShapeCount\":"+std::to_string(projection.NbShapes())+",\"TransientCount\":"+std::to_string(projection.NbTransients())+",\"SelectedShapeCount\":"+std::to_string(selectedShapes->Length())+",\"AllShapeCount\":"+std::to_string(allShapes->Length())+",\"RootsForTransfer\":"+Numbers(tp->RootsForTransfer(),model)+"}";
+ Require(result->json.size()<64*1024*1024,"Snapshot text exceeds 64 MiB.");return result;
+}
+struct ShapeBinder {opencascade::handle<TransferBRep_ShapeListBinder> value;};
+}
+void OCCTSHARP_CALL occtsharp_transfer_records_release(void* token,int32_t kind) {
+ if(kind==0)OcctSharpOwned::Release(token,typeid(Session));if(kind==1)OcctSharpOwned::Release(token,typeid(Snapshot));if(kind==2)OcctSharpOwned::Release(token,typeid(ShapeBinder));
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_read(const char* path,int32_t format,void** result,int32_t* count) {
+ if(!result||!count)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;*count=0;
+ return Guard([&]{Require(path && *path && (format==0||format==1),"Invalid exchange path or format.");auto s=std::make_shared<Session>();s->path=path;
+  if(format==0){auto reader=std::make_shared<STEPControl_Reader>();Require(reader->ReadFile(path)==IFSelect_RetDone,"STEP read failed.");s->reader=reader;}
+  else{auto reader=std::make_shared<IGESControl_Reader>();Require(reader->ReadFile(path)==IFSelect_RetDone,"IGES read failed.");s->reader=reader;}
+  Require(!s->reader->Model().IsNull() && s->reader->Model()->NbEntities()<=Limit,"Missing or excessive model.");
+  *count=s->reader->Model()->NbEntities();Publication<Session> pub(s);*result=pub.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_run(const void* token,const int32_t* numbers,int32_t count,int32_t roots,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(count>=0 && count<=Limit && (numbers||count==0) && (roots==0||roots==1),"Invalid transfer selection.");
+  auto s=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(s->mutex);s->Valid();Require(!s->attempted,"Only one transfer epoch is allowed.");
+  Entities requested=new NCollection_HSequence<Entity>();if(roots) {Require(count==0,"Roots cannot be combined with a selection.");requested=s->reader->GiveList();Require(!requested.IsNull(),"No roots.");}
+  else for(int i=0;i<count;++i)requested->Append(s->At(numbers[i]));
+  Require(requested->Length()>0 && requested->Length()<=Limit,"A nonempty bounded selection is required.");
+  for(int i=1;i<=requested->Length();++i)Require(s->reader->Model()->Number(requested->Value(i))>0,"Foreign root entity.");
+  s->attempted=true;try{auto tr=s->reader->WS()->TransferReader();tr->SetFileName(s->path.c_str());
+   int n=requested->Length()==1?tr->TransferOne(requested->Value(1),true):tr->TransferList(requested,true);
+   auto snapshot=Capture(*s,requested,n);Publication<Snapshot> pub(snapshot);s->snapshot=snapshot;*result=pub.Commit();
+  }catch(...){s->failed=true;throw;}});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_snapshot(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto s=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(s->mutex);s->Valid();Require(s->snapshot!=nullptr,"No completed transfer.");Publication<Snapshot> pub(s->snapshot);*result=pub.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_text(const void* token,char* buffer,int32_t capacity,int32_t* length) {
+ if(!length)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*length=0;
+ return Guard([&]{auto s=OcctSharpOwned::Lease<const Snapshot>(token);*length=static_cast<int>(s->json.size())+1;Require(capacity>=0,"Negative capacity.");if(capacity==0)return;Require(buffer && capacity>=*length,"Snapshot buffer too small.");std::memcpy(buffer,s->json.c_str(),*length);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_shapes(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto s=OcctSharpOwned::Lease<const Snapshot>(token);*result=PublishShapes(s->shapes);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_shape(const void* token,int32_t index,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto s=OcctSharpOwned::Lease<const Snapshot>(token);Require(index>0 && index<=static_cast<int>(s->mappedShapes.size()),"Transfer-map index outside bounds.");const auto& shape=s->mappedShapes[index-1];if(!shape.IsNull())*result=OcctSharp_Internal_AllocateShape(shape);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_records_entity(const void* token,int32_t number,OcctSharp_StandardTransientHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto s=OcctSharpOwned::Lease<const Snapshot>(token);Require(number>0 && number<=static_cast<int>(s->entities.size()),"Model number outside bounds.");*result=OcctSharpGenerated::AllocateStandardTransient(s->entities[number-1]);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_binder_create(const void* shapes,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto set=OcctSharpOwned::Lease<const ShapeSet>(shapes);Require(set->values.size()<=Limit,"Too many binder shapes.");auto b=std::make_shared<ShapeBinder>();b->value=new TransferBRep_ShapeListBinder(ShapeSeq(*set));Publication<ShapeBinder> pub(b);*result=pub.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_binder_edit(const void* token,int32_t index,const OcctSharp_ShapeHandle* shape,const char* message,int32_t action,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(action>=0 && action<=3,"Invalid binder action.");auto source=OcctSharpOwned::Lease<const ShapeBinder>(token);auto seq=source->value->Result();
+  ShapeSequence copied=new NCollection_HSequence<TopoDS_Shape>();for(int i=1;i<=seq->Length();++i)copied->Append(seq->Value(i));
+  auto b=std::make_shared<ShapeBinder>();b->value=new TransferBRep_ShapeListBinder(copied);
+  // Copy diagnostic text, never the mutable Interface_Check container.
+  auto check=source->value->Check();for(int i=1;i<=check->NbFails();++i)b->value->AddFail(check->CFail(i),check->CFail(i));for(int i=1;i<=check->NbWarnings();++i)b->value->AddWarning(check->CWarning(i),check->CWarning(i));
+  if(action==0){Require(seq->Length()<Limit,"Binder is full.");b->value->AddResult(ShapeValue(shape));}
+  if(action==1){Require(index>=0 && index<seq->Length(),"Binder index outside bounds.");b->value->SetResult(index+1,ShapeValue(shape));}
+  if(action>=2){Require(message && *message && std::strlen(message)<=1048576,"Invalid diagnostic text.");if(action==2)b->value->AddFail(message,message);else b->value->AddWarning(message,message);}
+  Publication<ShapeBinder> pub(b);*result=pub.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_binder_shapes(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto b=OcctSharpOwned::Lease<const ShapeBinder>(token);*result=PublishShapes(b->value->Result());});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_binder_shape(const void* token,int32_t index,int32_t kind,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto b=OcctSharpOwned::Lease<const ShapeBinder>(token);Require(index>=0 && index<b->value->Result()->Length() && kind>=0 && kind<=8,"Invalid binder index or shape kind.");
+  int n=index+1;auto shape=b->value->Shape(n);if(kind!=8)Require(shape.ShapeType()==static_cast<TopAbs_ShapeEnum>(kind),"Binder shape has a different topology kind.");
+  switch(kind){case 0:shape=b->value->Compound(n);break;case 1:shape=b->value->CompSolid(n);break;case 2:shape=b->value->Solid(n);break;case 3:shape=b->value->Shell(n);break;case 4:shape=b->value->Face(n);break;case 5:shape=b->value->Wire(n);break;case 6:shape=b->value->Edge(n);break;case 7:shape=b->value->Vertex(n);break;default:break;}
+  *result=OcctSharp_Internal_AllocateShape(shape);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_transfer_binder_snapshot(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto b=OcctSharpOwned::Lease<const ShapeBinder>(token);auto s=std::make_shared<Snapshot>();s->shapes=b->value->Result();
+  s->json="{\"HasResult\":"+std::string(b->value->HasResult()?"true":"false")+",\"Status\":"+std::to_string(b->value->StatusExec())+",\"ResultType\":"+Quoted(b->value->ResultTypeName())+",\"Messages\":"+Checks(b->value->Check())+"}";
+  Publication<Snapshot> pub(s);*result=pub.Commit();});
+}

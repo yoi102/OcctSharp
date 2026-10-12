@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$PackageVersion = '8.0.1-preview.28')
+param([string]$PackageVersion = '8.0.1-preview.83')
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -17,7 +17,7 @@ $nativeComponents = @(Get-ChildItem -LiteralPath $nativeDirectory -Filter '*.dll
     $isBridge = $_.Name -eq 'OcctSharp.Native.dll'
     $isOcct = $_.Name -like 'TK*.dll' -or $_.Name -eq 'TKernel.dll'
     $component = switch -Regex ($_.Name) {
-        '^OcctSharp\.Native\.dll$' { @{ version = '0.80.0'; license = 'MIT'; source = 'OcctSharp build' }; break }
+        '^OcctSharp\.Native\.dll$' { @{ version = '0.132.0'; license = 'MIT'; source = 'OcctSharp build' }; break }
         '^(TK.*|TKernel)\.dll$' { @{ version = '8.0.1'; license = 'LGPL-2.1-only WITH OCCT-exception-1.0'; source = 'Pinned OCCT distribution' }; break }
         '^tbb12\.dll$' { @{ version = '2021.13.0'; license = 'Apache-2.0'; source = 'Pinned OCCT third-party bundle' }; break }
         '^FreeImage\.dll$' { @{ version = '3.18.0'; license = 'LicenseRef-FreeImage'; source = 'Pinned OCCT third-party bundle' }; break }
@@ -58,6 +58,17 @@ $inputPaths = @(
     'generated/manifest.json',
     'artifacts/generator-reports/dependency-closure.json'
 )
+$packageSnapshotPath = Join-Path $workspaceRoot "artifacts/packages/package-inputs.$PackageVersion.json"
+$packageSnapshot = Get-Content -LiteralPath $packageSnapshotPath -Raw | ConvertFrom-Json
+if ($packageSnapshot.state -ne 'PASS' -or $packageSnapshot.packageVersion -ne $PackageVersion -or @($packageSnapshot.packages).Count -ne 14) {
+    throw 'Release metadata requires a complete, matching package input snapshot.'
+}
+foreach ($package in $packageSnapshot.packages) {
+    $path = Join-Path $workspaceRoot "artifacts/packages/$($package.name)"
+    if ((Get-FileHash -LiteralPath $path).Hash -cne $package.sha256) { throw "Package no longer matches its input snapshot: $($package.name)" }
+}
+$inputPaths += "artifacts/packages/package-inputs.$PackageVersion.json"
+Copy-Item -LiteralPath $packageSnapshotPath -Destination (Join-Path $releaseDirectory 'package-inputs.json') -Force
 $provenance = [ordered]@{
     schemaVersion = '1.0'
     subject = [ordered]@{
@@ -68,8 +79,8 @@ $provenance = [ordered]@{
         dotnetSdk = (& dotnet --version).Trim()
         platform = 'windows-x64'
         configuration = 'Release'
-        nativeAbi = '1.72'
-        bridgeVersion = '0.80.0'
+        nativeAbi = '1.117'
+        bridgeVersion = '0.132.0'
         occtVersion = '8.0.1'
     }
     inputs = @($inputPaths | ForEach-Object {

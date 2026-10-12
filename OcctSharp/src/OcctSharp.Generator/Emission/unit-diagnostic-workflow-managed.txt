@@ -1,0 +1,97 @@
+#nullable enable
+using System.Globalization;
+namespace OcctSharp.FoundationValues;
+
+/// <summary>The SDK's nine physical dimension exponents; angles remain explicit independent dimensions.</summary>
+public enum UnitDimensionKind {
+ /// <summary>No physical dimension.</summary>
+ Dimensionless=0,
+ /// <summary>Mass.</summary>
+ Mass=1,
+ /// <summary>Length.</summary>
+ Length=2,
+ /// <summary>Time.</summary>
+ Time=3,
+ /// <summary>Electric current.</summary>
+ ElectricCurrent=4,
+ /// <summary>Thermodynamic temperature.</summary>
+ Temperature=5,
+ /// <summary>Amount of substance.</summary>
+ AmountOfSubstance=6,
+ /// <summary>Luminous intensity.</summary>
+ LuminousIntensity=7,
+ /// <summary>Plane angle.</summary>
+ PlaneAngle=8,
+ /// <summary>Solid angle.</summary>
+ SolidAngle=9
+}
+/// <summary>A finite value, explicit source/target unit and expected dimension. Optional finite limits apply in the target unit.</summary>
+public sealed record UnitConversionInput(double Value,string FromUnit,string ToUnit,UnitDimensionKind ExpectedDimension,double? Minimum=null,double? Maximum=null);
+/// <summary>Independent converted value and copied diagnostics. Ordinal is one-based; caller units and input value remain available.</summary>
+public sealed record UnitConversionSnapshot(int Ordinal,UnitConversionInput Input,UnitValue Converted,MessageDiagnostic Diagnostic);
+/// <summary>Failure category for an atomic unit batch.</summary>
+public enum UnitWorkflowFailure {
+ /// <summary>Null, invalid finite value, bounded unit syntax, dimension kind or limits.</summary>
+ InvalidInput,
+ /// <summary>The actual physical dimension differs from the requested one.</summary>
+ DimensionMismatch,
+ /// <summary>The SDK could not convert or produce copied diagnostics.</summary>
+ ConversionFailure,
+ /// <summary>The source enumerable failed, including enumerator disposal.</summary>
+ EnumerationFailure,
+ /// <summary>The converted value falls outside the explicit limits.</summary>
+ ValueOutOfRange
+}
+/// <summary>An atomic batch failure. Ordinal is the one-based row being processed; no partial result is published.</summary>
+public sealed class UnitWorkflowException : ArgumentException {
+ /// <summary>One-based row at the failure.</summary>
+ public int Ordinal { get; }
+ /// <summary>Explicit failure category.</summary>
+ public UnitWorkflowFailure Failure { get; }
+ internal UnitWorkflowException(int ordinal,UnitWorkflowFailure failure,string message,Exception? inner=null)
+     : base($"Unit row {ordinal}: {message}","input",inner){Ordinal=ordinal;Failure=failure;}
+}
+/// <summary>Generated bounded unit conversion, numeric limits, explicit dimension checks and copied diagnostics. Caller mutations must be synchronized during enumeration.</summary>
+public static class UnitDiagnosticWorkflow {
+ /// <summary>Maximum rows. This bounds storage and SDK call count, not enumeration execution time.</summary>
+ public const int MaximumRows=4096;
+ /// <summary>Returns all independent rows on success. Enumeration, conversion, dimension or numeric failures throw with no result. No global working-unit configuration is changed.</summary>
+ public static IReadOnlyList<UnitConversionSnapshot> Convert(IEnumerable<UnitConversionInput> input){
+  ArgumentNullException.ThrowIfNull(input);
+  var rows=new List<UnitConversionInput>();
+  bool budgetExceeded=false;
+  try{
+   using var iterator=input.GetEnumerator();
+   while(iterator.MoveNext()){
+    if(rows.Count==MaximumRows){budgetExceeded=true;break;}
+    rows.Add(iterator.Current);
+   }
+  }catch(Exception error){throw new UnitWorkflowException(rows.Count+1,UnitWorkflowFailure.EnumerationFailure,"Input enumeration failed.",error);}
+  if(budgetExceeded)throw new UnitWorkflowException(rows.Count+1,UnitWorkflowFailure.InvalidInput,"Row budget exceeded.");
+  var output=new UnitConversionSnapshot[rows.Count];
+  for(int index=0;index<rows.Count;index++){
+   int ordinal=index+1;var row=rows[index];
+   if(row is null||!double.IsFinite(row.Value)||!Enum.IsDefined(row.ExpectedDimension)
+      ||!ValidUnit(row.FromUnit)||!ValidUnit(row.ToUnit)
+      ||row.Minimum is double minimum&&!double.IsFinite(minimum)
+      ||row.Maximum is double maximum&&!double.IsFinite(maximum)
+      ||row.Minimum is double lower&&row.Maximum is double upper&&lower>upper)
+    throw new UnitWorkflowException(ordinal,UnitWorkflowFailure.InvalidInput,"Invalid bounded units, finite value, dimension kind or limits.");
+   try{
+    var converted=SdkValues.ConvertUnits(row.Value,row.FromUnit,row.ToUnit);
+    var expected=SdkValues.Dimension((int)row.ExpectedDimension);
+    if(!converted.Exponents.SequenceEqual(expected.Exponents))
+     throw new UnitWorkflowException(ordinal,UnitWorkflowFailure.DimensionMismatch,"Actual physical dimension differs from the expected dimension.");
+    if(row.Minimum is double min&&converted.Value<min||row.Maximum is double max&&converted.Value>max)
+     throw new UnitWorkflowException(ordinal,UnitWorkflowFailure.ValueOutOfRange,"Converted value is outside the target-unit limits.");
+    var diagnostic=SdkDiagnostics.Message("row=%d; value=%s; unit=%s",strings:[converted.Value.ToString("R",CultureInfo.InvariantCulture),row.ToUnit],integers:[ordinal]);
+    if(diagnostic.UnresolvedArguments!=0||diagnostic.Value!=diagnostic.Complete)
+     throw new InvalidOperationException("Unit diagnostic placeholders remain unresolved.");
+    output[index]=new(ordinal,row,converted,diagnostic);
+   }catch(UnitWorkflowException){throw;}
+    catch(Exception error){throw new UnitWorkflowException(ordinal,UnitWorkflowFailure.ConversionFailure,"SDK conversion or diagnostic copying failed.",error);}
+  }
+  return Array.AsReadOnly(output);
+ }
+ static bool ValidUnit(string? unit)=>unit is {Length:>0 and <=256}&&!unit.Any(c=>c>127||c=='\0');
+}

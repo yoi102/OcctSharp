@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$PackageVersion = '8.0.1-preview.28')
+param([string]$PackageVersion = '8.0.1-preview.83')
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -21,8 +21,15 @@ $checksumInputs = @(
     $provenancePath,
     $gatePath,
     (Join-Path $releaseDirectory 'sbom.cdx.json'),
-    $packagePath
+    (Join-Path $releaseDirectory 'package-inputs.json')
 )
+$packageSnapshot = Get-Content -LiteralPath (Join-Path $releaseDirectory 'package-inputs.json') -Raw | ConvertFrom-Json
+if ($packageSnapshot.state -ne 'PASS' -or $packageSnapshot.packageVersion -ne $PackageVersion -or @($packageSnapshot.packages).Count -ne 14) { throw 'Invalid package snapshot for checksums.' }
+foreach ($package in $packageSnapshot.packages) {
+    $path = Join-Path $workspaceRoot "artifacts/packages/$($package.name)"
+    if ((Get-FileHash -LiteralPath $path).Hash -cne $package.sha256) { throw "Package snapshot mismatch before checksums: $($package.name)" }
+    $checksumInputs += $path
+}
 $checksumLines = @($checksumInputs | ForEach-Object {
     if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) {
         throw "Required checksum input is missing: '$_'."

@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #include "Mesh/MeshAuthoring.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Shape.hxx"
@@ -44,14 +45,14 @@ occ::handle<Poly_Triangulation> Build(const OcctSharp_AuthoredVertex* vertices, 
   occ::handle<Poly_Triangulation> mesh = new Poly_Triangulation(vertexCount, triangleCount, uv, normals);
   for (int i = 0; i < vertexCount; ++i) {
     const auto& v = vertices[i]; mesh->SetNode(i + 1, gp_Pnt(v.x, v.y, v.z));
-    if (uv) mesh->SetUVNode(i + 1, gp_Pnt2d(v.u, v.v));
+    if (uv) OcctSharpGenerated::MeshSetUVNode(*mesh, i + 1, gp_Pnt2d(v.u, v.v));
     if (normals) {
       gp_XYZ n(v.nx, v.ny, v.nz);
       if (v.flags & 1) { double scale = std::max({std::abs(v.nx), std::abs(v.ny), std::abs(v.nz)}); n /= scale; n.Normalize(); }
-      mesh->SetNormal(i + 1, NCollection_Vec3<float>(static_cast<float>(n.X()), static_cast<float>(n.Y()), static_cast<float>(n.Z())));
+      OcctSharpGenerated::MeshSetNormal(*mesh, i + 1, NCollection_Vec3<float>(static_cast<float>(n.X()), static_cast<float>(n.Y()), static_cast<float>(n.Z())));
     }
   }
-  for (int i = 0; i < triangleCount; ++i) mesh->SetTriangle(i + 1, Poly_Triangle(triangles[i].a + 1, triangles[i].b + 1, triangles[i].c + 1));
+  for (int i = 0; i < triangleCount; ++i) OcctSharpGenerated::MeshSetTriangle(*mesh, i + 1, Poly_Triangle(triangles[i].a + 1, triangles[i].b + 1, triangles[i].c + 1));
   return mesh;
 }
 }
@@ -110,9 +111,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_polyline(const OcctSharp_Authored
     }
     // Both native Poly representations are created call-locally; only the independently owning edge escapes.
     occ::handle<Poly_PolygonOnTriangulation> indexed = parameterCount
-      ? new Poly_PolygonOnTriangulation(nodes, params) : new Poly_PolygonOnTriangulation(nodes);
+      ? OcctSharpGenerated::MeshPolygonOnTriangulation(nodes, params) : OcctSharpGenerated::MeshPolygonOnTriangulation(nodes);
     Require(indexed->NbNodes() == indexCount, "Indexed polygon construction failed.");
-    occ::handle<Poly_Polygon3D> polygon = parameterCount ? new Poly_Polygon3D(points, params) : new Poly_Polygon3D(points);
+    occ::handle<Poly_Polygon3D> polygon = parameterCount ? OcctSharpGenerated::MeshPolygon3D(points, params) : OcctSharpGenerated::MeshPolygon3D(points);
     TopoDS_Edge edge; BRep_Builder builder; builder.MakeEdge(edge, polygon); *output = AllocateShape(edge);
   });
 }

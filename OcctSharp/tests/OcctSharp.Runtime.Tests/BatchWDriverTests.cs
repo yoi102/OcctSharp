@@ -5,6 +5,38 @@ namespace OcctSharp.Runtime.Tests;
 #pragma warning disable CA1861
 public sealed class BatchWDriverTests(ITestOutputHelper output)
 {
+    [Fact]
+    public void OverlayPresentationRemainsVisibleThroughModelDepth()
+    {
+        using var window=new BatchWRenderingTests.Window();
+        var viewer=window.Viewer;
+        using var box=ShapeFactory.CreateBox(10,10,10);
+        using var marker=ShapeFactory.CreateSphere(2);
+        using var body=viewer.Display(box);
+        using var handle=viewer.Display(marker);
+        body.SetColor(new(0.8,0.2,0.1));
+        body.SetDisplayMode(ViewerDisplayMode.Shaded);
+        handle.SetColor(new(0.1,0.9,0.2));
+        handle.SetDisplayMode(ViewerDisplayMode.Shaded);
+        using(var offset=GpVec.Create(5,5,5))
+        using(var transform=offset.ToTranslation())handle.SetTransform(transform);
+        viewer.SetProjection(ViewerProjection.Top);
+        viewer.SetBackgroundColor(new(0,0,0));
+        viewer.FitAll();
+        viewer.Zoom(.8);
+        string screenshot=Path.Combine(Path.GetTempPath(),$"occt-overlay-{Guid.NewGuid():N}.png");
+        try
+        {
+            viewer.Redraw();viewer.SaveScreenshot(screenshot,overwrite:true);
+            var hidden=File.ReadAllBytes(screenshot);
+            handle.SetOverlay(true);viewer.Redraw();viewer.SaveScreenshot(screenshot,overwrite:true);
+            var visible=File.ReadAllBytes(screenshot);
+            Assert.NotEqual(hidden,visible);
+            handle.SetOverlay(false);viewer.Redraw();viewer.SaveScreenshot(screenshot,overwrite:true);
+            Assert.Equal(hidden,File.ReadAllBytes(screenshot));
+        }
+        finally {File.Delete(screenshot);}
+    }
     [Theory]
     [InlineData(false)]
     [InlineData(true)]

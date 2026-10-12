@@ -10,4 +10,6 @@ namespace OcctSharp::Native
 Aspect_TypeOfTriedronPosition ToTrihedronPosition(const int32_t position);
 
 V3d_TypeOfOrientation ToViewerProjection(const int32_t projection);
+
+void SyncViewCubeRollArrows(OcctSharp_ViewerHandle* viewer);
 }

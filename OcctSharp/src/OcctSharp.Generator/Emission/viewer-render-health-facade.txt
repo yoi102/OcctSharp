@@ -1,0 +1,48 @@
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+/// <summary>Copied OCCT presentation/context observations, not a diagnosis of physical GPU removal.</summary>
+[Flags]
+public enum ViewerRenderingHealth
+{
+    /// <summary>No OCCT presentation/context fault flag was observed at this instant.</summary>
+    Healthy = 0,
+    /// <summary>OCCT requires presentation data to be uploaded again.</summary>
+    PresentationDataLost = 1,
+    /// <summary>No shared graphics context was available; initialization may be incomplete.</summary>
+    ContextUnavailable = 2,
+    /// <summary>A shared graphics context exists but OCCT reports it invalid.</summary>
+    ContextInvalid = 4
+}
+
+public sealed partial class OcctViewer
+{
+    /// <summary>Reads copied native health flags on the viewer owner thread without clearing them,
+    /// redrawing, recreating the viewer, or changing presentations/camera. Generic native errors
+    /// and invalid geometry are not converted to a rendering fault.</summary>
+    public ViewerRenderingHealth GetRenderingHealth()
+    {
+        EnsureRenderingHealthAbi();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerRenderingHealth(Handle, out int flags), "viewer_render_health");
+        if ((flags & ~7) != 0 || flags < 0)
+            throw new InvalidOperationException("The native viewer returned unknown rendering health flags.");
+        return (ViewerRenderingHealth)flags;
+    }
+
+    /// <summary>Explicitly marks this viewer's OCCT presentation data for reupload. The caller
+    /// decides when to redraw or recreate. It does not invalidate a physical device/context,
+    /// change presentation identities, or authorize automatic document/model changes.</summary>
+    public void InvalidateGpuResources()
+    {
+        EnsureRenderingHealthAbi();
+        NativeError.ThrowIfFailed(NativeMethods.InvalidateViewerGpuResources(Handle), "viewer_invalidate_gpu_resources");
+    }
+
+    private void EnsureRenderingHealthAbi()
+    {
+        EnsureThread();
+        if (OcctRuntime.Info.AbiVersion.Minor < 116)
+            throw new NotSupportedException("Rendering health observation requires native ABI 1.116 or later.");
+    }
+}

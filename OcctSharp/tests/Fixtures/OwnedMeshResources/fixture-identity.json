@@ -1,0 +1,61 @@
+{
+  "pngSha256": "E6D66889131220F931FDDFB05730D647A0992456C63AE0A8154B4AE32FF219EF",
+  "width": 2,
+  "height": 2,
+  "corners": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "inputs": [
+    {
+      "path": "嵌入.gltf",
+      "sha256": "97CCAEEF758E022986BD877AB3CF28D0E4558173F1D119CE405597A16CF30F8E"
+    },
+    {
+      "path": "嵌套.gltf",
+      "sha256": "4C8630D5BA00A8BAE6389912DD5054D2869BB7E5A3E8A2CBDA44D3584482DBED"
+    },
+    {
+      "path": "嵌套.obj",
+      "sha256": "968D3FC8B2BB23A80D951F6239168CC428C4280436A1F26D903C5D521AB68EE9"
+    },
+    {
+      "path": "images/色块.png",
+      "sha256": "E6D66889131220F931FDDFB05730D647A0992456C63AE0A8154B4AE32FF219EF"
+    },
+    {
+      "path": "materials/材料.mtl",
+      "sha256": "C2EF6260CD83FB4F00C969A3CBFDE27BCC34643C77B42F6CBE946A4188E179D7"
+    },
+    {
+      "path": "parts/嵌入.bin",
+      "sha256": "ECA2304E94B9FBECB50A8EF30013E86A561FE892869248E0D7A8E456DE1EE255"
+    },
+    {
+      "path": "parts/网格.bin",
+      "sha256": "A762FC39AD8CCE92D9034F888C5DDB7FD0289FE8AB2BA657E99B8CC303ABE718"
+    },
+    {
+      "path": "materials/textures/色块.png",
+      "sha256": "E6D66889131220F931FDDFB05730D647A0992456C63AE0A8154B4AE32FF219EF"
+    }
+  ]
+}

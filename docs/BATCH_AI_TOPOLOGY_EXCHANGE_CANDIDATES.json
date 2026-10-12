@@ -1,0 +1,624 @@
+{
+  "baseline": "8.0.1-preview.32",
+  "state": "PLANNED_CANDIDATES_NOT_ADMITTED",
+  "scope": "AI topology and exchange collections",
+  "baselineInventorySha256": "BABAD4D1CFE1C6B1FD21FC1E264B454E60677121AC522E173AE8AF1BA777768F",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@Tools#1",
+      "nativeName": "BRepAlgoAPI_BooleanOperation::Tools",
+      "signature": "BRepAlgoAPI_BooleanOperation::Tools: const NCollection_List<TopoDS_Shape> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Arguments#1",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::Arguments",
+      "signature": "BRepAlgoAPI_BuilderAlgo::Arguments: const NCollection_List<TopoDS_Shape> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SectionEdges#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SectionEdges",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SectionEdges: const NCollection_List<TopoDS_Shape> &()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@AddFacesToRemove#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_Defeaturing::AddFacesToRemove",
+      "signature": "BRepAlgoAPI_Defeaturing::AddFacesToRemove: void (const NCollection_List<TopoDS_Shape> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@FacesToRemove#1",
+      "nativeName": "BRepAlgoAPI_Defeaturing::FacesToRemove",
+      "signature": "BRepAlgoAPI_Defeaturing::FacesToRemove: const NCollection_List<TopoDS_Shape> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Splitter@F@Tools#1",
+      "nativeName": "BRepAlgoAPI_Splitter::Tools",
+      "signature": "BRepAlgoAPI_Splitter::Tools: const NCollection_List<TopoDS_Shape> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@ContigousEdgeCouple#I#1",
+      "nativeName": "BRepBuilderAPI_Sewing::ContigousEdgeCouple",
+      "signature": "BRepBuilderAPI_Sewing::ContigousEdgeCouple: const NCollection_List<TopoDS_Shape> &(const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@AddItem#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Interface_EntityIterator::AddItem",
+      "signature": "Interface_EntityIterator::AddItem: void (const occ::handle<Standard_Transient> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@AddList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Interface_EntityIterator::AddList",
+      "signature": "Interface_EntityIterator::AddList: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Content#1",
+      "nativeName": "Interface_EntityIterator::Content",
+      "signature": "Interface_EntityIterator::Content: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Destroy#",
+      "nativeName": "Interface_EntityIterator::Destroy",
+      "signature": "Interface_EntityIterator::Destroy: void ()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@GetOneItem#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Interface_EntityIterator::GetOneItem",
+      "signature": "Interface_EntityIterator::GetOneItem: void (const occ::handle<Standard_Transient> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Interface_EntityIterator#",
+      "nativeName": "Interface_EntityIterator::Interface_EntityIterator",
+      "signature": "Interface_EntityIterator::Interface_EntityIterator: void ()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Interface_EntityIterator#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Interface_EntityIterator::Interface_EntityIterator",
+      "signature": "Interface_EntityIterator::Interface_EntityIterator: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Interface_EntityIterator#&1$@S@Interface_EntityIterator#",
+      "nativeName": "Interface_EntityIterator::Interface_EntityIterator",
+      "signature": "Interface_EntityIterator::Interface_EntityIterator: void (const Interface_EntityIterator &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@More#1",
+      "nativeName": "Interface_EntityIterator::More",
+      "signature": "Interface_EntityIterator::More: bool () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@NbEntities#1",
+      "nativeName": "Interface_EntityIterator::NbEntities",
+      "signature": "Interface_EntityIterator::NbEntities: int () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@NbTyped#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "Interface_EntityIterator::NbTyped",
+      "signature": "Interface_EntityIterator::NbTyped: int (const occ::handle<Standard_Type> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Next#1",
+      "nativeName": "Interface_EntityIterator::Next",
+      "signature": "Interface_EntityIterator::Next: void () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@SelectType#&1$@N@opencascade@S@handle>#$@S@Standard_Type#b#",
+      "nativeName": "Interface_EntityIterator::SelectType",
+      "signature": "Interface_EntityIterator::SelectType: void (const occ::handle<Standard_Type> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Start#1",
+      "nativeName": "Interface_EntityIterator::Start",
+      "signature": "Interface_EntityIterator::Start: void () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Typed#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "Interface_EntityIterator::Typed",
+      "signature": "Interface_EntityIterator::Typed: Interface_EntityIterator (const occ::handle<Standard_Type> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_EntityIterator@F@Value#1",
+      "nativeName": "Interface_EntityIterator::Value",
+      "signature": "Interface_EntityIterator::Value: const occ::handle<Standard_Transient> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@GetFromIter#&1$@S@Interface_EntityIterator#I#",
+      "nativeName": "Interface_Graph::GetFromIter",
+      "signature": "Interface_Graph::GetFromIter: void (const Interface_EntityIterator &, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@GetFromIter#&1$@S@Interface_EntityIterator#I#I#b#",
+      "nativeName": "Interface_Graph::GetFromIter",
+      "signature": "Interface_Graph::GetFromIter: void (const Interface_EntityIterator &, const int, const int, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@GetShareds#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_Graph::GetShareds",
+      "signature": "Interface_Graph::GetShareds: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@GetSharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_Graph::GetSharings",
+      "signature": "Interface_Graph::GetSharings: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@RootEntities#1",
+      "nativeName": "Interface_Graph::RootEntities",
+      "signature": "Interface_Graph::RootEntities: Interface_EntityIterator () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@Shareds#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_Graph::Shareds",
+      "signature": "Interface_Graph::Shareds: Interface_EntityIterator (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@SharingTable#1",
+      "nativeName": "Interface_Graph::SharingTable",
+      "signature": "Interface_Graph::SharingTable: const occ::handle<NCollection_HArray1<NCollection_List<int>>> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@Sharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_Graph::Sharings",
+      "signature": "Interface_Graph::Sharings: Interface_EntityIterator (const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_Graph@F@TypedSharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "Interface_Graph::TypedSharings",
+      "signature": "Interface_Graph::TypedSharings: Interface_EntityIterator (const occ::handle<Standard_Transient> &, const occ::handle<Standard_Type> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Interface_GraphContent@F@Result#",
+      "nativeName": "Interface_GraphContent::Result",
+      "signature": "Interface_GraphContent::Result: Interface_EntityIterator ()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@STEPControl_ActorWrite@F@TransferShape#&1$@N@opencascade@S@handle>#$@S@Transfer_Finder#&1$@N@opencascade@S@handle>#$@S@StepShape_ShapeDefinitionRepresentation#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@StepData_Factors#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPControl_ActorWrite::TransferShape",
+      "signature": "STEPControl_ActorWrite::TransferShape: occ::handle<Transfer_Binder> (const occ::handle<Transfer_Finder> &, const occ::handle<StepShape_ShapeDefinitionRepresentation> &, const occ::handle<Transfer_FinderProcess> &, const StepData_Factors &, const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@STEPControl_ActorWrite@F@TransferSubShape#&1$@N@opencascade@S@handle>#$@S@Transfer_Finder#&1$@N@opencascade@S@handle>#$@S@StepShape_ShapeDefinitionRepresentation#&$@N@opencascade@S@handle>#$@S@StepGeom_GeometricRepresentationItem#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@StepData_Factors#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPControl_ActorWrite::TransferSubShape",
+      "signature": "STEPControl_ActorWrite::TransferSubShape: occ::handle<Transfer_Binder> (const occ::handle<Transfer_Finder> &, const occ::handle<StepShape_ShapeDefinitionRepresentation> &, occ::handle<StepGeom_GeometricRepresentationItem> &, const occ::handle<Transfer_FinderProcess> &, const StepData_Factors &, const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@DispatchWires#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#&$@S@NCollection_Sequence>#$@S@ShapeFix_WireSegment#1",
+      "nativeName": "ShapeFix_ComposeShell::DispatchWires",
+      "signature": "ShapeFix_ComposeShell::DispatchWires: void (NCollection_Sequence<TopoDS_Shape> &, NCollection_Sequence<ShapeFix_WireSegment> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixLoopWire#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
+      "nativeName": "ShapeFix_Face::FixLoopWire",
+      "signature": "ShapeFix_Face::FixLoopWire: bool (NCollection_Sequence<TopoDS_Shape> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixOrientation#&$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@NCollection_List>#S2_#$@S@TopTools_ShapeMapHasher#",
+      "nativeName": "ShapeFix_Face::FixOrientation",
+      "signature": "ShapeFix_Face::FixOrientation: bool (NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixSplitFace#&1$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@NCollection_List>#S2_#$@S@TopTools_ShapeMapHasher#",
+      "nativeName": "ShapeFix_Face::FixSplitFace",
+      "signature": "ShapeFix_Face::FixSplitFace: bool (const NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@SplitEdge#&1$@S@TopoDS_Edge#d#&1$@S@TopoDS_Vertex#d#S2_#&1$@S@TopoDS_Face#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#&I#&1$@N@opencascade@S@handle>#$@S@ShapeBuild_ReShape#d#d#1",
+      "nativeName": "ShapeFix_SplitTool::SplitEdge",
+      "signature": "ShapeFix_SplitTool::SplitEdge: bool (const TopoDS_Edge &, const double, const TopoDS_Vertex &, const double, const TopoDS_Vertex &, const TopoDS_Face &, NCollection_Sequence<TopoDS_Shape> &, int &, const occ::handle<ShapeBuild_ReShape> &, const double, const double) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@CheckSmallEdges#&$@S@NCollection_Map>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#&$@S@NCollection_DataMap>#S2_#$@S@NCollection_List>#S2_#S3_#S4_#S0_#",
+      "nativeName": "ShapeFix_Wireframe::CheckSmallEdges",
+      "signature": "ShapeFix_Wireframe::CheckSmallEdges: bool (NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@MergeSmallEdges#&$@S@NCollection_Map>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#&$@S@NCollection_DataMap>#S2_#$@S@NCollection_List>#S2_#S3_#S4_#S0_#b#d#",
+      "nativeName": "ShapeFix_Wireframe::MergeSmallEdges",
+      "signature": "ShapeFix_Wireframe::MergeSmallEdges: bool (NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, const bool, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@KeepShapes#&1$@S@NCollection_Map>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#",
+      "nativeName": "ShapeUpgrade_UnifySameDomain::KeepShapes",
+      "signature": "ShapeUpgrade_UnifySameDomain::KeepShapes: void (const NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_Finder@F@AttrList#",
+      "nativeName": "Transfer_Finder::AttrList",
+      "signature": "Transfer_Finder::AttrList: NCollection_DataMap<TCollection_AsciiString, occ::handle<Standard_Transient>> &()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_IteratorOfProcessForFinder@F@Filter#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Transfer_Finder#b#",
+      "nativeName": "Transfer_IteratorOfProcessForFinder::Filter",
+      "signature": "Transfer_IteratorOfProcessForFinder::Filter: void (const occ::handle<NCollection_HSequence<occ::handle<Transfer_Finder>>> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_IteratorOfProcessForTransient@F@Filter#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "Transfer_IteratorOfProcessForTransient::Filter",
+      "signature": "Transfer_IteratorOfProcessForTransient::Filter: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_MapContainer@F@GetMapObjects#",
+      "nativeName": "Transfer_MapContainer::GetMapObjects",
+      "signature": "Transfer_MapContainer::GetMapObjects: NCollection_DataMap<occ::handle<Standard_Transient>, occ::handle<Standard_Transient>> &()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_MapContainer@F@SetMapObjects#&$@S@NCollection_DataMap>#$@N@opencascade@S@handle>#$@S@Standard_Transient#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "Transfer_MapContainer::SetMapObjects",
+      "signature": "Transfer_MapContainer::SetMapObjects: void (NCollection_DataMap<occ::handle<Standard_Transient>, occ::handle<Standard_Transient>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_MultipleBinder@F@MultipleResult#1",
+      "nativeName": "Transfer_MultipleBinder::MultipleResult",
+      "signature": "Transfer_MultipleBinder::MultipleResult: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_MultipleBinder@F@SetMultipleResult#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Transfer_MultipleBinder::SetMultipleResult",
+      "signature": "Transfer_MultipleBinder::SetMultipleResult: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@CheckedList#$@E@Interface_CheckStatus#b#1",
+      "nativeName": "Transfer_ResultFromModel::CheckedList",
+      "signature": "Transfer_ResultFromModel::CheckedList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const Interface_CheckStatus, const bool) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@Results#I#1",
+      "nativeName": "Transfer_ResultFromModel::Results",
+      "signature": "Transfer_ResultFromModel::Results: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromModel@F@TransferredList#I#1",
+      "nativeName": "Transfer_ResultFromModel::TransferredList",
+      "signature": "Transfer_ResultFromModel::TransferredList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_ResultFromTransient@F@FillMap#&$@S@NCollection_IndexedMap>#$@N@opencascade@S@handle>#$@S@Standard_Transient#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "Transfer_ResultFromTransient::FillMap",
+      "signature": "Transfer_ResultFromTransient::FillMap: void (NCollection_IndexedMap<occ::handle<Standard_Transient>> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferInput@F@Entities#&$@S@Transfer_TransferIterator#1",
+      "nativeName": "Transfer_TransferInput::Entities",
+      "signature": "Transfer_TransferInput::Entities: Interface_EntityIterator (Transfer_TransferIterator &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransferOutput@F@ListForStatus#b#b#1",
+      "nativeName": "Transfer_TransferOutput::ListForStatus",
+      "signature": "Transfer_TransferOutput::ListForStatus: Interface_EntityIterator (const bool, const bool) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientListBinder@F@Result#1",
+      "nativeName": "Transfer_TransientListBinder::Result",
+      "signature": "Transfer_TransientListBinder::Result: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientListBinder@F@Transfer_TransientListBinder#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "Transfer_TransientListBinder::Transfer_TransientListBinder",
+      "signature": "Transfer_TransientListBinder::Transfer_TransientListBinder: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientProcess@F@Context#",
+      "nativeName": "Transfer_TransientProcess::Context",
+      "signature": "Transfer_TransientProcess::Context: NCollection_DataMap<TCollection_AsciiString, occ::handle<Standard_Transient>> &()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientProcess@F@RootsForTransfer#",
+      "nativeName": "Transfer_TransientProcess::RootsForTransfer",
+      "signature": "Transfer_TransientProcess::RootsForTransfer: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> ()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@Transfer_TransientProcess@F@TypedSharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "Transfer_TransientProcess::TypedSharings",
+      "signature": "Transfer_TransientProcess::TypedSharings: Interface_EntityIterator (const occ::handle<Standard_Transient> &, const occ::handle<Standard_Type> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_ConnectedShapes@F@AdjacentEntities#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#$@E@TopAbs_ShapeEnum#S",
+      "nativeName": "XSControl_ConnectedShapes::AdjacentEntities",
+      "signature": "XSControl_ConnectedShapes::AdjacentEntities: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const TopoDS_Shape &, const occ::handle<Transfer_TransientProcess> &, const TopAbs_ShapeEnum)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_ConnectedShapes@F@Explore#I#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@Interface_Graph#&$@S@Interface_EntityIterator#1",
+      "nativeName": "XSControl_ConnectedShapes::Explore",
+      "signature": "XSControl_ConnectedShapes::Explore: bool (const int, const occ::handle<Standard_Transient> &, const Interface_Graph &, Interface_EntityIterator &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Controller@F@AdaptorSession#1",
+      "nativeName": "XSControl_Controller::AdaptorSession",
+      "signature": "XSControl_Controller::AdaptorSession: const NCollection_DataMap<TCollection_AsciiString, occ::handle<Standard_Transient>> &() const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_FuncShape@F@MoreShapes#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#*1C#S",
+      "nativeName": "XSControl_FuncShape::MoreShapes",
+      "signature": "XSControl_FuncShape::MoreShapes: int (const occ::handle<XSControl_WorkSession> &, occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const char *const)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GetStatsTransfer#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&I#S5_#S5_#1",
+      "nativeName": "XSControl_Reader::GetStatsTransfer",
+      "signature": "XSControl_Reader::GetStatsTransfer: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, int &, int &, int &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GiveList#*1C#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "XSControl_Reader::GiveList",
+      "signature": "XSControl_Reader::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const occ::handle<Standard_Transient> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GiveList#*1C#S0_#",
+      "nativeName": "XSControl_Reader::GiveList",
+      "signature": "XSControl_Reader::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const char *const)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferList",
+      "signature": "XSControl_Reader::TransferList: int (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const Message_ProgressRange &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@CheckedList#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#$@E@Interface_CheckStatus#b#1",
+      "nativeName": "XSControl_TransferReader::CheckedList",
+      "signature": "XSControl_TransferReader::CheckedList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &, const Interface_CheckStatus, const bool) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@Context#",
+      "nativeName": "XSControl_TransferReader::Context",
+      "signature": "XSControl_TransferReader::Context: NCollection_DataMap<TCollection_AsciiString, occ::handle<Standard_Transient>> &()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@EntitiesFromShapeList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#I#1",
+      "nativeName": "XSControl_TransferReader::EntitiesFromShapeList",
+      "signature": "XSControl_TransferReader::EntitiesFromShapeList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@LastTransferList#b#1",
+      "nativeName": "XSControl_TransferReader::LastTransferList",
+      "signature": "XSControl_TransferReader::LastTransferList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const bool) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@PrintStatsOnList#&1$@N@opencascade@S@handle>#$@S@Transfer_TransientProcess#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#I#I#S",
+      "nativeName": "XSControl_TransferReader::PrintStatsOnList",
+      "signature": "XSControl_TransferReader::PrintStatsOnList: void (const occ::handle<Transfer_TransientProcess> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@RecordedList#1",
+      "nativeName": "XSControl_TransferReader::RecordedList",
+      "signature": "XSControl_TransferReader::RecordedList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@ShapeResultList#b#",
+      "nativeName": "XSControl_TransferReader::ShapeResultList",
+      "signature": "XSControl_TransferReader::ShapeResultList: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &(const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@TransferList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_TransferReader::TransferList",
+      "signature": "XSControl_TransferReader::TransferList: int (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@AppendCStr#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#*1C#1",
+      "nativeName": "XSControl_Utils::AppendCStr",
+      "signature": "XSControl_Utils::AppendCStr: void (const occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> &, const char *const) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@AppendEStr#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@TCollection_HExtendedString#*1q#1",
+      "nativeName": "XSControl_Utils::AppendEStr",
+      "signature": "XSControl_Utils::AppendEStr: void (const occ::handle<NCollection_HSequence<occ::handle<TCollection_HExtendedString>>> &, const char16_t *const) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@AppendShape#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#&1S3_#1",
+      "nativeName": "XSControl_Utils::AppendShape",
+      "signature": "XSControl_Utils::AppendShape: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const TopoDS_Shape &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@AppendTra#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&1S3_#1",
+      "nativeName": "XSControl_Utils::AppendTra",
+      "signature": "XSControl_Utils::AppendTra: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const occ::handle<Standard_Transient> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@CompoundFromSeq#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#1",
+      "nativeName": "XSControl_Utils::CompoundFromSeq",
+      "signature": "XSControl_Utils::CompoundFromSeq: TopoDS_Shape (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@NewSeqCStr#1",
+      "nativeName": "XSControl_Utils::NewSeqCStr",
+      "signature": "XSControl_Utils::NewSeqCStr: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@NewSeqEStr#1",
+      "nativeName": "XSControl_Utils::NewSeqEStr",
+      "signature": "XSControl_Utils::NewSeqEStr: occ::handle<NCollection_HSequence<occ::handle<TCollection_HExtendedString>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@NewSeqShape#1",
+      "nativeName": "XSControl_Utils::NewSeqShape",
+      "signature": "XSControl_Utils::NewSeqShape: occ::handle<NCollection_HSequence<TopoDS_Shape>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@NewSeqTra#1",
+      "nativeName": "XSControl_Utils::NewSeqTra",
+      "signature": "XSControl_Utils::NewSeqTra: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> () const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@SeqIntValue#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#I#I#1",
+      "nativeName": "XSControl_Utils::SeqIntValue",
+      "signature": "XSControl_Utils::SeqIntValue: int (const occ::handle<NCollection_HSequence<int>> &, const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    },
+    {
+      "stableId": "c:@S@XSControl_Utils@F@ShapeValue#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#I#1",
+      "nativeName": "XSControl_Utils::ShapeValue",
+      "signature": "XSControl_Utils::ShapeValue: TopoDS_Shape (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const int) const",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit typed element ownership, iteration order, retention, parent/epoch restrictions, failure publication, history-to-repair/exchange and public-only consumers."
+    }
+  ]
+}

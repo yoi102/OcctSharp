@@ -1,0 +1,465 @@
+{
+  "schemaVersion": "1.0",
+  "baseline": "Preview.66 / ABI 1.109 / bridge 0.117.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "sdkSourceIdentitySha256": "E65241E2699527576F46BC3B0C9ED8DBD31C956676F8E481553E0B2D9AB4EAEC",
+  "declarations": [],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cone#d#d#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cylinder#d#d#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#d#d#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Sphere#d#d#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Torus#d#d#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#d#d#",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@CurveOnSurface#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#&d#S7_#*b#S",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Range#&1$@S@TopoDS_Edge#&d#S2_#S",
+      "sourceBatch": "bl",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Extrema_ExtCC#d#d#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@GetSingleSolutionFlag#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Initialize#&1$@S@Adaptor3d_Curve#S0_#d#d#d#d#d#d#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsDone#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsParallel#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@NbExt#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Perform#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Points#I#&$@S@Extrema_POnCurv#S0_#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetSingleSolutionFlag#b#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SquareDistance#I#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@TrimmedSquareDistances#&d#S0_#S0_#S0_#&$@S@gp_Pnt#S1_#S1_#S1_#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Extrema_ExtCS#&1$@S@Adaptor3d_Curve#&1$@S@Adaptor3d_Surface#d#d#d#d#d#d#d#d#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsDone#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsParallel#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@NbExt#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Points#I#&$@S@Extrema_POnCurv#&$@S@Extrema_POnSurf#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@SquareDistance#I#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&1$@S@Adaptor3d_Surface#S0_#d#d#d#d#d#d#d#d#d#d#",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsDone#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsParallel#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@NbExt#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Points#I#&$@S@Extrema_POnSurf#S0_#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@SquareDistance#I#1",
+      "sourceBatch": "bm",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#I#1",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#I#1",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ChangeAll#q#q#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RemoveAll#q#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#I#",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Token#*1q#I#1",
+      "sourceBatch": "bn",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#d#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet1#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet2#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape1#I#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape2#I#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@IsDone#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape1#&1$@S@TopoDS_Shape#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape2#&1$@S@TopoDS_Shape#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes1#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes2#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Perform#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Tolerance#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@BRepExtrema_ProximityValueTool#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@IsDone#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadShapeLists#&1$@S@NCollection_DynamicArray>#$@S@TopoDS_Shape#S0_#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadTriangleSets#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@Perform#&d#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPoints#&$@S@gp_Pnt#S0_#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPointsStatus#&$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#S0_#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@SetNbSamplePoints#I#I#",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_TriangleSet@F@Size#1",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Polygon3D#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#S",
+      "sourceBatch": "bo",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFiles#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeFixParameters#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeProcessFlags#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Writer#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@DESTEP_Parameters#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeFixParameters#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeProcessFlags#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Location@F@Get#1",
+      "sourceBatch": "bp",
+      "reason": "Previously admitted initialized private operation used by the whole-round workflow and retained acceptance suite."
+    }
+  ]
+}

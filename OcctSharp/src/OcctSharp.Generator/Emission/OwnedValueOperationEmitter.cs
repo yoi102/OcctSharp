@@ -226,6 +226,12 @@ internal static class OwnedValueOperationEmitter
         foreach (string output in outputs) cpp.AppendLine("  *" + output + " = {};");
         cpp.AppendLine("  OcctSharp_Internal_SetLastError(\"\");\n  try {");
         foreach (string local in locals) cpp.AppendLine("    " + local);
+        // Pinned SDK Release libraries can compile out collection range checks.
+        // Guard only these exact audited new operations; do not broaden old bodies.
+        if (d.StableId is "c:@S@HatchGen_PointOnHatching@F@Point#I#1"
+            or "c:@S@HatchGen_PointOnHatching@F@RemPoint#I#"
+            or "c:@S@IGESConvGeom_GeomBuilder@F@Point#I#1")
+            cpp.AppendLine("    if (local0 < 1 || local0 > self->NbPoints()) throw Standard_Failure(\"Owned point index is outside [1, NbPoints].\");");
         if (guardMakerResults && !ctor && member is "Value" or "Operator")
             cpp.AppendLine("    if (!self->IsDone()) throw Standard_Failure(\"Owned maker has no result; check IsDone and Status.\");");
         string call = (d.IsStatic ? owner + "::" : "self->") + member + "(" + string.Join(", ", calls) + ")";

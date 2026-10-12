@@ -1,0 +1,84 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.ConstructionWorkspaces;
+#pragma warning disable CS1591
+/// <summary>Orthogonal normal and X directions; values are copied and normalized privately.</summary>
+public sealed record ConstructionFrame(GpPoint Origin,GpXyz Normal,GpXyz XDirection) {
+ public static ConstructionFrame World=>new(new(0,0,0),new(0,0,1),new(1,0,0));
+}
+public enum AnalyticConstructionCurve { Line=0,Circle=1,Ellipse=2,Hyperbola=3,Parabola=4 }
+public enum AnalyticConstructionSurface { Plane=0,Cylinder=1,Cone=2,Sphere=3,Torus=4 }
+/// <summary>Native parameter bounds; a curve uses First/Last, a face additionally uses VFirst/VLast.</summary>
+public sealed record ConstructionBounds(double First,double Last,double VFirst,double VLast);
+public sealed record ConstructionPCurveSample(GpPoint Point,GpPoint2d UV);
+internal sealed partial class ConstructionHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal ConstructionHandle(nint value):base(true){if(value==0)throw new InvalidDataException("Null construction result.");SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_release")]internal static partial void Release(nint value);
+}
+/// <summary>Frozen private construction. Native failure retains diagnostics, with no partial topology. Copied shapes survive disposal.</summary>
+public sealed partial class ParameterizedConstructionResult:IDisposable {
+ readonly ConstructionHandle handle;
+ internal unsafe ParameterizedConstructionResult(nint value){ConstructionHandle? owned=null;try{owned=new(value);int* info=stackalloc int[6];double* bounds=stackalloc double[4];NativeError.ThrowIfFailed(Snapshot(owned,info,6,bounds,4),"parameterized_snapshot");IsDone=info[0]!=0;NativeErrorCode=info[1];IsFace=info[2]!=0;HasStoredPCurve=info[3]!=0;NativeOrientation=info[4];HasSharedEndpointVertex=info[5]!=0;NativeBounds=IsDone?new(bounds[0],bounds[1],bounds[2],bounds[3]):null;handle=owned;}catch{if(owned is null)ConstructionHandle.Release(value);else owned.Dispose();throw;}}
+ public bool IsDone{get;}
+ /// <summary>BRepLib_EdgeError for an edge or BRepBuilderAPI_FaceError for a face.</summary>
+ public int NativeErrorCode{get;}
+ public bool IsFace{get;}
+ public bool HasStoredPCurve{get;}
+ /// <summary>Native IsSame on this frozen edge's two endpoint vertices; this is exact result-domain sharing, not inferred source history.</summary>
+ public bool HasSharedEndpointVertex{get;}
+ /// <summary>TopAbs_Orientation ordinal; -1 for native failure.</summary>
+ public int NativeOrientation{get;}
+ public ConstructionBounds? NativeBounds{get;}
+ public Shape CopyShape()=>CopyRelated(0)!;
+ /// <summary>Role 0 is primary topology; edge roles 1/2 are native first/last vertices. Each non-null result is an independent copy.</summary>
+ public Shape? CopyRelated(int role){CheckDone();if(role<0||role>2)throw new ArgumentOutOfRangeException(nameof(role));NativeError.ThrowIfFailed(ShapeNative(handle,role,out nint value),"parameterized_shape");return value==0?null:ShapeFactory.FromNativeHandle(value,"parameterized_shape");}
+ public GpPoint Evaluate(double parameter,double v=0)=>Sample(parameter,v,false).Point;
+ public ConstructionPCurveSample EvaluatePCurve(double parameter){if(!HasStoredPCurve)throw new InvalidOperationException("No stored construction pcurve.");return Sample(parameter,0,true);}
+ unsafe ConstructionPCurveSample Sample(double parameter,double v,bool pcurve){CheckDone();double* values=stackalloc double[5];NativeError.ThrowIfFailed(SampleNative(handle,parameter,v,pcurve?1:0,values,5),"parameterized_sample");return new(new(values[0],values[1],values[2]),new(values[3],values[4]));}
+ void CheckDone(){ObjectDisposedException.ThrowIf(handle.IsClosed,this);if(!IsDone)throw new InvalidOperationException("No completed construction topology.");}
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_snapshot")]private static unsafe partial NativeStatus Snapshot(ConstructionHandle handle,int* info,int capacity,double* bounds,int count);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_shape")]private static partial NativeStatus ShapeNative(ConstructionHandle handle,int role,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_sample")]private static unsafe partial NativeStatus SampleNative(ConstructionHandle handle,double first,double second,int pcurve,double* values,int capacity);
+}
+/// <summary>Finite private constructors. Synchronize external mutation during input copying. No topology history is inferred.</summary>
+public static partial class ParameterizedConstruction {
+ static ParameterizedConstruction()=>NativeLibraryResolver.EnsureRegistered(typeof(ParameterizedConstruction).Assembly);
+ /// <summary>Creates an independently owning base pcurve from a copied typed spline; no registry token cast or borrowed alias. At most4096 poles/knots.</summary>
+ public static Geom2dCurve CopyPCurve(Geom2dBSplineCurve source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(CopyPCurveNative(source.NativeHandle,out nint value),"parameterized_copy_spline_pcurve");return Geom2dCurve.FromNative(value,"parameterized_copy_spline_pcurve")??throw new InvalidDataException("Null copied pcurve.");}
+ /// <summary>Creates an independently owning base surface from a copied typed spline; at most4096 poles and knots per direction. Synchronize mutation while copying.</summary>
+ public static GeomSurface CopySurface(GeomBSplineSurface source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(CopySurfaceNative(source.NativeHandle,out nint value),"parameterized_copy_spline_surface");return GeomSurface.FromNative(value,"parameterized_copy_spline_surface")??throw new InvalidDataException("Null copied surface.");}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dBSplineCurve curve,GeomSurface surface,double first,double last){ArgumentNullException.ThrowIfNull(surface);using var copied=CopyPCurve(curve);return PCurveEdge(copied,surface,first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dCurve curve,GeomBSplineSurface surface,double first,double last){ArgumentNullException.ThrowIfNull(curve);using var copied=CopySurface(surface);return PCurveEdge(curve,copied,first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dBSplineCurve curve,GeomBSplineSurface surface,double first,double last){using var copiedCurve=CopyPCurve(curve);using var copiedSurface=CopySurface(surface);return PCurveEdge(copiedCurve,copiedSurface,first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dBSplineCurve curve,GeomSurface surface,GpPoint firstPoint,GpPoint lastPoint,double first,double last){ArgumentNullException.ThrowIfNull(surface);using var copied=CopyPCurve(curve);return PCurveEdge(copied,surface,firstPoint,lastPoint,first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dCurve curve,GeomBSplineSurface surface,GpPoint firstPoint,GpPoint lastPoint,double first,double last){ArgumentNullException.ThrowIfNull(curve);using var copied=CopySurface(surface);return PCurveEdge(curve,copied,firstPoint,lastPoint,first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dBSplineCurve curve,GeomBSplineSurface surface,GpPoint firstPoint,GpPoint lastPoint,double first,double last){using var copiedCurve=CopyPCurve(curve);using var copiedSurface=CopySurface(surface);return PCurveEdge(copiedCurve,copiedSurface,firstPoint,lastPoint,first,last);}
+ public static ParameterizedConstructionResult PCurveEdgeWithVertices(Geom2dBSplineCurve curve,GeomSurface surface,Shape firstVertex,Shape lastVertex,double first,double last){ArgumentNullException.ThrowIfNull(surface);using var copied=CopyPCurve(curve);return PCurveEdgeWithVertices(copied,surface,firstVertex,lastVertex,first,last);}
+ public static ParameterizedConstructionResult PCurveEdgeWithVertices(Geom2dCurve curve,GeomBSplineSurface surface,Shape firstVertex,Shape lastVertex,double first,double last){ArgumentNullException.ThrowIfNull(curve);using var copied=CopySurface(surface);return PCurveEdgeWithVertices(curve,copied,firstVertex,lastVertex,first,last);}
+ public static ParameterizedConstructionResult PCurveEdgeWithVertices(Geom2dBSplineCurve curve,GeomBSplineSurface surface,Shape firstVertex,Shape lastVertex,double first,double last){using var copiedCurve=CopyPCurve(curve);using var copiedSurface=CopySurface(surface);return PCurveEdgeWithVertices(copiedCurve,copiedSurface,firstVertex,lastVertex,first,last);}
+ public static ParameterizedConstructionResult CurveEdge(GeomCurve curve,GpPoint firstPoint,GpPoint lastPoint,double first,double last){ArgumentNullException.ThrowIfNull(curve);return Edge(0,0,curve,null,null,null,null,Points(firstPoint,lastPoint),first,last);}
+ public static ParameterizedConstructionResult CurveEdgeWithVertices(GeomCurve curve,Shape firstVertex,Shape lastVertex,double first,double last){ArgumentNullException.ThrowIfNull(curve);ArgumentNullException.ThrowIfNull(firstVertex);ArgumentNullException.ThrowIfNull(lastVertex);return Edge(1,0,curve,null,null,firstVertex,lastVertex,[],first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dCurve curve,GeomSurface surface,double first,double last){ArgumentNullException.ThrowIfNull(curve);ArgumentNullException.ThrowIfNull(surface);return Edge(4,0,null,curve,surface,null,null,[],first,last);}
+ public static ParameterizedConstructionResult PCurveEdge(Geom2dCurve curve,GeomSurface surface,GpPoint firstPoint,GpPoint lastPoint,double first,double last){ArgumentNullException.ThrowIfNull(curve);ArgumentNullException.ThrowIfNull(surface);return Edge(2,0,null,curve,surface,null,null,Points(firstPoint,lastPoint),first,last);}
+ public static ParameterizedConstructionResult PCurveEdgeWithVertices(Geom2dCurve curve,GeomSurface surface,Shape firstVertex,Shape lastVertex,double first,double last){ArgumentNullException.ThrowIfNull(curve);ArgumentNullException.ThrowIfNull(surface);ArgumentNullException.ThrowIfNull(firstVertex);ArgumentNullException.ThrowIfNull(lastVertex);return Edge(3,0,null,curve,surface,firstVertex,lastVertex,[],first,last);}
+ /// <summary>Finite line/conic interval. FirstRadius is circle/ellipse/hyperbola major radius or parabola focal length; SecondRadius is ellipse/hyperbola minor radius.</summary>
+ public static ParameterizedConstructionResult AnalyticEdge(AnalyticConstructionCurve kind,ConstructionFrame frame,double first,double last,double firstRadius=1,double secondRadius=.5){ArgumentNullException.ThrowIfNull(frame);if(!Enum.IsDefined(kind))throw new ArgumentOutOfRangeException(nameof(kind));return Edge(5,(int)kind,null,null,null,null,null,Frame(frame,firstRadius,secondRadius),first,last);}
+ /// <summary>Finite UV face. FirstRadius is cylinder/cone/sphere radius or torus major radius. SecondRadius is cone semi-angle in radians or torus minor radius. Plane ignores both.</summary>
+ public static unsafe ParameterizedConstructionResult AnalyticFace(AnalyticConstructionSurface kind,ConstructionFrame frame,double uFirst,double uLast,double vFirst,double vLast,double firstRadius=1,double secondRadius=.5){ArgumentNullException.ThrowIfNull(frame);if(!Enum.IsDefined(kind))throw new ArgumentOutOfRangeException(nameof(kind));double[] data=Frame(frame,firstRadius,secondRadius);double* bounds=stackalloc double[4]{uFirst,uLast,vFirst,vLast};fixed(double* p=data){NativeError.ThrowIfFailed(FaceNative((int)kind,p,data.Length,bounds,4,out nint value),"parameterized_face");return new(value);}}
+ static unsafe ParameterizedConstructionResult Edge(int mode,int kind,GeomCurve? curve,Geom2dCurve? pcurve,GeomSurface? surface,Shape? firstVertex,Shape? lastVertex,double[] values,double first,double last){fixed(double* p=values){nint value;NativeStatus status=mode switch{0=>CurvePointsNative(mode,kind,curve!.NativeHandle,0,0,0,0,p,values.Length,first,last,out value),1=>CurveVerticesNative(mode,kind,curve!.NativeHandle,0,0,firstVertex!.Handle,lastVertex!.Handle,p,values.Length,first,last,out value),2 or 4=>PCurvePointsNative(mode,kind,0,pcurve!.NativeHandle,surface!.NativeHandle,0,0,p,values.Length,first,last,out value),3=>PCurveVerticesNative(mode,kind,0,pcurve!.NativeHandle,surface!.NativeHandle,firstVertex!.Handle,lastVertex!.Handle,p,values.Length,first,last,out value),_=>AnalyticNative(mode,kind,0,0,0,0,0,p,values.Length,first,last,out value)};NativeError.ThrowIfFailed(status,"parameterized_edge");return new(value);}}
+ static double[] Points(GpPoint a,GpPoint b)=>[a.X,a.Y,a.Z,b.X,b.Y,b.Z];
+ static double[] Frame(ConstructionFrame f,double a,double b)=>[f.Origin.X,f.Origin.Y,f.Origin.Z,f.Normal.X,f.Normal.Y,f.Normal.Z,f.XDirection.X,f.XDirection.Y,f.XDirection.Z,a,b];
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_edge")]private static unsafe partial NativeStatus CurvePointsNative(int mode,int kind,GeomCurveHandle curve,nint pcurve,nint surface,nint firstVertex,nint lastVertex,double* data,int capacity,double first,double last,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_edge")]private static unsafe partial NativeStatus CurveVerticesNative(int mode,int kind,GeomCurveHandle curve,nint pcurve,nint surface,ShapeHandle firstVertex,ShapeHandle lastVertex,double* data,int capacity,double first,double last,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_edge")]private static unsafe partial NativeStatus PCurvePointsNative(int mode,int kind,nint curve,Geom2dCurveHandle pcurve,GeomSurfaceHandle surface,nint firstVertex,nint lastVertex,double* data,int capacity,double first,double last,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_edge")]private static unsafe partial NativeStatus PCurveVerticesNative(int mode,int kind,nint curve,Geom2dCurveHandle pcurve,GeomSurfaceHandle surface,ShapeHandle firstVertex,ShapeHandle lastVertex,double* data,int capacity,double first,double last,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_edge")]private static unsafe partial NativeStatus AnalyticNative(int mode,int kind,nint curve,nint pcurve,nint surface,nint firstVertex,nint lastVertex,double* data,int capacity,double first,double last,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_face")]private static unsafe partial NativeStatus FaceNative(int kind,double* data,int capacity,double* bounds,int count,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_copy_spline_pcurve")]private static partial NativeStatus CopyPCurveNative(Geom2dBSplineCurveHandle source,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_parameterized_copy_spline_surface")]private static partial NativeStatus CopySurfaceNative(GeomBSplineSurfaceHandle source,out nint result);
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "supportingOperations": [],
+  "operations": [
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "STEPControl_Reader::NbRootsForTransfer",
+      "signature": "STEPControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferRoots#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferRoots",
+      "signature": "XSControl_Reader::TransferRoots: int (const Message_ProgressRange &)",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbShapes#1",
+      "nativeName": "XSControl_Reader::NbShapes",
+      "signature": "XSControl_Reader::NbShapes: int () const",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SystemLengthUnit#1",
+      "nativeName": "STEPControl_Reader::SystemLengthUnit",
+      "signature": "STEPControl_Reader::SystemLengthUnit: double () const",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@FileUnits#&$@S@NCollection_Sequence>#$@S@TCollection_AsciiString#S0_#S0_#",
+      "nativeName": "STEPControl_Reader::FileUnits",
+      "signature": "STEPControl_Reader::FileUnits: void (NCollection_Sequence<TCollection_AsciiString> &, NCollection_Sequence<TCollection_AsciiString> &, NCollection_Sequence<TCollection_AsciiString> &)",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SetSystemLengthUnit#d#",
+      "nativeName": "STEPControl_Reader::SetSystemLengthUnit",
+      "signature": "STEPControl_Reader::SetSystemLengthUnit: void (const double)",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@TransferRoot#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPControl_Reader::TransferRoot",
+      "signature": "STEPControl_Reader::TransferRoot: bool (const int, const Message_ProgressRange &)",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ClearShapes#",
+      "nativeName": "XSControl_Reader::ClearShapes",
+      "signature": "XSControl_Reader::ClearShapes: void ()",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@OneShape#1",
+      "nativeName": "XSControl_Reader::OneShape",
+      "signature": "XSControl_Reader::OneShape: TopoDS_Shape () const",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@InitFromStatic#",
+      "nativeName": "DESTEP_Parameters::InitFromStatic",
+      "signature": "DESTEP_Parameters::InitFromStatic: void ()",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "CDPrivateStepOperationProfile",
+      "reason": "Exact fixed-SDK delegation only; retain initialized reader/session, path/finite-unit/root/buffer validation, Guard, matching registry release, native shape copy and success-only publication in original caller. InitFromStatic reads existing global defaults without changing them."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+#include "../Foundation/OcctSharp.Foundation.CopiedSupport.Generated.hxx"
+#include <BSplCLib.hxx>
+#include <BSplSLib.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <Geom2d_BSplineCurve.hxx>
+#include <Geom_BSplineSurface.hxx>
+#include <Geom_BezierCurve.hxx>
+#include <Geom2d_BezierCurve.hxx>
+#include <Geom_BezierSurface.hxx>
+#include <math_Matrix.hxx>
+using namespace OcctSharpCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_GeomBSplineCurveHandle* ValidateGeomBSplineCurve(const OcctSharp_GeomBSplineCurveHandle*);
+const OcctSharp_Geom2dBSplineCurveHandle* ValidateGeom2dBSplineCurve(const OcctSharp_Geom2dBSplineCurveHandle*);
+const OcctSharp_GeomBSplineSurfaceHandle* ValidateGeomBSplineSurface(const OcctSharp_GeomBSplineSurfaceHandle*);
+const OcctSharp_GeomBezierCurveHandle* ValidateGeomBezierCurve(const OcctSharp_GeomBezierCurveHandle*);
+const OcctSharp_Geom2dBezierCurveHandle* ValidateGeom2dBezierCurve(const OcctSharp_Geom2dBezierCurveHandle*);
+const OcctSharp_GeomBezierSurfaceHandle* ValidateGeomBezierSurface(const OcctSharp_GeomBezierSurfaceHandle*);
+}
+namespace {
+constexpr int Limit=1048576;
+void Finite(double x){Require(std::isfinite(x),"Spline values must be finite.");}
+void Size(int n,int width=1){Require(n>0&&width>0&&int64_t(n)*width<=Limit,"Spline workspace capacity exceeded.");}
+void Check(const math_Matrix& m){Size(m.RowNumber(),m.ColNumber());for(int i=m.LowerRow();i<=m.UpperRow();++i)for(int j=m.LowerCol();j<=m.UpperCol();++j)Finite(m(i,j));}
+void* Publish(math_Matrix m){Check(m);Publication<math_Matrix> pub(std::make_shared<math_Matrix>(m));return pub.Commit();}
+struct Axis {
+ double first=0,last=1,low=0,high=1,center=0,scale=1;bool periodic=false;
+ double Normalize(double x)const{Finite(x);if(periodic&&(x<first||x>last)){double length=last-first;double r=std::fmod(x-first,length);Finite(r);x=first+(r<0?r+length:r);}return x;}
+ double Parameter(double x)const{x=Normalize(x);Require(x>=low&&x<=high,"Parameter is outside this cached knot span.");return x;}
+ static Axis Span(const NCollection_Array1<double>& knots,int degree,bool periodic,double first,double last,double parameter){
+  Axis a;a.first=first;a.last=last;a.periodic=periodic;Finite(first);Finite(last);Require(first<last&&std::isfinite(last-first),"Invalid spline domain.");
+  double u=a.Normalize(parameter);Require(u>=first&&u<=last,"Parameter outside spline domain.");int index=0;
+  BSplCLib::LocateParameter(degree,knots,static_cast<const NCollection_Array1<int>*>(nullptr),u,periodic,index,u);
+  Require(index>=knots.Lower()&&index<knots.Upper(),"Invalid knot span.");a.low=std::max(first,knots(index));a.high=std::min(last,knots(index+1));
+  a.scale=(a.high-a.low)/2;a.center=a.low+a.scale;Require(a.scale>0&&std::isfinite(a.scale),"Degenerate knot span.");return a;
+ }
+};
+struct Workspace {
+ Axis u,v;int du=0,dv=0,dimension=0;bool surface=false,weighted=false,coefficients=false;
+ virtual ~Workspace()=default;
+ virtual math_Matrix Evaluate(double x,double y,int order)const=0;
+ virtual math_Matrix Snapshot()const=0;
+};
+template<class P,class V,int D>struct CurveWorkspace:Workspace {
+ NCollection_Array1<P> poles;NCollection_Array1<double> weights;
+ explicit CurveWorkspace(int degree):poles(1,degree+1),weights(1,degree+1){du=degree;dimension=D;weights.Init(0);}
+ math_Matrix Snapshot()const override{math_Matrix m(1,du+1,1,D+(weighted?1:0),0.0);for(int i=1;i<=du+1;++i){for(int j=1;j<=D;++j)m(i,j)=poles(i).Coord(j);if(weighted)m(i,D+1)=weights(i);}return m;}
+ math_Matrix Evaluate(double x,double,int order)const override{
+  x=u.Parameter(x);Require(order>=0&&order<=3,"Curve derivative order must be 0..3.");P p;V a,b,c;const auto* w=weighted?&weights:nullptr;
+  if(coefficients){
+   if(order==0)BSplCLib::CoefsD0(x,poles,w,p);
+   if(order==1)BSplCLib::CoefsD1(x,poles,w,p,a);
+   if(order==2)BSplCLib::CoefsD2(x,poles,w,p,a,b);
+   if(order==3)BSplCLib::CoefsD3(x,poles,w,p,a,b,c);
+  }else{
+   if(order==0)BSplCLib::CacheD0(x,du,u.center,u.scale,poles,w,p);
+   if(order==1)BSplCLib::CacheD1(x,du,u.center,u.scale,poles,w,p,a);
+   if(order==2)BSplCLib::CacheD2(x,du,u.center,u.scale,poles,w,p,a,b);
+   if(order==3)BSplCLib::CacheD3(x,du,u.center,u.scale,poles,w,p,a,b,c);
+  }
+  math_Matrix m(0,order,1,D,0.0);for(int j=1;j<=D;++j){m(0,j)=p.Coord(j);if(order>=1)m(1,j)=a.Coord(j);if(order>=2)m(2,j)=b.Coord(j);if(order>=3)m(3,j)=c.Coord(j);}return m;
+ }
+};
+struct SurfaceWorkspace:Workspace {
+ NCollection_Array2<gp_Pnt> poles;NCollection_Array2<double> weights;
+ SurfaceWorkspace(int a,int b):poles(1,std::max(a,b)+1,1,std::min(a,b)+1),weights(1,std::max(a,b)+1,1,std::min(a,b)+1){du=a;dv=b;dimension=3;surface=true;weights.Init(0);}
+ math_Matrix Snapshot()const override{math_Matrix m(1,(du+1)*(dv+1),1,weighted?4:3,0.0);int k=1;
+  for(int i=1;i<=du+1;++i)for(int j=1;j<=dv+1;++j,++k){int r=du>dv?i:j,c=du>dv?j:i;for(int d=1;d<=3;++d)m(k,d)=poles(r,c).Coord(d);if(weighted)m(k,4)=weights(r,c);}return m;}
+ math_Matrix Evaluate(double x,double y,int order)const override{
+  x=u.Parameter(x);y=v.Parameter(y);Require(order>=0&&order<=2,"Surface derivative order must be 0..2.");gp_Pnt p;gp_Vec a,b,c,d,e;const auto* w=weighted?&weights:nullptr;
+  if(order==0)BSplSLib::CacheD0(x,y,du,dv,u.center,v.center,u.scale,v.scale,poles,w,p);
+  if(order==1)BSplSLib::CacheD1(x,y,du,dv,u.center,v.center,u.scale,v.scale,poles,w,p,a,b);
+  if(order==2)BSplSLib::CacheD2(x,y,du,dv,u.center,v.center,u.scale,v.scale,poles,w,p,a,b,c,d,e);
+  math_Matrix m(0,order==0?0:order==1?2:5,1,3,0.0);for(int j=1;j<=3;++j){m(0,j)=p.Coord(j);if(order>=1){m(1,j)=a.Coord(j);m(2,j)=b.Coord(j);}if(order>=2){m(3,j)=c.Coord(j);m(4,j)=d.Coord(j);m(5,j)=e.Coord(j);}}return m;
+ }
+};
+void* PublishWorkspace(std::shared_ptr<Workspace> s){Check(s->Snapshot());Publication<Workspace> p(s);return p.Commit();}
+template<class P,class V,int D,class C>void* CurveCache(const opencascade::handle<C>& source,double parameter){
+ Require(!source.IsNull(),"Null curve.");Size(source->NbPoles(),D+1);auto c=opencascade::handle<C>::DownCast(source->Copy());
+ auto s=std::make_shared<CurveWorkspace<P,V,D>>(c->Degree());s->weighted=c->Weights()!=nullptr;
+ s->u=Axis::Span(c->KnotSequence(),c->Degree(),c->IsPeriodic(),c->FirstParameter(),c->LastParameter(),parameter);
+ BSplCLib::BuildCache(s->u.center,s->u.scale,c->IsPeriodic(),c->Degree(),c->KnotSequence(),c->Poles(),c->Weights(),s->poles,s->weighted?&s->weights:nullptr);
+ return PublishWorkspace(s);
+}
+template<class P,class V,int D,class C>void* CurveCoefficients(const opencascade::handle<C>& source){
+ Require(!source.IsNull(),"Null curve.");Size(source->NbPoles(),D+1);auto c=opencascade::handle<C>::DownCast(source->Copy());auto s=std::make_shared<CurveWorkspace<P,V,D>>(c->Degree());
+ NCollection_Array1<P> p(1,c->NbPoles());c->Poles(p);NCollection_Array1<double> weights(1,c->NbPoles());s->weighted=c->IsRational();s->coefficients=true;if(s->weighted)c->Weights(weights);
+ BSplCLib::PolesCoefficients(p,s->weighted?&weights:nullptr,s->poles,s->weighted?&s->weights:nullptr);return PublishWorkspace(s);
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_curve_cache(const OcctSharp_GeomBSplineCurveHandle* source,double parameter,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{*result=CurveCache<gp_Pnt,gp_Vec,3>(OcctSharpGenerated::ValidateGeomBSplineCurve(source)->Value,parameter);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_curve2d_cache(const OcctSharp_Geom2dBSplineCurveHandle* source,double parameter,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{*result=CurveCache<gp_Pnt2d,gp_Vec2d,2>(OcctSharpGenerated::ValidateGeom2dBSplineCurve(source)->Value,parameter);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_curve_coefficients(const OcctSharp_GeomBezierCurveHandle* source,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{*result=CurveCoefficients<gp_Pnt,gp_Vec,3>(OcctSharpGenerated::ValidateGeomBezierCurve(source)->Value);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_curve2d_coefficients(const OcctSharp_Geom2dBezierCurveHandle* source,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{*result=CurveCoefficients<gp_Pnt2d,gp_Vec2d,2>(OcctSharpGenerated::ValidateGeom2dBezierCurve(source)->Value);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_surface_cache(const OcctSharp_GeomBSplineSurfaceHandle* source,double u,double v,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto sourceValue=OcctSharpGenerated::ValidateGeomBSplineSurface(source)->Value;Require(!sourceValue.IsNull(),"Null surface.");Size(sourceValue->NbUPoles(),sourceValue->NbVPoles()*4);
+  auto c=opencascade::handle<Geom_BSplineSurface>::DownCast(sourceValue->Copy());auto s=std::make_shared<SurfaceWorkspace>(c->UDegree(),c->VDegree());double u0,u1,v0,v1;c->Bounds(u0,u1,v0,v1);
+  s->u=Axis::Span(c->UKnotSequence(),c->UDegree(),c->IsUPeriodic(),u0,u1,u);s->v=Axis::Span(c->VKnotSequence(),c->VDegree(),c->IsVPeriodic(),v0,v1,v);s->weighted=c->Weights()!=nullptr;
+  BSplSLib::BuildCache(s->u.center,s->v.center,s->u.scale,s->v.scale,c->IsUPeriodic(),c->IsVPeriodic(),c->UDegree(),c->VDegree(),0,0,c->UKnotSequence(),c->VKnotSequence(),c->Poles(),c->Weights(),s->poles,s->weighted?&s->weights:nullptr);*result=PublishWorkspace(s);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_surface_coefficients(const OcctSharp_GeomBezierSurfaceHandle* source,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto c=opencascade::handle<Geom_BezierSurface>::DownCast(OcctSharpGenerated::ValidateGeomBezierSurface(source)->Value->Copy());auto s=std::make_shared<SurfaceWorkspace>(c->UDegree(),c->VDegree());s->weighted=c->IsURational()||c->IsVRational();s->coefficients=true;
+  int nr=s->du+1,nc=s->dv+1;NCollection_Array2<gp_Pnt> p(1,nr,1,nc),coeff(1,nr,1,nc);NCollection_Array2<double> w(1,nr,1,nc),cw(1,nr,1,nc);c->Poles(p);if(s->weighted)c->Weights(w);
+  BSplSLib::PolesCoefficients(p,s->weighted?&w:nullptr,coeff,s->weighted?&cw:nullptr);
+  for(int i=1;i<=nr;++i)for(int j=1;j<=nc;++j){int r=s->du>s->dv?i:j,k=s->du>s->dv?j:i;s->poles(r,k)=coeff(i,j);if(s->weighted)s->weights(r,k)=cw(i,j);}*result=PublishWorkspace(s);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_workspace_values(const void* token,int32_t operation,double u,double v,int32_t order,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto s=OcctSharpOwned::Lease<Workspace>(token);
+  Require(operation>=0&&operation<=2,"Unknown workspace request.");if(operation==0){*result=Publish(s->Snapshot());return;}if(operation==1){*result=Publish(s->Evaluate(u,v,order));return;}
+  math_Matrix info(1,1,1,12,0.0);info(1,1)=s->du;info(1,2)=s->dv;info(1,3)=s->dimension;info(1,4)=s->surface;info(1,5)=s->weighted;info(1,6)=s->coefficients;info(1,7)=s->u.low;info(1,8)=s->u.high;info(1,9)=s->v.low;info(1,10)=s->v.high;info(1,11)=s->u.center;info(1,12)=s->v.center;*result=Publish(info);});}
+void OCCTSHARP_CALL occtsharp_spline_workspace_release(void* token){OcctSharpOwned::Release(token,typeid(Workspace));}
+
+namespace {
+NCollection_Array1<double> Values(const double* data,int n){Size(n);Require(data,"Missing spline array.");NCollection_Array1<double> a(1,n);for(int i=1;i<=n;++i){Finite(data[i-1]);a(i)=data[i-1];}return a;}
+struct InterpolationAxis {
+ NCollection_Array1<double> knots,parameters;NCollection_Array1<int> contacts;
+ InterpolationAxis(const double* k,int nk,int d,const double* p,const int32_t* c,int n):knots(Values(k,nk)),parameters(Values(p,n)),contacts(1,n){
+  Require(d>=1&&d<=25&&nk==n+d+1&&nk>=2*(d+1),"Invalid clamped interpolation dimensions.");Size(n,2*d+1);Ascending(knots,false);Ascending(parameters,false);Require(knots.First()<knots.Last(),"Empty knot domain.");
+  for(int i=1;i<=d+1;++i)Require(knots(i)==knots.First()&&knots(nk-i+1)==knots.Last(),"Clamped endpoints required.");
+  Require(knots(d+2)>knots.First()&&knots(nk-d-1)<knots.Last(),"Endpoint multiplicity exceeds degree+1.");
+  int repeats=0;double previous=knots.First();for(int i=d+2;i<=nk-d-1;++i){repeats=knots(i)==previous?repeats+1:1;previous=knots(i);Require(repeats<=d,"Interior multiplicity exceeds degree.");}
+  for(int i=1;i<=n;++i){contacts(i)=c?c[i-1]:0;Require(contacts(i)>=0&&contacts(i)<=d&&parameters(i)>=knots.First()&&parameters(i)<=knots.Last(),"Invalid interpolation parameter/contact.");
+   math_Matrix basis(1,contacts(i)+1,1,d+1,0.0);int first=0;Require(BSplCLib::EvalBsplineBasis(contacts(i),d+1,knots,parameters(i),first,basis,false)==0,"Basis failed.");
+   int start=d+1+first-i;Require(first>=1&&first+d<=n&&start>=1&&start+d<=2*d+1,"Sample ordering exceeds band storage.");}
+ }
+};
+template<class P>math_Matrix CurveInterpolate(int d,const InterpolationAxis& a,const double* data,int dimension,const double* weights){
+ int n=a.parameters.Length();NCollection_Array1<P> p(1,n);NCollection_Array1<double> w(1,n);
+ if(weights)for(int i=1;i<=n;++i)Require(a.contacts(i)==0,"Weighted interpolation accepts point constraints only; homogeneous derivative constraints require a separate contract.");
+ for(int i=1;i<=n;++i){for(int j=1;j<=dimension;++j){double x=data[(i-1)*dimension+j-1];Finite(x);p(i).SetCoord(j,x);}if(weights){w(i)=weights[i-1];Finite(w(i));Require(w(i)>0,"Positive sample weights required.");}}
+ int inversion=0;if(weights)BSplCLib::Interpolate(d,a.knots,a.parameters,a.contacts,p,w,inversion);else BSplCLib::Interpolate(d,a.knots,a.parameters,a.contacts,p,inversion);
+ Require(inversion==0,"Spline interpolation inversion failed.");math_Matrix m(1,n,1,dimension+(weights?1:0),0.0);
+ for(int i=1;i<=n;++i){for(int j=1;j<=dimension;++j)m(i,j)=p(i).Coord(j);if(weights){Finite(w(i));Require(w(i)>0,"Interpolation produced nonpositive weight.");m(i,dimension+1)=w(i);}}return m;
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_interpolate_curve(const double* knots,int32_t nk,int32_t degree,const double* parameters,const int32_t* contacts,int32_t n,const double* points,int32_t count,int32_t dimension,const double* weights,int32_t nw,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{Size(n,4);Require(points&&contacts&&(dimension==2||dimension==3)&&count==n*dimension,"Invalid interpolation points.");Require(weights?nw==n:nw==0,"Weight count mismatch.");InterpolationAxis a(knots,nk,degree,parameters,contacts,n);
+  *result=Publish(dimension==2?CurveInterpolate<gp_Pnt2d>(degree,a,points,2,weights):CurveInterpolate<gp_Pnt>(degree,a,points,3,weights));});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_spline_interpolate_surface(const double* uk,int32_t nuk,int32_t du,const double* up,int32_t nu,const double* vk,int32_t nvk,int32_t dv,const double* vp,int32_t nv,const double* points,int32_t count,const double* weights,int32_t nw,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{Size(nu);Size(nv);Require(int64_t(nu)*nv*4<=Limit&&points&&int64_t(count)==int64_t(nu)*nv*3,"Invalid surface point grid.");Require(weights?nw==nu*nv:nw==0,"Weight grid mismatch.");
+  InterpolationAxis a(uk,nuk,du,up,nullptr,nu),b(vk,nvk,dv,vp,nullptr,nv);NCollection_Array2<gp_Pnt> p(1,nu,1,nv);NCollection_Array2<double> w(1,nu,1,nv);
+  for(int i=1;i<=nu;++i)for(int j=1;j<=nv;++j){int k=(i-1)*nv+j-1;double weight=weights?weights[k]:1;Finite(weight);Require(weight>0,"Positive sample weight required.");w(i,j)=weight;for(int d=1;d<=3;++d){double x=points[k*3+d-1]*weight;Finite(x);p(i,j).SetCoord(d,x);}}
+  int inversion=0;if(weights)BSplSLib::Interpolate(du,dv,a.knots,b.knots,a.parameters,b.parameters,p,w,inversion);else BSplSLib::Interpolate(du,dv,a.knots,b.knots,a.parameters,b.parameters,p,inversion);
+  Require(inversion==0,"Surface interpolation inversion failed.");math_Matrix m(1,nu*nv,1,weights?4:3,0.0);
+  for(int i=1;i<=nu;++i)for(int j=1;j<=nv;++j){int k=(i-1)*nv+j;double weight=weights?w(i,j):1;Finite(weight);Require(weight>0,"Interpolation produced nonpositive weight.");for(int d=1;d<=3;++d)m(k,d)=p(i,j).Coord(d)/weight;if(weights)m(k,4)=weight;}*result=Publish(m);});}

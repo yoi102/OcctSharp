@@ -1,0 +1,253 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWGltf_CafWriter::Perform",
+      "signature": "RWGltf_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "RWGltf_CafWriter::RWGltf_CafWriter",
+      "signature": "RWGltf_CafWriter::RWGltf_CafWriter: void (const TCollection_AsciiString &, bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWGltf_CafWriter::SetCoordinateSystemConverter",
+      "signature": "RWGltf_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit: void (double)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem",
+      "signature": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit",
+      "signature": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit: void (double)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformNormal#&$@S@NCollection_Vec3>#f#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformNormal",
+      "signature": "RWMesh_CoordinateSystemConverter::TransformNormal: void (NCollection_Vec3<float> &) const",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformPosition#&$@S@gp_XYZ#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformPosition",
+      "signature": "RWMesh_CoordinateSystemConverter::TransformPosition: void (gp_XYZ &) const",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_CafWriter::Perform",
+      "signature": "RWObj_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWObj_CafWriter::RWObj_CafWriter",
+      "signature": "RWObj_CafWriter::RWObj_CafWriter: void (const TCollection_AsciiString &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWObj_CafWriter::SetCoordinateSystemConverter",
+      "signature": "RWObj_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@Read#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_Reader::Read",
+      "signature": "RWObj_Reader::Read: bool (const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@SetMemoryLimit#k#",
+      "nativeName": "RWObj_Reader::SetMemoryLimit",
+      "signature": "RWObj_Reader::SetMemoryLimit: void (size_t)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWPly_CafWriter::Perform",
+      "signature": "RWPly_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@RWPly_CafWriter#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWPly_CafWriter::RWPly_CafWriter",
+      "signature": "RWPly_CafWriter::RWPly_CafWriter: void (const TCollection_AsciiString &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWPly_CafWriter::SetCoordinateSystemConverter",
+      "signature": "RWPly_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWStl@F@ReadFile#*1C#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::ReadFile",
+      "signature": "RWStl::ReadFile: occ::handle<Poly_Triangulation> (const char *const, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteAscii#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::WriteAscii",
+      "signature": "RWStl::WriteAscii: bool (const occ::handle<Poly_Triangulation> &, const OSD_Path &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteBinary#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::WriteBinary",
+      "signature": "RWStl::WriteBinary: bool (const occ::handle<Poly_Triangulation> &, const OSD_Path &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@IGESCAFControl_Reader#",
+      "nativeName": "IGESCAFControl_Reader::IGESCAFControl_Reader",
+      "signature": "IGESCAFControl_Reader::IGESCAFControl_Reader: void ()",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetColorMode#b#",
+      "nativeName": "IGESCAFControl_Reader::SetColorMode",
+      "signature": "IGESCAFControl_Reader::SetColorMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetLayerMode#b#",
+      "nativeName": "IGESCAFControl_Reader::SetLayerMode",
+      "signature": "IGESCAFControl_Reader::SetLayerMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetNameMode#b#",
+      "nativeName": "IGESCAFControl_Reader::SetNameMode",
+      "signature": "IGESCAFControl_Reader::SetNameMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Reader::Transfer",
+      "signature": "IGESCAFControl_Reader::Transfer: bool (const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#",
+      "nativeName": "IGESCAFControl_Writer::IGESCAFControl_Writer",
+      "signature": "IGESCAFControl_Writer::IGESCAFControl_Writer: void ()",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Writer::Perform",
+      "signature": "IGESCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const Message_ProgressRange &)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetColorMode#b#",
+      "nativeName": "IGESCAFControl_Writer::SetColorMode",
+      "signature": "IGESCAFControl_Writer::SetColorMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetLayerMode#b#",
+      "nativeName": "IGESCAFControl_Writer::SetLayerMode",
+      "signature": "IGESCAFControl_Writer::SetLayerMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetNameMode#b#",
+      "nativeName": "IGESCAFControl_Writer::SetNameMode",
+      "signature": "IGESCAFControl_Writer::SetNameMode: void (const bool)",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESModel#1",
+      "nativeName": "IGESControl_Reader::IGESModel",
+      "signature": "IGESControl_Reader::IGESModel: occ::handle<IGESData_IGESModel> () const",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "IGESControl_Reader::NbRootsForTransfer",
+      "signature": "IGESControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitValue#1",
+      "nativeName": "IGESData_GlobalSection::UnitValue",
+      "signature": "IGESData_GlobalSection::UnitValue: double () const",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@GlobalSection#1",
+      "nativeName": "IGESData_IGESModel::GlobalSection",
+      "signature": "IGESData_IGESModel::GlobalSection: const IGESData_GlobalSection &() const",
+      "guard": "CEPrivateMeshExchangeOperationProfile",
+      "reason": "Fixed SDK exact native delegation/value construction under the original initialized writer/reader/configuration, coordinate/byte/channel validation, bounded copied output, source-resource ownership, exception Guard and success-only publication. No SDK receiver or session escapes."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CascadeUnit#1",
+      "nativeName": "IGESData_GlobalSection::CascadeUnit",
+      "signature": "IGESData_GlobalSection::CascadeUnit: double () const",
+      "guard": "CEModelSourceUnit",
+      "reason": "Reused exact model-unit accessor; UnitValue is millimeters divided by model CascadeUnit in pinned implementation despite header wording. Multiply by captured model CascadeUnit and .001 to report meters."
+    }
+  ]
+}

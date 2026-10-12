@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 // Native Mesh/Triangulation implementation. Public contracts and ownership are unchanged.
 #include "Mesh/Triangulation.hxx"
 #include "OcctSharp.Native.Internal.hxx"
@@ -44,7 +45,7 @@ MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
 {
   ValidateShape(shape);
   ValidateMeshParameters(linear_deflection, angular_deflection);
-  BRepMesh_IncrementalMesh mesher(shape->Value, linear_deflection, false, angular_deflection, true);
+  OcctSharpGenerated::PrivateMeshBuilder mesher(shape->Value, linear_deflection, false, angular_deflection, true);
   MeshData data;
   for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next())
   {
@@ -58,7 +59,7 @@ MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
 
     for (int32_t triangleIndex = 1; triangleIndex <= triangulation->NbTriangles(); ++triangleIndex)
     {
-      Poly_Triangle triangle = triangulation->Triangle(triangleIndex);
+      auto triangle = OcctSharpGenerated::MeshTriangle(*triangulation, triangleIndex);
       int node1 = 0;
       int node2 = 0;
       int node3 = 0;
@@ -111,7 +112,7 @@ DetailedMeshData BuildDetailedMesh(
 {
   ValidateUsableShape(shape);
   ValidateMeshParameters(linear_deflection, angular_deflection);
-  BRepMesh_IncrementalMesh mesher(shape->Value, linear_deflection, false, angular_deflection, true);
+  OcctSharpGenerated::PrivateMeshBuilder mesher(shape->Value, linear_deflection, false, angular_deflection, true);
   DetailedMeshData data;
   for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next())
   {
@@ -136,14 +137,14 @@ DetailedMeshData BuildDetailedMesh(
     {
       gp_Pnt point = triangulation->Node(nodeIndex);
       point.Transform(locationTransform);
-      gp_Dir normal = triangulation->Normal(nodeIndex);
+      gp_Dir normal = OcctSharpGenerated::MeshNormal(*triangulation, nodeIndex);
       normal.Transform(locationTransform);
       if (isReversed) normal.Reverse();
       double u = 0.0;
       double v = 0.0;
       if (hasUv)
       {
-        const gp_Pnt2d uv = triangulation->UVNode(nodeIndex);
+        const gp_Pnt2d uv = OcctSharpGenerated::MeshUVNode(*triangulation, nodeIndex);
         u = uv.X();
         v = uv.Y();
       }
@@ -158,7 +159,7 @@ DetailedMeshData BuildDetailedMesh(
       int node1 = 0;
       int node2 = 0;
       int node3 = 0;
-      triangulation->Triangle(triangleIndex).Get(node1, node2, node3);
+      OcctSharpGenerated::MeshTriangle(*triangulation, triangleIndex).Get(node1, node2, node3);
       int32_t vertexA = base + node1 - 1;
       int32_t vertexB = base + node2 - 1;
       int32_t vertexC = base + node3 - 1;
@@ -198,7 +199,7 @@ DetailedMeshData BuildAdvancedMesh(
   parameters.InternalVerticesMode = internal_vertices;
   parameters.ControlSurfaceDeflection = control_surface_deflection;
   parameters.AllowQualityDecrease = true;
-  BRepMesh_IncrementalMesh mesher(working_shape, parameters);
+  OcctSharpGenerated::PrivateMeshBuilder mesher(working_shape, parameters);
   if (!mesher.IsDone())
     throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT advanced meshing did not complete.");
 
@@ -226,14 +227,14 @@ DetailedMeshData BuildAdvancedMesh(
     {
       gp_Pnt point = triangulation->Node(node_index);
       point.Transform(location_transform);
-      gp_Dir normal = triangulation->Normal(node_index);
+      gp_Dir normal = OcctSharpGenerated::MeshNormal(*triangulation, node_index);
       normal.Transform(location_transform);
       if (is_reversed) normal.Reverse();
       double u = 0.0;
       double v = 0.0;
       if (has_uv)
       {
-        const gp_Pnt2d uv = triangulation->UVNode(node_index);
+        const gp_Pnt2d uv = OcctSharpGenerated::MeshUVNode(*triangulation, node_index);
         u = uv.X();
         v = uv.Y();
       }
@@ -247,7 +248,7 @@ DetailedMeshData BuildAdvancedMesh(
       int node1 = 0;
       int node2 = 0;
       int node3 = 0;
-      triangulation->Triangle(triangle_index).Get(node1, node2, node3);
+      OcctSharpGenerated::MeshTriangle(*triangulation, triangle_index).Get(node1, node2, node3);
       int32_t vertex_a = base + node1 - 1;
       int32_t vertex_b = base + node2 - 1;
       int32_t vertex_c = base + node3 - 1;

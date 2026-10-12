@@ -1,0 +1,1489 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.58",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "970DDE2FF77239E12C46BC55888D95478DCF966554D0ABB4A935EFC2BD7AEB95",
+  "declarations": [
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_BooleanArray::Dump",
+      "signature": "TDataStd_BooleanArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_BooleanArray::DumpJson",
+      "signature": "TDataStd_BooleanArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_BooleanArray::get_type_descriptor",
+      "signature": "TDataStd_BooleanArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@get_type_name#S",
+      "nativeName": "TDataStd_BooleanArray::get_type_name",
+      "signature": "TDataStd_BooleanArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@GetID#S",
+      "nativeName": "TDataStd_BooleanArray::GetID",
+      "signature": "TDataStd_BooleanArray::GetID: const Standard_GUID &()",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@ID#1",
+      "nativeName": "TDataStd_BooleanArray::ID",
+      "signature": "TDataStd_BooleanArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@InternalArray#1",
+      "nativeName": "TDataStd_BooleanArray::InternalArray",
+      "signature": "TDataStd_BooleanArray::InternalArray: const occ::handle<NCollection_HArray1<uint8_t>> &() const",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#S",
+      "nativeName": "TDataStd_BooleanArray::Set",
+      "signature": "TDataStd_BooleanArray::Set: occ::handle<TDataStd_BooleanArray> (const TDF_Label &, const Standard_GUID &, const int, const int)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Set#&1$@S@TDF_Label#I#I#S",
+      "nativeName": "TDataStd_BooleanArray::Set",
+      "signature": "TDataStd_BooleanArray::Set: occ::handle<TDataStd_BooleanArray> (const TDF_Label &, const int, const int)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_BooleanArray::SetID",
+      "signature": "TDataStd_BooleanArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@SetInternalArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#c#",
+      "nativeName": "TDataStd_BooleanArray::SetInternalArray",
+      "signature": "TDataStd_BooleanArray::SetInternalArray: void (const occ::handle<NCollection_HArray1<uint8_t>> &)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@TDataStd_BooleanArray#&&$@S@TDataStd_BooleanArray#",
+      "nativeName": "TDataStd_BooleanArray::TDataStd_BooleanArray",
+      "signature": "TDataStd_BooleanArray::TDataStd_BooleanArray: void (TDataStd_BooleanArray &&)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@TDataStd_BooleanArray#&1$@S@TDataStd_BooleanArray#",
+      "nativeName": "TDataStd_BooleanArray::TDataStd_BooleanArray",
+      "signature": "TDataStd_BooleanArray::TDataStd_BooleanArray: void (const TDataStd_BooleanArray &)",
+      "header": "TDataStd_BooleanArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#c#b#",
+      "nativeName": "TDataStd_ByteArray::ChangeArray",
+      "signature": "TDataStd_ByteArray::ChangeArray: void (const occ::handle<NCollection_HArray1<uint8_t>> &, const bool)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_ByteArray::Dump",
+      "signature": "TDataStd_ByteArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_ByteArray::DumpJson",
+      "signature": "TDataStd_ByteArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_ByteArray::get_type_descriptor",
+      "signature": "TDataStd_ByteArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@get_type_name#S",
+      "nativeName": "TDataStd_ByteArray::get_type_name",
+      "signature": "TDataStd_ByteArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@GetID#S",
+      "nativeName": "TDataStd_ByteArray::GetID",
+      "signature": "TDataStd_ByteArray::GetID: const Standard_GUID &()",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@ID#1",
+      "nativeName": "TDataStd_ByteArray::ID",
+      "signature": "TDataStd_ByteArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@InternalArray#1",
+      "nativeName": "TDataStd_ByteArray::InternalArray",
+      "signature": "TDataStd_ByteArray::InternalArray: const occ::handle<NCollection_HArray1<uint8_t>> &() const",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S",
+      "nativeName": "TDataStd_ByteArray::Set",
+      "signature": "TDataStd_ByteArray::Set: occ::handle<TDataStd_ByteArray> (const TDF_Label &, const Standard_GUID &, const int, const int, const bool)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "nativeName": "TDataStd_ByteArray::Set",
+      "signature": "TDataStd_ByteArray::Set: occ::handle<TDataStd_ByteArray> (const TDF_Label &, const int, const int, const bool)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ByteArray::SetID",
+      "signature": "TDataStd_ByteArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@TDataStd_ByteArray#&&$@S@TDataStd_ByteArray#",
+      "nativeName": "TDataStd_ByteArray::TDataStd_ByteArray",
+      "signature": "TDataStd_ByteArray::TDataStd_ByteArray: void (TDataStd_ByteArray &&)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@TDataStd_ByteArray#&1$@S@TDataStd_ByteArray#",
+      "nativeName": "TDataStd_ByteArray::TDataStd_ByteArray",
+      "signature": "TDataStd_ByteArray::TDataStd_ByteArray: void (const TDataStd_ByteArray &)",
+      "header": "TDataStd_ByteArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Array#1",
+      "nativeName": "TDataStd_ExtStringArray::Array",
+      "signature": "TDataStd_ExtStringArray::Array: const occ::handle<NCollection_HArray1<TCollection_ExtendedString>> &() const",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@TCollection_ExtendedString#b#",
+      "nativeName": "TDataStd_ExtStringArray::ChangeArray",
+      "signature": "TDataStd_ExtStringArray::ChangeArray: void (const occ::handle<NCollection_HArray1<TCollection_ExtendedString>> &, const bool)",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_ExtStringArray::Dump",
+      "signature": "TDataStd_ExtStringArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_ExtStringArray::DumpJson",
+      "signature": "TDataStd_ExtStringArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_ExtStringArray::get_type_descriptor",
+      "signature": "TDataStd_ExtStringArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@get_type_name#S",
+      "nativeName": "TDataStd_ExtStringArray::get_type_name",
+      "signature": "TDataStd_ExtStringArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@GetID#S",
+      "nativeName": "TDataStd_ExtStringArray::GetID",
+      "signature": "TDataStd_ExtStringArray::GetID: const Standard_GUID &()",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@ID#1",
+      "nativeName": "TDataStd_ExtStringArray::ID",
+      "signature": "TDataStd_ExtStringArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "nativeName": "TDataStd_ExtStringArray::Set",
+      "signature": "TDataStd_ExtStringArray::Set: occ::handle<TDataStd_ExtStringArray> (const TDF_Label &, const int, const int, const bool)",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ExtStringArray::SetID",
+      "signature": "TDataStd_ExtStringArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@TDataStd_ExtStringArray#&&$@S@TDataStd_ExtStringArray#",
+      "nativeName": "TDataStd_ExtStringArray::TDataStd_ExtStringArray",
+      "signature": "TDataStd_ExtStringArray::TDataStd_ExtStringArray: void (TDataStd_ExtStringArray &&)",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@TDataStd_ExtStringArray#&1$@S@TDataStd_ExtStringArray#",
+      "nativeName": "TDataStd_ExtStringArray::TDataStd_ExtStringArray",
+      "signature": "TDataStd_ExtStringArray::TDataStd_ExtStringArray: void (const TDataStd_ExtStringArray &)",
+      "header": "TDataStd_ExtStringArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Append#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::Append",
+      "signature": "TDataStd_ExtStringList::Append: void (const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_ExtStringList::Dump",
+      "signature": "TDataStd_ExtStringList::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_ExtStringList::DumpJson",
+      "signature": "TDataStd_ExtStringList::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@First#1",
+      "nativeName": "TDataStd_ExtStringList::First",
+      "signature": "TDataStd_ExtStringList::First: const TCollection_ExtendedString &() const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_ExtStringList::get_type_descriptor",
+      "signature": "TDataStd_ExtStringList::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@get_type_name#S",
+      "nativeName": "TDataStd_ExtStringList::get_type_name",
+      "signature": "TDataStd_ExtStringList::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@GetID#S",
+      "nativeName": "TDataStd_ExtStringList::GetID",
+      "signature": "TDataStd_ExtStringList::GetID: const Standard_GUID &()",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@ID#1",
+      "nativeName": "TDataStd_ExtStringList::ID",
+      "signature": "TDataStd_ExtStringList::ID: const Standard_GUID &() const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@InsertAfter#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "TDataStd_ExtStringList::InsertAfter",
+      "signature": "TDataStd_ExtStringList::InsertAfter: bool (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@InsertAfter#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::InsertAfter",
+      "signature": "TDataStd_ExtStringList::InsertAfter: bool (const int, const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@InsertBefore#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "TDataStd_ExtStringList::InsertBefore",
+      "signature": "TDataStd_ExtStringList::InsertBefore: bool (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@InsertBefore#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::InsertBefore",
+      "signature": "TDataStd_ExtStringList::InsertBefore: bool (const int, const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Last#1",
+      "nativeName": "TDataStd_ExtStringList::Last",
+      "signature": "TDataStd_ExtStringList::Last: const TCollection_ExtendedString &() const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@List#1",
+      "nativeName": "TDataStd_ExtStringList::List",
+      "signature": "TDataStd_ExtStringList::List: const NCollection_List<TCollection_ExtendedString> &() const",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Prepend#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::Prepend",
+      "signature": "TDataStd_ExtStringList::Prepend: void (const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Remove#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::Remove",
+      "signature": "TDataStd_ExtStringList::Remove: bool (const TCollection_ExtendedString &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "nativeName": "TDataStd_ExtStringList::Set",
+      "signature": "TDataStd_ExtStringList::Set: occ::handle<TDataStd_ExtStringList> (const TDF_Label &, const Standard_GUID &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_ExtStringList::Set",
+      "signature": "TDataStd_ExtStringList::Set: occ::handle<TDataStd_ExtStringList> (const TDF_Label &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ExtStringList::SetID",
+      "signature": "TDataStd_ExtStringList::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@TDataStd_ExtStringList#&&$@S@TDataStd_ExtStringList#",
+      "nativeName": "TDataStd_ExtStringList::TDataStd_ExtStringList",
+      "signature": "TDataStd_ExtStringList::TDataStd_ExtStringList: void (TDataStd_ExtStringList &&)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@TDataStd_ExtStringList#&1$@S@TDataStd_ExtStringList#",
+      "nativeName": "TDataStd_ExtStringList::TDataStd_ExtStringList",
+      "signature": "TDataStd_ExtStringList::TDataStd_ExtStringList: void (const TDataStd_ExtStringList &)",
+      "header": "TDataStd_ExtStringList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Array#1",
+      "nativeName": "TDataStd_IntegerArray::Array",
+      "signature": "TDataStd_IntegerArray::Array: const occ::handle<NCollection_HArray1<int>> &() const",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#b#",
+      "nativeName": "TDataStd_IntegerArray::ChangeArray",
+      "signature": "TDataStd_IntegerArray::ChangeArray: void (const occ::handle<NCollection_HArray1<int>> &, const bool)",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_IntegerArray::Dump",
+      "signature": "TDataStd_IntegerArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_IntegerArray::DumpJson",
+      "signature": "TDataStd_IntegerArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_IntegerArray::get_type_descriptor",
+      "signature": "TDataStd_IntegerArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@get_type_name#S",
+      "nativeName": "TDataStd_IntegerArray::get_type_name",
+      "signature": "TDataStd_IntegerArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@ID#1",
+      "nativeName": "TDataStd_IntegerArray::ID",
+      "signature": "TDataStd_IntegerArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S",
+      "nativeName": "TDataStd_IntegerArray::Set",
+      "signature": "TDataStd_IntegerArray::Set: occ::handle<TDataStd_IntegerArray> (const TDF_Label &, const Standard_GUID &, const int, const int, const bool)",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_IntegerArray::SetID",
+      "signature": "TDataStd_IntegerArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@TDataStd_IntegerArray#&&$@S@TDataStd_IntegerArray#",
+      "nativeName": "TDataStd_IntegerArray::TDataStd_IntegerArray",
+      "signature": "TDataStd_IntegerArray::TDataStd_IntegerArray: void (TDataStd_IntegerArray &&)",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@TDataStd_IntegerArray#&1$@S@TDataStd_IntegerArray#",
+      "nativeName": "TDataStd_IntegerArray::TDataStd_IntegerArray",
+      "signature": "TDataStd_IntegerArray::TDataStd_IntegerArray: void (const TDataStd_IntegerArray &)",
+      "header": "TDataStd_IntegerArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_IntegerList::Dump",
+      "signature": "TDataStd_IntegerList::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_IntegerList::DumpJson",
+      "signature": "TDataStd_IntegerList::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_IntegerList::get_type_descriptor",
+      "signature": "TDataStd_IntegerList::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@get_type_name#S",
+      "nativeName": "TDataStd_IntegerList::get_type_name",
+      "signature": "TDataStd_IntegerList::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@GetID#S",
+      "nativeName": "TDataStd_IntegerList::GetID",
+      "signature": "TDataStd_IntegerList::GetID: const Standard_GUID &()",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@ID#1",
+      "nativeName": "TDataStd_IntegerList::ID",
+      "signature": "TDataStd_IntegerList::ID: const Standard_GUID &() const",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@List#1",
+      "nativeName": "TDataStd_IntegerList::List",
+      "signature": "TDataStd_IntegerList::List: const NCollection_List<int> &() const",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "nativeName": "TDataStd_IntegerList::Set",
+      "signature": "TDataStd_IntegerList::Set: occ::handle<TDataStd_IntegerList> (const TDF_Label &, const Standard_GUID &)",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_IntegerList::Set",
+      "signature": "TDataStd_IntegerList::Set: occ::handle<TDataStd_IntegerList> (const TDF_Label &)",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_IntegerList::SetID",
+      "signature": "TDataStd_IntegerList::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@TDataStd_IntegerList#&&$@S@TDataStd_IntegerList#",
+      "nativeName": "TDataStd_IntegerList::TDataStd_IntegerList",
+      "signature": "TDataStd_IntegerList::TDataStd_IntegerList: void (TDataStd_IntegerList &&)",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@TDataStd_IntegerList#&1$@S@TDataStd_IntegerList#",
+      "nativeName": "TDataStd_IntegerList::TDataStd_IntegerList",
+      "signature": "TDataStd_IntegerList::TDataStd_IntegerList: void (const TDataStd_IntegerList &)",
+      "header": "TDataStd_IntegerList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Array#1",
+      "nativeName": "TDataStd_RealArray::Array",
+      "signature": "TDataStd_RealArray::Array: const occ::handle<NCollection_HArray1<double>> &() const",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#b#",
+      "nativeName": "TDataStd_RealArray::ChangeArray",
+      "signature": "TDataStd_RealArray::ChangeArray: void (const occ::handle<NCollection_HArray1<double>> &, const bool)",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_RealArray::Dump",
+      "signature": "TDataStd_RealArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_RealArray::DumpJson",
+      "signature": "TDataStd_RealArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_RealArray::get_type_descriptor",
+      "signature": "TDataStd_RealArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@get_type_name#S",
+      "nativeName": "TDataStd_RealArray::get_type_name",
+      "signature": "TDataStd_RealArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@ID#1",
+      "nativeName": "TDataStd_RealArray::ID",
+      "signature": "TDataStd_RealArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S",
+      "nativeName": "TDataStd_RealArray::Set",
+      "signature": "TDataStd_RealArray::Set: occ::handle<TDataStd_RealArray> (const TDF_Label &, const Standard_GUID &, const int, const int, const bool)",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_RealArray::SetID",
+      "signature": "TDataStd_RealArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@TDataStd_RealArray#&&$@S@TDataStd_RealArray#",
+      "nativeName": "TDataStd_RealArray::TDataStd_RealArray",
+      "signature": "TDataStd_RealArray::TDataStd_RealArray: void (TDataStd_RealArray &&)",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@TDataStd_RealArray#&1$@S@TDataStd_RealArray#",
+      "nativeName": "TDataStd_RealArray::TDataStd_RealArray",
+      "signature": "TDataStd_RealArray::TDataStd_RealArray: void (const TDataStd_RealArray &)",
+      "header": "TDataStd_RealArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_RealList::Dump",
+      "signature": "TDataStd_RealList::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_RealList::DumpJson",
+      "signature": "TDataStd_RealList::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_RealList::get_type_descriptor",
+      "signature": "TDataStd_RealList::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@get_type_name#S",
+      "nativeName": "TDataStd_RealList::get_type_name",
+      "signature": "TDataStd_RealList::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@GetID#S",
+      "nativeName": "TDataStd_RealList::GetID",
+      "signature": "TDataStd_RealList::GetID: const Standard_GUID &()",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@ID#1",
+      "nativeName": "TDataStd_RealList::ID",
+      "signature": "TDataStd_RealList::ID: const Standard_GUID &() const",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@List#1",
+      "nativeName": "TDataStd_RealList::List",
+      "signature": "TDataStd_RealList::List: const NCollection_List<double> &() const",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "nativeName": "TDataStd_RealList::Set",
+      "signature": "TDataStd_RealList::Set: occ::handle<TDataStd_RealList> (const TDF_Label &, const Standard_GUID &)",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_RealList::Set",
+      "signature": "TDataStd_RealList::Set: occ::handle<TDataStd_RealList> (const TDF_Label &)",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_RealList::SetID",
+      "signature": "TDataStd_RealList::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@TDataStd_RealList#&&$@S@TDataStd_RealList#",
+      "nativeName": "TDataStd_RealList::TDataStd_RealList",
+      "signature": "TDataStd_RealList::TDataStd_RealList: void (TDataStd_RealList &&)",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@TDataStd_RealList#&1$@S@TDataStd_RealList#",
+      "nativeName": "TDataStd_RealList::TDataStd_RealList",
+      "signature": "TDataStd_RealList::TDataStd_RealList: void (const TDataStd_RealList &)",
+      "header": "TDataStd_RealList.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_ReferenceArray::Dump",
+      "signature": "TDataStd_ReferenceArray::Dump: Standard_OStream &(Standard_OStream &) const",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_ReferenceArray::DumpJson",
+      "signature": "TDataStd_ReferenceArray::DumpJson: void (Standard_OStream &, int) const",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_ReferenceArray::get_type_descriptor",
+      "signature": "TDataStd_ReferenceArray::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@get_type_name#S",
+      "nativeName": "TDataStd_ReferenceArray::get_type_name",
+      "signature": "TDataStd_ReferenceArray::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@ID#1",
+      "nativeName": "TDataStd_ReferenceArray::ID",
+      "signature": "TDataStd_ReferenceArray::ID: const Standard_GUID &() const",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@InternalArray#1",
+      "nativeName": "TDataStd_ReferenceArray::InternalArray",
+      "signature": "TDataStd_ReferenceArray::InternalArray: const occ::handle<NCollection_HArray1<TDF_Label>> &() const",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#S",
+      "nativeName": "TDataStd_ReferenceArray::Set",
+      "signature": "TDataStd_ReferenceArray::Set: occ::handle<TDataStd_ReferenceArray> (const TDF_Label &, const Standard_GUID &, const int, const int)",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ReferenceArray::SetID",
+      "signature": "TDataStd_ReferenceArray::SetID: void (const Standard_GUID &)",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetInternalArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@TDF_Label#b#",
+      "nativeName": "TDataStd_ReferenceArray::SetInternalArray",
+      "signature": "TDataStd_ReferenceArray::SetInternalArray: void (const occ::handle<NCollection_HArray1<TDF_Label>> &, const bool)",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@TDataStd_ReferenceArray#&&$@S@TDataStd_ReferenceArray#",
+      "nativeName": "TDataStd_ReferenceArray::TDataStd_ReferenceArray",
+      "signature": "TDataStd_ReferenceArray::TDataStd_ReferenceArray: void (TDataStd_ReferenceArray &&)",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@TDataStd_ReferenceArray#&1$@S@TDataStd_ReferenceArray#",
+      "nativeName": "TDataStd_ReferenceArray::TDataStd_ReferenceArray",
+      "signature": "TDataStd_ReferenceArray::TDataStd_ReferenceArray: void (const TDataStd_ReferenceArray &)",
+      "header": "TDataStd_ReferenceArray.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Raw attached receiver APIs, duplicate Set/copy constructors, streams/RTTI and unsafe BooleanArray logical-empty mutation are outside the closed projection contract."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Init#I#I#",
+      "nativeName": "TDataStd_BooleanArray::Init",
+      "signature": "TDataStd_BooleanArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Length#1",
+      "nativeName": "TDataStd_BooleanArray::Length",
+      "signature": "TDataStd_BooleanArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Lower#1",
+      "nativeName": "TDataStd_BooleanArray::Lower",
+      "signature": "TDataStd_BooleanArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@SetID#",
+      "nativeName": "TDataStd_BooleanArray::SetID",
+      "signature": "TDataStd_BooleanArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@SetValue#I#b#",
+      "nativeName": "TDataStd_BooleanArray::SetValue",
+      "signature": "TDataStd_BooleanArray::SetValue: void (const int, const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@TDataStd_BooleanArray#",
+      "nativeName": "TDataStd_BooleanArray::TDataStd_BooleanArray",
+      "signature": "TDataStd_BooleanArray::TDataStd_BooleanArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Upper#1",
+      "nativeName": "TDataStd_BooleanArray::Upper",
+      "signature": "TDataStd_BooleanArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@Value#I#1",
+      "nativeName": "TDataStd_BooleanArray::Value",
+      "signature": "TDataStd_BooleanArray::Value: bool (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Init#I#I#",
+      "nativeName": "TDataStd_ByteArray::Init",
+      "signature": "TDataStd_ByteArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Length#1",
+      "nativeName": "TDataStd_ByteArray::Length",
+      "signature": "TDataStd_ByteArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Lower#1",
+      "nativeName": "TDataStd_ByteArray::Lower",
+      "signature": "TDataStd_ByteArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_ByteArray::Restore",
+      "signature": "TDataStd_ByteArray::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@SetID#",
+      "nativeName": "TDataStd_ByteArray::SetID",
+      "signature": "TDataStd_ByteArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@TDataStd_ByteArray#",
+      "nativeName": "TDataStd_ByteArray::TDataStd_ByteArray",
+      "signature": "TDataStd_ByteArray::TDataStd_ByteArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Upper#1",
+      "nativeName": "TDataStd_ByteArray::Upper",
+      "signature": "TDataStd_ByteArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@Value#I#1",
+      "nativeName": "TDataStd_ByteArray::Value",
+      "signature": "TDataStd_ByteArray::Value: uint8_t (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Init#I#I#",
+      "nativeName": "TDataStd_ExtStringArray::Init",
+      "signature": "TDataStd_ExtStringArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Length#1",
+      "nativeName": "TDataStd_ExtStringArray::Length",
+      "signature": "TDataStd_ExtStringArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Lower#1",
+      "nativeName": "TDataStd_ExtStringArray::Lower",
+      "signature": "TDataStd_ExtStringArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_ExtStringArray::Restore",
+      "signature": "TDataStd_ExtStringArray::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@SetID#",
+      "nativeName": "TDataStd_ExtStringArray::SetID",
+      "signature": "TDataStd_ExtStringArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@TDataStd_ExtStringArray#",
+      "nativeName": "TDataStd_ExtStringArray::TDataStd_ExtStringArray",
+      "signature": "TDataStd_ExtStringArray::TDataStd_ExtStringArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Upper#1",
+      "nativeName": "TDataStd_ExtStringArray::Upper",
+      "signature": "TDataStd_ExtStringArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Value#I#1",
+      "nativeName": "TDataStd_ExtStringArray::Value",
+      "signature": "TDataStd_ExtStringArray::Value: const TCollection_ExtendedString &(const int) const",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@SetID#",
+      "nativeName": "TDataStd_ExtStringList::SetID",
+      "signature": "TDataStd_ExtStringList::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@TDataStd_ExtStringList#",
+      "nativeName": "TDataStd_ExtStringList::TDataStd_ExtStringList",
+      "signature": "TDataStd_ExtStringList::TDataStd_ExtStringList: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@GetID#S",
+      "nativeName": "TDataStd_IntegerArray::GetID",
+      "signature": "TDataStd_IntegerArray::GetID: const Standard_GUID &()",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Init#I#I#",
+      "nativeName": "TDataStd_IntegerArray::Init",
+      "signature": "TDataStd_IntegerArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Length#1",
+      "nativeName": "TDataStd_IntegerArray::Length",
+      "signature": "TDataStd_IntegerArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Lower#1",
+      "nativeName": "TDataStd_IntegerArray::Lower",
+      "signature": "TDataStd_IntegerArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_IntegerArray::Restore",
+      "signature": "TDataStd_IntegerArray::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@SetID#",
+      "nativeName": "TDataStd_IntegerArray::SetID",
+      "signature": "TDataStd_IntegerArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@TDataStd_IntegerArray#",
+      "nativeName": "TDataStd_IntegerArray::TDataStd_IntegerArray",
+      "signature": "TDataStd_IntegerArray::TDataStd_IntegerArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Upper#1",
+      "nativeName": "TDataStd_IntegerArray::Upper",
+      "signature": "TDataStd_IntegerArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Value#I#1",
+      "nativeName": "TDataStd_IntegerArray::Value",
+      "signature": "TDataStd_IntegerArray::Value: int (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@Append#I#",
+      "nativeName": "TDataStd_IntegerList::Append",
+      "signature": "TDataStd_IntegerList::Append: void (const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@SetID#",
+      "nativeName": "TDataStd_IntegerList::SetID",
+      "signature": "TDataStd_IntegerList::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@TDataStd_IntegerList#",
+      "nativeName": "TDataStd_IntegerList::TDataStd_IntegerList",
+      "signature": "TDataStd_IntegerList::TDataStd_IntegerList: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@GetID#S",
+      "nativeName": "TDataStd_RealArray::GetID",
+      "signature": "TDataStd_RealArray::GetID: const Standard_GUID &()",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Init#I#I#",
+      "nativeName": "TDataStd_RealArray::Init",
+      "signature": "TDataStd_RealArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Length#1",
+      "nativeName": "TDataStd_RealArray::Length",
+      "signature": "TDataStd_RealArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Lower#1",
+      "nativeName": "TDataStd_RealArray::Lower",
+      "signature": "TDataStd_RealArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_RealArray::Restore",
+      "signature": "TDataStd_RealArray::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@SetID#",
+      "nativeName": "TDataStd_RealArray::SetID",
+      "signature": "TDataStd_RealArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@TDataStd_RealArray#",
+      "nativeName": "TDataStd_RealArray::TDataStd_RealArray",
+      "signature": "TDataStd_RealArray::TDataStd_RealArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Upper#1",
+      "nativeName": "TDataStd_RealArray::Upper",
+      "signature": "TDataStd_RealArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Value#I#1",
+      "nativeName": "TDataStd_RealArray::Value",
+      "signature": "TDataStd_RealArray::Value: double (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@Append#d#",
+      "nativeName": "TDataStd_RealList::Append",
+      "signature": "TDataStd_RealList::Append: void (const double)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@SetID#",
+      "nativeName": "TDataStd_RealList::SetID",
+      "signature": "TDataStd_RealList::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@TDataStd_RealList#",
+      "nativeName": "TDataStd_RealList::TDataStd_RealList",
+      "signature": "TDataStd_RealList::TDataStd_RealList: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@GetID#S",
+      "nativeName": "TDataStd_ReferenceArray::GetID",
+      "signature": "TDataStd_ReferenceArray::GetID: const Standard_GUID &()",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Init#I#I#",
+      "nativeName": "TDataStd_ReferenceArray::Init",
+      "signature": "TDataStd_ReferenceArray::Init: void (const int, const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Length#1",
+      "nativeName": "TDataStd_ReferenceArray::Length",
+      "signature": "TDataStd_ReferenceArray::Length: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Lower#1",
+      "nativeName": "TDataStd_ReferenceArray::Lower",
+      "signature": "TDataStd_ReferenceArray::Lower: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_ReferenceArray::Restore",
+      "signature": "TDataStd_ReferenceArray::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetID#",
+      "nativeName": "TDataStd_ReferenceArray::SetID",
+      "signature": "TDataStd_ReferenceArray::SetID: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetValue#I#&1$@S@TDF_Label#",
+      "nativeName": "TDataStd_ReferenceArray::SetValue",
+      "signature": "TDataStd_ReferenceArray::SetValue: void (const int, const TDF_Label &)",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@TDataStd_ReferenceArray#",
+      "nativeName": "TDataStd_ReferenceArray::TDataStd_ReferenceArray",
+      "signature": "TDataStd_ReferenceArray::TDataStd_ReferenceArray: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Upper#1",
+      "nativeName": "TDataStd_ReferenceArray::Upper",
+      "signature": "TDataStd_ReferenceArray::Upper: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Value#I#1",
+      "nativeName": "TDataStd_ReferenceArray::Value",
+      "signature": "TDataStd_ReferenceArray::Value: TDF_Label (const int) const",
+      "baselineDisposition": "Manual",
+      "reason": "Existing direct typed value/initialized receiver operations invoked by BI; not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@NewEmpty#1",
+      "nativeName": "TDataStd_ReferenceArray::NewEmpty",
+      "signature": "TDataStd_ReferenceArray::NewEmpty: occ::handle<TDF_Attribute> () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Audited native reference backup/paste virtual protocol, privately specialized via public setters for empty intervals. Not a new migration."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1",
+      "nativeName": "TDataStd_ReferenceArray::Paste",
+      "signature": "TDataStd_ReferenceArray::Paste: void (const occ::handle<TDF_Attribute> &, const occ::handle<TDF_RelocationTable> &) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Audited native reference backup/paste virtual protocol, privately specialized via public setters for empty intervals. Not a new migration."
+    }
+  ]
+}

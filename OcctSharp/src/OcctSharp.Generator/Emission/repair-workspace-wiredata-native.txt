@@ -1,0 +1,65 @@
+#include "OcctSharp.Modeling.RepairSupport.Generated.hxx"
+using namespace OcctSharpRepair;
+void OCCTSHARP_CALL occtsharp_repair_release(void* token,int32_t kind) {
+ if(kind==0)OcctSharpOwned::Release(token,typeid(WireData));
+ if(kind==1)OcctSharpOwned::Release(token,typeid(Segment));
+ if(kind==2)OcctSharpOwned::Release(token,typeid(Session));
+ if(kind==3)OcctSharpOwned::Release(token,typeid(Workspace));
+ if(kind==4)OcctSharpOwned::Release(token,typeid(History));
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_create(const void* shapes,int32_t manifold,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Flag(manifold);auto set=OcctSharpOwned::Lease<const ShapeSet>(shapes);
+  Require(set->values.size()<=MaxItems,"Too many wire edges.");
+  for(const auto& shape:set->values)Require(shape.ShapeType()==TopAbs_EDGE,"WireData requires edges.");
+  auto value=opencascade::handle<ShapeExtend_WireData>(new ShapeExtend_WireData());value->ManifoldMode()=manifold!=0;
+  for(const auto& shape:set->values)value->Add(TopoDS::Edge(shape));*result=PublishWireData(value);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_from_wire(const OcctSharp_ShapeHandle* shape,int32_t chained,int32_t manifold,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Flag(chained);Flag(manifold);auto wire=TopoDS::Wire(Typed(shape,TopAbs_WIRE));
+  int count=0;for(TopoDS_Iterator it(wire);it.More();it.Next())Require(++count<=MaxItems,"Too many wire edges.");
+  auto value=opencascade::handle<ShapeExtend_WireData>(new ShapeExtend_WireData(wire,chained!=0,manifold!=0));
+  // Init's boolean reports whether the incoming storage was already chained.
+  bool ordered=value->Init(wire,chained!=0,manifold!=0);*result=PublishWireData(value,ordered);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_info(const void* token,int32_t* values,int32_t capacity) {
+ if(!values || capacity!=4)return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+ return Guard([&]{auto data=OcctSharpOwned::Lease<const WireData>(token);
+  int info[4]={data->value->NbEdges(),data->value->NbNonManifoldEdges(),data->value->ManifoldMode()?1:0,data->chained?1:0};
+  std::copy(info,info+4,values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_shape(const void* token,int32_t selector,int32_t index,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto data=OcctSharpOwned::Lease<const WireData>(token);TopoDS_Shape shape;
+  if(selector==0){Index(index,data->value->NbEdges());shape=data->value->Edge(index);}
+  else if(selector==1){Index(index,data->value->NbNonManifoldEdges());shape=data->value->NonmanifoldEdge(index);}
+  else{Require(selector==2 || selector==3,"Unknown WireData result.");Require(data->value->NbEdges()>0,"Empty wire.");shape=selector==2?data->value->Wire():data->value->WireAPIMake();}
+  Require(!shape.IsNull(),"Wire construction failed.");*result=OcctSharp_Internal_AllocateShape(shape);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_nonmanifold(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto data=OcctSharpOwned::Lease<const WireData>(token);*result=PublishShapes(data->value->NonmanifoldEdges());});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_index(const void* token,const OcctSharp_ShapeHandle* edge,int32_t* result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=0;
+ return Guard([&]{auto shape=TopoDS::Edge(Typed(edge,TopAbs_EDGE));auto data=OcctSharpOwned::Lease<const WireData>(token);
+  // Index may populate seam metadata; operate on detached storage even for reads.
+  auto copy=CopyWireData(data->value);*result=copy->Index(shape);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_wiredata_edit(const void* token,const OcctSharp_ShapeHandle* input,int32_t operation,int32_t index,int32_t overload,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto shape=ShapeValue(input);auto data=OcctSharpOwned::Lease<const WireData>(token);
+  Require(operation>=0 && operation<=2 && overload>=0 && overload<=2,"Unknown wire edit.");
+  Require(overload==0?shape.ShapeType()==TopAbs_EDGE:overload==1?shape.ShapeType()==TopAbs_WIRE:shape.ShapeType()==TopAbs_EDGE || shape.ShapeType()==TopAbs_WIRE,"Wire edit type mismatch.");
+  if(operation==0)Require(index>=0 && index<=data->value->NbEdges(),"Insertion index outside bounds; zero appends.");
+  if(operation==1)Require(index>=0 && index<=3,"Oriented mode must be 0..3.");
+  if(operation==2){Require(shape.ShapeType()==TopAbs_EDGE,"Set requires edge.");Index(index,data->value->NbEdges());}
+  int additional=0;if(shape.ShapeType()==TopAbs_EDGE)additional=1;else for(TopoDS_Iterator it(shape);it.More();it.Next())Require(++additional<=MaxItems,"Too many wire edges.");
+  Require(operation==2 || data->value->NbEdges()+data->value->NbNonManifoldEdges()+additional<=MaxItems,"Wire size exceeds bound.");
+  auto copy=CopyWireData(data->value);
+  if(operation==2)copy->Set(TopoDS::Edge(shape),index);
+  else if(operation==0){if(overload==0)copy->Add(TopoDS::Edge(shape),index);else if(overload==1)copy->Add(TopoDS::Wire(shape),index);else copy->Add(shape,index);}
+  else {if(overload==0)copy->AddOriented(TopoDS::Edge(shape),index);else if(overload==1)copy->AddOriented(TopoDS::Wire(shape),index);else copy->AddOriented(shape,index);}
+  *result=PublishWireData(copy);});
+}

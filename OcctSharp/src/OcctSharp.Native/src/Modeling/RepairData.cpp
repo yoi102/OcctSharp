@@ -136,6 +136,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_subshape(
     *output = AllocateShape(Copy(map(index + 1)));
   });
 }
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_find_topology_index(
+  const OcctSharp_ShapeHandle* source, const OcctSharp_ShapeHandle* selected, int32_t* index) {
+  if (index) *index = -1;
+  return Guard([&] {
+    ValidateUsableShape(source); ValidateUsableShape(selected); Require(index, "Missing topology index output.");
+    const auto map = Map(source->Value);
+    const int found = map.FindIndex(selected->Value);
+    *index = found ? found - 1 : -1;
+  });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_find_topology_partner_index(
+  const OcctSharp_ShapeHandle* source, const OcctSharp_ShapeHandle* selected, int32_t* index) {
+  if (index) *index = -1;
+  return Guard([&] {
+    ValidateUsableShape(source); ValidateUsableShape(selected); Require(index, "Missing topology index output.");
+    const auto map = Map(source->Value);
+    int found = -1;
+    for (int i = 1; i <= map.Extent(); ++i) {
+      if (!map(i).IsPartner(selected->Value)) continue;
+      if (found >= 0) { *index = -1; return; }
+      found = i - 1;
+    }
+    *index = found;
+  });
+}
 OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_result_shape(
   const OcctSharp_RepairResultHandle* result, OcctSharp_ShapeHandle** output) {
   if (output) *output = nullptr;

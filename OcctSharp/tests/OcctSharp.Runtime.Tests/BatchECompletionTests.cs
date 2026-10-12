@@ -357,7 +357,9 @@ public sealed class BatchECompletionTests
             Assert.Equal(90, lineX.InspectAngleTo(lineY).DisplayValue, 8);
             ShapeInspectionProperties volume = first.InspectProperties(InspectionPropertyKind.Volume, units);
             Assert.Equal(6000, volume.Mass, 6);
-            Assert.Equal(new GpPoint(5, 10, 15), volume.CenterOfMass);
+            Assert.Equal(5, volume.CenterOfMass.X, 9);
+            Assert.Equal(10, volume.CenterOfMass.Y, 9);
+            Assert.Equal(15, volume.CenterOfMass.Z, 9);
             using Shape circle = ShapeFactory.CreateCircleEdge(GpPoint.Origin, new GpPoint(0, 0, 1), 5);
             ShapeRadialMeasurement radial = circle.InspectRadius(units);
             Assert.Equal(RadialGeometryKind.Circle, radial.GeometryKind);

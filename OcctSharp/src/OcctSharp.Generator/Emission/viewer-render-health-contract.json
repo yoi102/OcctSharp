@@ -1,0 +1,17 @@
+{
+  "workflow": "render-health-v1",
+  "occtVersion": "8.0.1",
+  "headers": {
+    "Graphic3d_StructureManager.hxx": "9261A6C096EE9ECB2265D84D71160B09657F2748856C13ACD3B6E26E6D9B97B1",
+    "OpenGl_GraphicDriver.hxx": "6776E9029F93C220F2D5E5ED2EB0EAB687066691658F44B3A9C78620E04AFAD8",
+    "OpenGl_Context.hxx": "A944B525C4B5D57DFD0099B32917ECBBB3D37F4252A415C76752510061A4581E",
+    "V3d_Viewer.hxx": "E1951D9EA68B2C6E9E30FA28D7628466B5EB7F4B715F81B72D120EB80B2D4602"
+  },
+  "generatedSupportingGlue": 4,
+  "newAdmittedDeclarationStableIds": [],
+  "ownership": "Existing live owner-thread viewer; bounded copied int32 mask; no graphics handle escapes.",
+  "manualFacade": "Public facade generated from pinned support template; no OCCT declaration credit.",
+  "interopOwner": "Retain existing legacy NativeMethods partial in Modeling; no module or assembly move.",
+  "physicalGpuDiagnosis": false,
+  "abiMinor": 116
+}

@@ -46,6 +46,9 @@ public sealed class ViewerPresentation : IDisposable
     /// <summary>Sets wireframe or shaded display for this presentation.</summary>
     public void SetDisplayMode(ViewerDisplayMode displayMode) => Viewer.SetDisplayMode(this, displayMode);
 
+    /// <summary>Draws this presentation above model geometry while retaining its world position.</summary>
+    public void SetOverlay(bool enabled) => Viewer.SetOverlay(this, enabled);
+
     /// <summary>
     /// Activates whole-object selection when null, or one topology-kind selection mode.
     /// </summary>

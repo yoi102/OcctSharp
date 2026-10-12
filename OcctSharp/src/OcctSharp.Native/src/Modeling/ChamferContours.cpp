@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 #include "Modeling/ContourPrograms.hxx"
 #include <BRepFilletAPI_MakeChamfer.hxx>
 #include <numbers>
@@ -10,7 +11,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_contour_chamfer(const OcctSharp_ShapeH
   return Guard([&] {
     Require(output && count >= 0 && count <= 256 && (!count || programs), "Invalid chamfer request.");
     Require(mode >= 0 && mode <= 2, "Invalid chamfer mode."); Flag(build); InputGraph graph(&source, 1); Result result(1);
-    BRepFilletAPI_MakeChamfer algorithm(graph.At(0)); algorithm.SetMode(static_cast<ChFiDS_ChamfMode>(mode));
+    OcctSharpGenerated::LocalMakeChamferBuilder algorithm(graph.At(0)); algorithm.SetMode(static_cast<ChFiDS_ChamfMode>(mode));
     std::vector<int> seeds;
     for (int i = 0; i < count; ++i) {
       const auto& p = programs[i]; const auto& edge = TopoDS::Edge(graph.Subshape(0, p.seed, TopAbs_EDGE));

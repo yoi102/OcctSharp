@@ -1,0 +1,88 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+using OcctSharp.OwnedValues;
+namespace OcctSharp.Geometry.Workspaces;
+internal sealed partial class SplineWorkspaceHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal SplineWorkspaceHandle(nint p):base(true){SetHandle(p);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_workspace_release")]internal static partial void Release(nint token);
+}
+/// <summary>Immutable, independent coefficient or single-span cache. Dispose after use. Source mutation must be synchronized while creating a workspace.</summary>
+public sealed partial class SplineWorkspace:IDisposable {
+ readonly SplineWorkspaceHandle handle;
+ SplineWorkspaceHandle NativeHandle {get{ObjectDisposedException.ThrowIf(handle.IsClosed,this);return handle;}}
+ static SplineWorkspace()=>NativeLibraryResolver.EnsureRegistered(typeof(SplineWorkspace).Assembly);
+ SplineWorkspace(nint p){try{handle=new(p);}catch{SplineWorkspaceHandle.Release(p);throw;}
+  try{var info=Values(2,0,0,0);UDegree=(int)info[1,1];VDegree=(int)info[1,2];Dimension=(int)info[1,3];IsSurface=info[1,4]!=0;HasWeights=info[1,5]!=0;IsCoefficients=info[1,6]!=0;UMin=info[1,7];UMax=info[1,8];VMin=info[1,9];VMax=info[1,10];UOrigin=info[1,11];VOrigin=info[1,12];}catch{handle.Dispose();throw;}}
+ /// <summary>Curve or surface U degree.</summary>
+ public int UDegree {get;}
+ /// <summary>Surface V degree; zero for a curve.</summary>
+ public int VDegree {get;}
+ /// <summary>Coordinate dimension, two or three.</summary>
+ public int Dimension {get;}
+ /// <summary>Whether this is a surface workspace.</summary>
+ public bool IsSurface {get;}
+ /// <summary>Whether the copied coefficient rows append a weight coefficient.</summary>
+ public bool HasWeights {get;}
+ /// <summary>True for full Bezier coefficients; false for a spline span cache.</summary>
+ public bool IsCoefficients {get;}
+ /// <summary>Inclusive lower U bound in the original parameter domain.</summary>
+ public double UMin {get;}
+ /// <summary>Inclusive upper U bound in the original parameter domain.</summary>
+ public double UMax {get;}
+ /// <summary>Inclusive lower V bound for surfaces.</summary>
+ public double VMin {get;}
+ /// <summary>Inclusive upper V bound for surfaces.</summary>
+ public double VMax {get;}
+ /// <summary>Taylor expansion origin; caches scale by half the span length.</summary>
+ public double UOrigin {get;}
+ /// <summary>Surface Taylor expansion origin.</summary>
+ public double VOrigin {get;}
+ /// <summary>Independent coefficients. Curve rows follow increasing powers; surface rows flatten U powers then V powers. Coordinates precede an optional weight coefficient. Bounds are one-based.</summary>
+ public CopiedGrid<double> Snapshot()=>Values(0,0,0,0);
+ /// <summary>Evaluates position then derivatives in rows 0..order. Curve order is 0..3. Periodic inputs normalize before checking this span.</summary>
+ public CopiedGrid<double> EvaluateCurve(double parameter,int derivativeOrder=0){if(IsSurface)throw new InvalidOperationException("This workspace is a surface.");return Values(1,parameter,0,derivativeOrder);}
+ /// <summary>Evaluates rows P, DU, DV, DUU, DUV, DVV through order 0..2, with row lower bound zero.</summary>
+ public CopiedGrid<double> EvaluateSurface(double u,double v,int derivativeOrder=0){if(!IsSurface)throw new InvalidOperationException("This workspace is a curve.");return Values(1,u,v,derivativeOrder);}
+ CopiedGrid<double> Values(int operation,double u,double v,int order){NativeError.ThrowIfFailed(ValuesNative(NativeHandle,operation,u,v,order,out var p),"spline_workspace_values");using var matrix=MathMatrix.FromNative(p);return matrix.Snapshot();}
+ /// <summary>Releases the private immutable workspace after active calls finish.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_workspace_values")]private static partial NativeStatus ValuesNative(SplineWorkspaceHandle token,int operation,double u,double v,int order,out nint result);
+ /// <summary>Copies GeomBSplineCurve into an independent cache workspace.</summary>
+ public static SplineWorkspace Cache(GeomBSplineCurve source,double parameter){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(GeomBSplineCurveNative(source.NativeHandle,parameter,out var p),"spline_curve_cache");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_curve_cache")]private static partial NativeStatus GeomBSplineCurveNative(GeomBSplineCurveHandle source,double parameter,out nint result);
+ /// <summary>Copies Geom2dBSplineCurve into an independent cache workspace.</summary>
+ public static SplineWorkspace Cache(Geom2dBSplineCurve source,double parameter){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(Geom2dBSplineCurveNative(source.NativeHandle,parameter,out var p),"spline_curve2d_cache");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_curve2d_cache")]private static partial NativeStatus Geom2dBSplineCurveNative(Geom2dBSplineCurveHandle source,double parameter,out nint result);
+ /// <summary>Copies GeomBSplineSurface into an independent cache workspace.</summary>
+ public static SplineWorkspace Cache(GeomBSplineSurface source,double u,double v){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(GeomBSplineSurfaceNative(source.NativeHandle,u,v,out var p),"spline_surface_cache");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_surface_cache")]private static partial NativeStatus GeomBSplineSurfaceNative(GeomBSplineSurfaceHandle source,double u,double v,out nint result);
+ /// <summary>Copies GeomBezierCurve into an independent coefficients workspace.</summary>
+ public static SplineWorkspace Coefficients(GeomBezierCurve source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(GeomBezierCurveNative(source.NativeHandle,out var p),"spline_curve_coefficients");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_curve_coefficients")]private static partial NativeStatus GeomBezierCurveNative(GeomBezierCurveHandle source,out nint result);
+ /// <summary>Copies Geom2dBezierCurve into an independent coefficients workspace.</summary>
+ public static SplineWorkspace Coefficients(Geom2dBezierCurve source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(Geom2dBezierCurveNative(source.NativeHandle,out var p),"spline_curve2d_coefficients");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_curve2d_coefficients")]private static partial NativeStatus Geom2dBezierCurveNative(Geom2dBezierCurveHandle source,out nint result);
+ /// <summary>Copies GeomBezierSurface into an independent coefficients workspace.</summary>
+ public static SplineWorkspace Coefficients(GeomBezierSurface source){ArgumentNullException.ThrowIfNull(source);NativeError.ThrowIfFailed(GeomBezierSurfaceNative(source.NativeHandle,out var p),"spline_surface_coefficients");return new(p);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_surface_coefficients")]private static partial NativeStatus GeomBezierSurfaceNative(GeomBezierSurfaceHandle source,out nint result);
+}
+/// <summary>Copied clamped, nonperiodic spline interpolation. Native inversion failures throw and publish no partial outputs.</summary>
+public static partial class SplineWorkspaceInterpolation {
+ static SplineWorkspaceInterpolation()=>NativeLibraryResolver.EnsureRegistered(typeof(SplineWorkspaceInterpolation).Assembly);
+ /// <summary>Interpolate copied 2D/3D point or unweighted derivative rows. One contact order per parameter; weights require all contact orders to be zero. Null weights mean absent; empty weights are invalid. Output rows are poles, with positive solved weights appended when supplied.</summary>
+ public static unsafe CopiedGrid<double> Curve(ReadOnlySpan<double> flatKnots,int degree,ReadOnlySpan<double> parameters,ReadOnlySpan<int> contactOrders,CopiedGrid<double> points,double[]? weights=null){
+  ArgumentNullException.ThrowIfNull(points);if(points.Columns is not (2 or 3)||parameters.Length!=points.Rows||contactOrders.Length!=points.Rows)throw new ArgumentException("Point, parameter and contact dimensions differ.");
+  if(weights is not null&&weights.Length!=points.Rows)throw new ArgumentException("Weight count mismatch.",nameof(weights));var data=points.ToArray();var ws=weights is null?null:(double[])weights.Clone();
+  fixed(double* k=flatKnots,p=parameters,x=data,w=ws)fixed(int* c=contactOrders){NativeError.ThrowIfFailed(CurveNative(k,flatKnots.Length,degree,p,c,points.Rows,x,data.Length,points.Columns,w,ws?.Length??0,out var result),"spline_interpolate_curve");using var matrix=MathMatrix.FromNative(result);return matrix.Snapshot();}}
+ /// <summary>Interpolates a tensor grid of 3D sample rows in U-major/V-minor order. Parameters define each axis. Optional sample weights are homogenized privately; returned poles are Euclidean with positive solved weights appended.</summary>
+ public static unsafe CopiedGrid<double> Surface(ReadOnlySpan<double> uFlatKnots,int uDegree,ReadOnlySpan<double> uParameters,ReadOnlySpan<double> vFlatKnots,int vDegree,ReadOnlySpan<double> vParameters,CopiedGrid<double> points,double[]? weights=null){
+  ArgumentNullException.ThrowIfNull(points);if(points.Columns!=3||points.Rows!=checked(uParameters.Length*vParameters.Length))throw new ArgumentException("Surface sample dimensions differ.");if(weights is not null&&weights.Length!=points.Rows)throw new ArgumentException("Weight count mismatch.",nameof(weights));var data=points.ToArray();var ws=weights is null?null:(double[])weights.Clone();
+  fixed(double* uk=uFlatKnots,up=uParameters,vk=vFlatKnots,vp=vParameters,x=data,w=ws){NativeError.ThrowIfFailed(SurfaceNative(uk,uFlatKnots.Length,uDegree,up,uParameters.Length,vk,vFlatKnots.Length,vDegree,vp,vParameters.Length,x,data.Length,w,ws?.Length??0,out var result),"spline_interpolate_surface");using var matrix=MathMatrix.FromNative(result);return matrix.Snapshot();}}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_interpolate_curve")]private static unsafe partial NativeStatus CurveNative(double* knots,int nk,int degree,double* parameters,int* contacts,int n,double* points,int count,int dimension,double* weights,int nw,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_interpolate_surface")]private static unsafe partial NativeStatus SurfaceNative(double* uk,int nuk,int du,double* up,int nu,double* vk,int nvk,int dv,double* vp,int nv,double* points,int count,double* weights,int nw,out nint result);
+}

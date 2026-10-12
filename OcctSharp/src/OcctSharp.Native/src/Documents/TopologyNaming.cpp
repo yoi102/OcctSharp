@@ -1,3 +1,4 @@
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 #include "Documents/Parametric.hxx"
 #include "Runtime/Shape.hxx"
 #include "Runtime/Validation.hxx"
@@ -21,7 +22,7 @@ namespace
 TopoDS_Shape NamedShape(const TDF_Label& label)
 {
   occ::handle<TNaming_NamedShape> attribute;
-  return label.FindAttribute(TNaming_NamedShape::GetID(), attribute) ? TNaming_Tool::GetShape(attribute) : TopoDS_Shape();
+  return OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TNaming_NamedShape_GetID(), attribute) ? OcctSharpGenerated::DocumentAdapters::TNaming_Tool_GetShape(attribute) : TopoDS_Shape();
 }
 bool Contains(const TopoDS_Shape& context, const TopoDS_Shape& selection)
 {
@@ -50,12 +51,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_naming_record(
       if (kind != 0) ValidateUsableShape(old_shapes[i]);
       if (kind != 3) ValidateUsableShape(new_shapes[i]);
     }
-    TNaming_Builder builder(label);
+    OcctSharpGenerated::DocumentAdapters::PrivateTNamingBuilder builder(label);
     for (int i = 0; i < count; ++i) {
-      if (kind == 0) builder.Generated(new_shapes[i]->Value);
-      if (kind == 1) builder.Generated(old_shapes[i]->Value, new_shapes[i]->Value);
-      if (kind == 2) builder.Modify(old_shapes[i]->Value, new_shapes[i]->Value);
-      if (kind == 3) builder.Delete(old_shapes[i]->Value);
+      if (kind == 0) OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Generated(builder,new_shapes[i]->Value);
+      if (kind == 1) OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Generated(builder,old_shapes[i]->Value, new_shapes[i]->Value);
+      if (kind == 2) OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Modify(builder,old_shapes[i]->Value, new_shapes[i]->Value);
+      if (kind == 3) OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Delete(builder,old_shapes[i]->Value);
     }
   });
 }
@@ -71,10 +72,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_naming_history(
     const auto label = ResolveOcafLabel(document, entry);
     const int revision = transaction < 0 ? document->Document->GetData()->Transaction() : transaction;
     Require(revision <= document->Document->GetData()->Transaction(), "History revision is in the future.");
-    TNaming_Iterator iterator(label, revision);
+    OcctSharpGenerated::DocumentAdapters::PrivateTNamingIterator iterator(label, revision);
     TopoDS_Shape before, after;
-    for (; iterator.More(); iterator.Next()) {
-      if (*count == index) { before = iterator.OldShape(); after = iterator.NewShape(); *evolution = iterator.Evolution(); }
+    for (; OcctSharpGenerated::DocumentAdapters::TNaming_Iterator_More(iterator); OcctSharpGenerated::DocumentAdapters::TNaming_Iterator_Next(iterator)) {
+      if (*count == index) { before = OcctSharpGenerated::DocumentAdapters::TNaming_Iterator_OldShape(iterator); after = OcctSharpGenerated::DocumentAdapters::TNaming_Iterator_NewShape(iterator); *evolution = OcctSharpGenerated::DocumentAdapters::TNaming_Iterator_Evolution(iterator); }
       ++*count;
       Require(*count <= 1000000, "History exceeds the bounded limit.");
     }
@@ -97,18 +98,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_naming_select(
     ValidateUsableShape(selection);
     const auto parent = ResolveOcafLabel(document, selector_parent);
     const auto contextLabel = ResolveOcafLabel(document, context_entry); RequireOpenOcafCommand(document);
-    Require(!contextLabel.IsDescendant(parent) && parent != contextLabel, "The selector cannot contain its context.");
+    Require(!OcctSharpGenerated::DocumentAdapters::TDF_Label_IsDescendant(contextLabel,parent) && parent != contextLabel, "The selector cannot contain its context.");
     Require(selection->Value.ShapeType() == expected_kind, "The selected topology has the wrong kind.");
     const auto context = NamedShape(contextLabel);
     Require(Contains(context, selection->Value), "The selected topology is unrelated to this context.");
     // TNaming clears descendants. Only this reserved child is ever passed to Select.
-    const auto child = parent.FindChild(1, true);
+    const auto child = OcctSharpGenerated::DocumentAdapters::TDF_Label_FindChild(parent,1, true);
     // Imported primitives may have only a named root. Anchor the exact selected
     // TShape independently so naming does not infer one face from a whole solid.
-    TNaming_Builder anchor(parent.FindChild(2, true)); anchor.Generated(selection->Value);
-    TNaming_Selector selector(child);
-    *selected = selector.Select(selection->Value, context, false, false) ? 1 : 0;
-    if (*selected) TDF_Reference::Set(parent, contextLabel);
+    OcctSharpGenerated::DocumentAdapters::PrivateTNamingBuilder anchor(OcctSharpGenerated::DocumentAdapters::TDF_Label_FindChild(parent,2, true)); OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Generated(anchor,selection->Value);
+    OcctSharpGenerated::DocumentAdapters::PrivateTNamingSelector selector(child);
+    *selected = OcctSharpGenerated::DocumentAdapters::TNaming_Selector_Select(selector,selection->Value, context, false, false) ? 1 : 0;
+    if (*selected) OcctSharpGenerated::DocumentAdapters::TDF_Reference_Set(parent, contextLabel);
   });
 }
 
@@ -121,16 +122,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_naming_resolve(
     Require(status && shape, "Missing selector resolution output."); RequireSelectionKind(expected_kind);
     const auto parent = ResolveOcafLabel(document, selector_parent); RequireOpenOcafCommand(document);
     occ::handle<TDF_Reference> reference;
-    if (!parent.FindAttribute(TDF_Reference::GetID(), reference)) return;
-    const auto child = parent.FindChild(1, false);
-    if (child.IsNull()) return;
-    const auto context = NamedShape(reference->Get());
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(parent,OcctSharpGenerated::DocumentAdapters::TDF_Reference_GetID(), reference)) return;
+    const auto child = OcctSharpGenerated::DocumentAdapters::TDF_Label_FindChild(parent,1, false);
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(child)) return;
+    const auto context = NamedShape(OcctSharpGenerated::DocumentAdapters::TDF_Reference_Get(*(reference)));
     if (context.IsNull()) { *status = 5; return; }
     NCollection_Map<TDF_Label> valid;
     valid.Add(document->Document->Main());
-    for (TDF_ChildIterator it(document->Document->Main(), true); it.More(); it.Next()) valid.Add(it.Value());
-    TNaming_Selector selector(child);
-    if (!selector.Solve(valid)) { *status = 3; return; }
+    for (OcctSharpGenerated::DocumentAdapters::PrivateTDFChildIterator it(document->Document->Main(), true); OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_More(it); OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_Next(it)) valid.Add(OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_Value(it));
+    OcctSharpGenerated::DocumentAdapters::PrivateTNamingSelector selector(child);
+    if (!OcctSharpGenerated::DocumentAdapters::TNaming_Selector_Solve(selector,valid)) { *status = 3; return; }
     const auto resolved = NamedShape(child);
     if (resolved.IsNull()) { *status = 5; return; }
     if (resolved.ShapeType() != expected_kind) {

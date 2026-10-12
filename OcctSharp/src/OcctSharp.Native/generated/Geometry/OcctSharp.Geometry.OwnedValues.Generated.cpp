@@ -120,6 +120,9 @@ void OcctSharp_Internal_SetLastError(const char*);
 #include <GeomLib_IsPlanarSurface.hxx>
 #include <GeomLib_LogSample.hxx>
 #include <GeomPlate_MakeApprox.hxx>
+#include <HatchGen_Domain.hxx>
+#include <HatchGen_PointOnElement.hxx>
+#include <HatchGen_PointOnHatching.hxx>
 #include <Hatch_Hatcher.hxx>
 #include <LProp_CurAndInf.hxx>
 #include <MAT2d_CutCurve.hxx>
@@ -22416,6 +22419,758 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_geomplate_makeapprox_surface_3(c
     auto returned = self->Surface();
     auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateGeomBSplineSurface(std::move(returned));
     *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_release(OcctSharp_Owned_HatchGen_DomainHandle* handle) { OcctSharpOwned::Release(handle, typeid(HatchGen_Domain)); }
+// Source: c:@S@HatchGen_Domain@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_firstpoint_0(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_Domain>(receiver);
+    auto returned = std::make_shared<HatchGen_PointOnHatching>(self->FirstPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_PointOnHatchingHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@HasFirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_hasfirstpoint_1(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_Domain>(receiver);
+    auto returned = self->HasFirstPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@HasSecondPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_hassecondpoint_2(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_Domain>(receiver);
+    auto returned = self->HasSecondPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_3(OcctSharp_Owned_HatchGen_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<HatchGen_Domain>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_4(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg1, OcctSharp_Owned_HatchGen_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg1);
+    auto returned = std::make_shared<HatchGen_Domain>(*local0, *local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_5(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, int32_t arg1, OcctSharp_Owned_HatchGen_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = (arg1 != 0);
+    auto returned = std::make_shared<HatchGen_Domain>(*local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SecondPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_secondpoint_6(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_Domain>(receiver);
+    auto returned = std::make_shared<HatchGen_PointOnHatching>(self->SecondPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_PointOnHatchingHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetFirstPoint#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setfirstpoint_7(const OcctSharp_Owned_HatchGen_DomainHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    self->SetFirstPoint();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetFirstPoint#&1$@S@HatchGen_PointOnHatching#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setfirstpoint_8(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    self->SetFirstPoint(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetPoints#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setpoints_9(const OcctSharp_Owned_HatchGen_DomainHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    self->SetPoints();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetPoints#&1$@S@HatchGen_PointOnHatching#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setpoints_10(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg1);
+    self->SetPoints(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetSecondPoint#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setsecondpoint_11(const OcctSharp_Owned_HatchGen_DomainHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    self->SetSecondPoint();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_Domain@F@SetSecondPoint#&1$@S@HatchGen_PointOnHatching#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setsecondpoint_12(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_Domain>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    self->SetSecondPoint(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_release(OcctSharp_Owned_HatchGen_PointOnElementHandle* handle) { OcctSharpOwned::Release(handle, typeid(HatchGen_PointOnElement)); }
+// Source: c:@S@HatchGen_PointOnElement@F@HatchGen_PointOnElement#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_create_0(OcctSharp_Owned_HatchGen_PointOnElementHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<HatchGen_PointOnElement>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_PointOnElementHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnElement@F@IntersectionType#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_intersectiontype_1(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->IntersectionType();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnElement@F@IsDifferent#&1$@S@HatchGen_PointOnElement#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_isdifferent_2(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnElement>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->IsDifferent(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnElement@F@IsIdentical#&1$@S@HatchGen_PointOnElement#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_isidentical_3(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnElement>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->IsIdentical(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnElement@F@SetIntersectionType#$@E@HatchGen_IntersectionType#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = static_cast<HatchGen_IntersectionType>(arg0);
+    self->SetIntersectionType(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_index_5(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_parameter_6(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_position_7(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->Position();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->SegmentBeginning();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_segmentend_9(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnElement>(receiver);
+    auto returned = self->SegmentEnd();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setindex_10(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = arg0;
+    self->SetIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setparameter_11(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetParameter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setposition_12(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->SetPosition(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetSegmentBeginning(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setsegmentend_14(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnElement>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetSegmentEnd(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_release(OcctSharp_Owned_HatchGen_PointOnHatchingHandle* handle) { OcctSharpOwned::Release(handle, typeid(HatchGen_PointOnHatching)); }
+// Source: c:@S@HatchGen_PointOnHatching@F@AddPoint#&1$@S@HatchGen_PointOnElement#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_addpoint_0(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnElement>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->AddPoint(*local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@ClrPoints#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_clrpoints_1(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    self->ClrPoints();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@HatchGen_PointOnHatching#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_create_2(OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<HatchGen_PointOnHatching>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_PointOnHatchingHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@IsEqual#&1$@S@HatchGen_PointOnHatching#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_isequal_3(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->IsEqual(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@IsGreater#&1$@S@HatchGen_PointOnHatching#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_isgreater_4(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->IsGreater(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@IsLower#&1$@S@HatchGen_PointOnHatching#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_islower_5(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->IsLower(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@NbPoints#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_nbpoints_6(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->NbPoints();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@Point#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_point_7(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0, OcctSharp_Owned_HatchGen_PointOnElementHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto local0 = arg0;
+    if (local0 < 1 || local0 > self->NbPoints()) throw Standard_Failure("Owned point index is outside [1, NbPoints].");
+    auto returned = std::make_shared<HatchGen_PointOnElement>(self->Point(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HatchGen_PointOnElementHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_PointOnHatching@F@RemPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_rempoint_8(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = arg0;
+    if (local0 < 1 || local0 > self->NbPoints()) throw Standard_Failure("Owned point index is outside [1, NbPoints].");
+    self->RemPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_index_9(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_parameter_10(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_position_11(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->Position();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->SegmentBeginning();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_segmentend_13(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HatchGen_PointOnHatching>(receiver);
+    auto returned = self->SegmentEnd();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setindex_14(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = arg0;
+    self->SetIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setparameter_15(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetParameter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setposition_16(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->SetPosition(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetSegmentBeginning(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HatchGen_PointOnHatching>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetSegmentEnd(local0);
     return OCCTSHARP_STATUS_SUCCESS;
   }
   catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }

@@ -1,0 +1,95 @@
+#include "OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include "../Foundation/OcctSharp.Foundation.WorkflowResultSupport.Generated.hxx"
+#include <BRepAlgoAPI_Section.hxx>
+#include <BRepOffsetAPI_MakeOffset.hxx>
+#include <BRepOffsetAPI_ThruSections.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRepCheck_Analyzer.hxx>
+#include <BRep_Builder.hxx>
+#include <BOPAlgo_PaveFiller.hxx>
+#include <BOPDS_DS.hxx>
+#include <BOPDS_Interf.hxx>
+#include <BOPDS_Curve.hxx>
+#include <BOPDS_PaveBlock.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Compound.hxx>
+#include <TopoDS_Iterator.hxx>
+#include <TopExp_Explorer.hxx>
+#include <array>
+#include <set>
+#include <map>
+using namespace OcctSharpTopologyCollections;
+namespace {
+using ShapeMap=NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher>;
+// Links: input root ordinal, input topology ordinal, result topology ordinal,
+// state (missing/exact/multiple/unproven), SDK path count, relation, peer source ordinal.
+struct ModelingResult {
+ std::vector<TopoDS_Shape> inputs;std::vector<ShapeMap> sources;TopoDS_Shape result;ShapeMap topology;
+ std::array<int32_t,18> info{};std::array<double,6> config{};std::vector<std::array<int32_t,7>> links;std::string message;
+};
+void BudgetShape(const TopoDS_Shape& s){Require(!s.IsNull(),"Null modeling input.");std::vector<TopoDS_Shape> pending{s};int visits=0,edges=0;while(!pending.empty()){Require(++visits<=16384,"Modeling traversal budget exceeded.");auto current=pending.back();pending.pop_back();if(current.ShapeType()==TopAbs_EDGE)Require(++edges<=4096,"Modeling edge budget exceeded.");for(TopoDS_Iterator it(current);it.More();it.Next()){Require(pending.size()+visits<16384,"Modeling traversal budget exceeded.");pending.push_back(it.Value());}}}
+TopoDS_Shape DeepCopy(const TopoDS_Shape& s){BudgetShape(s);BRepBuilderAPI_Copy copy(s,true,false);Require(copy.IsDone(),"Modeling geometry copy failed.");return copy.Shape();}
+std::shared_ptr<ModelingResult> Inputs(const ShapeSet& set,int kind){
+ Require(!set.values.empty()&&set.values.size()<=64,"Modeling input count outside 1..64.");TopoDS_Compound graph;BRep_Builder builder;builder.MakeCompound(graph);
+ int total=0;for(const auto& s:set.values){BudgetShape(s);ShapeMap m;TopExp::MapShapes(s,m);Require((total+=m.Extent())<=16384,"Whole modeling input graph exceeds budget.");builder.Add(graph,s);}
+ BRepBuilderAPI_Copy copy(graph,true,false);Require(copy.IsDone(),"Modeling input graph copy failed.");auto out=std::make_shared<ModelingResult>();out->info[2]=kind;out->info[3]=static_cast<int>(set.values.size());
+ for(const auto& s:set.values){auto mapped=copy.ModifiedShape(s);Require(!mapped.IsNull(),"Missing exact input copy correspondence.");out->inputs.push_back(mapped);ShapeMap map;TopExp::MapShapes(mapped,map);out->sources.push_back(std::move(map));}return out;
+}
+bool Capture(ModelingResult& out,const TopoDS_Shape& s){
+ BudgetShape(s);if(!BRepCheck_Analyzer(s,true,false,true).IsValid()){out.info[0]=2;out.message="SDK completed with invalid topology; no result published.";return false;}
+ out.result=s;TopExp::MapShapes(s,out.topology);Require(out.topology.Extent()<=16384,"Modeling output exceeds topology budget.");out.info[4]=out.topology.Extent();for(int i=1;i<=out.topology.Extent();++i)if(out.topology(i).ShapeType()==TopAbs_EDGE)++out.info[14];out.info[0]=1;return true;
+}
+void Link(ModelingResult& out,std::array<int32_t,7> link){Require(out.links.size()<65536,"Modeling source diagnostic budget exceeded.");out.links.push_back(link);}
+void Publish(const std::shared_ptr<ModelingResult>& out,void** token){out->info[5]=static_cast<int>(out->links.size());Publication<ModelingResult> publication(out);*token=publication.Commit();}
+void Failure(ModelingResult& out,const Standard_Failure& error){out.info[0]=3;out.result.Nullify();out.topology.Clear();out.info[4]=out.info[14]=0;out.links.clear();const char* text=error.GetMessageString();out.message=text?text:"SDK modeling exception";Require(out.message.size()<=65536,"Modeling failure message exceeds budget.");}
+void SectionLinks(ModelingResult& out,BRepAlgoAPI_Section& maker){
+ auto filler=maker.DSFiller();Require(filler!=nullptr,"Missing completed section interference data.");auto data=filler->PDS();Require(data!=nullptr&&data->NbShapes()<=32768,"Section data exceeds private budget.");
+ const auto& faces=data->InterfFF();Require(faces.Length()<=65536,"Section face interference budget exceeded.");
+ int scans=0;std::vector<std::set<std::pair<int,int>>> pairs(static_cast<size_t>(out.topology.Extent()+1));
+ for(int i=0;i<faces.Length();++i){int a=-1,b=-1;faces(i).Indices(a,b);Require(a>=0&&b>=0&&a<data->NbShapes()&&b<data->NbShapes(),"Invalid section source index.");const auto& curves=faces(i).Curves();Require(curves.Length()<=65536,"Section curve diagnostic budget exceeded.");
+  for(int j=0;j<curves.Length();++j)for(NCollection_List<occ::handle<BOPDS_PaveBlock>>::Iterator it(curves(j).PaveBlocks());it.More();it.Next()){
+   Require(++scans<=262144&&!it.Value().IsNull(),"Section provenance traversal exceeds budget.");int e=it.Value()->Edge();if(e<0)continue;Require(e<data->NbShapes(),"Invalid section edge index.");int ordinal=out.topology.FindIndex(data->Shape(e));if(ordinal>0)pairs[ordinal].emplace(a,b);
+  }
+ }
+ for(int e=1;e<=out.topology.Extent();++e)if(out.topology(e).ShapeType()==TopAbs_EDGE){auto& paths=pairs[e];int state=paths.empty()?0:paths.size()==1?1:2;int left=0,right=0;
+  if(state==1){TopoDS_Shape a,b;bool found1=maker.HasAncestorFaceOn1(out.topology(e),a),found2=maker.HasAncestorFaceOn2(out.topology(e),b);left=found1?out.sources[0].FindIndex(a):0;right=found2?out.sources[1].FindIndex(b):0;const auto& pair=*paths.begin();if(!found1||!found2||left==0||right==0||!a.IsSame(data->Shape(pair.first))||!b.IsSame(data->Shape(pair.second)))state=3;}
+  if(state!=1)left=right=0;Link(out,{0,left,e,state,static_cast<int>(paths.size()),0,right});
+ }
+}
+template<class Maker> void HistoryLinks(ModelingResult& out,Maker& maker,bool loft){
+ for(size_t root=0;root<out.sources.size();++root)for(int ordinal=1;ordinal<=out.sources[root].Extent();++ordinal){const auto& s=out.sources[root](ordinal);if(s.ShapeType()!=TopAbs_EDGE&&s.ShapeType()!=TopAbs_VERTEX)continue;
+  const auto& generated=maker.Generated(s);std::set<int> targets;int paths=0;bool unproven=false;
+  for(NCollection_List<TopoDS_Shape>::Iterator it(generated);it.More();it.Next()){Require(++paths<=16384,"Modeling generated history exceeds budget.");int result=out.topology.FindIndex(it.Value());if(result>0)targets.insert(result);else unproven=true;}
+  int state=unproven?3:targets.empty()?0:targets.size()==1?1:2;if(state==0||state==3)Link(out,{static_cast<int>(root),ordinal,0,state,paths,loft?2:1,0});
+  else for(int target:targets)Link(out,{static_cast<int>(root),ordinal,target,state,paths,loft?2:1,0});
+ }
+ // Preserve multiple sources (merge) rather than automatically choosing one.
+ std::map<int,std::set<std::pair<int,int>>> reverse;for(const auto& l:out.links)if(l[2]>0)reverse[l[2]].emplace(l[0],l[1]);
+ for(auto& l:out.links)if(l[2]>0&&reverse[l[2]].size()>1)l[3]=2;
+}
+void CheckPrecision(double tolerance){Require(std::isfinite(tolerance)&&tolerance>0&&tolerance<=1,"Invalid finite modeling tolerance.");}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_section(const void* input,int32_t approximation,int32_t pcurve1,int32_t pcurve2,double tolerance,void** token){
+ if(!token)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*token=nullptr;return Guard([&]{CheckPrecision(tolerance);Require((approximation==0||approximation==1)&&(pcurve1==0||pcurve1==1)&&(pcurve2==0||pcurve2==1),"Invalid section configuration.");auto source=OcctSharpOwned::Lease<const ShapeSet>(input);Require(source->values.size()==2,"Section requires exactly two inputs.");auto out=Inputs(*source,0);out->config[0]=tolerance;out->info[11]=approximation;out->info[12]=pcurve1;out->info[13]=pcurve2;
+  try{BRepAlgoAPI_Section maker;maker.Init1(out->inputs[0]);maker.Init2(out->inputs[1]);maker.SetNonDestructive(true);maker.SetRunParallel(false);maker.SetFuzzyValue(tolerance);maker.Approximation(approximation!=0);maker.ComputePCurveOn1(pcurve1!=0);maker.ComputePCurveOn2(pcurve2!=0);maker.Build();if(maker.IsDone()&&Capture(*out,maker.Shape()))SectionLinks(*out,maker);else if(!maker.IsDone())out->message="Section SDK did not complete.";}catch(const Standard_Failure& e){Failure(*out,e);}Publish(out,token);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_offset(const void* input,int32_t join,int32_t open,int32_t approximation,double distance,double altitude,void** token){
+ if(!token)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*token=nullptr;return Guard([&]{Require((join==0||join==2)&&(open==0||open==1)&&(approximation==0||approximation==1)&&std::isfinite(distance)&&std::abs(distance)>1e-12&&std::abs(distance)<=1e6&&std::isfinite(altitude)&&std::abs(altitude)<=1e6,"Invalid offset configuration.");auto source=OcctSharpOwned::Lease<const ShapeSet>(input);Require(source->values.size()==1||std::all_of(source->values.begin(),source->values.end(),[](const auto& s){return s.ShapeType()==TopAbs_WIRE;}),"Offset accepts one face or a bounded wire list.");auto out=Inputs(*source,1);for(const auto& s:out->inputs)Require(s.ShapeType()==TopAbs_FACE||s.ShapeType()==TopAbs_WIRE,"Offset input must be a planar face or wire.");out->config[1]=distance;out->config[2]=altitude;out->info[7]=join;out->info[8]=open;out->info[11]=approximation;
+  try{BRepOffsetAPI_MakeOffset maker;if(out->inputs[0].ShapeType()==TopAbs_FACE)maker.Init(TopoDS::Face(out->inputs[0]),static_cast<GeomAbs_JoinType>(join),open!=0);else{maker.Init(static_cast<GeomAbs_JoinType>(join),open!=0);for(const auto& s:out->inputs)maker.AddWire(TopoDS::Wire(s));}maker.SetApprox(approximation!=0);maker.Perform(distance,altitude);if(maker.IsDone()&&Capture(*out,maker.Shape()))HistoryLinks(*out,maker,false);else if(!maker.IsDone())out->message="Offset SDK did not complete.";}catch(const Standard_Failure& e){Failure(*out,e);}Publish(out,token);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_loft(const void* input,const int32_t* options,int32_t count,const double* config,int32_t capacity,void** token){
+ if(!token)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*token=nullptr;return Guard([&]{Require(options&&count==8&&config&&capacity==4,"Invalid loft profile.");CheckPrecision(config[0]);for(int i=1;i<4;++i)Require(std::isfinite(config[i])&&config[i]>0&&config[i]<=1e6,"Invalid positive loft weight.");for(int i=0;i<4;++i)Require(options[i]==0||options[i]==1,"Invalid loft flag.");Require(options[4]>=0&&options[4]<=2&&(options[5]==0||options[5]==2||options[5]==4)&&options[6]>=2&&options[6]<=14&&options[7]==0,"Invalid loft approximation profile.");auto source=OcctSharpOwned::Lease<const ShapeSet>(input);Require(source->values.size()>=2,"Loft requires two or more sections.");auto out=Inputs(*source,2);for(const auto& s:out->inputs)Require(s.ShapeType()==TopAbs_WIRE,"Loft sections must be wires.");out->config[0]=config[0];out->info[15]=options[0];out->info[16]=options[1];out->info[17]=options[2];
+  try{BRepOffsetAPI_ThruSections maker;maker.Init(options[0]!=0,options[1]!=0,config[0]);maker.SetMutableInput(false);maker.CheckCompatibility(options[2]!=0);maker.SetSmoothing(options[3]!=0);maker.SetParType(static_cast<Approx_ParametrizationType>(options[4]));maker.SetContinuity(static_cast<GeomAbs_Shape>(options[5]));maker.SetMaxDegree(options[6]);maker.SetCriteriumWeight(config[1],config[2],config[3]);for(const auto& s:out->inputs)maker.AddWire(TopoDS::Wire(s));out->info[6]=maker.IsMutableInput()?1:0;out->info[7]=maker.Continuity();out->info[8]=maker.ParType();out->info[9]=maker.MaxDegree();out->info[10]=maker.UseSmoothing()?1:0;maker.CriteriumWeight(out->config[3],out->config[4],out->config[5]);Require(out->info[6]==0,"SDK mutable input must be disabled.");for(double x:out->config)OcctSharpWorkflowResults::Finite(x);Require(maker.Wires().Size()==static_cast<int>(out->inputs.size()),"SDK original-wire count differs.");maker.Build();out->info[1]=maker.GetStatus();if(maker.IsDone()&&Capture(*out,maker.Shape())){HistoryLinks(*out,maker,true);for(size_t root=0;root<out->sources.size();++root)for(int i=1;i<=out->sources[root].Extent();++i)if(out->sources[root](i).ShapeType()==TopAbs_EDGE){auto face=maker.GeneratedFace(out->sources[root](i));int target=face.IsNull()?0:out->topology.FindIndex(face);Link(*out,{static_cast<int>(root),i,target,face.IsNull()?0:target>0?1:3,face.IsNull()?0:1,3,0});}}else if(!maker.IsDone())out->message="Loft SDK did not complete.";}catch(const Standard_Failure& e){Failure(*out,e);}Publish(out,token);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_snapshot(const void* token,int32_t* info,int32_t count,double* config,int32_t capacity,int32_t* links,int32_t linkCapacity){
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const ModelingResult>(token);OcctSharpWorkflowResults::AtomicBuffer<int32_t> a(info,count,18),c(links,linkCapacity,static_cast<int>(out->links.size()*7));OcctSharpWorkflowResults::AtomicBuffer<double> b(config,capacity,6);for(int x:out->info)a.Add(x);for(double x:out->config)b.Add(x);for(const auto& row:out->links)for(int x:row)c.Add(x);b.ValidateFinite();a.Commit();b.Commit();c.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_counts(const void* token,int32_t* links){if(!links)return OCCTSHARP_STATUS_INVALID_ARGUMENT;return Guard([&]{auto out=OcctSharpOwned::Lease<const ModelingResult>(token);*links=out->info[5];});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_shape(const void* token,int32_t root,int32_t ordinal,OcctSharp_ShapeHandle** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto out=OcctSharpOwned::Lease<const ModelingResult>(token);TopoDS_Shape source;if(root==-1){Require(out->info[0]==1,"No completed valid modeling result.");Require(ordinal>=0&&ordinal<=out->topology.Extent(),"Result topology ordinal out of bounds.");source=ordinal==0?out->result:out->topology(ordinal);}else{Require(root>=0&&root<static_cast<int>(out->inputs.size())&&ordinal>=0&&ordinal<=out->sources[root].Extent(),"Input copy ordinal outside exact domain.");source=ordinal==0?out->inputs[root]:out->sources[root](ordinal);}*result=OcctSharp_Internal_AllocateShape(DeepCopy(source));});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_modeling_result_message(const void* token,uint8_t* bytes,int32_t capacity,int32_t* length){if(!length)return OCCTSHARP_STATUS_INVALID_ARGUMENT;return Guard([&]{auto out=OcctSharpOwned::Lease<const ModelingResult>(token);int size=static_cast<int>(out->message.size());if(bytes){Require(capacity>=size,"Insufficient modeling message capacity.");std::copy(out->message.begin(),out->message.end(),bytes);}*length=size;});}
+void OCCTSHARP_CALL occtsharp_modeling_result_release(void* token){OcctSharpOwned::Release(token,typeid(ModelingResult));}

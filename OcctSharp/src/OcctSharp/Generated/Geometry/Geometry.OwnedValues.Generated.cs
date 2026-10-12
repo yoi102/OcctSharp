@@ -13134,6 +13134,459 @@ public sealed partial class GeomPlateMakeApprox : IDisposable {
     return managedResult;
   }
 }
+/// <summary>Owns a stable-address HatchGen_Domain. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class HatchGenDomain : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private HatchGenDomain(OwnedHandle handle) => _handle = handle;
+  static HatchGenDomain() => NativeLibraryResolver.EnsureRegistered(typeof(HatchGenDomain).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static HatchGenDomain FromNative(nint value) {
+    try { return new HatchGenDomain(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@HatchGen_Domain@F@FirstPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_firstpoint_0")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_firstpoint_0(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes HatchGen_Domain::FirstPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public HatchGenPointOnHatching FirstPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_firstpoint_0(NativeHandle, out nint result), "occtsharp_owned_hatchgen_domain_firstpoint_0");
+    var managedResult = HatchGenPointOnHatching.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@HasFirstPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_hasfirstpoint_1")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_hasfirstpoint_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_Domain::HasFirstPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasFirstPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_hasfirstpoint_1(NativeHandle, out int result), "occtsharp_owned_hatchgen_domain_hasfirstpoint_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@HasSecondPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_hassecondpoint_2")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_hassecondpoint_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_Domain::HasSecondPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasSecondPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_hassecondpoint_2(NativeHandle, out int result), "occtsharp_owned_hatchgen_domain_hassecondpoint_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_create_3(out nint result);
+  /// <summary>Invokes HatchGen_Domain::HatchGen_Domain. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchGenDomain Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_create_3(out nint result), "occtsharp_owned_hatchgen_domain_create_3");
+    var managedResult = HatchGenDomain.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_create_4(HatchGenPointOnHatching.OwnedHandle arg0, HatchGenPointOnHatching.OwnedHandle arg1, out nint result);
+  /// <summary>Invokes HatchGen_Domain::HatchGen_Domain. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchGenDomain Create(HatchGenPointOnHatching arg0, HatchGenPointOnHatching arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_create_4(arg0.NativeHandle, arg1.NativeHandle, out nint result), "occtsharp_owned_hatchgen_domain_create_4");
+    var managedResult = HatchGenDomain.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_create_5")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_create_5(HatchGenPointOnHatching.OwnedHandle arg0, int arg1, out nint result);
+  /// <summary>Invokes HatchGen_Domain::HatchGen_Domain. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchGenDomain Create(HatchGenPointOnHatching arg0, bool arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_create_5(arg0.NativeHandle, (arg1 ? 1 : 0), out nint result), "occtsharp_owned_hatchgen_domain_create_5");
+    var managedResult = HatchGenDomain.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@SecondPoint#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_secondpoint_6")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_secondpoint_6(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes HatchGen_Domain::SecondPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public HatchGenPointOnHatching SecondPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_secondpoint_6(NativeHandle, out nint result), "occtsharp_owned_hatchgen_domain_secondpoint_6");
+    var managedResult = HatchGenPointOnHatching.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetFirstPoint#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setfirstpoint_7")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setfirstpoint_7(OwnedHandle receiver);
+  /// <summary>Invokes HatchGen_Domain::SetFirstPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetFirstPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setfirstpoint_7(NativeHandle), "occtsharp_owned_hatchgen_domain_setfirstpoint_7");
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetFirstPoint#&1$@S@HatchGen_PointOnHatching#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setfirstpoint_8")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setfirstpoint_8(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0);
+  /// <summary>Invokes HatchGen_Domain::SetFirstPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetFirstPoint(HatchGenPointOnHatching arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setfirstpoint_8(NativeHandle, arg0.NativeHandle), "occtsharp_owned_hatchgen_domain_setfirstpoint_8");
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetPoints#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setpoints_9")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setpoints_9(OwnedHandle receiver);
+  /// <summary>Invokes HatchGen_Domain::SetPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setpoints_9(NativeHandle), "occtsharp_owned_hatchgen_domain_setpoints_9");
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetPoints#&1$@S@HatchGen_PointOnHatching#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setpoints_10")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setpoints_10(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0, HatchGenPointOnHatching.OwnedHandle arg1);
+  /// <summary>Invokes HatchGen_Domain::SetPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPoints(HatchGenPointOnHatching arg0, HatchGenPointOnHatching arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setpoints_10(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_hatchgen_domain_setpoints_10");
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetSecondPoint#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setsecondpoint_11")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setsecondpoint_11(OwnedHandle receiver);
+  /// <summary>Invokes HatchGen_Domain::SetSecondPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSecondPoint() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setsecondpoint_11(NativeHandle), "occtsharp_owned_hatchgen_domain_setsecondpoint_11");
+  }
+  // Source: c:@S@HatchGen_Domain@F@SetSecondPoint#&1$@S@HatchGen_PointOnHatching#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_domain_setsecondpoint_12")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_domain_setsecondpoint_12(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0);
+  /// <summary>Invokes HatchGen_Domain::SetSecondPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSecondPoint(HatchGenPointOnHatching arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_domain_setsecondpoint_12(NativeHandle, arg0.NativeHandle), "occtsharp_owned_hatchgen_domain_setsecondpoint_12");
+  }
+}
+/// <summary>Owns a stable-address HatchGen_PointOnElement. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class HatchGenPointOnElement : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private HatchGenPointOnElement(OwnedHandle handle) => _handle = handle;
+  static HatchGenPointOnElement() => NativeLibraryResolver.EnsureRegistered(typeof(HatchGenPointOnElement).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static HatchGenPointOnElement FromNative(nint value) {
+    try { return new HatchGenPointOnElement(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@HatchGen_PointOnElement@F@HatchGen_PointOnElement#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_create_0(out nint result);
+  /// <summary>Invokes HatchGen_PointOnElement::HatchGen_PointOnElement. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchGenPointOnElement Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_create_0(out nint result), "occtsharp_owned_hatchgen_pointonelement_create_0");
+    var managedResult = HatchGenPointOnElement.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnElement@F@IntersectionType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_intersectiontype_1")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_intersectiontype_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_PointOnElement::IntersectionType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public HatchGenIntersectionType IntersectionType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_intersectiontype_1(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonelement_intersectiontype_1");
+    var managedResult = (HatchGenIntersectionType)result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnElement@F@IsDifferent#&1$@S@HatchGen_PointOnElement#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_isdifferent_2")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_isdifferent_2(OwnedHandle receiver, HatchGenPointOnElement.OwnedHandle arg0, double arg1, out int result);
+  /// <summary>Invokes HatchGen_PointOnElement::IsDifferent. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDifferent(HatchGenPointOnElement arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_isdifferent_2(NativeHandle, arg0.NativeHandle, arg1, out int result), "occtsharp_owned_hatchgen_pointonelement_isdifferent_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnElement@F@IsIdentical#&1$@S@HatchGen_PointOnElement#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_isidentical_3")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_isidentical_3(OwnedHandle receiver, HatchGenPointOnElement.OwnedHandle arg0, double arg1, out int result);
+  /// <summary>Invokes HatchGen_PointOnElement::IsIdentical. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsIdentical(HatchGenPointOnElement arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_isidentical_3(NativeHandle, arg0.NativeHandle, arg1, out int result), "occtsharp_owned_hatchgen_pointonelement_isidentical_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnElement@F@SetIntersectionType#$@E@HatchGen_IntersectionType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_PointOnElement::SetIntersectionType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetIntersectionType(HatchGenIntersectionType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4(NativeHandle, (int)arg0), "occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_index_5")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_index_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Index. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Index() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_index_5(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonelement_index_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_parameter_6")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_parameter_6(OwnedHandle receiver, out double result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Parameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Parameter() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_parameter_6(NativeHandle, out double result), "occtsharp_owned_hatchgen_pointonelement_parameter_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_position_7")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_position_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Position. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public TopAbsOrientation Position() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_position_7(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonelement_position_7");
+    var managedResult = (TopAbsOrientation)result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SegmentBeginning. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool SegmentBeginning() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_segmentend_9")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_segmentend_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SegmentEnd. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool SegmentEnd() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_segmentend_9(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonelement_segmentend_9");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setindex_10")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setindex_10(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetIndex(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setindex_10(NativeHandle, arg0), "occtsharp_owned_hatchgen_pointonelement_setindex_10");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setparameter_11")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setparameter_11(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetParameter(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setparameter_11(NativeHandle, arg0), "occtsharp_owned_hatchgen_pointonelement_setparameter_11");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setposition_12")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setposition_12(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(TopAbsOrientation arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setposition_12(NativeHandle, (int)arg0), "occtsharp_owned_hatchgen_pointonelement_setposition_12");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetSegmentBeginning. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSegmentBeginning(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonelement_setsegmentend_14")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonelement_setsegmentend_14(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetSegmentEnd. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSegmentEnd(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonelement_setsegmentend_14(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_hatchgen_pointonelement_setsegmentend_14");
+  }
+}
+/// <summary>Owns a stable-address HatchGen_PointOnHatching. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class HatchGenPointOnHatching : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private HatchGenPointOnHatching(OwnedHandle handle) => _handle = handle;
+  static HatchGenPointOnHatching() => NativeLibraryResolver.EnsureRegistered(typeof(HatchGenPointOnHatching).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static HatchGenPointOnHatching FromNative(nint value) {
+    try { return new HatchGenPointOnHatching(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@HatchGen_PointOnHatching@F@AddPoint#&1$@S@HatchGen_PointOnElement#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_addpoint_0")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_addpoint_0(OwnedHandle receiver, HatchGenPointOnElement.OwnedHandle arg0, double arg1);
+  /// <summary>Invokes HatchGen_PointOnHatching::AddPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddPoint(HatchGenPointOnElement arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_addpoint_0(NativeHandle, arg0.NativeHandle, arg1), "occtsharp_owned_hatchgen_pointonhatching_addpoint_0");
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@ClrPoints#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_clrpoints_1")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_clrpoints_1(OwnedHandle receiver);
+  /// <summary>Invokes HatchGen_PointOnHatching::ClrPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ClrPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_clrpoints_1(NativeHandle), "occtsharp_owned_hatchgen_pointonhatching_clrpoints_1");
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@HatchGen_PointOnHatching#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_create_2(out nint result);
+  /// <summary>Invokes HatchGen_PointOnHatching::HatchGen_PointOnHatching. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchGenPointOnHatching Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_create_2(out nint result), "occtsharp_owned_hatchgen_pointonhatching_create_2");
+    var managedResult = HatchGenPointOnHatching.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@IsEqual#&1$@S@HatchGen_PointOnHatching#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_isequal_3")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_isequal_3(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0, double arg1, out int result);
+  /// <summary>Invokes HatchGen_PointOnHatching::IsEqual. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEqual(HatchGenPointOnHatching arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_isequal_3(NativeHandle, arg0.NativeHandle, arg1, out int result), "occtsharp_owned_hatchgen_pointonhatching_isequal_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@IsGreater#&1$@S@HatchGen_PointOnHatching#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_isgreater_4")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_isgreater_4(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0, double arg1, out int result);
+  /// <summary>Invokes HatchGen_PointOnHatching::IsGreater. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsGreater(HatchGenPointOnHatching arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_isgreater_4(NativeHandle, arg0.NativeHandle, arg1, out int result), "occtsharp_owned_hatchgen_pointonhatching_isgreater_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@IsLower#&1$@S@HatchGen_PointOnHatching#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_islower_5")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_islower_5(OwnedHandle receiver, HatchGenPointOnHatching.OwnedHandle arg0, double arg1, out int result);
+  /// <summary>Invokes HatchGen_PointOnHatching::IsLower. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsLower(HatchGenPointOnHatching arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_islower_5(NativeHandle, arg0.NativeHandle, arg1, out int result), "occtsharp_owned_hatchgen_pointonhatching_islower_5");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@NbPoints#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_nbpoints_6")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_nbpoints_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_PointOnHatching::NbPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_nbpoints_6(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonhatching_nbpoints_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@Point#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_point_7")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_point_7(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes HatchGen_PointOnHatching::Point. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public HatchGenPointOnElement Point(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_point_7(NativeHandle, arg0, out nint result), "occtsharp_owned_hatchgen_pointonhatching_point_7");
+    var managedResult = HatchGenPointOnElement.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_PointOnHatching@F@RemPoint#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_rempoint_8")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_rempoint_8(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_PointOnHatching::RemPoint. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void RemPoint(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_rempoint_8(NativeHandle, arg0), "occtsharp_owned_hatchgen_pointonhatching_rempoint_8");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_index_9")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_index_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Index. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Index() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_index_9(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonhatching_index_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_parameter_10")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_parameter_10(OwnedHandle receiver, out double result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Parameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Parameter() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_parameter_10(NativeHandle, out double result), "occtsharp_owned_hatchgen_pointonhatching_parameter_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_position_11")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_position_11(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::Position. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public TopAbsOrientation Position() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_position_11(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonhatching_position_11");
+    var managedResult = (TopAbsOrientation)result;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SegmentBeginning. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool SegmentBeginning() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_segmentend_13")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_segmentend_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SegmentEnd. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool SegmentEnd() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_segmentend_13(NativeHandle, out int result), "occtsharp_owned_hatchgen_pointonhatching_segmentend_13");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_setindex_14")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_setindex_14(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetIndex(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_setindex_14(NativeHandle, arg0), "occtsharp_owned_hatchgen_pointonhatching_setindex_14");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_setparameter_15")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_setparameter_15(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetParameter(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_setparameter_15(NativeHandle, arg0), "occtsharp_owned_hatchgen_pointonhatching_setparameter_15");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_setposition_16")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_setposition_16(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(TopAbsOrientation arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_setposition_16(NativeHandle, (int)arg0), "occtsharp_owned_hatchgen_pointonhatching_setposition_16");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetSegmentBeginning. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSegmentBeginning(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17");
+  }
+  // Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18")]
+  private static partial NativeStatus Native_occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes HatchGen_IntersectionPoint::SetSegmentEnd. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSegmentEnd(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18");
+  }
+}
 /// <summary>Owns a stable-address Hatch_Hatcher. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class HatchHatcher : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {

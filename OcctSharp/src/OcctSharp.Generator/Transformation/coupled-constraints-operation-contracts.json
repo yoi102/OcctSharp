@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void ()",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#S6_#S9_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Vec#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Vec> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Vec#S3_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#S3_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec2d> &, const NCollection_Array1<gp_Vec2d> &)",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Curv#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Curv",
+      "signature": "AppDef_MultiPointConstraint::Curv: gp_Vec (const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Curv2d#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Curv2d",
+      "signature": "AppDef_MultiPointConstraint::Curv2d: gp_Vec2d (const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@IsCurvaturePoint#1",
+      "nativeName": "AppDef_MultiPointConstraint::IsCurvaturePoint",
+      "signature": "AppDef_MultiPointConstraint::IsCurvaturePoint: bool () const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@IsTangencyPoint#1",
+      "nativeName": "AppDef_MultiPointConstraint::IsTangencyPoint",
+      "signature": "AppDef_MultiPointConstraint::IsTangencyPoint: bool () const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Tang#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Tang",
+      "signature": "AppDef_MultiPointConstraint::Tang: gp_Vec (const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Tang2d#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Tang2d",
+      "signature": "AppDef_MultiPointConstraint::Tang2d: gp_Vec2d (const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@NbPoints#1",
+      "nativeName": "AppParCurves_MultiPoint::NbPoints",
+      "signature": "AppParCurves_MultiPoint::NbPoints: int () const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@NbPoints2d#1",
+      "nativeName": "AppParCurves_MultiPoint::NbPoints2d",
+      "signature": "AppParCurves_MultiPoint::NbPoints2d: int () const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@Point#I#1",
+      "nativeName": "AppParCurves_MultiPoint::Point",
+      "signature": "AppParCurves_MultiPoint::Point: const gp_Pnt &(const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@Point2d#I#1",
+      "nativeName": "AppParCurves_MultiPoint::Point2d",
+      "signature": "AppParCurves_MultiPoint::Point2d: const gp_Pnt2d &(const int) const",
+      "guard": "BTCoupledChannelCopy",
+      "reason": "Call-private initialized constraint; exact per-dimension channels, bounded batch, global SDK2D index mapping and atomic detached copy."
+    }
+  ],
+  "supportingOperations": []
+}

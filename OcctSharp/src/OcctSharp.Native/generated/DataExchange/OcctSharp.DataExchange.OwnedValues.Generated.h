@@ -141,8 +141,14 @@ typedef struct OcctSharp_Owned_HLRAlgo_EdgeStatusHandle OcctSharp_Owned_HLRAlgo_
 typedef struct OcctSharp_Owned_HLRAlgo_InterferenceHandle OcctSharp_Owned_HLRAlgo_InterferenceHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_IntersectionHandle OcctSharp_Owned_HLRAlgo_IntersectionHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_ProjectorHandle OcctSharp_Owned_HLRAlgo_ProjectorHandle;
+typedef struct OcctSharp_Owned_HatchGen_DomainHandle OcctSharp_Owned_HatchGen_DomainHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnElementHandle OcctSharp_Owned_HatchGen_PointOnElementHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnHatchingHandle OcctSharp_Owned_HatchGen_PointOnHatchingHandle;
 typedef struct OcctSharp_Owned_Hatch_HatcherHandle OcctSharp_Owned_Hatch_HatcherHandle;
+typedef struct OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle;
 typedef struct OcctSharp_Owned_IGESData_DefSwitchHandle OcctSharp_Owned_IGESData_DefSwitchHandle;
+typedef struct OcctSharp_Owned_IGESData_DirCheckerHandle OcctSharp_Owned_IGESData_DirCheckerHandle;
+typedef struct OcctSharp_Owned_IGESData_GlobalSectionHandle OcctSharp_Owned_IGESData_GlobalSectionHandle;
 typedef struct OcctSharp_Owned_IGESData_IGESTypeHandle OcctSharp_Owned_IGESData_IGESTypeHandle;
 typedef struct OcctSharp_Owned_IntAna2d_AnaIntersectionHandle OcctSharp_Owned_IntAna2d_AnaIntersectionHandle;
 typedef struct OcctSharp_Owned_IntAna2d_ConicHandle OcctSharp_Owned_IntAna2d_ConicHandle;
@@ -163,6 +169,7 @@ typedef struct OcctSharp_Owned_IntCurve_PConicHandle OcctSharp_Owned_IntCurve_PC
 typedef struct OcctSharp_Owned_IntPolyh_CoupleHandle OcctSharp_Owned_IntPolyh_CoupleHandle;
 typedef struct OcctSharp_Owned_IntPolyh_EdgeHandle OcctSharp_Owned_IntPolyh_EdgeHandle;
 typedef struct OcctSharp_Owned_IntPolyh_PointHandle OcctSharp_Owned_IntPolyh_PointHandle;
+typedef struct OcctSharp_Owned_IntPolyh_StartPointHandle OcctSharp_Owned_IntPolyh_StartPointHandle;
 typedef struct OcctSharp_Owned_IntPolyh_TriangleHandle OcctSharp_Owned_IntPolyh_TriangleHandle;
 typedef struct OcctSharp_Owned_IntRes2d_DomainHandle OcctSharp_Owned_IntRes2d_DomainHandle;
 typedef struct OcctSharp_Owned_IntRes2d_IntersectionPointHandle OcctSharp_Owned_IntRes2d_IntersectionPointHandle;
@@ -174,17 +181,23 @@ typedef struct OcctSharp_Owned_IntSurf_PathPointHandle OcctSharp_Owned_IntSurf_P
 typedef struct OcctSharp_Owned_IntSurf_QuadricHandle OcctSharp_Owned_IntSurf_QuadricHandle;
 typedef struct OcctSharp_Owned_IntSurf_TransitionHandle OcctSharp_Owned_IntSurf_TransitionHandle;
 typedef struct OcctSharp_Owned_IntTools_BaseRangeSampleHandle OcctSharp_Owned_IntTools_BaseRangeSampleHandle;
+typedef struct OcctSharp_Owned_IntTools_CommonPrtHandle OcctSharp_Owned_IntTools_CommonPrtHandle;
+typedef struct OcctSharp_Owned_IntTools_CurveHandle OcctSharp_Owned_IntTools_CurveHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeSampleHandle OcctSharp_Owned_IntTools_CurveRangeSampleHandle;
 typedef struct OcctSharp_Owned_IntTools_MarkedRangeSetHandle OcctSharp_Owned_IntTools_MarkedRangeSetHandle;
 typedef struct OcctSharp_Owned_IntTools_RangeHandle OcctSharp_Owned_IntTools_RangeHandle;
+typedef struct OcctSharp_Owned_IntTools_RootHandle OcctSharp_Owned_IntTools_RootHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle;
+typedef struct OcctSharp_Owned_Intf_SectionPointHandle OcctSharp_Owned_Intf_SectionPointHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalHandle OcctSharp_Owned_Intrv_IntervalHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalsHandle OcctSharp_Owned_Intrv_IntervalsHandle;
 typedef struct OcctSharp_Owned_LProp_CurAndInfHandle OcctSharp_Owned_LProp_CurAndInfHandle;
 typedef struct OcctSharp_Owned_MAT2d_CutCurveHandle OcctSharp_Owned_MAT2d_CutCurveHandle;
+typedef struct OcctSharp_Owned_Message_ExecStatusHandle OcctSharp_Owned_Message_ExecStatusHandle;
 typedef struct OcctSharp_Owned_NLPlate_NLPlateHandle OcctSharp_Owned_NLPlate_NLPlateHandle;
+typedef struct OcctSharp_Owned_OSD_ProtectionHandle OcctSharp_Owned_OSD_ProtectionHandle;
 typedef struct OcctSharp_Owned_Poly_TriangleHandle OcctSharp_Owned_Poly_TriangleHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxHandle OcctSharp_Owned_ProjLib_ComputeApproxHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle;
@@ -198,6 +211,8 @@ typedef struct OcctSharp_Owned_Quantity_ColorRGBAHandle OcctSharp_Owned_Quantity
 typedef struct OcctSharp_Owned_Quantity_DateHandle OcctSharp_Owned_Quantity_DateHandle;
 typedef struct OcctSharp_Owned_Quantity_PeriodHandle OcctSharp_Owned_Quantity_PeriodHandle;
 typedef struct OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle;
+typedef struct OcctSharp_Owned_SelectBasics_PickResultHandle OcctSharp_Owned_SelectBasics_PickResultHandle;
+typedef struct OcctSharp_Owned_SelectMgr_ViewClipRangeHandle OcctSharp_Owned_SelectMgr_ViewClipRangeHandle;
 typedef struct OcctSharp_Owned_ShapeAnalysis_WireOrderHandle OcctSharp_Owned_ShapeAnalysis_WireOrderHandle;
 typedef struct OcctSharp_Owned_StepAP203_ApprovedItemHandle OcctSharp_Owned_StepAP203_ApprovedItemHandle;
 typedef struct OcctSharp_Owned_StepAP203_CertifiedItemHandle OcctSharp_Owned_StepAP203_CertifiedItemHandle;
@@ -230,6 +245,7 @@ typedef struct OcctSharp_Owned_StepBasic_ProductOrFormationOrDefinitionHandle Oc
 typedef struct OcctSharp_Owned_StepBasic_RoleSelectHandle OcctSharp_Owned_StepBasic_RoleSelectHandle;
 typedef struct OcctSharp_Owned_StepBasic_SourceItemHandle OcctSharp_Owned_StepBasic_SourceItemHandle;
 typedef struct OcctSharp_Owned_StepBasic_UnitHandle OcctSharp_Owned_StepBasic_UnitHandle;
+typedef struct OcctSharp_Owned_StepData_FieldHandle OcctSharp_Owned_StepData_FieldHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle;
@@ -348,11 +364,48 @@ typedef struct OcctSharp_Owned_math_MatrixHandle OcctSharp_Owned_math_MatrixHand
 typedef struct OcctSharp_Owned_math_TrigonometricEquationFunctionHandle OcctSharp_Owned_math_TrigonometricEquationFunctionHandle;
 typedef struct OcctSharp_Owned_math_TrigonometricFunctionRootsHandle OcctSharp_Owned_math_TrigonometricFunctionRootsHandle;
 typedef struct OcctSharp_Owned_math_ValueAndWeightHandle OcctSharp_Owned_math_ValueAndWeightHandle;
-#include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
 #include "../DataExchange/OcctSharp.DataExchange.SharedHandles.Generated.h"
+#include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_release(OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* handle);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@AddVec#&1$@S@gp_XYZ#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_addvec_0(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Coordinates3d arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@AddXY#&1$@S@gp_XY#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_addxy_1(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Coordinates2d arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@AddXYZ#&1$@S@gp_XYZ#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_addxyz_2(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Coordinates3d arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@Clear#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_clear_3(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@EvalXYZ#&1$@S@gp_XYZ#&d#S2_#S2_#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_evalxyz_4(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Coordinates3d arg0, double arg1, double* updatedArg1, double arg2, double* updatedArg2, double arg3, double* updatedArg3);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@IGESConvGeom_GeomBuilder#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_create_5(OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle** result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@IsIdentity#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_isidentity_6(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@IsTranslation#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_istranslation_7(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@IsZOnly#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_iszonly_8(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@MakeCopiousData#I#b#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t arg0, int32_t arg1, OcctSharp_IGESGeomCopiousDataHandle** result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@MakeTransformation#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, double arg0, OcctSharp_IGESGeomTransformationMatrixHandle** result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@NbPoints#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_nbpoints_11(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@Point#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_point_12(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, int32_t arg0, OcctSharp_Value_Coordinates3d* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@Position#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_position_13(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Transform3d* result);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax1#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_setposition_14(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Axis1 arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax2#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_setposition_15(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Axis2 arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax3#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_setposition_16(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Axis3 arg0);
+// Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Trsf#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesconvgeom_geombuilder_setposition_17(const OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle* receiver, OcctSharp_Value_Transform3d arg0);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_igesdata_defswitch_release(OcctSharp_Owned_IGESData_DefSwitchHandle* handle);
 // Source: c:@S@IGESData_DefSwitch@F@DefType#1
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_defswitch_deftype_0(const OcctSharp_Owned_IGESData_DefSwitchHandle* receiver, int32_t* result);
@@ -366,6 +419,108 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_defswitch
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_defswitch_setvoid_4(const OcctSharp_Owned_IGESData_DefSwitchHandle* receiver);
 // Source: c:@S@IGESData_DefSwitch@F@Value#1
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_defswitch_value_5(const OcctSharp_Owned_IGESData_DefSwitchHandle* receiver, int32_t* result);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_release(OcctSharp_Owned_IGESData_DirCheckerHandle* handle);
+// Source: c:@S@IGESData_DirChecker@F@BlankStatusIgnored#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_blankstatusignored_0(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver);
+// Source: c:@S@IGESData_DirChecker@F@BlankStatusRequired#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_blankstatusrequired_1(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@Color#$@E@IGESData_DefType#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_color_2(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@Correct#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_correct_3(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, const OcctSharp_IGESDataIGESEntityHandle* arg0, int32_t* result);
+// Source: c:@S@IGESData_DirChecker@F@GraphicsIgnored#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_graphicsignored_4(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@HierarchyStatusIgnored#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_hierarchystatusignored_5(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver);
+// Source: c:@S@IGESData_DirChecker@F@HierarchyStatusRequired#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_hierarchystatusrequired_6(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_create_7(OcctSharp_Owned_IGESData_DirCheckerHandle** result);
+// Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_create_8(int32_t arg0, OcctSharp_Owned_IGESData_DirCheckerHandle** result);
+// Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_create_9(int32_t arg0, int32_t arg1, OcctSharp_Owned_IGESData_DirCheckerHandle** result);
+// Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_create_10(int32_t arg0, int32_t arg1, int32_t arg2, OcctSharp_Owned_IGESData_DirCheckerHandle** result);
+// Source: c:@S@IGESData_DirChecker@F@LineFont#$@E@IGESData_DefType#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_linefont_11(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@LineWeight#$@E@IGESData_DefType#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_lineweight_12(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@SetDefault#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_setdefault_13(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver);
+// Source: c:@S@IGESData_DirChecker@F@Structure#$@E@IGESData_DefType#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_structure_14(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@SubordinateStatusIgnored#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_subordinatestatusignored_15(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver);
+// Source: c:@S@IGESData_DirChecker@F@SubordinateStatusRequired#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_subordinatestatusrequired_16(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_DirChecker@F@UseFlagIgnored#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_useflagignored_17(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver);
+// Source: c:@S@IGESData_DirChecker@F@UseFlagRequired#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_dirchecker_useflagrequired_18(const OcctSharp_Owned_IGESData_DirCheckerHandle* receiver, int32_t arg0);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_release(OcctSharp_Owned_IGESData_GlobalSectionHandle* handle);
+// Source: c:@S@IGESData_GlobalSection@F@CascadeUnit#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_cascadeunit_0(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double* result);
+// Source: c:@S@IGESData_GlobalSection@F@DraftingStandard#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_draftingstandard_1(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@HasMaxCoord#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_hasmaxcoord_2(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@IGESData_GlobalSection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_create_3(OcctSharp_Owned_IGESData_GlobalSectionHandle** result);
+// Source: c:@S@IGESData_GlobalSection@F@IGESVersion#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_igesversion_4(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@IntegerBits#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_integerbits_5(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@LineWeightGrad#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_lineweightgrad_6(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxCoord#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxcoord_7(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxDigitsDouble#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxdigitsdouble_8(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxDigitsSingle#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxdigitssingle_9(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxLineWeight#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxlineweight_10(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxMaxCoord#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxmaxcoord_11(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@MaxPower10Double#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxpower10double_12(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@MaxPower10Single#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_maxpower10single_13(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
+// Source: c:@S@IGESData_GlobalSection@F@Resolution#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_resolution_14(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double* result);
+// Source: c:@S@IGESData_GlobalSection@F@Scale#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_scale_15(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double* result);
+// Source: c:@S@IGESData_GlobalSection@F@SetCascadeUnit#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setcascadeunit_16(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetDraftingStandard#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setdraftingstandard_17(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetIGESVersion#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setigesversion_18(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetIntegerBits#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setintegerbits_19(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetLineWeightGrad#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setlineweightgrad_20(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxCoord#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxcoord_21(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxDigitsDouble#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxdigitsdouble_22(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxDigitsSingle#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxdigitssingle_23(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxLineWeight#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxlineweight_24(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxPower10Double#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxpower10double_25(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetMaxPower10Single#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setmaxpower10single_26(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetResolution#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setresolution_27(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetScale#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setscale_28(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, double arg0);
+// Source: c:@S@IGESData_GlobalSection@F@SetUnitFlag#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_setunitflag_29(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t arg0);
+// Source: c:@S@IGESData_GlobalSection@F@UnitFlag#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_globalsection_unitflag_30(const OcctSharp_Owned_IGESData_GlobalSectionHandle* receiver, int32_t* result);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_igesdata_igestype_release(OcctSharp_Owned_IGESData_IGESTypeHandle* handle);
 // Source: c:@S@IGESData_IGESType@F@Form#1
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_igesdata_igestype_form_0(const OcctSharp_Owned_IGESData_IGESTypeHandle* receiver, int32_t* result);
@@ -1881,6 +2036,35 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepbasic_unit_val
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepbasic_unit_setvalue_11(const OcctSharp_Owned_StepBasic_UnitHandle* receiver, const OcctSharp_StepBasicDerivedUnitHandle* arg0);
 // Source: support:owned-select-set:StepBasic_Unit:StepBasic_NamedUnit
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepbasic_unit_setvalue_12(const OcctSharp_Owned_StepBasic_UnitHandle* receiver, const OcctSharp_StepBasicNamedUnitHandle* arg0);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_stepdata_field_release(OcctSharp_Owned_StepData_FieldHandle* handle);
+// Source: c:@S@StepData_Field@F@Arity#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_arity_0(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t* result);
+// Source: c:@S@StepData_Field@F@Boolean#I#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_boolean_1(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t arg1, int32_t* result);
+// Source: c:@S@StepData_Field@F@Int#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_int_2(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t* result);
+// Source: c:@S@StepData_Field@F@Integer#I#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_integer_3(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t arg1, int32_t* result);
+// Source: c:@S@StepData_Field@F@Kind#b#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_kind_4(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t* result);
+// Source: c:@S@StepData_Field@F@Length#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_length_5(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t* result);
+// Source: c:@S@StepData_Field@F@Lower#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_lower_6(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t* result);
+// Source: c:@S@StepData_Field@F@Real#I#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_real_7(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0, int32_t arg1, double* result);
+// Source: c:@S@StepData_Field@F@SetBoolean#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_setboolean_8(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0);
+// Source: c:@S@StepData_Field@F@SetDerived#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_setderived_9(const OcctSharp_Owned_StepData_FieldHandle* receiver);
+// Source: c:@S@StepData_Field@F@SetInt#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_setint_10(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0);
+// Source: c:@S@StepData_Field@F@SetInteger#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_setinteger_11(const OcctSharp_Owned_StepData_FieldHandle* receiver, int32_t arg0);
+// Source: c:@S@StepData_Field@F@SetReal#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_setreal_12(const OcctSharp_Owned_StepData_FieldHandle* receiver, double arg0);
+// Source: c:@S@StepData_Field@F@StepData_Field#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdata_field_create_13(OcctSharp_Owned_StepData_FieldHandle** result);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_stepdimtol_datumorcommondatum_release(OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle* handle);
 // Source: c:@S@StepDimTol_DatumOrCommonDatum@F@CaseNum#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_stepdimtol_datumorcommondatum_casenum_0(const OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle* receiver, const OcctSharp_StandardTransientHandle* arg0, int32_t* result);

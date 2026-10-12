@@ -1,0 +1,2288 @@
+{
+  "schemaVersion": "1.0",
+  "state": "AUDITED_IMPLEMENTING",
+  "baseline": "8.0.1-preview.42",
+  "inventorySha256": "1FC53E6ED5685F69B2A921E40243838434F386C1C16C295A5FDCAD068FB4360E",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "3F776CBE65E8D94CA7FA9F973DF7AFCC27D5DFB680333E710C74676EF34E70A5",
+  "declarations": [
+    {
+      "stableId": "c:@S@TDF_Tool@F@CountLabels#&$@S@NCollection_List>#$@S@TDF_Label#&$@S@NCollection_DataMap>#S2_#I#$@S@NCollection_DefaultHasher>#S2_#S",
+      "nativeName": "TDF_Tool::CountLabels",
+      "signature": "TDF_Tool::CountLabels: void (NCollection_List<TDF_Label> &, NCollection_DataMap<TDF_Label, int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@DeductLabels#&$@S@NCollection_List>#$@S@TDF_Label#&$@S@NCollection_DataMap>#S2_#I#$@S@NCollection_DefaultHasher>#S2_#S",
+      "nativeName": "TDF_Tool::DeductLabels",
+      "signature": "TDF_Tool::DeductLabels: void (NCollection_List<TDF_Label> &, NCollection_DataMap<TDF_Label, int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@DeepDump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@N@opencascade@S@handle>#$@S@TDF_Data#S",
+      "nativeName": "TDF_Tool::DeepDump",
+      "signature": "TDF_Tool::DeepDump: void (Standard_OStream &, const occ::handle<TDF_Data> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@DeepDump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::DeepDump",
+      "signature": "TDF_Tool::DeepDump: void (Standard_OStream &, const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@Entry#&1$@S@TDF_Label#&$@S@TCollection_AsciiString#S",
+      "nativeName": "TDF_Tool::Entry",
+      "signature": "TDF_Tool::Entry: void (const TDF_Label &, TCollection_AsciiString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@ExtendedDeepDump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@N@opencascade@S@handle>#$@S@TDF_Data#&1$@S@TDF_IDFilter#S",
+      "nativeName": "TDF_Tool::ExtendedDeepDump",
+      "signature": "TDF_Tool::ExtendedDeepDump: void (Standard_OStream &, const occ::handle<TDF_Data> &, const TDF_IDFilter &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@ExtendedDeepDump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@S@TDF_Label#&1$@S@TDF_IDFilter#S",
+      "nativeName": "TDF_Tool::ExtendedDeepDump",
+      "signature": "TDF_Tool::ExtendedDeepDump: void (Standard_OStream &, const TDF_Label &, const TDF_IDFilter &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@IsSelfContained#&1$@S@TDF_Label#&1$@S@TDF_IDFilter#S",
+      "nativeName": "TDF_Tool::IsSelfContained",
+      "signature": "TDF_Tool::IsSelfContained: bool (const TDF_Label &, const TDF_IDFilter &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@IsSelfContained#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::IsSelfContained",
+      "signature": "TDF_Tool::IsSelfContained: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@Label#&1$@N@opencascade@S@handle>#$@S@TDF_Data#&1$@S@NCollection_List>#I#&$@S@TDF_Label#b#S",
+      "nativeName": "TDF_Tool::Label",
+      "signature": "TDF_Tool::Label: void (const occ::handle<TDF_Data> &, const NCollection_List<int> &, TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@Label#&1$@N@opencascade@S@handle>#$@S@TDF_Data#&1$@S@TCollection_AsciiString#&$@S@TDF_Label#b#S",
+      "nativeName": "TDF_Tool::Label",
+      "signature": "TDF_Tool::Label: void (const occ::handle<TDF_Data> &, const TCollection_AsciiString &, TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@Label#&1$@N@opencascade@S@handle>#$@S@TDF_Data#*1C#&$@S@TDF_Label#b#S",
+      "nativeName": "TDF_Tool::Label",
+      "signature": "TDF_Tool::Label: void (const occ::handle<TDF_Data> &, const char *const, TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbAttributes#&1$@S@TDF_Label#&1$@S@TDF_IDFilter#S",
+      "nativeName": "TDF_Tool::NbAttributes",
+      "signature": "TDF_Tool::NbAttributes: int (const TDF_Label &, const TDF_IDFilter &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbAttributes#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::NbAttributes",
+      "signature": "TDF_Tool::NbAttributes: int (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@NbLabels#&1$@S@TDF_Label#S",
+      "nativeName": "TDF_Tool::NbLabels",
+      "signature": "TDF_Tool::NbLabels: int (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@OutReferences#&1$@S@TDF_Label#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@TDF_Attribute#$@S@NCollection_DefaultHasher>#S4_#S",
+      "nativeName": "TDF_Tool::OutReferences",
+      "signature": "TDF_Tool::OutReferences: void (const TDF_Label &, NCollection_Map<occ::handle<TDF_Attribute>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@OutReferences#&1$@S@TDF_Label#&1$@S@TDF_IDFilter#S2_#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@TDF_Attribute#$@S@NCollection_DefaultHasher>#S6_#S",
+      "nativeName": "TDF_Tool::OutReferences",
+      "signature": "TDF_Tool::OutReferences: void (const TDF_Label &, const TDF_IDFilter &, const TDF_IDFilter &, NCollection_Map<occ::handle<TDF_Attribute>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@OutReferers#&1$@S@TDF_Label#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@TDF_Attribute#$@S@NCollection_DefaultHasher>#S4_#S",
+      "nativeName": "TDF_Tool::OutReferers",
+      "signature": "TDF_Tool::OutReferers: void (const TDF_Label &, NCollection_Map<occ::handle<TDF_Attribute>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@OutReferers#&1$@S@TDF_Label#&1$@S@TDF_IDFilter#S2_#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@TDF_Attribute#$@S@NCollection_DefaultHasher>#S6_#S",
+      "nativeName": "TDF_Tool::OutReferers",
+      "signature": "TDF_Tool::OutReferers: void (const TDF_Label &, const TDF_IDFilter &, const TDF_IDFilter &, NCollection_Map<occ::handle<TDF_Attribute>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@RelocateLabel#&1$@S@TDF_Label#S0_#S0_#&S1_#b#S",
+      "nativeName": "TDF_Tool::RelocateLabel",
+      "signature": "TDF_Tool::RelocateLabel: void (const TDF_Label &, const TDF_Label &, const TDF_Label &, TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@TagList#&1$@S@TCollection_AsciiString#&$@S@NCollection_List>#I#S",
+      "nativeName": "TDF_Tool::TagList",
+      "signature": "TDF_Tool::TagList: void (const TCollection_AsciiString &, NCollection_List<int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDF_Tool@F@TagList#&1$@S@TDF_Label#&$@S@NCollection_List>#I#S",
+      "nativeName": "TDF_Tool::TagList",
+      "signature": "TDF_Tool::TagList: void (const TDF_Label &, NCollection_List<int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDF_Tool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeArraysOfIntegers#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeArraysOfIntegers",
+      "signature": "TDataStd_NamedData::ChangeArraysOfIntegers: void (const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<int>>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeArraysOfReals#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeArraysOfReals",
+      "signature": "TDataStd_NamedData::ChangeArraysOfReals: void (const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<double>>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeBytes#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#c#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeBytes",
+      "signature": "TDataStd_NamedData::ChangeBytes: void (const NCollection_DataMap<TCollection_ExtendedString, uint8_t> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeIntegers#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#I#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeIntegers",
+      "signature": "TDataStd_NamedData::ChangeIntegers: void (const NCollection_DataMap<TCollection_ExtendedString, int> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeReals#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#d#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeReals",
+      "signature": "TDataStd_NamedData::ChangeReals: void (const NCollection_DataMap<TCollection_ExtendedString, double> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ChangeStrings#&1$@S@NCollection_DataMap>#$@S@TCollection_ExtendedString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "TDataStd_NamedData::ChangeStrings",
+      "signature": "TDataStd_NamedData::ChangeStrings: void (const NCollection_DataMap<TCollection_ExtendedString, TCollection_ExtendedString> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TDataStd_NamedData::Dump",
+      "signature": "TDataStd_NamedData::Dump: Standard_OStream &(Standard_OStream &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "TDataStd_NamedData::DumpJson",
+      "signature": "TDataStd_NamedData::DumpJson: void (Standard_OStream &, int) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArraysOfIntegersContainer#",
+      "nativeName": "TDataStd_NamedData::GetArraysOfIntegersContainer",
+      "signature": "TDataStd_NamedData::GetArraysOfIntegersContainer: const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<int>>> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArraysOfRealsContainer#",
+      "nativeName": "TDataStd_NamedData::GetArraysOfRealsContainer",
+      "signature": "TDataStd_NamedData::GetArraysOfRealsContainer: const NCollection_DataMap<TCollection_ExtendedString, occ::handle<NCollection_HArray1<double>>> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetByte#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetByte",
+      "signature": "TDataStd_NamedData::GetByte: uint8_t (const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetBytesContainer#",
+      "nativeName": "TDataStd_NamedData::GetBytesContainer",
+      "signature": "TDataStd_NamedData::GetBytesContainer: const NCollection_DataMap<TCollection_ExtendedString, uint8_t> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetIntegersContainer#",
+      "nativeName": "TDataStd_NamedData::GetIntegersContainer",
+      "signature": "TDataStd_NamedData::GetIntegersContainer: const NCollection_DataMap<TCollection_ExtendedString, int> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetRealsContainer#",
+      "nativeName": "TDataStd_NamedData::GetRealsContainer",
+      "signature": "TDataStd_NamedData::GetRealsContainer: const NCollection_DataMap<TCollection_ExtendedString, double> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetStringsContainer#",
+      "nativeName": "TDataStd_NamedData::GetStringsContainer",
+      "signature": "TDataStd_NamedData::GetStringsContainer: const NCollection_DataMap<TCollection_ExtendedString, TCollection_ExtendedString> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Scoped document receiver, private containers and nested atomic replacement; only detached typed maps/label diagnostics escape.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasByte#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasByte",
+      "signature": "TDataStd_NamedData::HasByte: bool (const TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@ID#1",
+      "nativeName": "TDataStd_NamedData::ID",
+      "signature": "TDataStd_NamedData::ID: const Standard_GUID &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetByte#&1$@S@TCollection_ExtendedString#c#",
+      "nativeName": "TDataStd_NamedData::SetByte",
+      "signature": "TDataStd_NamedData::SetByte: void (const TCollection_ExtendedString &, const uint8_t)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@TDataStd_NamedData#&&$@S@TDataStd_NamedData#",
+      "nativeName": "TDataStd_NamedData::TDataStd_NamedData",
+      "signature": "TDataStd_NamedData::TDataStd_NamedData: void (TDataStd_NamedData &&)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@TDataStd_NamedData#&1$@S@TDataStd_NamedData#",
+      "nativeName": "TDataStd_NamedData::TDataStd_NamedData",
+      "signature": "TDataStd_NamedData::TDataStd_NamedData: void (const TDataStd_NamedData &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@get_type_descriptor#S",
+      "nativeName": "TDataStd_NamedData::get_type_descriptor",
+      "signature": "TDataStd_NamedData::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@get_type_name#S",
+      "nativeName": "TDataStd_NamedData::get_type_name",
+      "signature": "TDataStd_NamedData::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setArrayOfIntegers#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#",
+      "nativeName": "TDataStd_NamedData::setArrayOfIntegers",
+      "signature": "TDataStd_NamedData::setArrayOfIntegers: void (const TCollection_ExtendedString &, const occ::handle<NCollection_HArray1<int>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setArrayOfReals#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "TDataStd_NamedData::setArrayOfReals",
+      "signature": "TDataStd_NamedData::setArrayOfReals: void (const TCollection_ExtendedString &, const occ::handle<NCollection_HArray1<double>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setByte#&1$@S@TCollection_ExtendedString#c#",
+      "nativeName": "TDataStd_NamedData::setByte",
+      "signature": "TDataStd_NamedData::setByte: void (const TCollection_ExtendedString &, const uint8_t)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setInteger#&1$@S@TCollection_ExtendedString#I#",
+      "nativeName": "TDataStd_NamedData::setInteger",
+      "signature": "TDataStd_NamedData::setInteger: void (const TCollection_ExtendedString &, const int)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setReal#&1$@S@TCollection_ExtendedString#d#",
+      "nativeName": "TDataStd_NamedData::setReal",
+      "signature": "TDataStd_NamedData::setReal: void (const TCollection_ExtendedString &, const double)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@setString#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "TDataStd_NamedData::setString",
+      "signature": "TDataStd_NamedData::setString: void (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "document-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@AddLayer#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::AddLayer",
+      "signature": "XCAFDoc_LayerTool::AddLayer: TDF_Label (const TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@AddLayer#&1$@S@TCollection_ExtendedString#b#1",
+      "nativeName": "XCAFDoc_LayerTool::AddLayer",
+      "signature": "XCAFDoc_LayerTool::AddLayer: TDF_Label (const TCollection_ExtendedString &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@BaseLabel#1",
+      "nativeName": "XCAFDoc_LayerTool::BaseLabel",
+      "signature": "XCAFDoc_LayerTool::BaseLabel: TDF_Label () const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "XCAFDoc_LayerTool::DumpJson",
+      "signature": "XCAFDoc_LayerTool::DumpJson: void (Standard_OStream &, int) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@FindLayer#&1$@S@TCollection_ExtendedString#&$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::FindLayer",
+      "signature": "XCAFDoc_LayerTool::FindLayer: bool (const TCollection_ExtendedString &, TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@FindLayer#&1$@S@TCollection_ExtendedString#b#b#1",
+      "nativeName": "XCAFDoc_LayerTool::FindLayer",
+      "signature": "XCAFDoc_LayerTool::FindLayer: TDF_Label (const TCollection_ExtendedString &, const bool, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetID#S",
+      "nativeName": "XCAFDoc_LayerTool::GetID",
+      "signature": "XCAFDoc_LayerTool::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayer#&1$@S@TDF_Label#&$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::GetLayer",
+      "signature": "XCAFDoc_LayerTool::GetLayer: bool (const TDF_Label &, TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayerLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::GetLayerLabels",
+      "signature": "XCAFDoc_LayerTool::GetLayerLabels: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: occ::handle<NCollection_HSequence<TCollection_ExtendedString>> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: bool (const TDF_Label &, occ::handle<NCollection_HSequence<TCollection_ExtendedString>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: occ::handle<NCollection_HSequence<TCollection_ExtendedString>> (const TopoDS_Shape &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TopoDS_Shape#&$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: bool (const TopoDS_Shape &, occ::handle<NCollection_HSequence<TCollection_ExtendedString>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayers#&1$@S@TopoDS_Shape#&$@S@NCollection_Sequence>#$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_LayerTool::GetLayers",
+      "signature": "XCAFDoc_LayerTool::GetLayers: bool (const TopoDS_Shape &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetShapesOfLayer#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "nativeName": "XCAFDoc_LayerTool::GetShapesOfLayer",
+      "signature": "XCAFDoc_LayerTool::GetShapesOfLayer: void (const TDF_Label &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@ID#1",
+      "nativeName": "XCAFDoc_LayerTool::ID",
+      "signature": "XCAFDoc_LayerTool::ID: const Standard_GUID &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsLayer#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::IsLayer",
+      "signature": "XCAFDoc_LayerTool::IsLayer: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsSet#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::IsSet",
+      "signature": "XCAFDoc_LayerTool::IsSet: bool (const TDF_Label &, const TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsSet#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_LayerTool::IsSet",
+      "signature": "XCAFDoc_LayerTool::IsSet: bool (const TDF_Label &, const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsSet#&1$@S@TopoDS_Shape#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_LayerTool::IsSet",
+      "signature": "XCAFDoc_LayerTool::IsSet: bool (const TopoDS_Shape &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsSet#&1$@S@TopoDS_Shape#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_LayerTool::IsSet",
+      "signature": "XCAFDoc_LayerTool::IsSet: bool (const TopoDS_Shape &, const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsVisible#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::IsVisible",
+      "signature": "XCAFDoc_LayerTool::IsVisible: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@RemoveLayer#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::RemoveLayer",
+      "signature": "XCAFDoc_LayerTool::RemoveLayer: void (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_LayerTool::Set",
+      "signature": "XCAFDoc_LayerTool::Set: occ::handle<XCAFDoc_LayerTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetLayer#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#b#1",
+      "nativeName": "XCAFDoc_LayerTool::SetLayer",
+      "signature": "XCAFDoc_LayerTool::SetLayer: void (const TDF_Label &, const TCollection_ExtendedString &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetLayer#&1$@S@TDF_Label#S0_#b#1",
+      "nativeName": "XCAFDoc_LayerTool::SetLayer",
+      "signature": "XCAFDoc_LayerTool::SetLayer: void (const TDF_Label &, const TDF_Label &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetLayer#&1$@S@TopoDS_Shape#&1$@S@TCollection_ExtendedString#b#",
+      "nativeName": "XCAFDoc_LayerTool::SetLayer",
+      "signature": "XCAFDoc_LayerTool::SetLayer: bool (const TopoDS_Shape &, const TCollection_ExtendedString &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetLayer#&1$@S@TopoDS_Shape#&1$@S@TDF_Label#b#",
+      "nativeName": "XCAFDoc_LayerTool::SetLayer",
+      "signature": "XCAFDoc_LayerTool::SetLayer: bool (const TopoDS_Shape &, const TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetVisibility#&1$@S@TDF_Label#b#1",
+      "nativeName": "XCAFDoc_LayerTool::SetVisibility",
+      "signature": "XCAFDoc_LayerTool::SetVisibility: void (const TDF_Label &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetLayers#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::UnSetLayers",
+      "signature": "XCAFDoc_LayerTool::UnSetLayers: void (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetLayers#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_LayerTool::UnSetLayers",
+      "signature": "XCAFDoc_LayerTool::UnSetLayers: bool (const TopoDS_Shape &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetOneLayer#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::UnSetOneLayer",
+      "signature": "XCAFDoc_LayerTool::UnSetOneLayer: bool (const TDF_Label &, const TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetOneLayer#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_LayerTool::UnSetOneLayer",
+      "signature": "XCAFDoc_LayerTool::UnSetOneLayer: bool (const TDF_Label &, const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetOneLayer#&1$@S@TopoDS_Shape#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_LayerTool::UnSetOneLayer",
+      "signature": "XCAFDoc_LayerTool::UnSetOneLayer: bool (const TopoDS_Shape &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetOneLayer#&1$@S@TopoDS_Shape#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_LayerTool::UnSetOneLayer",
+      "signature": "XCAFDoc_LayerTool::UnSetOneLayer: bool (const TopoDS_Shape &, const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@XCAFDoc_LayerTool#&&$@S@XCAFDoc_LayerTool#",
+      "nativeName": "XCAFDoc_LayerTool::XCAFDoc_LayerTool",
+      "signature": "XCAFDoc_LayerTool::XCAFDoc_LayerTool: void (XCAFDoc_LayerTool &&)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@XCAFDoc_LayerTool#&1$@S@XCAFDoc_LayerTool#",
+      "nativeName": "XCAFDoc_LayerTool::XCAFDoc_LayerTool",
+      "signature": "XCAFDoc_LayerTool::XCAFDoc_LayerTool: void (const XCAFDoc_LayerTool &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_LayerTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_LayerTool::get_type_descriptor",
+      "signature": "XCAFDoc_LayerTool::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@get_type_name#S",
+      "nativeName": "XCAFDoc_LayerTool::get_type_name",
+      "signature": "XCAFDoc_LayerTool::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "XCAFDoc_Note::Dump",
+      "signature": "XCAFDoc_Note::Dump: Standard_OStream &(Standard_OStream &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "XCAFDoc_Note::DumpJson",
+      "signature": "XCAFDoc_Note::DumpJson: void (Standard_OStream &, int) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_Note::Get",
+      "signature": "XCAFDoc_Note::Get: occ::handle<XCAFDoc_Note> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@IsMine#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_Note::IsMine",
+      "signature": "XCAFDoc_Note::IsMine: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@Set#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "XCAFDoc_Note::Set",
+      "signature": "XCAFDoc_Note::Set: void (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Private SC-062 XML note retrieval mutator; not a generated or public mutable-attribute contract.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@TimeStamp#1",
+      "nativeName": "XCAFDoc_Note::TimeStamp",
+      "signature": "XCAFDoc_Note::TimeStamp: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@UserName#1",
+      "nativeName": "XCAFDoc_Note::UserName",
+      "signature": "XCAFDoc_Note::UserName: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_Note::get_type_descriptor",
+      "signature": "XCAFDoc_Note::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@get_type_name#S",
+      "nativeName": "XCAFDoc_Note::get_type_name",
+      "signature": "XCAFDoc_Note::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_NoteBalloon::Get",
+      "signature": "XCAFDoc_NoteBalloon::Get: occ::handle<XCAFDoc_NoteBalloon> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NoteBalloon.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@GetID#S",
+      "nativeName": "XCAFDoc_NoteBalloon::GetID",
+      "signature": "XCAFDoc_NoteBalloon::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteBalloon.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@ID#1",
+      "nativeName": "XCAFDoc_NoteBalloon::ID",
+      "signature": "XCAFDoc_NoteBalloon::ID: const Standard_GUID &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteBalloon.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S2_#S2_#S",
+      "nativeName": "XCAFDoc_NoteBalloon::Set",
+      "signature": "XCAFDoc_NoteBalloon::Set: occ::handle<XCAFDoc_NoteBalloon> (const TDF_Label &, const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteBalloon.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_NoteBalloon::get_type_descriptor",
+      "signature": "XCAFDoc_NoteBalloon::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@get_type_name#S",
+      "nativeName": "XCAFDoc_NoteBalloon::get_type_name",
+      "signature": "XCAFDoc_NoteBalloon::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Comment#1",
+      "nativeName": "XCAFDoc_NoteComment::Comment",
+      "signature": "XCAFDoc_NoteComment::Comment: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "XCAFDoc_NoteComment::Dump",
+      "signature": "XCAFDoc_NoteComment::Dump: Standard_OStream &(Standard_OStream &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_NoteComment::Get",
+      "signature": "XCAFDoc_NoteComment::Get: occ::handle<XCAFDoc_NoteComment> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@GetID#S",
+      "nativeName": "XCAFDoc_NoteComment::GetID",
+      "signature": "XCAFDoc_NoteComment::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@ID#1",
+      "nativeName": "XCAFDoc_NoteComment::ID",
+      "signature": "XCAFDoc_NoteComment::ID: const Standard_GUID &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Set#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_NoteComment::Set",
+      "signature": "XCAFDoc_NoteComment::Set: void (const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Private SC-062 XML note retrieval mutator; not a generated or public mutable-attribute contract.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S2_#S2_#S",
+      "nativeName": "XCAFDoc_NoteComment::Set",
+      "signature": "XCAFDoc_NoteComment::Set: occ::handle<XCAFDoc_NoteComment> (const TDF_Label &, const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@XCAFDoc_NoteComment#&&$@S@XCAFDoc_NoteComment#",
+      "nativeName": "XCAFDoc_NoteComment::XCAFDoc_NoteComment",
+      "signature": "XCAFDoc_NoteComment::XCAFDoc_NoteComment: void (XCAFDoc_NoteComment &&)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@XCAFDoc_NoteComment#&1$@S@XCAFDoc_NoteComment#",
+      "nativeName": "XCAFDoc_NoteComment::XCAFDoc_NoteComment",
+      "signature": "XCAFDoc_NoteComment::XCAFDoc_NoteComment: void (const XCAFDoc_NoteComment &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_NoteComment::get_type_descriptor",
+      "signature": "XCAFDoc_NoteComment::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@get_type_name#S",
+      "nativeName": "XCAFDoc_NoteComment::get_type_name",
+      "signature": "XCAFDoc_NoteComment::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNote#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#",
+      "nativeName": "XCAFDoc_NotesTool::AddNote",
+      "signature": "XCAFDoc_NotesTool::AddNote: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const XCAFDoc_AssemblyItemId &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNote#&1$@S@TDF_Label#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::AddNote",
+      "signature": "XCAFDoc_NotesTool::AddNote: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNoteToAttr#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#",
+      "nativeName": "XCAFDoc_NotesTool::AddNoteToAttr",
+      "signature": "XCAFDoc_NotesTool::AddNoteToAttr: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const XCAFDoc_AssemblyItemId &, const Standard_GUID &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNoteToAttr#&1$@S@TDF_Label#S0_#&1$@S@Standard_GUID#",
+      "nativeName": "XCAFDoc_NotesTool::AddNoteToAttr",
+      "signature": "XCAFDoc_NotesTool::AddNoteToAttr: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const TDF_Label &, const Standard_GUID &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNoteToSubshape#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#I#",
+      "nativeName": "XCAFDoc_NotesTool::AddNoteToSubshape",
+      "signature": "XCAFDoc_NotesTool::AddNoteToSubshape: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const XCAFDoc_AssemblyItemId &, int)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNoteToSubshape#&1$@S@TDF_Label#S0_#I#",
+      "nativeName": "XCAFDoc_NotesTool::AddNoteToSubshape",
+      "signature": "XCAFDoc_NotesTool::AddNoteToSubshape: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const TDF_Label &, int)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateBalloon#&1$@S@TCollection_ExtendedString#S0_#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::CreateBalloon",
+      "signature": "XCAFDoc_NotesTool::CreateBalloon: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateBinData#&1$@S@TCollection_ExtendedString#S0_#S0_#&1$@S@TCollection_AsciiString#&$@S@OSD_File#",
+      "nativeName": "XCAFDoc_NotesTool::CreateBinData",
+      "signature": "XCAFDoc_NotesTool::CreateBinData: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_AsciiString &, OSD_File &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateBinData#&1$@S@TCollection_ExtendedString#S0_#S0_#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#c#",
+      "nativeName": "XCAFDoc_NotesTool::CreateBinData",
+      "signature": "XCAFDoc_NotesTool::CreateBinData: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_AsciiString &, const occ::handle<NCollection_HArray1<uint8_t>> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateComment#&1$@S@TCollection_ExtendedString#S0_#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::CreateComment",
+      "signature": "XCAFDoc_NotesTool::CreateComment: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@DeleteNote#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_NotesTool::DeleteNote",
+      "signature": "XCAFDoc_NotesTool::DeleteNote: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@DeleteNotes#&$@S@NCollection_Sequence>#$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_NotesTool::DeleteNotes",
+      "signature": "XCAFDoc_NotesTool::DeleteNotes: int (NCollection_Sequence<TDF_Label> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "XCAFDoc_NotesTool::Dump",
+      "signature": "XCAFDoc_NotesTool::Dump: Standard_OStream &(Standard_OStream &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItem#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItem: TDF_Label (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItem#&1$@S@XCAFDoc_AssemblyItemId#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItem: TDF_Label (const XCAFDoc_AssemblyItemId &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItemAttr#&1$@S@TDF_Label#&1$@S@Standard_GUID#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItemAttr",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItemAttr: TDF_Label (const TDF_Label &, const Standard_GUID &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItemAttr#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItemAttr",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItemAttr: TDF_Label (const XCAFDoc_AssemblyItemId &, const Standard_GUID &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItemSubshape#&1$@S@TDF_Label#I#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItemSubshape",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItemSubshape: TDF_Label (const TDF_Label &, int) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItemSubshape#&1$@S@XCAFDoc_AssemblyItemId#I#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItemSubshape",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItemSubshape: TDF_Label (const XCAFDoc_AssemblyItemId &, int) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAnnotatedItems#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAnnotatedItems",
+      "signature": "XCAFDoc_NotesTool::GetAnnotatedItems: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAnnotatedItemsLabel#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAnnotatedItemsLabel",
+      "signature": "XCAFDoc_NotesTool::GetAnnotatedItemsLabel: TDF_Label () const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAttrNotes#&1$@S@TDF_Label#&1$@S@Standard_GUID#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAttrNotes",
+      "signature": "XCAFDoc_NotesTool::GetAttrNotes: int (const TDF_Label &, const Standard_GUID &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAttrNotes#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAttrNotes",
+      "signature": "XCAFDoc_NotesTool::GetAttrNotes: int (const XCAFDoc_AssemblyItemId &, const Standard_GUID &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetID#S",
+      "nativeName": "XCAFDoc_NotesTool::GetID",
+      "signature": "XCAFDoc_NotesTool::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: int (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&1$@S@XCAFDoc_AssemblyItemId#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: int (const XCAFDoc_AssemblyItemId &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotesLabel#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotesLabel",
+      "signature": "XCAFDoc_NotesTool::GetNotesLabel: TDF_Label () const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetOrphanNotes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetOrphanNotes",
+      "signature": "XCAFDoc_NotesTool::GetOrphanNotes: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetSubshapeNotes#&1$@S@XCAFDoc_AssemblyItemId#I#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetSubshapeNotes",
+      "signature": "XCAFDoc_NotesTool::GetSubshapeNotes: int (const XCAFDoc_AssemblyItemId &, int, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@ID#1",
+      "nativeName": "XCAFDoc_NotesTool::ID",
+      "signature": "XCAFDoc_NotesTool::ID: const Standard_GUID &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@IsAnnotatedItem#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::IsAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::IsAnnotatedItem: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@IsAnnotatedItem#&1$@S@XCAFDoc_AssemblyItemId#1",
+      "nativeName": "XCAFDoc_NotesTool::IsAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::IsAnnotatedItem: bool (const XCAFDoc_AssemblyItemId &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAllAttrNotes#&1$@S@TDF_Label#&1$@S@Standard_GUID#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAllAttrNotes",
+      "signature": "XCAFDoc_NotesTool::RemoveAllAttrNotes: bool (const TDF_Label &, const Standard_GUID &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAllAttrNotes#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAllAttrNotes",
+      "signature": "XCAFDoc_NotesTool::RemoveAllAttrNotes: bool (const XCAFDoc_AssemblyItemId &, const Standard_GUID &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAllNotes#&1$@S@TDF_Label#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAllNotes",
+      "signature": "XCAFDoc_NotesTool::RemoveAllNotes: bool (const TDF_Label &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAllNotes#&1$@S@XCAFDoc_AssemblyItemId#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAllNotes",
+      "signature": "XCAFDoc_NotesTool::RemoveAllNotes: bool (const XCAFDoc_AssemblyItemId &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAllSubshapeNotes#&1$@S@XCAFDoc_AssemblyItemId#I#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAllSubshapeNotes",
+      "signature": "XCAFDoc_NotesTool::RemoveAllSubshapeNotes: bool (const XCAFDoc_AssemblyItemId &, int, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAttrNote#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAttrNote",
+      "signature": "XCAFDoc_NotesTool::RemoveAttrNote: bool (const TDF_Label &, const XCAFDoc_AssemblyItemId &, const Standard_GUID &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveAttrNote#&1$@S@TDF_Label#S0_#&1$@S@Standard_GUID#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveAttrNote",
+      "signature": "XCAFDoc_NotesTool::RemoveAttrNote: bool (const TDF_Label &, const TDF_Label &, const Standard_GUID &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveNote#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveNote",
+      "signature": "XCAFDoc_NotesTool::RemoveNote: bool (const TDF_Label &, const XCAFDoc_AssemblyItemId &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveNote#&1$@S@TDF_Label#S0_#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveNote",
+      "signature": "XCAFDoc_NotesTool::RemoveNote: bool (const TDF_Label &, const TDF_Label &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveSubshapeNote#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#I#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveSubshapeNote",
+      "signature": "XCAFDoc_NotesTool::RemoveSubshapeNote: bool (const TDF_Label &, const XCAFDoc_AssemblyItemId &, int, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveSubshapeNote#&1$@S@TDF_Label#S0_#I#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveSubshapeNote",
+      "signature": "XCAFDoc_NotesTool::RemoveSubshapeNote: bool (const TDF_Label &, const TDF_Label &, int, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_NotesTool::Set",
+      "signature": "XCAFDoc_NotesTool::Set: occ::handle<XCAFDoc_NotesTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "XCAFDoc_NotesTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@get_type_descriptor#S",
+      "nativeName": "XCAFDoc_NotesTool::get_type_descriptor",
+      "signature": "XCAFDoc_NotesTool::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@get_type_name#S",
+      "nativeName": "XCAFDoc_NotesTool::get_type_name",
+      "signature": "XCAFDoc_NotesTool::get_type_name: const char *()",
+      "guard": "ASDocumentBound",
+      "reason": "Streams, RTTI, inaccessible mutators, unrestricted relocation/filters, external objects, binary note IO or redundant overloads are outside the verified copied workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "workflow": "xde-attribute-projections"
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@TDF_Label@F@AddAttribute#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#b#1",
+      "nativeName": "TDF_Label::AddAttribute",
+      "signature": "TDF_Label::AddAttribute: void (const occ::handle<TDF_Attribute> &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Abort#",
+      "nativeName": "TDF_Transaction::Abort",
+      "signature": "TDF_Transaction::Abort: void ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Commit#b#",
+      "nativeName": "TDF_Transaction::Commit",
+      "signature": "TDF_Transaction::Commit: occ::handle<TDF_Delta> (const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@Open#",
+      "nativeName": "TDF_Transaction::Open",
+      "signature": "TDF_Transaction::Open: int ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Transaction@F@TDF_Transaction#&1$@N@opencascade@S@handle>#$@S@TDF_Data#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TDF_Transaction::TDF_Transaction",
+      "signature": "TDF_Transaction::TDF_Transaction: void (const occ::handle<TDF_Data> &, const TCollection_AsciiString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@Main#1",
+      "nativeName": "TDocStd_Document::Main",
+      "signature": "TDocStd_Document::Main: TDF_Label () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@TDocStd_Document#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDocStd_Document::TDocStd_Document",
+      "signature": "TDocStd_Document::TDocStd_Document: void (const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetGUID#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetGUID",
+      "signature": "XCAFDoc_AssemblyItemRef::GetGUID: Standard_GUID () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckLayerTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckLayerTool",
+      "signature": "XCAFDoc_DocumentTool::CheckLayerTool: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckNotesTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckNotesTool",
+      "signature": "XCAFDoc_DocumentTool::CheckNotesTool: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@LayerTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::LayerTool",
+      "signature": "XCAFDoc_DocumentTool::LayerTool: occ::handle<XCAFDoc_LayerTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@NotesTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::NotesTool",
+      "signature": "XCAFDoc_DocumentTool::NotesTool: occ::handle<XCAFDoc_NotesTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@Set#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_DocumentTool::Set",
+      "signature": "XCAFDoc_DocumentTool::Set: occ::handle<XCAFDoc_DocumentTool> (const TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Blocked"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAttribute#&1$@S@Standard_GUID#1",
+      "nativeName": "TDF_Label::ForgetAttribute",
+      "signature": "TDF_Label::ForgetAttribute: bool (const Standard_GUID &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetID#S",
+      "nativeName": "TDataStd_NamedData::GetID",
+      "signature": "TDataStd_NamedData::GetID: const Standard_GUID &()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@TDataStd_NamedData#",
+      "nativeName": "TDataStd_NamedData::TDataStd_NamedData",
+      "signature": "TDataStd_NamedData::TDataStd_NamedData: void ()",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetData#1",
+      "nativeName": "TDocStd_Document::GetData",
+      "signature": "TDocStd_Document::GetData: occ::handle<TDF_Data> () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@HasOpenCommand#1",
+      "nativeName": "TDocStd_Document::HasOpenCommand",
+      "signature": "TDocStd_Document::HasOpenCommand: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@SetUndoLimit#I#",
+      "nativeName": "TDocStd_Document::SetUndoLimit",
+      "signature": "TDocStd_Document::SetUndoLimit: void (const int)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "document-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemId@F@ToString#1",
+      "nativeName": "XCAFDoc_AssemblyItemId::ToString",
+      "signature": "XCAFDoc_AssemblyItemId::ToString: TCollection_AsciiString () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_AssemblyItemRef::Get",
+      "signature": "XCAFDoc_AssemblyItemRef::Get: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetItem#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetItem",
+      "signature": "XCAFDoc_AssemblyItemRef::GetItem: const XCAFDoc_AssemblyItemId &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetSubshapeIndex#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetSubshapeIndex",
+      "signature": "XCAFDoc_AssemblyItemRef::GetSubshapeIndex: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsGUID#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsGUID",
+      "signature": "XCAFDoc_AssemblyItemRef::IsGUID: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsOrphan#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsOrphan",
+      "signature": "XCAFDoc_AssemblyItemRef::IsOrphan: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsSubshapeIndex#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsSubshapeIndex",
+      "signature": "XCAFDoc_AssemblyItemRef::IsSubshapeIndex: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@IsOrphan#1",
+      "nativeName": "XCAFDoc_Note::IsOrphan",
+      "signature": "XCAFDoc_Note::IsOrphan: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@NbAnnotatedItems#1",
+      "nativeName": "XCAFDoc_NotesTool::NbAnnotatedItems",
+      "signature": "XCAFDoc_NotesTool::NbAnnotatedItems: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@NbNotes#1",
+      "nativeName": "XCAFDoc_NotesTool::NbNotes",
+      "signature": "XCAFDoc_NotesTool::NbNotes: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration.",
+      "workflow": "xde-attribute-projections",
+      "baselineDisposition": "Emitted"
+    }
+  ],
+  "manualSupportingOperations": [
+    {
+      "stableId": "c:@S@BinMDataStd_NamedDataDriver@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@BinObjMgt_Persistent#&$@S@NCollection_IndexedMap>#$@N@opencascade@S@handle>#$@S@Standard_Transient#$@S@NCollection_DefaultHasher>#S7_#1",
+      "nativeName": "BinMDataStd_NamedDataDriver::Paste",
+      "signature": "BinMDataStd_NamedDataDriver::Paste: void (const occ::handle<TDF_Attribute> &, BinObjMgt_Persistent &, NCollection_IndexedMap<occ::handle<Standard_Transient>> &) const",
+      "header": "BinMDataStd_NamedDataDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@BinMDataStd_NamedDataDriver@F@Paste#&1$@S@BinObjMgt_Persistent#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@BinObjMgt_RRelocationTable#1",
+      "nativeName": "BinMDataStd_NamedDataDriver::Paste",
+      "signature": "BinMDataStd_NamedDataDriver::Paste: bool (const BinObjMgt_Persistent &, const occ::handle<TDF_Attribute> &, BinObjMgt_RRelocationTable &) const",
+      "header": "BinMDataStd_NamedDataDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Application@F@DefineFormat#&1$@S@TCollection_AsciiString#S0_#S0_#&1$@N@opencascade@S@handle>#$@S@PCDM_RetrievalDriver#&1$@N@opencascade@S@handle>#$@S@PCDM_StorageDriver#",
+      "nativeName": "TDocStd_Application::DefineFormat",
+      "signature": "TDocStd_Application::DefineFormat: void (const TCollection_AsciiString &, const TCollection_AsciiString &, const TCollection_AsciiString &, const occ::handle<PCDM_RetrievalDriver> &, const occ::handle<PCDM_StorageDriver> &)",
+      "header": "TDocStd_Application.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@Set#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "XCAFDoc_Note::Set",
+      "signature": "XCAFDoc_Note::Set: void (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "header": "XCAFDoc_Note.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Set#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XCAFDoc_NoteComment::Set",
+      "signature": "XCAFDoc_NoteComment::Set: void (const TCollection_ExtendedString &)",
+      "header": "XCAFDoc_NoteComment.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XmlDrivers_DocumentStorageDriver@F@XmlDrivers_DocumentStorageDriver#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XmlDrivers_DocumentStorageDriver::XmlDrivers_DocumentStorageDriver",
+      "signature": "XmlDrivers_DocumentStorageDriver::XmlDrivers_DocumentStorageDriver: void (const TCollection_ExtendedString &)",
+      "header": "XmlDrivers_DocumentStorageDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XmlMDataStd_NamedDataDriver@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_Persistent#&$@S@XmlObjMgt_SRelocationTable#1",
+      "nativeName": "XmlMDataStd_NamedDataDriver::Paste",
+      "signature": "XmlMDataStd_NamedDataDriver::Paste: void (const occ::handle<TDF_Attribute> &, XmlObjMgt_Persistent &, XmlObjMgt_SRelocationTable &) const",
+      "header": "XmlMDataStd_NamedDataDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XmlMDataStd_NamedDataDriver@F@Paste#&1$@S@XmlObjMgt_Persistent#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_RRelocationTable#1",
+      "nativeName": "XmlMDataStd_NamedDataDriver::Paste",
+      "signature": "XmlMDataStd_NamedDataDriver::Paste: bool (const XmlObjMgt_Persistent &, const occ::handle<TDF_Attribute> &, XmlObjMgt_RRelocationTable &) const",
+      "header": "XmlMDataStd_NamedDataDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    },
+    {
+      "stableId": "c:@S@XmlXCAFDrivers_DocumentStorageDriver@F@XmlXCAFDrivers_DocumentStorageDriver#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XmlXCAFDrivers_DocumentStorageDriver::XmlXCAFDrivers_DocumentStorageDriver",
+      "signature": "XmlXCAFDrivers_DocumentStorageDriver::XmlXCAFDrivers_DocumentStorageDriver: void (const TCollection_ExtendedString &)",
+      "header": "XmlXCAFDrivers_DocumentStorageDriver.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "MANUAL_PRIVATE_SUPPORT",
+      "specialCaseId": "SC-062",
+      "reason": "Application-local persistence adapter with bounded copied extension; no mutable attribute/driver/callback exported."
+    }
+  ],
+  "persistenceReusedOperations": [
+    {
+      "stableId": "c:@S@BinDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "BinDrivers_DocumentRetrievalDriver::AttributeDrivers",
+      "signature": "BinDrivers_DocumentRetrievalDriver::AttributeDrivers: occ::handle<BinMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinDrivers_DocumentRetrievalDriver@F@BinDrivers_DocumentRetrievalDriver#",
+      "nativeName": "BinDrivers_DocumentRetrievalDriver::BinDrivers_DocumentRetrievalDriver",
+      "signature": "BinDrivers_DocumentRetrievalDriver::BinDrivers_DocumentRetrievalDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinDrivers_DocumentStorageDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "BinDrivers_DocumentStorageDriver::AttributeDrivers",
+      "signature": "BinDrivers_DocumentStorageDriver::AttributeDrivers: occ::handle<BinMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinDrivers_DocumentStorageDriver@F@BinDrivers_DocumentStorageDriver#",
+      "nativeName": "BinDrivers_DocumentStorageDriver::BinDrivers_DocumentStorageDriver",
+      "signature": "BinDrivers_DocumentStorageDriver::BinDrivers_DocumentStorageDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinMDF_ADriverTable@F@AddDriver#&1$@N@opencascade@S@handle>#$@S@BinMDF_ADriver#",
+      "nativeName": "BinMDF_ADriverTable::AddDriver",
+      "signature": "BinMDF_ADriverTable::AddDriver: void (const occ::handle<BinMDF_ADriver> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinMDataStd_NamedDataDriver@F@BinMDataStd_NamedDataDriver#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "BinMDataStd_NamedDataDriver::BinMDataStd_NamedDataDriver",
+      "signature": "BinMDataStd_NamedDataDriver::BinMDataStd_NamedDataDriver: void (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinXCAFDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "BinXCAFDrivers_DocumentRetrievalDriver::AttributeDrivers",
+      "signature": "BinXCAFDrivers_DocumentRetrievalDriver::AttributeDrivers: occ::handle<BinMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinXCAFDrivers_DocumentRetrievalDriver@F@BinXCAFDrivers_DocumentRetrievalDriver#",
+      "nativeName": "BinXCAFDrivers_DocumentRetrievalDriver::BinXCAFDrivers_DocumentRetrievalDriver",
+      "signature": "BinXCAFDrivers_DocumentRetrievalDriver::BinXCAFDrivers_DocumentRetrievalDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinXCAFDrivers_DocumentStorageDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "BinXCAFDrivers_DocumentStorageDriver::AttributeDrivers",
+      "signature": "BinXCAFDrivers_DocumentStorageDriver::AttributeDrivers: occ::handle<BinMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BinXCAFDrivers_DocumentStorageDriver@F@BinXCAFDrivers_DocumentStorageDriver#",
+      "nativeName": "BinXCAFDrivers_DocumentStorageDriver::BinXCAFDrivers_DocumentStorageDriver",
+      "signature": "BinXCAFDrivers_DocumentStorageDriver::BinXCAFDrivers_DocumentStorageDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Clear#",
+      "nativeName": "TDataStd_NamedData::Clear",
+      "signature": "TDataStd_NamedData::Clear: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#",
+      "nativeName": "TDataStd_NamedData::Restore",
+      "signature": "TDataStd_NamedData::Restore: void (const occ::handle<TDF_Attribute> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlDrivers_DocumentRetrievalDriver::AttributeDrivers",
+      "signature": "XmlDrivers_DocumentRetrievalDriver::AttributeDrivers: occ::handle<XmlMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlDrivers_DocumentRetrievalDriver@F@XmlDrivers_DocumentRetrievalDriver#",
+      "nativeName": "XmlDrivers_DocumentRetrievalDriver::XmlDrivers_DocumentRetrievalDriver",
+      "signature": "XmlDrivers_DocumentRetrievalDriver::XmlDrivers_DocumentRetrievalDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlDrivers_DocumentStorageDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlDrivers_DocumentStorageDriver::AttributeDrivers",
+      "signature": "XmlDrivers_DocumentStorageDriver::AttributeDrivers: occ::handle<XmlMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlMDF_ADriverTable@F@AddDriver#&1$@N@opencascade@S@handle>#$@S@XmlMDF_ADriver#",
+      "nativeName": "XmlMDF_ADriverTable::AddDriver",
+      "signature": "XmlMDF_ADriverTable::AddDriver: void (const occ::handle<XmlMDF_ADriver> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlMDataStd_NamedDataDriver@F@XmlMDataStd_NamedDataDriver#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlMDataStd_NamedDataDriver::XmlMDataStd_NamedDataDriver",
+      "signature": "XmlMDataStd_NamedDataDriver::XmlMDataStd_NamedDataDriver: void (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlMXCAFDoc_NoteCommentDriver@F@XmlMXCAFDoc_NoteCommentDriver#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlMXCAFDoc_NoteCommentDriver::XmlMXCAFDoc_NoteCommentDriver",
+      "signature": "XmlMXCAFDoc_NoteCommentDriver::XmlMXCAFDoc_NoteCommentDriver: void (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlXCAFDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlXCAFDrivers_DocumentRetrievalDriver::AttributeDrivers",
+      "signature": "XmlXCAFDrivers_DocumentRetrievalDriver::AttributeDrivers: occ::handle<XmlMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlXCAFDrivers_DocumentRetrievalDriver@F@XmlXCAFDrivers_DocumentRetrievalDriver#",
+      "nativeName": "XmlXCAFDrivers_DocumentRetrievalDriver::XmlXCAFDrivers_DocumentRetrievalDriver",
+      "signature": "XmlXCAFDrivers_DocumentRetrievalDriver::XmlXCAFDrivers_DocumentRetrievalDriver: void ()",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XmlXCAFDrivers_DocumentStorageDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlXCAFDrivers_DocumentStorageDriver::AttributeDrivers",
+      "signature": "XmlXCAFDrivers_DocumentStorageDriver::AttributeDrivers: occ::handle<XmlMDF_ADriverTable> (const occ::handle<Message_Messenger> &)",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

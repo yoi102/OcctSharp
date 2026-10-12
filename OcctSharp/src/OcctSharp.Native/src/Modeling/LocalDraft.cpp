@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 #include "Modeling/LocalFeatures.hxx"
 #include <BRepBuilderAPI_MakeWire.hxx>
 #include <BRepAdaptor_Curve.hxx>
@@ -28,7 +29,7 @@ void ValidateShellLimitProfile(const TopoDS_Shape& profile) {
   Require(curve.GetType() == GeomAbs_Line || curve.GetType() == GeomAbs_Circle,
     "Limit-driven shell draft currently supports an analytic line/circle boundary only.");
 }
-void ShellHistory(BRepOffsetAPI_MakeDraft& algorithm, const InputGraph& graph, Result& result) {
+void ShellHistory(OcctSharpGenerated::LocalMakeDraftBuilder& algorithm, const InputGraph& graph, Result& result) {
   // BRepFill_Draft::Generated unconditionally casts its argument to an edge;
   // its apparent vertex branch is not safe in Debug. Modified/IsDeleted are
   // base-class defaults, not an available shell-draft evolution contract.
@@ -54,7 +55,7 @@ void ShellHistory(BRepOffsetAPI_MakeDraft& algorithm, const InputGraph& graph, R
   }
   for (const auto& face : laterals) result.Add(face, Lateral);
 }
-void DraftFailure(BRepOffsetAPI_DraftAngle& algorithm, const InputGraph& graph, Result& result, int program) {
+void DraftFailure(OcctSharpGenerated::LocalDraftAngleBuilder& algorithm, const InputGraph& graph, Result& result, int program) {
   const auto problem = algorithm.ProblematicShape(); const int status = static_cast<int>(algorithm.Status());
   const int index = graph.Index(0, problem); result.Data().Faults.push_back({2, program, index, status});
   result.Add(problem, ProblemShape, 0, index, program, problem.IsNull() ? -1 : problem.ShapeType());
@@ -79,7 +80,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_face_draft(const OcctSharp_ShapeHandle
       // advertised as a switch that disables tangent propagation.
       for (int i = 0; i < count; ++i) {
         const auto& p = programs[i]; const auto& face = TopoDS::Face(graph.Subshape(0, p.face, TopAbs_FACE));
-        BRepOffsetAPI_DraftAngle probe(graph.At(0));
+        OcctSharpGenerated::LocalDraftAngleBuilder probe(graph.At(0));
         probe.Add(face, Direction(p.direction), p.angle, gp_Pln(Point(p.plane_origin), Direction(p.plane_normal)), true);
         if (!probe.AddDone()) { DraftFailure(probe, graph, result, i); result.Publish(output); return; }
         // ConnectedFaces requires Draft_Modification::IsDone(), not just AddDone.
@@ -93,7 +94,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_face_draft(const OcctSharp_ShapeHandle
           result.Add(item, AffectedFace, 0, index, i, TopAbs_FACE);
         }
       }
-      BRepOffsetAPI_DraftAngle algorithm(graph.At(0));
+      OcctSharpGenerated::LocalDraftAngleBuilder algorithm(graph.At(0));
       for (int i = 0; i < count; ++i) {
         const auto& p = programs[i];
         algorithm.Add(TopoDS::Face(graph.Subshape(0, p.face, TopAbs_FACE)), Direction(p.direction), p.angle,
@@ -129,7 +130,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shell_draft(const OcctSharp_ShapeHandl
     if (o.limit_kind == 1) graph.Typed(1, TopAbs_FACE);
     if (o.limit_kind != 0) ValidateShellLimitProfile(profile);
     try {
-      BRepOffsetAPI_MakeDraft algorithm(profile, Direction(o.direction), o.angle);
+      OcctSharpGenerated::LocalMakeDraftBuilder algorithm(profile, Direction(o.direction), o.angle);
       algorithm.SetOptions(static_cast<BRepBuilderAPI_TransitionMode>(o.transition), o.angle_minimum, o.angle_maximum);
       algorithm.SetDraft(o.internal_draft != 0); result.Data().Info.ready = 1;
       if (o.limit_kind == 0) algorithm.Perform(o.length);

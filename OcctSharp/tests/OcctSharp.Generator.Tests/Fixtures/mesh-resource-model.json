@@ -1,0 +1,977 @@
+[
+  {
+    "StableId": "c:@S@Image_Texture@F@DataBuffer#1",
+    "NativeName": "Image_Texture::DataBuffer",
+    "Kind": "Method",
+    "Header": "Image_Texture.hxx",
+    "Line": 57,
+    "Column": 42,
+    "NativeSignature": "Image_Texture::DataBuffer: const occ::handle<NCollection_Buffer> &() const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<NCollection_Buffer> &",
+      "CanonicalSpelling": "const opencascade::handle<NCollection_Buffer> &",
+      "BaseNativeSpelling": "const occ::handle<NCollection_Buffer>",
+      "BaseCanonicalSpelling": "const opencascade::handle<NCollection_Buffer>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "NCollection_Buffer"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "NCollection_Buffer"
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@FileLength#1",
+    "NativeName": "Image_Texture::FileLength",
+    "Kind": "Method",
+    "Header": "Image_Texture.hxx",
+    "Line": 54,
+    "Column": 11,
+    "NativeSignature": "Image_Texture::FileLength: int64_t () const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "int64_t",
+      "CanonicalSpelling": "long long",
+      "BaseNativeSpelling": "int64_t",
+      "BaseCanonicalSpelling": "long long",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@FileOffset#1",
+    "NativeName": "Image_Texture::FileOffset",
+    "Kind": "Method",
+    "Header": "Image_Texture.hxx",
+    "Line": 51,
+    "Column": 11,
+    "NativeSignature": "Image_Texture::FileOffset: int64_t () const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "int64_t",
+      "CanonicalSpelling": "long long",
+      "BaseNativeSpelling": "int64_t",
+      "BaseCanonicalSpelling": "long long",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@FilePath#1",
+    "NativeName": "Image_Texture::FilePath",
+    "Kind": "Method",
+    "Header": "Image_Texture.hxx",
+    "Line": 48,
+    "Column": 34,
+    "NativeSignature": "Image_Texture::FilePath: const TCollection_AsciiString &() const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const TCollection_AsciiString &",
+      "CanonicalSpelling": "const TCollection_AsciiString &",
+      "BaseNativeSpelling": "const TCollection_AsciiString",
+      "BaseCanonicalSpelling": "const TCollection_AsciiString",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@Image_Texture#&&$@S@Image_Texture#",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Constructor",
+    "Header": "Image_Texture.hxx",
+    "Line": 28,
+    "Column": 7,
+    "NativeSignature": "Image_Texture::Image_Texture: void (Image_Texture &&)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "Image_Texture &&",
+          "CanonicalSpelling": "Image_Texture &&",
+          "BaseNativeSpelling": "Image_Texture",
+          "BaseCanonicalSpelling": "Image_Texture",
+          "Layers": [
+            {
+              "Kind": "RValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@Image_Texture#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#&1$@S@TCollection_AsciiString#",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Constructor",
+    "Header": "Image_Texture.hxx",
+    "Line": 41,
+    "Column": 28,
+    "NativeSignature": "Image_Texture::Image_Texture: void (const occ::handle<NCollection_Buffer> &, const TCollection_AsciiString &)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theBuffer",
+        "Type": {
+          "NativeSpelling": "const occ::handle<NCollection_Buffer> &",
+          "CanonicalSpelling": "const opencascade::handle<NCollection_Buffer> &",
+          "BaseNativeSpelling": "const occ::handle<NCollection_Buffer>",
+          "BaseCanonicalSpelling": "const opencascade::handle<NCollection_Buffer>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "NCollection_Buffer"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "NCollection_Buffer"
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theId",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@Image_Texture#&1$@S@Image_Texture#",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Constructor",
+    "Header": "Image_Texture.hxx",
+    "Line": 28,
+    "Column": 7,
+    "NativeSignature": "Image_Texture::Image_Texture: void (const Image_Texture &)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "const Image_Texture &",
+          "CanonicalSpelling": "const Image_Texture &",
+          "BaseNativeSpelling": "const Image_Texture",
+          "BaseCanonicalSpelling": "const Image_Texture",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@Image_Texture#&1$@S@TCollection_AsciiString#",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Constructor",
+    "Header": "Image_Texture.hxx",
+    "Line": 33,
+    "Column": 28,
+    "NativeSignature": "Image_Texture::Image_Texture: void (const TCollection_AsciiString &)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theFileName",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@Image_Texture#&1$@S@TCollection_AsciiString#K#K#",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Constructor",
+    "Header": "Image_Texture.hxx",
+    "Line": 36,
+    "Column": 28,
+    "NativeSignature": "Image_Texture::Image_Texture: void (const TCollection_AsciiString &, int64_t, int64_t)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theFileName",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theOffset",
+        "Type": {
+          "NativeSpelling": "int64_t",
+          "CanonicalSpelling": "long long",
+          "BaseNativeSpelling": "int64_t",
+          "BaseCanonicalSpelling": "long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "theLength",
+        "Type": {
+          "NativeSpelling": "int64_t",
+          "CanonicalSpelling": "long long",
+          "BaseNativeSpelling": "int64_t",
+          "BaseCanonicalSpelling": "long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1",
+    "NativeName": "Image_Texture::ReadImage",
+    "Kind": "Method",
+    "Header": "Image_Texture.hxx",
+    "Line": 70,
+    "Column": 53,
+    "NativeSignature": "Image_Texture::ReadImage: occ::handle<Image_PixMap> (const occ::handle<Image_SupportedFormats> &) const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "occ::handle<Image_PixMap>",
+      "CanonicalSpelling": "opencascade::handle<Image_PixMap>",
+      "BaseNativeSpelling": "occ::handle<Image_PixMap>",
+      "BaseCanonicalSpelling": "opencascade::handle<Image_PixMap>",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "Image_PixMap"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "Image_PixMap"
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theSupported",
+        "Type": {
+          "NativeSpelling": "const occ::handle<Image_SupportedFormats> &",
+          "CanonicalSpelling": "const opencascade::handle<Image_SupportedFormats> &",
+          "BaseNativeSpelling": "const occ::handle<Image_SupportedFormats>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Image_SupportedFormats>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "Image_SupportedFormats"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "Image_SupportedFormats"
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": true,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Supported",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_Texture@S@Image_Texture",
+    "NativeName": "Image_Texture::Image_Texture",
+    "Kind": "Record",
+    "Header": "Image_Texture.hxx",
+    "Line": 28,
+    "Column": 7,
+    "NativeSignature": "Image_Texture::Image_Texture",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@NCollection_Buffer@F@ChangeData#",
+    "NativeName": "NCollection_Buffer::ChangeData",
+    "Kind": "Method",
+    "Header": "NCollection_Buffer.hxx",
+    "Line": 57,
+    "Column": 12,
+    "NativeSignature": "NCollection_Buffer::ChangeData: uint8_t *() noexcept",
+    "SourcePackage": "NCollection",
+    "SourceToolkit": "TKernel",
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "uint8_t *",
+      "CanonicalSpelling": "unsigned char *",
+      "BaseNativeSpelling": "uint8_t",
+      "BaseCanonicalSpelling": "unsigned char",
+      "Layers": [
+        {
+          "Kind": "PointerIndirection",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@NCollection_Buffer@F@NCollection_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#k#*c#",
+    "NativeName": "NCollection_Buffer::NCollection_Buffer",
+    "Kind": "Constructor",
+    "Header": "NCollection_Buffer.hxx",
+    "Line": 32,
+    "Column": 3,
+    "NativeSignature": "NCollection_Buffer::NCollection_Buffer: void (const occ::handle<NCollection_BaseAllocator> &, const size_t, uint8_t *)",
+    "SourcePackage": "NCollection",
+    "SourceToolkit": "TKernel",
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theAlloc",
+        "Type": {
+          "NativeSpelling": "const occ::handle<NCollection_BaseAllocator> &",
+          "CanonicalSpelling": "const opencascade::handle<NCollection_BaseAllocator> &",
+          "BaseNativeSpelling": "const occ::handle<NCollection_BaseAllocator>",
+          "BaseCanonicalSpelling": "const opencascade::handle<NCollection_BaseAllocator>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "NCollection_BaseAllocator"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "NCollection_BaseAllocator"
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theSize",
+        "Type": {
+          "NativeSpelling": "const size_t",
+          "CanonicalSpelling": "const unsigned long long",
+          "BaseNativeSpelling": "const size_t",
+          "BaseCanonicalSpelling": "const unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      },
+      {
+        "Position": 2,
+        "Name": "theData",
+        "Type": {
+          "NativeSpelling": "uint8_t *",
+          "CanonicalSpelling": "unsigned char *",
+          "BaseNativeSpelling": "uint8_t",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "PointerIndirection",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@NCollection_Buffer@F@NCollection_Buffer#&1$@S@NCollection_Buffer#",
+    "NativeName": "NCollection_Buffer::NCollection_Buffer",
+    "Kind": "Constructor",
+    "Header": "NCollection_Buffer.hxx",
+    "Line": 23,
+    "Column": 7,
+    "NativeSignature": "NCollection_Buffer::NCollection_Buffer: void (const NCollection_Buffer &)",
+    "SourcePackage": "NCollection",
+    "SourceToolkit": "TKernel",
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "const NCollection_Buffer &",
+          "CanonicalSpelling": "const NCollection_Buffer &",
+          "BaseNativeSpelling": "const NCollection_Buffer",
+          "BaseCanonicalSpelling": "const NCollection_Buffer",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@NCollection_Buffer@F@Size#1",
+    "NativeName": "NCollection_Buffer::Size",
+    "Kind": "Method",
+    "Header": "NCollection_Buffer.hxx",
+    "Line": 63,
+    "Column": 10,
+    "NativeSignature": "NCollection_Buffer::Size: size_t () const noexcept",
+    "SourcePackage": "NCollection",
+    "SourceToolkit": "TKernel",
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "size_t",
+      "CanonicalSpelling": "unsigned long long",
+      "BaseNativeSpelling": "size_t",
+      "BaseCanonicalSpelling": "unsigned long long",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@NCollection_Buffer@S@NCollection_Buffer",
+    "NativeName": "NCollection_Buffer::NCollection_Buffer",
+    "Kind": "Record",
+    "Header": "NCollection_Buffer.hxx",
+    "Line": 23,
+    "Column": 7,
+    "NativeSignature": "NCollection_Buffer::NCollection_Buffer",
+    "SourcePackage": "NCollection",
+    "SourceToolkit": "TKernel",
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  }
+]

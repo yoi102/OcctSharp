@@ -1,0 +1,9 @@
+using OcctSharp.Generator.Emission;
+using OcctSharp.Generator.Model;
+using OcctSharp.Generator.Transformation;
+namespace OcctSharp.Generator.Tests;
+public sealed class FillingWorkspaceContractTests {
+ static BindingDeclaration Declaration(CopiedCollectionOperationContract.Operation op)=>new(op.StableId,op.NativeName,BindingDeclarationKind.Method,op.NativeName.Split("::")[0]+".hxx",1,1){NativeSignature=op.Signature,Access=BindingAccess.Public};
+ [Fact]public void ExactScopeRequiresCompleteClosureAndRejectsDrift(){foreach(var contract in new[]{ClosedWorkflowOperationContract.FillingWorkspaces,ClosedWorkflowOperationContract.TopologyAssembly}){foreach(var op in contract.Operations.Values){var d=Declaration(op);Assert.True(contract.Contains(d));Assert.False(contract.Contains(d with{NativeSignature=d.NativeSignature+" "}));Assert.False(contract.Contains(d with{Access=BindingAccess.Private}));}Assert.Throws<InvalidDataException>(()=>ClosedWorkflowOperationEmitter.Emit("8.0.1",new BindingModel([Declaration(contract.Operations.Values.First(x=>!x.Supporting))]),contract));}}
+ [Fact]public void ReorderingIsDeterministicAndUnsupportedScratchCallbacksStayDeferred(){foreach(var contract in new[]{ClosedWorkflowOperationContract.FillingWorkspaces,ClosedWorkflowOperationContract.TopologyAssembly}){var rows=contract.Operations.Values.Select(Declaration).ToArray();var a=ClosedWorkflowOperationEmitter.Emit("8.0.1",new BindingModel(rows),contract);var b=ClosedWorkflowOperationEmitter.Emit("8.0.1",new BindingModel(rows.Reverse()),contract);Assert.Equal(a.Files.Select(f=>f.Content),b.Files.Select(f=>f.Content));Assert.Equal(3,a.Files.Count);Assert.DoesNotContain(contract.Operations.Values,x=>x.NativeName.Contains("FunctionMultiply")||x.NativeName.Contains("BoorScheme")||x.Signature.Contains("&&"));}}
+}

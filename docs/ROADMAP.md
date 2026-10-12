@@ -1,39 +1,158 @@
 # Roadmap
 
-## Current planning policy (2026-09-12)
+## Current priorities (2026-10-12)
 
-Batch AC is extending the [audited owned utility catalogue](BATCH_AC_OWNED_UTILITY_EXPANSION.md)
-across geometry, modeling and independent data/configuration classes. It reuses
-ADR-0096; scope is selected by useful construction and safe native lifetime paths.
+CH Preview.83 frozen PASS; CI Preview.84 is the final BR–CI round candidate.
+CI remains in validation until batch-ci/delivery-result.json state PASS,
+at which point18/18 authorized batches are complete. No new migration credit
+is added by the documentation/metadata freeze. See [CI](BATCH_CI_ROUND_FREEZE.md)
+and [continuous plan](NEXT_ROUND_BR_CI_PLAN.md).
 
-Batch AB implements [owning non-transient receivers](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
-under ADR-0096: 122 owners and 1,067 migrated declarations across three modules, with
-stable heap instances, exact audited selection, non-reused typed tokens and call-duration
-leases. Preview.27 local release checks pass;
-[the Preview.27 status archive](STATUS_HISTORY_THROUGH_PREVIEW_27.md) records final package evidence.
-The next migration can extend audited owners and explicit buffer/sequence contracts.
-Size that scope by dependencies, lifetime evidence and useful operations.
+After this round, prioritize exact consumer-driven admission of the598 Manual
+rows/31 ownership and algorithm groups, reusable generator coverage of related
+workflows, narrow Blocked/parser dependency causes, and the separate pinned
+AppSweep source defect. Full SDK completion and physical/external/publication
+gates remain independent. No fixed next-round count or quota is assigned.
 
-Batch AA completes [audited copied reference operations](BATCH_AA_REFERENCE_OPERATIONS.md)
-under ADR-0095: 598 generated additions across nine modules and 81 OCCT packages, with
-local delivery gates passed. Dimensioned array-start references remain excluded.
-Explicit buffer/sequence contracts remain a later migration gap; AB now addresses
-selected non-transient receiver ownership. No fixed capability count applies.
+## Historical AP-AU round (2026-10-07)
 
-B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
-Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):
-broad generated numeric mappings and copied/retained const-reference returns, with
-compatible old overload identities. Its local product gates pass; [STATUS](STATUS.md)
-owns final delivery evidence. Further migration should audit remaining pointer/output,
-value/sequence and nested-handle projection gaps instead of inheriting a fixed row count.
-Batch Y completes [geometric value projections](BATCH_Y_GEOMETRIC_VALUE_EXPANSION.md)
-under ADR-0093: 968 generated additions across eight modules, thirty value records,
-and all local product gates passed. Remaining work includes explicit output/array
-contracts and unselected handle/constructor projections; no fixed-size queue is active.
-Batch Z implements [geometric operations and transforms](BATCH_Z_VALUE_OPERATIONS.md) under ADR-0094. Its delivery evidence and remaining work are tracked in STATUS.
-Follow [WORKFLOW](WORKFLOW.md) and ADR-0091: no fixed row/family count, flexible authorized
-intermediate commits, impact-based development checks and full product delivery gates.
-[STATUS](STATUS.md) owns current counts, active work and validation references.
+Preview.39 and both AF-AK/AL-AO rounds are locally delivered. The current
+[progress review](PROGRESS_PREVIEW_45.md) reconciles overall and per-module counts.
+The new [AP-AU plan](NEXT_ROUND_AP_AU_PLAN.md) proposes **six substantial batches**:
+AP owning modeling builders/copied diagnostics; AQ 2D hatching workspaces;
+AR mesh data/meshing diagnostics; AS document/XDE attribute and note projection;
+AT exchange headers/session diagnostics; AU selection workspaces and integrated
+consumer acceptance. AP has [140 exact audit candidates](BATCH_AP_MODELING_CANDIDATES.json).
+
+Status: **AUTHORIZED / IN PROGRESS**. AP's admission selects 65 candidates and one
+prerequisite, deferring 75; Preview.40 local checks pass and its final evidence
+is frozen under artifacts/batch-ap. AQ/Preview.41 local checks pass with 27 new IDs;
+final identities are tracked under artifacts/batch-aq. AR/Preview.42 local checks pass with 36 new IDs; final identities are tracked under
+artifacts/batch-ar. AS/Preview.43 full local checks pass with 62 generated and nine private Manual IDs;
+final freeze under artifacts/batch-as is PASS. AT/Preview.44 implements 67 new
+generated IDs with full local checks passing and final identity freeze PASS.
+AU implements 41 new generated IDs; full Release/Debug/cold/actual-Debug, visible
+desktop frames and both consumers now pass. Final AU freeze PASS closes AP-AU 6/6
+and admits continuation of the authorized AV-AY round.
+Continue AP through AU without another routine execution confirmation. Audit each
+batch's useful API gaps and exact lifetime/symbol contracts before admission.
+Six batches are this next round, not a total-SDK completion estimate.
+Earlier sections below are historical planning/delivery records. [STATUS](STATUS.md)
+owns current delivery identities and remaining external gates.
+
+## Completed AL-AO round (2026-10-06 to 2026-10-07)
+
+Preview.35 and the AF-AK round are locally delivered. The user-requested replan
+selects **four new authorized batches**, with all four implemented and locally delivered, in the
+[AL-AO plan](NEXT_ROUND_AL_AO_PLAN.md):
+
+1. **AL:** copied numeric matrices and private solvers; a 54-declaration audit input
+   joins matrix/banded basis assembly to a useful solve/geometry workflow.
+2. **AM:** curve/surface workspaces, optional copied buffers and coupled interpolation outputs.
+3. **AN:** private STEP/IGES writer transfer, immutable diagnostics and independent readback.
+4. **AO:** evidence-backed SDK exclusions and reproducible build/package tooling.
+
+AL has [audited 54 candidates](BATCH_AL_NUMERIC_MATRICES_ADMISSION.json): 41 admitted,
+13 deferred, plus one new prerequisite. AM admitted 31 and deferred 105; AN admitted
+six writer rows and ten prerequisites, deferring one writer row; AO changed no declaration states.
+Their complete workflows and local delivery gates pass in Preview.36 through
+Preview.39. The round adds 89 Emitted IDs. Final evidence and current delivery
+identities are tracked in [STATUS](STATUS.md). No batch remains in this completed round.
+
+## AF-AK local delivery complete (2026-10-06)
+
+[Batch AI](BATCH_AI_TOPOLOGY_EXCHANGE.md) completes Preview.33 implementation and
+local engineering gates: 47 admitted candidates plus nine new prerequisites,
+41 deferred audit rows, 20 reused Manual and one already-emitted dependency.
+Owning topology/history and retained entity/transfer/graph collections compose
+one verified public-only workflow. [STATUS](STATUS.md) owns delivery identities
+and the final documentation/package/synchronization state.
+
+[Batch AJ](BATCH_AJ_REPAIR_WORKSPACES.md) completes Preview.34 local delivery:
+136 admitted candidates plus one new prerequisite, 52 deferred rows, 25 reused
+Manual and 43 reused Emitted dependencies. Its coupled diagnostics/repair/history
+and STEP/IGES workflow is verified in Runtime and both clean consumers.
+
+[Batch AK](BATCH_AK_TRANSFER_RECORDS.md) has audited all **163 candidates across
+14 families**: 78 admitted, 85 deferred, 11 generated prerequisites, 25 reused
+Emitted and one reused Manual dependency. Its private STEP/IGES process and
+immutable record/check workflow passes full local delivery. All six explicitly
+planned AF-AK batches are locally delivered; none remains in that completed round.
+[STATUS](STATUS.md) owns current integration and external gates.
+
+| Order | Batch outcome | Admission and exit |
+|---|---|---|
+| Completed AF | Reusable copied Array1/Sequence generation | Preview.30 local delivery; 60 generated declarations and 14 separate Manual prerequisites. |
+| Completed AG | Surface grids, fitting and retained 2D/3D interpolation | Preview.31 local delivery; 63 generated declarations and 18 separate Manual prerequisites. |
+| Completed AH | Bulk analysis and independent spline splitting/concatenation | Preview.32 local delivery; 42 generated declarations, sampled position/derivative evidence, CAD/STEP and both consumers. |
+| Completed AI implementation/local gates | Typed topology/exchange collections and exact history | Preview.33; 56 generated declarations, 41 deferred candidates, owning snapshots, bounded transfer/graph queries and both consumers. Final packaged-document/source identity is recorded in STATUS. |
+| Completed AJ | Coupled repair workspaces, ordered wires and exact replacement history | Preview.34; 137 generated IDs, 52 deferred candidates, changed small edges/face split/loops/shell repairs, exact every-path history and both consumers. |
+| Completed AK | Private transfer-record/process collections and diagnostics | Preview.35 local delivery; 89 generated IDs, 85 deferred candidates, session-bound model/map domains, frozen diagnostics and functional shape binders, both consumers. |
+| Later, when required | Geometry workspaces/matrices and parser/SDK blockers | Start from an unmet consumer workflow and preserve explicit exclusions until fixed and verified. |
+
+AJ must retain all split/merge paths without geometric guessing or automatic
+selected-topology rebinding. Four-output small-edge workspaces and paired face
+orientation/split operations remain tied to their audited source/context epoch.
+A native copy constructor does not establish detachment of mutable WireData.
+Record exact admission/deferred reasons and reused supporting dispositions before
+emission; there is no fixed migration count. Complete each batch's local delivery
+gates before expanding implementation. Public release and whole downstream app
+acceptance remain separate.
+
+## Preview.29 consolidation planning record (2026-10-02)
+
+[STATUS](STATUS.md) owns current implementation, inventory and validation facts.
+Preview.29 completes the local consolidation of AD/AE and the Cadoryx prerequisites,
+including full Release/Debug suites, actual Debug-native validation, clean regeneration
+and the unified local release check. Preview.28 and its suffixed immutable packages
+remain historical baselines. Public and outstanding visual acceptance remain separate.
+
+Use [WORKFLOW](WORKFLOW.md) and ADR-0091: select scope by useful outcomes,
+dependencies and ownership risk, without a fixed declaration or capability count.
+The P0 execution added no new migration scope. The remaining proposals below need
+an exact useful scope and contract audit before implementation. Do not reuse old
+batch ordering or claim whole-library completion from a historical finite matrix.
+
+### Preview.29 priority record
+
+| Priority | Outcome | Scope and exit evidence |
+|---|---|---|
+| Completed P0: development consolidation | Preview.29 local engineering candidate containing AD, AE and the Cadoryx prerequisites | Full current-source builds/suites, actual Debug-native, ABI/lifetime/API/export checks, clean regeneration, inventory, clean package consumers and local release-check pass. STATUS records package/source identity and outstanding visual/external gates. |
+| P1: reusable copied-array and sequence bindings | Safe bulk data transfer through explicit generator contracts | Start with audited numeric or already-mapped gp element types and a useful CAD workflow. Specify dimensions, count/lower bounds, empty/null behavior, capacity/overflow checks, call-bound input retention, copy timing and success-only output publication. Emit native/managed code from rules, prove exact stable-ID changes, compile/regenerate and test errors, disposal and affected consumers. Borrowed addresses, arbitrary templates and zero-copy buffers remain excluded. |
+| P2: demand-driven owner, value and handle expansion | Close demonstrated consumer gaps using existing lifetime categories | Audit native constructor initialization, linked symbols, receiver ownership, dependencies and result lifetime. Extend ADR-0096 catalogues and reusable value/handle mappings only where a complete useful workflow can be validated. Preserve overload/export/API identities; do not enlarge a scope merely to increase counts. |
+| P3: parser and unsupported-symbol triage | A smaller, evidence-backed exclusion set | Classify the 32 excluded headers by reproducible parser/config/SDK causes. Fix reusable parser problems where practical; regenerate and refresh inventory when discovery inputs change. Keep declarations with missing SDK symbols explicitly blocked until the dependency/binding strategy changes. No unconditional promise to bind every excluded item. |
+
+P0 local engineering validation is complete at Preview.29. P1 is the next recommended
+migration priority. Existing immutable prerequisite packages retain their validated
+downstream workflows; no downstream application was silently switched to Preview.29.
+Failures remain within the selected scope; do not start an unrelated expansion to
+avoid an open required gate. Reuse unchanged hash-identified evidence, and use the
+unified release entry point without separately duplicating checks it already covers.
+
+P1 is the recommended next migration after P0. Freeze exact selected declarations
+only after auditing a concrete workflow and its full input/output lifetime contract.
+P2 can supply supporting audited owners or values when that workflow requires them;
+unrelated owner expansion remains separately scoped. General mutable sequences,
+retained external storage, borrowed adaptors and callbacks need their own contracts.
+Architecture or ownership-category changes require an accepted ADR before emission.
+
+## Delivery and external-release boundary
+
+A local engineering candidate and a public release are separate outcomes. Hosted
+CI, signing, push and NuGet publication retain explicit evidence/authorization
+boundaries. Preserve existing immutable development package versions; do not
+overwrite mirror.2 or sweep.1 while consolidating a new candidate.
+
+Viewer acceptance must retain mixed-DPI/RDP and physical pre-repaint observations
+where affected. Windows x64/.NET 10 remains the current product boundary. Native
+DLL splitting, new platforms, WPF D3DImage/device-sharing work and generalized
+zero-copy/callback support are not part of this replan.
+
+## Historical plans
+
+Completed B-W and X-AE scopes remain useful architecture and acceptance records.
+Their fixed matrices, version slots and commit instructions belong to their original
+requests. Current priorities and current evidence are the sections above and STATUS.
 
 The batch-specific plans, ordering instructions, versions and completion criteria below
 are historical records for their named scopes. Do not turn them into a new active queue

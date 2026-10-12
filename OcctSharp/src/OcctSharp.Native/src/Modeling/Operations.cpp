@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 // Native Modeling/Operations implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Transforms.hxx"
 #include "Modeling/Topology.hxx"
@@ -87,7 +88,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_all(
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
     TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
     if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to fillet.");
-    BRepFilletAPI_MakeFillet builder(shape->Value);
+    OcctSharpGenerated::LocalMakeFilletBuilder builder(shape->Value);
     for (Standard_Integer index = 1; index <= edges.Extent(); ++index) builder.Add(radius, TopoDS::Edge(edges(index)));
     builder.Build();
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction did not complete.");
@@ -109,7 +110,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_edge(
     ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateUsableShape(edge);
     if (edge->Value.ShapeType() != TopAbs_EDGE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Fillet construction requires an edge shape.");
-    BRepFilletAPI_MakeFillet builder(shape->Value);
+    OcctSharpGenerated::LocalMakeFilletBuilder builder(shape->Value);
     builder.Add(radius, TopoDS::Edge(edge->Value));
     builder.Build();
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction did not complete.");
@@ -131,7 +132,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_all(
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
     TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
     if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to chamfer.");
-    BRepFilletAPI_MakeChamfer builder(shape->Value);
+    OcctSharpGenerated::LocalMakeChamferBuilder builder(shape->Value);
     for (Standard_Integer index = 1; index <= edges.Extent(); ++index) builder.Add(distance, TopoDS::Edge(edges(index)));
     builder.Build();
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction did not complete.");
@@ -153,7 +154,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_edge(
     ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateUsableShape(edge);
     if (edge->Value.ShapeType() != TopAbs_EDGE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Chamfer construction requires an edge shape.");
-    BRepFilletAPI_MakeChamfer builder(shape->Value);
+    OcctSharpGenerated::LocalMakeChamferBuilder builder(shape->Value);
     builder.Add(distance, TopoDS::Edge(edge->Value));
     builder.Build();
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction did not complete.");
@@ -177,7 +178,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_offset(
   return Guard([&]
   {
     ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
-    BRepOffsetAPI_MakeOffsetShape builder;
+    OcctSharpGenerated::LocalMakeOffsetShapeBuilder builder;
     builder.PerformByJoin(shape->Value, offset, tolerance);
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT offset construction did not complete.");
     TopoDS_Shape result = builder.Shape();
@@ -213,7 +214,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_make_thick_solid(
         throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Every thick-solid closing shape must be a face.");
       faces.Append(closing_faces[index]->Value);
     }
-    BRepOffsetAPI_MakeThickSolid builder;
+    OcctSharpGenerated::LocalMakeThickSolidBuilder builder;
     builder.MakeThickSolidByJoin(shape->Value, faces, offset, tolerance);
     if (!builder.IsDone() || builder.Shape().IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT thick-solid construction did not complete.");

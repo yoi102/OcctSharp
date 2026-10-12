@@ -141,8 +141,14 @@ typedef struct OcctSharp_Owned_HLRAlgo_EdgeStatusHandle OcctSharp_Owned_HLRAlgo_
 typedef struct OcctSharp_Owned_HLRAlgo_InterferenceHandle OcctSharp_Owned_HLRAlgo_InterferenceHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_IntersectionHandle OcctSharp_Owned_HLRAlgo_IntersectionHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_ProjectorHandle OcctSharp_Owned_HLRAlgo_ProjectorHandle;
+typedef struct OcctSharp_Owned_HatchGen_DomainHandle OcctSharp_Owned_HatchGen_DomainHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnElementHandle OcctSharp_Owned_HatchGen_PointOnElementHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnHatchingHandle OcctSharp_Owned_HatchGen_PointOnHatchingHandle;
 typedef struct OcctSharp_Owned_Hatch_HatcherHandle OcctSharp_Owned_Hatch_HatcherHandle;
+typedef struct OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle;
 typedef struct OcctSharp_Owned_IGESData_DefSwitchHandle OcctSharp_Owned_IGESData_DefSwitchHandle;
+typedef struct OcctSharp_Owned_IGESData_DirCheckerHandle OcctSharp_Owned_IGESData_DirCheckerHandle;
+typedef struct OcctSharp_Owned_IGESData_GlobalSectionHandle OcctSharp_Owned_IGESData_GlobalSectionHandle;
 typedef struct OcctSharp_Owned_IGESData_IGESTypeHandle OcctSharp_Owned_IGESData_IGESTypeHandle;
 typedef struct OcctSharp_Owned_IntAna2d_AnaIntersectionHandle OcctSharp_Owned_IntAna2d_AnaIntersectionHandle;
 typedef struct OcctSharp_Owned_IntAna2d_ConicHandle OcctSharp_Owned_IntAna2d_ConicHandle;
@@ -163,6 +169,7 @@ typedef struct OcctSharp_Owned_IntCurve_PConicHandle OcctSharp_Owned_IntCurve_PC
 typedef struct OcctSharp_Owned_IntPolyh_CoupleHandle OcctSharp_Owned_IntPolyh_CoupleHandle;
 typedef struct OcctSharp_Owned_IntPolyh_EdgeHandle OcctSharp_Owned_IntPolyh_EdgeHandle;
 typedef struct OcctSharp_Owned_IntPolyh_PointHandle OcctSharp_Owned_IntPolyh_PointHandle;
+typedef struct OcctSharp_Owned_IntPolyh_StartPointHandle OcctSharp_Owned_IntPolyh_StartPointHandle;
 typedef struct OcctSharp_Owned_IntPolyh_TriangleHandle OcctSharp_Owned_IntPolyh_TriangleHandle;
 typedef struct OcctSharp_Owned_IntRes2d_DomainHandle OcctSharp_Owned_IntRes2d_DomainHandle;
 typedef struct OcctSharp_Owned_IntRes2d_IntersectionPointHandle OcctSharp_Owned_IntRes2d_IntersectionPointHandle;
@@ -174,17 +181,23 @@ typedef struct OcctSharp_Owned_IntSurf_PathPointHandle OcctSharp_Owned_IntSurf_P
 typedef struct OcctSharp_Owned_IntSurf_QuadricHandle OcctSharp_Owned_IntSurf_QuadricHandle;
 typedef struct OcctSharp_Owned_IntSurf_TransitionHandle OcctSharp_Owned_IntSurf_TransitionHandle;
 typedef struct OcctSharp_Owned_IntTools_BaseRangeSampleHandle OcctSharp_Owned_IntTools_BaseRangeSampleHandle;
+typedef struct OcctSharp_Owned_IntTools_CommonPrtHandle OcctSharp_Owned_IntTools_CommonPrtHandle;
+typedef struct OcctSharp_Owned_IntTools_CurveHandle OcctSharp_Owned_IntTools_CurveHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeSampleHandle OcctSharp_Owned_IntTools_CurveRangeSampleHandle;
 typedef struct OcctSharp_Owned_IntTools_MarkedRangeSetHandle OcctSharp_Owned_IntTools_MarkedRangeSetHandle;
 typedef struct OcctSharp_Owned_IntTools_RangeHandle OcctSharp_Owned_IntTools_RangeHandle;
+typedef struct OcctSharp_Owned_IntTools_RootHandle OcctSharp_Owned_IntTools_RootHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle;
+typedef struct OcctSharp_Owned_Intf_SectionPointHandle OcctSharp_Owned_Intf_SectionPointHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalHandle OcctSharp_Owned_Intrv_IntervalHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalsHandle OcctSharp_Owned_Intrv_IntervalsHandle;
 typedef struct OcctSharp_Owned_LProp_CurAndInfHandle OcctSharp_Owned_LProp_CurAndInfHandle;
 typedef struct OcctSharp_Owned_MAT2d_CutCurveHandle OcctSharp_Owned_MAT2d_CutCurveHandle;
+typedef struct OcctSharp_Owned_Message_ExecStatusHandle OcctSharp_Owned_Message_ExecStatusHandle;
 typedef struct OcctSharp_Owned_NLPlate_NLPlateHandle OcctSharp_Owned_NLPlate_NLPlateHandle;
+typedef struct OcctSharp_Owned_OSD_ProtectionHandle OcctSharp_Owned_OSD_ProtectionHandle;
 typedef struct OcctSharp_Owned_Poly_TriangleHandle OcctSharp_Owned_Poly_TriangleHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxHandle OcctSharp_Owned_ProjLib_ComputeApproxHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle;
@@ -198,6 +211,8 @@ typedef struct OcctSharp_Owned_Quantity_ColorRGBAHandle OcctSharp_Owned_Quantity
 typedef struct OcctSharp_Owned_Quantity_DateHandle OcctSharp_Owned_Quantity_DateHandle;
 typedef struct OcctSharp_Owned_Quantity_PeriodHandle OcctSharp_Owned_Quantity_PeriodHandle;
 typedef struct OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle;
+typedef struct OcctSharp_Owned_SelectBasics_PickResultHandle OcctSharp_Owned_SelectBasics_PickResultHandle;
+typedef struct OcctSharp_Owned_SelectMgr_ViewClipRangeHandle OcctSharp_Owned_SelectMgr_ViewClipRangeHandle;
 typedef struct OcctSharp_Owned_ShapeAnalysis_WireOrderHandle OcctSharp_Owned_ShapeAnalysis_WireOrderHandle;
 typedef struct OcctSharp_Owned_StepAP203_ApprovedItemHandle OcctSharp_Owned_StepAP203_ApprovedItemHandle;
 typedef struct OcctSharp_Owned_StepAP203_CertifiedItemHandle OcctSharp_Owned_StepAP203_CertifiedItemHandle;
@@ -230,6 +245,7 @@ typedef struct OcctSharp_Owned_StepBasic_ProductOrFormationOrDefinitionHandle Oc
 typedef struct OcctSharp_Owned_StepBasic_RoleSelectHandle OcctSharp_Owned_StepBasic_RoleSelectHandle;
 typedef struct OcctSharp_Owned_StepBasic_SourceItemHandle OcctSharp_Owned_StepBasic_SourceItemHandle;
 typedef struct OcctSharp_Owned_StepBasic_UnitHandle OcctSharp_Owned_StepBasic_UnitHandle;
+typedef struct OcctSharp_Owned_StepData_FieldHandle OcctSharp_Owned_StepData_FieldHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle;
@@ -351,6 +367,74 @@ typedef struct OcctSharp_Owned_math_ValueAndWeightHandle OcctSharp_Owned_math_Va
 #ifdef __cplusplus
 extern "C" {
 #endif
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_message_execstatus_release(OcctSharp_Owned_Message_ExecStatusHandle* handle);
+// Source: c:@S@Message_ExecStatus@F@Add#&1$@S@Message_ExecStatus#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_add_0(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, const OcctSharp_Owned_Message_ExecStatusHandle* arg0);
+// Source: c:@S@Message_ExecStatus@F@And#&1$@S@Message_ExecStatus#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_and_1(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, const OcctSharp_Owned_Message_ExecStatusHandle* arg0);
+// Source: c:@S@Message_ExecStatus@F@Clear#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_clear_2(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@ClearAllAlarm#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_clearallalarm_3(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@ClearAllDone#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_clearalldone_4(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@ClearAllFail#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_clearallfail_5(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@ClearAllWarn#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_clearallwarn_6(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@IsAlarm#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_isalarm_7(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@IsDone#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_isdone_8(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@IsFail#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_isfail_9(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@IsWarn#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_iswarn_10(const OcctSharp_Owned_Message_ExecStatusHandle* receiver, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@Message_ExecStatus#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_create_11(OcctSharp_Owned_Message_ExecStatusHandle** result);
+// Source: c:@S@Message_ExecStatus@F@SetAllAlarm#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_setallalarm_12(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@SetAllDone#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_setalldone_13(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@SetAllFail#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_setallfail_14(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@SetAllWarn#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_setallwarn_15(const OcctSharp_Owned_Message_ExecStatusHandle* receiver);
+// Source: c:@S@Message_ExecStatus@F@LocalStatusIndex#$@E@Message_Status#S
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_localstatusindex_16(int32_t arg0, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@StatusIndex#$@E@Message_Status#S
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_statusindex_17(int32_t arg0, int32_t* result);
+// Source: c:@S@Message_ExecStatus@F@TypeOfStatus#$@E@Message_Status#S
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_message_execstatus_typeofstatus_18(int32_t arg0, int32_t* result);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_osd_protection_release(OcctSharp_Owned_OSD_ProtectionHandle* handle);
+// Source: c:@S@OSD_Protection@F@Add#&$@E@OSD_SingleProtection#S1_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_add_0(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1);
+// Source: c:@S@OSD_Protection@F@Group#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_group_1(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t* result);
+// Source: c:@S@OSD_Protection@F@OSD_Protection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_create_2(OcctSharp_Owned_OSD_ProtectionHandle** result);
+// Source: c:@S@OSD_Protection@F@OSD_Protection#$@E@OSD_SingleProtection#S0_#S0_#S0_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_create_3(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_OSD_ProtectionHandle** result);
+// Source: c:@S@OSD_Protection@F@SetGroup#$@E@OSD_SingleProtection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_setgroup_4(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0);
+// Source: c:@S@OSD_Protection@F@SetSystem#$@E@OSD_SingleProtection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_setsystem_5(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0);
+// Source: c:@S@OSD_Protection@F@SetUser#$@E@OSD_SingleProtection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_setuser_6(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0);
+// Source: c:@S@OSD_Protection@F@SetValues#$@E@OSD_SingleProtection#S0_#S0_#S0_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_setvalues_7(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
+// Source: c:@S@OSD_Protection@F@SetWorld#$@E@OSD_SingleProtection#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_setworld_8(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0);
+// Source: c:@S@OSD_Protection@F@Sub#&$@E@OSD_SingleProtection#S1_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_sub_9(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1);
+// Source: c:@S@OSD_Protection@F@System#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_system_10(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t* result);
+// Source: c:@S@OSD_Protection@F@User#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_user_11(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t* result);
+// Source: c:@S@OSD_Protection@F@Values#&$@E@OSD_SingleProtection#S0_#S0_#S0_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_values_12(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1, int32_t arg2, int32_t* updatedArg2, int32_t arg3, int32_t* updatedArg3);
+// Source: c:@S@OSD_Protection@F@World#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_osd_protection_world_13(const OcctSharp_Owned_OSD_ProtectionHandle* receiver, int32_t* result);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_quantity_color_release(OcctSharp_Owned_Quantity_ColorHandle* handle);
 // Source: c:@S@Quantity_Color@F@ChangeContrast#d#
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_quantity_color_changecontrast_0(const OcctSharp_Owned_Quantity_ColorHandle* receiver, double arg0);

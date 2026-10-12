@@ -1,0 +1,705 @@
+{
+  "batch": "CE",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "CD frozen Preview.79 PASS",
+  "sdkSourceIdentitySha256": "942A7399827B9419342708BA94A59FA92AC2FFC0AE1538719E85F9078E58ED24",
+  "declarations": [
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWGltf_CafWriter::Perform",
+      "nativeSignature": "RWGltf_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWGltf_CafWriter::RWGltf_CafWriter",
+      "nativeSignature": "RWGltf_CafWriter::RWGltf_CafWriter: void (const TCollection_AsciiString &, bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWGltf_CafWriter::SetCoordinateSystemConverter",
+      "nativeSignature": "RWGltf_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 2
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit: void (double)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 2
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem: void (RWMesh_CoordinateSystem)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 2
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit: void (double)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 2
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformNormal#&$@S@NCollection_Vec3>#f#1",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformNormal",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::TransformNormal: void (NCollection_Vec3<float> &) const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformPosition#&$@S@gp_XYZ#1",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformPosition",
+      "nativeSignature": "RWMesh_CoordinateSystemConverter::TransformPosition: void (gp_XYZ &) const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWObj_CafWriter::Perform",
+      "nativeSignature": "RWObj_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWObj_CafWriter::RWObj_CafWriter",
+      "nativeSignature": "RWObj_CafWriter::RWObj_CafWriter: void (const TCollection_AsciiString &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWObj_CafWriter::SetCoordinateSystemConverter",
+      "nativeSignature": "RWObj_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@Read#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWObj_Reader::Read",
+      "nativeSignature": "RWObj_Reader::Read: bool (const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@SetMemoryLimit#k#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWObj_Reader::SetMemoryLimit",
+      "nativeSignature": "RWObj_Reader::SetMemoryLimit: void (size_t)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWPly_CafWriter::Perform",
+      "nativeSignature": "RWPly_CafWriter::Perform: bool (const occ::handle<TDocStd_Document> &, const NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@RWPly_CafWriter#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWPly_CafWriter::RWPly_CafWriter",
+      "nativeSignature": "RWPly_CafWriter::RWPly_CafWriter: void (const TCollection_AsciiString &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWPly_CafWriter::SetCoordinateSystemConverter",
+      "nativeSignature": "RWPly_CafWriter::SetCoordinateSystemConverter: void (const RWMesh_CoordinateSystemConverter &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWStl@F@ReadFile#*1C#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWStl::ReadFile",
+      "nativeSignature": "RWStl::ReadFile: occ::handle<Poly_Triangulation> (const char *const, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteAscii#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWStl::WriteAscii",
+      "nativeSignature": "RWStl::WriteAscii: bool (const occ::handle<Poly_Triangulation> &, const OSD_Path &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteBinary#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055",
+      "nativeName": "RWStl::WriteBinary",
+      "nativeSignature": "RWStl::WriteBinary: bool (const occ::handle<Poly_Triangulation> &, const OSD_Path &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@IGESCAFControl_Reader#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Reader::IGESCAFControl_Reader",
+      "nativeSignature": "IGESCAFControl_Reader::IGESCAFControl_Reader: void ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetColorMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Reader::SetColorMode",
+      "nativeSignature": "IGESCAFControl_Reader::SetColorMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetLayerMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Reader::SetLayerMode",
+      "nativeSignature": "IGESCAFControl_Reader::SetLayerMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetNameMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Reader::SetNameMode",
+      "nativeSignature": "IGESCAFControl_Reader::SetNameMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Reader::Transfer",
+      "nativeSignature": "IGESCAFControl_Reader::Transfer: bool (const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Writer::IGESCAFControl_Writer",
+      "nativeSignature": "IGESCAFControl_Writer::IGESCAFControl_Writer: void ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Writer::Perform",
+      "nativeSignature": "IGESCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetColorMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Writer::SetColorMode",
+      "nativeSignature": "IGESCAFControl_Writer::SetColorMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetLayerMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Writer::SetLayerMode",
+      "nativeSignature": "IGESCAFControl_Writer::SetLayerMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetNameMode#b#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESCAFControl_Writer::SetNameMode",
+      "nativeSignature": "IGESCAFControl_Writer::SetNameMode: void (const bool)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESModel#1",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESControl_Reader::IGESModel",
+      "nativeSignature": "IGESControl_Reader::IGESModel: occ::handle<IGESData_IGESModel> () const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@NbRootsForTransfer#",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESControl_Reader::NbRootsForTransfer",
+      "nativeSignature": "IGESControl_Reader::NbRootsForTransfer: int ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitValue#1",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESData_GlobalSection::UnitValue",
+      "nativeSignature": "IGESData_GlobalSection::UnitValue: double () const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@GlobalSection#1",
+      "specialCaseId": "SC-051",
+      "nativeName": "IGESData_IGESModel::GlobalSection",
+      "nativeSignature": "IGESData_IGESModel::GlobalSection: const IGESData_GlobalSection &() const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "semanticCalls": 1
+    },
+    {
+      "stableId": "c:@S@DEGLTF_Provider@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEGLTF_Provider::Read",
+      "nativeSignature": "DEGLTF_Provider::Read: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@DEGLTF_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEGLTF_Provider::Write",
+      "nativeSignature": "DEGLTF_Provider::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@DEOBJ_Provider@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEOBJ_Provider::Read",
+      "nativeSignature": "DEOBJ_Provider::Read: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@DEOBJ_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEOBJ_Provider::Write",
+      "nativeSignature": "DEOBJ_Provider::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@DEPLY_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEPLY_Provider::Write",
+      "nativeSignature": "DEPLY_Provider::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@DEVRML_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044",
+      "nativeName": "DEVRML_Provider::Write",
+      "nativeSignature": "DEVRML_Provider::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Candidate explicitly accepts a mutable XSControl_WorkSession owner. Current helper templates call the separate no-work-session overloads. No consumer or exact lifetime/initialization proof for this session overload; do not count virtual overload families as migrated.",
+      "decision": "DEFERRED"
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@Image_Texture@F@FilePath#1",
+      "nativeName": "Image_Texture::FilePath",
+      "signature": "Image_Texture::FilePath: const TCollection_AsciiString &() const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned.",
+      "decision": "ADMITTED",
+      "transition": "BlockedToEmitted"
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@ChangeData#",
+      "nativeName": "NCollection_Buffer::ChangeData",
+      "signature": "NCollection_Buffer::ChangeData: uint8_t *() noexcept",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned.",
+      "decision": "ADMITTED",
+      "transition": "BlockedToEmitted"
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@Image_Texture#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#&1$@S@TCollection_AsciiString#",
+      "nativeName": "Image_Texture::Image_Texture",
+      "signature": "Image_Texture::Image_Texture: void (const occ::handle<NCollection_Buffer> &, const TCollection_AsciiString &)",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned.",
+      "decision": "ADMITTED",
+      "transition": "BlockedToEmitted"
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@NCollection_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#k#*c#",
+      "nativeName": "NCollection_Buffer::NCollection_Buffer",
+      "signature": "NCollection_Buffer::NCollection_Buffer: void (const occ::handle<NCollection_BaseAllocator> &, const size_t, uint8_t *)",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned.",
+      "decision": "ADMITTED",
+      "transition": "BlockedToEmitted"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@NbRootsForTransfer#",
+      "specialCaseId": "SC-037",
+      "nativeName": "STEPControl_Reader::NbRootsForTransfer",
+      "nativeSignature": "STEPControl_Reader::NbRootsForTransfer: int ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferRoots#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-037",
+      "nativeName": "XSControl_Reader::TransferRoots",
+      "nativeSignature": "XSControl_Reader::TransferRoots: int (const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbShapes#1",
+      "specialCaseId": "SC-037",
+      "nativeName": "XSControl_Reader::NbShapes",
+      "nativeSignature": "XSControl_Reader::NbShapes: int () const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SystemLengthUnit#1",
+      "specialCaseId": "SC-037",
+      "nativeName": "STEPControl_Reader::SystemLengthUnit",
+      "nativeSignature": "STEPControl_Reader::SystemLengthUnit: double () const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@FileUnits#&$@S@NCollection_Sequence>#$@S@TCollection_AsciiString#S0_#S0_#",
+      "specialCaseId": "SC-039",
+      "nativeName": "STEPControl_Reader::FileUnits",
+      "nativeSignature": "STEPControl_Reader::FileUnits: void (NCollection_Sequence<TCollection_AsciiString> &, NCollection_Sequence<TCollection_AsciiString> &, NCollection_Sequence<TCollection_AsciiString> &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SetSystemLengthUnit#d#",
+      "specialCaseId": "SC-039",
+      "nativeName": "STEPControl_Reader::SetSystemLengthUnit",
+      "nativeSignature": "STEPControl_Reader::SetSystemLengthUnit: void (const double)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@TransferRoot#I#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-039",
+      "nativeName": "STEPControl_Reader::TransferRoot",
+      "nativeSignature": "STEPControl_Reader::TransferRoot: bool (const int, const Message_ProgressRange &)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ClearShapes#",
+      "specialCaseId": "SC-039",
+      "nativeName": "XSControl_Reader::ClearShapes",
+      "nativeSignature": "XSControl_Reader::ClearShapes: void ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@OneShape#1",
+      "specialCaseId": "SC-039",
+      "nativeName": "XSControl_Reader::OneShape",
+      "nativeSignature": "XSControl_Reader::OneShape: TopoDS_Shape () const",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@InitFromStatic#",
+      "specialCaseId": "SC-041",
+      "nativeName": "DESTEP_Parameters::InitFromStatic",
+      "nativeSignature": "DESTEP_Parameters::InitFromStatic: void ()",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "specialCaseId": "SC-051",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "nativeSignature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "module": "DataExchange",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior."
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@DataBuffer#1",
+      "nativeName": "Image_Texture::DataBuffer",
+      "signature": "Image_Texture::DataBuffer: const occ::handle<NCollection_Buffer> &() const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Existing generated SDK texture operation reused without repeated credit"
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@FileLength#1",
+      "nativeName": "Image_Texture::FileLength",
+      "signature": "Image_Texture::FileLength: int64_t () const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Existing generated SDK texture operation reused without repeated credit"
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@FileOffset#1",
+      "nativeName": "Image_Texture::FileOffset",
+      "signature": "Image_Texture::FileOffset: int64_t () const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Existing generated SDK texture operation reused without repeated credit"
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1",
+      "nativeName": "Image_Texture::ReadImage",
+      "signature": "Image_Texture::ReadImage: occ::handle<Image_PixMap> (const occ::handle<Image_SupportedFormats> &) const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Existing generated SDK texture operation reused without repeated credit"
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@Size#1",
+      "nativeName": "NCollection_Buffer::Size",
+      "signature": "NCollection_Buffer::Size: size_t () const noexcept",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Existing generated SDK texture operation reused without repeated credit"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CascadeUnit#1",
+      "nativeName": "IGESData_GlobalSection::CascadeUnit",
+      "signature": "IGESData_GlobalSection::CascadeUnit: double () const",
+      "guard": "CEModelSourceUnit",
+      "reason": "Reused exact model-unit accessor; UnitValue is millimeters divided by model CascadeUnit in pinned implementation despite header wording. Multiply by captured model CascadeUnit and .001 to report meters."
+    }
+  ],
+  "newSdkDeclarations": 0,
+  "semanticCalls": 38,
+  "scope": "34 existing Manual operations; six mutable-work-session provider overloads deferred with exact owner gap. Separate no-session provider workflows are reused and must receive real format/resource verification.",
+  "newGeneratedSdkDeclarations": 4,
+  "affectedGeneratedFiles": [
+    {
+      "path": "src/OcctSharp.Native/generated/Xde/OcctSharp.Xde.MeshExchangeConfig.Generated.cpp",
+      "baselineSha256": "A711D49338BAB52F91808456B186F34A58283C84E61525609E0A4B7C6A2B097B",
+      "sha256": "BBC64AAEF13C974950A822805C86D82F7D1F013E3DCD33B458F6D95464677585",
+      "reason": "CE separate owned resource import and detached targeted encoded/decoded material texture snapshot; legacy flat profile unchanged."
+    },
+    {
+      "path": "src/OcctSharp.Native/generated/Xde/OcctSharp.Xde.MeshExchangeConfig.Generated.h",
+      "baselineSha256": "5C4EC152C58913FEC4A154D742A3947053ED5664AB4DB4F83479CD0799F4B9FC",
+      "sha256": "1B86D548CDDBAB8316337BF013B4CD2DB5FA9368E94BA54DDB6C0DD364DEA86D",
+      "reason": "CE separate owned resource import and detached targeted encoded/decoded material texture snapshot; legacy flat profile unchanged."
+    },
+    {
+      "path": "src/OcctSharp/Generated/Xde/Xde.MeshExchangeConfig.Generated.cs",
+      "baselineSha256": "02F90AE92F281290DBC49F2E054148A74ED40C5323EF40965FDAD89883A518F8",
+      "sha256": "ADAE3A8CA6ACD70771D694BA31BAC603696C0FC59CAADA79DEFFB65F671B8397",
+      "reason": "CE separate owned resource import and detached targeted encoded/decoded material texture snapshot; legacy flat profile unchanged."
+    }
+  ],
+  "ownedResourceProfile": {
+    "formats": [
+      "Gltf JSON",
+      "Obj"
+    ],
+    "texture": "PNG 8-bit",
+    "maxEncodedTextureBytes": 8388608,
+    "maxEncodedTotalBytes": 33554432,
+    "maxDecodedTotalBytes": 67108864,
+    "maxPixels": 16777216,
+    "files": 128,
+    "graphBytes": 67108864,
+    "pathDepth": 8,
+    "objReferenceNormalization": "private ASCII aliases mapped to exact captured source; fixed SDK parses Unicode names lossy and resolves textures against OBJ root",
+    "snapshot": "copied encoded bytes and decoded corners from native material handle graph; document alias survives result disposal"
+  },
+  "policyCorrection": {
+    "field": "XdeIgesReadReport.SourceLengthUnitMeters",
+    "originalObservedMm": 1,
+    "correctMm": 0.001,
+    "formula": "IGESData_GlobalSection.UnitValue() * CascadeUnit() * .001",
+    "newIds": 0,
+    "source": "pinned IGESData_BasicEditor::UnitFlagValue and model cascade units"
+  }
+}

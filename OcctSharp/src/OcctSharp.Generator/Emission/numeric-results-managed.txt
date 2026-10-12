@@ -1,0 +1,43 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Interop;
+using OcctSharp.WorkflowResults;
+namespace OcctSharp.NumericResults;
+#pragma warning disable CS1591
+public sealed record LuDecompositionResult(bool IsDone,int NativeStatus,CopiedGrid<double>? Combined,IReadOnlyList<int> PivotOrdinals,double? Determinant,int? Sign);
+public sealed record SingularDecompositionResult(bool IsDone,int NativeStatus,CopiedGrid<double>? Left,IReadOnlyList<double> SingularValues,CopiedGrid<double>? Right,int? Rank);
+public sealed record NumericSolveResult(bool IsDone,int NativeStatus,IReadOnlyList<double> Solution,double? Determinant);
+public sealed record NumericMatrixResult(bool IsDone,int NativeStatus,CopiedGrid<double>? Matrix,double? Determinant);
+public sealed record NumericDeterminantResult(bool IsDone,int NativeStatus,double? Determinant);
+public readonly record struct VectorDiagnosticResult(double EuclideanNorm,double InfinityNorm,double DotProduct);
+/// <summary>Private initialized MathLin aggregates. Matrices are at most 64 by 64; native noncompletion returns no values. These methods provide no strict execution timeout.</summary>
+public static partial class NumericComputations {
+ static void Ready(){NativeLibraryResolver.EnsureRegistered(typeof(NumericComputations).Assembly);OcctRuntime.EnsureCompatible();}
+ sealed record Captured(bool Done,int Status,double[] Values,int Auxiliary,double? Determinant);
+ static unsafe Captured Execute(CopiedGrid<double> matrix,double[]? rhs,int rhsColumns,int operation,double tolerance) {
+  ArgumentNullException.ThrowIfNull(matrix);
+  if(matrix.Rows<1||matrix.Rows>64||matrix.Columns<1||matrix.Columns>64)throw new ArgumentOutOfRangeException(nameof(matrix));
+  if(!double.IsFinite(tolerance)||tolerance<=0||tolerance>1)throw new ArgumentOutOfRangeException(nameof(tolerance));
+  var a=matrix.ToArray();WorkflowCopies.Finite(a);if(rhs is not null)WorkflowCopies.Finite(rhs);
+  var output=new double[checked(matrix.Rows*matrix.Columns+matrix.Columns*matrix.Columns+64)];Ready();
+  fixed(double* p=a,q=rhs,r=output){NativeError.ThrowIfFailed(ResultNative(p,matrix.Rows,matrix.Columns,q,rhsColumns,operation,tolerance,r,output.Length,out int done,out int status,out int aux,out int count,out double determinant,out int hasDeterminant),"numeric_result");
+   if(done==0){WorkflowCopies.Count(count,0);return new(false,status,[],0,null);}
+   if(count<0||count>output.Length||hasDeterminant is not (0 or 1))throw new InvalidDataException("Invalid numeric aggregate metadata.");
+   return new(true,status,output[..count],aux,hasDeterminant==0?null:determinant);}
+ }
+ public static LuDecompositionResult DecomposeLu(CopiedGrid<double> matrix,double minimumPivot=1e-20){var r=Execute(matrix,null,0,0,minimumPivot);if(!r.Done)return new(false,r.Status,null,Array.Empty<int>(),null,null);int n=matrix.Rows;WorkflowCopies.Count(r.Values.Length,n*n+n);return new(true,r.Status,new(r.Values[..(n*n)],n,n,matrix.RowLower,matrix.ColumnLower),Array.AsReadOnly(r.Values[(n*n)..].Select(x=>checked((int)x)).ToArray()),r.Determinant,r.Auxiliary);}
+ /// <summary>A = Left * diag(SingularValues) * Right^T. Values preserve SDK order; Rank uses the relative threshold.</summary>
+ public static SingularDecompositionResult DecomposeSvd(CopiedGrid<double> matrix,double relativeTolerance=1e-15){var r=Execute(matrix,null,0,1,relativeTolerance);if(!r.Done)return new(false,r.Status,null,Array.Empty<double>(),null,null);int m=matrix.Rows,n=matrix.Columns;WorkflowCopies.Count(r.Values.Length,m*n+n+n*n);return new(true,r.Status,new(r.Values[..(m*n)],m,n,matrix.RowLower,matrix.ColumnLower),Array.AsReadOnly(r.Values[(m*n)..(m*n+n)]),new(r.Values[(m*n+n)..],n,n,matrix.ColumnLower,matrix.ColumnLower),r.Auxiliary);}
+ public static NumericSolveResult Solve(CopiedGrid<double> matrix,IEnumerable<double> rhs,double minimumPivot=1e-20)=>SolveCore(matrix,rhs,2,minimumPivot);
+ public static NumericSolveResult SolveSvd(CopiedGrid<double> matrix,IEnumerable<double> rhs,double relativeTolerance=1e-6)=>SolveCore(matrix,rhs,7,relativeTolerance);
+ static NumericSolveResult SolveCore(CopiedGrid<double> matrix,IEnumerable<double> rhs,int operation,double threshold){ArgumentNullException.ThrowIfNull(matrix);var b=WorkflowCopies.Bounded(rhs,64);if(b.Length!=matrix.Rows)throw new ArgumentException("RHS length differs from matrix rows.",nameof(rhs));var r=Execute(matrix,b,1,operation,threshold);if(r.Done)WorkflowCopies.Count(r.Values.Length,matrix.Columns);return new(r.Done,r.Status,Array.AsReadOnly(r.Values),r.Determinant);}
+ public static NumericMatrixResult Invert(CopiedGrid<double> matrix,double minimumPivot=1e-20)=>MatrixCore(matrix,3,minimumPivot);
+ public static NumericMatrixResult PseudoInverse(CopiedGrid<double> matrix,double relativeTolerance=1e-6)=>MatrixCore(matrix,4,relativeTolerance);
+ static NumericMatrixResult MatrixCore(CopiedGrid<double> matrix,int operation,double threshold){var r=Execute(matrix,null,0,operation,threshold);if(!r.Done)return new(false,r.Status,null,null);WorkflowCopies.Count(r.Values.Length,matrix.Rows*matrix.Columns);return new(true,r.Status,operation==4?new(r.Values,matrix.Columns,matrix.Rows,matrix.ColumnLower,matrix.RowLower):new(r.Values,matrix.Rows,matrix.Columns,matrix.RowLower,matrix.ColumnLower),r.Determinant);}
+ public static NumericDeterminantResult Determinant(CopiedGrid<double> matrix,double minimumPivot=1e-20){var r=Execute(matrix,null,0,5,minimumPivot);WorkflowCopies.Count(r.Values.Length,0);return new(r.Done,r.Status,r.Determinant);}
+ public static NumericMatrixResult SolveMultiple(CopiedGrid<double> matrix,CopiedGrid<double> rhs,double minimumPivot=1e-20){ArgumentNullException.ThrowIfNull(matrix);ArgumentNullException.ThrowIfNull(rhs);if(rhs.Rows!=matrix.Rows||rhs.Columns<1||rhs.Columns>64)throw new ArgumentException("RHS matrix dimensions differ from initialized profile.",nameof(rhs));var r=Execute(matrix,rhs.ToArray(),rhs.Columns,6,minimumPivot);if(!r.Done)return new(false,r.Status,null,null);WorkflowCopies.Count(r.Values.Length,matrix.Columns*rhs.Columns);return new(true,r.Status,new(r.Values,matrix.Columns,rhs.Columns,matrix.ColumnLower,rhs.ColumnLower),r.Determinant);}
+ public static unsafe VectorDiagnosticResult InspectVectors(IEnumerable<double> first,IEnumerable<double> second){var a=WorkflowCopies.Bounded(first,4096);var b=WorkflowCopies.Bounded(second,4096);if(a.Length==0||a.Length!=b.Length)throw new ArgumentException("Vector lengths must match and be nonempty.",nameof(second));WorkflowCopies.Finite(a);WorkflowCopies.Finite(b);var output=new double[3];Ready();fixed(double* p=a,q=b,r=output)NativeError.ThrowIfFailed(VectorNative(p,q,a.Length,r,3),"numeric_vector_diagnostics");return new(output[0],output[1],output[2]);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_result")]private static unsafe partial NativeStatus ResultNative(double* input,int rows,int columns,double* rhs,int rhsColumns,int operation,double threshold,double* output,int capacity,out int done,out int status,out int auxiliary,out int written,out double determinant,out int hasDeterminant);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_vector_diagnostics")]private static unsafe partial NativeStatus VectorNative(double* first,double* second,int count,double* output,int capacity);
+}

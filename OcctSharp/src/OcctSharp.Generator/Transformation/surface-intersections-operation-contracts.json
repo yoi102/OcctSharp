@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@BuildPCurves#d#d#&d#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S",
+      "nativeName": "GeomInt_IntSS::BuildPCurves",
+      "signature": "GeomInt_IntSS::BuildPCurves: void (const double, const double, double &, const occ::handle<Geom_Surface> &, const occ::handle<Geom_Curve> &, occ::handle<Geom2d_Curve> &)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@BuildPCurves#d#d#d#d#d#d#&d#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S",
+      "nativeName": "GeomInt_IntSS::BuildPCurves",
+      "signature": "GeomInt_IntSS::BuildPCurves: void (const double, const double, const double, const double, const double, const double, double &, const occ::handle<Geom_Surface> &, const occ::handle<Geom_Curve> &, occ::handle<Geom2d_Curve> &)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TrimILineOnSurfBoundaries#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#&1$@S@Bnd_Box2d#S3_#&$@S@NCollection_DynamicArray>#d#S",
+      "nativeName": "GeomInt_IntSS::TrimILineOnSurfBoundaries",
+      "signature": "GeomInt_IntSS::TrimILineOnSurfBoundaries: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const Bnd_Box2d &, const Bnd_Box2d &, NCollection_DynamicArray<double> &)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    }
+  ],
+  "supportingOperations": []
+}

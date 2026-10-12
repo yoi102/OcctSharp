@@ -1,6 +1,12 @@
+#include "../../generated/DataExchange/OcctSharp.DataExchange.MeshExchangeAdapters.Generated.hxx"
+#include "../../generated/DataExchange/OcctSharp.DataExchange.StepAdapters.Generated.hxx"
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Exchange/XdeExchange implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
+#include "Documents/NamedDataPersistence.hxx"
 #include "Exchange/XdeExchange.hxx"
+#include "Exchange/IgesExportCopy.hxx"
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Registry.hxx"
@@ -22,6 +28,7 @@
 #include <Interface_EntityIterator.hxx>
 #include <Interface_Graph.hxx>
 #include <NCollection_Sequence.hxx>
+#include <NCollection_IndexedMap.hxx>
 #include <Quantity_Color.hxx>
 #include <Quantity_ColorRGBA.hxx>
 #include <STEPCAFControl_Reader.hxx>
@@ -39,6 +46,8 @@
 #include <TDocStd_Application.hxx>
 #include <TDocStd_Document.hxx>
 #include <TopLoc_Location.hxx>
+#include <TopExp.hxx>
+#include <TopTools_ShapeMapHasher.hxx>
 #include <TopoDS_Shape.hxx>
 #include <TransferBRep.hxx>
 #include <Transfer_TransientProcess.hxx>
@@ -51,6 +60,7 @@
 #include <XmlXCAFDrivers.hxx>
 #include <gp_Trsf.hxx>
 #include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -81,7 +91,7 @@ void ConfigureXdeReader(
 IFSelect_ReturnStatus ReadXdeStepFile(STEPCAFControl_Reader& reader, const char* file_path)
 {
   DESTEP_Parameters parameters;
-  parameters.InitFromStatic();
+  OcctSharpGenerated::StepAdapters::DESTEP_Parameters_InitFromStatic_Bind(parameters)();
   return reader.ReadFile(file_path, parameters);
 }
 
@@ -92,7 +102,7 @@ void PreTransferStepStyleTargets(STEPCAFControl_Reader& reader)
   // Establish complete product geometry before transferring isolated styled edges
   // or faces. Otherwise their context-free cached binders can leave an assembly's
   // shell-based surface definition empty when the product root is transferred.
-  reader.ChangeReader().TransferRoots();
+  OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader.ChangeReader())();
   for (int32_t index = 1; index <= work_session->Model()->NbEntities(); ++index)
   {
     const occ::handle<StepVisual_StyledItem> style =
@@ -100,6 +110,10 @@ void PreTransferStepStyleTargets(STEPCAFControl_Reader& reader)
     if (style.IsNull() || style->ItemAP242().IsNull()) continue;
     reader.ChangeReader().TransferEntity(style->ItemAP242().Value());
   }
+  // TransferEntity appends recovery-only style targets to the reader's result
+  // list. Keep their cached binders, but let STEPCAF rebuild the list from the
+  // product roots; otherwise styled solids are inserted as extra components.
+  OcctSharpGenerated::StepAdapters::XSControl_Reader_ClearShapes_Bind(reader.ChangeReader())();
 }
 
 void RecoverStepPresentationStyles(
@@ -179,6 +193,9 @@ void RecoverStepPresentationStyles(
   occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> invisible_styles =
     new NCollection_HSequence<occ::handle<Standard_Transient>>;
   style_reader.LoadInvisStyles(invisible_styles);
+  struct StyleTarget { TDF_Label Part; TopoDS_Shape Shape; };
+  std::unordered_map<const void*, std::vector<StyleTarget>> exact_targets;
+  bool targets_built = false;
   for (const RecoveredStyle& item : recovered)
   {
     TDF_Label label;
@@ -186,13 +203,46 @@ void RecoverStepPresentationStyles(
     if (!found)
     {
       const TDF_Label main_label = shape_tool->FindMainShapeUsingMap(item.Shape);
-      if (!main_label.IsNull())
-        found = shape_tool->AddSubShape(main_label, item.Shape, label) || !label.IsNull();
+      if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(main_label))
+        found = shape_tool->AddSubShape(main_label, item.Shape, label) || !OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label);
     }
-    if (!found && item.Shape.ShapeType() <= TopAbs_SHELL)
+    if (!found)
     {
-      label = shape_tool->AddShape(item.Shape, false, false);
-      found = !label.IsNull();
+      // Style binders can have an occurrence location different from the
+      // product definition. Recover only a unique exact native partner in
+      // the transferred definitions; never add recovery-only scene geometry.
+      if (!targets_built)
+      {
+        NCollection_Sequence<TDF_Label> definitions;
+        shape_tool->GetShapes(definitions);
+        for (const TDF_Label& part : definitions)
+        {
+          if (shape_tool->IsAssembly(part) || (static_cast<void>(shape_tool),OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsReference(part))) continue;
+          const TopoDS_Shape part_shape = (static_cast<void>(shape_tool),OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(part));
+          if (part_shape.IsNull()) continue;
+          NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> map;
+          TopExp::MapShapes(part_shape, map);
+          for (int32_t index = 1; index <= map.Extent(); ++index)
+            exact_targets[map(index).TShape().get()].push_back({part, map(index)});
+        }
+        targets_built = true;
+      }
+      const auto targets = exact_targets.find(item.Shape.TShape().get());
+      if (targets != exact_targets.end())
+      {
+        const StyleTarget* unique = nullptr;
+        size_t matches = 0;
+        for (const StyleTarget& target : targets->second)
+          if (target.Shape.IsSame(item.Shape)) { unique = &target; ++matches; }
+        if (matches == 0 && targets->second.size() == 1) unique = &targets->second.front();
+        if (unique != nullptr && matches <= 1)
+        {
+          if (unique->Shape.IsSame((static_cast<void>(shape_tool),OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(unique->Part))))
+            label = unique->Part;
+          else shape_tool->AddSubShape(unique->Part, unique->Shape, label);
+          found = !OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label);
+        }
+      }
     }
     if (!found) continue;
 
@@ -272,9 +322,9 @@ void ConfigureXdeIgesReader(
   const bool read_colors,
   const bool read_layers)
 {
-  reader.SetNameMode(read_names);
-  reader.SetColorMode(read_colors);
-  reader.SetLayerMode(read_layers);
+  OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Reader_SetNameMode_Bind(reader)(read_names);
+  OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Reader_SetColorMode_Bind(reader)(read_colors);
+  OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Reader_SetLayerMode_Bind(reader)(read_layers);
 }
 
 occ::handle<TDocStd_Document> ReadIgesXdeDocument(
@@ -287,9 +337,9 @@ occ::handle<TDocStd_Document> ReadIgesXdeDocument(
   ValidatePath(file_path);
   occ::handle<TDocStd_Document> document = CreateXdeDocument();
   InitializeXdeTools(document);
-  IGESCAFControl_Reader reader;
+  IGESCAFControl_Reader reader = OcctSharpGenerated::MeshExchangeAdapters::ConstructIGESCAFControlReader();
   ConfigureXdeIgesReader(reader, read_names, read_colors, read_layers);
-  const IFSelect_ReturnStatus status = reader.ReadFile(file_path);
+  const IFSelect_ReturnStatus status = OcctSharpGenerated::StepAdapters::XSControl_Reader_ReadFile_Bind(reader)(file_path);
   if (status != IFSelect_RetDone)
   {
     const std::string message =
@@ -298,13 +348,13 @@ occ::handle<TDocStd_Document> ReadIgesXdeDocument(
   }
   if (report != nullptr)
   {
-    const occ::handle<IGESData_IGESModel> model = reader.IGESModel();
+    const occ::handle<IGESData_IGESModel> model = OcctSharpGenerated::MeshExchangeAdapters::IGESControl_Reader_IGESModel_Bind(reader)();
     report->source_entity_count = model.IsNull() ? 0 : model->NbEntities();
-    report->candidate_root_count = reader.NbRootsForTransfer();
-    report->source_length_unit_meters = model.IsNull() ? 0.0 : model->GlobalSection().UnitValue();
+    report->candidate_root_count = OcctSharpGenerated::MeshExchangeAdapters::IGESControl_Reader_NbRootsForTransfer_Bind(reader)();
+    report->source_length_unit_meters = model.IsNull() ? 0.0 : OcctSharpGenerated::MeshExchangeAdapters::IGESData_GlobalSection_UnitValue_Bind(OcctSharpGenerated::MeshExchangeAdapters::IGESData_IGESModel_GlobalSection_Bind(*(model))())() * OcctSharpGenerated::MeshExchangeAdapters::IGESData_GlobalSection_CascadeUnit_Bind(OcctSharpGenerated::MeshExchangeAdapters::IGESData_IGESModel_GlobalSection_Bind(*(model))())() * 0.001;
     report->system_length_unit_millimeters = UnitsMethods::GetCasCadeLengthUnit();
   }
-  if (!reader.Transfer(document))
+  if (!OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Reader_Transfer_Bind(reader)(document))
     throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer IGES into the XDE document.");
   NCollection_Sequence<TDF_Label> roots;
   XCAFDoc_DocumentTool::ShapeTool(document->Main())->GetFreeShapes(roots);
@@ -383,8 +433,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
   {
     ValidatePath(file_path);
     opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
-    BinXCAFDrivers::DefineFormat(application);
-    XmlXCAFDrivers::DefineFormat(application);
+    ConfigureSafeNamedDataDrivers(application);
     opencascade::handle<TDocStd_Document> document;
     const PCDM_ReaderStatus status = application->Open(
       TCollection_ExtendedString(file_path, true), document);
@@ -555,11 +604,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_iges_options(
     ValidatePath(file_path);
     if (document->Document->HasOpenCommand())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE transaction must be closed before IGES export.");
-    IGESCAFControl_Writer writer;
-    writer.SetNameMode(write_names != 0);
-    writer.SetColorMode(write_colors != 0);
-    writer.SetLayerMode(write_layers != 0);
-    if (!writer.Perform(document->Document, file_path))
+    IGESCAFControl_Writer writer = OcctSharpGenerated::MeshExchangeAdapters::ConstructIGESCAFControlWriter();
+    OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Writer_SetNameMode_Bind(writer)(write_names != 0);
+    OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Writer_SetColorMode_Bind(writer)(write_colors != 0);
+    OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Writer_SetLayerMode_Bind(writer)(write_layers != 0);
+    const auto exportDocument = CreateIgesExportCopy(document->Document);
+    if (!OcctSharpGenerated::MeshExchangeAdapters::IGESCAFControl_Writer_Perform_Bind(writer)(exportDocument, file_path))
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the XDE document as IGES.");
   });
 }
@@ -605,9 +655,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
       write_materials != 0,
       write_gdt != 0);
     DESTEP_Parameters parameters;
-    parameters.InitFromStatic();
+    OcctSharpGenerated::StepAdapters::DESTEP_Parameters_InitFromStatic_Bind(parameters)();
     parameters.WriteSchema = static_cast<DESTEP_Parameters::WriteMode_StepSchema>(schema);
-    if (!writer.Transfer(document->Document, parameters, static_cast<STEPControl_StepModelType>(model_type)))
+    if (!OcctSharpGenerated::XdeAdapters::STEPCAFControl_Writer_Transfer_Bind(writer)(document->Document, parameters, static_cast<STEPControl_StepModelType>(model_type)))
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the XDE document to STEP.");
     }

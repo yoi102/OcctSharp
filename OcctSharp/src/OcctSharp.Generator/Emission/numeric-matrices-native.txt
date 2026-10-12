@@ -1,0 +1,228 @@
+#include "OcctSharp.Foundation.CopiedSupport.Generated.hxx"
+#include <math_Matrix.hxx>
+#include <math_Vector.hxx>
+#include <math_Gauss.hxx>
+#include <math_Householder.hxx>
+#include <math_SVD.hxx>
+#include <BSplCLib.hxx>
+#include <gp_Pnt.hxx>
+#include <gp_Pnt2d.hxx>
+#include <cstdint>
+using namespace OcctSharpCollections;
+namespace {
+constexpr int NumericLimit = 1048576;
+struct OutputRange {const void* pointer;size_t bytes;};
+bool Separate(std::initializer_list<OutputRange> ranges) {
+  for(auto a=ranges.begin();a!=ranges.end();++a){auto begin=reinterpret_cast<uintptr_t>(a->pointer);
+    if(a->bytes>UINTPTR_MAX-begin)return false;
+    for(auto b=a+1;b!=ranges.end();++b){auto other=reinterpret_cast<uintptr_t>(b->pointer);
+      if(b->bytes>UINTPTR_MAX-other)return false;
+      if(a->bytes&&b->bytes&&begin<other+b->bytes&&other<begin+a->bytes)return false;}}
+  return true;
+}
+void Size(int lower, int count) {
+  Require(count > 0 && count <= NumericLimit, "Invalid numeric dimension.");
+  Bounds(lower, count, false);
+}
+void Shape(int lr, int rows, int lc, int cols) {
+  Size(lr, rows); Size(lc, cols);
+  Require(int64_t(rows) * cols <= NumericLimit, "Numeric matrix exceeds capacity limit.");
+  const int64_t count=int64_t(rows)*cols,offset=int64_t(lr)*cols,begin=offset+lc;
+  auto safe=[](int64_t v){return v>std::numeric_limits<int>::min()&&v<std::numeric_limits<int>::max();};
+  Require(safe(offset)&&safe(count+lc)&&safe(begin)&&safe(begin+count),"Matrix offset arithmetic overflows.");
+}
+void Finite(double value) { Require(std::isfinite(value), "Numeric values must be finite."); }
+void Check(const math_Matrix& a) {
+  Shape(a.LowerRow(),a.RowNumber(),a.LowerCol(),a.ColNumber());
+  for(int i=a.LowerRow();i<=a.UpperRow();++i)
+    for(int j=a.LowerCol();j<=a.UpperCol();++j) Finite(a(i,j));
+}
+std::shared_ptr<math_Matrix> Matrix(const void* token) {
+  auto result=OcctSharpOwned::Lease<math_Matrix>(token); Check(*result); return result;
+}
+void* Publish(math_Matrix value) {
+  Check(value); Publication<math_Matrix> p(std::make_shared<math_Matrix>(value)); return p.Commit();
+}
+math_Matrix Rebase(const math_Matrix& a,int lr,int lc) {
+  Shape(lr,a.RowNumber(),lc,a.ColNumber());
+  math_Matrix result(lr,lr+a.RowNumber()-1,lc,lc+a.ColNumber()-1,0.0);
+  for(int i=0;i<a.RowNumber();++i) for(int j=0;j<a.ColNumber();++j)
+    result(lr+i,lc+j)=a(a.LowerRow()+i,a.LowerCol()+j);
+  return result;
+}
+math_Vector Vector(const double* data,int count,int lower=1) {
+  Size(lower,count); Require(data,"Null numeric vector."); math_Vector result(lower,lower+count-1);
+  for(int i=0;i<count;++i) { Finite(data[i]); result(lower+i)=data[i]; } return result;
+}
+math_Matrix Column(const math_Vector& v) {
+  math_Matrix result(v.Lower(),v.Upper(),1,1,0.0); result.SetCol(1,v); return result;
+}
+void EqualDimensions(const math_Matrix& a,const math_Matrix& b) {
+  Require(a.RowNumber()==b.RowNumber() && a.ColNumber()==b.ColNumber(),"Matrix dimensions differ.");
+}
+double Residual(const math_Matrix& a,const math_Matrix& x,const math_Matrix& b) {
+  double norm=0;
+  for(int i=1;i<=a.RowNumber();++i) for(int k=1;k<=b.ColNumber();++k) {
+    long double sum=-b(i,k); for(int j=1;j<=a.ColNumber();++j) sum+=static_cast<long double>(a(i,j))*x(j,k);
+    norm=std::hypot(norm,static_cast<double>(sum));
+  }
+  Finite(norm); return norm;
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_matrix_create(const double* data,int32_t count,int32_t lr,int32_t rows,int32_t lc,int32_t cols,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT; *result=nullptr;
+  return Guard([&]{Shape(lr,rows,lc,cols);Require(data && count==rows*cols,"Matrix payload length mismatch.");
+    math_Matrix a(lr,lr+rows-1,lc,lc+cols-1);a.Init(0.0);
+    for(int i=0;i<rows;++i)for(int j=0;j<cols;++j){Finite(data[i*cols+j]);a.Value(lr+i,lc+j)=data[i*cols+j];}
+    *result=Publish(a);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_matrix_copy(const void* token,double* data,int32_t capacity,int32_t* lr,int32_t* rows,int32_t* lc,int32_t* cols) {
+  if(!lr||!rows||!lc||!cols||capacity<0||capacity>NumericLimit||!Separate({{lr,4},{rows,4},{lc,4},{cols,4},{data,data?size_t(capacity)*sizeof(double):0}}))return OCCTSHARP_STATUS_INVALID_ARGUMENT;*lr=*rows=*lc=*cols=0;
+  return Guard([&]{auto a=Matrix(token);int n=a->RowNumber()*a->ColNumber();
+    Require(capacity==0&&!data || data&&capacity>=n,"Insufficient numeric output capacity.");
+    if(data)for(int i=0;i<a->RowNumber();++i)for(int j=0;j<a->ColNumber();++j)data[i*a->ColNumber()+j]=(*a)(a->LowerRow()+i,a->LowerCol()+j);
+    *lr=a->LowerRow();*rows=a->RowNumber();*lc=a->LowerCol();*cols=a->ColNumber();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_matrix_operation(const void* left,const void* right,int32_t operation,double scalar,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+  return Guard([&]{auto a=Matrix(left);Finite(scalar);
+    if(operation==0){*result=Publish(math_Matrix(*a));return;}
+    if(operation>=1&&operation<=3 || operation==9){auto b=Matrix(right);
+      if(operation==1||operation==2)EqualDimensions(*a,*b);
+      if(operation==3)Require(a->ColNumber()==b->RowNumber(),"Matrix product dimensions differ.");
+      if(operation==9)Require(a->RowNumber()==b->RowNumber(),"Transposed-left product dimensions differ.");
+      if(operation==1||operation==2)Shape(a->LowerRow(),a->RowNumber(),a->LowerCol(),a->ColNumber());
+      else Shape(operation==9?a->LowerCol():a->LowerRow(),operation==9?a->ColNumber():a->RowNumber(),b->LowerCol(),b->ColNumber());
+      if(operation==1)*result=Publish(a->Added(*b));
+      if(operation==2)*result=Publish(a->Subtracted(*b));
+      if(operation==3)*result=Publish(a->Multiplied(*b));
+      if(operation==9)*result=Publish(a->TMultiply(*b));return;}
+    if(operation==4)*result=Publish(a->Multiplied(scalar));
+    else if(operation==5){Require(scalar!=0,"Zero matrix divisor.");*result=Publish(a->Divided(scalar));}
+    else if(operation==6)*result=Publish(a->Opposite());
+    else if(operation==7){Shape(a->LowerCol(),a->ColNumber(),a->LowerRow(),a->RowNumber());*result=Publish(a->Transposed());}
+    else if(operation==8){Require(a->RowNumber()==a->ColNumber(),"Inverse requires a square matrix.");*result=Publish(a->Inverse());}
+    else if(operation==10)*result=Publish(a->TMultiplied(scalar));
+    else Require(false,"Unknown matrix operation.");});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_matrix_vector(const void* token,int32_t operation,int32_t index,const double* data,int32_t count,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+  return Guard([&]{auto a=Matrix(token);
+    if(operation==0||operation==2)Require(index>=a->LowerRow()&&index<=a->UpperRow(),"Row outside matrix.");
+    if(operation==1||operation==3)Require(index>=a->LowerCol()&&index<=a->UpperCol(),"Column outside matrix.");
+    if(operation==0){*result=Publish(Column(a->Row(index)));return;}
+    if(operation==1){*result=Publish(Column(a->Col(index)));return;}
+    if(operation==2||operation==3){Require(count==(operation==2?a->ColNumber():a->RowNumber()),"Replacement vector length mismatch.");
+      auto v=Vector(data,count,operation==2?a->LowerCol():a->LowerRow());math_Matrix copy(*a);
+      if(operation==2)copy.SetRow(index,v);else copy.SetCol(index,v);*result=Publish(copy);return;}
+    Require(operation==4&&count==a->ColNumber(),"Matrix-vector dimension mismatch.");
+    auto v=Vector(data,count,a->LowerCol());*result=Publish(Column(a->Multiplied(v)));});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_outer_product(const double* left,int32_t rows,int32_t lr,const double* right,int32_t cols,int32_t lc,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+  return Guard([&]{Shape(lr,rows,lc,cols);auto a=Vector(left,rows,lr);auto b=Vector(right,cols,lc);
+    math_Matrix product(lr,lr+rows-1,lc,lc+cols-1,0.0);product.Multiply(a,b);*result=Publish(product);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_solve(const void* matrix,const void* rhs,int32_t method,double tolerance,int32_t r0,int32_t r1,int32_t c0,int32_t c1,void** result,int32_t* done,double* residual,double* determinant) {
+  if(!result||!done||!residual||!determinant||!Separate({{result,sizeof(void*)},{done,4},{residual,8},{determinant,8}}))return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  *result=nullptr;*done=0;*residual=*determinant=0;
+  return Guard([&]{Require(method>=0&&method<=5,"Unknown numeric solver.");Finite(tolerance);Require(tolerance>0&&tolerance<1,"Invalid solver tolerance.");
+    auto source=Matrix(matrix);auto a=Rebase(*source,1,1);int outRow=source->LowerCol(),outCol=source->LowerRow();
+    double det=0,res=0;
+    if(method==2||method==4){Shape(1,std::max(a.RowNumber(),a.ColNumber()),1,a.ColNumber());Shape(1,a.ColNumber(),1,a.ColNumber());}
+    if(method==3||method==4){if(method==3)Require(a.RowNumber()==a.ColNumber(),"Gauss inverse requires a square matrix.");
+      Shape(1,a.ColNumber(),1,a.RowNumber());math_Matrix inv(1,a.ColNumber(),1,a.RowNumber(),0.0);
+      if(method==3){math_Gauss solver(a,tolerance);if(!solver.IsDone())return;solver.Invert(inv);det=solver.Determinant();Finite(det);}
+      else {math_SVD solver(a);if(!solver.IsDone())return;solver.PseudoInverse(inv,tolerance);}
+      Check(inv);*result=Publish(Rebase(inv,outRow,outCol));*determinant=det;*done=1;return;}
+    auto right=Matrix(rhs);auto b=Rebase(*right,1,1);outCol=right->LowerCol();
+    int nr=a.RowNumber(),nc=a.ColNumber();
+    if(method==5){Require(r0>=source->LowerRow()&&r1<=source->UpperRow()&&r0<=r1&&c0>=source->LowerCol()&&c1<=source->UpperCol()&&c0<=c1,"Invalid solve submatrix.");nr=r1-r0+1;nc=c1-c0+1;outRow=c0;}
+    Require(b.RowNumber()==nr,"Right-hand side row count mismatch.");
+    if(method==0)Require(nr==nc,"Gauss requires a square matrix.");
+    if(method==1||method==5)Require(nr>=nc,"Householder requires at least as many rows as columns.");
+    Shape(1,nc,1,b.ColNumber());math_Matrix x(1,nc,1,b.ColNumber(),0.0);
+    if(method==0){math_Gauss solver(a,tolerance);if(!solver.IsDone())return;
+      for(int j=1;j<=b.ColNumber();++j){auto v=b.Col(j);math_Vector solution(1,nc);
+        if(b.ColNumber()==1){solver.Solve(v);solution=v;}else solver.Solve(v,solution);x.SetCol(j,solution);}
+      det=solver.Determinant();Finite(det);}
+    else if(method==1||method==5){std::unique_ptr<math_Householder> solver;
+      if(method==5)solver=std::make_unique<math_Householder>(a,b,r0-source->LowerRow()+1,r1-source->LowerRow()+1,c0-source->LowerCol()+1,c1-source->LowerCol()+1,tolerance);
+      else if(b.ColNumber()==1)solver=std::make_unique<math_Householder>(a,b.Col(1),tolerance);
+      else solver=std::make_unique<math_Householder>(a,b,tolerance);
+      if(!solver->IsDone())return;x=solver->AllValues();
+      for(int j=1;j<=b.ColNumber();++j){math_Vector column(1,nc);solver->Value(column,j);for(int i=1;i<=nc;++i)Require(column(i)==x(i,j),"Inconsistent Householder result.");}}
+    else {math_SVD solver(a);if(!solver.IsDone())return;for(int j=1;j<=b.ColNumber();++j){math_Vector v(1,nc);solver.Solve(b.Col(j),v,tolerance);x.SetCol(j,v);}}
+    Check(x);
+    if(method==5){math_Matrix selected(1,nr,1,nc,0.0);for(int i=1;i<=nr;++i)for(int j=1;j<=nc;++j)selected(i,j)=(*source)(r0+i-1,c0+j-1);res=Residual(selected,x,b);}
+    else res=Residual(a,x,b);
+    *result=Publish(Rebase(x,outRow,outCol));*residual=res;*determinant=det;*done=1;});
+}
+namespace {
+NCollection_Array1<double> FlatKnots(const double* data,int count,int degree) {
+  Size(1,count);Require(data&&degree>=1&&degree<=25&&count>=2*(degree+1),"Invalid clamped knot definition.");
+  NCollection_Array1<double> knots(1,count);for(int i=0;i<count;++i){Finite(data[i]);knots(i+1)=data[i];}
+  Ascending(knots,false);Require(knots(degree+1)<knots(count-degree),"Empty knot domain.");
+  for(int i=1;i<=degree+1;++i)Require(knots(i)==knots.First()&&knots(count-i+1)==knots.Last(),"Clamped endpoints required.");
+  Require(knots(degree+2)>knots.First()&&knots(count-degree-1)<knots.Last(),"Endpoint multiplicity exceeds order.");
+  int repeats=0;double previous=knots.First();
+  for(int i=degree+2;i<=count-degree-1;++i){repeats=knots(i)==previous?repeats+1:1;previous=knots(i);Require(repeats<=degree,"Interior multiplicity exceeds degree.");}
+  return knots;
+}
+int Basis(const NCollection_Array1<double>& knots,int degree,double parameter,int derivative,math_Matrix& result) {
+  Finite(parameter);Require(parameter>=knots.First()&&parameter<=knots.Last()&&derivative>=0&&derivative<=degree,"Invalid basis request.");
+  int first=0;Require(BSplCLib::EvalBsplineBasis(derivative,degree+1,knots,parameter,first,result,false)==0,"Basis evaluation failed.");
+  Require(first>=1&&first+degree<=knots.Length()-degree-1,"Basis support exceeds pole domain.");Check(result);return first;
+}
+struct SplineSystem {
+  math_Matrix Original,Factor;
+  int Degree,Status=0,Pivot=0;
+  SplineSystem(int rows,int degree):Original(1,rows,1,2*degree+1,0.0),Factor(1,rows,1,2*degree+1,0.0),Degree(degree){}
+};
+template<class P> void BandedSolve(const SplineSystem& system,const double* data,const double* weights,int n,int dimension,bool homogeneous,math_Matrix& output,int& status) {
+  NCollection_Array1<P> poles(1,n);NCollection_Array1<double> w(1,n);
+  for(int i=1;i<=n;++i){if(weights){Finite(weights[i-1]);w(i)=weights[i-1];}
+    for(int j=1;j<=dimension;++j){double value=data[(i-1)*dimension+j-1];Finite(value);
+      if(weights&&!homogeneous)value*=w(i);Finite(value);poles(i).SetCoord(j,value);}}
+  if(weights)status=BSplCLib::SolveBandedSystem(system.Factor,system.Degree,system.Degree,true,poles,w);
+  else status=BSplCLib::SolveBandedSystem(system.Factor,system.Degree,system.Degree,poles);
+  if(status)return;
+  for(int i=1;i<=n;++i){if(weights){Finite(w(i));if(!homogeneous&&w(i)==0){status=4;return;}output(i,dimension+1)=w(i);}
+    for(int j=1;j<=dimension;++j){double value=poles(i).Coord(j);if(weights&&!homogeneous)value/=w(i);Finite(value);output(i,j)=value;}}
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_basis(const double* knots,int32_t count,int32_t degree,double parameter,int32_t derivative,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+  return Guard([&]{auto k=FlatKnots(knots,count,degree);Require(derivative>=0&&derivative<=degree,"Invalid derivative order.");
+    math_Matrix values(1,derivative+1,1,degree+1,0.0);int first=Basis(k,degree,parameter,derivative,values);*result=Publish(Rebase(values,0,first));});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_band_create(const double* knots,int32_t count,int32_t degree,const double* parameters,const int32_t* contacts,int32_t rows,void** result,int32_t* status,int32_t* pivot) {
+  if(!result||!status||!pivot||!Separate({{result,sizeof(void*)},{status,4},{pivot,4}}))return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;*status=*pivot=0;
+  return Guard([&]{auto k=FlatKnots(knots,count,degree);Shape(1,rows,1,2*degree+1);Require(rows==count-degree-1&&parameters&&contacts,"Spline matrix row count mismatch.");
+    NCollection_Array1<double> p(1,rows);NCollection_Array1<int> c(1,rows);
+    for(int i=1;i<=rows;++i){p(i)=parameters[i-1];c(i)=contacts[i-1];Require(c(i)>=0&&c(i)<=degree,"Invalid contact order.");
+      math_Matrix basis(1,c(i)+1,1,degree+1,0.0);int first=Basis(k,degree,p(i),c(i),basis);int start=degree+1+first-i;
+      Require(start>=1&&start+degree<=2*degree+1,"Sample ordering exceeds native band storage.");}
+    auto s=std::make_shared<SplineSystem>(rows,degree);int upper=0,lower=0;
+    s->Status=BSplCLib::BuildBSpMatrix(p,c,k,degree,s->Original,upper,lower);Require(upper==degree&&lower==degree,"Unexpected spline bandwidth.");
+    Check(s->Original);s->Factor=s->Original;
+    if(!s->Status)s->Status=BSplCLib::FactorBandedMatrix(s->Factor,upper,lower,s->Pivot);
+    Check(s->Factor);
+    // FactorBandedMatrix does not check the final diagonal, whereas the solve does.
+    if(!s->Status)for(int i=1;i<=rows;++i)if(std::abs(s->Factor(i,degree+1))<=1e-16){s->Status=1;s->Pivot=i;break;}
+    Publication<SplineSystem> pub(s);*status=s->Status;*pivot=s->Pivot;*result=pub.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_band_matrix(const void* token,void** result) {
+  if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+  return Guard([&]{auto s=OcctSharpOwned::Lease<SplineSystem>(token);*result=Publish(s->Original);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_numeric_band_solve(const void* token,const double* data,int32_t count,int32_t dimension,const double* weights,int32_t weightCount,int32_t homogeneous,void** result,int32_t* status) {
+  if(!result||!status||!Separate({{result,sizeof(void*)},{status,4}}))return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;*status=0;
+  return Guard([&]{auto s=OcctSharpOwned::Lease<SplineSystem>(token);int n=s->Original.RowNumber();
+    Require(data&&(dimension==2||dimension==3)&&count==n*dimension,"Invalid spline right-hand side.");
+    Require(homogeneous==0||homogeneous==1,"Invalid homogeneous flag.");Require(weights?weightCount==n:weightCount==0,"Weight count mismatch.");
+    if(s->Status){*status=s->Status;return;}Shape(1,n,1,dimension+(weights?1:0));math_Matrix output(1,n,1,dimension+(weights?1:0),0.0);int code=0;
+    if(dimension==2)BandedSolve<gp_Pnt2d>(*s,data,weights,n,2,homogeneous!=0,output,code);else BandedSolve<gp_Pnt>(*s,data,weights,n,3,homogeneous!=0,output,code);
+    if(code){*status=code;return;}*result=Publish(output);});
+}
+void OCCTSHARP_CALL occtsharp_numeric_band_release(void* token) {OcctSharpOwned::Release(token,typeid(SplineSystem));}

@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Curve#1",
+      "nativeName": "GeomAPI_PointsToBSpline::Curve",
+      "signature": "GeomAPI_PointsToBSpline::Curve: const occ::handle<Geom_BSplineCurve> &() const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline",
+      "signature": "GeomAPI_PointsToBSpline::GeomAPI_PointsToBSpline: void (const NCollection_Array1<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@IsDone#1",
+      "nativeName": "GeomAPI_PointsToBSpline::IsDone",
+      "signature": "GeomAPI_PointsToBSpline::IsDone: bool () const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface",
+      "signature": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface: void ()",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Init",
+      "signature": "GeomAPI_PointsToBSplineSurface::Init: void (const NCollection_Array2<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Interpolate#&1$@S@NCollection_Array2>#$@S@gp_Pnt#b#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Interpolate",
+      "signature": "GeomAPI_PointsToBSplineSurface::Interpolate: void (const NCollection_Array2<gp_Pnt> &, const bool)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@IsDone#1",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::IsDone",
+      "signature": "GeomAPI_PointsToBSplineSurface::IsDone: bool () const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Surface#1",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Surface",
+      "signature": "GeomAPI_PointsToBSplineSurface::Surface: const occ::handle<Geom_BSplineSurface> &() const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@GeomFill_BSplineCurves#",
+      "nativeName": "GeomFill_BSplineCurves::GeomFill_BSplineCurves",
+      "signature": "GeomFill_BSplineCurves::GeomFill_BSplineCurves: void ()",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "signature": "GeomFill_BSplineCurves::Init: void (const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "signature": "GeomFill_BSplineCurves::Init: void (const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "signature": "GeomFill_BSplineCurves::Init: void (const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const occ::handle<Geom_BSplineCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Surface#1",
+      "nativeName": "GeomFill_BSplineCurves::Surface",
+      "signature": "GeomFill_BSplineCurves::Surface: const occ::handle<Geom_BSplineSurface> &() const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@GeomFill_BezierCurves#",
+      "nativeName": "GeomFill_BezierCurves::GeomFill_BezierCurves",
+      "signature": "GeomFill_BezierCurves::GeomFill_BezierCurves: void ()",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "signature": "GeomFill_BezierCurves::Init: void (const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "signature": "GeomFill_BezierCurves::Init: void (const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "signature": "GeomFill_BezierCurves::Init: void (const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const occ::handle<Geom_BezierCurve> &, const GeomFill_FillingStyle)",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Surface#1",
+      "nativeName": "GeomFill_BezierCurves::Surface",
+      "signature": "GeomFill_BezierCurves::Surface: const occ::handle<Geom_BezierSurface> &() const",
+      "guard": "BWCallPrivateFittingAdapters",
+      "reason": "Equivalent stack-local initialized SDK fitting receiver; owning handle copies; caller validation, copied inputs, topology construction and errors unchanged."
+    }
+  ],
+  "supportingOperations": []
+}

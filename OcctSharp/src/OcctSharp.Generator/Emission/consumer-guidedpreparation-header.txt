@@ -1,0 +1,11 @@
+#pragma once
+#include "OcctSharp.Native.Authoring.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_prepare_offset_curves(
+  const OcctSharp_ShapeHandle* wire, double tolerance, int32_t maximum_segments, int32_t maximum_degree,
+  OcctSharp_AuthoringInfo* info, OcctSharp_FeatureResultHandle** output);
+#ifdef __cplusplus
+}
+#endif

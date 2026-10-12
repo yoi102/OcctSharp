@@ -181,6 +181,7 @@ public static class SharedHandleBindingEmitter
             ? []
             : model.Declarations
             .Where(declaration => declaration.SupportState == BindingSupportState.Supported
+                && !IsPrivateMeshAdapter(declaration)
                 && declaration.Kind == BindingDeclarationKind.Constructor
                 && string.Equals(declaration.SourcePackage, scope.SourcePackage, StringComparison.Ordinal)
                 && string.Equals(declaration.NativeName, constructorName, StringComparison.Ordinal)
@@ -289,6 +290,7 @@ public static class SharedHandleBindingEmitter
         IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType)
     {
         if (declaration.SupportState != BindingSupportState.Supported
+            || IsPrivateMeshAdapter(declaration)
             || declaration.Kind != BindingDeclarationKind.Method
             || declaration.IsStatic
             || declaration.IsPureVirtual
@@ -307,6 +309,12 @@ public static class SharedHandleBindingEmitter
         return declaration.Parameters.All(parameter => IsSupportedParameter(
             parameter.Type, typeMap, scopeByNativeType));
     }
+
+    // TM060 primary operations belong to the call-private adapter profile. Reused
+    // supporting signatures keep their existing public shared-handle bindings.
+    private static bool IsPrivateMeshAdapter(BindingDeclaration declaration) =>
+        ClosedWorkflowOperationContract.MeshAdapters.Contains(declaration)
+        && !ClosedWorkflowOperationContract.MeshAdapters.Operations[declaration.StableId].Supporting;
 
     private static GeneratedParameter[] CreateParameters(
         IReadOnlyList<BindingParameter> parameters,

@@ -1,0 +1,17 @@
+#pragma once
+#include "OcctSharp.Native.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+// Copied flags: 1=OCCT presentation data lost, 2=shared context absent,
+// 4=present shared context invalid. This does not classify physical GPU failure.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_render_health(
+  OcctSharp_ViewerHandle*, int32_t*);
+// Explicit caller invalidation only; marks OCCT presentation data for reupload.
+// It neither destroys the graphics context nor simulates physical device removal.
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_invalidate_gpu_resources(
+  OcctSharp_ViewerHandle*);
+#ifdef __cplusplus
+}
+#endif

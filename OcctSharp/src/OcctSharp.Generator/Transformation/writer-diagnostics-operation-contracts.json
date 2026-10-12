@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TransferBRep@F@ResultCheckList#&1$@S@Interface_CheckIterator#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#S",
+      "nativeName": "TransferBRep::ResultCheckList",
+      "signature": "TransferBRep::ResultCheckList: Interface_CheckIterator (const Interface_CheckIterator &, const occ::handle<Transfer_FinderProcess> &, const occ::handle<Interface_InterfaceModel> &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@ResultFromShape#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@TopoDS_Shape#S",
+      "nativeName": "TransferBRep::ResultFromShape",
+      "signature": "TransferBRep::ResultFromShape: occ::handle<Transfer_Binder> (const occ::handle<Transfer_FinderProcess> &, const TopoDS_Shape &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@ShapeMapper#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@TopoDS_Shape#S",
+      "nativeName": "TransferBRep::ShapeMapper",
+      "signature": "TransferBRep::ShapeMapper: occ::handle<TransferBRep_ShapeMapper> (const occ::handle<Transfer_FinderProcess> &, const TopoDS_Shape &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@ShapeState#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@TopoDS_Shape#S",
+      "nativeName": "TransferBRep::ShapeState",
+      "signature": "TransferBRep::ShapeState: TopAbs_Orientation (const occ::handle<Transfer_FinderProcess> &, const TopoDS_Shape &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@TransferResultInfo#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@TransferBRep_TransferResultInfo#S",
+      "nativeName": "TransferBRep::TransferResultInfo",
+      "signature": "TransferBRep::TransferResultInfo: void (const occ::handle<Transfer_FinderProcess> &, const occ::handle<NCollection_HSequence<int>> &, occ::handle<NCollection_HSequence<occ::handle<TransferBRep_TransferResultInfo>>> &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    },
+    {
+      "stableId": "c:@S@TransferBRep@F@TransientFromShape#&1$@N@opencascade@S@handle>#$@S@Transfer_FinderProcess#&1$@S@TopoDS_Shape#S",
+      "nativeName": "TransferBRep::TransientFromShape",
+      "signature": "TransferBRep::TransientFromShape: occ::handle<Standard_Transient> (const occ::handle<Transfer_FinderProcess> &, const TopoDS_Shape &)",
+      "guard": "ANExact",
+      "reason": "Private writer epoch, copied diagnostics and exact source/map/model index domains."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@IGESControl_Writer@F@AddShape#&1$@S@TopoDS_Shape#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESControl_Writer::AddShape",
+      "signature": "IGESControl_Writer::AddShape: bool (const TopoDS_Shape &, const Message_ProgressRange &)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Writer@F@IGESControl_Writer#*1C#I#",
+      "nativeName": "IGESControl_Writer::IGESControl_Writer",
+      "signature": "IGESControl_Writer::IGESControl_Writer: void (const char *const, const int)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Writer@F@Model#1",
+      "nativeName": "IGESControl_Writer::Model",
+      "signature": "IGESControl_Writer::Model: const occ::handle<IGESData_IGESModel> &() const",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Writer@F@TransferProcess#1",
+      "nativeName": "IGESControl_Writer::TransferProcess",
+      "signature": "IGESControl_Writer::TransferProcess: const occ::handle<Transfer_FinderProcess> &() const",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Writer@F@Write#*1C#b#",
+      "nativeName": "IGESControl_Writer::Write",
+      "signature": "IGESControl_Writer::Write: bool (const char *const, const bool)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@Model#b#",
+      "nativeName": "STEPControl_Writer::Model",
+      "signature": "STEPControl_Writer::Model: occ::handle<StepData_StepModel> (const bool)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@STEPControl_Writer#",
+      "nativeName": "STEPControl_Writer::STEPControl_Writer",
+      "signature": "STEPControl_Writer::STEPControl_Writer: void ()",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@Transfer#&1$@S@TopoDS_Shape#$@E@STEPControl_StepModelType#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPControl_Writer::Transfer",
+      "signature": "STEPControl_Writer::Transfer: IFSelect_ReturnStatus (const TopoDS_Shape &, const STEPControl_StepModelType, const bool, const Message_ProgressRange &)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@WS#1",
+      "nativeName": "STEPControl_Writer::WS",
+      "signature": "STEPControl_Writer::WS: occ::handle<XSControl_WorkSession> () const",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@Write#*1C#",
+      "nativeName": "STEPControl_Writer::Write",
+      "signature": "STEPControl_Writer::Write: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ANPrerequisite",
+      "baselineDisposition": "Blocked",
+      "reason": "Private writer construction, transfer, model/process observation or file output. No mutable writer/model escapes."
+    }
+  ]
+}

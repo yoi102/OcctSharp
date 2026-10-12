@@ -1,3 +1,6 @@
+#include "../../generated/Foundation/OcctSharp.Foundation.DocumentIdentityAdapters.Generated.hxx"
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Xde/Structure implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Foundation/Text.hxx"
@@ -30,7 +33,7 @@ namespace OcctSharp::Native
 {
 const Standard_GUID& AssemblyExternalReferencesId()
 {
-  static const Standard_GUID id("8fd9fa60-12a5-4fa6-a8b9-004b61cb0f61");
+  static const Standard_GUID id = OcctSharpGenerated::DocumentIdentityAdapters::ConstructStandardGUID("8fd9fa60-12a5-4fa6-a8b9-004b61cb0f61");
   return id;
 }
 }
@@ -52,7 +55,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_shape(
     RequireOpenOcafCommand(document);
     ValidateUsableShape(shape);
     TDF_Label label = GetXdeShapeTool(document)->AddShape(shape->Value, false, false);
-    TDataStd_Name::Set(label, MakeExtendedUtf8(name_utf8, name_length));
+    OcctSharpGenerated::DocumentAdapters::TDataStd_Name_Set(label, MakeExtendedUtf8(name_utf8, name_length));
     CopyLabelEntry(label, entry_buffer, entry_capacity, entry_written);
   });
 }
@@ -70,7 +73,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_assembly(
     ValidateOcafDocument(document);
     RequireOpenOcafCommand(document);
     TDF_Label label = GetXdeShapeTool(document)->NewShape();
-    TDataStd_Name::Set(label, MakeExtendedUtf8(name_utf8, name_length));
+    OcctSharpGenerated::DocumentAdapters::TDataStd_Name_Set(label, MakeExtendedUtf8(name_utf8, name_length));
     CopyLabelEntry(label, entry_buffer, entry_capacity, entry_written);
   });
 }
@@ -209,9 +212,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_shape(
     RequireOpenOcafCommand(document);
     ValidateUsableShape(shape);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (XCAFDoc_ShapeTool::IsReference(label))
+    if (OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsReference(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A component occurrence cannot own a replacement definition shape.");
-    GetXdeShapeTool(document)->SetShape(label, shape->Value);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_SetShape_Bind(*(GetXdeShapeTool(document)))(label, shape->Value);
     GetXdeShapeTool(document)->UpdateAssemblies();
   });
 }
@@ -231,7 +234,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_location(
     ValidateLocationHandle(location);
     const TDF_Label label = ResolveOcafLabel(document, entry);
     TDF_Label result;
-    if (!GetXdeShapeTool(document)->SetLocation(label, location->Value, result) || result.IsNull())
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_SetLocation_Bind(*(GetXdeShapeTool(document)))(label, location->Value, result) || OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(result))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label location could not be changed.");
     GetXdeShapeTool(document)->UpdateAssemblies();
     CopyLabelEntry(result, result_entry_buffer, result_entry_capacity, result_entry_written);
@@ -246,9 +249,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_remove_component(
     ValidateOcafDocument(document);
     RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!XCAFDoc_ShapeTool::IsComponent(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsComponent(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a component occurrence.");
-    GetXdeShapeTool(document)->RemoveComponent(label);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_RemoveComponent_Bind(*(GetXdeShapeTool(document)))(label);
     GetXdeShapeTool(document)->UpdateAssemblies();
   });
 }
@@ -270,7 +273,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_remove_shape(
     ValidateOcafDocument(document);
     RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    *removed = GetXdeShapeTool(document)->RemoveShape(label, remove_completely != 0) ? 1 : 0;
+    *removed = OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_RemoveShape_Bind(*(GetXdeShapeTool(document)))(label, remove_completely != 0) ? 1 : 0;
     if (*removed != 0) GetXdeShapeTool(document)->UpdateAssemblies();
   });
 }
@@ -290,7 +293,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_user_count(
   return Guard([&]
   {
     NCollection_Sequence<TDF_Label> users;
-    XCAFDoc_ShapeTool::GetUsers(ResolveOcafLabel(document, entry), users, recursive != 0);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetUsers(ResolveOcafLabel(document, entry), users, recursive != 0);
     *count = users.Length();
   });
 }
@@ -307,7 +310,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_user_entry(
   return Guard([&]
   {
     NCollection_Sequence<TDF_Label> users;
-    XCAFDoc_ShapeTool::GetUsers(ResolveOcafLabel(document, entry), users, recursive != 0);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetUsers(ResolveOcafLabel(document, entry), users, recursive != 0);
     if (index < 1 || index > users.Length())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE user index is out of range.");
     CopyLabelEntry(users.Value(index), buffer, capacity, written);
@@ -328,11 +331,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_clone_subtree(
     const TDF_Label source = ResolveOcafLabel(document, entry);
     const auto shape_tool = GetXdeShapeTool(document);
     NCollection_DataMap<TDF_Label, TDF_Label> label_map;
-    const TDF_Label cloned = XCAFDoc_Editor::CloneShapeLabel(source, shape_tool, shape_tool, label_map);
-    if (cloned.IsNull())
+    const TDF_Label cloned = OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneShapeLabel(source, shape_tool, shape_tool, label_map);
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(cloned))
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The XDE shape subtree could not be cloned.");
     for (NCollection_DataMap<TDF_Label, TDF_Label>::Iterator iterator(label_map); iterator.More(); iterator.Next())
-      XCAFDoc_Editor::CloneMetaData(iterator.Key(), iterator.Value(), nullptr, true, true, true, true, true);
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneMetaData(iterator.Key(), iterator.Value(), nullptr, true, true, true, true, true);
     shape_tool->UpdateAssemblies();
     CopyLabelEntry(cloned, result_entry_buffer, result_entry_capacity, result_entry_written);
   });
@@ -358,20 +361,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_external_references(
       values.Append(new TCollection_HAsciiString(references[index]));
     }
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    GetXdeShapeTool(document)->SetExternRefs(label, values);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_SetExternRefs_Bind(*(GetXdeShapeTool(document)))(label, values);
     const Standard_GUID& attribute_id = AssemblyExternalReferencesId();
     if (count == 0)
     {
-      label.ForgetAttribute(attribute_id);
+      OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,attribute_id);
       return;
     }
     occ::handle<TDataStd_ExtStringArray> attribute;
-    if (!label.FindAttribute(attribute_id, attribute))
-      attribute = TDataStd_ExtStringArray::Set(label, attribute_id, 1, count, true);
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,attribute_id, attribute))
+      attribute = OcctSharpGenerated::DocumentAdapters::TDataStd_ExtStringArray_Set(label, attribute_id, 1, count, true);
     else
       attribute->Init(1, count);
     for (int32_t index = 0; index < count; ++index)
-      attribute->SetValue(index + 1, TCollection_ExtendedString(references[index], true));
+      OcctSharpGenerated::DocumentAdapters::TDataStd_ExtStringArray_SetValue(*(attribute),index + 1, TCollection_ExtendedString(references[index], true));
   });
 }
 
@@ -388,13 +391,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_count(
   {
     const TDF_Label label = ResolveOcafLabel(document, entry);
     occ::handle<TDataStd_ExtStringArray> attribute;
-    if (label.FindAttribute(AssemblyExternalReferencesId(), attribute))
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,AssemblyExternalReferencesId(), attribute))
     {
       *count = attribute->Length();
       return;
     }
     NCollection_Sequence<occ::handle<TCollection_HAsciiString>> values;
-    XCAFDoc_ShapeTool::GetExternRefs(label, values);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetExternRefs(label, values);
     *count = values.Length();
   });
 }
@@ -415,15 +418,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_utf8_leng
   {
     const TDF_Label label = ResolveOcafLabel(document, entry);
     occ::handle<TDataStd_ExtStringArray> attribute;
-    if (label.FindAttribute(AssemblyExternalReferencesId(), attribute))
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,AssemblyExternalReferencesId(), attribute))
     {
       if (index < 1 || index > attribute->Length())
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The external-reference index is out of range.");
-      *length = static_cast<int32_t>(ExtendedToUtf8(attribute->Value(index)).size());
+      *length = static_cast<int32_t>(ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_ExtStringArray_Value(*(attribute),index)).size());
       return;
     }
     NCollection_Sequence<occ::handle<TCollection_HAsciiString>> values;
-    XCAFDoc_ShapeTool::GetExternRefs(label, values);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetExternRefs(label, values);
     if (index < 1 || index > values.Length())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The external-reference index is out of range.");
     *length = values.Value(index).IsNull() ? 0 : values.Value(index)->Length();
@@ -442,15 +445,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_to_utf8(
   {
     const TDF_Label label = ResolveOcafLabel(document, entry);
     occ::handle<TDataStd_ExtStringArray> attribute;
-    if (label.FindAttribute(AssemblyExternalReferencesId(), attribute))
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,AssemblyExternalReferencesId(), attribute))
     {
       if (index < 1 || index > attribute->Length())
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The external-reference index is out of range.");
-      CopyUtf8Result(ExtendedToUtf8(attribute->Value(index)), buffer, capacity, written);
+      CopyUtf8Result(ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_ExtStringArray_Value(*(attribute),index)), buffer, capacity, written);
       return;
     }
     NCollection_Sequence<occ::handle<TCollection_HAsciiString>> values;
-    XCAFDoc_ShapeTool::GetExternRefs(label, values);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetExternRefs(label, values);
     if (index < 1 || index > values.Length())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The external-reference index is out of range.");
     const auto value = values.Value(index);
@@ -470,12 +473,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_assembly_item_reference(
     RequireOpenOcafCommand(document);
     if (item_path == nullptr || item_path[0] == '\0' || subshape_index < 0)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The assembly-item reference is invalid.");
-    const XCAFDoc_AssemblyItemId item_id{TCollection_AsciiString(item_path)};
-    if (item_id.IsNull())
+    const XCAFDoc_AssemblyItemId item_id = OcctSharpGenerated::XdeAdapters::ConstructXCAFDocAssemblyItemId(TCollection_AsciiString(item_path));
+    if (OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemId_IsNull_Bind(item_id)())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The assembly-item path is empty.");
     const TDF_Label holder = ResolveOcafLabel(document, holder_entry);
-    if (subshape_index == 0) XCAFDoc_AssemblyItemRef::Set(holder, item_id);
-    else XCAFDoc_AssemblyItemRef::Set(holder, item_id, subshape_index);
+    if (subshape_index == 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_Set(holder, item_id);
+    else OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_Set(holder, item_id, subshape_index);
   });
 }
 
@@ -495,9 +498,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_assembly_item_reference_info
   *has_reference = 0; *is_orphan = 0; *subshape_index = 0; *path_length = 0;
   return Guard([&]
   {
-    const auto reference = XCAFDoc_AssemblyItemRef::Get(ResolveOcafLabel(document, holder_entry));
+    const auto reference = OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_Get(ResolveOcafLabel(document, holder_entry));
     if (reference.IsNull()) return;
-    const std::string path(reference->GetItem().ToString().ToCString());
+    const std::string path(OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemId_ToString_Bind(OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_GetItem_Bind(*(reference))())().ToCString());
     *has_reference = 1;
     *is_orphan = reference->IsOrphan() ? 1 : 0;
     *subshape_index = reference->IsSubshapeIndex() ? reference->GetSubshapeIndex() : 0;
@@ -514,10 +517,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_assembly_item_reference_path
 {
   return Guard([&]
   {
-    const auto reference = XCAFDoc_AssemblyItemRef::Get(ResolveOcafLabel(document, holder_entry));
+    const auto reference = OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_Get(ResolveOcafLabel(document, holder_entry));
     if (reference.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label has no assembly-item reference.");
-    CopyUtf8Result(std::string(reference->GetItem().ToString().ToCString()), buffer, capacity, written);
+    CopyUtf8Result(std::string(OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemId_ToString_Bind(OcctSharpGenerated::XdeAdapters::XCAFDoc_AssemblyItemRef_GetItem_Bind(*(reference))())().ToCString()), buffer, capacity, written);
   });
 }
 
@@ -539,14 +542,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_create(
     for (int32_t index = 0; index < count; ++index)
     {
       const TDF_Label label = ResolveOcafLabel(document, occurrence_entries[index]);
-      if (!XCAFDoc_ShapeTool::IsComponent(label))
+      if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsComponent(label))
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Every SHUO chain item must be a component occurrence.");
       labels.Append(label);
     }
     occ::handle<XCAFDoc_GraphNode> main;
-    if (!GetXdeShapeTool(document)->SetSHUO(labels, main) || main.IsNull())
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_SetSHUO_Bind(*(GetXdeShapeTool(document)))(labels, main) || main.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The SHUO chain could not be created.");
-    CopyLabelEntry(main->Label(), result_entry_buffer, result_entry_capacity, result_entry_written);
+    CopyLabelEntry(OcctSharpGenerated::DocumentAdapters::TDF_Attribute_Label(*(main)), result_entry_buffer, result_entry_capacity, result_entry_written);
   });
 }
 
@@ -566,8 +569,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_link_count(
   {
     NCollection_Sequence<TDF_Label> labels;
     const TDF_Label shuo = ResolveOcafLabel(document, shuo_entry);
-    if (upper != 0) XCAFDoc_ShapeTool::GetSHUOUpperUsage(shuo, labels);
-    else XCAFDoc_ShapeTool::GetSHUONextUsage(shuo, labels);
+    if (upper != 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetSHUOUpperUsage(shuo, labels);
+    else OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetSHUONextUsage(shuo, labels);
     *count = labels.Length();
   });
 }
@@ -585,8 +588,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_link_entry(
   {
     NCollection_Sequence<TDF_Label> labels;
     const TDF_Label shuo = ResolveOcafLabel(document, shuo_entry);
-    if (upper != 0) XCAFDoc_ShapeTool::GetSHUOUpperUsage(shuo, labels);
-    else XCAFDoc_ShapeTool::GetSHUONextUsage(shuo, labels);
+    if (upper != 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetSHUOUpperUsage(shuo, labels);
+    else OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetSHUONextUsage(shuo, labels);
     if (index < 1 || index > labels.Length())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The SHUO link index is out of range.");
     CopyLabelEntry(labels.Value(index), buffer, capacity, written);

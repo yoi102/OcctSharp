@@ -1,3 +1,4 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.RenderResourceAdapters.Generated.hxx"
 #include "Visualization/Context.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Validation.hxx"
@@ -34,10 +35,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_texture_pixels(OcctSharp_Viewer
       static_cast<int64_t>(p.stride) * p.height == length && length <= 67108864 && bytes, "Invalid copied RGBA/BGRA buffer or stride.");
     if (id != 0) (void)FindTexture(viewer, id);
     opencascade::handle<Image_PixMap> image = new Image_PixMap();
-    RequireRender(image->InitTrash(Image_Format_RGBA, p.width, p.height), "Cannot allocate texture image."); image->SetTopDown(true);
+    RequireRender(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_InitTrash_Bind(*(image))(Image_Format_RGBA, p.width, p.height), "Cannot allocate texture image."); image->SetTopDown(true);
     for (int y = 0; y < p.height; ++y) {
       const auto source = bytes + static_cast<size_t>(p.bottom_up ? p.height - 1 - y : y) * p.stride;
-      auto target = image->ChangeRow(y); std::memcpy(target, source, static_cast<size_t>(p.width) * 4);
+      auto target = OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_ChangeRow_Bind(*(image))(y); std::memcpy(target, source, static_cast<size_t>(p.width) * 4);
       if (p.format == 1) for (int x = 0; x < p.width; ++x) std::swap(target[x * 4], target[x * 4 + 2]);
     }
     if (id == 0) id = StoreImage(viewer, image);
@@ -56,14 +57,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_texture_file(OcctSharp_ViewerHa
     std::ifstream stream(file, std::ios::binary); std::vector<uint8_t> encoded(static_cast<size_t>(size));
     RequireRender(static_cast<bool>(stream.read(reinterpret_cast<char*>(encoded.data()), static_cast<std::streamsize>(size))), "Cannot read local image.");
     opencascade::handle<Image_AlienPixMap> decoded = new Image_AlienPixMap();
-    RequireRender(decoded->Load(encoded.data(), encoded.size(), TCollection_AsciiString(file.extension().string().c_str())), "Unsupported or corrupt local image.");
-    CheckImageSize(viewer, static_cast<int>(decoded->SizeX()), static_cast<int>(decoded->SizeY()));
+    RequireRender(OcctSharpGenerated::RenderResourceAdapters::Image_AlienPixMap_Load_Bind(*(decoded))(encoded.data(), encoded.size(), TCollection_AsciiString(file.extension().string().c_str())), "Unsupported or corrupt local image.");
+    CheckImageSize(viewer, static_cast<int>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(*(decoded))()), static_cast<int>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeY_Bind(*(decoded))()));
     opencascade::handle<Image_PixMap> image = new Image_PixMap();
-    RequireRender(image->InitTrash(Image_Format_RGBA, decoded->SizeX(), decoded->SizeY()), "Cannot allocate owned image."); image->SetTopDown(true);
-    for (int y = 0; y < static_cast<int>(image->SizeY()); ++y) for (int x = 0; x < static_cast<int>(image->SizeX()); ++x)
-      image->SetPixelColor(x, y, decoded->PixelColor(x, y));
+    RequireRender(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_InitTrash_Bind(*(image))(Image_Format_RGBA, OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(*(decoded))(), OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeY_Bind(*(decoded))()), "Cannot allocate owned image."); image->SetTopDown(true);
+    for (int y = 0; y < static_cast<int>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeY_Bind(*(image))()); ++y) for (int x = 0; x < static_cast<int>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(*(image))()); ++x)
+      OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SetPixelColor_Bind(*(image))(x, y, OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_PixelColor_Bind(*(decoded))(x, y));
     const int64_t id = StoreImage(viewer, image);
-    *description = { static_cast<int32_t>(image->SizeX()), static_cast<int32_t>(image->SizeY()), static_cast<int32_t>(image->SizeX() * 4), 0, 0, 0 }; *output = id;
+    *description = { static_cast<int32_t>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(*(image))()), static_cast<int32_t>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeY_Bind(*(image))()), static_cast<int32_t>(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(*(image))() * 4), 0, 0, 0 }; *output = id;
   });
 }
 OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_texture_remove(OcctSharp_ViewerHandle* viewer, int64_t id) {

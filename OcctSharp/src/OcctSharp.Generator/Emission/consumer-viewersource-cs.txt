@@ -1,0 +1,33 @@
+namespace OcctSharp;
+
+/// <summary>
+/// A viewer-owned snapshot of source geometry and styles used by multiple
+/// independently selectable presentations on that viewer's creation thread.
+/// </summary>
+public sealed class ViewerSource : IDisposable
+{
+    internal ViewerSource(OcctViewer viewer, long id)
+    {
+        Viewer = viewer;
+        Id = id;
+    }
+
+    internal OcctViewer Viewer { get; }
+    internal long Id { get; }
+    internal bool IsRemoved { get; private set; }
+
+    /// <summary>
+    /// Releases the creation entry. Existing instances keep their source
+    /// snapshot and exact topology correspondence until they are removed.
+    /// </summary>
+    public void Dispose() => Viewer.RemoveSource(this);
+
+    /// <summary>
+    /// Explicitly replaces source styles for the exact unchanged original XDE
+    /// topology and placement. Existing presentation identities and independent
+    /// review overrides are retained. Newly hidden topology is deselected.
+    /// </summary>
+    public void RefreshStyles(XdeLabel label) => Viewer.RefreshSourceStyles(this, label);
+
+    internal void MarkRemoved() => IsRemoved = true;
+}

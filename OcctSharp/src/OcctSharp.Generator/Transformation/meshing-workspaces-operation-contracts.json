@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepMesh_DiscretRoot@F@SetShape#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepMesh_DiscretRoot::SetShape",
+      "signature": "BRepMesh_DiscretRoot::SetShape: void (const TopoDS_Shape &)",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@ChangeParameters#",
+      "nativeName": "BRepMesh_IncrementalMesh::ChangeParameters",
+      "signature": "BRepMesh_IncrementalMesh::ChangeParameters: IMeshTools_Parameters &()",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@Parameters#1",
+      "nativeName": "BRepMesh_IncrementalMesh::Parameters",
+      "signature": "BRepMesh_IncrementalMesh::Parameters: const IMeshTools_Parameters &() const",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@Perform#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepMesh_IncrementalMesh::Perform",
+      "signature": "BRepMesh_IncrementalMesh::Perform: void (const Message_ProgressRange &)",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    },
+    {
+      "stableId": "c:@S@IMeshTools_Parameters@F@IMeshTools_Parameters#",
+      "nativeName": "IMeshTools_Parameters::IMeshTools_Parameters",
+      "signature": "IMeshTools_Parameters::IMeshTools_Parameters: void ()",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    },
+    {
+      "stableId": "c:@S@IMeshTools_Parameters@F@IMeshTools_Parameters#&1$@S@IMeshTools_Parameters#",
+      "nativeName": "IMeshTools_Parameters::IMeshTools_Parameters",
+      "signature": "IMeshTools_Parameters::IMeshTools_Parameters: void (const IMeshTools_Parameters &)",
+      "guard": "ARPrivate",
+      "reason": "Private copied shape and parameter receiver; copy effective parameters and native flags; gate independently owned output."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_DiscretRoot@F@IsDone#1",
+      "nativeName": "BRepMesh_DiscretRoot::IsDone",
+      "signature": "BRepMesh_DiscretRoot::IsDone: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#",
+      "nativeName": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh",
+      "signature": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh: void ()",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@GetStatusFlags#1",
+      "nativeName": "BRepMesh_IncrementalMesh::GetStatusFlags",
+      "signature": "BRepMesh_IncrementalMesh::GetStatusFlags: int () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@IsModified#1",
+      "nativeName": "BRepMesh_IncrementalMesh::IsModified",
+      "signature": "BRepMesh_IncrementalMesh::IsModified: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Surface#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#S",
+      "nativeName": "BRep_Tool::Surface",
+      "signature": "BRep_Tool::Surface: const occ::handle<Geom_Surface> &(const TopoDS_Face &, TopLoc_Location &)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Triangulation#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#i#S",
+      "nativeName": "BRep_Tool::Triangulation",
+      "signature": "BRep_Tool::Triangulation: const occ::handle<Poly_Triangulation> &(const TopoDS_Face &, TopLoc_Location &, const Poly_MeshPurpose)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@IMeshTools_Parameters@F@RelMinSize#S",
+      "nativeName": "IMeshTools_Parameters::RelMinSize",
+      "signature": "IMeshTools_Parameters::RelMinSize: double ()",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Message_ProgressRange@F@Message_ProgressRange#",
+      "nativeName": "Message_ProgressRange::Message_ProgressRange",
+      "signature": "Message_ProgressRange::Message_ProgressRange: void ()",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    }
+  ]
+}

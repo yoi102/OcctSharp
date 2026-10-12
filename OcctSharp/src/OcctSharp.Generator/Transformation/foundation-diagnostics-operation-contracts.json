@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@N@MathLin@F@MatrixInvSqrt#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::MatrixInvSqrt",
+      "signature": "MathLin::MatrixInvSqrt: std::optional<math_Matrix> (const math_Matrix &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathLin_Jacobi.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@MatrixPower#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::MatrixPower",
+      "signature": "MathLin::MatrixPower: std::optional<math_Matrix> (const math_Matrix &, double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathLin_Jacobi.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@MatrixSqrt#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::MatrixSqrt",
+      "signature": "MathLin::MatrixSqrt: std::optional<math_Matrix> (const math_Matrix &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathLin_Jacobi.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SpectralDecomposition#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::SpectralDecomposition",
+      "signature": "MathLin::SpectralDecomposition: EigenResult (const math_Matrix &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathLin_Jacobi.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPoly#*1d#I#d#",
+      "nativeName": "MathUtils::EvalPoly",
+      "signature": "MathUtils::EvalPoly: double (const double *, int, double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPolyDeriv#*1d#I#d#&d#S1_#",
+      "nativeName": "MathUtils::EvalPolyDeriv",
+      "signature": "MathUtils::EvalPolyDeriv: void (const double *, int, double, double &, double &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPolyDesc#*1d#I#d#",
+      "nativeName": "MathUtils::EvalPolyDesc",
+      "signature": "MathUtils::EvalPolyDesc: double (const double *, int, double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@GetKronrodPointsAndWeights#I#&$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::GetKronrodPointsAndWeights",
+      "signature": "MathUtils::GetKronrodPointsAndWeights: bool (int, math_Vector &, math_Vector &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_GaussKronrodWeights.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@GetOrderedGaussPointsAndWeights#I#&$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::GetOrderedGaussPointsAndWeights",
+      "signature": "MathUtils::GetOrderedGaussPointsAndWeights: bool (int, math_Vector &, math_Vector &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_GaussKronrodWeights.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RefinePolyRoot#*1d#I#d#I#",
+      "nativeName": "MathUtils::RefinePolyRoot",
+      "signature": "MathUtils::RefinePolyRoot: double (const double *, int, double, int)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RefinePolyRootDesc#*1d#I#d#I#",
+      "nativeName": "MathUtils::RefinePolyRootDesc",
+      "signature": "MathUtils::RefinePolyRootDesc: double (const double *, int, double, int)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RemoveDuplicateRoots#*d#k#d#",
+      "nativeName": "MathUtils::RemoveDuplicateRoots",
+      "signature": "MathUtils::RemoveDuplicateRoots: size_t (double *, size_t, double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@SortRoots#*d#k#",
+      "nativeName": "MathUtils::SortRoots",
+      "signature": "MathUtils::SortRoots: void (double *, size_t)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion.",
+      "kind": "Function",
+      "header": "MathUtils_Poly.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const TCollection_ExtendedString &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#I#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const int)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#d#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const double)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Get#",
+      "nativeName": "Message_Msg::Get",
+      "signature": "Message_Msg::Get: const TCollection_ExtendedString &()",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@IsEdited#1",
+      "nativeName": "Message_Msg::IsEdited",
+      "signature": "Message_Msg::IsEdited: bool () const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void ()",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#&1$@S@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void (const Message_Msg &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Original#1",
+      "nativeName": "Message_Msg::Original",
+      "signature": "Message_Msg::Original: const TCollection_ExtendedString &() const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Set#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Set",
+      "signature": "Message_Msg::Set: void (const TCollection_ExtendedString &)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Value#1",
+      "nativeName": "Message_Msg::Value",
+      "signature": "Message_Msg::Value: const TCollection_ExtendedString &() const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const TCollection_AsciiString &, const int, const int) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const TCollection_AsciiString &, const int, const int) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@FirstLocationInSet#&1$@S@TCollection_ExtendedString#I#I#1",
+      "nativeName": "TCollection_ExtendedString::FirstLocationInSet",
+      "signature": "TCollection_ExtendedString::FirstLocationInSet: int (const TCollection_ExtendedString &, const int, const int) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@FirstLocationNotInSet#&1$@S@TCollection_ExtendedString#I#I#1",
+      "nativeName": "TCollection_ExtendedString::FirstLocationNotInSet",
+      "signature": "TCollection_ExtendedString::FirstLocationNotInSet: int (const TCollection_ExtendedString &, const int, const int) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Length#1",
+      "nativeName": "TCollection_ExtendedString::Length",
+      "signature": "TCollection_ExtendedString::Length: int () const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LengthOfCString#1",
+      "nativeName": "TCollection_ExtendedString::LengthOfCString",
+      "signature": "TCollection_ExtendedString::LengthOfCString: int () const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1C#b#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char *const, const bool)",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToUTF8CString#&*C#1",
+      "nativeName": "TCollection_ExtendedString::ToUTF8CString",
+      "signature": "TCollection_ExtendedString::ToUTF8CString: int (Standard_PCharacter &) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Value#I#1",
+      "nativeName": "TCollection_ExtendedString::Value",
+      "signature": "TCollection_ExtendedString::Value: char16_t (const int) const",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite."
+    }
+  ]
+}

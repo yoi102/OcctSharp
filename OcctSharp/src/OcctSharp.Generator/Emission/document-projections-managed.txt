@@ -1,0 +1,99 @@
+#nullable enable
+using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
+using System.Text;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Interop;
+namespace OcctSharp.DocumentProjections;
+#pragma warning disable CS1591
+
+/// <summary>Copied native array, including empty bounds. Null native handles are represented by null dictionary values.</summary>
+public sealed class NamedDataArray<T> where T:struct {
+ public NamedDataArray(int lowerBound,IEnumerable<T> values){ArgumentNullException.ThrowIfNull(values);var copy=values.ToArray();if(copy.Length>1048576||lowerBound<=int.MinValue||(long)lowerBound+copy.Length>int.MaxValue)throw new ArgumentOutOfRangeException(nameof(lowerBound));if(typeof(T)==typeof(double)&&copy.Cast<double>().Any(v=>!double.IsFinite(v)))throw new ArgumentException("Nonfinite array value.",nameof(values));LowerBound=lowerBound;Values=Array.AsReadOnly(copy);}
+ public int LowerBound{get;}
+ public int UpperBound=>checked(LowerBound+Values.Count-1);
+ public IReadOnlyList<T> Values{get;}
+}
+/// <summary>Immutable complete NamedData value; missing keys, zero values, empty arrays and null native arrays remain distinct.</summary>
+public sealed class NamedDataValues {
+ public NamedDataValues(IEnumerable<KeyValuePair<string,int>>? integers=null,IEnumerable<KeyValuePair<string,double>>? reals=null,
+  IEnumerable<KeyValuePair<string,string>>? strings=null,IEnumerable<KeyValuePair<string,byte>>? bytes=null,
+  IEnumerable<KeyValuePair<string,NamedDataArray<int>?>>? integerArrays=null,IEnumerable<KeyValuePair<string,NamedDataArray<double>?>>? realArrays=null){
+  Integers=Freeze(integers);Reals=Freeze(reals);Strings=Freeze(strings);Bytes=Freeze(bytes);IntegerArrays=Freeze(integerArrays);RealArrays=Freeze(realArrays);
+  if(Reals.Values.Any(v=>!double.IsFinite(v)))throw new ArgumentException("Nonfinite named real.",nameof(reals));foreach(string value in Strings.Values)ProjectionCodec.CheckText(value);
+  if(IntegerArrays.Values.Where(v=>v is not null).Sum(v=>(long)v!.Values.Count)+RealArrays.Values.Where(v=>v is not null).Sum(v=>(long)v!.Values.Count)>1048576)throw new ArgumentException("NamedData array values exceed limit.");
+ }
+ static IReadOnlyDictionary<string,T> Freeze<T>(IEnumerable<KeyValuePair<string,T>>? input){var copy=new Dictionary<string,T>(StringComparer.Ordinal);if(input is not null)foreach(var pair in input){ProjectionCodec.CheckText(pair.Key,4096);if(copy.Count>=4096)throw new ArgumentException("NamedData map exceeds limit.");if(!copy.TryAdd(pair.Key,pair.Value))throw new ArgumentException("Duplicate NamedData key.");}return new ReadOnlyDictionary<string,T>(copy);}
+ public IReadOnlyDictionary<string,int> Integers{get;}
+ public IReadOnlyDictionary<string,double> Reals{get;}
+ public IReadOnlyDictionary<string,string> Strings{get;}
+ public IReadOnlyDictionary<string,byte> Bytes{get;}
+ public IReadOnlyDictionary<string,NamedDataArray<int>?> IntegerArrays{get;}
+ public IReadOnlyDictionary<string,NamedDataArray<double>?> RealArrays{get;}
+}
+/// <summary>Context-bound identity. It cannot be used with another projection context.</summary>
+public sealed class DocumentProjectionLabel {
+ internal DocumentProjectionLabel(DocumentProjectionContext context,string entry){Context=context;Entry=entry;}
+ internal DocumentProjectionContext Context{get;}
+ public Guid ContextIdentity=>Context.Identity;
+ public string Entry{get;}
+}
+/// <summary>Detached label diagnostics and optional copied data. Reading these properties needs no live native owner.</summary>
+public sealed record DocumentLabelProjectionSnapshot(string Entry,IReadOnlyList<int> TagPath,int SubtreeLabelCount,int SubtreeAttributeCount,bool IsSelfContained,NamedDataValues? NamedData);
+public sealed record NamedDataUpdate(DocumentProjectionLabel Label,NamedDataValues? Values);
+
+/// <summary>Borrowing document view. It never releases its parent; callers synchronize native document mutations.</summary>
+public sealed partial class DocumentProjectionContext:IDisposable {
+ internal readonly SafeHandle Parent;
+ internal readonly int Domain;
+ bool disposed;
+ internal bool IsDisposed=>disposed||Parent.IsClosed;
+ internal DocumentProjectionContext(SafeHandle parent,int domain){Parent=parent;Domain=domain;EnsureAlive();}
+ public Guid Identity{get;}=Guid.NewGuid();
+ public static DocumentProjectionContext Bind(TDocStdDocument document){ArgumentNullException.ThrowIfNull(document);return new(document.NativeHandle,0);}
+ internal static DocumentProjectionContext BindLegacy(OcafDocumentHandle document)=>new(document,1);
+ /// <summary>Creates a retained native document with an initialized main label. Use its existing NewCommand/CommitCommand/Undo/Redo APIs.</summary>
+ public static TDocStdDocument CreateNativeDocument(){NativeLibraryResolver.EnsureRegistered(typeof(DocumentProjectionContext).Assembly);OcctRuntime.EnsureCompatible();NativeError.ThrowIfFailed(CreateNative(out var token),"document_projection_create_native");return TDocStdDocument.FromNative(token,"document_projection_create_native")??throw new InvalidOperationException("Null generated document.");}
+ public DocumentProjectionLabel GetLabel(string entry){EnsureAlive();ArgumentException.ThrowIfNullOrWhiteSpace(entry);var label=new DocumentProjectionLabel(this,entry);_ = Snapshot(label);return label;}
+ internal void EnsureAlive(){ObjectDisposedException.ThrowIf(disposed||Parent.IsClosed,this);NativeLibraryResolver.EnsureRegistered(typeof(DocumentProjectionContext).Assembly);}
+ internal void Validate(DocumentProjectionLabel label){ArgumentNullException.ThrowIfNull(label);EnsureAlive();if(!ReferenceEquals(label.Context,this))throw new ArgumentException("Label belongs to a different document/context.",nameof(label));}
+ public DocumentLabelProjectionSnapshot Snapshot(DocumentProjectionLabel label){Validate(label);NativeError.ThrowIfFailed(SnapshotNative(Parent,Domain,label.Entry,out var token),"document_projection_snapshot");using var payload=new ProjectionPayloadHandle(token,1);using var input=ProjectionCodec.Reader(payload,1);
+  string entry=ProjectionCodec.Text(input);int count=ProjectionCodec.Count(input,256);int[] tags=new int[count];for(int n=0;n<count;++n)tags[n]=input.ReadInt32();int labels=input.ReadInt32(),attributes=input.ReadInt32();bool self=ProjectionCodec.Boolean(input);var data=ProjectionCodec.ReadData(input);ProjectionCodec.End(input);return new(entry,Array.AsReadOnly(tags),labels,attributes,self,data);}
+ /// <summary>Atomically replaces or removes complete data inside an existing open command.</summary>
+ public void ReplaceNamedData(DocumentProjectionLabel label,NamedDataValues? values)=>ReplaceNamedData([new(label,values)]);
+ public unsafe void ReplaceNamedData(IEnumerable<NamedDataUpdate> updates){EnsureAlive();ArgumentNullException.ThrowIfNull(updates);var copy=updates.ToArray();if(copy.Length>4096)throw new ArgumentOutOfRangeException(nameof(updates));var entries=new HashSet<string>(StringComparer.Ordinal);
+  foreach(var update in copy){ArgumentNullException.ThrowIfNull(update);Validate(update.Label);if(!entries.Add(update.Label.Entry))throw new ArgumentException("Duplicate update label.",nameof(updates));}
+  using var output=ProjectionCodec.Writer(1);output.Write(copy.Length);foreach(var update in copy){ProjectionCodec.Text(output,update.Label.Entry);ProjectionCodec.WriteData(output,update.Values);}byte[] bytes=ProjectionCodec.Bytes(output);fixed(byte* p=bytes)NativeError.ThrowIfFailed(ReplaceNative(Parent,Domain,p,bytes.Length),"document_projection_replace");}
+ public void Dispose()=>disposed=true;
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_create_native")]private static partial NativeStatus CreateNative(out nint token);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_snapshot",StringMarshalling=StringMarshalling.Utf8)]private static partial NativeStatus SnapshotNative(SafeHandle document,int domain,string entry,out nint token);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_replace")]private static unsafe partial NativeStatus ReplaceNative(SafeHandle document,int domain,byte* data,int length);
+}
+internal sealed class ProjectionPayloadHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ readonly int kind;
+ internal ProjectionPayloadHandle(nint token,int kind):base(true){if(token==0)throw new InvalidOperationException("Null projection payload.");this.kind=kind;SetHandle(token);}
+ protected override bool ReleaseHandle(){ProjectionCodec.Release(handle,kind);return true;}
+}
+internal static partial class ProjectionCodec {
+ internal static readonly UTF8Encoding Utf8=new(false,true);
+ internal const int Limit=16777216;
+ internal static void CheckText(string value,int maximum=Limit){ArgumentNullException.ThrowIfNull(value);if(value.Contains('\0')||Utf8.GetByteCount(value)>maximum)throw new ArgumentException("Invalid/bounded projection text.",nameof(value));}
+ internal static BinaryWriter Writer(int kind){var output=new BinaryWriter(new MemoryStream(),Utf8);output.Write(1);output.Write(kind);return output;}
+ internal static byte[] Bytes(BinaryWriter output){output.Flush();if(output.BaseStream.Length>Limit)throw new ArgumentException("Projection exceeds byte limit.");return ((MemoryStream)output.BaseStream).ToArray();}
+ internal static void Text(BinaryWriter output,string value){CheckText(value);var bytes=Utf8.GetBytes(value);output.Write(bytes.Length);output.Write(bytes);if(output.BaseStream.Length>Limit)throw new ArgumentException("Projection exceeds byte limit.");}
+ internal static string Text(BinaryReader input){int count=Count(input,Limit);if(count>input.BaseStream.Length-input.BaseStream.Position)throw new InvalidDataException("Truncated projection text.");return Utf8.GetString(input.ReadBytes(count));}
+ internal static int Count(BinaryReader input,int maximum=4096){int count=input.ReadInt32();if(count<0||count>maximum)throw new InvalidDataException("Invalid projection count.");return count;}
+ internal static bool Boolean(BinaryReader input){int value=input.ReadInt32();if(value is not 0 and not 1)throw new InvalidDataException("Invalid projection boolean.");return value!=0;}
+ internal static void End(BinaryReader input){if(input.BaseStream.Position!=input.BaseStream.Length)throw new InvalidDataException("Trailing projection data.");}
+ internal static unsafe BinaryReader Reader(ProjectionPayloadHandle handle,int kind){NativeError.ThrowIfFailed(SizeNative(handle,kind,out int count),"document_projection_payload_size");if(count<8||count>Limit)throw new InvalidDataException("Invalid projection size.");byte[] bytes=new byte[count];fixed(byte* p=bytes)NativeError.ThrowIfFailed(CopyNative(handle,kind,p,count),"document_projection_payload_copy");var input=new BinaryReader(new MemoryStream(bytes,false),Utf8);try{if(input.ReadInt32()!=1||input.ReadInt32()!=kind)throw new InvalidDataException("Wrong projection payload type/version.");return input;}catch{input.Dispose();throw;}}
+ internal static void WriteData(BinaryWriter output,NamedDataValues? data){output.Write(data is null?0:1);if(data is null)return;
+  Map(output,data.Integers,v=>output.Write(v));Map(output,data.Reals,v=>output.Write(v));Map(output,data.Strings,v=>Text(output,v));Map(output,data.Bytes,v=>output.Write((int)v));Map(output,data.IntegerArrays,v=>Array(output,v,i=>output.Write(i)));Map(output,data.RealArrays,v=>Array(output,v,i=>output.Write(i)));}
+ static void Map<T>(BinaryWriter output,IReadOnlyDictionary<string,T> values,Action<T> write){output.Write(values.Count);foreach(var pair in values.OrderBy(p=>p.Key,StringComparer.Ordinal)){Text(output,pair.Key);write(pair.Value);}}
+ static void Array<T>(BinaryWriter output,NamedDataArray<T>? array,Action<T> write)where T:struct{output.Write(array?.LowerBound??1);output.Write(array?.Values.Count??-1);if(array is not null)foreach(var value in array.Values)write(value);}
+ internal static NamedDataValues? ReadData(BinaryReader input){if(!Boolean(input))return null;return new(ReadMap(input,()=>input.ReadInt32()),ReadMap(input,()=>input.ReadDouble()),ReadMap(input,()=>Text(input)),ReadMap(input,()=>checked((byte)input.ReadInt32())),ReadMap(input,()=>ReadArray(input,()=>input.ReadInt32())),ReadMap(input,()=>ReadArray(input,()=>input.ReadDouble())));}
+ static IEnumerable<KeyValuePair<string,T>> ReadMap<T>(BinaryReader input,Func<T> read){int count=Count(input);var pairs=new KeyValuePair<string,T>[count];for(int n=0;n<count;++n)pairs[n]=new(Text(input),read());return pairs;}
+ static NamedDataArray<T>? ReadArray<T>(BinaryReader input,Func<T> read)where T:struct{int lower=input.ReadInt32(),count=input.ReadInt32();if(count==-1){if(lower!=1)throw new InvalidDataException("Invalid null array bounds.");return null;}if(count<0||count>1048576)throw new InvalidDataException("Invalid NamedData array count.");var values=new T[count];for(int n=0;n<count;++n)values[n]=read();return new(lower,values);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_payload_size")]private static partial NativeStatus SizeNative(ProjectionPayloadHandle handle,int kind,out int count);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_payload_copy")]private static unsafe partial NativeStatus CopyNative(ProjectionPayloadHandle handle,int kind,byte* data,int count);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_document_projection_payload_release")]internal static partial void Release(nint handle,int kind);
+}

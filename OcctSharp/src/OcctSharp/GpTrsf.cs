@@ -60,6 +60,22 @@ public sealed class GpTrsf : IDisposable
         return FromNativeHandle(transform);
     }
 
+    /// <summary>Creates an exact reflection across a plane with a finite origin and finite, nonzero normal.</summary>
+    /// <remarks>The returned mirror owns its native value; applying it creates independent exact topology.</remarks>
+    public static GpTrsf CreatePlaneMirror(
+        double originX,
+        double originY,
+        double originZ,
+        double normalX,
+        double normalY,
+        double normalZ)
+    {
+        NativeError.ThrowIfFailed(
+            NativeMethods.CreatePlaneMirror(originX, originY, originZ, normalX, normalY, normalZ, out nint transform),
+            "trsf_create_plane_mirror");
+        return FromNativeHandle(transform);
+    }
+
     /// <summary>Returns an independent native value copy.</summary>
     public GpTrsf Clone()
     {

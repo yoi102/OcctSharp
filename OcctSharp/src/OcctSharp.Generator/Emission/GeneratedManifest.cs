@@ -5,7 +5,10 @@ public sealed record GeneratedManifest(
     string OcctVersion,
     string BindingModelSchemaVersion,
     IReadOnlyList<string> SourceStableIds,
-    IReadOnlyList<GeneratedManifestFile> Files);
+    IReadOnlyList<GeneratedManifestFile> Files,
+    IReadOnlyList<GeneratedResourceFingerprint>? GeneratorResources = null);
+
+public sealed record GeneratedResourceFingerprint(string ResourceName, string Sha256);
 
 public sealed record GeneratedManifestFile(
     string RelativePath,

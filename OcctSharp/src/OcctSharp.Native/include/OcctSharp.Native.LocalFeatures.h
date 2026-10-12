@@ -108,6 +108,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_boolean_topology_history
   const OcctSharp_ShapeHandle* const* inputs, int32_t count, int32_t argument_count,
   int32_t operation, OcctSharp_FeatureResultHandle** output);
 
+/* Exact rigid/reflection ModifiedShape or compound membership history. Each
+   tracked source slot and each ordered source argument is preserved. */
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_transform_history(
+  const OcctSharp_ShapeHandle* source, const OcctSharp_TrsfHandle* transform, OcctSharp_FeatureResultHandle** output);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_compound_history(
+  const OcctSharp_ShapeHandle* const* inputs, int32_t count, OcctSharp_FeatureResultHandle** output);
+
 /* All-zero null buffers query counts. Otherwise every capacity is checked before
    any array is written, including arrays whose corresponding count is zero. */
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_local_feature_snapshot(

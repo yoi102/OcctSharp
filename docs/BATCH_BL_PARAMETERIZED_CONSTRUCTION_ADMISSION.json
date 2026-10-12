@@ -1,0 +1,836 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.61",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "6218E2DDB892ED1D3324355D902718C6404D4A91246B4FEB541388EA1ED7CDCA",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@TopoDS_Vertex#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Pnt#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@operator TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::operator TopoDS_Edge",
+      "signature": "BRepBuilderAPI_MakeEdge::operator TopoDS_Edge: TopoDS_Edge ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const TopoDS_Face &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@TopoDS_Face#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const TopoDS_Face &, const TopoDS_Wire &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cone#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cone &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cone#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cone &, const TopoDS_Wire &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cone#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cone &, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cylinder#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cylinder &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cylinder#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cylinder &, const TopoDS_Wire &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cylinder#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cylinder &, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Pln &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Pln &, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Sphere#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Sphere &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Sphere#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Sphere &, const TopoDS_Wire &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Sphere#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Sphere &, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Torus#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Torus &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Torus#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Torus &, const TopoDS_Wire &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Torus#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Torus &, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Init",
+      "signature": "BRepBuilderAPI_MakeFace::Init: void (const TopoDS_Face &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@operator TopoDS_Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::operator TopoDS_Face",
+      "signature": "BRepBuilderAPI_MakeFace::operator TopoDS_Face: TopoDS_Face () const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@TopoDS_Vertex#S0_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Circ &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Circ &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Circ &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Circ &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Elips &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Elips &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Elips &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Elips &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Hypr &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Hypr &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Hypr &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Hypr &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Lin &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Lin &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Lin &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Lin &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Parab &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Parab &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Parab &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Parab &, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "BRepLib_MakeEdge::Init",
+      "signature": "BRepLib_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@operator TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeEdge::operator TopoDS_Edge",
+      "signature": "BRepLib_MakeEdge::operator TopoDS_Edge: TopoDS_Edge ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent lower/upper-level overload or no useful admitted finite workflow; uninitialized, infinite/default, implicit conversion and arbitrary mutable receiver paths remain deferred."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@BRep_Tool@F@CurveOnSurface#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#&d#S7_#*b#S",
+      "nativeName": "BRep_Tool::CurveOnSurface",
+      "signature": "BRep_Tool::CurveOnSurface: occ::handle<Geom2d_Curve> (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, double &, double &, bool *)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Range#&1$@S@TopoDS_Edge#&d#S2_#S",
+      "nativeName": "BRep_Tool::Range",
+      "signature": "BRep_Tool::Range: void (const TopoDS_Edge &, double &, double &)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit."
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_Command::IsDone",
+      "signature": "BRepBuilderAPI_Command::IsDone: bool () const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Error",
+      "signature": "BRepBuilderAPI_MakeFace::Error: BRepBuilderAPI_FaceError () const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Shape",
+      "signature": "BRepBuilderAPI_MakeShape::Shape: const TopoDS_Shape &()",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepLib@F@BuildCurve3d#&1$@S@TopoDS_Edge#d#$@E@GeomAbs_Shape#I#I#S",
+      "nativeName": "BRepLib::BuildCurve3d",
+      "signature": "BRepLib::BuildCurve3d: bool (const TopoDS_Edge &, const double, const GeomAbs_Shape, const int, const int)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepLib_Command@F@IsDone#1",
+      "nativeName": "BRepLib_Command::IsDone",
+      "signature": "BRepLib_Command::IsDone: bool () const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Edge#",
+      "nativeName": "BRepLib_MakeEdge::Edge",
+      "signature": "BRepLib_MakeEdge::Edge: const TopoDS_Edge &()",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Error#1",
+      "nativeName": "BRepLib_MakeEdge::Error",
+      "signature": "BRepLib_MakeEdge::Error: BRepLib_EdgeError () const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Vertex1#1",
+      "nativeName": "BRepLib_MakeEdge::Vertex1",
+      "signature": "BRepLib_MakeEdge::Vertex1: const TopoDS_Vertex &() const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Vertex2#1",
+      "nativeName": "BRepLib_MakeEdge::Vertex2",
+      "signature": "BRepLib_MakeEdge::Vertex2: const TopoDS_Vertex &() const",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@UVBounds#&1$@S@TopoDS_Face#&d#S2_#S2_#S2_#S",
+      "nativeName": "BRepTools::UVBounds",
+      "signature": "BRepTools::UVBounds: void (const TopoDS_Face &, double &, double &, double &, double &)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Curve#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#&d#S4_#S",
+      "nativeName": "BRep_Tool::Curve",
+      "signature": "BRep_Tool::Curve: const occ::handle<Geom_Curve> &(const TopoDS_Edge &, TopLoc_Location &, double &, double &)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Surface#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#S",
+      "nativeName": "BRep_Tool::Surface",
+      "signature": "BRep_Tool::Surface: const occ::handle<Geom_Surface> &(const TopoDS_Face &, TopLoc_Location &)",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Face",
+      "signature": "BRepBuilderAPI_MakeFace::Face: const TopoDS_Face &() const",
+      "reason": "Existing exact native face output and result-domain endpoint sharing; no migration credit.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@TopoDS_Shape@F@IsSame#&1$@S@TopoDS_Shape#1",
+      "nativeName": "TopoDS_Shape::IsSame",
+      "signature": "TopoDS_Shape::IsSame: bool (const TopoDS_Shape &) const",
+      "reason": "Existing exact native face output and result-domain endpoint sharing; no migration credit.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

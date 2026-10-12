@@ -1,0 +1,55 @@
+using OcctSharp.Generator.Emission;
+using OcctSharp.Generator.Model;
+using OcctSharp.Generator.Transformation;
+
+namespace OcctSharp.Generator.Tests;
+
+public sealed class MeshWorkspaceContractTests
+{
+    static readonly ClosedWorkflowOperationContract[] Contracts =
+        [ClosedWorkflowOperationContract.PolyDataWorkspaces, ClosedWorkflowOperationContract.MeshingWorkspaces];
+    static BindingDeclaration Declaration(CopiedCollectionOperationContract.Operation op) => new(
+        op.StableId, op.NativeName, BindingDeclarationKind.Method, op.NativeName.Split("::")[0] + ".hxx", 1, 1)
+    { NativeSignature = op.Signature, Access = BindingAccess.Public, ProductModule = OcctProductModule.MeshData };
+
+    [Fact] public void ExactAccessAndSignatureRequired()
+    {
+        foreach (var contract in Contracts)
+        {
+            var d = Declaration(contract.Operations.Values.First(o => !o.Supporting));
+            Assert.True(contract.Contains(d));
+            Assert.False(contract.Contains(d with { NativeSignature = d.NativeSignature + " " }));
+            Assert.False(contract.Contains(d with { Access = BindingAccess.Private }));
+            Assert.False(contract.Contains(d with { SupportState = BindingSupportState.Manual }));
+            Assert.False(contract.Contains(d with { IsPureVirtual = true }));
+        }
+    }
+    [Fact] public void SupportingDeclarationsCannotStartEitherWorkflow()
+    {
+        foreach (var contract in Contracts)
+        {
+            var output = ClosedWorkflowOperationEmitter.Emit("8.0.1", new BindingModel(contract.Operations.Values.Where(o => o.Supporting).Select(Declaration)), contract);
+            Assert.Empty(output.Files); Assert.Empty(output.SourceStableIds);
+        }
+    }
+    [Fact] public void MissingDependenciesRejectPartialWorkflow()
+    {
+        foreach (var contract in Contracts)
+            Assert.Throws<InvalidDataException>(() => ClosedWorkflowOperationEmitter.Emit("8.0.1",
+                new BindingModel([Declaration(contract.Operations.Values.First(o => !o.Supporting))]), contract));
+    }
+    [Fact] public void DeterministicScopedWorkflowsExcludeRawWrappingAndCallbacks()
+    {
+        foreach (var contract in Contracts)
+        {
+            var rows = contract.Operations.Values.Select(Declaration).ToArray();
+            var a = ClosedWorkflowOperationEmitter.Emit("8.0.1", new BindingModel(rows), contract);
+            var b = ClosedWorkflowOperationEmitter.Emit("8.0.1", new BindingModel(rows.Reverse()), contract);
+            Assert.Equal(contract.Operations.Count, a.SourceStableIds.Count);
+            Assert.Equal(a.Files.Select(f => f.Content), b.Files.Select(f => f.Content));
+            Assert.All(a.Files, f => Assert.Equal(contract.Module, f.ProductModule));
+            Assert.DoesNotContain(contract.Operations.Values, o => o.Signature.Contains("&&") || o.Signature.Contains("IMeshTools_Context") || o.Signature.Contains("theBegin"));
+        }
+        Assert.DoesNotContain(Contracts.SelectMany(c => c.Operations.Values), o => o.NativeName.Contains("InternalNodes") || o.NativeName.Contains("ChangeTriangle") || o.NativeName.EndsWith("::Discret", StringComparison.Ordinal));
+    }
+}

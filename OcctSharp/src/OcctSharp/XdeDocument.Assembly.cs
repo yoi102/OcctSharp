@@ -6,6 +6,22 @@ namespace OcctSharp;
 /// <summary>Assembly-authoring, BOM, reference, and occurrence workflows.</summary>
 public sealed partial class XdeDocument
 {
+    /// <summary>Copies a simple definition and its colors, layers and materials into this document,
+    /// applying a rigid transform or exact reflection using the native algorithm's subshape history.</summary>
+    /// <remarks>The destination requires an open transaction. On failure, abort that transaction.
+    /// Source topology indices are not used as result identities; assemblies and scaling are rejected.</remarks>
+    public XdeLabel CopyTransformedDefinition(XdeLabel source, GpTrsf transform, string? name = null)
+    {
+        ArgumentNullException.ThrowIfNull(source); ArgumentNullException.ThrowIfNull(transform);
+        ThrowIfDisposed(); source.Document.ThrowIfDisposed(); transform.ThrowIfDisposedForLocation();
+        if (name is not null) ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        string entry = ReadFixed((nint buffer, int capacity, out int written) =>
+            NativeMethods.CopyTransformedXdeDefinition(Handle, source.Document.Handle, source.Entry, transform.Handle,
+                buffer, capacity, out written), "xde_copy_transformed_definition");
+        XdeLabel copy = new(this, entry);
+        if (name is not null) copy.Name = name;
+        return copy;
+    }
     /// <summary>Replaces a reusable definition's owning topology inside the current transaction.</summary>
     public void UpdateDefinitionShape(XdeLabel definition, Shape shape)
     {

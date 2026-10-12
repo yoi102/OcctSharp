@@ -1,5 +1,263 @@
 # Ownership and Lifetime
 
+## CH independent serialized graphs and sketch support (in validation)
+
+CH also admits viewer-owned source creation IDs and instance-retained snapshots
+under ADR-0139. Removing a creation entry leaves existing instances alive.
+Separate copied TShapes and mesh storage prevent viewer mutation of caller
+topology. Original identities are retained only for exact source correspondence;
+styles and mutable drawers are owned independently. Context destruction clears
+both maps. Source refresh stages changes before publication and never guesses a
+geometric match. Managed sources are marked removed when their viewer disposes.
+
+SerializedReferences/SerializedOccurrences shared payloads belong to the existing
+FeatureResultHandle registry. Capture/import publish only a complete bounded
+graph; failure unwinds private temporary owners. Restored roots/members use
+ordinary independent Shape handles. OccurrenceRestoreResult retains a feature
+owner for native identity/path queries; disposal releases root, members and
+query owner. Source and decoded domain labels are not correspondence proof.
+Sketch expression DTOs retain copied primitive arrays; callback-pinned raw nodes
+must not escape. Exact template sources and budget contracts are in
+BATCH_CH_APPLICATION_PREREQUISITES.json; actual lifetime validation remains pending.
+
+## BY private Boolean/repair copies
+
+TM058 keeps the existing input graph and result ownership. Native-only builders
+own their initialized SDK object; topology/history getters return retained values
+and independent vector storage, not geometry deep copies. SDK errors/warnings
+become owning strings while the builder is alive, with65536 bytes per kind and
+atomic failure on stream overflow. Existing Message and feature-result owners
+carry them across the ABI. Repair history is accessed only under its existing
+nonnull private owner and keeps all relations. No callback, borrowed public
+receiver or new registry category is added. See [BY](BATCH_BY_BOOLEAN_REPAIR.md).
+
+## BU generated unit/diagnostic composition
+
+UnitDiagnosticWorkflow composes TM029 private units and TM035 copied diagnostics.
+Enumeration is bounded and disposed before SDK calls; each private native row
+owner is disposed before retaining detached copies. Success returns a read-only
+managed batch; failure publishes no batch. No global working-unit setter or new
+ownership category is introduced. See [BU contract](BATCH_BU_UNIT_DIAGNOSTIC.md).
+
+## BT call-private coupled constraints
+
+TM054 ([ADR-0136](adr/0136-call-private-coupled-constraint-copies.md)) retains no
+SDK owner or caller buffers. Copied array constructors initialize each private row;
+2D indices follow the3D SDK domain, absent channels are never dereferenced, and all
+rows are staged before final publication. Managed snapshots own independent arrays
+with caller bounds and survive input mutation or enumeration disposal. No shallow
+copy detachment, shared mutable owner or callback is claimed. Inputs require
+synchronization during enumeration; row/point budgets bound storage only.
+
+BR generates compatible Foundation Text/Collections/Transient and bounded
+BSplineKnotBuffers implementations from explicit templates. Existing registry
+owners, release validation and managed SafeHandles remain identical; compile
+units keep independent includes without generated PCH. TM053 copies the complete
+static SDK knot sequence after degree/capacity checks, never its address.
+No new ownership category is introduced. See [ADR-0135](adr/0135-generated-compatible-legacy-adapters.md).
+
+AW TM030 retains only private copied curves/surfaces and completion-gates every
+filling output; sampled values are immutable detached rows. TM031 assembles new
+initialized topology from private curve copies, validates it before publication,
+and provides no inferred topology-history mapping. See
+[ADR-0115](adr/0115-private-filling-kernels-and-controlled-topology-assembly.md).
+
+AV TM029 initializes strings/paths/colors privately and proves unit dimensions
+before conversion. Bounded success-only registry snapshots are fully copied and
+released before managed results return. UTF16 edit boundaries reject surrogate
+splitting; no borrowed string, vector or dimension escapes. See
+[ADR-0114](adr/0114-generated-call-private-foundation-values.md).
+
+## AP private modeling builders
+
+[ADR-0108](adr/0108-generated-private-modeling-builders.md) keeps builders call-private
+and publishes frozen typed registry owners. Curves and edge input graphs are geometry
+copies. Unfinished builders publish diagnostics only. Result/group queries make new
+geometry copies. Contents counters are explicitly initialized. Wire checks copy an
+exact member with its face and publish optional coupled values only when found.
+
+AN's [private writer diagnostics](BATCH_AN_WRITER_DIAGNOSTICS.md) deep-copy all
+source shapes and geometry before one serialized export epoch. Immutable managed
+snapshots retain no native objects. Writer SafeHandles use typed registry leases;
+source, map and model index domains remain separate and session-bound. See
+[ADR-0106](adr/0106-private-writer-diagnostics.md).
+
+Private .15 prepares only the existing viewer-owned detached topology before shaded graphics. The configured native mesh operation owns its parallel flag and completes synchronously before OpenGL work; original caller topology and process-wide mesh defaults are untouched. No ABI/ownership category or selected native owner is replaced. This remains implemented, not SDK-delivery accepted; see [source tessellation](CADORYX_A5_SOURCE_TESSELLATION.md) and [current status](STATUS.md).
+
+Previous current summary preserved in [history](history/CADORYX_A5_PROGRESS_20261006_1.md).
+
+## Earlier progress records (historical state)
+
+2026-10-06 private A5 .14 texture validation: formal .13 application freeze8 complete2928/2928 passes with zero failures/skips and all accepted B17 cases;852 source/436 payload and actual62 native bindings match. Same freeze feedback39/full60 PNG/general WPF evidence remains separate. Independent .13 consumer75 produces57 PASS/18 FAIL: all prior51 and six file-removal lifecycles pass; six material slots each accept three corrupt nonempty encodings during source creation and refresh. Twelve base/emissive/occlusion/common-diffuse refreshes change retained frames; metallic-roughness/normal remain identical under this profile but also accept bad data. Other viewer/selection and recovery hold. Actual13 SDK/62 native and package/cache/lock bindings are verified. The failed audit assumption that every slot must alter this profile is retained; original75 assertions/results are unchanged.
+
+Isolated private .14 now validates detached encoded textures before publishing source styles, with per-source deduplication and a compressed-image reader path; original encoded ownership and exact BRep/copy/transform proof remain. Release native and managed zero-warning/error builds pass. Source53 contains all prior29 plus24; full786 contains all prior762 with zero failures/skips. Both actual62 native sets match frozen6;965 source inputs have two changed originals/two additions,184 original generated files unchanged and61 native dependencies unchanged. All18 malformed create/refresh attempts now reject without changing retained frames,selected instance or other viewer, and recovery passes. Initial managed analyzer errors/freeze-classifier failure remain; fixes preserve behavioral assertions. Actual Debug,compressed-texture positive fixtures,50 private headers,exports/Generator,immutable14 packages/consumers and formal Cadoryx14 integration remain NOT RUN. Formal .13 packages/application are unchanged. New app freeze8 benchmarks,6482ms target,complete driver/material matrices and physical input remain pending. Latest accepted A4/B17/C5/D5/E4/F5g;A5 NOT_ACCEPTED;whole A-F IN_PROGRESS;G deferred. Evidence: OcctSharp/artifacts/cadoryx-a5/texture-validation-full-verification-1.json,package-consumer-negative-verification-2.json and Cadoryx/artifacts/a5-full-verification-5.json.
+
+2026-10-06 A5 imported source and encoded texture snapshots: frozen .12
+Release755/755 contains all previous750 plus five added cases, and focus22/22
+passes. Four actual STEP/IGES workflows exercise shaded/wireframe source refresh,
+two-level shared STEP assembly structure, caller/file release, exact full frames
+and original whole/face/edge identities. This is a constructed exchange fixture
+matrix, not complete vendor/PMI/texture interoperability acceptance.
+The external glTF base-color texture first-display test reproduced a borrowed
+file dependency. Source material snapshots now copy encoded file, buffer and
+file-slice bytes into viewer-owned buffers. All six common/PBR texture slots
+reuse exact owned bytes, retain scalar metadata, and use never-reused GPU IDs.
+Public native build18/run15 passes25/25 including buffer mutation, caller-file
+removal, file slices and inactive cached-mode release. All34 PNGs are reviewed:
+33 match prior reviewed frames byte-for-byte and one new frame is directly read.
+Imported STEP whole selection exposed old-source OpenGL connections in cached
+wireframe after shaded-mode refresh. Four crash/Aborted runs are retained.
+Recompute all cached modes before retiring the previous source; imported four
+cases now pass without changing exact selection or full-frame assertions.
+Frozen961 sources have23 changes/additions;14 managed/62 native and all62 actual
+loaded native DLLs are bound. Standalone private headers48/48 pass. Release
+exports remain five additions over .11/no removals. The existing script
+regenerates/checks4152 unchanged forwarders; all generated source stays .11.
+Debug, packages/consumers, complete material/PBR import fidelity, rendering
+failure injection, application integration and6.482s timing remain pending.
+Cadoryx stays .11; A5 NOT_ACCEPTED, complete A-F IN_PROGRESS, G deferred.
+Evidence: Cadoryx artifacts/a5-sdk-verification-6.json and SDK sdk-freeze-3.json.
+
+
+2026-10-06 A5 explicit source-style refresh: the private .12 SDK now exposes
+ViewerSource.RefreshStyles(XdeLabel). Exact original topology membership,
+native partner, twelve placement coefficients and root orientation are required.
+Staged per-viewer styles rebase existing instances and explicit root/subshape
+overrides without replacing AIS objects or logical IDs. Review appearances and
+textures bind to new owned drawers; reset restores the refreshed source.
+Newly hidden topology is deselected; unchanged selected native owners are reused.
+Frozen Release750/750 contains all previous741 plus nine added cases; focus17/17,
+direct public OCCT build16/run13 22/22 and standalone private headers47/47 pass.
+Release exports add exactly five names over .11 with no removals; actual Debug
+and Release-Debug comparison have not run. Frozen959 sources have21 changes;
+14 managed/62 native and all62 actually loaded native DLLs are bound. Generated
+source and4152 script-regenerated/check forwarders are byte-identical to .11.
+Thirty-three native PNGs include31 identical reviewed frames and two new frames
+directly reviewed. The transparent-face fixture failure and explicit-zero-alpha
+implementation failure remain; the latter fix retains the original assertion.
+The SDK appearance helper stages allocation before swaps. Invalid-input atomic
+rejection is tested; driver/render failure injection is NOT RUN.
+Cadoryx stays .11. Imported hierarchy/material/texture fidelity, Debug, immutable
+packages/independent consumers, application integration and6.482s timing remain
+pending. A5 NOT_ACCEPTED; complete A-F IN_PROGRESS; G deferred by the user.
+Evidence: Cadoryx artifacts/a5-sdk-verification-4.json and SDK sdk-freeze-2.json.
+Frozen parent packaging documents remain .11; no new package is claimed.
+
+
+## Cadoryx direct XDE presentation metadata (SC-070)
+
+The independent color/visibility readers return copied values only. Setting
+one native channel or visibility borrows its parent document SafeHandle and
+requires that document's open transaction. Explicit metadata copying retains
+both source and destination SafeHandles during the synchronous call. XCAF
+recreates layer/material records and clones visual material objects using a
+call-local map. Destination labels remain parent-bound to the destination;
+source disposal does not invalidate copied assignments. No topology identity,
+geometry, name, validation, PMI or arbitrary attribute is transferred. The
+caller proves native label correspondence separately and aborts on failure.
+No new owner, registry category, borrowed pointer or release API is added.
+
+## Cadoryx exact transform and compound history
+
+SC-069 reuses LocalFeatureResult ownership. Managed calls retain snapshot and
+transform SafeHandles throughout native copying/building. The native InputGraph
+copies all inputs as one private graph, preserving shared topology without
+mutating caller flags or geometry. Transform builders and compound membership
+maps remain call-local; only copied results and history are published. Those
+owners survive input and transform disposal and use the existing feature-result
+release path. No borrowed native builder, additional registry or lifetime
+category is added. Diagnostic-copy order must be proven before Evolution support
+is published; callers must treat unavailable history separately from valid geometry.
+
+## Batch AJ coupled repair receivers and snapshots
+
+[ADR-0101](adr/0101-generated-coupled-repair-workspaces.md) defines private deep
+topology/geometry copies, exact native copy correspondence and location-aware
+ShapeBuild_ReShape contexts. Repair calls serialize and retire receivers after
+native mutation/publication failures. Validation rejection does not advance epochs.
+The four small-edge collections and face orientation map retain their parent and
+epoch. Consume requires the same receiver/epoch and publishes all post-operation
+collections together. Inspection maps and result/history are copied in one common
+identity domain; native containers remain private. WireData copies only sequence
+storage and preserves shape identity. Segment storage and patch sequences are
+private; implicit aliasing copies remain deferred. Returned owners outlive managed
+receiver disposal. See the [AJ contract](BATCH_AJ_REPAIR_WORKSPACES.md).
+
+## Batch AI topology values and retained exchange entities
+
+[ADR-0100](adr/0100-generated-topology-and-exchange-collections.md) adds ordered
+ShapeSet value copies preserving TShape/location/orientation, not deep geometry
+clones. Private Boolean/build/split receivers retain arguments/tools and exact
+history, run serially/non-destructively, and require exact membership for history.
+Removal and keep-shape inputs require exact source topology. Returned values/sets
+have independent lifetimes. SafeHandle pointer-array inputs retain every element.
+
+EntitySet retains intrusive references and RTTI with detached container storage;
+entities remain shared. Iterator storage/cursor are private and serialized. Native
+implicit cursor copies are excluded. Private file readers expose one transfer
+epoch, validate all members before transfer, retire after transfer exceptions,
+and forbid repeat transfer/cache reuse. Owned direct graph data retain the entire
+private native session/model and survive managed reader disposal through that
+retention; graph/transfer calls serialize through the parent. Model-number/transfer
+calls require a live session; foreign identity is rejected. Shape-to-entity lookup
+admits only the mapped first-match branch; root and recorded lookup branches use
+invalid index domains in the pinned SDK and are rejected before the call.
+External entity mutation is unsupported
+while model/graph consumers use it. Shared sewing/binder calls keep their normal
+caller synchronization requirement. Leased typed registry owners, rollback
+publication, exception containment and separate result disposal remain mandatory.
+
+## Batch AH typed curve collections and sized scalar outputs
+
+[ADR-0099](adr/0099-generated-bulk-analysis-and-typed-curve-collections.md) adds
+typed curve sets and concatenation results using leased non-transient registry
+owners containing intrusive handles to deep copies. Input SafeHandles are retained
+during copying. Set and curve accessors return independent owning copies. Concat
+mutates private copies and retains updated-input and output sets; callers dispose
+each returned owner. Numeric scalar refs publish after all output preparation succeeds.
+
+## Batch AG grids and retained interpolation
+
+[ADR-0098](adr/0098-generated-surface-grids-and-retained-interpolation.md) extends
+the copied profile to owning Array2 grids and independent HArray1 copies. Algorithms
+retain HArray inputs through OCCT intrusive handles. Typed registry leases own only
+non-transient algorithm wrappers and owning Array1/Array2 containers. Boolean elements
+cross as checked bytes. Results retain independent handles; immutable snapshots outlive
+receivers. SurfaceFitOwner additionally owns the exact constant-height fallback surface,
+clears it on reinitialization and retains previous returned surfaces through their handles.
+Copy-out reports the kernel's actual replacement bounds and publishes managed refs only
+after complete conversion. Caller synchronization is required for receiver mutation.
+
+For direct AG consumption, the existing FreeformAuthoring and FreeformTypes public
+types are owned by the Modeling assembly; ShapeExchange, StepReadResult and
+StlWriteOptions are owned by DataExchange. Their native allocation/release and
+independent Shape result contracts are unchanged. The facade forwards the moved
+types, preserving existing public namespaces and signatures without a reverse
+module dependency.
+
+## Batch AF copied arrays and sequences
+
+[ADR-0097](adr/0097-generated-copied-arrays-and-sequences.md) defines independent
+managed snapshots, typed leased native containers and owning fitting algorithms.
+Factories copy input buffers during the call; algorithms use native copies. Output
+references are copied before receiver release and retained in private immutable
+snapshots for bounded info/copy transfer. Ref replacements happen only after every
+managed conversion succeeds; finally releases all result tokens. Native receiver
+mutation is not rolled back. Existing shared receiver contracts and Manual entries
+remain intact. Array2, retained HArray handles, pointer results and other element
+lifetimes require the next explicit contract.
+
+
+## Owned data workflow expansion
+
+[Batch AD](BATCH_AD_OWNED_DATA_WORKFLOWS.md) reuses ADR-0096 for 14 initialized
+hatch, intersection, IGES, flag and picking data owners. Hatch endpoint sequences
+copy their nodes; returned endpoints/elements and nearest-pick results have
+independent storage. IGES result handles retain their entities after builder
+disposal. Shared handle inputs remain non-null and registry-validated. No borrowed
+address or mutable owner reference is published, and the permission-flag owner
+does not perform filesystem operations.
+
 ## Batch AC utility and SELECT extension
 
 [Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md) reuses ADR-0096 for additional audited
@@ -80,7 +338,10 @@ handle field. Existing sharing remains intentional; it is not a deep copy of OCC
 The receiver and inputs must remain valid during the call under existing thread and
 mutation rules. New const methods invoke a const receiver. Pointers, mutable references,
 rvalue transfers and general TopoDS reference returns retain their prior restrictions.
-Sequence-start references require an explicit length/copy contract (SC-061).
+Sequence-start references require an explicit length/copy contract. The
+`BSplCLib::FlatBezierKnots` SC-061 manual binding copies its complete bounded static
+array into caller-owned storage during one guarded native call. No borrowed reference
+survives the call; other sequence-start references remain excluded.
 
 ## Batch W render-resource contract
 
@@ -806,3 +1067,438 @@ remain call-local. Existing FeatureResult and Shape owners publish the result an
 history shapes; input disposal after Build cannot invalidate outputs. History
 result indices refer to the exact final graph, with final traversal orientation.
 There is no new registry or borrowed pointer; existing release paths are reused.
+
+## Batch AE exchange scalar owners
+
+`IGESData_GlobalSection` and `StepData_Field` use ADR-0096's typed owned tokens,
+call-duration leases and typed release. The IGES constructor implementation in
+the locked OCCT 8.0.1 SDK initializes all selected scalar fields, despite the
+header's general warning. The STEP constructor clears its scalar state.
+No string handle, borrowed pointer, list storage or mutable output crosses this
+new surface. See [Batch AE](BATCH_AE_EXCHANGE_SCALAR_VALUES.md) for the exact scope.
+
+## Viewer view cube
+
+`OcctSharp_ViewerHandle` owns its optional `AIS_ViewCube` and two curved-arrow
+`AIS_Shape` handles. Visibility adds or removes them from that viewer's
+`AIS_InteractiveContext`; the arrows are additionally removed during oblique
+views. Release clears the context before nullifying all three handles. Hit
+testing copies only an orientation or roll-action value, and the managed facade
+never receives an OCCT owner handle. All operations retain the viewer's
+creating-thread restriction.
+
+## Cadoryx C3 plane reflection ownership
+
+Plane mirror creation allocates the existing registry-owned TransformHandle;
+GpTrsf owns it through its existing SafeHandle release. Failed creation leaves
+the output null. Shape.Transformed borrows the source and transformation for
+the call, uses BRepBuilderAPI_Transform with copy enabled, and returns an
+independent owning Shape. Disposing either input does not invalidate the
+result. No new registry category or borrowed pointer is introduced.
+
+## Exact transformed XDE definition copy (Cadoryx C3, 2026-10-02)
+
+The synchronous call borrows both document SafeHandles and the existing GpTrsf
+SafeHandle. The builder copies owning geometry and keeps native history only
+inside the call. Destination labels remain parent-bound to the destination XDE
+document; disposing or removing the source does not invalidate their topology
+or metadata. Physical materials/layers are recreated through XCAF metadata copy;
+a call-local visual-material map creates independent destination material
+records. Only the stable destination entry string crosses the ABI. Failed
+operations require aborting the open destination transaction, so no partially
+copied definition may be published. No borrowed shape pointer, history handle,
+registry category or release API is added.
+
+## Copied self-interference report (Cadoryx D2, 2026-10-01)
+
+The call borrows the source Shape SafeHandle only during synchronous execution. BRepBuilderAPI_Copy(copyGeom=true, copyMesh=false) isolates source geometry from analyzer cache updates. The analyzer, its fault list and all copied topology die in the native call. Only two int32 fault-record counts cross the boundary; output counts are zeroed before guarded work and assigned after successful analysis. ShapeSelfInterferenceReport holds no native handle, borrowed pointer or lifetime dependency. Algorithm errors throw rather than returning a clean report; other/unknown fault records keep IsClear false. Disposed managed Shape inputs reject before native entry.
+
+## Adaptive knot-span inspection (Cadoryx B9, 2026-10-02)
+
+Inspection borrows the Shape SafeHandle synchronously. If finite continuity
+requires partitioning, BRepBuilderAPI_Copy(copyGeom=true,copyMesh=false) creates
+independent call-local geometry before ShapeUpgrade modifies any topology.
+Partitioned shapes, contexts and GProp objects die in the call; original topology,
+locations and cached reference identities remain untouched. The existing property
+record and new AdaptiveShapeInspection contain copied scalar values only. No
+registry category, owning/borrowed pointer, native result lifetime or release API
+is added. Failed adaptive calls initialize outputs to zero and publish scalars
+only after a successful computation.
+
+If the pinned continuity divider fails during volume inspection, its partial
+result is discarded. Span-aware GK reads the validated independent geometry
+copy; all numerical objects remain call-local and the original is untouched.
+
+SketchModeling.InspectIntersections uses call-local copied 2D curves and a local
+intersector. Point/interval counts and endpoint values are independent scalars;
+SketchIntersectionInspection owns a read-only copy and no native handle. The
+explicit pair call remains separate from legacy same-object self-intersection.
+
+## Cadoryx A5 viewer-owned source snapshots (private candidate, 2026-10-06)
+
+The isolated `.12` candidate introduces source creation IDs in the existing
+viewer. The managed `ViewerSource` is parent/thread bound and owns no borrowed
+pointer or independent SafeHandle. Its viewer owns copied native topology,
+effective XCAF styles and exact original/copy correspondence. Instance entries
+retain the snapshot after a source creation entry is disposed or cleared;
+existing instances remain usable, while new instances from that source reject.
+Source IDs are globally non-reused; foreign/stale IDs reject. Presentation
+removal drops its retained source. Viewer disposal removes graphics and clears
+both source and instance maps. Original shapes are kept solely for exact
+selection correspondence, not rendered or modified by viewer operations.
+
+Mutable per-instance drawers are copied; style edits detach shared graphics.
+Selected/detected topology uses exact TShape partnership plus all twelve
+location coefficients to return original topology; ambiguous/missing matches
+fail. Imported texture ownership and source-revision refresh are not yet
+accepted. Direct C++20/20 and frozen source-snapshot SDK Release741/741
+(eight added cases, focused9/9) are separate evidence; all62 actual loaded
+native DLLs match that frozen candidate. Debug, package consumers,
+application and performance remain separate gates.
+
+## Cadoryx A5 explicit viewer-source style revisions
+
+Refresh borrows the XDE SafeHandle for one synchronous, viewer-thread call.
+The viewer retains its detached topology and exact original/copy map. Root
+identity, orientation, placement and full membership are checked before styles
+are staged in a new private XCAF document. Each existing instance gets staged
+owned drawers and explicit override replay; no presentation object is replaced.
+Appearance originals point to the new source defaults, and textures remain
+viewer-owned. Handle/map swaps retain IDs, transforms and manipulators. Exact
+selected native owners are reused only where the same copied topology remains
+sensitive; newly hidden topology is deselected. Released source creation entries
+cannot be refreshed; retained instances keep their last source snapshot.
+Frozen2 Release750/750 and17 focused tests exercise this finite source contract;
+22 direct native cases independently prove selected owner retention and hidden
+sensitive removal. Complex imported textures and rendering failure injection
+remain separate unverified gates. Cadoryx integration is not yet performed.
+
+## Cadoryx A5 source texture bytes and retired cached graphics
+
+SourceTextures.hxx snapshots caller encoded buffers, external files and file
+slices before publishing the source. Each copied Image_Texture owns its own
+NCollection_Buffer and has a globally non-reused GPU cache ID. A call-local map
+reuses the exact same owned texture when multiple material slots share one
+original handle. Common/PBR scalar fields, alpha/culling remain copied values.
+The original texture handle, mutable buffer and file path are not retained by
+the source styles. Failure leaves the source unregistered; refresh stages every
+texture before exchanging live instance state. Texture errors use the existing
+FILE_IO_ERROR status; no new native resource handle or ABI export is introduced.
+
+Source style refresh recomputes every cached graphics mode before releasing the
+previous source. A mode0 cached at initial Display cannot keep an OpenGL instance
+pointer to a retired source after mode1 refresh. Instance and exact selected
+owner identities remain; source release/removal are exercised after actual STEP/
+IGES import. Frozen3 Release755/755 and22 focused cases pass; Debug and complete
+import/material/driver failure evidence remain pending.
+
+## Batch AK transfer records
+
+ADR-0103 adds private Session, immutable Snapshot and functional ShapeBinder registry owners. SafeHandle leases serialize session mutation and protect release races. Snapshots copy container and diagnostic storage and retain intrusive entities/TShapes; no deep geometry immutability is claimed. Model and map identifiers carry different types and a session identity. Validation preserves the epoch; transfer/publication failure retires it. Native record trees with children are rejected before recursive SDK calls.
+
+## Batch AS document and XDE attribute projections
+
+AS [ADR-0111](adr/0111-generated-document-and-xde-attribute-projections.md) adds
+parent-bound document projection contexts and detached typed data. Every native
+call pins the existing parent SafeHandle, validates its owner domain and rejects
+cross-context or removed label/note/layer inputs. Context disposal never releases
+its parent. Atomic writes use a private nested transaction inside the existing
+open document command. Copied payload owners use typed registry leases; copied
+maps, arrays, Unicode and associations survive all owner disposal.
+
+SC-062 application-local persistence adapters never modify the storage source.
+They encode bounded complete data beside an SDK-readable safe subset and decode
+fully before replacing a retrieval target. Only OcctSharp-aware drivers promise
+full extension fidelity; legacy/external readers can lose extended values.
+XML note adapters preserve existing attribute identity and associations, with
+copied text extensions. No global driver registry or user callback escapes.
+
+## Batch AL numeric matrices and private solvers
+
+AM extends this copied-result boundary through [ADR-0105](adr/0105-private-spline-workspaces.md).
+SplineWorkspace retains immutable one-based private arrays under a typed registry
+lease and SafeHandle. Creating it deep-copies source geometry; callers synchronize
+source mutation during the copy. Results are detached managed grids. Interpolation
+keeps all coordinate/weight work arrays private and publishes one combined result
+only after every finite/positive-weight check passes. C ABI buffers must be valid
+and disjoint; lengths never authorize arbitrary pointers.
+
+[ADR-0104](adr/0104-copied-numeric-matrices-and-private-solvers.md) reuses MathMatrix ownership; functional results own deep native copies, and managed snapshots own copied arrays. Existing mutable MathMatrix inputs require caller synchronization. Gauss/Householder/SVD receivers and all work buffers are private to one call. SplineMatrixSystem retains immutable original/factored matrices under typed registry leases and SafeHandle disposal. Weighted coordinates and weights publish together, with no partial solution on native noncompletion. Native C ABI output buffers must be valid, writable and disjoint; checked lengths never authorize arbitrary pointers.
+
+## Curved hatching workspaces (AQ)
+
+[ADR-0109](adr/0109-generated-copied-curved-hatching.md) retains managed input handles across copying, keeps native hatcher/intersector private, and stores only independent curves plus copied event/domain data in typed leased tokens. Optional endpoints preserve absence; each trimmed result is deep copied. Synchronize source mutation while copying.
+
+AR / ADR-0110: TM023 retains private deep-copied triangulations and freezes channel,
+bounds and conditional adjacency arrays. Every triangulation query deep-copies;
+mapped arrays never escape. TM024 retains an independent exact meshing shape,
+freezes effective parameters/status and gates each independently copied mesh shape.
+Native handles remain retained during source copying; source mutation is caller
+synchronized. Only inactive default progress ranges are used, with no callbacks.
+
+AT / ADR-0112: TM027 owns a private STEP/IGES reader and serializes operations.
+Opaque tokens use registry leases; selection IDs carry a unique managed session
+domain. Detached headers/entities/checks own their data. Export prepares copied
+header attributes before swapping private model metadata, restores original
+handles on success/failure, and retires the receiver if restoration fails.
+No raw model/entity/selector or copied header alias is publicly exposed.
+
+AU / ADR-0113: TM028 retains private copied camera/frustum data in typed leased
+tokens. A managed parent SafeHandle and validation delegate strongly retain the
+Facade Viewer; creating-thread checks precede queries/input state mutations.
+Exact conservative source stamps reject changed camera/client/scene/mode/filter
+state. Metadata owns immutable copied arrays and survives retirement. Volume
+disposal needs only its creating thread and remains valid after parent disposal.
+The Facade adapter resolves copied IDs to existing presentations; world-pick and
+selected-item source identity is frozen when copied. General shared geometry
+mutation remains caller synchronized.
+
+AX / ADR-0116: Private imported documents call BeforeClose before Data destruction; application-backed owners already close through Application.Close. Bare generated receivers cannot create naming-backed views. STEPCAF initializes both managed interop resolvers before reading or releasing payloads. View subtree attributes are explicitly backed up before nested deletion so caller abort/undo/redo restores their identity and associations. The generated XML color driver adds bounded exact RGBA to the existing SC-062 local persistence boundary; legacy readers see nearest named colors. No SDK/global driver mutation or sidecar is used.
+
+Extend the exact private workflow catalogue to existing identity-checked XCAF
+documents and fresh call-private STEPCAF sessions. Reuse parent SafeHandles,
+context identity and command-atomic mutations. Detached immutable metadata owns
+its values; an imported generated document owns its native data independently.
+Borrowed tool/session/container APIs and inferred topology history stay excluded.
+The single bridge and existing registry/error contracts remain unchanged.
+
+AY / ADR-0117: Extend the exact copied workflow catalogue to initialized private polygons and
+conservative native-only simple-cycle construction. An explicit index domain
+binds the polygon to one owned triangulation copy; no topology provenance is
+inferred. Native helper lifetimes are call-scoped and ambiguous branch choices
+fail. Detached buffers and repeated native copies retain the established owned
+registry/error and single-bridge contracts.
+
+AZ / [ADR-0118](adr/0118-audited-foundation-function-diagnostics.md): TM035 uses
+initialized call-private matrix/message/polynomial inputs and detached immutable
+output buffers. Optional numerical absence contains no matrix or eigenvalues.
+Private message tokens use typed registry leases and SafeHandle disposal; copied
+strings survive release. No global message lookup, borrowed receiver or SDK work
+array escapes. Exact header-function provenance is independent of ownership.
+
+BA / [ADR-0119](adr/0119-initialized-assembly-and-copied-validation.md): TM036
+initializes private builders before queries and deep copies input graphs.
+UV pcurves share one private surface through face construction. Results own
+independent topology; every shape query deep copies again. Copied failure and
+validation diagnostics survive SafeHandle disposal. No input history is inferred.
+
+BB / [ADR-0120](adr/0120-bounded-native-curve-computations.md): TM037 copies bounded geometry before private native solver/sampler use. Typed result tokens are consumed and released immediately; detached points/parameters/projection diagnostics survive source disposal. Native-only evaluation callbacks never cross the ABI.
+
+BC / [ADR-0121](adr/0121-identity-bound-document-association-diagnostics.md): TM038 uses the existing exact document/context identities and nested transactions. Copied GUID/naming/assembly/dimension/clip diagnostics outlive the parent. Direct descriptors are fully initialized; no borrowed tool or topology-history rebind escapes. BeforeClose and AX exact RGBA protocols remain retained.
+
+## TM039 Private identity-bound selected-root transfer
+
+A private XSControl reader is explicitly initialized to STEP or IGES. The private
+STEP/IGES actor is bound to the exact model; shape-fix parameters belong to that
+actor. No Interface_Static values, WorkSession, model/entity handles, mutable maps,
+streams or callbacks are exposed. Existing AK/AT/AN/AX workflows are reused.
+
+Root IDs bind to one workspace GUID and one hash-verified source file. Root-rank,
+model-number and entity routes retain selection order and duplicates. Invalid
+selection does not consume the one-transfer epoch; native exceptions retire it.
+Native false, null and empty roots publish no partial topology. Each GetShape
+returns an independent geometry-deep copy. Detached root/load/transfer diagnostics
+and repair parameters survive disposal. External-file traversal is not implemented.
+
+Source files are bounded to 128 MiB, models to 1048576 entities, selections/roots/
+published shapes to 4096 and copied text to 16 MiB. Lazy selections stop at 4097
+and dispose the enumerator. Synchronize calls per workspace and source-file edits.
+Acceptance uses real STEP/IGES selection, all three transfer routes, different
+private configurations, exact foreign/file identity rejection, a real empty-root
+STEP fixture, copied lifetime and selected export with independent readback.
+
+## TM040 Exact copied mesh boundary diagnostics
+
+A copied Poly_Polygon2D preserves the input-bound metadata separately from the
+SDK's one-based normalized native bounds. Inputs are finite and bounded; closure
+is explicit. Nodes and triangles of one private deep triangulation copy define
+the only index domain used for quality, incident-edge, boundary, nonmanifold,
+orientation and unreferenced-node diagnostics. No external topology is inferred.
+
+Native coherent free-node diagnostics are used only for a proved manifold,
+consistent-orientation, distinct-index profile. Native zero-based indices convert
+to the private one-based domain and must match copied triangle references;
+unsupported adjacency returns null. Each CopyTriangulation is independent and
+preserves the verified node/triangle ordinal order.
+
+Exact private copied faces expose BRepMesh native 2D/3D ranges, UV ends and maximum
+tolerance. Bounds are 4096 polygon points/faces/edges, 16384 mesh nodes/triangles,
+16 MiB output and finite coordinates at most 1e12. Synchronize source mutation
+while copying. This profile belongs to Mesh, which already references MeshData
+and Modeling; no reverse module dependency is introduced.
+
+The full workflow executes BD root selection, controlled meshing, exact quality
+and UV diagnostics, BC reference persistence, saved occurrence identity, actual
+HWND mouse selection and more than 100 changed DXGI client pixels, then visibility
+and transform stale-volume checks. The direct-module consumer retains the accepted
+raw native Viewer workflow. Model-only assertions do not substitute for pixels.
+
+## TM041: finite copied numeric aggregates
+
+[ADR-0124](adr/0124-finite-copied-numeric-results-and-sdk-supplements.md) uses initialized call-private matrices, optional fields checked on SDK completion, staged finite outputs and independent copied grids/lists. Failure publishes no partial aggregate. LU pivots are private one-based row ordinals; no borrowed result or mutable solver state escapes.
+
+## BG private modeling results
+
+[BG](BATCH_BG_MODELING_RESULTS.md) stores a geometry-deep-copied input graph and success-only result in typed registry storage. SafeHandles retain leases during reads; each queried Shape is independently deep-copied. Detached configuration/source records have no native lifetime. Private section interference borrows never leave the executing call; ambiguous history cannot rebind topology.
+
+## BH finite and coupled intersection results
+
+[BH](BATCH_BH_INTERSECTION_RESULTS.md) creates private initialized solvers with copied input shapes/surfaces/curves. Typed registry leases and SafeHandles own immutable result storage; queried faces, source surfaces and coupled 3D/pcurve tuples are deep copies. Missing fields remain absent, tuple construction rolls back on failure, and detached records outlive disposal. No original source is automatically rebound.
+BI/TM045 direct collections retain parent/context/thread restrictions; typed scalar/text copies are detached, exact label references keep issuing context identity. Mutations require caller command, prevalidation and nested rollback; no container address escapes. See [BI](BATCH_BI_DIRECT_COLLECTIONS.md).
+BJ/TM046 owns one initialized selected-root STEPCAF epoch and immutable private staged files; copied source/root/status/occurrence diagnostics outlive the workspace. Only fully successful transfers publish close-safe owned documents; deep-copied shapes are detached. See [BJ](BATCH_BJ_LOCAL_STEP_ASSEMBLY.md).
+BK/TM047 owns configured mesh readers/writers and bounded immutable file/material diagnostics. Complete close-safe documents and independently triangulated copies are the only output owners. Exact definition replacement copies geometry/triangulation under caller commands; topology history is not inferred. See [BK](BATCH_BK_CONFIGURED_MESH.md).
+BL/TM048 owns copied curve/surface/vertex inputs and frozen constructor results. Native errors expose no partial topology; every public shape query deep-copies geometry. See [BL](BATCH_BL_PARAMETERIZED_CONSTRUCTION.md).
+BM/TM049 retains private independent curve/surface geometry, local bounded adaptors and success-only coupled output copies. Detached rows outlive disposal; Geometry computation and the Modeling edge adapter preserve the dependency graph. See [BM](BATCH_BM_FINITE_EXTREMA.md).
+BN/TM050 confines native string mutation to one private value, copies UTF8/UTF16 lengths and text, and publishes bounded managed batches only after all copies succeed. See [BN](BATCH_BN_BOUNDED_TEXT_TRANSFORMS.md).
+BO/TM051 owns independent face geometry and triangulations; native maps/BVH/tools stay private. Metadata is copied and native references/statuses require completed layer mode. See [BO](BATCH_BO_MESH_PROXIMITY.md).
+BP/TM052 builds one selected-root clone map and deep geometry graph; writers/maps/files stay private. Complete canonical outputs and exact SHA256 are published by one adjacent directory rename. See [BP](BATCH_BP_LOCAL_STEP_EXPORT.md).
+
+## Cadoryx A5 private SDK28 rendering health (2026-10-11, candidate only)
+
+The [private SDK28 workspace](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/workspace-preparation-1.json)
+adds no new native owner. `GetRenderingHealth()` leases the existing viewer for
+one owner-thread call and copies one bounded integer flag mask. The const
+reference to a shared `OpenGl_Context` stays inside the native call; neither that
+context nor the driver's or structure manager's address escapes. Failed reads
+publish zero for a valid output pointer and retain the original ownership error.
+
+`InvalidateGpuResources()` explicitly changes only the existing viewer's OCCT
+presentation reupload flag. Presentations, source snapshots, exact selection
+identity, camera and caller-owned geometry retain their existing ownership and
+disposal rules. Repeated marking is not permission to replay modeling commands,
+rebind topology or reconstruct a document. It is not context destruction or
+physical GPU removal.
+
+The isolated WPF candidate uses exact current host/viewport/document/attachment
+epoch checks and at most one automatic attempt per external attachment. It
+retains the primary exception and additional cleanup errors, attempts each
+subscription/animation/popup/capture/progressive/native cleanup, and rebuilds
+the current scene/camera without model-command replay. A disposed-owner allowance
+checks the complete known cleanup exception graph and must not hide another
+failure. The 30-second readiness observation is not native-call preemption.
+WPF remains a source contract, not accepted behavior: exact-owner
+exception naming, actual two-pane/closing/failure resource tests, subsequent
+modeling/history/save/reopen, full images and zero assets remain NOT RUN.
+
+
+SDK28 build/runtime continuation (2026-10-11): both actual native/managed0,
+exports+2/API+8 and actual focused12 each passed;20 full320 PNGs directly reviewed.
+All1031 sources including generated4176 forwarders are exact: the copied health
+enum lives in the facade and needs no self-forwarder. Original false guard FAIL
+was retained and the same completed build independently audited without replay.
+Full Release1358 passed; Debug full status is tracked in STATUS. Actual missing
+or invalid context fault injection, physical GPU removal, private packages,
+public consumers and WPF automatic recovery remain separate NOT RUN gates.
+
+## BV call-private projection helpers
+
+TM055 owns SDK projector receivers only on a native call stack. Generated getters
+copy points/scalars/UV and never publish a borrowed owner. The five existing
+callers retain source validation, coordinate transforms, clipping, sorting,
+errors and publication. Periodic finite windows in the sampling template retain
+parameter/point/distance coupling after source release; nonperiodic domains and
+maximum one period remain enforced. See [BV](BATCH_BV_PERIODIC_PROJECTION.md).
+
+## BW copied nonuniform fitting and private adapters
+
+TM056 emits stack-only initialized fit/patch receivers. Handle getters return owning
+handle copies by value. Two existing callers keep all validation, input copying,
+topology construction, errors and publication. The parameterized filling entry
+copies finite strictly ascending section parameters into a private1-based SDK
+array; the managed result retains a separate readonly snapshot, including failure.
+No borrowed receiver or caller array escapes. Legacy/sweep snapshots are empty.
+See [BW](BATCH_BW_NONUNIFORM_FITTING.md) for strategy boundaries.
+
+## BX typed pcurve construction and private face adapters
+
+TM057 keeps initialized MakeFace receivers on a native stack. SDK TopoDS reference
+getters return owning topology values. Eight old callers retain validation, input
+graphs, transforms, options, errors and publication. Typed2D spline/surface copy
+entries validate their own registries, apply4096-element complexity budgets and
+publish independent base owners. Nine typed/mixed pcurve overloads retain these
+owners through existing private constructors; no token reinterpretation or source
+alias escapes. See [BX](BATCH_BX_TYPED_TOPOLOGY.md).
+
+## BZ private local-feature, sweep and offset builders
+
+TM059 keeps ten typed SDK builder families on the native call stack. TopoDS
+returns are owning values; copied list containers preserve order, repetitions and
+orientation within a1000000-entry budget. They do not imply deep geometry copies.
+Private Sect handles and array lower bounds stay within the call; existing
+contour callers copy circles before builder closure under the65536-section
+budget. Nine callers retain their original input isolation, state/option guards,
+failure/history and publication policy. Simulation and construction use fresh
+PipeShell receivers per operation, as before. No mutable SDK receiver or borrowed
+address escapes. See [BZ](BATCH_BZ_LOCAL_FEATURES.md).
+
+## CA private mesh adapter ownership (TM060)
+
+Primary operations stay inside the call-private mesh profile; they are excluded
+from the generic public shared-handle emitter. Reused Emitted signatures retain
+their previous public outputs. Triangle indices copy into scalar DTOs before
+owner closure; coherent mutation pointers stay in the original native call.
+MergeNodesTool composes a private transient receiver and clears its output without
+returning a mutable SDK reference. Mesh approximation does not replace exact CAD.
+
+## CB private document delegates (TM061)
+
+The125 admitted operations retain their exact SDK native receiver/return types.
+Borrowed labels, attributes, strings, maps and history entries stay in the
+original call/parent scope. Private iterator/naming/storage bases preserve SDK
+construction and runtime type identity. Typed lookup retains pinned missing and
+wrong-type semantics; NamedData driver Paste uses qualified base dispatch.
+The29 audited callers retain command, foreign-context, thread/epoch where
+applicable, bounded copy and publication policy. No C ABI or public mutable
+managed receiver is added. See [CB](BATCH_CB_DOCUMENTS.md).
+
+## CC private XDE delegates and shared located clones (TM062)
+
+Borrowed colors, PMI, material, shape/assembly labels and view returns remain in
+their original private call/parent scope. Exact value factories retain SDK base
+copy semantics; the private XML base retains SDK dynamic type identity.
+Selected exports keep one source/destination-domain-checked exact clone map and
+independent geometry. Located definition placement is pushed once onto outgoing
+components; shared definitions and label identity stay intact. Failure discards
+the unpublished clone. No public mutable SDK receiver or C ABI widening occurs.
+See [ADR-0137](adr/0137-private-located-assembly-normalization.md).
+
+## CD exact STEP delegates and configured writer
+
+TM063 replaces11 exact Manual overrides under the original private reader/call
+owners. No new manual binding exception is added; shape/reader registry release,
+finite units, root mappings, exception Guard and success-only publication remain.
+Configured STEPCAF uses the existing dual document-domain context and projection
+payload owner. No session/SDK model/attribute handle escapes; the file is staged
+before replacement. Precise supported and lost fields are documented in
+[CD](BATCH_CD_STEP.md). No public architecture/ownership category changes.
+
+## CE private exchange adapters and owned mesh resources
+
+TM064 replaces34 precise Manual declarations without exposing mutable sessions;
+six provider session overloads remain deferred. Original policy receivers retain
+validation, exception and publication behavior. TM065 keeps buffer write pointers
+call-local and embeds Image_Texture/NCollection_Buffer handles in the native
+material graph, independent of managed result/temp files. Targeted texture snapshots
+are copied immutable managed data. See [CE](BATCH_CE_EXCHANGE.md) and
+[ADR-0138](adr/0138-owned-mesh-resource-import.md). No new Manual StableId is added.
+Existing manual IO infrastructure ExchangePathStage is compiled once in Runtime
+and reused by facade IGES and geometry-only STL; its implementation is unchanged.
+
+## CF exact private Viewer and document-identity adapters
+
+[CF contract](BATCH_CF_VIEWER.md) retains existing parent/thread/epoch ownership.
+Graphic3d_ClipPlane factory preserves the original fresh SDK allocation followed
+by immediate viewer-owned handle-map transfer. GUID values remain call-private;
+attribute DynamicType and camera/aspect references remain in their original
+native lease/call scope until immediate copies. CancelPointerGesture checks the
+viewer thread/lifetime before clearing only managed gesture state.
+
+## CG context observation and render-resource generation
+
+TM068 preserves original viewer-owned resource/copy/allocation types and borrowed
+SDK return scope. Generated health API returns only a copied0..7 mask on the live
+owner thread; queries neither clear flags nor redraw/recreate. Explicit reupload
+marks only SDK presentation loss. Existing facade and Modeling interop owners remain.
+Test-only context-slot instrumentation restores parked context only for teardown;
+recovery creates a fresh production host with retained owned model/asset copies.
+No graphics/context pointer is exposed by the public product.

@@ -1,3 +1,7 @@
+#include "../../generated/Visualization/OcctSharp.ConsumerViewerSources.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.ConsumerSharedPresentations.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
 // Native Visualization/Presentations implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Geometry/Conversions.hxx"
@@ -12,6 +16,7 @@
 #include "Visualization/Presentations.hxx"
 #include "Xde/Metadata.hxx"
 #include <AIS_ColoredShape.hxx>
+#include <Graphic3d_ZLayerId.hxx>
 #include <Quantity_Color.hxx>
 #include <Quantity_ColorRGBA.hxx>
 #include <Standard_Handle.hxx>
@@ -51,18 +56,20 @@ int64_t FindPresentationId(
     "The detected AIS object is outside the managed presentation registry.");
 }
 
+void ValidateSubshape(const opencascade::handle<AIS_ColoredShape>& presentation, const OcctSharp_ShapeHandle* subshape)
+{ ValidateUsableShape(subshape); ValidateSubshape(presentation, subshape->Value); }
+
 void ValidateSubshape(
   const opencascade::handle<AIS_ColoredShape>& presentation,
-  const OcctSharp_ShapeHandle* subshape)
+  const TopoDS_Shape& subshape)
 {
-  ValidateUsableShape(subshape);
-  const TopoDS_Shape root = presentation->Shape();
-  bool contains = root.IsSame(subshape->Value);
+  const TopoDS_Shape root = OcctSharpGenerated::ViewerAdapters::AIS_Shape_Shape_Bind(*(presentation))();
+  bool contains = root.IsSame(subshape);
   if (!contains)
   {
-    for (TopExp_Explorer explorer(root, subshape->Value.ShapeType()); explorer.More(); explorer.Next())
+    for (TopExp_Explorer explorer(root, subshape.ShapeType()); explorer.More(); explorer.Next())
     {
-      if (explorer.Current().IsSame(subshape->Value))
+      if (explorer.Current().IsSame(subshape))
       {
         contains = true;
         break;
@@ -97,7 +104,7 @@ bool TryGetXdeStyleColor(
   const opencascade::handle<XCAFDoc_VisMaterial>& material = style.Material();
   if (!material.IsNull() && material->HasPbrMaterial())
   {
-    color = material->PbrMaterial().BaseColor;
+    color = OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_PbrMaterial_Bind(*(material))().BaseColor;
     return true;
   }
   if (!material.IsNull() && material->HasCommonMaterial())
@@ -119,7 +126,7 @@ void ApplyXdePresentationStyles(
   const opencascade::handle<AIS_ColoredShape>& presentation,
   const XdePresentationStyleMap& settings)
 {
-  const TopoDS_Shape root = presentation->Shape();
+  const TopoDS_Shape root = OcctSharpGenerated::ViewerAdapters::AIS_Shape_Shape_Bind(*(presentation))();
   for (int32_t index = 1; index <= settings.Extent(); ++index)
   {
     const TopoDS_Shape& styledShape = settings.FindKey(index);
@@ -140,15 +147,15 @@ void ApplyXdePresentationStyles(
     const XCAFPrs_Style& style = settings.FindFromIndex(index);
     if (!style.IsVisible())
     {
-      presentation->SetCustomTransparency(styledShape, 1.0);
+      OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomTransparency_Bind(*(presentation))(styledShape, 1.0);
       continue;
     }
 
     Quantity_ColorRGBA color;
     if (!TryGetXdeStyleColor(style, styledShape.ShapeType(), color)) continue;
-    presentation->SetCustomColor(styledShape, color.GetRGB());
-    if (color.Alpha() < 1.0f)
-      presentation->SetCustomTransparency(styledShape, 1.0 - color.Alpha());
+    OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomColor_Bind(*(presentation))(styledShape, OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(color)());
+    if (OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_Alpha_Bind(color)() < 1.0f)
+      OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomTransparency_Bind(*(presentation))(styledShape, 1.0 - OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_Alpha_Bind(color)());
   }
 }
 }
@@ -238,7 +245,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_color(
   {
     ValidateViewerThread(viewer);
     const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
-    viewer->Context->SetColor(presentation, Quantity_Color(red, green, blue, Quantity_TOC_RGB), false);
+    OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SetColor_Bind(*(viewer->Context))(presentation, Quantity_Color(red, green, blue, Quantity_TOC_RGB), false);
   });
 }
 
@@ -257,6 +264,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_transparency(
     ValidateViewerThread(viewer);
     const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->SetTransparency(presentation, transparency, false);
+    if(transparency==0.0 && dynamic_cast<ViewerSharedPresentation*>(presentation.get()))
+    { presentation->SetTransparency(0.0); viewer->Context->RecomputePrsOnly(presentation,false); }
   });
 }
 
@@ -275,6 +284,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_display_mode(
     ValidateViewerThread(viewer);
     const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->SetDisplayMode(presentation, display_mode, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_overlay(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id, const int32_t enabled)
+{
+  if (enabled != 0 && enabled != 1)
+  { SetLastError("Viewer overlay flag must be zero or one."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->SetZLayer(presentation,
+      enabled != 0 ? Graphic3d_ZLayerId_Topmost : Graphic3d_ZLayerId_Default);
   });
 }
 
@@ -307,6 +330,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
     viewer->Context->Remove(presentation, false);
     viewer->Rendering.Appearances.erase(presentation_id);
     viewer->Presentations.erase(presentation_id);
+    viewer->InstanceSources.erase(presentation_id);
   });
 }
 
@@ -322,7 +346,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_presentation_get_transform(
   {
     ValidateViewerThread(viewer);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    *transform = AllocateTransform(viewer->Context->Location(presentation).Transformation());
+    *transform = AllocateTransform(OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_Location_Bind(*(viewer->Context))(presentation).Transformation());
   });
 }
 
@@ -336,7 +360,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_presentation_set_transform(
     ValidateViewerThread(viewer);
     ValidateTransformHandle(transform);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    viewer->Context->SetLocation(presentation, TopLoc_Location(transform->Value));
+    OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SetLocation_Bind(*(viewer->Context))(presentation, TopLoc_Location(transform->Value));
   });
 }
 
@@ -361,8 +385,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_color(
     ValidateViewerThread(viewer);
     ValidateColor(red, green, blue);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    ValidateSubshape(presentation, subshape);
-    presentation->SetCustomColor(subshape->Value, Quantity_Color(red, green, blue, Quantity_TOC_RGB));
+    ValidateUsableShape(subshape);
+    const auto copied=ResolveSourceSubshape(viewer,presentation_id,subshape->Value);
+    ValidateSubshape(presentation,copied);
+    if(auto* shared=dynamic_cast<ViewerSharedPresentation*>(presentation.get())) shared->SetSourceSubshapeColor(copied,Quantity_Color(red, green, blue, Quantity_TOC_RGB));
+    else OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomColor_Bind(*(presentation))(copied, Quantity_Color(red, green, blue, Quantity_TOC_RGB));
     viewer->Context->Redisplay(presentation, false);
   });
 }
@@ -377,8 +404,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_transparency(
   {
     ValidateViewerThread(viewer);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    ValidateSubshape(presentation, subshape);
-    presentation->SetCustomTransparency(subshape->Value, transparency);
+    ValidateUsableShape(subshape);
+    const auto copied=ResolveSourceSubshape(viewer,presentation_id,subshape->Value);
+    ValidateSubshape(presentation,copied);
+    if(auto* shared=dynamic_cast<ViewerSharedPresentation*>(presentation.get())) shared->SetSourceSubshapeTransparency(copied,transparency);
+    else OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomTransparency_Bind(*(presentation))(copied, transparency);
     viewer->Context->Redisplay(presentation, false);
   });
 }
@@ -393,8 +423,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_width(
   {
     ValidateViewerThread(viewer);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    ValidateSubshape(presentation, subshape);
-    presentation->SetCustomWidth(subshape->Value, width);
+    ValidateUsableShape(subshape);
+    const auto copied=ResolveSourceSubshape(viewer,presentation_id,subshape->Value);
+    ValidateSubshape(presentation,copied);
+    if(auto* shared=dynamic_cast<ViewerSharedPresentation*>(presentation.get())) shared->SetSourceSubshapeWidth(copied,width);
+    else OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_SetCustomWidth_Bind(*(presentation))(copied, width);
     viewer->Context->Redisplay(presentation, false);
   });
 }
@@ -407,8 +440,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_subshape_overrides(
   {
     ValidateViewerThread(viewer);
     const auto presentation = FindPresentation(viewer, presentation_id);
-    ValidateSubshape(presentation, subshape);
-    presentation->UnsetCustomAspects(subshape->Value, true);
+    ValidateUsableShape(subshape);
+    const auto copied=ResolveSourceSubshape(viewer,presentation_id,subshape->Value);
+    ValidateSubshape(presentation,copied);
+    if(ClearSourceSubshapeOverrides(viewer,presentation_id,&copied)) return;
+    MakePresentationIndependent(presentation);
+    OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_UnsetCustomAspects_Bind(*(presentation))(copied, true);
     viewer->Context->Redisplay(presentation, false);
   });
 }
@@ -420,6 +457,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_all_subshape_overrides(
   {
     ValidateViewerThread(viewer);
     const auto presentation = FindPresentation(viewer, presentation_id);
+    if(ClearSourceSubshapeOverrides(viewer,presentation_id,nullptr)) return;
+    MakePresentationIndependent(presentation);
     presentation->ClearCustomAspects();
     viewer->Context->Redisplay(presentation, false);
   });

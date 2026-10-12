@@ -346,6 +346,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_is_valid")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus IsShapeValid(ShapeHandle shape, out int isValid);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_self_interference")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetShapeSelfInterference(ShapeHandle shape, out int selfFaultCount, out int otherFaultCount);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_topology_summary")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetShapeTopologySummary(ShapeHandle shape, out ShapeTopologySummaryRaw summary);
@@ -399,6 +402,11 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetInspectionProperties(
         ShapeHandle shape, int propertyKind, out InspectionPropertiesRaw properties);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_adaptive_inspection_properties")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetAdaptiveInspectionProperties(
+        ShapeHandle shape, int propertyKind, double relativeTolerance,
+        out InspectionPropertiesRaw properties, out double estimatedRelativeError);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_angle")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetShapeAngle(
@@ -597,6 +605,11 @@ internal static partial class NativeMethods
         double rotationAxisZ,
         double rotationAngleRadians,
         out nint transform);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_trsf_create_plane_mirror")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreatePlaneMirror(double originX,double originY,double originZ,
+        double normalX,double normalY,double normalZ,out nint transform);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_trsf_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -1371,6 +1384,10 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetViewerPresentationDisplayMode(ViewerHandle viewer, long presentationId, int displayMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_overlay")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationOverlay(ViewerHandle viewer, long presentationId, int enabled);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_selection_kind")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetViewerPresentationSelectionKind(ViewerHandle viewer, long presentationId, int shapeKind);
@@ -1459,6 +1476,42 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_projection")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetViewerProjection(ViewerHandle viewer, int projection);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_get_projection_target_camera")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerProjectionTargetCamera(
+        ViewerHandle viewer, int projection, out ViewerCameraRaw camera);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_view_cube_visible")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerViewCubeVisible(ViewerHandle viewer, int visible);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_view_cube_appearance", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerViewCubeAppearance(
+        ViewerHandle viewer, string front, string back, string left, string right,
+        string top, string bottom, string font, double fontHeight, double idleTransparency);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_view_cube_hovered")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerViewCubeHovered(ViewerHandle viewer, int hovered);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_hit_view_cube")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus HitViewerViewCube(ViewerHandle viewer, int x, int y, out int orientation);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_hit_view_cube_control")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus HitViewerViewCubeControl(ViewerHandle viewer, int x, int y, out int action);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_cube_orientation")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerCubeOrientation(ViewerHandle viewer, int orientation);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_get_cube_target_camera")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerCubeTargetCamera(
+        ViewerHandle viewer, int orientation, out ViewerCameraRaw camera);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_zoom")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -1597,6 +1650,13 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetViewerBackgroundColor(
         ViewerHandle viewer, double red, double green, double blue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_background_gradient")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerBackgroundGradient(
+        ViewerHandle viewer,
+        double topRed, double topGreen, double topBlue,
+        double bottomRed, double bottomGreen, double bottomBlue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_create_clip_plane")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

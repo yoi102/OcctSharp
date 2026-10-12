@@ -1122,6 +1122,30 @@
       "reason": "Explicit transform/perspective/focus forms own all transforms, directions and scalar state. No external projector pointer. Existing Manual gp_Ax2 constructors preserved outside new catalogue."
     },
     {
+      "nativeName": "HatchGen_Domain",
+      "header": "HatchGen_Domain.hxx",
+      "module": "Geometry",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "nativeName": "HatchGen_PointOnElement",
+      "header": "HatchGen_PointOnElement.hxx",
+      "module": "Geometry",
+      "copyable": true,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "nativeName": "HatchGen_PointOnHatching",
+      "header": "HatchGen_PointOnHatching.hxx",
+      "module": "Geometry",
+      "copyable": true,
+      "supportingDefaultFactory": false,
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
       "nativeName": "Hatch_Hatcher",
       "header": "Hatch_Hatcher.hxx",
       "module": "Geometry",
@@ -1130,12 +1154,36 @@
       "reason": "Owns algorithm/storage members or intrusive handles; stable construction and same-bridge typed destruction; no borrowed input address is retained by accepted signatures."
     },
     {
+      "nativeName": "IGESConvGeom_GeomBuilder",
+      "header": "IGESConvGeom_GeomBuilder.hxx",
+      "module": "DataExchange",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "nativeName": "IGESData_GlobalSection",
+      "header": "IGESData_GlobalSection.hxx",
+      "module": "DataExchange",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
       "nativeName": "IGESData_DefSwitch",
       "header": "IGESData_DefSwitch.hxx",
       "module": "DataExchange",
       "copyable": false,
       "supportingDefaultFactory": false,
       "reason": "Header-audited independent copied scalar, enum, gp and embedded value state; no external addresses or native UI/context resource is retained."
+    },
+    {
+      "nativeName": "IGESData_DirChecker",
+      "header": "IGESData_DirChecker.hxx",
+      "module": "DataExchange",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
     },
     {
       "nativeName": "IGESData_IGESType",
@@ -1298,6 +1346,14 @@
       "reason": "All seven scalar fields initialized inline; arithmetic results independent scalar copies, surface handle Middle operation stores coordinates only."
     },
     {
+      "nativeName": "IntPolyh_StartPoint",
+      "header": "IntPolyh_StartPoint.hxx",
+      "module": "Modeling",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
       "nativeName": "IntPolyh_Triangle",
       "header": "IntPolyh_Triangle.hxx",
       "module": "Modeling",
@@ -1386,6 +1442,22 @@
       "reason": "Explicit depth constructor only; stores integer depth."
     },
     {
+      "nativeName": "IntTools_CommonPrt",
+      "header": "IntTools_CommonPrt.hxx",
+      "module": "Modeling",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "nativeName": "IntTools_Curve",
+      "header": "IntTools_Curve.hxx",
+      "module": "Modeling",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
       "nativeName": "IntTools_CurveRangeLocalizeData",
       "header": "IntTools_CurveRangeLocalizeData.hxx",
       "module": "Modeling",
@@ -1418,6 +1490,14 @@
       "reason": "Explicit pair of boundary values only; copied independent scalar results."
     },
     {
+      "nativeName": "IntTools_Root",
+      "header": "IntTools_Root.hxx",
+      "module": "Modeling",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
       "nativeName": "IntTools_SurfaceRangeLocalizeData",
       "header": "IntTools_SurfaceRangeLocalizeData.hxx",
       "module": "Modeling",
@@ -1432,6 +1512,14 @@
       "copyable": false,
       "supportingDefaultFactory": false,
       "reason": "Explicit two-range or four-integer construction; copies both value ranges; mutable owned output range references and assignment ref result remain excluded."
+    },
+    {
+      "nativeName": "Intf_SectionPoint",
+      "header": "Intf_SectionPoint.hxx",
+      "module": "Modeling",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "nativeName": "Intrv_Interval",
@@ -1466,12 +1554,28 @@
       "reason": "Owns algorithm/storage members or intrusive handles; stable construction and same-bridge typed destruction; no borrowed input address is retained by accepted signatures."
     },
     {
+      "nativeName": "Message_ExecStatus",
+      "header": "Message_ExecStatus.hxx",
+      "module": "Foundation",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
       "nativeName": "NLPlate_NLPlate",
       "header": "NLPlate_NLPlate.hxx",
       "module": "Geometry",
       "copyable": false,
       "supportingDefaultFactory": false,
       "reason": "Owns algorithm/storage members or intrusive handles; stable construction and same-bridge typed destruction; no borrowed input address is retained by accepted signatures."
+    },
+    {
+      "nativeName": "OSD_Protection",
+      "header": "OSD_Protection.hxx",
+      "module": "Foundation",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "nativeName": "Poly_Triangle",
@@ -1576,6 +1680,22 @@
       "copyable": false,
       "supportingDefaultFactory": false,
       "reason": "Header-audited independent coordinate/length-unit conversion state, initialized empty; gp inputs copied and mutable gp outputs use success-only publication."
+    },
+    {
+      "nativeName": "SelectBasics_PickResult",
+      "header": "SelectBasics_PickResult.hxx",
+      "module": "Visualization",
+      "copyable": true,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "nativeName": "SelectMgr_ViewClipRange",
+      "header": "SelectMgr_ViewClipRange.hxx",
+      "module": "Visualization",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "nativeName": "ShapeAnalysis_WireOrder",
@@ -1832,6 +1952,14 @@
       "copyable": false,
       "supportingDefaultFactory": false,
       "reason": "Header-audited direct StepData_SelectType entity choice: default-null intrusive handle member, value-retained SetValue and null-returning typed handle access; no extra storage or transient inheritance."
+    },
+    {
+      "nativeName": "StepData_Field",
+      "header": "StepData_Field.hxx",
+      "module": "DataExchange",
+      "copyable": false,
+      "supportingDefaultFactory": false,
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
     },
     {
       "nativeName": "StepDimTol_DatumOrCommonDatum",
@@ -10448,6 +10576,168 @@
       "reason": "Audited Modeling owner: copied scalar/gp or leased const-owner inputs, owned internal storage and copied or retained independent results; exact SDK header contract."
     },
     {
+      "stableId": "c:@S@HatchGen_Domain@F@FirstPoint#1",
+      "nativeName": "HatchGen_Domain::FirstPoint",
+      "signature": "HatchGen_Domain::FirstPoint: const HatchGen_PointOnHatching &() const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HasFirstPoint#1",
+      "nativeName": "HatchGen_Domain::HasFirstPoint",
+      "signature": "HatchGen_Domain::HasFirstPoint: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HasSecondPoint#1",
+      "nativeName": "HatchGen_Domain::HasSecondPoint",
+      "signature": "HatchGen_Domain::HasSecondPoint: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HatchGen_Domain#",
+      "nativeName": "HatchGen_Domain::HatchGen_Domain",
+      "signature": "HatchGen_Domain::HatchGen_Domain: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#S0_#",
+      "nativeName": "HatchGen_Domain::HatchGen_Domain",
+      "signature": "HatchGen_Domain::HatchGen_Domain: void (const HatchGen_PointOnHatching &, const HatchGen_PointOnHatching &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#b#",
+      "nativeName": "HatchGen_Domain::HatchGen_Domain",
+      "signature": "HatchGen_Domain::HatchGen_Domain: void (const HatchGen_PointOnHatching &, const bool)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SecondPoint#1",
+      "nativeName": "HatchGen_Domain::SecondPoint",
+      "signature": "HatchGen_Domain::SecondPoint: const HatchGen_PointOnHatching &() const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetFirstPoint#",
+      "nativeName": "HatchGen_Domain::SetFirstPoint",
+      "signature": "HatchGen_Domain::SetFirstPoint: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetFirstPoint#&1$@S@HatchGen_PointOnHatching#",
+      "nativeName": "HatchGen_Domain::SetFirstPoint",
+      "signature": "HatchGen_Domain::SetFirstPoint: void (const HatchGen_PointOnHatching &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetPoints#",
+      "nativeName": "HatchGen_Domain::SetPoints",
+      "signature": "HatchGen_Domain::SetPoints: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetPoints#&1$@S@HatchGen_PointOnHatching#S0_#",
+      "nativeName": "HatchGen_Domain::SetPoints",
+      "signature": "HatchGen_Domain::SetPoints: void (const HatchGen_PointOnHatching &, const HatchGen_PointOnHatching &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetSecondPoint#",
+      "nativeName": "HatchGen_Domain::SetSecondPoint",
+      "signature": "HatchGen_Domain::SetSecondPoint: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SetSecondPoint#&1$@S@HatchGen_PointOnHatching#",
+      "nativeName": "HatchGen_Domain::SetSecondPoint",
+      "signature": "HatchGen_Domain::SetSecondPoint: void (const HatchGen_PointOnHatching &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@HatchGen_PointOnElement#",
+      "nativeName": "HatchGen_PointOnElement::HatchGen_PointOnElement",
+      "signature": "HatchGen_PointOnElement::HatchGen_PointOnElement: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@IntersectionType#1",
+      "nativeName": "HatchGen_PointOnElement::IntersectionType",
+      "signature": "HatchGen_PointOnElement::IntersectionType: HatchGen_IntersectionType () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@IsDifferent#&1$@S@HatchGen_PointOnElement#d#1",
+      "nativeName": "HatchGen_PointOnElement::IsDifferent",
+      "signature": "HatchGen_PointOnElement::IsDifferent: bool (const HatchGen_PointOnElement &, const double) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@IsIdentical#&1$@S@HatchGen_PointOnElement#d#1",
+      "nativeName": "HatchGen_PointOnElement::IsIdentical",
+      "signature": "HatchGen_PointOnElement::IsIdentical: bool (const HatchGen_PointOnElement &, const double) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@SetIntersectionType#$@E@HatchGen_IntersectionType#",
+      "nativeName": "HatchGen_PointOnElement::SetIntersectionType",
+      "signature": "HatchGen_PointOnElement::SetIntersectionType: void (const HatchGen_IntersectionType)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@AddPoint#&1$@S@HatchGen_PointOnElement#d#",
+      "nativeName": "HatchGen_PointOnHatching::AddPoint",
+      "signature": "HatchGen_PointOnHatching::AddPoint: void (const HatchGen_PointOnElement &, const double)",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@ClrPoints#",
+      "nativeName": "HatchGen_PointOnHatching::ClrPoints",
+      "signature": "HatchGen_PointOnHatching::ClrPoints: void ()",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@HatchGen_PointOnHatching#",
+      "nativeName": "HatchGen_PointOnHatching::HatchGen_PointOnHatching",
+      "signature": "HatchGen_PointOnHatching::HatchGen_PointOnHatching: void ()",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@IsEqual#&1$@S@HatchGen_PointOnHatching#d#1",
+      "nativeName": "HatchGen_PointOnHatching::IsEqual",
+      "signature": "HatchGen_PointOnHatching::IsEqual: bool (const HatchGen_PointOnHatching &, const double) const",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@IsGreater#&1$@S@HatchGen_PointOnHatching#d#1",
+      "nativeName": "HatchGen_PointOnHatching::IsGreater",
+      "signature": "HatchGen_PointOnHatching::IsGreater: bool (const HatchGen_PointOnHatching &, const double) const",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@IsLower#&1$@S@HatchGen_PointOnHatching#d#1",
+      "nativeName": "HatchGen_PointOnHatching::IsLower",
+      "signature": "HatchGen_PointOnHatching::IsLower: bool (const HatchGen_PointOnHatching &, const double) const",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@NbPoints#1",
+      "nativeName": "HatchGen_PointOnHatching::NbPoints",
+      "signature": "HatchGen_PointOnHatching::NbPoints: int () const",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@Point#I#1",
+      "nativeName": "HatchGen_PointOnHatching::Point",
+      "signature": "HatchGen_PointOnHatching::Point: const HatchGen_PointOnElement &(const int) const",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@RemPoint#I#",
+      "nativeName": "HatchGen_PointOnHatching::RemPoint",
+      "signature": "HatchGen_PointOnHatching::RemPoint: void (const int)",
+      "reason": "Initialized HatchGen base and value-owned NCollection_Sequence; sequence copy allocates independent nodes, and element/endpoint results are independent owner copies."
+    },
+    {
       "stableId": "c:@S@Hatch_Hatcher@F@AddLine#&1$@S@gp_Dir2d#d#",
       "nativeName": "Hatch_Hatcher::AddLine",
       "signature": "Hatch_Hatcher::AddLine: void (const gp_Dir2d &, const double)",
@@ -10580,6 +10870,300 @@
       "reason": "Audited SDK 8.0.1 stable-address owner; call-bound copies/leases, scalar ref snapshots, and copied or independently retained results."
     },
     {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@AddVec#&1$@S@gp_XYZ#",
+      "nativeName": "IGESConvGeom_GeomBuilder::AddVec",
+      "signature": "IGESConvGeom_GeomBuilder::AddVec: void (const gp_XYZ &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@AddXY#&1$@S@gp_XY#",
+      "nativeName": "IGESConvGeom_GeomBuilder::AddXY",
+      "signature": "IGESConvGeom_GeomBuilder::AddXY: void (const gp_XY &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@AddXYZ#&1$@S@gp_XYZ#",
+      "nativeName": "IGESConvGeom_GeomBuilder::AddXYZ",
+      "signature": "IGESConvGeom_GeomBuilder::AddXYZ: void (const gp_XYZ &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@Clear#",
+      "nativeName": "IGESConvGeom_GeomBuilder::Clear",
+      "signature": "IGESConvGeom_GeomBuilder::Clear: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@EvalXYZ#&1$@S@gp_XYZ#&d#S2_#S2_#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::EvalXYZ",
+      "signature": "IGESConvGeom_GeomBuilder::EvalXYZ: void (const gp_XYZ &, double &, double &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@IGESConvGeom_GeomBuilder#",
+      "nativeName": "IGESConvGeom_GeomBuilder::IGESConvGeom_GeomBuilder",
+      "signature": "IGESConvGeom_GeomBuilder::IGESConvGeom_GeomBuilder: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@IsIdentity#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::IsIdentity",
+      "signature": "IGESConvGeom_GeomBuilder::IsIdentity: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@IsTranslation#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::IsTranslation",
+      "signature": "IGESConvGeom_GeomBuilder::IsTranslation: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@IsZOnly#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::IsZOnly",
+      "signature": "IGESConvGeom_GeomBuilder::IsZOnly: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@MakeCopiousData#I#b#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::MakeCopiousData",
+      "signature": "IGESConvGeom_GeomBuilder::MakeCopiousData: occ::handle<IGESGeom_CopiousData> (const int, const bool) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@MakeTransformation#d#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::MakeTransformation",
+      "signature": "IGESConvGeom_GeomBuilder::MakeTransformation: occ::handle<IGESGeom_TransformationMatrix> (const double) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@NbPoints#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::NbPoints",
+      "signature": "IGESConvGeom_GeomBuilder::NbPoints: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@Point#I#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::Point",
+      "signature": "IGESConvGeom_GeomBuilder::Point: gp_XYZ (const int) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@Position#1",
+      "nativeName": "IGESConvGeom_GeomBuilder::Position",
+      "signature": "IGESConvGeom_GeomBuilder::Position: gp_Trsf () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax1#",
+      "nativeName": "IGESConvGeom_GeomBuilder::SetPosition",
+      "signature": "IGESConvGeom_GeomBuilder::SetPosition: void (const gp_Ax1 &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax2#",
+      "nativeName": "IGESConvGeom_GeomBuilder::SetPosition",
+      "signature": "IGESConvGeom_GeomBuilder::SetPosition: void (const gp_Ax2 &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax3#",
+      "nativeName": "IGESConvGeom_GeomBuilder::SetPosition",
+      "signature": "IGESConvGeom_GeomBuilder::SetPosition: void (const gp_Ax3 &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Trsf#",
+      "nativeName": "IGESConvGeom_GeomBuilder::SetPosition",
+      "signature": "IGESConvGeom_GeomBuilder::SetPosition: void (const gp_Trsf &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CascadeUnit#1",
+      "nativeName": "IGESData_GlobalSection::CascadeUnit",
+      "signature": "IGESData_GlobalSection::CascadeUnit: double () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@DraftingStandard#1",
+      "nativeName": "IGESData_GlobalSection::DraftingStandard",
+      "signature": "IGESData_GlobalSection::DraftingStandard: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@HasMaxCoord#1",
+      "nativeName": "IGESData_GlobalSection::HasMaxCoord",
+      "signature": "IGESData_GlobalSection::HasMaxCoord: bool () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@IGESData_GlobalSection#",
+      "nativeName": "IGESData_GlobalSection::IGESData_GlobalSection",
+      "signature": "IGESData_GlobalSection::IGESData_GlobalSection: void ()",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@IGESVersion#1",
+      "nativeName": "IGESData_GlobalSection::IGESVersion",
+      "signature": "IGESData_GlobalSection::IGESVersion: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@IntegerBits#1",
+      "nativeName": "IGESData_GlobalSection::IntegerBits",
+      "signature": "IGESData_GlobalSection::IntegerBits: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@LineWeightGrad#1",
+      "nativeName": "IGESData_GlobalSection::LineWeightGrad",
+      "signature": "IGESData_GlobalSection::LineWeightGrad: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxCoord#1",
+      "nativeName": "IGESData_GlobalSection::MaxCoord",
+      "signature": "IGESData_GlobalSection::MaxCoord: double () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxDigitsDouble#1",
+      "nativeName": "IGESData_GlobalSection::MaxDigitsDouble",
+      "signature": "IGESData_GlobalSection::MaxDigitsDouble: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxDigitsSingle#1",
+      "nativeName": "IGESData_GlobalSection::MaxDigitsSingle",
+      "signature": "IGESData_GlobalSection::MaxDigitsSingle: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxLineWeight#1",
+      "nativeName": "IGESData_GlobalSection::MaxLineWeight",
+      "signature": "IGESData_GlobalSection::MaxLineWeight: double () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxMaxCoord#d#",
+      "nativeName": "IGESData_GlobalSection::MaxMaxCoord",
+      "signature": "IGESData_GlobalSection::MaxMaxCoord: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxPower10Double#1",
+      "nativeName": "IGESData_GlobalSection::MaxPower10Double",
+      "signature": "IGESData_GlobalSection::MaxPower10Double: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxPower10Single#1",
+      "nativeName": "IGESData_GlobalSection::MaxPower10Single",
+      "signature": "IGESData_GlobalSection::MaxPower10Single: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Resolution#1",
+      "nativeName": "IGESData_GlobalSection::Resolution",
+      "signature": "IGESData_GlobalSection::Resolution: double () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Scale#1",
+      "nativeName": "IGESData_GlobalSection::Scale",
+      "signature": "IGESData_GlobalSection::Scale: double () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetCascadeUnit#d#",
+      "nativeName": "IGESData_GlobalSection::SetCascadeUnit",
+      "signature": "IGESData_GlobalSection::SetCascadeUnit: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetDraftingStandard#I#",
+      "nativeName": "IGESData_GlobalSection::SetDraftingStandard",
+      "signature": "IGESData_GlobalSection::SetDraftingStandard: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetIGESVersion#I#",
+      "nativeName": "IGESData_GlobalSection::SetIGESVersion",
+      "signature": "IGESData_GlobalSection::SetIGESVersion: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetIntegerBits#I#",
+      "nativeName": "IGESData_GlobalSection::SetIntegerBits",
+      "signature": "IGESData_GlobalSection::SetIntegerBits: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetLineWeightGrad#I#",
+      "nativeName": "IGESData_GlobalSection::SetLineWeightGrad",
+      "signature": "IGESData_GlobalSection::SetLineWeightGrad: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxCoord#d#",
+      "nativeName": "IGESData_GlobalSection::SetMaxCoord",
+      "signature": "IGESData_GlobalSection::SetMaxCoord: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxDigitsDouble#I#",
+      "nativeName": "IGESData_GlobalSection::SetMaxDigitsDouble",
+      "signature": "IGESData_GlobalSection::SetMaxDigitsDouble: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxDigitsSingle#I#",
+      "nativeName": "IGESData_GlobalSection::SetMaxDigitsSingle",
+      "signature": "IGESData_GlobalSection::SetMaxDigitsSingle: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxLineWeight#d#",
+      "nativeName": "IGESData_GlobalSection::SetMaxLineWeight",
+      "signature": "IGESData_GlobalSection::SetMaxLineWeight: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxPower10Double#I#",
+      "nativeName": "IGESData_GlobalSection::SetMaxPower10Double",
+      "signature": "IGESData_GlobalSection::SetMaxPower10Double: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetMaxPower10Single#I#",
+      "nativeName": "IGESData_GlobalSection::SetMaxPower10Single",
+      "signature": "IGESData_GlobalSection::SetMaxPower10Single: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetResolution#d#",
+      "nativeName": "IGESData_GlobalSection::SetResolution",
+      "signature": "IGESData_GlobalSection::SetResolution: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetScale#d#",
+      "nativeName": "IGESData_GlobalSection::SetScale",
+      "signature": "IGESData_GlobalSection::SetScale: void (const double)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetUnitFlag#I#",
+      "nativeName": "IGESData_GlobalSection::SetUnitFlag",
+      "signature": "IGESData_GlobalSection::SetUnitFlag: void (const int)",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitFlag#1",
+      "nativeName": "IGESData_GlobalSection::UnitFlag",
+      "signature": "IGESData_GlobalSection::UnitFlag: int () const",
+      "reason": "SDK 8.0.1 constructor implementation initializes every selected scalar and flag; setters update owned data. No borrowed strings, mutable handle outputs or native addresses are exposed."
+    },
+    {
       "stableId": "c:@S@IGESData_DefSwitch@F@DefType#1",
       "nativeName": "IGESData_DefSwitch::DefType",
       "signature": "IGESData_DefSwitch::DefType: IGESData_DefType () const",
@@ -10614,6 +11198,120 @@
       "nativeName": "IGESData_DefSwitch::Value",
       "signature": "IGESData_DefSwitch::Value: int () const",
       "reason": "Header-audited independent copied scalar, enum, gp and embedded value state; no external addresses or native UI/context resource is retained."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@BlankStatusIgnored#",
+      "nativeName": "IGESData_DirChecker::BlankStatusIgnored",
+      "signature": "IGESData_DirChecker::BlankStatusIgnored: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@BlankStatusRequired#I#",
+      "nativeName": "IGESData_DirChecker::BlankStatusRequired",
+      "signature": "IGESData_DirChecker::BlankStatusRequired: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@Color#$@E@IGESData_DefType#",
+      "nativeName": "IGESData_DirChecker::Color",
+      "signature": "IGESData_DirChecker::Color: void (const IGESData_DefType)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@Correct#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1",
+      "nativeName": "IGESData_DirChecker::Correct",
+      "signature": "IGESData_DirChecker::Correct: bool (const occ::handle<IGESData_IGESEntity> &) const",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@GraphicsIgnored#I#",
+      "nativeName": "IGESData_DirChecker::GraphicsIgnored",
+      "signature": "IGESData_DirChecker::GraphicsIgnored: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@HierarchyStatusIgnored#",
+      "nativeName": "IGESData_DirChecker::HierarchyStatusIgnored",
+      "signature": "IGESData_DirChecker::HierarchyStatusIgnored: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@HierarchyStatusRequired#I#",
+      "nativeName": "IGESData_DirChecker::HierarchyStatusRequired",
+      "signature": "IGESData_DirChecker::HierarchyStatusRequired: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@IGESData_DirChecker#",
+      "nativeName": "IGESData_DirChecker::IGESData_DirChecker",
+      "signature": "IGESData_DirChecker::IGESData_DirChecker: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#",
+      "nativeName": "IGESData_DirChecker::IGESData_DirChecker",
+      "signature": "IGESData_DirChecker::IGESData_DirChecker: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#",
+      "nativeName": "IGESData_DirChecker::IGESData_DirChecker",
+      "signature": "IGESData_DirChecker::IGESData_DirChecker: void (const int, const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#I#",
+      "nativeName": "IGESData_DirChecker::IGESData_DirChecker",
+      "signature": "IGESData_DirChecker::IGESData_DirChecker: void (const int, const int, const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@LineFont#$@E@IGESData_DefType#",
+      "nativeName": "IGESData_DirChecker::LineFont",
+      "signature": "IGESData_DirChecker::LineFont: void (const IGESData_DefType)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@LineWeight#$@E@IGESData_DefType#",
+      "nativeName": "IGESData_DirChecker::LineWeight",
+      "signature": "IGESData_DirChecker::LineWeight: void (const IGESData_DefType)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@SetDefault#",
+      "nativeName": "IGESData_DirChecker::SetDefault",
+      "signature": "IGESData_DirChecker::SetDefault: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@Structure#$@E@IGESData_DefType#",
+      "nativeName": "IGESData_DirChecker::Structure",
+      "signature": "IGESData_DirChecker::Structure: void (const IGESData_DefType)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@SubordinateStatusIgnored#",
+      "nativeName": "IGESData_DirChecker::SubordinateStatusIgnored",
+      "signature": "IGESData_DirChecker::SubordinateStatusIgnored: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@SubordinateStatusRequired#I#",
+      "nativeName": "IGESData_DirChecker::SubordinateStatusRequired",
+      "signature": "IGESData_DirChecker::SubordinateStatusRequired: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@UseFlagIgnored#",
+      "nativeName": "IGESData_DirChecker::UseFlagIgnored",
+      "signature": "IGESData_DirChecker::UseFlagIgnored: void ()",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
+    },
+    {
+      "stableId": "c:@S@IGESData_DirChecker@F@UseFlagRequired#I#",
+      "nativeName": "IGESData_DirChecker::UseFlagRequired",
+      "signature": "IGESData_DirChecker::UseFlagRequired: void (const int)",
+      "reason": "Constructor initializes directory criteria; uninitialized IsSet flag is never exposed. Mutable Interface_Check handle outputs remain excluded."
     },
     {
       "stableId": "c:@S@IGESData_IGESType@F@Form#1",
@@ -12266,6 +12964,180 @@
       "reason": "Audited Modeling owner: copied scalar/gp or leased const-owner inputs, owned internal storage and copied or retained independent results; exact SDK header contract."
     },
     {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@ChainList#1",
+      "nativeName": "IntPolyh_StartPoint::ChainList",
+      "signature": "IntPolyh_StartPoint::ChainList: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@CheckSameSP#&1$@S@IntPolyh_StartPoint#1",
+      "nativeName": "IntPolyh_StartPoint::CheckSameSP",
+      "signature": "IntPolyh_StartPoint::CheckSameSP: int (const IntPolyh_StartPoint &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@E1#1",
+      "nativeName": "IntPolyh_StartPoint::E1",
+      "signature": "IntPolyh_StartPoint::E1: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@E2#1",
+      "nativeName": "IntPolyh_StartPoint::E2",
+      "signature": "IntPolyh_StartPoint::E2: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@GetAngle#1",
+      "nativeName": "IntPolyh_StartPoint::GetAngle",
+      "signature": "IntPolyh_StartPoint::GetAngle: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@GetEdgePoints#&1$@S@IntPolyh_Triangle#&I#S2_#S2_#1",
+      "nativeName": "IntPolyh_StartPoint::GetEdgePoints",
+      "signature": "IntPolyh_StartPoint::GetEdgePoints: int (const IntPolyh_Triangle &, int &, int &, int &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@IntPolyh_StartPoint#",
+      "nativeName": "IntPolyh_StartPoint::IntPolyh_StartPoint",
+      "signature": "IntPolyh_StartPoint::IntPolyh_StartPoint: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@IntPolyh_StartPoint#d#d#d#d#d#d#d#I#I#d#I#I#d#I#",
+      "nativeName": "IntPolyh_StartPoint::IntPolyh_StartPoint",
+      "signature": "IntPolyh_StartPoint::IntPolyh_StartPoint: void (const double, const double, const double, const double, const double, const double, const double, const int, const int, const double, const int, const int, const double, const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@Lambda1#1",
+      "nativeName": "IntPolyh_StartPoint::Lambda1",
+      "signature": "IntPolyh_StartPoint::Lambda1: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@Lambda2#1",
+      "nativeName": "IntPolyh_StartPoint::Lambda2",
+      "signature": "IntPolyh_StartPoint::Lambda2: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetAngle#d#",
+      "nativeName": "IntPolyh_StartPoint::SetAngle",
+      "signature": "IntPolyh_StartPoint::SetAngle: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetChainList#I#",
+      "nativeName": "IntPolyh_StartPoint::SetChainList",
+      "signature": "IntPolyh_StartPoint::SetChainList: void (const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetCoupleValue#I#I#",
+      "nativeName": "IntPolyh_StartPoint::SetCoupleValue",
+      "signature": "IntPolyh_StartPoint::SetCoupleValue: void (const int, const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetEdge1#I#",
+      "nativeName": "IntPolyh_StartPoint::SetEdge1",
+      "signature": "IntPolyh_StartPoint::SetEdge1: void (const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetEdge2#I#",
+      "nativeName": "IntPolyh_StartPoint::SetEdge2",
+      "signature": "IntPolyh_StartPoint::SetEdge2: void (const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetLambda1#d#",
+      "nativeName": "IntPolyh_StartPoint::SetLambda1",
+      "signature": "IntPolyh_StartPoint::SetLambda1: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetLambda2#d#",
+      "nativeName": "IntPolyh_StartPoint::SetLambda2",
+      "signature": "IntPolyh_StartPoint::SetLambda2: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetUV1#d#d#",
+      "nativeName": "IntPolyh_StartPoint::SetUV1",
+      "signature": "IntPolyh_StartPoint::SetUV1: void (const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetUV2#d#d#",
+      "nativeName": "IntPolyh_StartPoint::SetUV2",
+      "signature": "IntPolyh_StartPoint::SetUV2: void (const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@SetXYZ#d#d#d#",
+      "nativeName": "IntPolyh_StartPoint::SetXYZ",
+      "signature": "IntPolyh_StartPoint::SetXYZ: void (const double, const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@T1#1",
+      "nativeName": "IntPolyh_StartPoint::T1",
+      "signature": "IntPolyh_StartPoint::T1: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@T2#1",
+      "nativeName": "IntPolyh_StartPoint::T2",
+      "signature": "IntPolyh_StartPoint::T2: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@U1#1",
+      "nativeName": "IntPolyh_StartPoint::U1",
+      "signature": "IntPolyh_StartPoint::U1: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@U2#1",
+      "nativeName": "IntPolyh_StartPoint::U2",
+      "signature": "IntPolyh_StartPoint::U2: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@V1#1",
+      "nativeName": "IntPolyh_StartPoint::V1",
+      "signature": "IntPolyh_StartPoint::V1: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@V2#1",
+      "nativeName": "IntPolyh_StartPoint::V2",
+      "signature": "IntPolyh_StartPoint::V2: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@X#1",
+      "nativeName": "IntPolyh_StartPoint::X",
+      "signature": "IntPolyh_StartPoint::X: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@Y#1",
+      "nativeName": "IntPolyh_StartPoint::Y",
+      "signature": "IntPolyh_StartPoint::Y: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntPolyh_StartPoint@F@Z#1",
+      "nativeName": "IntPolyh_StartPoint::Z",
+      "signature": "IntPolyh_StartPoint::Z: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
       "stableId": "c:@S@IntPolyh_Triangle@F@Deflection#1",
       "nativeName": "IntPolyh_Triangle::Deflection",
       "signature": "IntPolyh_Triangle::Deflection: double () const",
@@ -13022,6 +13894,198 @@
       "reason": "Audited Modeling owner: copied scalar/gp or leased const-owner inputs, owned internal storage and copied or retained independent results; exact SDK header contract."
     },
     {
+      "stableId": "c:@S@IntTools_CommonPrt@F@AllNullFlag#1",
+      "nativeName": "IntTools_CommonPrt::AllNullFlag",
+      "signature": "IntTools_CommonPrt::AllNullFlag: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@AppendRange2#&1$@S@IntTools_Range#",
+      "nativeName": "IntTools_CommonPrt::AppendRange2",
+      "signature": "IntTools_CommonPrt::AppendRange2: void (const IntTools_Range &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@AppendRange2#d#d#",
+      "nativeName": "IntTools_CommonPrt::AppendRange2",
+      "signature": "IntTools_CommonPrt::AppendRange2: void (const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@BoundingPoints#&$@S@gp_Pnt#S0_#1",
+      "nativeName": "IntTools_CommonPrt::BoundingPoints",
+      "signature": "IntTools_CommonPrt::BoundingPoints: void (gp_Pnt &, gp_Pnt &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@IntTools_CommonPrt#",
+      "nativeName": "IntTools_CommonPrt::IntTools_CommonPrt",
+      "signature": "IntTools_CommonPrt::IntTools_CommonPrt: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@Range1#&d#S0_#1",
+      "nativeName": "IntTools_CommonPrt::Range1",
+      "signature": "IntTools_CommonPrt::Range1: void (double &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@Range1#1",
+      "nativeName": "IntTools_CommonPrt::Range1",
+      "signature": "IntTools_CommonPrt::Range1: const IntTools_Range &() const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetAllNullFlag#b#",
+      "nativeName": "IntTools_CommonPrt::SetAllNullFlag",
+      "signature": "IntTools_CommonPrt::SetAllNullFlag: void (const bool)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetBoundingPoints#&1$@S@gp_Pnt#S0_#",
+      "nativeName": "IntTools_CommonPrt::SetBoundingPoints",
+      "signature": "IntTools_CommonPrt::SetBoundingPoints: void (const gp_Pnt &, const gp_Pnt &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetRange1#&1$@S@IntTools_Range#",
+      "nativeName": "IntTools_CommonPrt::SetRange1",
+      "signature": "IntTools_CommonPrt::SetRange1: void (const IntTools_Range &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetRange1#d#d#",
+      "nativeName": "IntTools_CommonPrt::SetRange1",
+      "signature": "IntTools_CommonPrt::SetRange1: void (const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetType#$@E@TopAbs_ShapeEnum#",
+      "nativeName": "IntTools_CommonPrt::SetType",
+      "signature": "IntTools_CommonPrt::SetType: void (const TopAbs_ShapeEnum)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetVertexParameter1#d#",
+      "nativeName": "IntTools_CommonPrt::SetVertexParameter1",
+      "signature": "IntTools_CommonPrt::SetVertexParameter1: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@SetVertexParameter2#d#",
+      "nativeName": "IntTools_CommonPrt::SetVertexParameter2",
+      "signature": "IntTools_CommonPrt::SetVertexParameter2: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@Type#1",
+      "nativeName": "IntTools_CommonPrt::Type",
+      "signature": "IntTools_CommonPrt::Type: TopAbs_ShapeEnum () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@VertexParameter1#1",
+      "nativeName": "IntTools_CommonPrt::VertexParameter1",
+      "signature": "IntTools_CommonPrt::VertexParameter1: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_CommonPrt@F@VertexParameter2#1",
+      "nativeName": "IntTools_CommonPrt::VertexParameter2",
+      "signature": "IntTools_CommonPrt::VertexParameter2: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@Bounds#&d#S0_#&$@S@gp_Pnt#S1_#1",
+      "nativeName": "IntTools_Curve::Bounds",
+      "signature": "IntTools_Curve::Bounds: bool (double &, double &, gp_Pnt &, gp_Pnt &) const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@Curve#1",
+      "nativeName": "IntTools_Curve::Curve",
+      "signature": "IntTools_Curve::Curve: const occ::handle<Geom_Curve> &() const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@FirstCurve2d#1",
+      "nativeName": "IntTools_Curve::FirstCurve2d",
+      "signature": "IntTools_Curve::FirstCurve2d: const occ::handle<Geom2d_Curve> &() const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@HasBounds#1",
+      "nativeName": "IntTools_Curve::HasBounds",
+      "signature": "IntTools_Curve::HasBounds: bool () const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@IntTools_Curve#",
+      "nativeName": "IntTools_Curve::IntTools_Curve",
+      "signature": "IntTools_Curve::IntTools_Curve: void ()",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@IntTools_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S3_#d#d#",
+      "nativeName": "IntTools_Curve::IntTools_Curve",
+      "signature": "IntTools_Curve::IntTools_Curve: void (const occ::handle<Geom_Curve> &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const double, const double)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SecondCurve2d#1",
+      "nativeName": "IntTools_Curve::SecondCurve2d",
+      "signature": "IntTools_Curve::SecondCurve2d: const occ::handle<Geom2d_Curve> &() const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "IntTools_Curve::SetCurve",
+      "signature": "IntTools_Curve::SetCurve: void (const occ::handle<Geom_Curve> &)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetCurves#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S3_#",
+      "nativeName": "IntTools_Curve::SetCurves",
+      "signature": "IntTools_Curve::SetCurves: void (const occ::handle<Geom_Curve> &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetFirstCurve2d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#",
+      "nativeName": "IntTools_Curve::SetFirstCurve2d",
+      "signature": "IntTools_Curve::SetFirstCurve2d: void (const occ::handle<Geom2d_Curve> &)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetSecondCurve2d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#",
+      "nativeName": "IntTools_Curve::SetSecondCurve2d",
+      "signature": "IntTools_Curve::SetSecondCurve2d: void (const occ::handle<Geom2d_Curve> &)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetTangentialTolerance#d#",
+      "nativeName": "IntTools_Curve::SetTangentialTolerance",
+      "signature": "IntTools_Curve::SetTangentialTolerance: void (const double)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@SetTolerance#d#",
+      "nativeName": "IntTools_Curve::SetTolerance",
+      "signature": "IntTools_Curve::SetTolerance: void (const double)",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@TangentialTolerance#1",
+      "nativeName": "IntTools_Curve::TangentialTolerance",
+      "signature": "IntTools_Curve::TangentialTolerance: double () const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
+      "stableId": "c:@S@IntTools_Curve@F@Tolerance#1",
+      "nativeName": "IntTools_Curve::Tolerance",
+      "signature": "IntTools_Curve::Tolerance: double () const",
+      "reason": "Default-null intrusive handles and initialized tolerances; null-safe metadata/bounds only, no direct D0 or Type query."
+    },
+    {
       "stableId": "c:@S@IntTools_CurveRangeLocalizeData@F@AddBox#&1$@S@IntTools_CurveRangeSample#&1$@S@Bnd_Box#",
       "nativeName": "IntTools_CurveRangeLocalizeData::AddBox",
       "signature": "IntTools_CurveRangeLocalizeData::AddBox: void (const IntTools_CurveRangeSample &, const Bnd_Box &)",
@@ -13200,6 +14264,96 @@
       "nativeName": "IntTools_Range::SetLast",
       "signature": "IntTools_Range::SetLast: void (const double)",
       "reason": "Audited Modeling owner: copied scalar/gp or leased const-owner inputs, owned internal storage and copied or retained independent results; exact SDK header contract."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@IntTools_Root#",
+      "nativeName": "IntTools_Root::IntTools_Root",
+      "signature": "IntTools_Root::IntTools_Root: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@IntTools_Root#d#I#",
+      "nativeName": "IntTools_Root::IntTools_Root",
+      "signature": "IntTools_Root::IntTools_Root: void (const double, const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@Interval#&d#S0_#S0_#S0_#1",
+      "nativeName": "IntTools_Root::Interval",
+      "signature": "IntTools_Root::Interval: void (double &, double &, double &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@IsValid#1",
+      "nativeName": "IntTools_Root::IsValid",
+      "signature": "IntTools_Root::IsValid: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@LayerHeight#1",
+      "nativeName": "IntTools_Root::LayerHeight",
+      "signature": "IntTools_Root::LayerHeight: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@Root#1",
+      "nativeName": "IntTools_Root::Root",
+      "signature": "IntTools_Root::Root: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetInterval#d#d#d#d#",
+      "nativeName": "IntTools_Root::SetInterval",
+      "signature": "IntTools_Root::SetInterval: void (const double, const double, const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetLayerHeight#d#",
+      "nativeName": "IntTools_Root::SetLayerHeight",
+      "signature": "IntTools_Root::SetLayerHeight: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetRoot#d#",
+      "nativeName": "IntTools_Root::SetRoot",
+      "signature": "IntTools_Root::SetRoot: void (const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetStateAfter#$@E@TopAbs_State#",
+      "nativeName": "IntTools_Root::SetStateAfter",
+      "signature": "IntTools_Root::SetStateAfter: void (const TopAbs_State)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetStateBefore#$@E@TopAbs_State#",
+      "nativeName": "IntTools_Root::SetStateBefore",
+      "signature": "IntTools_Root::SetStateBefore: void (const TopAbs_State)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@SetType#I#",
+      "nativeName": "IntTools_Root::SetType",
+      "signature": "IntTools_Root::SetType: void (const int)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@StateAfter#1",
+      "nativeName": "IntTools_Root::StateAfter",
+      "signature": "IntTools_Root::StateAfter: TopAbs_State () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@StateBefore#1",
+      "nativeName": "IntTools_Root::StateBefore",
+      "signature": "IntTools_Root::StateBefore: TopAbs_State () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@IntTools_Root@F@Type#1",
+      "nativeName": "IntTools_Root::Type",
+      "signature": "IntTools_Root::Type: int () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "stableId": "c:@S@IntTools_SurfaceRangeLocalizeData@F@AddBox#&1$@S@IntTools_SurfaceRangeSample#&1$@S@Bnd_Box#",
@@ -13392,6 +14546,96 @@
       "nativeName": "IntTools_SurfaceRangeSample::SetSampleRangeV",
       "signature": "IntTools_SurfaceRangeSample::SetSampleRangeV: void (const IntTools_CurveRangeSample &)",
       "reason": "Audited Modeling owner: copied scalar/gp or leased const-owner inputs, owned internal storage and copied or retained independent results; exact SDK header contract."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@Incidence#1",
+      "nativeName": "Intf_SectionPoint::Incidence",
+      "signature": "Intf_SectionPoint::Incidence: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@InfoFirst#&$@E@Intf_PIType#&I#&d#1",
+      "nativeName": "Intf_SectionPoint::InfoFirst",
+      "signature": "Intf_SectionPoint::InfoFirst: void (Intf_PIType &, int &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@InfoFirst#&$@E@Intf_PIType#&I#S2_#&d#1",
+      "nativeName": "Intf_SectionPoint::InfoFirst",
+      "signature": "Intf_SectionPoint::InfoFirst: void (Intf_PIType &, int &, int &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@InfoSecond#&$@E@Intf_PIType#&I#&d#1",
+      "nativeName": "Intf_SectionPoint::InfoSecond",
+      "signature": "Intf_SectionPoint::InfoSecond: void (Intf_PIType &, int &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@InfoSecond#&$@E@Intf_PIType#&I#S2_#&d#1",
+      "nativeName": "Intf_SectionPoint::InfoSecond",
+      "signature": "Intf_SectionPoint::InfoSecond: void (Intf_PIType &, int &, int &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@Intf_SectionPoint#",
+      "nativeName": "Intf_SectionPoint::Intf_SectionPoint",
+      "signature": "Intf_SectionPoint::Intf_SectionPoint: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@Intf_SectionPoint#&1$@S@gp_Pnt#$@E@Intf_PIType#I#I#d#S2_#I#I#d#d#",
+      "nativeName": "Intf_SectionPoint::Intf_SectionPoint",
+      "signature": "Intf_SectionPoint::Intf_SectionPoint: void (const gp_Pnt &, const Intf_PIType, const int, const int, const double, const Intf_PIType, const int, const int, const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@Intf_SectionPoint#&1$@S@gp_Pnt2d#$@E@Intf_PIType#I#d#S2_#I#d#d#",
+      "nativeName": "Intf_SectionPoint::Intf_SectionPoint",
+      "signature": "Intf_SectionPoint::Intf_SectionPoint: void (const gp_Pnt2d &, const Intf_PIType, const int, const double, const Intf_PIType, const int, const double, const double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@IsEqual#&1$@S@Intf_SectionPoint#1",
+      "nativeName": "Intf_SectionPoint::IsEqual",
+      "signature": "Intf_SectionPoint::IsEqual: bool (const Intf_SectionPoint &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@IsOnSameEdge#&1$@S@Intf_SectionPoint#1",
+      "nativeName": "Intf_SectionPoint::IsOnSameEdge",
+      "signature": "Intf_SectionPoint::IsOnSameEdge: bool (const Intf_SectionPoint &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@ParamOnFirst#1",
+      "nativeName": "Intf_SectionPoint::ParamOnFirst",
+      "signature": "Intf_SectionPoint::ParamOnFirst: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@ParamOnSecond#1",
+      "nativeName": "Intf_SectionPoint::ParamOnSecond",
+      "signature": "Intf_SectionPoint::ParamOnSecond: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@Pnt#1",
+      "nativeName": "Intf_SectionPoint::Pnt",
+      "signature": "Intf_SectionPoint::Pnt: const gp_Pnt &() const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@TypeOnFirst#1",
+      "nativeName": "Intf_SectionPoint::TypeOnFirst",
+      "signature": "Intf_SectionPoint::TypeOnFirst: Intf_PIType () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Intf_SectionPoint@F@TypeOnSecond#1",
+      "nativeName": "Intf_SectionPoint::TypeOnSecond",
+      "signature": "Intf_SectionPoint::TypeOnSecond: Intf_PIType () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "stableId": "c:@S@Intrv_Interval@F@Bounds#&d#&f#S0_#S1_#1",
@@ -13718,6 +14962,102 @@
       "reason": "Audited SDK 8.0.1 stable-address owner; call-bound copies/leases, scalar ref snapshots, and copied or independently retained results."
     },
     {
+      "stableId": "c:@S@Message_ExecStatus@F@Add#&1$@S@Message_ExecStatus#",
+      "nativeName": "Message_ExecStatus::Add",
+      "signature": "Message_ExecStatus::Add: void (const Message_ExecStatus &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@And#&1$@S@Message_ExecStatus#",
+      "nativeName": "Message_ExecStatus::And",
+      "signature": "Message_ExecStatus::And: void (const Message_ExecStatus &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@Clear#",
+      "nativeName": "Message_ExecStatus::Clear",
+      "signature": "Message_ExecStatus::Clear: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@ClearAllAlarm#",
+      "nativeName": "Message_ExecStatus::ClearAllAlarm",
+      "signature": "Message_ExecStatus::ClearAllAlarm: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@ClearAllDone#",
+      "nativeName": "Message_ExecStatus::ClearAllDone",
+      "signature": "Message_ExecStatus::ClearAllDone: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@ClearAllFail#",
+      "nativeName": "Message_ExecStatus::ClearAllFail",
+      "signature": "Message_ExecStatus::ClearAllFail: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@ClearAllWarn#",
+      "nativeName": "Message_ExecStatus::ClearAllWarn",
+      "signature": "Message_ExecStatus::ClearAllWarn: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@IsAlarm#1",
+      "nativeName": "Message_ExecStatus::IsAlarm",
+      "signature": "Message_ExecStatus::IsAlarm: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@IsDone#1",
+      "nativeName": "Message_ExecStatus::IsDone",
+      "signature": "Message_ExecStatus::IsDone: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@IsFail#1",
+      "nativeName": "Message_ExecStatus::IsFail",
+      "signature": "Message_ExecStatus::IsFail: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@IsWarn#1",
+      "nativeName": "Message_ExecStatus::IsWarn",
+      "signature": "Message_ExecStatus::IsWarn: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@Message_ExecStatus#",
+      "nativeName": "Message_ExecStatus::Message_ExecStatus",
+      "signature": "Message_ExecStatus::Message_ExecStatus: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@SetAllAlarm#",
+      "nativeName": "Message_ExecStatus::SetAllAlarm",
+      "signature": "Message_ExecStatus::SetAllAlarm: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@SetAllDone#",
+      "nativeName": "Message_ExecStatus::SetAllDone",
+      "signature": "Message_ExecStatus::SetAllDone: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@SetAllFail#",
+      "nativeName": "Message_ExecStatus::SetAllFail",
+      "signature": "Message_ExecStatus::SetAllFail: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@Message_ExecStatus@F@SetAllWarn#",
+      "nativeName": "Message_ExecStatus::SetAllWarn",
+      "signature": "Message_ExecStatus::SetAllWarn: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
       "stableId": "c:@S@NLPlate_NLPlate@F@ConstraintsSliding#I#",
       "nativeName": "NLPlate_NLPlate::ConstraintsSliding",
       "signature": "NLPlate_NLPlate::ConstraintsSliding: void (const int)",
@@ -13788,6 +15128,90 @@
       "nativeName": "NLPlate_NLPlate::Solve2",
       "signature": "NLPlate_NLPlate::Solve2: void (const int, const int)",
       "reason": "Audited SDK 8.0.1 stable-address owner; call-bound copies/leases, scalar ref snapshots, and copied or independently retained results."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@Add#&$@E@OSD_SingleProtection#S1_#",
+      "nativeName": "OSD_Protection::Add",
+      "signature": "OSD_Protection::Add: void (OSD_SingleProtection &, const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@Group#1",
+      "nativeName": "OSD_Protection::Group",
+      "signature": "OSD_Protection::Group: OSD_SingleProtection () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@OSD_Protection#",
+      "nativeName": "OSD_Protection::OSD_Protection",
+      "signature": "OSD_Protection::OSD_Protection: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@OSD_Protection#$@E@OSD_SingleProtection#S0_#S0_#S0_#",
+      "nativeName": "OSD_Protection::OSD_Protection",
+      "signature": "OSD_Protection::OSD_Protection: void (const OSD_SingleProtection, const OSD_SingleProtection, const OSD_SingleProtection, const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@SetGroup#$@E@OSD_SingleProtection#",
+      "nativeName": "OSD_Protection::SetGroup",
+      "signature": "OSD_Protection::SetGroup: void (const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@SetSystem#$@E@OSD_SingleProtection#",
+      "nativeName": "OSD_Protection::SetSystem",
+      "signature": "OSD_Protection::SetSystem: void (const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@SetUser#$@E@OSD_SingleProtection#",
+      "nativeName": "OSD_Protection::SetUser",
+      "signature": "OSD_Protection::SetUser: void (const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@SetValues#$@E@OSD_SingleProtection#S0_#S0_#S0_#",
+      "nativeName": "OSD_Protection::SetValues",
+      "signature": "OSD_Protection::SetValues: void (const OSD_SingleProtection, const OSD_SingleProtection, const OSD_SingleProtection, const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@SetWorld#$@E@OSD_SingleProtection#",
+      "nativeName": "OSD_Protection::SetWorld",
+      "signature": "OSD_Protection::SetWorld: void (const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@Sub#&$@E@OSD_SingleProtection#S1_#",
+      "nativeName": "OSD_Protection::Sub",
+      "signature": "OSD_Protection::Sub: void (OSD_SingleProtection &, const OSD_SingleProtection)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@System#1",
+      "nativeName": "OSD_Protection::System",
+      "signature": "OSD_Protection::System: OSD_SingleProtection () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@User#1",
+      "nativeName": "OSD_Protection::User",
+      "signature": "OSD_Protection::User: OSD_SingleProtection () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@Values#&$@E@OSD_SingleProtection#S0_#S0_#S0_#",
+      "nativeName": "OSD_Protection::Values",
+      "signature": "OSD_Protection::Values: void (OSD_SingleProtection &, OSD_SingleProtection &, OSD_SingleProtection &, OSD_SingleProtection &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@OSD_Protection@F@World#1",
+      "nativeName": "OSD_Protection::World",
+      "signature": "OSD_Protection::World: OSD_SingleProtection () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "stableId": "c:@S@Poly_Triangle@F@Poly_Triangle#",
@@ -14670,6 +16094,114 @@
       "nativeName": "RWMesh_CoordinateSystemConverter::TransformTransformation",
       "signature": "RWMesh_CoordinateSystemConverter::TransformTransformation: void (gp_Trsf &) const",
       "reason": "Header-audited independent coordinate/length-unit conversion state, initialized empty; gp inputs copied and mutable gp outputs use success-only publication."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@Depth#1",
+      "nativeName": "SelectBasics_PickResult::Depth",
+      "signature": "SelectBasics_PickResult::Depth: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@DistToGeomCenter#1",
+      "nativeName": "SelectBasics_PickResult::DistToGeomCenter",
+      "signature": "SelectBasics_PickResult::DistToGeomCenter: double () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@HasPickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::HasPickedPoint",
+      "signature": "SelectBasics_PickResult::HasPickedPoint: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@Invalidate#",
+      "nativeName": "SelectBasics_PickResult::Invalidate",
+      "signature": "SelectBasics_PickResult::Invalidate: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@IsValid#1",
+      "nativeName": "SelectBasics_PickResult::IsValid",
+      "signature": "SelectBasics_PickResult::IsValid: bool () const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@Min#&1$@S@SelectBasics_PickResult#S0_#S",
+      "nativeName": "SelectBasics_PickResult::Min",
+      "signature": "SelectBasics_PickResult::Min: const SelectBasics_PickResult &(const SelectBasics_PickResult &, const SelectBasics_PickResult &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@PickedPoint#1",
+      "nativeName": "SelectBasics_PickResult::PickedPoint",
+      "signature": "SelectBasics_PickResult::PickedPoint: const gp_Pnt &() const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#",
+      "nativeName": "SelectBasics_PickResult::SelectBasics_PickResult",
+      "signature": "SelectBasics_PickResult::SelectBasics_PickResult: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SelectBasics_PickResult#d#d#&1$@S@gp_Pnt#",
+      "nativeName": "SelectBasics_PickResult::SelectBasics_PickResult",
+      "signature": "SelectBasics_PickResult::SelectBasics_PickResult: void (double, double, const gp_Pnt &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SetDepth#d#",
+      "nativeName": "SelectBasics_PickResult::SetDepth",
+      "signature": "SelectBasics_PickResult::SetDepth: void (double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SetDistToGeomCenter#d#",
+      "nativeName": "SelectBasics_PickResult::SetDistToGeomCenter",
+      "signature": "SelectBasics_PickResult::SetDistToGeomCenter: void (double)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SetPickedPoint#&1$@S@gp_Pnt#",
+      "nativeName": "SelectBasics_PickResult::SetPickedPoint",
+      "signature": "SelectBasics_PickResult::SetPickedPoint: void (const gp_Pnt &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectBasics_PickResult@F@SetSurfaceNormal#&1$@S@gp_Vec#",
+      "nativeName": "SelectBasics_PickResult::SetSurfaceNormal",
+      "signature": "SelectBasics_PickResult::SetSurfaceNormal: void (const gp_Vec &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewClipRange@F@AddClipSubRange#&1$@S@Bnd_Range#",
+      "nativeName": "SelectMgr_ViewClipRange::AddClipSubRange",
+      "signature": "SelectMgr_ViewClipRange::AddClipSubRange: void (const Bnd_Range &)",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewClipRange@F@GetNearestDepth#&1$@S@Bnd_Range#&d#1",
+      "nativeName": "SelectMgr_ViewClipRange::GetNearestDepth",
+      "signature": "SelectMgr_ViewClipRange::GetNearestDepth: bool (const Bnd_Range &, double &) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewClipRange@F@IsClipped#d#1",
+      "nativeName": "SelectMgr_ViewClipRange::IsClipped",
+      "signature": "SelectMgr_ViewClipRange::IsClipped: bool (const double) const",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewClipRange@F@SelectMgr_ViewClipRange#",
+      "nativeName": "SelectMgr_ViewClipRange::SelectMgr_ViewClipRange",
+      "signature": "SelectMgr_ViewClipRange::SelectMgr_ViewClipRange: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_ViewClipRange@F@SetVoid#",
+      "nativeName": "SelectMgr_ViewClipRange::SetVoid",
+      "signature": "SelectMgr_ViewClipRange::SetVoid: void ()",
+      "reason": "SDK 8.0.1 audited initialized data owner; independent scalar/gp storage or value-retained native members, typed stable-token lifetime."
     },
     {
       "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XY#S0_#",
@@ -16416,6 +17948,90 @@
       "nativeName": "StepBasic_Unit::StepBasic_Unit",
       "signature": "StepBasic_Unit::StepBasic_Unit: void ()",
       "reason": "Header-audited direct StepData_SelectType entity choice: default-null intrusive handle member, value-retained SetValue and null-returning typed handle access; no extra storage or transient inheritance."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Arity#1",
+      "nativeName": "StepData_Field::Arity",
+      "signature": "StepData_Field::Arity: int () const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Boolean#I#I#1",
+      "nativeName": "StepData_Field::Boolean",
+      "signature": "StepData_Field::Boolean: bool (const int, const int) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Int#1",
+      "nativeName": "StepData_Field::Int",
+      "signature": "StepData_Field::Int: int () const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Integer#I#I#1",
+      "nativeName": "StepData_Field::Integer",
+      "signature": "StepData_Field::Integer: int (const int, const int) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Kind#b#1",
+      "nativeName": "StepData_Field::Kind",
+      "signature": "StepData_Field::Kind: int (const bool) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Length#I#1",
+      "nativeName": "StepData_Field::Length",
+      "signature": "StepData_Field::Length: int (const int) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Lower#I#1",
+      "nativeName": "StepData_Field::Lower",
+      "signature": "StepData_Field::Lower: int (const int) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@Real#I#I#1",
+      "nativeName": "StepData_Field::Real",
+      "signature": "StepData_Field::Real: double (const int, const int) const",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@SetBoolean#b#",
+      "nativeName": "StepData_Field::SetBoolean",
+      "signature": "StepData_Field::SetBoolean: void (const bool)",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@SetDerived#",
+      "nativeName": "StepData_Field::SetDerived",
+      "signature": "StepData_Field::SetDerived: void ()",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@SetInt#I#",
+      "nativeName": "StepData_Field::SetInt",
+      "signature": "StepData_Field::SetInt: void (const int)",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@SetInteger#I#",
+      "nativeName": "StepData_Field::SetInteger",
+      "signature": "StepData_Field::SetInteger: void (const int)",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@SetReal#d#",
+      "nativeName": "StepData_Field::SetReal",
+      "signature": "StepData_Field::SetReal: void (const double)",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
+    },
+    {
+      "stableId": "c:@S@StepData_Field@F@StepData_Field#",
+      "nativeName": "StepData_Field::StepData_Field",
+      "signature": "StepData_Field::StepData_Field: void ()",
+      "reason": "SDK 8.0.1 empty STEP field with scalar-only setters and readers; arbitrary-kind Clear, list construction and indexed mutation remain excluded."
     },
     {
       "stableId": "c:@S@StepDimTol_DatumOrCommonDatum@F@CaseNum#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
@@ -22630,6 +24246,146 @@
       "reason": "Header-audited independent settings object with copied values and intrusive-handle members retained by value; no viewer/context resource ownership or borrowed raw storage."
     },
     {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Index#1",
+      "nativeName": "HatchGen_IntersectionPoint::Index",
+      "signature": "HatchGen_IntersectionPoint::Index: int () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Parameter#1",
+      "nativeName": "HatchGen_IntersectionPoint::Parameter",
+      "signature": "HatchGen_IntersectionPoint::Parameter: double () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Position#1",
+      "nativeName": "HatchGen_IntersectionPoint::Position",
+      "signature": "HatchGen_IntersectionPoint::Position: TopAbs_Orientation () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentBeginning",
+      "signature": "HatchGen_IntersectionPoint::SegmentBeginning: bool () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentEnd",
+      "signature": "HatchGen_IntersectionPoint::SegmentEnd: bool () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#",
+      "nativeName": "HatchGen_IntersectionPoint::SetIndex",
+      "signature": "HatchGen_IntersectionPoint::SetIndex: void (const int)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#",
+      "nativeName": "HatchGen_IntersectionPoint::SetParameter",
+      "signature": "HatchGen_IntersectionPoint::SetParameter: void (const double)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#",
+      "nativeName": "HatchGen_IntersectionPoint::SetPosition",
+      "signature": "HatchGen_IntersectionPoint::SetPosition: void (const TopAbs_Orientation)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#",
+      "nativeName": "HatchGen_IntersectionPoint::SetSegmentBeginning",
+      "signature": "HatchGen_IntersectionPoint::SetSegmentBeginning: void (const bool)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnElement",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#",
+      "nativeName": "HatchGen_IntersectionPoint::SetSegmentEnd",
+      "signature": "HatchGen_IntersectionPoint::SetSegmentEnd: void (const bool)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Index#1",
+      "nativeName": "HatchGen_IntersectionPoint::Index",
+      "signature": "HatchGen_IntersectionPoint::Index: int () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Parameter#1",
+      "nativeName": "HatchGen_IntersectionPoint::Parameter",
+      "signature": "HatchGen_IntersectionPoint::Parameter: double () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Position#1",
+      "nativeName": "HatchGen_IntersectionPoint::Position",
+      "signature": "HatchGen_IntersectionPoint::Position: TopAbs_Orientation () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentBeginning",
+      "signature": "HatchGen_IntersectionPoint::SegmentBeginning: bool () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentEnd",
+      "signature": "HatchGen_IntersectionPoint::SegmentEnd: bool () const",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#",
+      "nativeName": "HatchGen_IntersectionPoint::SetIndex",
+      "signature": "HatchGen_IntersectionPoint::SetIndex: void (const int)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#",
+      "nativeName": "HatchGen_IntersectionPoint::SetParameter",
+      "signature": "HatchGen_IntersectionPoint::SetParameter: void (const double)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#",
+      "nativeName": "HatchGen_IntersectionPoint::SetPosition",
+      "signature": "HatchGen_IntersectionPoint::SetPosition: void (const TopAbs_Orientation)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#",
+      "nativeName": "HatchGen_IntersectionPoint::SetSegmentBeginning",
+      "signature": "HatchGen_IntersectionPoint::SetSegmentBeginning: void (const bool)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
+      "owner": "HatchGen_PointOnHatching",
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#",
+      "nativeName": "HatchGen_IntersectionPoint::SetSegmentEnd",
+      "signature": "HatchGen_IntersectionPoint::SetSegmentEnd: void (const bool)",
+      "reason": "Audited initialized inherited scalar state; called on concrete derived owner."
+    },
+    {
       "owner": "IntCurveSurface_HInter",
       "stableId": "c:@S@IntCurveSurface_Intersection@F@IsDone#1",
       "nativeName": "IntCurveSurface_Intersection::IsDone",
@@ -22831,6 +24587,27 @@
       "nativeName": "IntTools_BaseRangeSample::SetDepth",
       "signature": "IntTools_BaseRangeSample::SetDepth: void (const int)",
       "reason": "Audited public inherited query/operation on the owning derived object; base constructor/destructor remain protected and no base owner is generated."
+    },
+    {
+      "owner": "Message_ExecStatus",
+      "stableId": "c:@S@Message_ExecStatus@F@LocalStatusIndex#$@E@Message_Status#S",
+      "nativeName": "Message_ExecStatus::LocalStatusIndex",
+      "signature": "Message_ExecStatus::LocalStatusIndex: int (Message_Status)",
+      "reason": "Existing declaration projected on the new typed owner; original disposition retained."
+    },
+    {
+      "owner": "Message_ExecStatus",
+      "stableId": "c:@S@Message_ExecStatus@F@StatusIndex#$@E@Message_Status#S",
+      "nativeName": "Message_ExecStatus::StatusIndex",
+      "signature": "Message_ExecStatus::StatusIndex: int (Message_Status)",
+      "reason": "Existing declaration projected on the new typed owner; original disposition retained."
+    },
+    {
+      "owner": "Message_ExecStatus",
+      "stableId": "c:@S@Message_ExecStatus@F@TypeOfStatus#$@E@Message_Status#S",
+      "nativeName": "Message_ExecStatus::TypeOfStatus",
+      "signature": "Message_ExecStatus::TypeOfStatus: Message_StatusType (Message_Status)",
+      "reason": "Existing declaration projected on the new typed owner; original disposition retained."
     },
     {
       "owner": "Poly_Triangle",

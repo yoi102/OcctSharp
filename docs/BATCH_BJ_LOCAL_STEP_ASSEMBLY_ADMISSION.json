@@ -1,0 +1,619 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.59",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "6CCD9252722DB7DD46983B96F9AB9141D41BB4E70A3D9CED5560C1AA397587B9",
+  "declarations": [
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@get_type_descriptor#S",
+      "nativeName": "STEPCAFControl_ExternFile::get_type_descriptor",
+      "signature": "STEPCAFControl_ExternFile::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@get_type_name#S",
+      "nativeName": "STEPCAFControl_ExternFile::get_type_name",
+      "signature": "STEPCAFControl_ExternFile::get_type_name: const char *()",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetLabel#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetLabel",
+      "signature": "STEPCAFControl_ExternFile::GetLabel: TDF_Label () const",
+      "decision": "ADMITTED",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@SetLabel#&1$@S@TDF_Label#",
+      "nativeName": "STEPCAFControl_ExternFile::SetLabel",
+      "signature": "STEPCAFControl_ExternFile::SetLabel: void (const TDF_Label &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@STEPCAFControl_ExternFile#&&$@S@STEPCAFControl_ExternFile#",
+      "nativeName": "STEPCAFControl_ExternFile::STEPCAFControl_ExternFile",
+      "signature": "STEPCAFControl_ExternFile::STEPCAFControl_ExternFile: void (STEPCAFControl_ExternFile &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@STEPCAFControl_ExternFile#&1$@S@STEPCAFControl_ExternFile#",
+      "nativeName": "STEPCAFControl_ExternFile::STEPCAFControl_ExternFile",
+      "signature": "STEPCAFControl_ExternFile::STEPCAFControl_ExternFile: void (const STEPCAFControl_ExternFile &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ChangeReader#",
+      "nativeName": "STEPCAFControl_Reader::ChangeReader",
+      "signature": "STEPCAFControl_Reader::ChangeReader: STEPControl_Reader &()",
+      "decision": "ADMITTED",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Reader::ExternFile",
+      "signature": "STEPCAFControl_Reader::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "decision": "ADMITTED",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Reader::ExternFiles",
+      "signature": "STEPCAFControl_Reader::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@FindInstance#&1$@N@opencascade@S@handle>#$@S@StepRepr_NextAssemblyUsageOccurrence#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_ShapeTool#&1$@S@STEPConstruct_Tool#&1$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@TDF_Label#$@S@TopTools_ShapeMapHasher#S",
+      "nativeName": "STEPCAFControl_Reader::FindInstance",
+      "signature": "STEPCAFControl_Reader::FindInstance: TDF_Label (const occ::handle<StepRepr_NextAssemblyUsageOccurrence> &, const occ::handle<XCAFDoc_ShapeTool> &, const STEPConstruct_Tool &, const NCollection_DataMap<TopoDS_Shape, TDF_Label, TopTools_ShapeMapHasher> &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeLabelMap#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeLabelMap",
+      "signature": "STEPCAFControl_Reader::GetShapeLabelMap: const NCollection_DataMap<TopoDS_Shape, TDF_Label, TopTools_ShapeMapHasher> &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Reader::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Reader::Init",
+      "signature": "STEPCAFControl_Reader::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#*1C#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const char *const, const occ::handle<TDocStd_Document> &, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#*1C#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const char *const, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Reader#1",
+      "nativeName": "STEPCAFControl_Reader::Reader",
+      "signature": "STEPCAFControl_Reader::Reader: const STEPControl_Reader &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadFile#*1C#&1$@S@DESTEP_Parameters#",
+      "nativeName": "STEPCAFControl_Reader::ReadFile",
+      "signature": "STEPCAFControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const, const DESTEP_Parameters &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadStream#*1C#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "STEPCAFControl_Reader::ReadStream",
+      "signature": "STEPCAFControl_Reader::ReadStream: IFSelect_ReturnStatus (const char *const, std::istream &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Reader::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#&1$@S@STEPCAFControl_Reader#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void (const STEPCAFControl_Reader &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@TransferOneRoot#I#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::TransferOneRoot",
+      "signature": "STEPCAFControl_Reader::TransferOneRoot: bool (const int, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "decision": "ADMITTED",
+      "reason": "Private specialized selected-root receiver and exact external result label, copied before session release."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ChangeWriter#",
+      "nativeName": "STEPCAFControl_Writer::ChangeWriter",
+      "signature": "STEPCAFControl_Writer::ChangeWriter: STEPControl_Writer &()",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const TDF_Label &, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFiles",
+      "signature": "STEPCAFControl_Writer::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::Init",
+      "signature": "STEPCAFControl_Writer::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&&$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (STEPCAFControl_Writer &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const STEPCAFControl_Writer &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Writer#1",
+      "nativeName": "STEPCAFControl_Writer::Writer",
+      "signature": "STEPCAFControl_Writer::Writer: const STEPControl_Writer &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@WriteStream#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "STEPCAFControl_Writer::WriteStream",
+      "signature": "STEPCAFControl_Writer::WriteStream: IFSelect_ReturnStatus (std::ostream &)",
+      "decision": "DEFERRED",
+      "reason": "No additional useful safe workflow admitted: mutable session/maps, arbitrary streams, copy/move or private parameters not proven across native external recursion."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@FileName#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::FileName",
+      "signature": "STEPConstruct_ExternRefs::FileName: const char *(const int) const",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@Format#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::Format",
+      "signature": "STEPConstruct_ExternRefs::Format: occ::handle<TCollection_HAsciiString> (const int) const",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@LoadExternRefs#",
+      "nativeName": "STEPConstruct_ExternRefs::LoadExternRefs",
+      "signature": "STEPConstruct_ExternRefs::LoadExternRefs: bool ()",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@NbExternRefs#1",
+      "nativeName": "STEPConstruct_ExternRefs::NbExternRefs",
+      "signature": "STEPConstruct_ExternRefs::NbExternRefs: int () const",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@ProdDef#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::ProdDef",
+      "signature": "STEPConstruct_ExternRefs::ProdDef: occ::handle<StepBasic_ProductDefinition> (const int) const",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@STEPConstruct_ExternRefs#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#",
+      "nativeName": "STEPConstruct_ExternRefs::STEPConstruct_ExternRefs",
+      "signature": "STEPConstruct_ExternRefs::STEPConstruct_ExternRefs: void (const occ::handle<XSControl_WorkSession> &)",
+      "reason": "Necessary same-SDK reference graph preflight before native recursive reads. Private tool lifetime; returned names/format/domain are copied."
+    },
+    {
+      "stableId": "c:@S@STEPConstruct_ExternRefs@F@DocFile#I#1",
+      "nativeName": "STEPConstruct_ExternRefs::DocFile",
+      "signature": "STEPConstruct_ExternRefs::DocFile: occ::handle<StepBasic_DocumentFile> (const int) const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer."
+    },
+    {
+      "stableId": "c:@S@StepRepr_PropertyDefinition@F@Definition#1",
+      "nativeName": "StepRepr_PropertyDefinition::Definition",
+      "signature": "StepRepr_PropertyDefinition::Definition: StepRepr_CharacterizedDefinition () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer."
+    },
+    {
+      "stableId": "c:@S@StepRepr_PropertyDefinitionRepresentation@F@Definition#1",
+      "nativeName": "StepRepr_PropertyDefinitionRepresentation::Definition",
+      "signature": "StepRepr_PropertyDefinitionRepresentation::Definition: StepRepr_RepresentedDefinition () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer."
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetLoadStatus#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetLoadStatus",
+      "signature": "STEPCAFControl_ExternFile::GetLoadStatus: IFSelect_ReturnStatus () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetTransferStatus#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetTransferStatus",
+      "signature": "STEPCAFControl_ExternFile::GetTransferStatus: bool () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "STEPCAFControl_Reader::NbRootsForTransfer",
+      "signature": "STEPCAFControl_Reader::NbRootsForTransfer: int ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "STEPCAFControl_Reader::ReadFile",
+      "signature": "STEPCAFControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetColorMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetColorMode",
+      "signature": "STEPCAFControl_Reader::SetColorMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetGDTMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetGDTMode",
+      "signature": "STEPCAFControl_Reader::SetGDTMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetLayerMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetLayerMode",
+      "signature": "STEPCAFControl_Reader::SetLayerMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetMatMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetMatMode",
+      "signature": "STEPCAFControl_Reader::SetMatMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetMetaMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetMetaMode",
+      "signature": "STEPCAFControl_Reader::SetMetaMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetNameMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetNameMode",
+      "signature": "STEPCAFControl_Reader::SetNameMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetProductMetaMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetProductMetaMode",
+      "signature": "STEPCAFControl_Reader::SetProductMetaMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetPropsMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetPropsMode",
+      "signature": "STEPCAFControl_Reader::SetPropsMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetSHUOMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetSHUOMode",
+      "signature": "STEPCAFControl_Reader::SetSHUOMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetViewMode#b#",
+      "nativeName": "STEPCAFControl_Reader::SetViewMode",
+      "signature": "STEPCAFControl_Reader::SetViewMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetFreeShapes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ShapeTool::GetFreeShapes",
+      "signature": "XCAFDoc_ShapeTool::GetFreeShapes: void (NCollection_Sequence<TDF_Label> &) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetShape",
+      "signature": "XCAFDoc_ShapeTool::GetShape: TopoDS_Shape (const TDF_Label &)",
+      "baselineDisposition": "Manual",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@RootForTransfer#I#",
+      "nativeName": "XSControl_Reader::RootForTransfer",
+      "signature": "XSControl_Reader::RootForTransfer: occ::handle<Standard_Transient> (const int)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing initialized STEP receiver/status or safe independent shape copy reused. Not new migration."
+    },
+    {
+      "stableId": "c:@S@StepRepr_CharacterizedDefinition@F@DocumentFile#1",
+      "nativeName": "StepRepr_CharacterizedDefinition::DocumentFile",
+      "signature": "StepRepr_CharacterizedDefinition::DocumentFile: occ::handle<StepBasic_DocumentFile> () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_DescriptiveRepresentationItem@F@Description#1",
+      "nativeName": "StepRepr_DescriptiveRepresentationItem::Description",
+      "signature": "StepRepr_DescriptiveRepresentationItem::Description: occ::handle<TCollection_HAsciiString> () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_PropertyDefinitionRepresentation@F@UsedRepresentation#1",
+      "nativeName": "StepRepr_PropertyDefinitionRepresentation::UsedRepresentation",
+      "signature": "StepRepr_PropertyDefinitionRepresentation::UsedRepresentation: occ::handle<StepRepr_Representation> () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_Representation@F@ItemsValue#I#1",
+      "nativeName": "StepRepr_Representation::ItemsValue",
+      "signature": "StepRepr_Representation::ItemsValue: occ::handle<StepRepr_RepresentationItem> (const int) const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_Representation@F@NbItems#1",
+      "nativeName": "StepRepr_Representation::NbItems",
+      "signature": "StepRepr_Representation::NbItems: int () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_RepresentationItem@F@Name#1",
+      "nativeName": "StepRepr_RepresentationItem::Name",
+      "signature": "StepRepr_RepresentationItem::Name: occ::handle<TCollection_HAsciiString> () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepRepr_RepresentedDefinition@F@PropertyDefinition#1",
+      "nativeName": "StepRepr_RepresentedDefinition::PropertyDefinition",
+      "signature": "StepRepr_RepresentedDefinition::PropertyDefinition: occ::handle<StepRepr_PropertyDefinition> () const",
+      "reason": "Necessary exact DocumentFile/property/representation association audit: pinned Format() misses plain writer REPRESENTATION; reject unsupported or contradictory data-format metadata before recursive transfer.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

@@ -1,9 +1,6 @@
 #include "Modeling/LocalFeatures.hxx"
 #include "Modeling/Repair.hxx"
-#include <BRepAlgoAPI_BooleanOperation.hxx>
-#include <BRepAlgoAPI_Common.hxx>
-#include <BRepAlgoAPI_Cut.hxx>
-#include <BRepAlgoAPI_Fuse.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.BooleanRepairAdapters.Generated.hxx"
 #include <NCollection_List.hxx>
 
 using namespace OcctSharp::Native;
@@ -24,19 +21,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_boolean_topology_history(
     NCollection_List<TopoDS_Shape> arguments, tools;
     for (int i = 0; i < count; ++i)
       (i < argument_count ? arguments : tools).Append(graph.At(i));
-    std::unique_ptr<BRepAlgoAPI_BooleanOperation> algorithm;
-    if (operation == 0) algorithm = std::make_unique<BRepAlgoAPI_Fuse>();
-    else if (operation == 1) algorithm = std::make_unique<BRepAlgoAPI_Cut>();
-    else algorithm = std::make_unique<BRepAlgoAPI_Common>();
-    algorithm->SetArguments(arguments); algorithm->SetTools(tools);
-    algorithm->SetNonDestructive(true); algorithm->SetRunParallel(false);
-    algorithm->SetToFillHistory(true);
+    OcctSharpGenerated::BooleanHistoryBuilder algorithm(operation);
+    algorithm.SetArguments(arguments); algorithm.SetTools(tools);
+    algorithm.SetNonDestructive(true); algorithm.SetRunParallel(false);
+    algorithm.SetToFillHistory(true);
     Result result(11); result.Data().Info.ready = 1;
-    algorithm->Build();
-    if (!algorithm->IsDone() || algorithm->HasErrors())
-      result.Fail("OCCT Boolean history operation did not complete.");
+    algorithm.Build();
+    const auto diagnostics = algorithm.Diagnostics();
+    std::string diagnosticText;
+    if (diagnostics.hasErrors) diagnosticText += "\nErrors:\n" + diagnostics.errors;
+    if (diagnostics.hasWarnings) diagnosticText += "\nWarnings:\n" + diagnostics.warnings;
+    if (!algorithm.IsDone() || diagnostics.hasErrors) {
+      const auto message = "OCCT Boolean history operation did not complete." + diagnosticText;
+      result.Fail(message.c_str());
+    }
     else {
-      result.Owner->Result = algorithm->Shape(); result.Data().Info.done = 1;
+      result.Owner->Result = algorithm.Shape(); result.Data().Info.done = 1;
       const auto finalMap = Map(result.Owner->Result);
       // RepairSnapshot copies the result before diagnostics/persistence. Prove
       // that the actual copier preserves every full-map slot via its exact
@@ -51,12 +51,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_boolean_topology_history(
           && diagnosticMap(i).Orientation() == finalMap(i).Orientation();
       // Modified/Generated/Deleted are read while this exact builder is alive;
       // Unchanged uses TShape/location identity in the final output graph.
-      if (stable) History(*algorithm, graph, result);
+      if (stable) History(algorithm, graph, result);
       for (auto& item : result.Owner->History)
         if (!item.Shape.IsNull() && finalMap.Contains(item.Shape))
           item.Shape = finalMap(finalMap.FindIndex(item.Shape));
       result.Owner->Message = stable ? "Boolean topology history captured from the final output."
         : "Valid Boolean geometry; diagnostic copy order could not be verified, history unavailable.";
+      result.Owner->Message += diagnosticText;
     }
     result.Publish(output);
   });

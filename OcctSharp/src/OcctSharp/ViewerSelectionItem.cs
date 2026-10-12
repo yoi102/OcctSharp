@@ -7,13 +7,14 @@ public sealed class ViewerSelectionItem : IDisposable
     {
         Presentation = presentation;
         Shape = shape;
+        SourceIdentity = presentation.SourceIdentity;
     }
 
     /// <summary>Gets the presentation that owns the native selection mode.</summary>
     public ViewerPresentation Presentation { get; }
 
     /// <summary>Gets copied XDE identity, when the presentation came from an occurrence.</summary>
-    public ViewerSourceIdentity? SourceIdentity => Presentation.SourceIdentity;
+    public ViewerSourceIdentity? SourceIdentity { get; }
 
     /// <summary>Gets the independently owned selected whole shape or subshape.</summary>
     public Shape Shape { get; }

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Extrema_ExtCC#d#d#",
+      "nativeName": "Extrema_ExtCC::Extrema_ExtCC",
+      "signature": "Extrema_ExtCC::Extrema_ExtCC: void (const double, const double)",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@GetSingleSolutionFlag#1",
+      "nativeName": "Extrema_ExtCC::GetSingleSolutionFlag",
+      "signature": "Extrema_ExtCC::GetSingleSolutionFlag: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Initialize#&1$@S@Adaptor3d_Curve#S0_#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCC::Initialize",
+      "signature": "Extrema_ExtCC::Initialize: void (const Adaptor3d_Curve &, const Adaptor3d_Curve &, const double, const double, const double, const double, const double, const double)",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsDone#1",
+      "nativeName": "Extrema_ExtCC::IsDone",
+      "signature": "Extrema_ExtCC::IsDone: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsParallel#1",
+      "nativeName": "Extrema_ExtCC::IsParallel",
+      "signature": "Extrema_ExtCC::IsParallel: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@NbExt#1",
+      "nativeName": "Extrema_ExtCC::NbExt",
+      "signature": "Extrema_ExtCC::NbExt: int () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Perform#",
+      "nativeName": "Extrema_ExtCC::Perform",
+      "signature": "Extrema_ExtCC::Perform: void ()",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Points#I#&$@S@Extrema_POnCurv#S0_#1",
+      "nativeName": "Extrema_ExtCC::Points",
+      "signature": "Extrema_ExtCC::Points: void (const int, Extrema_POnCurv &, Extrema_POnCurv &) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetSingleSolutionFlag#b#",
+      "nativeName": "Extrema_ExtCC::SetSingleSolutionFlag",
+      "signature": "Extrema_ExtCC::SetSingleSolutionFlag: void (const bool)",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtCC::SquareDistance",
+      "signature": "Extrema_ExtCC::SquareDistance: double (const int) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@TrimmedSquareDistances#&d#S0_#S0_#S0_#&$@S@gp_Pnt#S1_#S1_#S1_#1",
+      "nativeName": "Extrema_ExtCC::TrimmedSquareDistances",
+      "signature": "Extrema_ExtCC::TrimmedSquareDistances: void (double &, double &, double &, double &, gp_Pnt &, gp_Pnt &, gp_Pnt &, gp_Pnt &) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Extrema_ExtCS#&1$@S@Adaptor3d_Curve#&1$@S@Adaptor3d_Surface#d#d#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCS::Extrema_ExtCS",
+      "signature": "Extrema_ExtCS::Extrema_ExtCS: void (const Adaptor3d_Curve &, const Adaptor3d_Surface &, const double, const double, const double, const double, const double, const double, const double, const double)",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsDone#1",
+      "nativeName": "Extrema_ExtCS::IsDone",
+      "signature": "Extrema_ExtCS::IsDone: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsParallel#1",
+      "nativeName": "Extrema_ExtCS::IsParallel",
+      "signature": "Extrema_ExtCS::IsParallel: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@NbExt#1",
+      "nativeName": "Extrema_ExtCS::NbExt",
+      "signature": "Extrema_ExtCS::NbExt: int () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Points#I#&$@S@Extrema_POnCurv#&$@S@Extrema_POnSurf#1",
+      "nativeName": "Extrema_ExtCS::Points",
+      "signature": "Extrema_ExtCS::Points: void (const int, Extrema_POnCurv &, Extrema_POnSurf &) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtCS::SquareDistance",
+      "signature": "Extrema_ExtCS::SquareDistance: double (const int) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&1$@S@Adaptor3d_Surface#S0_#d#d#d#d#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void (const Adaptor3d_Surface &, const Adaptor3d_Surface &, const double, const double, const double, const double, const double, const double, const double, const double, const double, const double)",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsDone#1",
+      "nativeName": "Extrema_ExtSS::IsDone",
+      "signature": "Extrema_ExtSS::IsDone: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsParallel#1",
+      "nativeName": "Extrema_ExtSS::IsParallel",
+      "signature": "Extrema_ExtSS::IsParallel: bool () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@NbExt#1",
+      "nativeName": "Extrema_ExtSS::NbExt",
+      "signature": "Extrema_ExtSS::NbExt: int () const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Points#I#&$@S@Extrema_POnSurf#S0_#1",
+      "nativeName": "Extrema_ExtSS::Points",
+      "signature": "Extrema_ExtSS::Points: void (const int, Extrema_POnSurf &, Extrema_POnSurf &) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtSS::SquareDistance",
+      "signature": "Extrema_ExtSS::SquareDistance: double (const int) const",
+      "guard": "BMFiniteExtrema",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    }
+  ],
+  "supportingOperations": []
+}

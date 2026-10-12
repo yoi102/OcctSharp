@@ -1,7 +1,7 @@
 #include "Modeling/Repair.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Shape.hxx"
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepCheck_Analyzer.hxx>
 #include <BRepGProp.hxx>
 #include <BRep_Builder.hxx>
@@ -59,7 +59,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_boundary(
     if (info->closed) {
       // Face construction can attach pcurves to its wire. Measurement must not
       // modify the source snapshot or change its portable fingerprint.
-      BRepBuilderAPI_MakeFace planar(TopoDS::Wire(Copy(value)), true);
+      OcctSharpGenerated::FaceBuilder planar(TopoDS::Wire(Copy(value)), true);
       if (planar.IsDone() && BRepCheck_Analyzer(planar.Face()).IsValid()) {
         GProp_GProps area; BRepGProp::SurfaceProperties(planar.Face(), area);
         info->area = std::abs(area.Mass()); info->area_available = std::isfinite(info->area);

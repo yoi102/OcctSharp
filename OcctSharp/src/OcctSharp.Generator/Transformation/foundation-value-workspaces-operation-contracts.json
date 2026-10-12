@@ -1,0 +1,1142 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@OSD_Path@F@AbsolutePath#&1$@S@TCollection_AsciiString#S0_#S",
+      "nativeName": "OSD_Path::AbsolutePath",
+      "signature": "OSD_Path::AbsolutePath: TCollection_AsciiString (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Disk#1",
+      "nativeName": "OSD_Path::Disk",
+      "signature": "OSD_Path::Disk: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@DownTrek#&1$@S@TCollection_AsciiString#",
+      "nativeName": "OSD_Path::DownTrek",
+      "signature": "OSD_Path::DownTrek: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Extension#1",
+      "nativeName": "OSD_Path::Extension",
+      "signature": "OSD_Path::Extension: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsAbsolutePath#*1C#S",
+      "nativeName": "OSD_Path::IsAbsolutePath",
+      "signature": "OSD_Path::IsAbsolutePath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsContentProtocolPath#*1C#S",
+      "nativeName": "OSD_Path::IsContentProtocolPath",
+      "signature": "OSD_Path::IsContentProtocolPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsDosPath#*1C#S",
+      "nativeName": "OSD_Path::IsDosPath",
+      "signature": "OSD_Path::IsDosPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsNtExtendedPath#*1C#S",
+      "nativeName": "OSD_Path::IsNtExtendedPath",
+      "signature": "OSD_Path::IsNtExtendedPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsRelativePath#*1C#S",
+      "nativeName": "OSD_Path::IsRelativePath",
+      "signature": "OSD_Path::IsRelativePath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsRemoteProtocolPath#*1C#S",
+      "nativeName": "OSD_Path::IsRemoteProtocolPath",
+      "signature": "OSD_Path::IsRemoteProtocolPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsUncExtendedPath#*1C#S",
+      "nativeName": "OSD_Path::IsUncExtendedPath",
+      "signature": "OSD_Path::IsUncExtendedPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsUncPath#*1C#S",
+      "nativeName": "OSD_Path::IsUncPath",
+      "signature": "OSD_Path::IsUncPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsUnixPath#*1C#S",
+      "nativeName": "OSD_Path::IsUnixPath",
+      "signature": "OSD_Path::IsUnixPath: bool (const char *)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@IsValid#&1$@S@TCollection_AsciiString#$@E@OSD_SysType#S",
+      "nativeName": "OSD_Path::IsValid",
+      "signature": "OSD_Path::IsValid: bool (const TCollection_AsciiString &, const OSD_SysType)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Name#1",
+      "nativeName": "OSD_Path::Name",
+      "signature": "OSD_Path::Name: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Node#1",
+      "nativeName": "OSD_Path::Node",
+      "signature": "OSD_Path::Node: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@OSD_Path#&1$@S@OSD_Path#",
+      "nativeName": "OSD_Path::OSD_Path",
+      "signature": "OSD_Path::OSD_Path: void (const OSD_Path &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@OSD_Path#&1$@S@TCollection_AsciiString#$@E@OSD_SysType#",
+      "nativeName": "OSD_Path::OSD_Path",
+      "signature": "OSD_Path::OSD_Path: void (const TCollection_AsciiString &, const OSD_SysType)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Password#1",
+      "nativeName": "OSD_Path::Password",
+      "signature": "OSD_Path::Password: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@RelativePath#&1$@S@TCollection_AsciiString#S0_#S",
+      "nativeName": "OSD_Path::RelativePath",
+      "signature": "OSD_Path::RelativePath: TCollection_AsciiString (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@SetExtension#&1$@S@TCollection_AsciiString#",
+      "nativeName": "OSD_Path::SetExtension",
+      "signature": "OSD_Path::SetExtension: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@SetName#&1$@S@TCollection_AsciiString#",
+      "nativeName": "OSD_Path::SetName",
+      "signature": "OSD_Path::SetName: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@SetTrek#&1$@S@TCollection_AsciiString#",
+      "nativeName": "OSD_Path::SetTrek",
+      "signature": "OSD_Path::SetTrek: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@SystemName#&$@S@TCollection_AsciiString#$@E@OSD_SysType#1",
+      "nativeName": "OSD_Path::SystemName",
+      "signature": "OSD_Path::SystemName: void (TCollection_AsciiString &, const OSD_SysType) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Trek#1",
+      "nativeName": "OSD_Path::Trek",
+      "signature": "OSD_Path::Trek: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@TrekLength#1",
+      "nativeName": "OSD_Path::TrekLength",
+      "signature": "OSD_Path::TrekLength: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@TrekValue#I#1",
+      "nativeName": "OSD_Path::TrekValue",
+      "signature": "OSD_Path::TrekValue: TCollection_AsciiString (const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@UpTrek#",
+      "nativeName": "OSD_Path::UpTrek",
+      "signature": "OSD_Path::UpTrek: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@UserName#1",
+      "nativeName": "OSD_Path::UserName",
+      "signature": "OSD_Path::UserName: TCollection_AsciiString () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@OSD_Path@F@Values#&$@S@TCollection_AsciiString#S0_#S0_#S0_#S0_#S0_#S0_#1",
+      "nativeName": "OSD_Path::Values",
+      "signature": "OSD_Path::Values: void (TCollection_AsciiString &, TCollection_AsciiString &, TCollection_AsciiString &, TCollection_AsciiString &, TCollection_AsciiString &, TCollection_AsciiString &, TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Argb2color#I#&$@S@Quantity_Color#S",
+      "nativeName": "Quantity_Color::Argb2color",
+      "signature": "Quantity_Color::Argb2color: void (const int, Quantity_Color &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@ColorFromHex#*1C#&$@S@Quantity_Color#S",
+      "nativeName": "Quantity_Color::ColorFromHex",
+      "signature": "Quantity_Color::ColorFromHex: bool (const char *const, Quantity_Color &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@ColorFromName#*1C#&$@E@Quantity_NameOfColor#S",
+      "nativeName": "Quantity_Color::ColorFromName",
+      "signature": "Quantity_Color::ColorFromName: bool (const char *const, Quantity_NameOfColor &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@ColorFromName#*1C#&$@S@Quantity_Color#S",
+      "nativeName": "Quantity_Color::ColorFromName",
+      "signature": "Quantity_Color::ColorFromName: bool (const char *const, Quantity_Color &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@ColorToHex#&1$@S@Quantity_Color#b#S",
+      "nativeName": "Quantity_Color::ColorToHex",
+      "signature": "Quantity_Color::ColorToHex: TCollection_AsciiString (const Quantity_Color &, const bool) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_HLS_To_LinearRGB#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_HLS_To_LinearRGB",
+      "signature": "Quantity_Color::Convert_HLS_To_LinearRGB: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_HLS_To_sRGB#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_HLS_To_sRGB",
+      "signature": "Quantity_Color::Convert_HLS_To_sRGB: NCollection_Vec3<float> (const NCollection_Vec3<float> &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_Lab_To_Lch#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_Lab_To_Lch",
+      "signature": "Quantity_Color::Convert_Lab_To_Lch: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_Lab_To_LinearRGB#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_Lab_To_LinearRGB",
+      "signature": "Quantity_Color::Convert_Lab_To_LinearRGB: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_Lch_To_Lab#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_Lch_To_Lab",
+      "signature": "Quantity_Color::Convert_Lch_To_Lab: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_LinearRGB_To_HLS#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_LinearRGB_To_HLS",
+      "signature": "Quantity_Color::Convert_LinearRGB_To_HLS: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_LinearRGB_To_Lab#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_LinearRGB_To_Lab",
+      "signature": "Quantity_Color::Convert_LinearRGB_To_Lab: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Convert_sRGB_To_HLS#&1$@S@NCollection_Vec3>#f#S",
+      "nativeName": "Quantity_Color::Convert_sRGB_To_HLS",
+      "signature": "Quantity_Color::Convert_sRGB_To_HLS: NCollection_Vec3<float> (const NCollection_Vec3<float> &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Quantity_Color#&1$@S@Quantity_Color#",
+      "nativeName": "Quantity_Color::Quantity_Color",
+      "signature": "Quantity_Color::Quantity_Color: void (const Quantity_Color &) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Rgb#1",
+      "nativeName": "Quantity_Color::Rgb",
+      "signature": "Quantity_Color::Rgb: const NCollection_Vec3<float> &() const noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@StringName#$@E@Quantity_NameOfColor#S",
+      "nativeName": "Quantity_Color::StringName",
+      "signature": "Quantity_Color::StringName: const char *(const Quantity_NameOfColor) noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Capitalize#",
+      "nativeName": "TCollection_AsciiString::Capitalize",
+      "signature": "TCollection_AsciiString::Capitalize: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Center#I#C#",
+      "nativeName": "TCollection_AsciiString::Center",
+      "signature": "TCollection_AsciiString::Center: void (const int, const char)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@ChangeAll#C#C#b#",
+      "nativeName": "TCollection_AsciiString::ChangeAll",
+      "signature": "TCollection_AsciiString::ChangeAll: void (const char, const char, const bool)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Clear#",
+      "nativeName": "TCollection_AsciiString::Clear",
+      "signature": "TCollection_AsciiString::Clear: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EndsWith#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::EndsWith",
+      "signature": "TCollection_AsciiString::EndsWith: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IntegerValue#1",
+      "nativeName": "TCollection_AsciiString::IntegerValue",
+      "signature": "TCollection_AsciiString::IntegerValue: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsAscii#1",
+      "nativeName": "TCollection_AsciiString::IsAscii",
+      "signature": "TCollection_AsciiString::IsAscii: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEmpty#1",
+      "nativeName": "TCollection_AsciiString::IsEmpty",
+      "signature": "TCollection_AsciiString::IsEmpty: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#&1$@S@TCollection_AsciiString#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const std::string_view &, const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &, const std::string_view &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsIntegerValue#1",
+      "nativeName": "TCollection_AsciiString::IsIntegerValue",
+      "signature": "TCollection_AsciiString::IsIntegerValue: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsRealValue#b#1",
+      "nativeName": "TCollection_AsciiString::IsRealValue",
+      "signature": "TCollection_AsciiString::IsRealValue: bool (bool) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@S@TCollection_AsciiString#S0_#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const TCollection_AsciiString &, const TCollection_AsciiString &, const bool)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@LeftAdjust#",
+      "nativeName": "TCollection_AsciiString::LeftAdjust",
+      "signature": "TCollection_AsciiString::LeftAdjust: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@LeftJustify#I#C#",
+      "nativeName": "TCollection_AsciiString::LeftJustify",
+      "signature": "TCollection_AsciiString::LeftJustify: void (const int, const char)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Length#1",
+      "nativeName": "TCollection_AsciiString::Length",
+      "signature": "TCollection_AsciiString::Length: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@LowerCase#",
+      "nativeName": "TCollection_AsciiString::LowerCase",
+      "signature": "TCollection_AsciiString::LowerCase: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Prepend#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Prepend",
+      "signature": "TCollection_AsciiString::Prepend: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@RealValue#1",
+      "nativeName": "TCollection_AsciiString::RealValue",
+      "signature": "TCollection_AsciiString::RealValue: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Remove#I#I#",
+      "nativeName": "TCollection_AsciiString::Remove",
+      "signature": "TCollection_AsciiString::Remove: void (const int, const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@RemoveAll#C#",
+      "nativeName": "TCollection_AsciiString::RemoveAll",
+      "signature": "TCollection_AsciiString::RemoveAll: void (const char)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@RemoveAll#C#b#",
+      "nativeName": "TCollection_AsciiString::RemoveAll",
+      "signature": "TCollection_AsciiString::RemoveAll: void (const char, const bool)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@RightAdjust#",
+      "nativeName": "TCollection_AsciiString::RightAdjust",
+      "signature": "TCollection_AsciiString::RightAdjust: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@RightJustify#I#C#",
+      "nativeName": "TCollection_AsciiString::RightJustify",
+      "signature": "TCollection_AsciiString::RightJustify: void (const int, const char)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Split#I#",
+      "nativeName": "TCollection_AsciiString::Split",
+      "signature": "TCollection_AsciiString::Split: TCollection_AsciiString (const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const TCollection_AsciiString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SubString#I#I#1",
+      "nativeName": "TCollection_AsciiString::SubString",
+      "signature": "TCollection_AsciiString::SubString: TCollection_AsciiString (const int, const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void () noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@ToCString#1",
+      "nativeName": "TCollection_AsciiString::ToCString",
+      "signature": "TCollection_AsciiString::ToCString: const char *() const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Token#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Token",
+      "signature": "TCollection_AsciiString::Token: TCollection_AsciiString (const char *const, const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Trunc#I#",
+      "nativeName": "TCollection_AsciiString::Trunc",
+      "signature": "TCollection_AsciiString::Trunc: void (const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@UpperCase#",
+      "nativeName": "TCollection_AsciiString::UpperCase",
+      "signature": "TCollection_AsciiString::UpperCase: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@UsefullLength#1",
+      "nativeName": "TCollection_AsciiString::UsefullLength",
+      "signature": "TCollection_AsciiString::UsefullLength: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Value#I#1",
+      "nativeName": "TCollection_AsciiString::Value",
+      "signature": "TCollection_AsciiString::Value: char (const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const TCollection_ExtendedString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const TCollection_ExtendedString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EndsWith#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::EndsWith",
+      "signature": "TCollection_ExtendedString::EndsWith: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const TCollection_ExtendedString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IntegerValue#1",
+      "nativeName": "TCollection_ExtendedString::IntegerValue",
+      "signature": "TCollection_ExtendedString::IntegerValue: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsAscii#1",
+      "nativeName": "TCollection_ExtendedString::IsAscii",
+      "signature": "TCollection_ExtendedString::IsAscii: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsDifferent#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::IsDifferent",
+      "signature": "TCollection_ExtendedString::IsDifferent: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEmpty#1",
+      "nativeName": "TCollection_ExtendedString::IsEmpty",
+      "signature": "TCollection_ExtendedString::IsEmpty: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsGreater#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::IsGreater",
+      "signature": "TCollection_ExtendedString::IsGreater: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsIntegerValue#1",
+      "nativeName": "TCollection_ExtendedString::IsIntegerValue",
+      "signature": "TCollection_ExtendedString::IsIntegerValue: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsLess#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::IsLess",
+      "signature": "TCollection_ExtendedString::IsLess: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsRealValue#b#1",
+      "nativeName": "TCollection_ExtendedString::IsRealValue",
+      "signature": "TCollection_ExtendedString::IsRealValue: bool (bool) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsSameString#&1$@S@TCollection_ExtendedString#b#1",
+      "nativeName": "TCollection_ExtendedString::IsSameString",
+      "signature": "TCollection_ExtendedString::IsSameString: bool (const TCollection_ExtendedString &, const bool) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Length#1",
+      "nativeName": "TCollection_ExtendedString::Length",
+      "signature": "TCollection_ExtendedString::Length: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LengthOfCString#1",
+      "nativeName": "TCollection_ExtendedString::LengthOfCString",
+      "signature": "TCollection_ExtendedString::LengthOfCString: int () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const TCollection_ExtendedString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RealValue#1",
+      "nativeName": "TCollection_ExtendedString::RealValue",
+      "signature": "TCollection_ExtendedString::RealValue: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Remove#I#I#",
+      "nativeName": "TCollection_ExtendedString::Remove",
+      "signature": "TCollection_ExtendedString::Remove: void (const int, const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Search#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::Search",
+      "signature": "TCollection_ExtendedString::Search: int (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SearchFromEnd#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::SearchFromEnd",
+      "signature": "TCollection_ExtendedString::SearchFromEnd: int (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Split#I#",
+      "nativeName": "TCollection_ExtendedString::Split",
+      "signature": "TCollection_ExtendedString::Split: TCollection_ExtendedString (const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@StartsWith#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TCollection_ExtendedString::StartsWith",
+      "signature": "TCollection_ExtendedString::StartsWith: bool (const TCollection_ExtendedString &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SubString#I#I#1",
+      "nativeName": "TCollection_ExtendedString::SubString",
+      "signature": "TCollection_ExtendedString::SubString: TCollection_ExtendedString (const int, const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void () noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const TCollection_ExtendedString &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1C#b#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char *const, const bool)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToExtString#1",
+      "nativeName": "TCollection_ExtendedString::ToExtString",
+      "signature": "TCollection_ExtendedString::ToExtString: const char16_t *() const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToUTF8CString#&*C#1",
+      "nativeName": "TCollection_ExtendedString::ToUTF8CString",
+      "signature": "TCollection_ExtendedString::ToUTF8CString: int (Standard_PCharacter &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Trunc#I#",
+      "nativeName": "TCollection_ExtendedString::Trunc",
+      "signature": "TCollection_ExtendedString::Trunc: void (const int)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Value#I#1",
+      "nativeName": "TCollection_ExtendedString::Value",
+      "signature": "TCollection_ExtendedString::Value: char16_t (const int) const",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyFromSI#d#*1C#S",
+      "nativeName": "UnitsAPI::AnyFromSI",
+      "signature": "UnitsAPI::AnyFromSI: double (const double, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToAny#d#*1C#S0_#S",
+      "nativeName": "UnitsAPI::AnyToAny",
+      "signature": "UnitsAPI::AnyToAny: double (const double, const char *const, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToSI#d#*1C#&$@N@opencascade@S@handle>#$@S@Units_Dimensions#S",
+      "nativeName": "UnitsAPI::AnyToSI",
+      "signature": "UnitsAPI::AnyToSI: double (const double, const char *const, occ::handle<Units_Dimensions> &)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@AnyToSI#d#*1C#S",
+      "nativeName": "UnitsAPI::AnyToSI",
+      "signature": "UnitsAPI::AnyToSI: double (const double, const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionAmountOfSubstance#S",
+      "nativeName": "UnitsAPI::DimensionAmountOfSubstance",
+      "signature": "UnitsAPI::DimensionAmountOfSubstance: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionElectricCurrent#S",
+      "nativeName": "UnitsAPI::DimensionElectricCurrent",
+      "signature": "UnitsAPI::DimensionElectricCurrent: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLength#S",
+      "nativeName": "UnitsAPI::DimensionLength",
+      "signature": "UnitsAPI::DimensionLength: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLess#S",
+      "nativeName": "UnitsAPI::DimensionLess",
+      "signature": "UnitsAPI::DimensionLess: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionLuminousIntensity#S",
+      "nativeName": "UnitsAPI::DimensionLuminousIntensity",
+      "signature": "UnitsAPI::DimensionLuminousIntensity: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionMass#S",
+      "nativeName": "UnitsAPI::DimensionMass",
+      "signature": "UnitsAPI::DimensionMass: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionPlaneAngle#S",
+      "nativeName": "UnitsAPI::DimensionPlaneAngle",
+      "signature": "UnitsAPI::DimensionPlaneAngle: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionSolidAngle#S",
+      "nativeName": "UnitsAPI::DimensionSolidAngle",
+      "signature": "UnitsAPI::DimensionSolidAngle: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionThermodynamicTemperature#S",
+      "nativeName": "UnitsAPI::DimensionThermodynamicTemperature",
+      "signature": "UnitsAPI::DimensionThermodynamicTemperature: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@DimensionTime#S",
+      "nativeName": "UnitsAPI::DimensionTime",
+      "signature": "UnitsAPI::DimensionTime: occ::handle<Units_Dimensions> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    },
+    {
+      "stableId": "c:@S@UnitsAPI@F@Dimensions#*1C#S",
+      "nativeName": "UnitsAPI::Dimensions",
+      "signature": "UnitsAPI::Dimensions: occ::handle<Units_Dimensions> (const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Initialized call-private value; bounded validated inputs; immutable success-only copied output and independent owned color clone."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Quantity_Color@F@Blue#1",
+      "nativeName": "Quantity_Color::Blue",
+      "signature": "Quantity_Color::Blue: double () const noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Green#1",
+      "nativeName": "Quantity_Color::Green",
+      "signature": "Quantity_Color::Green: double () const noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Name#1",
+      "nativeName": "Quantity_Color::Name",
+      "signature": "Quantity_Color::Name: Quantity_NameOfColor () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Name#d#d#d#S",
+      "nativeName": "Quantity_Color::Name",
+      "signature": "Quantity_Color::Name: Quantity_NameOfColor (const double, const double, const double)",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Quantity_Color#",
+      "nativeName": "Quantity_Color::Quantity_Color",
+      "signature": "Quantity_Color::Quantity_Color: void ()",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Red#1",
+      "nativeName": "Quantity_Color::Red",
+      "signature": "Quantity_Color::Red: double () const noexcept",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Values#&d#S0_#S0_#$@E@Quantity_TypeOfColor#1",
+      "nativeName": "Quantity_Color::Values",
+      "signature": "Quantity_Color::Values: void (double &, double &, double &, const Quantity_TypeOfColor) const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@AmountOfSubstance#1",
+      "nativeName": "Units_Dimensions::AmountOfSubstance",
+      "signature": "Units_Dimensions::AmountOfSubstance: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@ElectricCurrent#1",
+      "nativeName": "Units_Dimensions::ElectricCurrent",
+      "signature": "Units_Dimensions::ElectricCurrent: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@IsEqual#&1$@N@opencascade@S@handle>#$@S@Units_Dimensions#1",
+      "nativeName": "Units_Dimensions::IsEqual",
+      "signature": "Units_Dimensions::IsEqual: bool (const occ::handle<Units_Dimensions> &) const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@Length#1",
+      "nativeName": "Units_Dimensions::Length",
+      "signature": "Units_Dimensions::Length: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@LuminousIntensity#1",
+      "nativeName": "Units_Dimensions::LuminousIntensity",
+      "signature": "Units_Dimensions::LuminousIntensity: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@Mass#1",
+      "nativeName": "Units_Dimensions::Mass",
+      "signature": "Units_Dimensions::Mass: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@PlaneAngle#1",
+      "nativeName": "Units_Dimensions::PlaneAngle",
+      "signature": "Units_Dimensions::PlaneAngle: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@SolidAngle#1",
+      "nativeName": "Units_Dimensions::SolidAngle",
+      "signature": "Units_Dimensions::SolidAngle: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@ThermodynamicTemperature#1",
+      "nativeName": "Units_Dimensions::ThermodynamicTemperature",
+      "signature": "Units_Dimensions::ThermodynamicTemperature: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Dimensions@F@Time#1",
+      "nativeName": "Units_Dimensions::Time",
+      "signature": "Units_Dimensions::Time: double () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Sentence@F@Evaluate#",
+      "nativeName": "Units_Sentence::Evaluate",
+      "signature": "Units_Sentence::Evaluate: occ::handle<Units_Token> ()",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Sentence@F@IsDone#1",
+      "nativeName": "Units_Sentence::IsDone",
+      "signature": "Units_Sentence::IsDone: bool () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_Token@F@Dimensions#1",
+      "nativeName": "Units_Token::Dimensions",
+      "signature": "Units_Token::Dimensions: occ::handle<Units_Dimensions> () const",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    },
+    {
+      "stableId": "c:@S@Units_UnitSentence@F@Units_UnitSentence#*1C#",
+      "nativeName": "Units_UnitSentence::Units_UnitSentence",
+      "signature": "Units_UnitSentence::Units_UnitSentence: void (const char *const)",
+      "guard": "AVCopiedValues",
+      "reason": "Private unit validation or existing scalar color construction; no borrowed value escapes."
+    }
+  ]
+}

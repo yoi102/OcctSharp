@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@N@MathLin@F@Determinant#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::Determinant",
+      "signature": "MathLin::Determinant: LinearResult (const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_Gauss.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Invert#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::Invert",
+      "signature": "MathLin::Invert: InverseResult (const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_Gauss.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@LU#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::LU",
+      "signature": "MathLin::LU: LUResult (const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_Gauss.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@PseudoInverse#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::PseudoInverse",
+      "signature": "MathLin::PseudoInverse: InverseResult (const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_SVD.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Solve#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::Solve",
+      "signature": "MathLin::Solve: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_Gauss.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveMultiple#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "MathLin::SolveMultiple",
+      "signature": "MathLin::SolveMultiple: LinearMultipleResult (const math_Matrix &, const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_Gauss.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveSVD#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::SolveSVD",
+      "signature": "MathLin::SolveSVD: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_SVD.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SVD#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::SVD",
+      "signature": "MathLin::SVD: SVDResult (const math_Matrix &, double)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathLin_SVD.hxx",
+      "sourcePackage": "MathLin",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@DotProduct#&1$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::DotProduct",
+      "signature": "MathUtils::DotProduct: double (const math_Vector &, const math_Vector &)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathUtils_Core.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EuclideanNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::EuclideanNorm",
+      "signature": "MathUtils::EuclideanNorm: double (const math_Vector &)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathUtils_Convergence.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@InfinityNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::InfinityNorm",
+      "signature": "MathUtils::InfinityNorm: double (const math_Vector &)",
+      "guard": "BFInitializedFiniteNumericResult",
+      "reason": "Initialized private SDK result; bounded copied aggregate output published atomically on complete finite success.",
+      "kind": "Function",
+      "header": "MathUtils_Convergence.hxx",
+      "sourcePackage": "MathUtils",
+      "sourceToolkit": "TKMath"
+    }
+  ],
+  "supportingOperations": []
+}

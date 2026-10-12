@@ -16,6 +16,11 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'workspace-lock.ps1')
+# Both configurations share CMake's configure directory and dependency cache.
+# Hold one lock through dependency preparation, configure, build and verification.
+$nativeLock = Enter-OcctSharpWorkspaceLock -WorkspaceRoot $workspaceRoot -Scope native
+try {
 $settingsPath = Join-Path $workspaceRoot 'config\local.settings.json'
 $settings = if (Test-Path -LiteralPath $settingsPath) {
     Get-Content -LiteralPath $settingsPath -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -217,3 +222,5 @@ if (-not (Test-Path -LiteralPath $bridgePath -PathType Leaf)) {
 
 $runtimeCount = @(Get-ChildItem -LiteralPath $nativeDirectory -Filter *.dll -File).Count
 Write-Host "Native runtime ready: '$nativeDirectory' ($runtimeCount DLLs)."
+}
+finally { Exit-OcctSharpWorkspaceLock -Lock $nativeLock }

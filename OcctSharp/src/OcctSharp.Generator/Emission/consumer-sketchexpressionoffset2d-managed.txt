@@ -1,0 +1,202 @@
+namespace OcctSharp;
+
+#pragma warning disable CS1591
+public enum SketchExpressionJoin { Miter,Round,Bevel }
+public enum SketchExpressionOffsetSegmentKind { Parallel,RoundBridge,BevelBridge }
+public enum SketchExpressionOffsetJointKind { SourceEndpoints,NativeIntersection,RoundBridge,BevelBridge }
+
+/// <summary>Owned connection semantics from the creating operation. Parameters
+/// use the complete original source curves' native units and directed sides.
+/// This witness is not a native edge/face history or a differentiability proof.</summary>
+public sealed class SketchExpressionOffsetJoint2d
+{
+    internal SketchExpressionOffsetJoint2d(int previous,int next,SketchExpressionOffsetJointKind kind,double previousParameter,double nextParameter)
+        =>(PreviousSourceIndex,NextSourceIndex,Kind,PreviousParameter,NextParameter)=(previous,next,kind,previousParameter,nextParameter);
+    public int PreviousSourceIndex {get;}
+    public int NextSourceIndex {get;}
+    public SketchExpressionOffsetJointKind Kind {get;}
+    public double PreviousParameter {get;}
+    public double NextParameter {get;}
+}
+
+
+/// <summary>Exact author-value correspondence,not a native topology binding.</summary>
+public sealed class SketchExpressionOffsetSegment2d
+{
+    internal SketchExpressionOffsetSegment2d(SketchCurveExpression2d curve,SketchExpressionOffsetSegmentKind kind,params int[] sources)
+        =>(Curve,Kind,SourceIndices)=(curve,kind,Array.AsReadOnly((int[])sources.Clone()));
+    public SketchCurveExpression2d Curve {get;}
+    public SketchExpressionOffsetSegmentKind Kind {get;}
+    public IReadOnlyList<int> SourceIndices {get;}
+}
+public sealed class SketchExpressionOffsetResult2d
+{
+    internal SketchExpressionOffsetResult2d(SketchExpressionChain2d chain,SketchExpressionOffsetSegment2d[] segments,SketchExpressionOffsetJoint2d[] joints)
+        =>(Chain,Segments,Joints)=(chain,Array.AsReadOnly((SketchExpressionOffsetSegment2d[])segments.Clone()),Array.AsReadOnly((SketchExpressionOffsetJoint2d[])joints.Clone()));
+    public SketchExpressionChain2d Chain {get;}
+    public IReadOnlyList<SketchExpressionOffsetSegment2d> Segments {get;}
+    public IReadOnlyList<SketchExpressionOffsetJoint2d> Joints {get;}
+}
+
+/// <summary>Exact offset of an ordered directed chain. Miter intersections use
+/// bounded exact curve continuation;Round/Bevel bridge exterior corners and
+/// trim interior corners at finite native intersections. Failures publish no
+/// partial result. No fitting,sorting or native topology identity inference.</summary>
+public static class SketchExpressionOffset2d
+{
+    private sealed record Joint(double PreviousParameter,double NextParameter,SketchExpressionOffsetJointKind Kind,SketchCurveExpression2d? Bridge=null);
+    /// <summary>Positive distance follows the directed chain's right normal.
+    /// The20:1 miter limit is geometric. Miter search grows a finite one-sided
+    /// parameter window in at most six native intersection inspections;failure
+    /// is local to those windows and is not a global no-solution claim.</summary>
+    public static SketchExpressionOffsetResult2d Create(SketchExpressionChain2d source,double signedRightDistance,
+        SketchExpressionJoin join=SketchExpressionJoin.Miter,double miterLimit=20,double tolerance=1e-7)
+    {
+        ArgumentNullException.ThrowIfNull(source);SketchModeling.ValidateTolerance(tolerance,nameof(tolerance));
+        if(!Enum.IsDefined(join))throw new ArgumentOutOfRangeException(nameof(join));
+        if(!double.IsFinite(signedRightDistance)||Math.Abs(signedRightDistance)<=tolerance)
+            throw new ArgumentOutOfRangeException(nameof(signedRightDistance));
+        if(!double.IsFinite(miterLimit)||miterLimit<1||miterLimit>20)throw new ArgumentOutOfRangeException(nameof(miterLimit));
+        var original=source.Curves.ToArray();
+        // Revalidate at this operation's tolerance before constructing any result.
+        _=SketchExpressionChain2d.CreateOrdered(original,source.IsClosed,tolerance);
+        var shifted=original.Select(c=>c.Offset(signedRightDistance)).ToArray();
+        var starts=original.Select(StartParameter).ToArray();var ends=original.Select(EndParameter).ToArray();
+        var joints=new Joint?[original.Length];
+        for(int i=0;i<original.Length;i++)
+        {
+            RejectCircularCollapse(original[i],shifted[i],tolerance,i);
+            RequireRegularity(shifted[i],i);
+        }
+        int jointCount=source.IsClosed?original.Length:original.Length-1;
+        for(int i=0;i<jointCount;i++)
+        {
+            int next=(i+1)%original.Length;
+            var joint=Connect(original[i],original[next],shifted[i],shifted[next],signedRightDistance,join,miterLimit,tolerance,i,next);
+            ends[i]=joint.PreviousParameter;starts[next]=joint.NextParameter;joints[i]=joint;
+        }
+        List<SketchExpressionOffsetSegment2d> segments=[];
+        for(int i=0;i<original.Length;i++)
+        {
+            var curve=Bound(shifted[i],starts[i],ends[i],i);
+            RequireRegularity(curve,i);
+            segments.Add(new(curve,SketchExpressionOffsetSegmentKind.Parallel,i));
+            if(joints[i]?.Bridge is {} bridge)segments.Add(new(bridge,
+                join==SketchExpressionJoin.Round?SketchExpressionOffsetSegmentKind.RoundBridge:SketchExpressionOffsetSegmentKind.BevelBridge,
+                i,(i+1)%original.Length));
+        }
+        var chain=SketchExpressionChain2d.CreateOrdered(segments.Select(s=>s.Curve).ToArray(),source.IsClosed,tolerance);
+        var witnesses=Enumerable.Range(0,jointCount).Select(i=>
+        {
+            var joint=joints[i]??throw new InvalidOperationException("Missing complete offset joint witness.");
+            return new SketchExpressionOffsetJoint2d(i,(i+1)%original.Length,joint.Kind,joint.PreviousParameter,joint.NextParameter);
+        }).ToArray();
+        return new(chain,segments.ToArray(),witnesses);
+    }
+    /// <summary>Positive distance expands a closed loop independently of winding.</summary>
+    public static SketchExpressionOffsetResult2d CreateClosed(SketchExpressionChain2d source,double outwardDistance,
+        SketchExpressionJoin join=SketchExpressionJoin.Miter,double miterLimit=20,double tolerance=1e-7)
+    {
+        ArgumentNullException.ThrowIfNull(source);
+        if(!source.IsClosed)throw new ArgumentException("Closed offset requires a closed supplied chain.",nameof(source));
+        double area=source.Measure().SignedArea;
+        if(Math.Abs(area)<=tolerance*tolerance)throw Failure("The source closed contour has no proven area.",0,0);
+        var result=Create(source,Math.Sign(area)*outwardDistance,join,miterLimit,tolerance);
+        double after=result.Chain.Measure().SignedArea;
+        if(area*after<=0||(Math.Abs(after)-Math.Abs(area))*outwardDistance<=0)
+            throw Failure("Offset reverses the contour or crosses an area collapse.",0,0);
+        return result;
+    }
+    private static Joint Connect(SketchCurveExpression2d sourceA,SketchCurveExpression2d sourceB,
+        SketchCurveExpression2d a,SketchCurveExpression2d b,double distance,SketchExpressionJoin policy,
+        double limit,double tolerance,int firstIndex,int secondIndex)
+    {
+        var end=a.Evaluate(1).Point;var start=b.Evaluate(0).Point;
+        if(end.DistanceTo(start)<=tolerance)return new(EndParameter(a),StartParameter(b),SketchExpressionOffsetJointKind.SourceEndpoints);
+        var da=sourceA.Derivative(1,1);var db=sourceB.Derivative(0,1);
+        if(da.Magnitude<=1e-15||db.Magnitude<=1e-15)throw Failure("Corner tangent is singular.",firstIndex,secondIndex);
+        double turn=Math.Atan2(da.X*db.Y-da.Y*db.X,da.X*db.X+da.Y*db.Y);
+        if(Math.Abs(turn)<=1e-10||Math.Abs(Math.PI-Math.Abs(turn))<=1e-10)
+            throw Failure("Offset corner direction is singular.",firstIndex,secondIndex);
+        var center=sourceB.Evaluate(0).Point;
+        if(policy!=SketchExpressionJoin.Miter&&distance*turn>0)
+        {
+            if(policy==SketchExpressionJoin.Bevel)return new(EndParameter(a),StartParameter(b),SketchExpressionOffsetJointKind.BevelBridge,
+                SketchCurveExpression2d.FromCurve(SketchCurve2d.Segment(end,start)));
+            if(Math.Abs(end.DistanceTo(center)-Math.Abs(distance))>tolerance||Math.Abs(start.DistanceTo(center)-Math.Abs(distance))>tolerance)
+                throw Failure("Corner endpoints do not lie on the explicit offset circle.",firstIndex,secondIndex);
+            var arc=SketchCurveExpression2d.FromCurve(SketchCurve2d.CircularArc(center,Math.Abs(distance),
+                Math.Atan2(end.Y-center.Y,end.X-center.X),turn));
+            if(arc.Evaluate(1).Point.DistanceTo(start)>tolerance)throw Failure("No proven directed circular bridge.",firstIndex,secondIndex);
+            return new(EndParameter(a),StartParameter(b),SketchExpressionOffsetJointKind.RoundBridge,arc);
+        }
+        int attempts=policy==SketchExpressionJoin.Miter?6:1;
+        for(int attempt=0;attempt<attempts;attempt++)
+        {
+            var first=a;var second=b;
+            if(attempt>0)
+            {
+                double factor=1.5*Math.Pow(2,attempt-1);
+                first=ExtendEnd(a,factor*Math.Abs(distance)/da.Magnitude);
+                second=ExtendStart(b,factor*Math.Abs(distance)/db.Magnitude);
+            }
+            var inspection=first.InspectIntersections(second,tolerance);
+            if(inspection.HasOverlappingIntervals)throw Failure("Offset supports overlap in the inspected finite corner domain.",firstIndex,secondIndex);
+            var points=inspection.Endpoints.Select(hit=>new{Hit=hit,Score=hit.Point.DistanceTo(end)+hit.Point.DistanceTo(start)})
+                .OrderBy(hit=>hit.Score).ToArray();
+            if(points.Length==0)continue;
+            if(points.Length>1&&Math.Abs(points[0].Score-points[1].Score)<=tolerance)
+                throw Failure("Corner has no unique nearest native intersection in its finite domain.",firstIndex,secondIndex);
+            var point=points[0].Hit;
+            if(policy==SketchExpressionJoin.Miter&&point.Point.DistanceTo(center)>limit*Math.Abs(distance)+tolerance)
+                throw Failure("Offset corner exceeds the unchanged20:1 maximum miter limit.",firstIndex,secondIndex);
+            double u=Physical(first,point.FirstNativeParameter),v=Physical(second,point.SecondNativeParameter);
+            if(first.Evaluate(point.FirstNativeParameter,false).Point.DistanceTo(second.Evaluate(point.SecondNativeParameter,false).Point)>tolerance)
+                throw Failure("Native intersection does not prove a common corner point.",firstIndex,secondIndex);
+            return new(u,v,SketchExpressionOffsetJointKind.NativeIntersection);
+        }
+        throw Failure("No unique native corner intersection in the bounded continuation windows;this is not a global no-solution result.",firstIndex,secondIndex);
+    }
+    private static SketchCurveExpression2d Bound(SketchCurveExpression2d curve,double start,double end,int index)
+    {
+        if((end-start)*(curve.Reversed?-1:1)<=0)throw Failure("An offset source interval collapses or reverses.",index,index);
+        double first=Math.Min(start,end),last=Math.Max(start,end);
+        var domain=first<curve.FirstParameter||last>curve.LastParameter?
+            curve.ContinueNativeRange(Math.Min(first,curve.FirstParameter),Math.Max(last,curve.LastParameter)):curve;
+        // A complete native interval needs no normalized round trip.
+        if(first==domain.FirstParameter&&last==domain.LastParameter)return domain;
+        double span=domain.LastParameter-domain.FirstParameter;
+        double from=domain.Reversed?(domain.LastParameter-last)/span:(first-domain.FirstParameter)/span;
+        double to=domain.Reversed?(domain.LastParameter-first)/span:(last-domain.FirstParameter)/span;
+        return domain.Trim(from,to);
+    }
+    private static SketchCurveExpression2d ExtendEnd(SketchCurveExpression2d curve,double amount)=>curve.ContinueNativeRange(
+        curve.FirstParameter-(curve.Reversed?amount:0),curve.LastParameter+(curve.Reversed?0:amount));
+    private static SketchCurveExpression2d ExtendStart(SketchCurveExpression2d curve,double amount)=>curve.ContinueNativeRange(
+        curve.FirstParameter-(curve.Reversed?0:amount),curve.LastParameter+(curve.Reversed?amount:0));
+    private static double StartParameter(SketchCurveExpression2d c)=>c.Reversed?c.LastParameter:c.FirstParameter;
+    private static double EndParameter(SketchCurveExpression2d c)=>c.Reversed?c.FirstParameter:c.LastParameter;
+    private static double Physical(SketchCurveExpression2d c,double directed)=>c.Reversed?c.FirstParameter+(c.LastParameter-directed):directed;
+    private static void RejectCircularCollapse(SketchCurveExpression2d original,SketchCurveExpression2d shifted,double tolerance,int index)
+    {
+        var leaf=original;while(leaf.Basis is not null)leaf=leaf.Basis;
+        if(leaf.Primitive!.Kind!=SketchCurveKind.Circle)return;
+        double Radius(SketchCurveExpression2d c)
+        {
+            using var edge=c.ToEdge(SketchPlane.XY);var native=SketchNativeExpressionSnapshot2d.Read(edge,SketchPlane.XY);
+            var basis=native.Nodes[0];double determinant=basis.XDirection.X*basis.YDirection.Y-basis.XDirection.Y*basis.YDirection.X;
+            return basis.MajorRadius+native.Nodes.Where(n=>n.Kind==SketchNativeCurveKind.Offset).Sum(n=>n.SignedOffset)*determinant;
+        }
+        double before=Radius(original),after=Radius(shifted);
+        if(Math.Abs(after)<=tolerance||before*after<=0)throw Failure("Circular offset crosses a zero-radius collapse.",index,index);
+    }
+    private static SketchValidationException Failure(string message,int first,int second)=>
+        new([new(SketchDiagnosticCode.OffsetCornerFailure,message,first,second)]);
+    private static void RequireRegularity(SketchCurveExpression2d curve,int index)
+    {
+        var proof=SketchCurveRegularity2d.Inspect(curve);
+        if(!proof.IsCertified)throw new SketchValidationException([new(SketchDiagnosticCode.OffsetRegularityFailure,
+            $"Curve {index},expression node {proof.ExpressionNodeIndex},native interval [{proof.FirstParameter:R},{proof.LastParameter:R}]: {proof.Diagnostic}",index,index)]);
+    }
+}
+#pragma warning restore CS1591

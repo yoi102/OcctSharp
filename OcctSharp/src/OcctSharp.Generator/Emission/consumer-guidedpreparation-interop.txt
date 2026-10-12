@@ -1,0 +1,10 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+namespace OcctSharp.Interop;
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_guided_prepare_offset_curves")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GuidedPrepareOffsetCurves(nint wire, double tolerance,
+        int maximumSegments, int maximumDegree, out AuthoringInfoRaw info, out nint result);
+}

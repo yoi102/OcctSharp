@@ -1,0 +1,14 @@
+namespace OcctSharp;
+#pragma warning disable CS1591
+public enum SketchDiagnosticCode
+{
+    Gap = 1,
+    DuplicateCurve = 2,
+    ZeroLength = 3,
+    SelfIntersection = 4,
+    OpenChain = 5,
+    AmbiguousNesting = 6,
+    OffsetCornerFailure = 7,
+    OffsetRegularityFailure = 8
+}
+#pragma warning restore CS1591

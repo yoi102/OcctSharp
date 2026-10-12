@@ -19,6 +19,8 @@ struct OcctSharp_FeatureHistoryEntry
 
 struct OcctSharp_LocalFeatureData;
 struct OcctSharp_RegionData;
+struct OcctSharp_SerializedReferenceData;
+struct OcctSharp_SerializedOccurrenceData;
 
 struct OcctSharp_FeatureResultHandle
 {
@@ -30,6 +32,9 @@ struct OcctSharp_FeatureResultHandle
   // Optional copied diagnostics owned by this existing result, never a builder or registry.
   std::shared_ptr<OcctSharp_LocalFeatureData> LocalFeature;
   std::shared_ptr<OcctSharp_RegionData> Regions;
+  // Independent bounded decoded graphs live inside the existing result owner.
+  std::shared_ptr<OcctSharp_SerializedReferenceData> SerializedReferences;
+  std::shared_ptr<OcctSharp_SerializedOccurrenceData> SerializedOccurrences;
 };
 
 namespace OcctSharp::Native

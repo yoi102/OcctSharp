@@ -1,0 +1,510 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.65",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "E65241E2699527576F46BC3B0C9ED8DBD31C956676F8E481553E0B2D9AB4EAEC",
+  "declarations": [
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@GetColorMode#1",
+      "nativeName": "IGESCAFControl_Writer::GetColorMode",
+      "signature": "IGESCAFControl_Writer::GetColorMode: bool () const",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@GetLayerMode#1",
+      "nativeName": "IGESCAFControl_Writer::GetLayerMode",
+      "signature": "IGESCAFControl_Writer::GetLayerMode: bool () const",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@GetNameMode#1",
+      "nativeName": "IGESCAFControl_Writer::GetNameMode",
+      "signature": "IGESCAFControl_Writer::GetNameMode: bool () const",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#*1C#",
+      "nativeName": "IGESCAFControl_Writer::IGESCAFControl_Writer",
+      "signature": "IGESCAFControl_Writer::IGESCAFControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "IGESCAFControl_Writer::IGESCAFControl_Writer",
+      "signature": "IGESCAFControl_Writer::IGESCAFControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Writer::Perform",
+      "signature": "IGESCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Writer::Transfer",
+      "signature": "IGESCAFControl_Writer::Transfer: bool (const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Writer::Transfer",
+      "signature": "IGESCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#&1$@S@Message_ProgressRange#",
+      "nativeName": "IGESCAFControl_Writer::Transfer",
+      "signature": "IGESCAFControl_Writer::Transfer: bool (const TDF_Label &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ChangeWriter#",
+      "nativeName": "STEPCAFControl_Writer::ChangeWriter",
+      "signature": "STEPCAFControl_Writer::ChangeWriter: STEPControl_Writer &()",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const TDF_Label &, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFiles",
+      "signature": "STEPCAFControl_Writer::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::Init",
+      "signature": "STEPCAFControl_Writer::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&&$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (STEPCAFControl_Writer &&)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const STEPCAFControl_Writer &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@WriteStream#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "STEPCAFControl_Writer::WriteStream",
+      "signature": "STEPCAFControl_Writer::WriteStream: IFSelect_ReturnStatus (std::ostream &)",
+      "decision": "DEFERRED",
+      "reason": "No mutable writer/session/map escapes, copy/move, stream, uncontrolled configuration or duplicate single-file/IGES capability migration."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Writer#1",
+      "nativeName": "STEPCAFControl_Writer::Writer",
+      "signature": "STEPCAFControl_Writer::Writer: const STEPControl_Writer &() const",
+      "decision": "ADMITTED",
+      "reason": "Pinned private writer initialized selected sequence transfer, full private parameter isolation and copied canonical external diagnostics."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@DESTEP_Parameters#",
+      "nativeName": "DESTEP_Parameters::DESTEP_Parameters",
+      "signature": "DESTEP_Parameters::DESTEP_Parameters: void ()",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPControl_Writer::GetShapeFixParameters",
+      "signature": "STEPControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPControl_Writer::SetShapeFixParameters",
+      "signature": "STEPControl_Writer::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Location@F@Get#1",
+      "nativeName": "XCAFDoc_Location::Get",
+      "signature": "XCAFDoc_Location::Get: const TopLoc_Location &() const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency."
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetLabel#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetLabel",
+      "signature": "STEPCAFControl_ExternFile::GetLabel: TDF_Label () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetName#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetName",
+      "signature": "STEPCAFControl_ExternFile::GetName: occ::handle<TCollection_HAsciiString> () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetTransferStatus#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetTransferStatus",
+      "signature": "STEPCAFControl_ExternFile::GetTransferStatus: bool () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetWS#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetWS",
+      "signature": "STEPCAFControl_ExternFile::GetWS: occ::handle<XSControl_WorkSession> () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_ExternFile@F@GetWriteStatus#1",
+      "nativeName": "STEPCAFControl_ExternFile::GetWriteStatus",
+      "signature": "STEPCAFControl_ExternFile::GetWriteStatus: IFSelect_ReturnStatus () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void ()",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetColorMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetColorMode",
+      "signature": "STEPCAFControl_Writer::SetColorMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetDimTolMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetDimTolMode",
+      "signature": "STEPCAFControl_Writer::SetDimTolMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetLayerMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetLayerMode",
+      "signature": "STEPCAFControl_Writer::SetLayerMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetMaterialMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetMaterialMode",
+      "signature": "STEPCAFControl_Writer::SetMaterialMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetMetadataMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetMetadataMode",
+      "signature": "STEPCAFControl_Writer::SetMetadataMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetNameMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetNameMode",
+      "signature": "STEPCAFControl_Writer::SetNameMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetPropsMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetPropsMode",
+      "signature": "STEPCAFControl_Writer::SetPropsMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetSHUOMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetSHUOMode",
+      "signature": "STEPCAFControl_Writer::SetSHUOMode: void (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Write#*1C#",
+      "nativeName": "STEPCAFControl_Writer::Write",
+      "signature": "STEPCAFControl_Writer::Write: IFSelect_ReturnStatus (const char *const)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Writer@F@Model#b#",
+      "nativeName": "STEPControl_Writer::Model",
+      "signature": "STEPControl_Writer::Model: occ::handle<StepData_StepModel> (const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@BeforeClose#",
+      "nativeName": "TDocStd_Document::BeforeClose",
+      "signature": "TDocStd_Document::BeforeClose: void ()",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@HasOpenCommand#1",
+      "nativeName": "TDocStd_Document::HasOpenCommand",
+      "signature": "TDocStd_Document::HasOpenCommand: bool () const",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@GetLengthUnit#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&d#S",
+      "nativeName": "XCAFDoc_DocumentTool::GetLengthUnit",
+      "signature": "XCAFDoc_DocumentTool::GetLengthUnit: bool (const occ::handle<TDocStd_Document> &, double &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@SetLengthUnit#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#d#S",
+      "nativeName": "XCAFDoc_DocumentTool::SetLengthUnit",
+      "signature": "XCAFDoc_DocumentTool::SetLengthUnit: void (const occ::handle<TDocStd_Document> &, const double)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Editor@F@CloneMetaData#&1$@S@TDF_Label#S0_#*$@S@NCollection_DataMap>#$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#S4_#$@S@NCollection_DefaultHasher>#S4_#b#b#b#b#b#S",
+      "nativeName": "XCAFDoc_Editor::CloneMetaData",
+      "signature": "XCAFDoc_Editor::CloneMetaData: void (const TDF_Label &, const TDF_Label &, NCollection_DataMap<occ::handle<XCAFDoc_VisMaterial>, occ::handle<XCAFDoc_VisMaterial>> *, const bool, const bool, const bool, const bool, const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Editor@F@CloneShapeLabel#&1$@S@TDF_Label#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_ShapeTool#S2_#&$@S@NCollection_DataMap>#S1_#S1_#$@S@NCollection_DefaultHasher>#S1_#S",
+      "nativeName": "XCAFDoc_Editor::CloneShapeLabel",
+      "signature": "XCAFDoc_Editor::CloneShapeLabel: TDF_Label (const TDF_Label &, const occ::handle<XCAFDoc_ShapeTool> &, const occ::handle<XCAFDoc_ShapeTool> &, NCollection_DataMap<TDF_Label, TDF_Label> &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetComponents#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#b#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetComponents",
+      "signature": "XCAFDoc_ShapeTool::GetComponents: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &, const bool)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetReferredShape#&1$@S@TDF_Label#&S1_#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetReferredShape",
+      "signature": "XCAFDoc_ShapeTool::GetReferredShape: bool (const TDF_Label &, TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetShape",
+      "signature": "XCAFDoc_ShapeTool::GetShape: TopoDS_Shape (const TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsAssembly#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsAssembly",
+      "signature": "XCAFDoc_ShapeTool::IsAssembly: bool (const TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsComponent#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsComponent",
+      "signature": "XCAFDoc_ShapeTool::IsComponent: bool (const TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSimpleShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsSimpleShape",
+      "signature": "XCAFDoc_ShapeTool::IsSimpleShape: bool (const TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSubShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsSubShape",
+      "signature": "XCAFDoc_ShapeTool::IsSubShape: bool (const TDF_Label &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#",
+      "nativeName": "XCAFDoc_ShapeTool::SetShape",
+      "signature": "XCAFDoc_ShapeTool::SetShape: void (const TDF_Label &, const TopoDS_Shape &)",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@UpdateAssemblies#",
+      "nativeName": "XCAFDoc_ShapeTool::UpdateAssemblies",
+      "signature": "XCAFDoc_ShapeTool::UpdateAssemblies: void ()",
+      "reason": "Necessary private initialized writer, shared clone/metadata map, deep geometry copy or completion/status/parameter proof dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_SweptSurface@F@BasisCurve#1",
+      "reason": "Existing Emitted extrusion basis access; audited basis-curve preflight before copying actual BL extrusion solids.",
+      "nativeName": "Geom_SweptSurface::BasisCurve",
+      "signature": "Geom_SweptSurface::BasisCurve: occ::handle<Geom_Curve> () const",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetVisualMaterialMode#b#",
+      "nativeName": "STEPCAFControl_Writer::SetVisualMaterialMode",
+      "signature": "STEPCAFControl_Writer::SetVisualMaterialMode: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Previously emitted bounded private dependency; receives no new migration credit."
+    }
+  ]
+}

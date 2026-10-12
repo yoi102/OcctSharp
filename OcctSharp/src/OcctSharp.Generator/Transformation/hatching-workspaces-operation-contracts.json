@@ -1,0 +1,267 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@AddElement#&1$@S@Geom2dAdaptor_Curve#$@E@TopAbs_Orientation#",
+      "nativeName": "Geom2dHatch_Hatcher::AddElement",
+      "signature": "Geom2dHatch_Hatcher::AddElement: int (const Geom2dAdaptor_Curve &, const TopAbs_Orientation)",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@AddHatching#&1$@S@Geom2dAdaptor_Curve#",
+      "nativeName": "Geom2dHatch_Hatcher::AddHatching",
+      "signature": "Geom2dHatch_Hatcher::AddHatching: int (const Geom2dAdaptor_Curve &)",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@ComputeDomains#",
+      "nativeName": "Geom2dHatch_Hatcher::ComputeDomains",
+      "signature": "Geom2dHatch_Hatcher::ComputeDomains: void ()",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Confusion2d#1",
+      "nativeName": "Geom2dHatch_Hatcher::Confusion2d",
+      "signature": "Geom2dHatch_Hatcher::Confusion2d: double () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Confusion3d#1",
+      "nativeName": "Geom2dHatch_Hatcher::Confusion3d",
+      "signature": "Geom2dHatch_Hatcher::Confusion3d: double () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Domain#I#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::Domain",
+      "signature": "Geom2dHatch_Hatcher::Domain: const HatchGen_Domain &(const int, const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Geom2dHatch_Hatcher#&1$@S@Geom2dHatch_Intersector#d#d#b#b#",
+      "nativeName": "Geom2dHatch_Hatcher::Geom2dHatch_Hatcher",
+      "signature": "Geom2dHatch_Hatcher::Geom2dHatch_Hatcher: void (const Geom2dHatch_Intersector &, const double, const double, const bool, const bool)",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@IsDone#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::IsDone",
+      "signature": "Geom2dHatch_Hatcher::IsDone: bool (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@KeepPoints#1",
+      "nativeName": "Geom2dHatch_Hatcher::KeepPoints",
+      "signature": "Geom2dHatch_Hatcher::KeepPoints: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@KeepSegments#1",
+      "nativeName": "Geom2dHatch_Hatcher::KeepSegments",
+      "signature": "Geom2dHatch_Hatcher::KeepSegments: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@NbDomains#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::NbDomains",
+      "signature": "Geom2dHatch_Hatcher::NbDomains: int (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@NbPoints#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::NbPoints",
+      "signature": "Geom2dHatch_Hatcher::NbPoints: int (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Point#I#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::Point",
+      "signature": "Geom2dHatch_Hatcher::Point: const HatchGen_PointOnHatching &(const int, const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Status#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::Status",
+      "signature": "Geom2dHatch_Hatcher::Status: HatchGen_ErrorStatus (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@Trim#",
+      "nativeName": "Geom2dHatch_Hatcher::Trim",
+      "signature": "Geom2dHatch_Hatcher::Trim: void ()",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@TrimDone#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::TrimDone",
+      "signature": "Geom2dHatch_Hatcher::TrimDone: bool (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Hatcher@F@TrimFailed#I#1",
+      "nativeName": "Geom2dHatch_Hatcher::TrimFailed",
+      "signature": "Geom2dHatch_Hatcher::TrimFailed: bool (const int) const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Intersector@F@ConfusionTolerance#1",
+      "nativeName": "Geom2dHatch_Intersector::ConfusionTolerance",
+      "signature": "Geom2dHatch_Intersector::ConfusionTolerance: double () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Intersector@F@Geom2dHatch_Intersector#d#d#",
+      "nativeName": "Geom2dHatch_Intersector::Geom2dHatch_Intersector",
+      "signature": "Geom2dHatch_Intersector::Geom2dHatch_Intersector: void (const double, const double)",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    },
+    {
+      "stableId": "c:@S@Geom2dHatch_Intersector@F@TangencyTolerance#1",
+      "nativeName": "Geom2dHatch_Intersector::TangencyTolerance",
+      "signature": "Geom2dHatch_Intersector::TangencyTolerance: double () const",
+      "guard": "AQPrivate",
+      "reason": "Initialized call-private curved hatching; copied inputs, gated statuses/events/domains and independent trimmed curves."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#",
+      "nativeName": "Geom2dAdaptor_Curve::Geom2dAdaptor_Curve",
+      "signature": "Geom2dAdaptor_Curve::Geom2dAdaptor_Curve: void (const occ::handle<Geom2d_Curve> &, const double, const double)",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@Geom2d_TrimmedCurve@F@Geom2d_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#b#b#",
+      "nativeName": "Geom2d_TrimmedCurve::Geom2d_TrimmedCurve",
+      "signature": "Geom2d_TrimmedCurve::Geom2d_TrimmedCurve: void (const occ::handle<Geom2d_Curve> &, const double, const double, const bool, const bool)",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@GeomAPI@F@To3d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pln#S",
+      "nativeName": "GeomAPI::To3d",
+      "signature": "GeomAPI::To3d: occ::handle<Geom_Curve> (const occ::handle<Geom2d_Curve> &, const gp_Pln &)",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@FirstPoint#1",
+      "nativeName": "HatchGen_Domain::FirstPoint",
+      "signature": "HatchGen_Domain::FirstPoint: const HatchGen_PointOnHatching &() const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HasFirstPoint#1",
+      "nativeName": "HatchGen_Domain::HasFirstPoint",
+      "signature": "HatchGen_Domain::HasFirstPoint: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@HasSecondPoint#1",
+      "nativeName": "HatchGen_Domain::HasSecondPoint",
+      "signature": "HatchGen_Domain::HasSecondPoint: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_Domain@F@SecondPoint#1",
+      "nativeName": "HatchGen_Domain::SecondPoint",
+      "signature": "HatchGen_Domain::SecondPoint: const HatchGen_PointOnHatching &() const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Index#1",
+      "nativeName": "HatchGen_IntersectionPoint::Index",
+      "signature": "HatchGen_IntersectionPoint::Index: int () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Parameter#1",
+      "nativeName": "HatchGen_IntersectionPoint::Parameter",
+      "signature": "HatchGen_IntersectionPoint::Parameter: double () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@Position#1",
+      "nativeName": "HatchGen_IntersectionPoint::Position",
+      "signature": "HatchGen_IntersectionPoint::Position: TopAbs_Orientation () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentBeginning",
+      "signature": "HatchGen_IntersectionPoint::SegmentBeginning: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1",
+      "nativeName": "HatchGen_IntersectionPoint::SegmentEnd",
+      "signature": "HatchGen_IntersectionPoint::SegmentEnd: bool () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@StateAfter#1",
+      "nativeName": "HatchGen_IntersectionPoint::StateAfter",
+      "signature": "HatchGen_IntersectionPoint::StateAfter: TopAbs_State () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_IntersectionPoint@F@StateBefore#1",
+      "nativeName": "HatchGen_IntersectionPoint::StateBefore",
+      "signature": "HatchGen_IntersectionPoint::StateBefore: TopAbs_State () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnElement@F@IntersectionType#1",
+      "nativeName": "HatchGen_PointOnElement::IntersectionType",
+      "signature": "HatchGen_PointOnElement::IntersectionType: HatchGen_IntersectionType () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@NbPoints#1",
+      "nativeName": "HatchGen_PointOnHatching::NbPoints",
+      "signature": "HatchGen_PointOnHatching::NbPoints: int () const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    },
+    {
+      "stableId": "c:@S@HatchGen_PointOnHatching@F@Point#I#1",
+      "nativeName": "HatchGen_PointOnHatching::Point",
+      "signature": "HatchGen_PointOnHatching::Point: const HatchGen_PointOnElement &(const int) const",
+      "guard": "AQPrivate",
+      "reason": "Necessary copied event/domain/curve prerequisite; preserve existing emitted/manual public surface."
+    }
+  ]
+}

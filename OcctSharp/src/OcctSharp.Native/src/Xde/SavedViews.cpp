@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Xde/SavedViews implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Geometry/Conversions.hxx"
@@ -55,8 +57,8 @@ void SetSavedViewObject(
   object->SetName(MakePmiString(name));
   object->SetType(static_cast<XCAFView_ProjectionType>(data.projection_type));
   object->SetProjectionPoint(gp_Pnt(data.projection_point.x, data.projection_point.y, data.projection_point.z));
-  object->SetViewDirection(gp_Dir(data.view_direction.x, data.view_direction.y, data.view_direction.z));
-  object->SetUpDirection(gp_Dir(data.up_direction.x, data.up_direction.y, data.up_direction.z));
+  OcctSharpGenerated::XdeAdapters::XCAFView_Object_SetViewDirection_Bind(*(object))(gp_Dir(data.view_direction.x, data.view_direction.y, data.view_direction.z));
+  OcctSharpGenerated::XdeAdapters::XCAFView_Object_SetUpDirection_Bind(*(object))(gp_Dir(data.up_direction.x, data.up_direction.y, data.up_direction.z));
   object->SetZoomFactor(data.zoom_factor);
   object->SetWindowHorizontalSize(data.window_horizontal_size);
   object->SetWindowVerticalSize(data.window_vertical_size);
@@ -66,7 +68,7 @@ void SetSavedViewObject(
   if (data.has_back_clipping) object->SetBackPlaneDistance(data.back_clipping_distance);
   else object->UnsetBackPlaneClipping();
   object->SetViewVolumeSidesClipping(data.has_view_volume_sides_clipping != 0);
-  XCAFDoc_View::Set(label)->SetObject(object);
+  OcctSharpGenerated::XdeAdapters::XCAFDoc_View_Set(label)->SetObject(object);
 }
 
 NCollection_Sequence<TDF_Label> AddSavedViewPlanes(
@@ -83,7 +85,7 @@ NCollection_Sequence<TDF_Label> AddSavedViewPlanes(
     if (!std::isfinite(plane.a) || !std::isfinite(plane.b)
         || !std::isfinite(plane.c) || !std::isfinite(plane.d))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Saved-view clipping-plane values must be finite.");
-    labels.Append(tool->AddClippingPlane(
+    labels.Append(OcctSharpGenerated::XdeAdapters::XCAFDoc_ClippingPlaneTool_AddClippingPlane_Bind(*(tool))(
       gp_Pln(plane.a, plane.b, plane.c, plane.d),
       new TCollection_HAsciiString("OcctSharp saved view"), plane.capping != 0));
   }
@@ -96,7 +98,7 @@ void RemoveUnreferencedPlanes(
 {
   const auto tool = GetClippingPlaneTool(document);
   for (NCollection_Sequence<TDF_Label>::Iterator iterator(labels); iterator.More(); iterator.Next())
-    tool->RemoveClippingPlane(iterator.Value());
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ClippingPlaneTool_RemoveClippingPlane_Bind(*(tool))(iterator.Value());
 }
 
 opencascade::handle<XCAFView_Object> GetSavedViewObject(
@@ -104,7 +106,7 @@ opencascade::handle<XCAFView_Object> GetSavedViewObject(
 {
   opencascade::handle<XCAFDoc_View> attribute;
   const TDF_Label label = ResolveOcafLabel(document, entry);
-  if (!label.FindAttribute(XCAFDoc_View::GetID(), attribute))
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_View_GetID(), attribute))
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
   const auto object = attribute->GetObject();
   if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The saved view has no value object.");
@@ -127,12 +129,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_create(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const auto viewTool = GetViewTool(document);
-    const TDF_Label label = viewTool->AddView();
+    const TDF_Label label = OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_AddView_Bind(*(viewTool))();
     SetSavedViewObject(label, *data, name, clipping_expression);
     const NCollection_Sequence<TDF_Label> shapes = ResolveEntries(document, shape_entries);
     const NCollection_Sequence<TDF_Label> pmi = ResolveEntries(document, pmi_entries);
     const NCollection_Sequence<TDF_Label> clippingPlanes = AddSavedViewPlanes(document, planes, plane_count);
-    viewTool->SetView(shapes, pmi, clippingPlanes, label);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_SetView_Bind(*(viewTool))(shapes, pmi, clippingPlanes, label);
     CopyLabelEntry(label, buffer, capacity, written);
   });
 }
@@ -150,15 +152,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_update(
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const auto viewTool = GetViewTool(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!viewTool->IsView(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_IsView_Bind(*(viewTool))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
     NCollection_Sequence<TDF_Label> previousPlanes;
-    viewTool->GetRefClippingPlaneLabel(label, previousPlanes);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefClippingPlaneLabel_Bind(*(viewTool))(label, previousPlanes);
     SetSavedViewObject(label, *data, name, clipping_expression);
     const NCollection_Sequence<TDF_Label> shapes = ResolveEntries(document, shape_entries);
     const NCollection_Sequence<TDF_Label> pmi = ResolveEntries(document, pmi_entries);
     const NCollection_Sequence<TDF_Label> clippingPlanes = AddSavedViewPlanes(document, planes, plane_count);
-    viewTool->SetView(shapes, pmi, clippingPlanes, label);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_SetView_Bind(*(viewTool))(shapes, pmi, clippingPlanes, label);
     RemoveUnreferencedPlanes(document, previousPlanes);
   });
 }
@@ -175,9 +177,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_get(
     const auto object = GetSavedViewObject(document, entry);
     data->projection_type = static_cast<int32_t>(object->Type());
     data->projection_point = CopyPoint(object->ProjectionPoint());
-    const gp_Dir viewDirection = object->ViewDirection();
+    const gp_Dir viewDirection = OcctSharpGenerated::XdeAdapters::XCAFView_Object_ViewDirection_Bind(*(object))();
     data->view_direction = { viewDirection.X(), viewDirection.Y(), viewDirection.Z() };
-    const gp_Dir upDirection = object->UpDirection();
+    const gp_Dir upDirection = OcctSharpGenerated::XdeAdapters::XCAFView_Object_UpDirection_Bind(*(object))();
     data->up_direction = { upDirection.X(), upDirection.Y(), upDirection.Z() };
     data->zoom_factor = object->ZoomFactor();
     data->window_horizontal_size = object->WindowHorizontalSize();
@@ -190,9 +192,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_get(
     NCollection_Sequence<TDF_Label> clippingPlanes;
     const auto viewTool = GetViewTool(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!viewTool->IsView(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_IsView_Bind(*(viewTool))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
-    viewTool->GetRefClippingPlaneLabel(label, clippingPlanes);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefClippingPlaneLabel_Bind(*(viewTool))(label, clippingPlanes);
     *plane_count = clippingPlanes.Size();
   });
 }
@@ -207,13 +209,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_plane(
   return Guard([&]
   {
     NCollection_Sequence<TDF_Label> clippingPlanes;
-    if (!GetViewTool(document)->GetRefClippingPlaneLabel(ResolveOcafLabel(document, entry), clippingPlanes)
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefClippingPlaneLabel_Bind(*(GetViewTool(document)))(ResolveOcafLabel(document, entry), clippingPlanes)
         || index < 1 || index > clippingPlanes.Size())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The saved-view clipping-plane index is outside the valid 1-based range.");
     gp_Pln value;
     opencascade::handle<TCollection_HAsciiString> nameValue;
     bool capping = false;
-    if (!GetClippingPlaneTool(document)->GetClippingPlane(clippingPlanes.Value(index), value, nameValue, capping))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ClippingPlaneTool_GetClippingPlane_Bind(*(GetClippingPlaneTool(document)))(clippingPlanes.Value(index), value, nameValue, capping))
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The saved-view clipping plane could not be read.");
     value.Coefficients(plane->a, plane->b, plane->c, plane->d);
     plane->capping = capping ? 1 : 0;
@@ -228,11 +230,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_remove(
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const auto viewTool = GetViewTool(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!viewTool->IsView(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_IsView_Bind(*(viewTool))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
     NCollection_Sequence<TDF_Label> clippingPlanes;
-    viewTool->GetRefClippingPlaneLabel(label, clippingPlanes);
-    viewTool->RemoveView(label);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefClippingPlaneLabel_Bind(*(viewTool))(label, clippingPlanes);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_RemoveView_Bind(*(viewTool))(label);
     RemoveUnreferencedPlanes(document, clippingPlanes);
   });
 }

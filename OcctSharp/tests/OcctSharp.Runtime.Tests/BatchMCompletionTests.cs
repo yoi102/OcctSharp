@@ -75,6 +75,12 @@ public sealed class BatchMCompletionTests
                 Size = 120,
                 Gap = 12
             });
+            var detected=new HashSet<ViewerManipulatorMode>();
+            for(int y=80;y<=176;y+=6)
+                for(int x=80;x<=176;x+=6)
+                {viewer.MoveTo(x,y);detected.Add(manipulator.State.ActiveMode);}
+            Assert.Contains(ViewerManipulatorMode.Translation,detected);
+            Assert.Contains(ViewerManipulatorMode.Rotation,detected);
             using GpTrsf translation = GpTrsf.Create(15, 0, 0);
 
             manipulator.Start(128, 128);

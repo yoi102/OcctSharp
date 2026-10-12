@@ -1,0 +1,569 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.56",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "FCE765AEC0110C4860782884925073E04DF7378A35FDB629F175E4A406AC16D4",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void (const occ::handle<Geom_Surface> &, const TopoDS_Shape &, const bool)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#b#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void (const occ::handle<Geom_Surface> &, const occ::handle<Geom_Surface> &, const bool)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@BOPAlgo_PaveFiller#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void (const BOPAlgo_PaveFiller &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void (const TopoDS_Shape &, const occ::handle<Geom_Surface> &, const bool)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@TopoDS_Shape#S0_#&1$@S@BOPAlgo_PaveFiller#b#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void (const TopoDS_Shape &, const TopoDS_Shape &, const BOPAlgo_PaveFiller &, const bool)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@HasAncestorFaceOn1#&1$@S@TopoDS_Shape#&S1_#1",
+      "nativeName": "BRepAlgoAPI_Section::HasAncestorFaceOn1",
+      "signature": "BRepAlgoAPI_Section::HasAncestorFaceOn1: bool (const TopoDS_Shape &, TopoDS_Shape &) const",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@HasAncestorFaceOn2#&1$@S@TopoDS_Shape#&S1_#1",
+      "nativeName": "BRepAlgoAPI_Section::HasAncestorFaceOn2",
+      "signature": "BRepAlgoAPI_Section::HasAncestorFaceOn2: bool (const TopoDS_Shape &, TopoDS_Shape &) const",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init1#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepAlgoAPI_Section::Init1",
+      "signature": "BRepAlgoAPI_Section::Init1: void (const occ::handle<Geom_Surface> &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init1#&1$@S@gp_Pln#",
+      "nativeName": "BRepAlgoAPI_Section::Init1",
+      "signature": "BRepAlgoAPI_Section::Init1: void (const gp_Pln &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init1#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_Section::Init1",
+      "signature": "BRepAlgoAPI_Section::Init1: void (const TopoDS_Shape &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init2#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepAlgoAPI_Section::Init2",
+      "signature": "BRepAlgoAPI_Section::Init2: void (const occ::handle<Geom_Surface> &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init2#&1$@S@gp_Pln#",
+      "nativeName": "BRepAlgoAPI_Section::Init2",
+      "signature": "BRepAlgoAPI_Section::Init2: void (const gp_Pln &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init2#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_Section::Init2",
+      "signature": "BRepAlgoAPI_Section::Init2: void (const TopoDS_Shape &)",
+      "header": "BRepAlgoAPI_Section.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@AddWire#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::AddWire",
+      "signature": "BRepOffsetAPI_MakeOffset::AddWire: void (const TopoDS_Wire &)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void ()",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#&&$@S@BRepOffsetAPI_MakeOffset#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void (BRepOffsetAPI_MakeOffset &&)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#&1$@S@BRepOffsetAPI_MakeOffset#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void (const BRepOffsetAPI_MakeOffset &)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#&1$@S@TopoDS_Face#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void (const TopoDS_Face &, const GeomAbs_JoinType, const bool)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Build",
+      "signature": "BRepOffsetAPI_MakeOffset::Build: void (const Message_ProgressRange &)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@ConvertFace#&1$@S@TopoDS_Face#d#S",
+      "nativeName": "BRepOffsetAPI_MakeOffset::ConvertFace",
+      "signature": "BRepOffsetAPI_MakeOffset::ConvertFace: TopoDS_Face (const TopoDS_Face &, const double)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Generated",
+      "signature": "BRepOffsetAPI_MakeOffset::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Init#&1$@S@TopoDS_Face#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Init",
+      "signature": "BRepOffsetAPI_MakeOffset::Init: void (const TopoDS_Face &, const GeomAbs_JoinType, const bool)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Init#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Init",
+      "signature": "BRepOffsetAPI_MakeOffset::Init: void (const GeomAbs_JoinType, const bool)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@SetApprox#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::SetApprox",
+      "signature": "BRepOffsetAPI_MakeOffset::SetApprox: void (const bool)",
+      "header": "BRepOffsetAPI_MakeOffset.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@BRepOffsetAPI_ThruSections#&&$@S@BRepOffsetAPI_ThruSections#",
+      "nativeName": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections",
+      "signature": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections: void (BRepOffsetAPI_ThruSections &&)",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@BRepOffsetAPI_ThruSections#&1$@S@BRepOffsetAPI_ThruSections#",
+      "nativeName": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections",
+      "signature": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections: void (const BRepOffsetAPI_ThruSections &)",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Surface/plane and reusable filler paths, move/copy constructors, unneeded conversion/build paths require separate contracts."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Continuity#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::Continuity",
+      "signature": "BRepOffsetAPI_ThruSections::Continuity: GeomAbs_Shape () const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@CriteriumWeight#&d#S0_#S0_#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::CriteriumWeight",
+      "signature": "BRepOffsetAPI_ThruSections::CriteriumWeight: void (double &, double &, double &) const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@GeneratedFace#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::GeneratedFace",
+      "signature": "BRepOffsetAPI_ThruSections::GeneratedFace: TopoDS_Shape (const TopoDS_Shape &) const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Init#b#b#d#",
+      "nativeName": "BRepOffsetAPI_ThruSections::Init",
+      "signature": "BRepOffsetAPI_ThruSections::Init: void (const bool, const bool, const double)",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@IsMutableInput#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::IsMutableInput",
+      "signature": "BRepOffsetAPI_ThruSections::IsMutableInput: bool () const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@MaxDegree#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::MaxDegree",
+      "signature": "BRepOffsetAPI_ThruSections::MaxDegree: int () const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@ParType#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::ParType",
+      "signature": "BRepOffsetAPI_ThruSections::ParType: Approx_ParametrizationType () const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@UseSmoothing#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::UseSmoothing",
+      "signature": "BRepOffsetAPI_ThruSections::UseSmoothing: bool () const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Wires#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::Wires",
+      "signature": "BRepOffsetAPI_ThruSections::Wires: const NCollection_List<TopoDS_Shape> &() const",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Controlled initialized operation and exact copied result domain."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@BOPAlgo_PaveFiller@F@PDS#",
+      "nativeName": "BOPAlgo_PaveFiller::PDS",
+      "signature": "BOPAlgo_PaveFiller::PDS: BOPDS_PDS ()",
+      "header": "BOPAlgo_PaveFiller.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_Curve@F@PaveBlocks#1",
+      "nativeName": "BOPDS_Curve::PaveBlocks",
+      "signature": "BOPDS_Curve::PaveBlocks: const NCollection_List<occ::handle<BOPDS_PaveBlock>> &() const",
+      "header": "BOPDS_Curve.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@InterfFF#",
+      "nativeName": "BOPDS_DS::InterfFF",
+      "signature": "BOPDS_DS::InterfFF: NCollection_DynamicArray<BOPDS_InterfFF> &()",
+      "header": "BOPDS_DS.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@NbShapes#1",
+      "nativeName": "BOPDS_DS::NbShapes",
+      "signature": "BOPDS_DS::NbShapes: int () const",
+      "header": "BOPDS_DS.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@Shape#I#1",
+      "nativeName": "BOPDS_DS::Shape",
+      "signature": "BOPDS_DS::Shape: const TopoDS_Shape &(const int) const",
+      "header": "BOPDS_DS.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_Interf@F@Indices#&I#S0_#1",
+      "nativeName": "BOPDS_Interf::Indices",
+      "signature": "BOPDS_Interf::Indices: void (int &, int &) const",
+      "header": "BOPDS_Interf.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BOPDS_InterfFF@F@Curves#1",
+      "nativeName": "BOPDS_InterfFF::Curves",
+      "signature": "BOPDS_InterfFF::Curves: const NCollection_DynamicArray<BOPDS_Curve> &() const",
+      "header": "BOPDS_Interf.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@DSFiller#1",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::DSFiller",
+      "signature": "BRepAlgoAPI_BuilderAlgo::DSFiller: const BOPAlgo_PPaveFiller &() const",
+      "header": "BRepAlgoAPI_BuilderAlgo.hxx",
+      "baselineDisposition": "Blocked",
+      "reason": "Required private section interference traversal to prove uniqueness; never exposed as a borrowed object."
+    }
+  ],
+  "newPrerequisites": [
+    "c:@S@BOPAlgo_PaveFiller@F@PDS#",
+    "c:@S@BOPDS_Curve@F@PaveBlocks#1",
+    "c:@S@BOPDS_DS@F@InterfFF#",
+    "c:@S@BOPDS_DS@F@NbShapes#1",
+    "c:@S@BOPDS_DS@F@Shape#I#1",
+    "c:@S@BOPDS_Interf@F@Indices#&I#S0_#1",
+    "c:@S@BOPDS_InterfFF@F@Curves#1",
+    "c:@S@BRepAlgoAPI_BuilderAlgo@F@DSFiller#1"
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BOPDS_PaveBlock@F@Edge#1",
+      "nativeName": "BOPDS_PaveBlock::Edge",
+      "signature": "BOPDS_PaveBlock::Edge: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetNonDestructive#b#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Approximation#b#",
+      "nativeName": "BRepAlgoAPI_Section::Approximation",
+      "signature": "BRepAlgoAPI_Section::Approximation: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#",
+      "nativeName": "BRepAlgoAPI_Section::BRepAlgoAPI_Section",
+      "signature": "BRepAlgoAPI_Section::BRepAlgoAPI_Section: void ()",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_Section::Build",
+      "signature": "BRepAlgoAPI_Section::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@ComputePCurveOn1#b#",
+      "nativeName": "BRepAlgoAPI_Section::ComputePCurveOn1",
+      "signature": "BRepAlgoAPI_Section::ComputePCurveOn1: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@ComputePCurveOn2#b#",
+      "nativeName": "BRepAlgoAPI_Section::ComputePCurveOn2",
+      "signature": "BRepAlgoAPI_Section::ComputePCurveOn2: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Perform#d#d#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Perform",
+      "signature": "BRepOffsetAPI_MakeOffset::Perform: void (const double, const double)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@AddWire#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepOffsetAPI_ThruSections::AddWire",
+      "signature": "BRepOffsetAPI_ThruSections::AddWire: void (const TopoDS_Wire &)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@BRepOffsetAPI_ThruSections#b#b#d#",
+      "nativeName": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections",
+      "signature": "BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections: void (const bool, const bool, const double)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_ThruSections::Build",
+      "signature": "BRepOffsetAPI_ThruSections::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@CheckCompatibility#b#",
+      "nativeName": "BRepOffsetAPI_ThruSections::CheckCompatibility",
+      "signature": "BRepOffsetAPI_ThruSections::CheckCompatibility: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_ThruSections::Generated",
+      "signature": "BRepOffsetAPI_ThruSections::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@GetStatus#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::GetStatus",
+      "signature": "BRepOffsetAPI_ThruSections::GetStatus: BRepFill_ThruSectionErrorStatus () const",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetContinuity#$@E@GeomAbs_Shape#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetContinuity",
+      "signature": "BRepOffsetAPI_ThruSections::SetContinuity: void (const GeomAbs_Shape)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetCriteriumWeight#d#d#d#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetCriteriumWeight",
+      "signature": "BRepOffsetAPI_ThruSections::SetCriteriumWeight: void (const double, const double, const double)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetMaxDegree#I#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetMaxDegree",
+      "signature": "BRepOffsetAPI_ThruSections::SetMaxDegree: void (const int)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetMutableInput#b#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetMutableInput",
+      "signature": "BRepOffsetAPI_ThruSections::SetMutableInput: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetParType#$@E@Approx_ParametrizationType#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetParType",
+      "signature": "BRepOffsetAPI_ThruSections::SetParType: void (const Approx_ParametrizationType)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetSmoothing#b#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetSmoothing",
+      "signature": "BRepOffsetAPI_ThruSections::SetSmoothing: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Private initialized operation reused without new emission."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetFuzzyValue#d#",
+      "nativeName": "BOPAlgo_Options::SetFuzzyValue",
+      "signature": "BOPAlgo_Options::SetFuzzyValue: void (const double)",
+      "baselineDisposition": "Manual",
+      "reason": "Inherited private configuration/completion/result operation actually invoked; existing manual binding reused without new migration."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetRunParallel#b#",
+      "nativeName": "BOPAlgo_Options::SetRunParallel",
+      "signature": "BOPAlgo_Options::SetRunParallel: void (const bool)",
+      "baselineDisposition": "Manual",
+      "reason": "Inherited private configuration/completion/result operation actually invoked; existing manual binding reused without new migration."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_Command::IsDone",
+      "signature": "BRepBuilderAPI_Command::IsDone: bool () const",
+      "baselineDisposition": "Manual",
+      "reason": "Inherited private configuration/completion/result operation actually invoked; existing manual binding reused without new migration."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Shape",
+      "signature": "BRepBuilderAPI_MakeShape::Shape: const TopoDS_Shape &()",
+      "baselineDisposition": "Manual",
+      "reason": "Inherited private configuration/completion/result operation actually invoked; existing manual binding reused without new migration."
+    }
+  ]
+}

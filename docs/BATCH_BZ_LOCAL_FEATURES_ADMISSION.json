@@ -1,0 +1,1134 @@
+{
+  "schemaVersion": "1.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "BY frozen Preview74",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "C615F2C7ABF86810CB53510C1C2D1BD8C606D5323A5E86A9F4BB980D548F8D89",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@AddDA#d#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::AddDA",
+      "signature": "BRepFilletAPI_MakeChamfer::AddDA: void (const double, const double, const TopoDS_Edge &, const TopoDS_Face &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Closed#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Closed",
+      "signature": "BRepFilletAPI_MakeChamfer::Closed: bool (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@ClosedAndTangent#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::ClosedAndTangent",
+      "signature": "BRepFilletAPI_MakeChamfer::ClosedAndTangent: bool (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Contour#&1$@S@TopoDS_Edge#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Contour",
+      "signature": "BRepFilletAPI_MakeChamfer::Contour: int (const TopoDS_Edge &) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Edge#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Edge",
+      "signature": "BRepFilletAPI_MakeChamfer::Edge: const TopoDS_Edge &(const int, const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@FirstVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::FirstVertex",
+      "signature": "BRepFilletAPI_MakeChamfer::FirstVertex: TopoDS_Vertex (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@LastVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::LastVertex",
+      "signature": "BRepFilletAPI_MakeChamfer::LastVertex: TopoDS_Vertex (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Length#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Length",
+      "signature": "BRepFilletAPI_MakeChamfer::Length: double (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@NbContours#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::NbContours",
+      "signature": "BRepFilletAPI_MakeChamfer::NbContours: int () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@NbEdges#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::NbEdges",
+      "signature": "BRepFilletAPI_MakeChamfer::NbEdges: int (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@RelativeAbscissa#I#&1$@S@TopoDS_Vertex#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::RelativeAbscissa",
+      "signature": "BRepFilletAPI_MakeChamfer::RelativeAbscissa: double (const int, const TopoDS_Vertex &) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@SetMode#$@E@ChFiDS_ChamfMode#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::SetMode",
+      "signature": "BRepFilletAPI_MakeChamfer::SetMode: void (const ChFiDS_ChamfMode)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Add",
+      "signature": "BRepFilletAPI_MakeFillet::Add: void (const TopoDS_Edge &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@BadShape#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::BadShape",
+      "signature": "BRepFilletAPI_MakeFillet::BadShape: TopoDS_Shape () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Closed#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Closed",
+      "signature": "BRepFilletAPI_MakeFillet::Closed: bool (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@ClosedAndTangent#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::ClosedAndTangent",
+      "signature": "BRepFilletAPI_MakeFillet::ClosedAndTangent: bool (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Contour#&1$@S@TopoDS_Edge#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Contour",
+      "signature": "BRepFilletAPI_MakeFillet::Contour: int (const TopoDS_Edge &) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Edge#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Edge",
+      "signature": "BRepFilletAPI_MakeFillet::Edge: const TopoDS_Edge &(const int, const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FaultyContour#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FaultyContour",
+      "signature": "BRepFilletAPI_MakeFillet::FaultyContour: int (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FaultyVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FaultyVertex",
+      "signature": "BRepFilletAPI_MakeFillet::FaultyVertex: TopoDS_Vertex (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FirstVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FirstVertex",
+      "signature": "BRepFilletAPI_MakeFillet::FirstVertex: TopoDS_Vertex (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@HasResult#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::HasResult",
+      "signature": "BRepFilletAPI_MakeFillet::HasResult: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@LastVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::LastVertex",
+      "signature": "BRepFilletAPI_MakeFillet::LastVertex: TopoDS_Vertex (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Length#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Length",
+      "signature": "BRepFilletAPI_MakeFillet::Length: double (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbContours#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbContours",
+      "signature": "BRepFilletAPI_MakeFillet::NbContours: int () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbEdges#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbEdges",
+      "signature": "BRepFilletAPI_MakeFillet::NbEdges: int (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbFaultyContours#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbFaultyContours",
+      "signature": "BRepFilletAPI_MakeFillet::NbFaultyContours: int () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbFaultyVertices#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbFaultyVertices",
+      "signature": "BRepFilletAPI_MakeFillet::NbFaultyVertices: int () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbSurf#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbSurf",
+      "signature": "BRepFilletAPI_MakeFillet::NbSurf: int (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbSurfaces#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbSurfaces",
+      "signature": "BRepFilletAPI_MakeFillet::NbSurfaces: int () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NewFaces#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::NewFaces",
+      "signature": "BRepFilletAPI_MakeFillet::NewFaces: const NCollection_List<TopoDS_Shape> &(const int)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@RelativeAbscissa#I#&1$@S@TopoDS_Vertex#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::RelativeAbscissa",
+      "signature": "BRepFilletAPI_MakeFillet::RelativeAbscissa: double (const int, const TopoDS_Vertex &) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Sect#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Sect",
+      "signature": "BRepFilletAPI_MakeFillet::Sect: occ::handle<NCollection_HArray1<ChFiDS_CircSection>> (const int, const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetContinuity#$@E@GeomAbs_Shape#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetContinuity",
+      "signature": "BRepFilletAPI_MakeFillet::SetContinuity: void (const GeomAbs_Shape, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetParams#d#d#d#d#d#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetParams",
+      "signature": "BRepFilletAPI_MakeFillet::SetParams: void (const double, const double, const double, const double, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "signature": "BRepFilletAPI_MakeFillet::SetRadius: void (const NCollection_Array1<gp_Pnt2d> &, const int, const int)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#d#I#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "signature": "BRepFilletAPI_MakeFillet::SetRadius: void (const double, const int, const TopoDS_Edge &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#d#I#&1$@S@TopoDS_Vertex#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "signature": "BRepFilletAPI_MakeFillet::SetRadius: void (const double, const int, const TopoDS_Vertex &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Simulate#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Simulate",
+      "signature": "BRepFilletAPI_MakeFillet::Simulate: void (const int)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@StripeStatus#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::StripeStatus",
+      "signature": "BRepFilletAPI_MakeFillet::StripeStatus: ChFiDS_ErrorStatus (const int) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ConnectedFaces#&1$@S@TopoDS_Face#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ConnectedFaces",
+      "signature": "BRepOffsetAPI_DraftAngle::ConnectedFaces: const NCollection_List<TopoDS_Shape> &(const TopoDS_Face &) const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ModifiedFaces#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ModifiedFaces",
+      "signature": "BRepOffsetAPI_DraftAngle::ModifiedFaces: const NCollection_List<TopoDS_Shape> &() const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ProblematicShape#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ProblematicShape",
+      "signature": "BRepOffsetAPI_DraftAngle::ProblematicShape: const TopoDS_Shape &() const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Status#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Status",
+      "signature": "BRepOffsetAPI_DraftAngle::Status: Draft_ErrorStatus () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@BRepOffsetAPI_MakeDraft#&1$@S@TopoDS_Shape#&1$@S@gp_Dir#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::BRepOffsetAPI_MakeDraft",
+      "signature": "BRepOffsetAPI_MakeDraft::BRepOffsetAPI_MakeDraft: void (const TopoDS_Shape &, const gp_Dir &, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Generated",
+      "signature": "BRepOffsetAPI_MakeDraft::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "signature": "BRepOffsetAPI_MakeDraft::Perform: void (const occ::handle<Geom_Surface> &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "signature": "BRepOffsetAPI_MakeDraft::Perform: void (const TopoDS_Shape &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "signature": "BRepOffsetAPI_MakeDraft::Perform: void (const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@SetDraft#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::SetDraft",
+      "signature": "BRepOffsetAPI_MakeDraft::SetDraft: void (const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@SetOptions#$@E@BRepBuilderAPI_TransitionMode#d#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::SetOptions",
+      "signature": "BRepOffsetAPI_MakeDraft::SetOptions: void (const BRepBuilderAPI_TransitionMode, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Shell#1",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Shell",
+      "signature": "BRepOffsetAPI_MakeDraft::Shell: TopoDS_Shell () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Add#&1$@S@TopoDS_Shape#&1$@S@TopoDS_Vertex#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Add",
+      "signature": "BRepOffsetAPI_MakePipeShell::Add: void (const TopoDS_Shape &, const TopoDS_Vertex &, const bool, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@FirstShape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::FirstShape",
+      "signature": "BRepOffsetAPI_MakePipeShell::FirstShape: TopoDS_Shape ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Generated",
+      "signature": "BRepOffsetAPI_MakePipeShell::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@LastShape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::LastShape",
+      "signature": "BRepOffsetAPI_MakePipeShell::LastShape: TopoDS_Shape ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetDiscreteMode#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetDiscreteMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetDiscreteMode: void ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetIsBuildHistory#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetIsBuildHistory",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetIsBuildHistory: void (const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetLaw#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Law_Function#&1$@S@TopoDS_Vertex#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetLaw",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetLaw: void (const TopoDS_Shape &, const occ::handle<Law_Function> &, const TopoDS_Vertex &, const bool, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetLaw#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Law_Function#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetLaw",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetLaw: void (const TopoDS_Shape &, const occ::handle<Law_Function> &, const bool, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMode: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@TopoDS_Wire#b#$@E@BRepFill_TypeOfContact#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMode: void (const TopoDS_Wire &, const bool, const BRepFill_TypeOfContact)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@gp_Ax2#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMode: void (const gp_Ax2 &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@gp_Dir#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMode: void (const gp_Dir &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Simulate#I#&$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Simulate",
+      "signature": "BRepOffsetAPI_MakePipeShell::Simulate: void (const int, NCollection_List<TopoDS_Shape> &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Add#d#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Add",
+      "signature": "BRepFilletAPI_MakeChamfer::Add: void (const double, const TopoDS_Edge &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@BRepFilletAPI_MakeChamfer#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::BRepFilletAPI_MakeChamfer",
+      "signature": "BRepFilletAPI_MakeChamfer::BRepFilletAPI_MakeChamfer: void (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Build",
+      "signature": "BRepFilletAPI_MakeChamfer::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#d#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Add",
+      "signature": "BRepFilletAPI_MakeFillet::Add: void (const double, const TopoDS_Edge &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@BRepFilletAPI_MakeFillet#&1$@S@TopoDS_Shape#$@E@ChFi3d_FilletShape#",
+      "nativeName": "BRepFilletAPI_MakeFillet::BRepFilletAPI_MakeFillet",
+      "signature": "BRepFilletAPI_MakeFillet::BRepFilletAPI_MakeFillet: void (const TopoDS_Shape &, const ChFi3d_FilletShape)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Build",
+      "signature": "BRepFilletAPI_MakeFillet::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffsetShape@F@BRepOffsetAPI_MakeOffsetShape#",
+      "nativeName": "BRepOffsetAPI_MakeOffsetShape::BRepOffsetAPI_MakeOffsetShape",
+      "signature": "BRepOffsetAPI_MakeOffsetShape::BRepOffsetAPI_MakeOffsetShape: void ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffsetShape@F@PerformByJoin#&1$@S@TopoDS_Shape#d#d#$@E@BRepOffset_Mode#b#b#$@E@GeomAbs_JoinType#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakeOffsetShape::PerformByJoin",
+      "signature": "BRepOffsetAPI_MakeOffsetShape::PerformByJoin: void (const TopoDS_Shape &, const double, const double, const BRepOffset_Mode, const bool, const bool, const GeomAbs_JoinType, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipe@F@BRepOffsetAPI_MakePipe#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipe::BRepOffsetAPI_MakePipe",
+      "signature": "BRepOffsetAPI_MakePipe::BRepOffsetAPI_MakePipe: void (const TopoDS_Wire &, const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipe@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakePipe::Build",
+      "signature": "BRepOffsetAPI_MakePipe::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeThickSolid@F@BRepOffsetAPI_MakeThickSolid#",
+      "nativeName": "BRepOffsetAPI_MakeThickSolid::BRepOffsetAPI_MakeThickSolid",
+      "signature": "BRepOffsetAPI_MakeThickSolid::BRepOffsetAPI_MakeThickSolid: void ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeThickSolid@F@MakeThickSolidByJoin#&1$@S@TopoDS_Shape#&1$@S@NCollection_List>#S1_#d#d#$@E@BRepOffset_Mode#b#b#$@E@GeomAbs_JoinType#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakeThickSolid::MakeThickSolidByJoin",
+      "signature": "BRepOffsetAPI_MakeThickSolid::MakeThickSolidByJoin: void (const TopoDS_Shape &, const NCollection_List<TopoDS_Shape> &, const double, const double, const BRepOffset_Mode, const bool, const bool, const GeomAbs_JoinType, const bool, const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#&1$@S@TopoDS_Wire#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void (const TopoDS_Wire &, const GeomAbs_JoinType, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Perform#d#d#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Perform",
+      "signature": "BRepOffsetAPI_MakeOffset::Perform: void (const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@BRepOffsetAPI_MakePipeShell#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::BRepOffsetAPI_MakePipeShell",
+      "signature": "BRepOffsetAPI_MakePipeShell::BRepOffsetAPI_MakePipeShell: void (const TopoDS_Wire &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Add#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Add",
+      "signature": "BRepOffsetAPI_MakePipeShell::Add: void (const TopoDS_Shape &, const bool, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Build",
+      "signature": "BRepOffsetAPI_MakePipeShell::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@ErrorOnSurface#1",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::ErrorOnSurface",
+      "signature": "BRepOffsetAPI_MakePipeShell::ErrorOnSurface: double () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@GetStatus#1",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::GetStatus",
+      "signature": "BRepOffsetAPI_MakePipeShell::GetStatus: BRepBuilderAPI_PipeError () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@IsReady#1",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::IsReady",
+      "signature": "BRepOffsetAPI_MakePipeShell::IsReady: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@MakeSolid#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::MakeSolid",
+      "signature": "BRepOffsetAPI_MakePipeShell::MakeSolid: bool ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetForceApproxC1#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetForceApproxC1",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetForceApproxC1: void (const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMaxDegree#I#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMaxDegree",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMaxDegree: void (const int)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMaxSegments#I#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMaxSegments",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMaxSegments: void (const int)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetMode: void (const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetTolerance#d#d#d#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetTolerance",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetTolerance: void (const double, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetTransitionMode#$@E@BRepBuilderAPI_TransitionMode#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetTransitionMode",
+      "signature": "BRepOffsetAPI_MakePipeShell::SetTransitionMode: void (const BRepBuilderAPI_TransitionMode)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#d#d#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Add",
+      "signature": "BRepFilletAPI_MakeFillet::Add: void (const double, const double, const TopoDS_Edge &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Generated",
+      "signature": "BRepFilletAPI_MakeFillet::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeFillet::IsDeleted",
+      "signature": "BRepFilletAPI_MakeFillet::IsDeleted: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Modified",
+      "signature": "BRepFilletAPI_MakeFillet::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Add#d#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Add",
+      "signature": "BRepFilletAPI_MakeChamfer::Add: void (const double, const double, const TopoDS_Edge &, const TopoDS_Face &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Generated",
+      "signature": "BRepFilletAPI_MakeChamfer::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::IsDeleted",
+      "signature": "BRepFilletAPI_MakeChamfer::IsDeleted: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Modified",
+      "signature": "BRepFilletAPI_MakeChamfer::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@BRepFilletAPI_MakeFillet2d#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFilletAPI_MakeFillet2d::BRepFilletAPI_MakeFillet2d",
+      "signature": "BRepFilletAPI_MakeFillet2d::BRepFilletAPI_MakeFillet2d: void (const TopoDS_Face &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@AddFillet#&1$@S@TopoDS_Vertex#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet2d::AddFillet",
+      "signature": "BRepFilletAPI_MakeFillet2d::AddFillet: TopoDS_Edge (const TopoDS_Vertex &, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@AddChamfer#&1$@S@TopoDS_Edge#S0_#d#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet2d::AddChamfer",
+      "signature": "BRepFilletAPI_MakeFillet2d::AddChamfer: TopoDS_Edge (const TopoDS_Edge &, const TopoDS_Edge &, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepFilletAPI_MakeFillet2d::Build",
+      "signature": "BRepFilletAPI_MakeFillet2d::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFilletAPI_MakeFillet2d::Modified",
+      "signature": "BRepFilletAPI_MakeFillet2d::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@BRepOffsetAPI_DraftAngle#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_DraftAngle::BRepOffsetAPI_DraftAngle",
+      "signature": "BRepOffsetAPI_DraftAngle::BRepOffsetAPI_DraftAngle: void (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Add#&1$@S@TopoDS_Face#&1$@S@gp_Dir#d#&1$@S@gp_Pln#b#",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Add",
+      "signature": "BRepOffsetAPI_DraftAngle::Add: void (const TopoDS_Face &, const gp_Dir &, const double, const gp_Pln &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@AddDone#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::AddDone",
+      "signature": "BRepOffsetAPI_DraftAngle::AddDone: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Build",
+      "signature": "BRepOffsetAPI_DraftAngle::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Generated",
+      "signature": "BRepOffsetAPI_DraftAngle::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Modified",
+      "signature": "BRepOffsetAPI_DraftAngle::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted",
+      "reason": "Complete existing private builder/caller profile; equivalent native and real consumer validation required."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_Command::IsDone",
+      "signature": "BRepBuilderAPI_Command::IsDone: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Generated",
+      "signature": "BRepBuilderAPI_MakeShape::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::IsDeleted",
+      "signature": "BRepBuilderAPI_MakeShape::IsDeleted: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Modified",
+      "signature": "BRepBuilderAPI_MakeShape::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Shape",
+      "signature": "BRepBuilderAPI_MakeShape::Shape: const TopoDS_Shape &()",
+      "baselineDisposition": "Emitted",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    }
+  ],
+  "generatedSdkDelta": 0,
+  "manualToEmitted": 111,
+  "manualDelta": -111,
+  "affectedGeneratedFiles": [],
+  "callerFiles": [
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/ChamferContours.cpp",
+      "sha256": "EC4EB7FBAEA89A68643C380C94171176FDD11AAB8DCDF991069C01225166F902",
+      "matchedFamilies": [
+        "BRepFilletAPI_MakeChamfer"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Construction.cpp",
+      "sha256": "2EC8679158F59AFA49695A74EB1D0887E38380F581A0539773302BD6E49DD26F",
+      "matchedFamilies": [
+        "BRepOffsetAPI_MakePipe"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/ContourFinishing.cpp",
+      "sha256": "9F438FE39F2FE2C4724B7E45376DA05ECD3A0255A4576287100682A1F6944635",
+      "matchedFamilies": [
+        "BRepFilletAPI_MakeFillet"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Features.cpp",
+      "sha256": "1FF0E42E379B3E4271B6295DCA3D8F79B9C58603BBFFE0E4822C409C24A198A3",
+      "matchedFamilies": [
+        "BRepFilletAPI_MakeChamfer",
+        "BRepFilletAPI_MakeFillet",
+        "BRepFilletAPI_MakeFillet2d",
+        "BRepOffsetAPI_DraftAngle",
+        "BRepOffsetAPI_MakePipe"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Freeform.cpp",
+      "sha256": "38D5ADD33C83009C69835E7E818C6917D384DE7F6D28520BC5A87943EF1E4059",
+      "matchedFamilies": [
+        "BRepOffsetAPI_MakeOffset",
+        "BRepOffsetAPI_MakePipe",
+        "BRepOffsetAPI_MakePipeShell"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/GuidedSweep.cpp",
+      "sha256": "A14E0A7414DDA5E9969CFAF428AAE84AF1E8C101E8B5D4D6C5C0A198481C90FB",
+      "matchedFamilies": [
+        "BRepOffsetAPI_MakePipe",
+        "BRepOffsetAPI_MakePipeShell"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/LocalDraft.cpp",
+      "sha256": "67D22B6243A3E91C4690851CC5BDFB7DBC672702F082539E5CEE8C26C0A7491F",
+      "matchedFamilies": [
+        "BRepOffsetAPI_DraftAngle",
+        "BRepOffsetAPI_MakeDraft"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Operations.cpp",
+      "sha256": "54314ED1DD677872C8AECADA3B53BB7A3C98BE2196BE5CBCC43ADFA6F9E26B69",
+      "matchedFamilies": [
+        "BRepFilletAPI_MakeChamfer",
+        "BRepFilletAPI_MakeFillet",
+        "BRepOffsetAPI_MakeOffset",
+        "BRepOffsetAPI_MakeOffsetShape",
+        "BRepOffsetAPI_MakeThickSolid"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/ContourPrograms.hxx",
+      "sha256": "E98FBADB170042E06ED1657D5CBE14970546922B66943103F702D0C5E43AF866",
+      "reason": "Indirect contour metadata copier requires an equivalent typed receiver without exposing SDK base references."
+    }
+  ],
+  "deferred": [],
+  "boundary": "Existing input isolation is preserved per caller, not newly promised universally. Owning topology values/list containers retain SDK graph identity; no geometry deep copy or persistent naming is implied. Sect handles remain call-private and are copied into existing published circle DTOs before builder closure. Existing law approximation, cornered draft rejection, failure/partial publication and all history availability remain unchanged.",
+  "requiredValidation": [
+    "Exact nine-caller conversion/configuration audit",
+    "Release/Debug native builder equivalence including private lists/sections and invalid profiles",
+    "Existing local-feature/sweep/offset regressions and independent source lifetime",
+    "Shared public module/facade feature-to-STEP/actual Viewer chain",
+    "Complete local binding delivery gates before CA"
+  ]
+}

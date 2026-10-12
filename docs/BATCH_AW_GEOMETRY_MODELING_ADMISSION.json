@@ -1,0 +1,2301 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.46",
+  "inventorySha256": "EB2107A40564C530F5EC35B208EC66FFDBD7ACE7175A91A5D56D6BA0AF8ACF17",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "95675E9FD2C9D87ED1B9C886F602D8683BA3BD9CCEC06DFB7870F0683503857C",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "signature": "BRep_Builder::MakeEdge: void (TopoDS_Edge &, const occ::handle<Geom_Curve> &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeVertex#&$@S@TopoDS_Vertex#&1$@S@gp_Pnt#d#1",
+      "nativeName": "BRep_Builder::MakeVertex",
+      "signature": "BRep_Builder::MakeVertex: void (TopoDS_Vertex &, const gp_Pnt &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeVertex#&$@S@TopoDS_Vertex#1",
+      "nativeName": "BRep_Builder::MakeVertex",
+      "signature": "BRep_Builder::MakeVertex: void (TopoDS_Vertex &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Range#&1$@S@TopoDS_Edge#d#d#b#1",
+      "nativeName": "BRep_Builder::Range",
+      "signature": "BRep_Builder::Range: void (const TopoDS_Edge &, const double, const double, const bool) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@SameParameter#&1$@S@TopoDS_Edge#b#1",
+      "nativeName": "BRep_Builder::SameParameter",
+      "signature": "BRep_Builder::SameParameter: void (const TopoDS_Edge &, const bool) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@SameRange#&1$@S@TopoDS_Edge#b#1",
+      "nativeName": "BRep_Builder::SameRange",
+      "signature": "BRep_Builder::SameRange: void (const TopoDS_Edge &, const bool) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#&1$@S@gp_Pnt#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const gp_Pnt &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#&1$@S@TopoDS_Edge#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const double, const TopoDS_Edge &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S5_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Continuity#1",
+      "nativeName": "GeomFill_AppSurf::Continuity",
+      "signature": "GeomFill_AppSurf::Continuity: GeomAbs_Shape () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@CriteriumWeight#&d#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSurf::CriteriumWeight",
+      "signature": "GeomFill_AppSurf::CriteriumWeight: void (double &, double &, double &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@GeomFill_AppSurf#",
+      "nativeName": "GeomFill_AppSurf::GeomFill_AppSurf",
+      "signature": "GeomFill_AppSurf::GeomFill_AppSurf: void ()",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Init#I#I#d#d#I#b#",
+      "nativeName": "GeomFill_AppSurf::Init",
+      "signature": "GeomFill_AppSurf::Init: void (const int, const int, const double, const double, const int, const bool)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@IsDone#1",
+      "nativeName": "GeomFill_AppSurf::IsDone",
+      "signature": "GeomFill_AppSurf::IsDone: bool () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@ParType#1",
+      "nativeName": "GeomFill_AppSurf::ParType",
+      "signature": "GeomFill_AppSurf::ParType: Approx_ParametrizationType () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#I#",
+      "nativeName": "GeomFill_AppSurf::Perform",
+      "signature": "GeomFill_AppSurf::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &, const int)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#b#",
+      "nativeName": "GeomFill_AppSurf::Perform",
+      "signature": "GeomFill_AppSurf::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &, const bool)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@PerformSmoothing#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_AppSurf::PerformSmoothing",
+      "signature": "GeomFill_AppSurf::PerformSmoothing: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetContinuity#$@E@GeomAbs_Shape#",
+      "nativeName": "GeomFill_AppSurf::SetContinuity",
+      "signature": "GeomFill_AppSurf::SetContinuity: void (const GeomAbs_Shape)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetCriteriumWeight#d#d#d#",
+      "nativeName": "GeomFill_AppSurf::SetCriteriumWeight",
+      "signature": "GeomFill_AppSurf::SetCriteriumWeight: void (const double, const double, const double)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetParType#$@E@Approx_ParametrizationType#",
+      "nativeName": "GeomFill_AppSurf::SetParType",
+      "signature": "GeomFill_AppSurf::SetParType: void (const Approx_ParametrizationType)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfPoles#1",
+      "nativeName": "GeomFill_AppSurf::SurfPoles",
+      "signature": "GeomFill_AppSurf::SurfPoles: const NCollection_Array2<gp_Pnt> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfShape#&I#S0_#S0_#S0_#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSurf::SurfShape",
+      "signature": "GeomFill_AppSurf::SurfShape: void (int &, int &, int &, int &, int &, int &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfUKnots#1",
+      "nativeName": "GeomFill_AppSurf::SurfUKnots",
+      "signature": "GeomFill_AppSurf::SurfUKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfUMults#1",
+      "nativeName": "GeomFill_AppSurf::SurfUMults",
+      "signature": "GeomFill_AppSurf::SurfUMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfVKnots#1",
+      "nativeName": "GeomFill_AppSurf::SurfVKnots",
+      "signature": "GeomFill_AppSurf::SurfVKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfVMults#1",
+      "nativeName": "GeomFill_AppSurf::SurfVMults",
+      "signature": "GeomFill_AppSurf::SurfVMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfWeights#1",
+      "nativeName": "GeomFill_AppSurf::SurfWeights",
+      "signature": "GeomFill_AppSurf::SurfWeights: const NCollection_Array2<double> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Surface#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&$@S@NCollection_Array1>#d#S5_#&$@S@NCollection_Array1>#I#S7_#1",
+      "nativeName": "GeomFill_AppSurf::Surface",
+      "signature": "GeomFill_AppSurf::Surface: void (NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<int> &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@TolReached#&d#S0_#1",
+      "nativeName": "GeomFill_AppSurf::TolReached",
+      "signature": "GeomFill_AppSurf::TolReached: void (double &, double &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@UDegree#1",
+      "nativeName": "GeomFill_AppSurf::UDegree",
+      "signature": "GeomFill_AppSurf::UDegree: int () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@VDegree#1",
+      "nativeName": "GeomFill_AppSurf::VDegree",
+      "signature": "GeomFill_AppSurf::VDegree: int () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@BRep_Builder#&&$@S@BRep_Builder#",
+      "nativeName": "BRep_Builder::BRep_Builder",
+      "signature": "BRep_Builder::BRep_Builder: void (BRep_Builder &&)",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@BRep_Builder#&1$@S@BRep_Builder#",
+      "nativeName": "BRep_Builder::BRep_Builder",
+      "signature": "BRep_Builder::BRep_Builder: void (const BRep_Builder &)",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Continuity#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S2_#&1$@S@TopLoc_Location#S5_#$@E@GeomAbs_Shape#1",
+      "nativeName": "BRep_Builder::Continuity",
+      "signature": "BRep_Builder::Continuity: void (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const TopLoc_Location &, const GeomAbs_Shape) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Continuity#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#S2_#$@E@GeomAbs_Shape#1",
+      "nativeName": "BRep_Builder::Continuity",
+      "signature": "BRep_Builder::Continuity: void (const TopoDS_Edge &, const TopoDS_Face &, const TopoDS_Face &, const GeomAbs_Shape) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "signature": "BRep_Builder::MakeEdge: void (TopoDS_Edge &, const occ::handle<Geom_Curve> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "signature": "BRep_Builder::MakeEdge: void (TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "signature": "BRep_Builder::MakeEdge: void (TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::MakeFace",
+      "signature": "BRep_Builder::MakeFace: void (TopoDS_Face &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#1",
+      "nativeName": "BRep_Builder::MakeFace",
+      "signature": "BRep_Builder::MakeFace: void (TopoDS_Face &, const occ::handle<Geom_Surface> &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@S@NCollection_List>#$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1S4_#1",
+      "nativeName": "BRep_Builder::MakeFace",
+      "signature": "BRep_Builder::MakeFace: void (TopoDS_Face &, const NCollection_List<occ::handle<Poly_Triangulation>> &, const occ::handle<Poly_Triangulation> &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#1",
+      "nativeName": "BRep_Builder::MakeFace",
+      "signature": "BRep_Builder::MakeFace: void (TopoDS_Face &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@NaturalRestriction#&1$@S@TopoDS_Face#b#1",
+      "nativeName": "BRep_Builder::NaturalRestriction",
+      "signature": "BRep_Builder::NaturalRestriction: void (const TopoDS_Face &, const bool) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Range#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#d#1",
+      "nativeName": "BRep_Builder::Range",
+      "signature": "BRep_Builder::Range: void (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Range#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#d#d#1",
+      "nativeName": "BRep_Builder::Range",
+      "signature": "BRep_Builder::Range: void (const TopoDS_Edge &, const TopoDS_Face &, const double, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Transfert#&1$@S@TopoDS_Edge#S0_#&1$@S@TopoDS_Vertex#S2_#1",
+      "nativeName": "BRep_Builder::Transfert",
+      "signature": "BRep_Builder::Transfert: void (const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Vertex &, const TopoDS_Vertex &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Transfert#&1$@S@TopoDS_Edge#S0_#1",
+      "nativeName": "BRep_Builder::Transfert",
+      "signature": "BRep_Builder::Transfert: void (const TopoDS_Edge &, const TopoDS_Edge &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#&1$@S@gp_Pnt2d#S10_#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double, const gp_Pnt2d &, const gp_Pnt2d &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@TopoDS_Face#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const TopoDS_Face &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S2_#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#&1$@S@gp_Pnt2d#S10_#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double, const gp_Pnt2d &, const gp_Pnt2d &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S2_#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S2_#&1$@S@TopoDS_Face#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const TopoDS_Face &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Geom_Curve> &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon2D#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon2D> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon2D#&1$@S@TopoDS_Face#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon2D> &, const TopoDS_Face &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon2D#S2_#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon2D> &, const occ::handle<Poly_Polygon2D> &, const occ::handle<Geom_Surface> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon2D#S2_#&1$@S@TopoDS_Face#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon2D> &, const occ::handle<Poly_Polygon2D> &, const TopoDS_Face &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon3D> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon3D> &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#S2_#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#S2_#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::UpdateFace",
+      "signature": "BRep_Builder::UpdateFace: void (const TopoDS_Face &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateFace#&1$@S@TopoDS_Face#d#1",
+      "nativeName": "BRep_Builder::UpdateFace",
+      "signature": "BRep_Builder::UpdateFace: void (const TopoDS_Face &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const double, const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const double, const TopoDS_Edge &, const TopoDS_Face &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#d#&1$@S@TopoDS_Face#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const double, const double, const TopoDS_Face &, const double) const",
+      "header": "BRep_Builder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateAssembly",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@AntiBoorScheme#d#I#&d#I#S0_#I#I#d#S",
+      "nativeName": "BSplCLib::AntiBoorScheme",
+      "signature": "BSplCLib::AntiBoorScheme: bool (const double, const int, double &, const int, double &, const int, const int, const double)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Bohm#d#I#I#&d#I#S0_#S",
+      "nativeName": "BSplCLib::Bohm",
+      "signature": "BSplCLib::Bohm: void (const double, const int, const int, double &, const int, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BoorScheme#d#I#&d#I#S0_#I#I#S",
+      "nativeName": "BSplCLib::BoorScheme",
+      "signature": "BSplCLib::BoorScheme: void (const double, const int, double &, const int, double &, const int, const int)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBoor#I#I#I#&1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildBoor",
+      "signature": "BSplCLib::BuildBoor: void (const int, const int, const int, const NCollection_Array1<double> &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#d#*1S1_#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildKnots#I#I#b#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::BuildKnots",
+      "signature": "BSplCLib::BuildKnots: void (const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec2d &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Derivative#I#&d#I#I#I#S0_#S",
+      "nativeName": "BSplCLib::Derivative",
+      "signature": "BSplCLib::Derivative: void (const int, double &, const int, const int, const int, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#I#&d#I#S0_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const int, double &, const int, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S3_#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@GetPole#I#I#I#I#&d#&I#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::GetPole",
+      "signature": "BSplCLib::GetPole: void (const int, const int, const int, const int, double &, int &, NCollection_Array1<double> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&S1_#S5_#&S3_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#S4_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, double &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Intervals#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#I#d#d#d#*S1_#S",
+      "nativeName": "BSplCLib::Intervals",
+      "signature": "BSplCLib::Intervals: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, int, bool, int, double, double, double, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool, const int, const int, int &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#d#b#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const double, const bool, int &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const double, const bool, const int, const int, int &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MergeBSplineKnots#d#d#d#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#S0_#S2_#&I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#S",
+      "nativeName": "BSplCLib::MergeBSplineKnots",
+      "signature": "BSplCLib::MergeBSplineKnots: void (const double, const double, const double, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, int &, occ::handle<NCollection_HArray1<double>> &, occ::handle<NCollection_HArray1<int>> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec &, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec2d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec2d &, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt2d> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec &, const gp_Vec &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec2d#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec2d &, const gp_Vec2d &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#I#&d#S0_#d#I#I#I#S0_#*1$@S@NCollection_Array1>#d#&1S2_#S0_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const int, double &, double &, const double, const int, const int, const int, double &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, double &, int &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoMults#S",
+      "nativeName": "BSplCLib::NoMults",
+      "signature": "BSplCLib::NoMults: NCollection_Array1<int> *()",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoWeights#S",
+      "nativeName": "BSplCLib::NoWeights",
+      "signature": "BSplCLib::NoWeights: NCollection_Array1<double> *()",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareInsertKnots#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&I#S5_#d#b#S",
+      "nativeName": "BSplCLib::PrepareInsertKnots",
+      "signature": "BSplCLib::PrepareInsertKnots: bool (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, int &, int &, const double, const bool)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&d#I#I#*1$@S@NCollection_Array1>#d#&1S2_#I#d#S0_#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (double &, const int, const int, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const int, const double, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#I#&d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const int, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#I#&d#S2_#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, const int, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@TangExtendToConstraint#&1$@S@NCollection_Array1>#d#d#I#&d#I#I#S0_#I#b#&I#S3_#S2_#S2_#S",
+      "nativeName": "BSplCLib::TangExtendToConstraint",
+      "signature": "BSplCLib::TangExtendToConstraint: void (const NCollection_Array1<double> &, const double, const int, double &, const int, const int, const NCollection_Array1<double> &, const int, const bool, int &, int &, double &, double &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#d#d#&S1_#&S3_#S4_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@UnitWeightsData#S",
+      "nativeName": "BSplCLib::UnitWeightsData",
+      "signature": "BSplCLib::UnitWeightsData: const double *()",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#S2_#&S1_#&S3_#S5_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &)",
+      "header": "BSplCLib.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curve2d#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "GeomFill_AppSurf::Curve2d",
+      "signature": "GeomFill_AppSurf::Curve2d: void (const int, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &, NCollection_Array1<int> &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curve2dPoles#I#1",
+      "nativeName": "GeomFill_AppSurf::Curve2dPoles",
+      "signature": "GeomFill_AppSurf::Curve2dPoles: const NCollection_Array1<gp_Pnt2d> &(const int) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curves2dDegree#1",
+      "nativeName": "GeomFill_AppSurf::Curves2dDegree",
+      "signature": "GeomFill_AppSurf::Curves2dDegree: int () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curves2dKnots#1",
+      "nativeName": "GeomFill_AppSurf::Curves2dKnots",
+      "signature": "GeomFill_AppSurf::Curves2dKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curves2dMults#1",
+      "nativeName": "GeomFill_AppSurf::Curves2dMults",
+      "signature": "GeomFill_AppSurf::Curves2dMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Curves2dShape#&I#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSurf::Curves2dShape",
+      "signature": "GeomFill_AppSurf::Curves2dShape: void (int &, int &, int &) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@GeomFill_AppSurf#&&$@S@GeomFill_AppSurf#",
+      "nativeName": "GeomFill_AppSurf::GeomFill_AppSurf",
+      "signature": "GeomFill_AppSurf::GeomFill_AppSurf: void (GeomFill_AppSurf &&)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@GeomFill_AppSurf#&1$@S@GeomFill_AppSurf#",
+      "nativeName": "GeomFill_AppSurf::GeomFill_AppSurf",
+      "signature": "GeomFill_AppSurf::GeomFill_AppSurf: void (const GeomFill_AppSurf &)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@GeomFill_AppSurf#I#I#d#d#I#b#",
+      "nativeName": "GeomFill_AppSurf::GeomFill_AppSurf",
+      "signature": "GeomFill_AppSurf::GeomFill_AppSurf: void (const int, const int, const double, const double, const int, const bool)",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@NbCurves2d#1",
+      "nativeName": "GeomFill_AppSurf::NbCurves2d",
+      "signature": "GeomFill_AppSurf::NbCurves2d: int () const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@TolCurveOnSurf#I#1",
+      "nativeName": "GeomFill_AppSurf::TolCurveOnSurf",
+      "signature": "GeomFill_AppSurf::TolCurveOnSurf: double (const int) const",
+      "header": "GeomFill_AppSurf.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Unsafe raw scratch buffers, callback/global ownership, unproved representations, borrowed mutable topology, redundant overload or unsupported 2D filling channels remain deferred."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Continuity#1",
+      "nativeName": "GeomFill_AppSweep::Continuity",
+      "signature": "GeomFill_AppSweep::Continuity: GeomAbs_Shape () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@CriteriumWeight#&d#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSweep::CriteriumWeight",
+      "signature": "GeomFill_AppSweep::CriteriumWeight: void (double &, double &, double &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curve2d#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "GeomFill_AppSweep::Curve2d",
+      "signature": "GeomFill_AppSweep::Curve2d: void (const int, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &, NCollection_Array1<int> &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curve2dPoles#I#1",
+      "nativeName": "GeomFill_AppSweep::Curve2dPoles",
+      "signature": "GeomFill_AppSweep::Curve2dPoles: const NCollection_Array1<gp_Pnt2d> &(const int) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curves2dDegree#1",
+      "nativeName": "GeomFill_AppSweep::Curves2dDegree",
+      "signature": "GeomFill_AppSweep::Curves2dDegree: int () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curves2dKnots#1",
+      "nativeName": "GeomFill_AppSweep::Curves2dKnots",
+      "signature": "GeomFill_AppSweep::Curves2dKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curves2dMults#1",
+      "nativeName": "GeomFill_AppSweep::Curves2dMults",
+      "signature": "GeomFill_AppSweep::Curves2dMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Curves2dShape#&I#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSweep::Curves2dShape",
+      "signature": "GeomFill_AppSweep::Curves2dShape: void (int &, int &, int &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@GeomFill_AppSweep#",
+      "nativeName": "GeomFill_AppSweep::GeomFill_AppSweep",
+      "signature": "GeomFill_AppSweep::GeomFill_AppSweep: void ()",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@GeomFill_AppSweep#&&$@S@GeomFill_AppSweep#",
+      "nativeName": "GeomFill_AppSweep::GeomFill_AppSweep",
+      "signature": "GeomFill_AppSweep::GeomFill_AppSweep: void (GeomFill_AppSweep &&)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@GeomFill_AppSweep#&1$@S@GeomFill_AppSweep#",
+      "nativeName": "GeomFill_AppSweep::GeomFill_AppSweep",
+      "signature": "GeomFill_AppSweep::GeomFill_AppSweep: void (const GeomFill_AppSweep &)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@GeomFill_AppSweep#I#I#d#d#I#b#",
+      "nativeName": "GeomFill_AppSweep::GeomFill_AppSweep",
+      "signature": "GeomFill_AppSweep::GeomFill_AppSweep: void (const int, const int, const double, const double, const int, const bool)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Init#I#I#d#d#I#b#",
+      "nativeName": "GeomFill_AppSweep::Init",
+      "signature": "GeomFill_AppSweep::Init: void (const int, const int, const double, const double, const int, const bool)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@IsDone#1",
+      "nativeName": "GeomFill_AppSweep::IsDone",
+      "signature": "GeomFill_AppSweep::IsDone: bool () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@NbCurves2d#1",
+      "nativeName": "GeomFill_AppSweep::NbCurves2d",
+      "signature": "GeomFill_AppSweep::NbCurves2d: int () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@ParType#1",
+      "nativeName": "GeomFill_AppSweep::ParType",
+      "signature": "GeomFill_AppSweep::ParType: Approx_ParametrizationType () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SweepSectionGenerator#I#",
+      "nativeName": "GeomFill_AppSweep::Perform",
+      "signature": "GeomFill_AppSweep::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SweepSectionGenerator &, const int)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SweepSectionGenerator#b#",
+      "nativeName": "GeomFill_AppSweep::Perform",
+      "signature": "GeomFill_AppSweep::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SweepSectionGenerator &, const bool)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@PerformSmoothing#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SweepSectionGenerator#",
+      "nativeName": "GeomFill_AppSweep::PerformSmoothing",
+      "signature": "GeomFill_AppSweep::PerformSmoothing: void (const occ::handle<GeomFill_Line> &, GeomFill_SweepSectionGenerator &)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SetContinuity#$@E@GeomAbs_Shape#",
+      "nativeName": "GeomFill_AppSweep::SetContinuity",
+      "signature": "GeomFill_AppSweep::SetContinuity: void (const GeomAbs_Shape)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SetCriteriumWeight#d#d#d#",
+      "nativeName": "GeomFill_AppSweep::SetCriteriumWeight",
+      "signature": "GeomFill_AppSweep::SetCriteriumWeight: void (const double, const double, const double)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SetParType#$@E@Approx_ParametrizationType#",
+      "nativeName": "GeomFill_AppSweep::SetParType",
+      "signature": "GeomFill_AppSweep::SetParType: void (const Approx_ParametrizationType)",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfPoles#1",
+      "nativeName": "GeomFill_AppSweep::SurfPoles",
+      "signature": "GeomFill_AppSweep::SurfPoles: const NCollection_Array2<gp_Pnt> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfShape#&I#S0_#S0_#S0_#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSweep::SurfShape",
+      "signature": "GeomFill_AppSweep::SurfShape: void (int &, int &, int &, int &, int &, int &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfUKnots#1",
+      "nativeName": "GeomFill_AppSweep::SurfUKnots",
+      "signature": "GeomFill_AppSweep::SurfUKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfUMults#1",
+      "nativeName": "GeomFill_AppSweep::SurfUMults",
+      "signature": "GeomFill_AppSweep::SurfUMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfVKnots#1",
+      "nativeName": "GeomFill_AppSweep::SurfVKnots",
+      "signature": "GeomFill_AppSweep::SurfVKnots: const NCollection_Array1<double> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfVMults#1",
+      "nativeName": "GeomFill_AppSweep::SurfVMults",
+      "signature": "GeomFill_AppSweep::SurfVMults: const NCollection_Array1<int> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@SurfWeights#1",
+      "nativeName": "GeomFill_AppSweep::SurfWeights",
+      "signature": "GeomFill_AppSweep::SurfWeights: const NCollection_Array2<double> &() const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@Surface#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&$@S@NCollection_Array1>#d#S5_#&$@S@NCollection_Array1>#I#S7_#1",
+      "nativeName": "GeomFill_AppSweep::Surface",
+      "signature": "GeomFill_AppSweep::Surface: void (NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<int> &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@TolCurveOnSurf#I#1",
+      "nativeName": "GeomFill_AppSweep::TolCurveOnSurf",
+      "signature": "GeomFill_AppSweep::TolCurveOnSurf: double (const int) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@TolReached#&d#S0_#1",
+      "nativeName": "GeomFill_AppSweep::TolReached",
+      "signature": "GeomFill_AppSweep::TolReached: void (double &, double &) const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@UDegree#1",
+      "nativeName": "GeomFill_AppSweep::UDegree",
+      "signature": "GeomFill_AppSweep::UDegree: int () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSweep@F@VDegree#1",
+      "nativeName": "GeomFill_AppSweep::VDegree",
+      "signature": "GeomFill_AppSweep::VDegree: int () const",
+      "header": "GeomFill_AppSweep.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AWPrivateGeometry",
+      "reason": "Upstream SweepSectionGenerator transform assignment is absent on ordinary tangent branches. Actual straight-path sweep fails three modes and the completing mode degenerates; receiver deferred. Bounded private circular sections use AppSurf instead."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_SectionGenerator::GeomFill_SectionGenerator",
+      "signature": "GeomFill_SectionGenerator::GeomFill_SectionGenerator: void ()",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@GeomFill_SectionGenerator#&1$@S@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_SectionGenerator::GeomFill_SectionGenerator",
+      "signature": "GeomFill_SectionGenerator::GeomFill_SectionGenerator: void (const GeomFill_SectionGenerator &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@SetParam#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "GeomFill_SectionGenerator::SetParam",
+      "signature": "GeomFill_SectionGenerator::SetParam: void (const occ::handle<NCollection_HArray1<double>> &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Weights#1",
+      "nativeName": "Geom_BSplineCurve::Weights",
+      "signature": "Geom_BSplineCurve::Weights: const NCollection_Array1<double> *() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Blocked"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool () const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@CurveToBSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#$@E@Convert_ParameterisationType#S",
+      "nativeName": "GeomConvert::CurveToBSplineCurve",
+      "signature": "GeomConvert::CurveToBSplineCurve: occ::handle<Geom_BSplineCurve> (const occ::handle<Geom_Curve> &, const Convert_ParameterisationType)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@GeomFill_Line@F@GeomFill_Line#I#",
+      "nativeName": "GeomFill_Line::GeomFill_Line",
+      "signature": "GeomFill_Line::GeomFill_Line: void (const int)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomFill_Line@F@NbPoints#1",
+      "nativeName": "GeomFill_Line::NbPoints",
+      "signature": "GeomFill_Line::NbPoints: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomFill_Profiler@F@AddCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "GeomFill_Profiler::AddCurve",
+      "signature": "GeomFill_Profiler::AddCurve: void (const occ::handle<Geom_Curve> &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomFill_Profiler@F@Perform#d#",
+      "nativeName": "GeomFill_Profiler::Perform",
+      "signature": "GeomFill_Profiler::Perform: void (const double)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Copy#1",
+      "nativeName": "Geom_BSplineCurve::Copy",
+      "signature": "Geom_BSplineCurve::Copy: occ::handle<Geom_Geometry> () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Degree#1",
+      "nativeName": "Geom_BSplineCurve::Degree",
+      "signature": "Geom_BSplineCurve::Degree: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@FirstParameter#1",
+      "nativeName": "Geom_BSplineCurve::FirstParameter",
+      "signature": "Geom_BSplineCurve::FirstParameter: double () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@IsPeriodic#1",
+      "nativeName": "Geom_BSplineCurve::IsPeriodic",
+      "signature": "Geom_BSplineCurve::IsPeriodic: bool () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Knots#1",
+      "nativeName": "Geom_BSplineCurve::Knots",
+      "signature": "Geom_BSplineCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@LastParameter#1",
+      "nativeName": "Geom_BSplineCurve::LastParameter",
+      "signature": "Geom_BSplineCurve::LastParameter: double () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Multiplicities#1",
+      "nativeName": "Geom_BSplineCurve::Multiplicities",
+      "signature": "Geom_BSplineCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@NbKnots#1",
+      "nativeName": "Geom_BSplineCurve::NbKnots",
+      "signature": "Geom_BSplineCurve::NbKnots: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@NbPoles#1",
+      "nativeName": "Geom_BSplineCurve::NbPoles",
+      "signature": "Geom_BSplineCurve::NbPoles: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Poles#1",
+      "nativeName": "Geom_BSplineCurve::Poles",
+      "signature": "Geom_BSplineCurve::Poles: const NCollection_Array1<gp_Pnt> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Copy#1",
+      "nativeName": "Geom_BSplineSurface::Copy",
+      "signature": "Geom_BSplineSurface::Copy: occ::handle<Geom_Geometry> () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#",
+      "nativeName": "Geom_BSplineSurface::Geom_BSplineSurface",
+      "signature": "Geom_BSplineSurface::Geom_BSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Geom_Circle@F@Geom_Circle#&1$@S@gp_Ax2#d#",
+      "nativeName": "Geom_Circle::Geom_Circle",
+      "signature": "Geom_Circle::Geom_Circle: void (const gp_Ax2 &, const double)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_TrimmedCurve@F@Geom_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#b#b#",
+      "nativeName": "Geom_TrimmedCurve::Geom_TrimmedCurve",
+      "signature": "Geom_TrimmedCurve::Geom_TrimmedCurve: void (const occ::handle<Geom_Curve> &, const double, const double, const bool, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TopoDS_Builder@F@Add#&$@S@TopoDS_Shape#&1S1_#1",
+      "nativeName": "TopoDS_Builder::Add",
+      "signature": "TopoDS_Builder::Add: void (TopoDS_Shape &, const TopoDS_Shape &) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes.",
+      "baselineDisposition": "Manual"
+    }
+  ]
+}

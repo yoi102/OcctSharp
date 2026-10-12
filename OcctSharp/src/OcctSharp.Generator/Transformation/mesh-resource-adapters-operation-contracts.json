@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Image_Texture@F@FilePath#1",
+      "nativeName": "Image_Texture::FilePath",
+      "signature": "Image_Texture::FilePath: const TCollection_AsciiString &() const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@ChangeData#",
+      "nativeName": "NCollection_Buffer::ChangeData",
+      "signature": "NCollection_Buffer::ChangeData: uint8_t *() noexcept",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@Image_Texture#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#&1$@S@TCollection_AsciiString#",
+      "nativeName": "Image_Texture::Image_Texture",
+      "signature": "Image_Texture::Image_Texture: void (const occ::handle<NCollection_Buffer> &, const TCollection_AsciiString &)",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@NCollection_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#k#*c#",
+      "nativeName": "NCollection_Buffer::NCollection_Buffer",
+      "signature": "NCollection_Buffer::NCollection_Buffer: void (const occ::handle<NCollection_BaseAllocator> &, const size_t, uint8_t *)",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Image_Texture@F@DataBuffer#1",
+      "nativeName": "Image_Texture::DataBuffer",
+      "signature": "Image_Texture::DataBuffer: const occ::handle<NCollection_Buffer> &() const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@FileLength#1",
+      "nativeName": "Image_Texture::FileLength",
+      "signature": "Image_Texture::FileLength: int64_t () const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@FileOffset#1",
+      "nativeName": "Image_Texture::FileOffset",
+      "signature": "Image_Texture::FileOffset: int64_t () const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1",
+      "nativeName": "Image_Texture::ReadImage",
+      "signature": "Image_Texture::ReadImage: occ::handle<Image_PixMap> (const occ::handle<Image_SupportedFormats> &) const",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    },
+    {
+      "stableId": "c:@S@NCollection_Buffer@F@Size#1",
+      "nativeName": "NCollection_Buffer::Size",
+      "signature": "NCollection_Buffer::Size: size_t () const noexcept",
+      "guard": "CEOwnedEncodedTexture",
+      "reason": "Private copied SDK buffer and image construction; exact buffer capacity, decoded pixel budget, local-resource graph and material-held native lifetime validated before unpublished document ownership is returned."
+    }
+  ]
+}

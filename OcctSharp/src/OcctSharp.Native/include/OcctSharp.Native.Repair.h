@@ -49,6 +49,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_topology(
   const OcctSharp_ShapeHandle* source, OcctSharp_RepairTopology* output, int32_t capacity, int32_t* count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_subshape(
   const OcctSharp_ShapeHandle* source, int32_t index, OcctSharp_ShapeHandle** output);
+/* Returns -1 when selected is not a subshape of source. Index is zero-based in
+   the same TopExp::MapShapes order as repair_topology, before any deep copy. */
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_find_topology_index(
+  const OcctSharp_ShapeHandle* source, const OcctSharp_ShapeHandle* selected, int32_t* index);
+/* Matches the underlying TShape when Viewer has changed only the location or orientation.
+   Returns -1 for a foreign shape or when more than one source slot shares that TShape. */
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_find_topology_partner_index(
+  const OcctSharp_ShapeHandle* source, const OcctSharp_ShapeHandle* selected, int32_t* index);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_inspect(
   const OcctSharp_ShapeHandle* source, const OcctSharp_RepairInspectionOptions* options,
   OcctSharp_RepairMetrics* metrics, OcctSharp_RepairFinding* findings, int32_t capacity, int32_t* count);

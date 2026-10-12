@@ -1,0 +1,13 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.ExtremaResults;
+#pragma warning disable CS1591
+/// <summary>Modeling adapter that supplies independent edge geometry for the Geometry extrema module.</summary>
+public static partial class FiniteExtremaGeometry {
+ static FiniteExtremaGeometry()=>NativeLibraryResolver.EnsureRegistered(typeof(FiniteExtremaGeometry).Assembly);
+ /// <summary>Independent 3D edge geometry with the native location applied; this does not infer topology history.</summary>
+ public static GeomCurve CopyCurve(Shape edge){ArgumentNullException.ThrowIfNull(edge);NativeError.ThrowIfFailed(CopyCurveNative(edge.Handle,out nint value),"finite_extrema_copy_curve");return GeomCurve.FromNative(value,"finite_extrema_copy_curve")??throw new InvalidDataException("Null edge curve.");}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_finite_extrema_copy_curve")]private static partial NativeStatus CopyCurveNative(ShapeHandle source,out nint result);
+}

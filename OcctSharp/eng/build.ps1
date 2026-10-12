@@ -96,6 +96,9 @@ try {
     & dotnet restore .\OcctSharp.slnx
     if ($LASTEXITCODE -ne 0) { throw "dotnet restore failed with exit code $LASTEXITCODE." }
 
+    . (Join-Path $PSScriptRoot 'workspace-lock.ps1')
+    $nativeLock = Enter-OcctSharpWorkspaceLock -WorkspaceRoot $workspaceRoot -Scope native
+    try {
     & dotnet build .\src\OcctSharp.Generator\OcctSharp.Generator.csproj --no-restore --configuration $Configuration
     if ($LASTEXITCODE -ne 0) { throw "Generator bootstrap build failed with exit code $LASTEXITCODE." }
 
@@ -134,8 +137,12 @@ try {
     $buildPreset = $Configuration.ToLowerInvariant()
     & $cmake --build --preset $buildPreset
     if ($LASTEXITCODE -ne 0) { throw "CMake build failed with exit code $LASTEXITCODE." }
+    }
+    finally { Exit-OcctSharpWorkspaceLock -Lock $nativeLock }
 
-    & dotnet build .\OcctSharp.slnx --no-restore --configuration $Configuration
+    # Exercise the bridge built above, including development exports absent from the committed bundle.
+    & dotnet build .\OcctSharp.slnx --no-restore --configuration $Configuration `
+        -p:OcctSharpUseBundledNativeRuntime=false
     if ($LASTEXITCODE -ne 0) { throw "dotnet build failed with exit code $LASTEXITCODE." }
 
     & .\eng\generate-type-forwarders.ps1 -Configuration $Configuration -Check -SkipBuild
@@ -175,7 +182,8 @@ try {
 
     if (-not $SkipTests) {
         & .\eng\test-native-source-layout.ps1
-        & dotnet test .\OcctSharp.slnx --no-build --configuration $Configuration
+        & dotnet test .\OcctSharp.slnx --no-build --configuration $Configuration `
+            -p:OcctSharpUseBundledNativeRuntime=false
         if ($LASTEXITCODE -ne 0) { throw "dotnet test failed with exit code $LASTEXITCODE." }
     }
 

@@ -1,0 +1,2048 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.53",
+  "inventorySha256": "303BC565EF3876EF7349460180C40AC3570C43751EB217870735D56C28C4B07B",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "9F34E05970688D7496AC8F43FF1A906CEF7426B61DBD7BB387976B8824D880E4",
+  "declarations": [
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GetShapeFixParameters#1",
+      "nativeName": "XSControl_Reader::GetShapeFixParameters",
+      "signature": "XSControl_Reader::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "XSControl_Reader::NbRootsForTransfer",
+      "signature": "XSControl_Reader::NbRootsForTransfer: int ()",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@RootForTransfer#I#",
+      "nativeName": "XSControl_Reader::RootForTransfer",
+      "signature": "XSControl_Reader::RootForTransfer: occ::handle<Standard_Transient> (const int)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetNorm#*1C#",
+      "nativeName": "XSControl_Reader::SetNorm",
+      "signature": "XSControl_Reader::SetNorm: bool (const char *const)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "XSControl_Reader::SetShapeFixParameters",
+      "signature": "XSControl_Reader::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Shape#I#1",
+      "nativeName": "XSControl_Reader::Shape",
+      "signature": "XSControl_Reader::Shape: TopoDS_Shape (const int) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferEntity",
+      "signature": "XSControl_Reader::TransferEntity: bool (const occ::handle<Standard_Transient> &, const Message_ProgressRange &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferOne#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferOne",
+      "signature": "XSControl_Reader::TransferOne: bool (const int, const Message_ProgressRange &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferOneRoot#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferOneRoot",
+      "signature": "XSControl_Reader::TransferOneRoot: bool (const int, const Message_ProgressRange &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@XSControl_Reader#",
+      "nativeName": "XSControl_Reader::XSControl_Reader",
+      "signature": "XSControl_Reader::XSControl_Reader: void ()",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@ChangePriority#&1$@S@NCollection_List>#$@S@TCollection_AsciiString#b#",
+      "nativeName": "DE_Wrapper::ChangePriority",
+      "signature": "DE_Wrapper::ChangePriority: void (const NCollection_List<TCollection_AsciiString> &, const bool)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@ChangePriority#&1$@S@TCollection_AsciiString#&1$@S@NCollection_List>#S1_#b#",
+      "nativeName": "DE_Wrapper::ChangePriority",
+      "signature": "DE_Wrapper::ChangePriority: void (const TCollection_AsciiString &, const NCollection_List<TCollection_AsciiString> &, const bool)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@DE_Wrapper#&&$@S@DE_Wrapper#",
+      "nativeName": "DE_Wrapper::DE_Wrapper",
+      "signature": "DE_Wrapper::DE_Wrapper: void (DE_Wrapper &&)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@DE_Wrapper#&1$@S@DE_Wrapper#",
+      "nativeName": "DE_Wrapper::DE_Wrapper",
+      "signature": "DE_Wrapper::DE_Wrapper: void (const DE_Wrapper &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Find#&1$@S@TCollection_AsciiString#S0_#&$@N@opencascade@S@handle>#$@S@DE_ConfigurationNode#1",
+      "nativeName": "DE_Wrapper::Find",
+      "signature": "DE_Wrapper::Find: bool (const TCollection_AsciiString &, const TCollection_AsciiString &, occ::handle<DE_ConfigurationNode> &) const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@FindProvider#&1$@S@TCollection_AsciiString#b#&$@N@opencascade@S@handle>#$@S@DE_Provider#1",
+      "nativeName": "DE_Wrapper::FindProvider",
+      "signature": "DE_Wrapper::FindProvider: bool (const TCollection_AsciiString &, const bool, occ::handle<DE_Provider> &) const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@FindReadProvider#&1$@S@TCollection_AsciiString#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#&$@N@opencascade@S@handle>#$@S@DE_Provider#1",
+      "nativeName": "DE_Wrapper::FindReadProvider",
+      "signature": "DE_Wrapper::FindReadProvider: bool (const TCollection_AsciiString &, std::istream &, occ::handle<DE_Provider> &) const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@FindReadProvider#&1$@S@TCollection_AsciiString#b#&$@N@opencascade@S@handle>#$@S@DE_Provider#1",
+      "nativeName": "DE_Wrapper::FindReadProvider",
+      "signature": "DE_Wrapper::FindReadProvider: bool (const TCollection_AsciiString &, const bool, occ::handle<DE_Provider> &) const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@FindWriteProvider#&1$@S@TCollection_AsciiString#&$@N@opencascade@S@handle>#$@S@DE_Provider#1",
+      "nativeName": "DE_Wrapper::FindWriteProvider",
+      "signature": "DE_Wrapper::FindWriteProvider: bool (const TCollection_AsciiString &, occ::handle<DE_Provider> &) const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@GlobalLoadMutex#S",
+      "nativeName": "DE_Wrapper::GlobalLoadMutex",
+      "signature": "DE_Wrapper::GlobalLoadMutex: std::mutex &()",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@GlobalWrapper#S",
+      "nativeName": "DE_Wrapper::GlobalWrapper",
+      "signature": "DE_Wrapper::GlobalWrapper: const occ::handle<DE_Wrapper> &()",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Load#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "DE_Wrapper::Load",
+      "signature": "DE_Wrapper::Load: bool (const TCollection_AsciiString &, const bool)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Nodes#1",
+      "nativeName": "DE_Wrapper::Nodes",
+      "signature": "DE_Wrapper::Nodes: const NCollection_DataMap<TCollection_AsciiString, NCollection_IndexedDataMap<TCollection_AsciiString, occ::handle<DE_ConfigurationNode>>> &() const",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&$@S@NCollection_List>#$@S@DE_Provider@S@ReadStreamNode#&$@S@TopoDS_Shape#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (DE_Provider::ReadStreamList &, TopoDS_Shape &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&$@S@NCollection_List>#$@S@DE_Provider@S@ReadStreamNode#&$@S@TopoDS_Shape#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (DE_Provider::ReadStreamList &, TopoDS_Shape &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&$@S@NCollection_List>#$@S@DE_Provider@S@ReadStreamNode#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (DE_Provider::ReadStreamList &, const occ::handle<TDocStd_Document> &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&$@S@NCollection_List>#$@S@DE_Provider@S@ReadStreamNode#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (DE_Provider::ReadStreamList &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&1$@S@TCollection_AsciiString#&$@S@TopoDS_Shape#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (const TCollection_AsciiString &, TopoDS_Shape &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&1$@S@TCollection_AsciiString#&$@S@TopoDS_Shape#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (const TCollection_AsciiString &, TopoDS_Shape &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Read",
+      "signature": "DE_Wrapper::Read: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Save#&1$@S@TCollection_AsciiString#b#&1$@S@NCollection_List>#S1_#S2_#",
+      "nativeName": "DE_Wrapper::Save",
+      "signature": "DE_Wrapper::Save: bool (const TCollection_AsciiString &, const bool, const NCollection_List<TCollection_AsciiString> &, const NCollection_List<TCollection_AsciiString> &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Save#b#&1$@S@NCollection_List>#$@S@TCollection_AsciiString#S0_#",
+      "nativeName": "DE_Wrapper::Save",
+      "signature": "DE_Wrapper::Save: TCollection_AsciiString (const bool, const NCollection_List<TCollection_AsciiString> &, const NCollection_List<TCollection_AsciiString> &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@SetGlobalWrapper#&1$@N@opencascade@S@handle>#$@S@DE_Wrapper#S",
+      "nativeName": "DE_Wrapper::SetGlobalWrapper",
+      "signature": "DE_Wrapper::SetGlobalWrapper: void (const occ::handle<DE_Wrapper> &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&$@S@NCollection_List>#$@S@DE_Provider@S@WriteStreamNode#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (DE_Provider::WriteStreamList &, const occ::handle<TDocStd_Document> &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&$@S@NCollection_List>#$@S@DE_Provider@S@WriteStreamNode#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (DE_Provider::WriteStreamList &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&$@S@NCollection_List>#$@S@DE_Provider@S@WriteStreamNode#&1$@S@TopoDS_Shape#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (DE_Provider::WriteStreamList &, const TopoDS_Shape &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&$@S@NCollection_List>#$@S@DE_Provider@S@WriteStreamNode#&1$@S@TopoDS_Shape#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (DE_Provider::WriteStreamList &, const TopoDS_Shape &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&1$@S@TCollection_AsciiString#&1$@S@TopoDS_Shape#&$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (const TCollection_AsciiString &, const TopoDS_Shape &, occ::handle<XSControl_WorkSession> &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@Write#&1$@S@TCollection_AsciiString#&1$@S@TopoDS_Shape#&1$@S@Message_ProgressRange#",
+      "nativeName": "DE_Wrapper::Write",
+      "signature": "DE_Wrapper::Write: bool (const TCollection_AsciiString &, const TopoDS_Shape &, const Message_ProgressRange &)",
+      "header": "DE_Wrapper.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@get_type_descriptor#S",
+      "nativeName": "DE_Wrapper::get_type_descriptor",
+      "signature": "DE_Wrapper::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@DE_Wrapper@F@get_type_name#S",
+      "nativeName": "DE_Wrapper::get_type_name",
+      "signature": "DE_Wrapper::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@AddNamedItem#*1C#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::AddNamedItem",
+      "signature": "IFSelect_WorkSession::AddNamedItem: int (const char *const, const occ::handle<Standard_Transient> &, const bool)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@AppliedDispatches#1",
+      "nativeName": "IFSelect_WorkSession::AppliedDispatches",
+      "signature": "IFSelect_WorkSession::AppliedDispatches: occ::handle<NCollection_HSequence<int>> () const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ComputeCounterFromList#&1$@N@opencascade@S@handle>#$@S@IFSelect_SignCounter#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::ComputeCounterFromList",
+      "signature": "IFSelect_WorkSession::ComputeCounterFromList: bool (const occ::handle<IFSelect_SignCounter> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const bool)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@DumpEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "IFSelect_WorkSession::DumpEntity",
+      "signature": "IFSelect_WorkSession::DumpEntity: void (const occ::handle<Standard_Transient> &, const int, Standard_OStream &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@DumpModel#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::DumpModel",
+      "signature": "IFSelect_WorkSession::DumpModel: void (const int, Standard_OStream &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@FileName#I#1",
+      "nativeName": "IFSelect_WorkSession::FileName",
+      "signature": "IFSelect_WorkSession::FileName: TCollection_AsciiString (const int) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@FinalModifierIdents#b#1",
+      "nativeName": "IFSelect_WorkSession::FinalModifierIdents",
+      "signature": "IFSelect_WorkSession::FinalModifierIdents: occ::handle<NCollection_HSequence<int>> (const bool) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveFileComplete#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveFileComplete",
+      "signature": "IFSelect_WorkSession::GiveFileComplete: const char *(const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveFileRoot#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveFileRoot",
+      "signature": "IFSelect_WorkSession::GiveFileRoot: const char *(const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveList#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::GiveList",
+      "signature": "IFSelect_WorkSession::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveList#*1C#S0_#1",
+      "nativeName": "IFSelect_WorkSession::GiveList",
+      "signature": "IFSelect_WorkSession::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveListCombined#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#S0_#I#1",
+      "nativeName": "IFSelect_WorkSession::GiveListCombined",
+      "signature": "IFSelect_WorkSession::GiveListCombined: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const int) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveListFromList#*1C#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::GiveListFromList",
+      "signature": "IFSelect_WorkSession::GiveListFromList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const occ::handle<Standard_Transient> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveSelection#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveSelection",
+      "signature": "IFSelect_WorkSession::GiveSelection: occ::handle<IFSelect_Selection> (const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Graph#",
+      "nativeName": "IFSelect_WorkSession::Graph",
+      "signature": "IFSelect_WorkSession::Graph: const Interface_Graph &()",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@IFSelect_WorkSession#&&$@S@IFSelect_WorkSession#",
+      "nativeName": "IFSelect_WorkSession::IFSelect_WorkSession",
+      "signature": "IFSelect_WorkSession::IFSelect_WorkSession: void (IFSelect_WorkSession &&)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@IFSelect_WorkSession#&1$@S@IFSelect_WorkSession#",
+      "nativeName": "IFSelect_WorkSession::IFSelect_WorkSession",
+      "signature": "IFSelect_WorkSession::IFSelect_WorkSession: void (const IFSelect_WorkSession &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemIdents#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "IFSelect_WorkSession::ItemIdents",
+      "signature": "IFSelect_WorkSession::ItemIdents: occ::handle<NCollection_HSequence<int>> (const occ::handle<Standard_Type> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemNames#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "IFSelect_WorkSession::ItemNames",
+      "signature": "IFSelect_WorkSession::ItemNames: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> (const occ::handle<Standard_Type> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemNamesForLabel#*1C#1",
+      "nativeName": "IFSelect_WorkSession::ItemNamesForLabel",
+      "signature": "IFSelect_WorkSession::ItemNamesForLabel: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> (const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ListEntities#&1$@S@Interface_EntityIterator#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "IFSelect_WorkSession::ListEntities",
+      "signature": "IFSelect_WorkSession::ListEntities: void (const Interface_EntityIterator &, const int, Standard_OStream &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ListItems#*1C#1",
+      "nativeName": "IFSelect_WorkSession::ListItems",
+      "signature": "IFSelect_WorkSession::ListItems: void (const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NameIdent#*1C#1",
+      "nativeName": "IFSelect_WorkSession::NameIdent",
+      "signature": "IFSelect_WorkSession::NameIdent: int (const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NamedItem#*1C#1",
+      "nativeName": "IFSelect_WorkSession::NamedItem",
+      "signature": "IFSelect_WorkSession::NamedItem: occ::handle<Standard_Transient> (const char *const) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewIntParam#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewIntParam",
+      "signature": "IFSelect_WorkSession::NewIntParam: occ::handle<IFSelect_IntParam> (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewParamFromStatic#*1C#S0_#",
+      "nativeName": "IFSelect_WorkSession::NewParamFromStatic",
+      "signature": "IFSelect_WorkSession::NewParamFromStatic: occ::handle<Standard_Transient> (const char *const, const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewSelectPointed#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewSelectPointed",
+      "signature": "IFSelect_WorkSession::NewSelectPointed: occ::handle<IFSelect_Selection> (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewTextParam#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewTextParam",
+      "signature": "IFSelect_WorkSession::NewTextParam: occ::handle<TCollection_HAsciiString> (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewTransformStandard#b#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewTransformStandard",
+      "signature": "IFSelect_WorkSession::NewTransformStandard: occ::handle<IFSelect_Transformer> (const bool, const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NextIdentForLabel#*1C#I#I#1",
+      "nativeName": "IFSelect_WorkSession::NextIdentForLabel",
+      "signature": "IFSelect_WorkSession::NextIdentForLabel: int (const char *const, const int, const int) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintCheckList#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@S@Interface_CheckIterator#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "IFSelect_WorkSession::PrintCheckList",
+      "signature": "IFSelect_WorkSession::PrintCheckList: void (Standard_OStream &, const Interface_CheckIterator &, const bool, const IFSelect_PrintCount) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintEntityStatus#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::PrintEntityStatus",
+      "signature": "IFSelect_WorkSession::PrintEntityStatus: void (const occ::handle<Standard_Transient> &, Standard_OStream &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintSignatureList#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@N@opencascade@S@handle>#$@S@IFSelect_SignatureList#$@E@IFSelect_PrintCount#1",
+      "nativeName": "IFSelect_WorkSession::PrintSignatureList",
+      "signature": "IFSelect_WorkSession::PrintSignatureList: void (Standard_OStream &, const occ::handle<IFSelect_SignatureList> &, const IFSelect_PrintCount) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@QueryCheckList#&1$@S@Interface_CheckIterator#",
+      "nativeName": "IFSelect_WorkSession::QueryCheckList",
+      "signature": "IFSelect_WorkSession::QueryCheckList: void (const Interface_CheckIterator &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ReadFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::ReadFile",
+      "signature": "IFSelect_WorkSession::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ReadStream#*1C#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::ReadStream",
+      "signature": "IFSelect_WorkSession::ReadStream: IFSelect_ReturnStatus (const char *const, std::istream &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@RemoveName#*1C#",
+      "nativeName": "IFSelect_WorkSession::RemoveName",
+      "signature": "IFSelect_WorkSession::RemoveName: bool (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@RemoveNamedItem#*1C#",
+      "nativeName": "IFSelect_WorkSession::RemoveNamedItem",
+      "signature": "IFSelect_WorkSession::RemoveNamedItem: bool (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SelectionResultFromList#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::SelectionResultFromList",
+      "signature": "IFSelect_WorkSession::SelectionResultFromList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<IFSelect_Selection> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SendAll#*1C#b#",
+      "nativeName": "IFSelect_WorkSession::SendAll",
+      "signature": "IFSelect_WorkSession::SendAll: IFSelect_ReturnStatus (const char *const, const bool)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SendSelected#*1C#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#b#",
+      "nativeName": "IFSelect_WorkSession::SendSelected",
+      "signature": "IFSelect_WorkSession::SendSelected: IFSelect_ReturnStatus (const char *const, const occ::handle<IFSelect_Selection> &, const bool)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SentFiles#1",
+      "nativeName": "IFSelect_WorkSession::SentFiles",
+      "signature": "IFSelect_WorkSession::SentFiles: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> () const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SentList#I#1",
+      "nativeName": "IFSelect_WorkSession::SentList",
+      "signature": "IFSelect_WorkSession::SentList: Interface_EntityIterator (const int) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetDefaultFileRoot#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetDefaultFileRoot",
+      "signature": "IFSelect_WorkSession::SetDefaultFileRoot: bool (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFileExtension#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFileExtension",
+      "signature": "IFSelect_WorkSession::SetFileExtension: void (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFilePrefix#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFilePrefix",
+      "signature": "IFSelect_WorkSession::SetFilePrefix: void (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFileRoot#&1$@N@opencascade@S@handle>#$@S@IFSelect_Dispatch#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFileRoot",
+      "signature": "IFSelect_WorkSession::SetFileRoot: bool (const occ::handle<IFSelect_Dispatch> &, const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetLoadedFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetLoadedFile",
+      "signature": "IFSelect_WorkSession::SetLoadedFile: void (const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetParams#&1$@S@NCollection_DynamicArray>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@NCollection_DynamicArray>#I#",
+      "nativeName": "IFSelect_WorkSession::SetParams",
+      "signature": "IFSelect_WorkSession::SetParams: void (const NCollection_DynamicArray<occ::handle<Standard_Transient>> &, const NCollection_DynamicArray<int> &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetSelectPointed#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#I#1",
+      "nativeName": "IFSelect_WorkSession::SetSelectPointed",
+      "signature": "IFSelect_WorkSession::SetSelectPointed: bool (const occ::handle<IFSelect_Selection> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const int) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetTextValue#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetTextValue",
+      "signature": "IFSelect_WorkSession::SetTextValue: bool (const occ::handle<TCollection_HAsciiString> &, const char *const)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SignValue#&1$@N@opencascade@S@handle>#$@S@IFSelect_Signature#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::SignValue",
+      "signature": "IFSelect_WorkSession::SignValue: const char *(const occ::handle<IFSelect_Signature> &, const occ::handle<Standard_Transient> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Sources#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::Sources",
+      "signature": "IFSelect_WorkSession::Sources: IFSelect_SelectionIterator (const occ::handle<IFSelect_Selection> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@TextValue#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#1",
+      "nativeName": "IFSelect_WorkSession::TextValue",
+      "signature": "IFSelect_WorkSession::TextValue: TCollection_AsciiString (const occ::handle<TCollection_HAsciiString> &) const",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@WriteFile#*1C#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#",
+      "nativeName": "IFSelect_WorkSession::WriteFile",
+      "signature": "IFSelect_WorkSession::WriteFile: IFSelect_ReturnStatus (const char *const, const occ::handle<IFSelect_Selection> &)",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@get_type_descriptor#S",
+      "nativeName": "IFSelect_WorkSession::get_type_descriptor",
+      "signature": "IFSelect_WorkSession::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@get_type_name#S",
+      "nativeName": "IFSelect_WorkSession::get_type_name",
+      "signature": "IFSelect_WorkSession::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ChangeReader#",
+      "nativeName": "STEPCAFControl_Reader::ChangeReader",
+      "signature": "STEPCAFControl_Reader::ChangeReader: STEPControl_Reader &()",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Reader::ExternFile",
+      "signature": "STEPCAFControl_Reader::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Reader::ExternFiles",
+      "signature": "STEPCAFControl_Reader::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@FindInstance#&1$@N@opencascade@S@handle>#$@S@StepRepr_NextAssemblyUsageOccurrence#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_ShapeTool#&1$@S@STEPConstruct_Tool#&1$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@TDF_Label#$@S@TopTools_ShapeMapHasher#S",
+      "nativeName": "STEPCAFControl_Reader::FindInstance",
+      "signature": "STEPCAFControl_Reader::FindInstance: TDF_Label (const occ::handle<StepRepr_NextAssemblyUsageOccurrence> &, const occ::handle<XCAFDoc_ShapeTool> &, const STEPConstruct_Tool &, const NCollection_DataMap<TopoDS_Shape, TDF_Label, TopTools_ShapeMapHasher> &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeLabelMap#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeLabelMap",
+      "signature": "STEPCAFControl_Reader::GetShapeLabelMap: const NCollection_DataMap<TopoDS_Shape, TDF_Label, TopTools_ShapeMapHasher> &() const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Reader::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Reader::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Reader::Init",
+      "signature": "STEPCAFControl_Reader::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const TCollection_AsciiString &, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#*1C#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const char *const, const occ::handle<TDocStd_Document> &, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Perform#*1C#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::Perform",
+      "signature": "STEPCAFControl_Reader::Perform: bool (const char *const, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadFile#*1C#&1$@S@DESTEP_Parameters#",
+      "nativeName": "STEPCAFControl_Reader::ReadFile",
+      "signature": "STEPCAFControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const, const DESTEP_Parameters &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@ReadStream#*1C#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "STEPCAFControl_Reader::ReadStream",
+      "signature": "STEPCAFControl_Reader::ReadStream: IFSelect_ReturnStatus (const char *const, std::istream &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@Reader#1",
+      "nativeName": "STEPCAFControl_Reader::Reader",
+      "signature": "STEPCAFControl_Reader::Reader: const STEPControl_Reader &() const",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@STEPCAFControl_Reader#&1$@S@STEPCAFControl_Reader#",
+      "nativeName": "STEPCAFControl_Reader::STEPCAFControl_Reader",
+      "signature": "STEPCAFControl_Reader::STEPCAFControl_Reader: void (const STEPCAFControl_Reader &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Reader::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Reader::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Reader::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Reader@F@TransferOneRoot#I#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Reader::TransferOneRoot",
+      "signature": "STEPCAFControl_Reader::TransferOneRoot: bool (const int, const occ::handle<TDocStd_Document> &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ChangeWriter#",
+      "nativeName": "STEPCAFControl_Writer::ChangeWriter",
+      "signature": "STEPCAFControl_Writer::ChangeWriter: STEPControl_Writer &()",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#&1$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const TDF_Label &, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFile#*1C#&$@N@opencascade@S@handle>#$@S@STEPCAFControl_ExternFile#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFile",
+      "signature": "STEPCAFControl_Writer::ExternFile: bool (const char *const, occ::handle<STEPCAFControl_ExternFile> &) const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@ExternFiles#1",
+      "nativeName": "STEPCAFControl_Writer::ExternFiles",
+      "signature": "STEPCAFControl_Writer::ExternFiles: const NCollection_DataMap<TCollection_AsciiString, occ::handle<STEPCAFControl_ExternFile>> &() const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeFixParameters#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@GetShapeProcessFlags#1",
+      "nativeName": "STEPCAFControl_Writer::GetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Init#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::Init",
+      "signature": "STEPCAFControl_Writer::Init: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const TCollection_AsciiString &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@DESTEP_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const DESTEP_Parameters &, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Perform",
+      "signature": "STEPCAFControl_Writer::Perform: bool (const occ::handle<TDocStd_Document> &, const char *const, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&&$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (STEPCAFControl_Writer &&)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@STEPCAFControl_Writer#&1$@S@STEPCAFControl_Writer#",
+      "nativeName": "STEPCAFControl_Writer::STEPCAFControl_Writer",
+      "signature": "STEPCAFControl_Writer::STEPCAFControl_Writer: void (const STEPCAFControl_Writer &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeFixParameters",
+      "signature": "STEPCAFControl_Writer::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "STEPCAFControl_Writer::SetShapeProcessFlags",
+      "signature": "STEPCAFControl_Writer::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const NCollection_Sequence<TDF_Label> &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@S@TDF_Label#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "nativeName": "STEPCAFControl_Writer::Transfer",
+      "signature": "STEPCAFControl_Writer::Transfer: bool (const TDF_Label &, const DESTEP_Parameters &, const STEPControl_StepModelType, const char *const, const Message_ProgressRange &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@WriteStream#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "STEPCAFControl_Writer::WriteStream",
+      "signature": "STEPCAFControl_Writer::WriteStream: IFSelect_ReturnStatus (std::ostream &)",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Writer#1",
+      "nativeName": "STEPCAFControl_Writer::Writer",
+      "signature": "STEPCAFControl_Writer::Writer: const STEPControl_Writer &() const",
+      "header": "STEPCAFControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GetShapeProcessFlags#1",
+      "nativeName": "XSControl_Reader::GetShapeProcessFlags",
+      "signature": "XSControl_Reader::GetShapeProcessFlags: const XSAlgo_ShapeProcessor::ProcessingFlags &() const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintCheckLoad#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "XSControl_Reader::PrintCheckLoad",
+      "signature": "XSControl_Reader::PrintCheckLoad: void (Standard_OStream &, const bool, const IFSelect_PrintCount) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintCheckLoad#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "XSControl_Reader::PrintCheckLoad",
+      "signature": "XSControl_Reader::PrintCheckLoad: void (const bool, const IFSelect_PrintCount) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintCheckTransfer#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "XSControl_Reader::PrintCheckTransfer",
+      "signature": "XSControl_Reader::PrintCheckTransfer: void (Standard_OStream &, const bool, const IFSelect_PrintCount) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintCheckTransfer#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "XSControl_Reader::PrintCheckTransfer",
+      "signature": "XSControl_Reader::PrintCheckTransfer: void (const bool, const IFSelect_PrintCount) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintStatsTransfer#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#I#1",
+      "nativeName": "XSControl_Reader::PrintStatsTransfer",
+      "signature": "XSControl_Reader::PrintStatsTransfer: void (Standard_OStream &, const int, const int) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@PrintStatsTransfer#I#I#1",
+      "nativeName": "XSControl_Reader::PrintStatsTransfer",
+      "signature": "XSControl_Reader::PrintStatsTransfer: void (const int, const int) const",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadStream#*1C#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "XSControl_Reader::ReadStream",
+      "signature": "XSControl_Reader::ReadStream: IFSelect_ReturnStatus (const char *const, std::istream &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetShapeFixParameters#&&$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "XSControl_Reader::SetShapeFixParameters",
+      "signature": "XSControl_Reader::SetShapeFixParameters: void (XSAlgo_ShapeProcessor::ParameterMap &&)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S2_#$@S@NCollection_DefaultHasher>#S2_#",
+      "nativeName": "XSControl_Reader::SetShapeFixParameters",
+      "signature": "XSControl_Reader::SetShapeFixParameters: void (const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetShapeProcessFlags#&1$@N@std@S@bitset>#Vk18#",
+      "nativeName": "XSControl_Reader::SetShapeProcessFlags",
+      "signature": "XSControl_Reader::SetShapeProcessFlags: void (const ShapeProcess::OperationsFlags &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetWS#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "XSControl_Reader::SetWS",
+      "signature": "XSControl_Reader::SetWS: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@XSControl_Reader#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "XSControl_Reader::XSControl_Reader",
+      "signature": "XSControl_Reader::XSControl_Reader: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@XSControl_Reader#&1$@S@XSControl_Reader#",
+      "nativeName": "XSControl_Reader::XSControl_Reader",
+      "signature": "XSControl_Reader::XSControl_Reader: void (const XSControl_Reader &)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@XSControl_Reader#*1C#",
+      "nativeName": "XSControl_Reader::XSControl_Reader",
+      "signature": "XSControl_Reader::XSControl_Reader: void (const char *const)",
+      "header": "XSControl_Reader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@Model#b#",
+      "nativeName": "XSControl_Writer::Model",
+      "signature": "XSControl_Writer::Model: occ::handle<Interface_InterfaceModel> (const bool)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@PrintStatsTransfer#I#I#1",
+      "nativeName": "XSControl_Writer::PrintStatsTransfer",
+      "signature": "XSControl_Writer::PrintStatsTransfer: void (const int, const int) const",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@SetNorm#*1C#",
+      "nativeName": "XSControl_Writer::SetNorm",
+      "signature": "XSControl_Writer::SetNorm: bool (const char *const)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@SetWS#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "XSControl_Writer::SetWS",
+      "signature": "XSControl_Writer::SetWS: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@TransferShape#&1$@S@TopoDS_Shape#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Writer::TransferShape",
+      "signature": "XSControl_Writer::TransferShape: IFSelect_ReturnStatus (const TopoDS_Shape &, const int, const Message_ProgressRange &)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@WS#1",
+      "nativeName": "XSControl_Writer::WS",
+      "signature": "XSControl_Writer::WS: occ::handle<XSControl_WorkSession> () const",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@WriteFile#*1C#",
+      "nativeName": "XSControl_Writer::WriteFile",
+      "signature": "XSControl_Writer::WriteFile: IFSelect_ReturnStatus (const char *const)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@XSControl_Writer#",
+      "nativeName": "XSControl_Writer::XSControl_Writer",
+      "signature": "XSControl_Writer::XSControl_Writer: void ()",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@XSControl_Writer#&&$@S@XSControl_Writer#",
+      "nativeName": "XSControl_Writer::XSControl_Writer",
+      "signature": "XSControl_Writer::XSControl_Writer: void (XSControl_Writer &&)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@XSControl_Writer#&1$@N@opencascade@S@handle>#$@S@XSControl_WorkSession#b#",
+      "nativeName": "XSControl_Writer::XSControl_Writer",
+      "signature": "XSControl_Writer::XSControl_Writer: void (const occ::handle<XSControl_WorkSession> &, const bool)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@XSControl_Writer#&1$@S@XSControl_Writer#",
+      "nativeName": "XSControl_Writer::XSControl_Writer",
+      "signature": "XSControl_Writer::XSControl_Writer: void (const XSControl_Writer &)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    },
+    {
+      "stableId": "c:@S@XSControl_Writer@F@XSControl_Writer#*1C#",
+      "nativeName": "XSControl_Writer::XSControl_Writer",
+      "signature": "XSControl_Writer::XSControl_Writer: void (const char *const)",
+      "header": "XSControl_Writer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Existing session/declaration coverage is reused. Global wrapper/configuration, redundant read/write overloads, borrowed WorkSession/maps/streams/callbacks, externally referenced files and unproved entity/model ownership remain deferred."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "header": "BRepBuilderAPI_Copy.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool () const",
+      "header": "BRepCheck_Analyzer.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LoadedFile#1",
+      "nativeName": "IFSelect_WorkSession::LoadedFile",
+      "signature": "IFSelect_WorkSession::LoadedFile: const char *() const",
+      "header": "IFSelect_WorkSession.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ModelCheckList#b#",
+      "nativeName": "IFSelect_WorkSession::ModelCheckList",
+      "signature": "IFSelect_WorkSession::ModelCheckList: Interface_CheckIterator (const bool)",
+      "header": "IFSelect_WorkSession.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Controller@F@Init#S",
+      "nativeName": "IGESControl_Controller::Init",
+      "signature": "IGESControl_Controller::Init: bool ()",
+      "header": "IGESControl_Controller.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESControl_Reader#",
+      "nativeName": "IGESControl_Reader::IGESControl_Reader",
+      "signature": "IGESControl_Reader::IGESControl_Reader: void ()",
+      "header": "IGESControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "IGESControl_Reader::NbRootsForTransfer",
+      "signature": "IGESControl_Reader::NbRootsForTransfer: int ()",
+      "header": "IGESControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@IGESToBRep_Actor@F@IGESToBRep_Actor#",
+      "nativeName": "IGESToBRep_Actor::IGESToBRep_Actor",
+      "signature": "IGESToBRep_Actor::IGESToBRep_Actor: void ()",
+      "header": "IGESToBRep_Actor.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESToBRep_Actor@F@SetModel#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#",
+      "nativeName": "IGESToBRep_Actor::SetModel",
+      "signature": "IGESToBRep_Actor::SetModel: void (const occ::handle<Interface_InterfaceModel> &)",
+      "header": "IGESToBRep_Actor.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CFail#I#b#1",
+      "nativeName": "Interface_Check::CFail",
+      "signature": "Interface_Check::CFail: const char *(const int, const bool) const",
+      "header": "Interface_Check.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CWarning#I#b#1",
+      "nativeName": "Interface_Check::CWarning",
+      "signature": "Interface_Check::CWarning: const char *(const int, const bool) const",
+      "header": "Interface_Check.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbFails#1",
+      "nativeName": "Interface_Check::NbFails",
+      "signature": "Interface_Check::NbFails: int () const",
+      "header": "Interface_Check.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbWarnings#1",
+      "nativeName": "Interface_Check::NbWarnings",
+      "signature": "Interface_Check::NbWarnings: int () const",
+      "header": "Interface_Check.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@More#1",
+      "nativeName": "Interface_CheckIterator::More",
+      "signature": "Interface_CheckIterator::More: bool () const",
+      "header": "Interface_CheckIterator.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Next#1",
+      "nativeName": "Interface_CheckIterator::Next",
+      "signature": "Interface_CheckIterator::Next: void () const",
+      "header": "Interface_CheckIterator.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Number#1",
+      "nativeName": "Interface_CheckIterator::Number",
+      "signature": "Interface_CheckIterator::Number: int () const",
+      "header": "Interface_CheckIterator.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Start#1",
+      "nativeName": "Interface_CheckIterator::Start",
+      "signature": "Interface_CheckIterator::Start: void () const",
+      "header": "Interface_CheckIterator.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Value#1",
+      "nativeName": "Interface_CheckIterator::Value",
+      "signature": "Interface_CheckIterator::Value: const occ::handle<Interface_Check> &() const",
+      "header": "Interface_CheckIterator.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NbEntities#1",
+      "nativeName": "Interface_InterfaceModel::NbEntities",
+      "signature": "Interface_InterfaceModel::NbEntities: int () const",
+      "header": "Interface_InterfaceModel.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Number#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_InterfaceModel::Number",
+      "signature": "Interface_InterfaceModel::Number: int (const occ::handle<Standard_Transient> &) const",
+      "header": "Interface_InterfaceModel.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_ActorRead@F@STEPControl_ActorRead#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#",
+      "nativeName": "STEPControl_ActorRead::STEPControl_ActorRead",
+      "signature": "STEPControl_ActorRead::STEPControl_ActorRead: void (const occ::handle<Interface_InterfaceModel> &)",
+      "header": "STEPControl_ActorRead.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Controller@F@Init#S",
+      "nativeName": "STEPControl_Controller::Init",
+      "signature": "STEPControl_Controller::Init: bool ()",
+      "header": "STEPControl_Controller.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "STEPControl_Reader::NbRootsForTransfer",
+      "signature": "STEPControl_Reader::NbRootsForTransfer: int ()",
+      "header": "STEPControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "STEPControl_Reader::ReadFile",
+      "signature": "STEPControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "header": "STEPControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@STEPControl_Reader#",
+      "nativeName": "STEPControl_Reader::STEPControl_Reader",
+      "signature": "STEPControl_Reader::STEPControl_Reader: void ()",
+      "header": "STEPControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ClearShapes#",
+      "nativeName": "XSControl_Reader::ClearShapes",
+      "signature": "XSControl_Reader::ClearShapes: void ()",
+      "header": "XSControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "header": "XSControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbShapes#1",
+      "nativeName": "XSControl_Reader::NbShapes",
+      "signature": "XSControl_Reader::NbShapes: int () const",
+      "header": "XSControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "header": "XSControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "header": "XSControl_Reader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@LastCheckList#1",
+      "nativeName": "XSControl_TransferReader::LastCheckList",
+      "signature": "XSControl_TransferReader::LastCheckList: Interface_CheckIterator () const",
+      "header": "XSControl_TransferReader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@SetActor#&1$@N@opencascade@S@handle>#$@S@Transfer_ActorOfTransientProcess#",
+      "nativeName": "XSControl_TransferReader::SetActor",
+      "signature": "XSControl_TransferReader::SetActor: void (const occ::handle<Transfer_ActorOfTransientProcess> &)",
+      "header": "XSControl_TransferReader.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_WorkSession@F@TransferReader#1",
+      "nativeName": "XSControl_WorkSession::TransferReader",
+      "signature": "XSControl_WorkSession::TransferReader: const occ::handle<XSControl_TransferReader> &() const",
+      "header": "XSControl_WorkSession.hxx",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

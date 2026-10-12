@@ -31,7 +31,8 @@ public static partial class OcctInventory
         IReadOnlySet<string>? manualStableIds = null,
         IReadOnlyDictionary<string, BindingSkipReason>? excludedBindings = null,
         IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null,
-        Action<string>? progress = null)
+        Action<string>? progress = null,
+        IReadOnlyList<string>? additionalIncludeDirectories = null)
     {
         if (batchSize < 1)
         {
@@ -59,7 +60,8 @@ public static partial class OcctInventory
                 declarations,
                 batches,
                 failures,
-                progress);
+                progress,
+                additionalIncludeDirectories);
         }
 
         return CreateReport(
@@ -86,7 +88,8 @@ public static partial class OcctInventory
         Dictionary<string, BindingDeclaration> declarations,
         List<OcctInventoryBatch> batches,
         List<OcctInventoryFailure> failures,
-        Action<string>? progress)
+        Action<string>? progress,
+        IReadOnlyList<string>? additionalIncludeDirectories)
     {
         try
         {
@@ -94,6 +97,7 @@ public static partial class OcctInventory
                 new DiscoveryOptions(occtRoot, headers, toolkitByPackage)
                 {
                     PreambleHeaders = preambleHeaders ?? [],
+                    AdditionalIncludeDirectories = additionalIncludeDirectories ?? [],
                 });
             foreach (string header in headers)
             {
@@ -128,7 +132,8 @@ public static partial class OcctInventory
                 declarations,
                 batches,
                 failures,
-                progress);
+                progress,
+                additionalIncludeDirectories);
             DiscoverWithIsolation(
                 occtRoot,
                 headers[middle..],
@@ -138,7 +143,8 @@ public static partial class OcctInventory
                 declarations,
                 batches,
                 failures,
-                progress);
+                progress,
+                additionalIncludeDirectories);
         }
         catch (Exception error)
         {

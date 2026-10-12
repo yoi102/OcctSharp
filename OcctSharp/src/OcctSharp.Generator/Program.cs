@@ -83,7 +83,8 @@ static async Task<int> RunInventoryAsync(
             manualStableIds,
             excludedBindings,
             excludedPackages,
-            Console.WriteLine);
+            Console.WriteLine,
+            configuration.AdditionalIncludeDirectories);
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
             throw new InvalidDataException(
@@ -124,13 +125,7 @@ static async Task<int> RunConfiguredDiscoveryAsync(string occtRoot, string confi
 {
     try
     {
-        DiscoveryConfiguration? configuration = JsonSerializer.Deserialize<DiscoveryConfiguration>(
-            await File.ReadAllTextAsync(configPath),
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        if (configuration is null || !IsSupportedConfigurationSchema(configuration.SchemaVersion))
-        {
-            throw new InvalidDataException("The discovery configuration is missing or has an unsupported schema version.");
-        }
+        DiscoveryConfiguration configuration = await ReadConfigurationAsync(configPath);
 
         return await RunDiscoveryAsync(
             occtRoot,
@@ -140,7 +135,8 @@ static async Task<int> RunConfiguredDiscoveryAsync(string occtRoot, string confi
             configuration.ToolkitByPackage,
             configuration.ManualBindings,
             GetExcludedBindings(configuration),
-            GetExcludedAutoPackages(configuration));
+            GetExcludedAutoPackages(configuration),
+            configuration.AdditionalIncludeDirectories);
     }
     catch (Exception error)
     {
@@ -155,7 +151,7 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
     {
         DiscoveryConfiguration configuration = await ReadConfigurationAsync(configPath);
         DiscoveryReport report = ClangAstDiscovery.Discover(
-            new DiscoveryOptions(occtRoot, ExpandHeaders(occtRoot, configuration), configuration.ToolkitByPackage));
+            new DiscoveryOptions(occtRoot, ExpandHeaders(occtRoot, configuration), configuration.ToolkitByPackage) { AdditionalIncludeDirectories = configuration.AdditionalIncludeDirectories });
         report = ApplyManualBindings(report, configuration.ManualBindings);
         report = ApplyConfiguredExclusions(
             report,
@@ -185,6 +181,10 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
             sharedHandleScopes,
             configuration.TopologyScopes,
             configuration.GeneratedPreambleHeaders);
+        IReadOnlyList<GeneratedFile> viewerSupport = ViewerSupportWorkflowEmitter.Emit(configuration, occtRoot);
+        bindingSet = bindingSet with { Files = [.. bindingSet.Files, .. viewerSupport] };
+        IReadOnlyList<GeneratedFile> consumerSupport = ConsumerSupportWorkflowEmitter.Emit(configuration, occtRoot);
+        bindingSet = bindingSet with { Files = [.. bindingSet.Files, .. consumerSupport] };
         GeneratedManifest manifest = GeneratedOutputWriter.Replace(outputRoot, bindingSet);
         GenerationReportSet reports = GenerationReportWriter.Create(report, bindingSet);
         GenerationReportWriter.Write(outputRoot, reports);
@@ -211,7 +211,7 @@ static async Task<DiscoveryConfiguration> ReadConfigurationAsync(string configPa
         throw new InvalidDataException("The discovery configuration is missing or has an unsupported schema version.");
     }
 
-    return configuration;
+    return configuration with { AdditionalIncludeDirectories = SupplementalIncludeResolver.Resolve(configPath, configuration.SupplementalIncludes) };
 }
 
 static IReadOnlyList<string> ExpandHeaders(string occtRoot, DiscoveryConfiguration configuration)
@@ -256,12 +256,13 @@ static async Task<int> RunDiscoveryAsync(
     IReadOnlyDictionary<string, string>? toolkitByPackage = null,
     IReadOnlyList<ManualBindingConfiguration>? manualBindings = null,
     IReadOnlyDictionary<string, BindingSkipReason>? excludedBindings = null,
-    IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null)
+    IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null,
+    IReadOnlyList<string>? additionalIncludeDirectories = null)
 {
     try
     {
         DiscoveryReport report = ClangAstDiscovery.Discover(
-            new DiscoveryOptions(occtRoot, headers, toolkitByPackage));
+            new DiscoveryOptions(occtRoot, headers, toolkitByPackage) { AdditionalIncludeDirectories = additionalIncludeDirectories ?? [] });
         report = ApplyManualBindings(report, manualBindings ?? []);
         report = ApplyConfiguredExclusions(
             report,

@@ -1,0 +1,1173 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "1821314B407329A4FF567F4AF307D99A0D763D9416E98D6FD75FBFD61225CE6F",
+  "declarations": [
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#&1$@S@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const TCollection_ExtendedString &, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#I#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1W#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const wchar_t *)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#I#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#d#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#&1$@S@TCollection_ExtendedString#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const TCollection_ExtendedString &, const char) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char *const, const int) const",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1W#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const wchar_t *) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#I#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#d#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const double) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#I#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const char *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EmptyString#S",
+      "nativeName": "TCollection_AsciiString::EmptyString",
+      "signature": "TCollection_AsciiString::EmptyString: const TCollection_AsciiString &() noexcept",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EndsWith#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::EndsWith",
+      "signature": "TCollection_AsciiString::EndsWith: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EndsWith#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::EndsWith",
+      "signature": "TCollection_AsciiString::EndsWith: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const std::string_view &, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#*1C#I#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const char *const, const int, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const std::string_view &, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#*1C#I#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const char *const, const int, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@HashCode#1",
+      "nativeName": "TCollection_AsciiString::HashCode",
+      "signature": "TCollection_AsciiString::HashCode: size_t () const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#*1C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char *const, const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#*1C#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const char *const, const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#*1C#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const char *const, const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#*1C#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#S0_#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#&1$@S@TCollection_AsciiString#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const std::string_view &, const TCollection_AsciiString &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#S0_#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const std::string_view &, const std::string_view &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@S@TCollection_AsciiString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const TCollection_AsciiString &, const std::string_view &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@S@TCollection_AsciiString#*1C#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const TCollection_AsciiString &, const char *const, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#&1$@S@TCollection_AsciiString#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const TCollection_AsciiString &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#I#S0_#I#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const int, const char *const, const int, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#S0_#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const char *const, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Location#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::Location",
+      "signature": "TCollection_AsciiString::Location: int (const TCollection_AsciiString &, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Location#I#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::Location",
+      "signature": "TCollection_AsciiString::Location: int (const int, const char, const int, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Move#&&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Move",
+      "signature": "TCollection_AsciiString::Move: void (TCollection_AsciiString &&)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Print#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Print",
+      "signature": "TCollection_AsciiString::Print: void (Standard_OStream &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Read#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Read",
+      "signature": "TCollection_AsciiString::Read: void (Standard_IStream &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#*1C#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#*1C#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const std::string_view &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#*1C#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const char *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const char *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Swap#&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Swap",
+      "signature": "TCollection_AsciiString::Swap: void (TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (TCollection_AsciiString &&) noexcept",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const std::string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#*1C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const char *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#S0_#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_ExtendedString &, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#I#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1W#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const wchar_t *)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#I#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#I#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const int, const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#d#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@operator basic_string_view#1",
+      "nativeName": "TCollection_AsciiString::operator basic_string_view",
+      "signature": "TCollection_AsciiString::operator basic_string_view: std::string_view () const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#&1$@N@std@S@basic_string_view>#q#$@N@std@S@char_traits>#q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const std::u16string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#C#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#I#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#d#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Capitalize#",
+      "nativeName": "TCollection_ExtendedString::Capitalize",
+      "signature": "TCollection_ExtendedString::Capitalize: void ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#C#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#I#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#d#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const double) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#q#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Center#I#q#",
+      "nativeName": "TCollection_ExtendedString::Center",
+      "signature": "TCollection_ExtendedString::Center: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ChangeAll#q#q#",
+      "nativeName": "TCollection_ExtendedString::ChangeAll",
+      "signature": "TCollection_ExtendedString::ChangeAll: void (const char16_t, const char16_t)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Clear#",
+      "nativeName": "TCollection_ExtendedString::Clear",
+      "signature": "TCollection_ExtendedString::Clear: void ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const char16_t *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EmptyString#S",
+      "nativeName": "TCollection_ExtendedString::EmptyString",
+      "signature": "TCollection_ExtendedString::EmptyString: const TCollection_ExtendedString &() noexcept",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EndsWith#*1q#1",
+      "nativeName": "TCollection_ExtendedString::EndsWith",
+      "signature": "TCollection_ExtendedString::EndsWith: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EndsWith#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::EndsWith",
+      "signature": "TCollection_ExtendedString::EndsWith: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@HashCode#1",
+      "nativeName": "TCollection_ExtendedString::HashCode",
+      "signature": "TCollection_ExtendedString::HashCode: size_t () const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#*1q#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t *const, const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#q#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsDifferent#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsDifferent",
+      "signature": "TCollection_ExtendedString::IsDifferent: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsDifferent#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsDifferent",
+      "signature": "TCollection_ExtendedString::IsDifferent: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#&1$@S@TCollection_ExtendedString#S0_#S",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsGreater#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsGreater",
+      "signature": "TCollection_ExtendedString::IsGreater: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsGreater#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsGreater",
+      "signature": "TCollection_ExtendedString::IsGreater: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsLess#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsLess",
+      "signature": "TCollection_ExtendedString::IsLess: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsLess#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsLess",
+      "signature": "TCollection_ExtendedString::IsLess: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LeftAdjust#",
+      "nativeName": "TCollection_ExtendedString::LeftAdjust",
+      "signature": "TCollection_ExtendedString::LeftAdjust: void ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LeftJustify#I#q#",
+      "nativeName": "TCollection_ExtendedString::LeftJustify",
+      "signature": "TCollection_ExtendedString::LeftJustify: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Move#&&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Move",
+      "signature": "TCollection_ExtendedString::Move: void (TCollection_ExtendedString &&)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const char16_t *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Print#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_ExtendedString::Print",
+      "signature": "TCollection_ExtendedString::Print: void (Standard_OStream &) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RemoveAll#q#",
+      "nativeName": "TCollection_ExtendedString::RemoveAll",
+      "signature": "TCollection_ExtendedString::RemoveAll: void (const char16_t)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RightAdjust#",
+      "nativeName": "TCollection_ExtendedString::RightAdjust",
+      "signature": "TCollection_ExtendedString::RightAdjust: void ()",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RightJustify#I#q#",
+      "nativeName": "TCollection_ExtendedString::RightJustify",
+      "signature": "TCollection_ExtendedString::RightJustify: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Search#*1q#1",
+      "nativeName": "TCollection_ExtendedString::Search",
+      "signature": "TCollection_ExtendedString::Search: int (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Search#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Search",
+      "signature": "TCollection_ExtendedString::Search: int (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SearchFromEnd#*1q#1",
+      "nativeName": "TCollection_ExtendedString::SearchFromEnd",
+      "signature": "TCollection_ExtendedString::SearchFromEnd: int (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SearchFromEnd#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::SearchFromEnd",
+      "signature": "TCollection_ExtendedString::SearchFromEnd: int (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const TCollection_ExtendedString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#q#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@StartsWith#*1q#1",
+      "nativeName": "TCollection_ExtendedString::StartsWith",
+      "signature": "TCollection_ExtendedString::StartsWith: bool (const char16_t *const) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@StartsWith#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::StartsWith",
+      "signature": "TCollection_ExtendedString::StartsWith: bool (const char16_t *const, const int) const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Swap#&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Swap",
+      "signature": "TCollection_ExtendedString::Swap: void (TCollection_ExtendedString &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (TCollection_ExtendedString &&) noexcept",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&1$@N@std@S@basic_string_view>#q#$@N@std@S@char_traits>#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const std::u16string_view &)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const TCollection_AsciiString &, const bool)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1W#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const wchar_t *)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t *const)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t *const, const int)",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#I#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#I#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const int, const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#d#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t)",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToWideString#1",
+      "nativeName": "TCollection_ExtendedString::ToWideString",
+      "signature": "TCollection_ExtendedString::ToWideString: const wchar_t *() const",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Token#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Token",
+      "signature": "TCollection_ExtendedString::Token: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "decision": "ADMITTED",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@operator basic_string_view#1",
+      "nativeName": "TCollection_ExtendedString::operator basic_string_view",
+      "signature": "TCollection_ExtendedString::operator basic_string_view: std::u16string_view () const noexcept",
+      "decision": "DEFERRED",
+      "reason": "Equivalent implicit pointer/view, existing AV substring/split/insert or unneeded numeric/locale/stream/static/move path; no new consumer workflow."
+    }
+  ],
+  "baseline": "8.0.1-preview.63",
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Length#1",
+      "nativeName": "TCollection_AsciiString::Length",
+      "signature": "TCollection_AsciiString::Length: int () const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@ToCString#1",
+      "nativeName": "TCollection_AsciiString::ToCString",
+      "signature": "TCollection_AsciiString::ToCString: const char *() const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Length#1",
+      "nativeName": "TCollection_ExtendedString::Length",
+      "signature": "TCollection_ExtendedString::Length: int () const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LengthOfCString#1",
+      "nativeName": "TCollection_ExtendedString::LengthOfCString",
+      "signature": "TCollection_ExtendedString::LengthOfCString: int () const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToExtString#1",
+      "nativeName": "TCollection_ExtendedString::ToExtString",
+      "signature": "TCollection_ExtendedString::ToExtString: const char16_t *() const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToUTF8CString#&*C#1",
+      "nativeName": "TCollection_ExtendedString::ToUTF8CString",
+      "signature": "TCollection_ExtendedString::ToUTF8CString: int (Standard_PCharacter &) const",
+      "reason": "Required copied length/storage/UTF8 conversion dependency reused from AV/SC-008; no borrowed string escapes.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

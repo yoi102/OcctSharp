@@ -1,0 +1,69 @@
+#pragma once
+#include "OcctSharp.Native.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+/* Independent serialized-reference version1. Source addresses are actual capture
+   addresses, but restore-only metadata cannot prove its original capture origin.
+   Root/members are decoded in ONE ShapeSet and checked by native membership.
+   SHA256 binds actual BRep/table bytes for integrity, never native identity. */
+typedef struct OcctSharp_SerializedReferenceInfo {
+  int32_t schema_version, source_topology_count, decoded_topology_count, row_count,
+    brep_byte_count, table_byte_count, root_kind, root_orientation;
+} OcctSharp_SerializedReferenceInfo;
+typedef struct OcctSharp_SerializedReferenceRow {
+  int32_t reference_index, source_topology_index, decoded_topology_index,
+    source_kind, decoded_kind, orientation, decoded_orientation, reserved;
+} OcctSharp_SerializedReferenceRow;
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_capture(
+  const OcctSharp_ShapeHandle* root, const OcctSharp_ShapeHandle* const* members,
+  int32_t count, OcctSharp_FeatureResultHandle** output);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_restore(
+  const uint8_t* brep, int32_t brep_count, const uint8_t* table, int32_t table_count,
+  OcctSharp_FeatureResultHandle** output);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_SerializedReferenceInfo* info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_SerializedReferenceRow* row);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_buffer(
+  const OcctSharp_FeatureResultHandle* result, int32_t table, uint8_t* bytes,
+  int32_t capacity, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_reference_member(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_ShapeHandle** shape);
+
+/* Independent OCROCC26/schema1: complete bounded native containment paths with
+   same-ShapeSet references, including accumulated orientation and Location.
+   Imported bytes prove current decoded paths only; never original source/history.
+   Same native identity at several paths remains ambiguous for shape-only binding. */
+typedef struct OcctSharp_SerializedOccurrenceInfo {
+  int32_t schema_version, source_topology_count, decoded_topology_count, row_count,
+    path_value_count, brep_byte_count, table_byte_count, root_kind, root_orientation, reserved;
+} OcctSharp_SerializedOccurrenceInfo;
+typedef struct OcctSharp_SerializedOccurrenceRow {
+  int32_t reference_index, declared_source_topology_index, decoded_topology_index,
+    kind, orientation, path_length, same_identity_paths, exact_identity_paths,
+    native_path_token_equal, reserved;
+} OcctSharp_SerializedOccurrenceRow;
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_capture(
+  const OcctSharp_ShapeHandle* root, OcctSharp_FeatureResultHandle** output);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_restore(
+  const uint8_t* brep, int32_t brep_count, const uint8_t* table, int32_t table_count,
+  OcctSharp_FeatureResultHandle** output);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_SerializedOccurrenceInfo* info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_SerializedOccurrenceRow* row);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_path(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, int32_t* path,
+  int32_t capacity, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_buffer(
+  const OcctSharp_FeatureResultHandle* result, int32_t table, uint8_t* bytes,
+  int32_t capacity, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_member(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_ShapeHandle** shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_serialized_occurrence_matches(
+  const OcctSharp_FeatureResultHandle* result, const OcctSharp_ShapeHandle* member,
+  int32_t exact, int32_t* indices, int32_t capacity, int32_t* count);
+#ifdef __cplusplus
+}
+#endif

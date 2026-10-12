@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@GetColor#&1$@S@TDF_Label#$@E@XCAFDoc_ColorType#&$@S@Quantity_ColorRGBA#S",
+      "nativeName": "XCAFDoc_ColorTool::GetColor",
+      "signature": "XCAFDoc_ColorTool::GetColor: bool (const TDF_Label &, const XCAFDoc_ColorType, Quantity_ColorRGBA &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@GetColor#&1$@S@TDF_Label#&$@S@Quantity_ColorRGBA#S",
+      "nativeName": "XCAFDoc_ColorTool::GetColor",
+      "signature": "XCAFDoc_ColorTool::GetColor: bool (const TDF_Label &, Quantity_ColorRGBA &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@GetColors#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ColorTool::GetColors",
+      "signature": "XCAFDoc_ColorTool::GetColors: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@IsColor#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ColorTool::IsColor",
+      "signature": "XCAFDoc_ColorTool::IsColor: bool (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@IsVisible#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ColorTool::IsVisible",
+      "signature": "XCAFDoc_ColorTool::IsVisible: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@SetColor#&1$@S@TDF_Label#&1$@S@Quantity_ColorRGBA#$@E@XCAFDoc_ColorType#1",
+      "nativeName": "XCAFDoc_ColorTool::SetColor",
+      "signature": "XCAFDoc_ColorTool::SetColor: void (const TDF_Label &, const Quantity_ColorRGBA &, const XCAFDoc_ColorType) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@SetVisibility#&1$@S@TDF_Label#b#",
+      "nativeName": "XCAFDoc_ColorTool::SetVisibility",
+      "signature": "XCAFDoc_ColorTool::SetVisibility: void (const TDF_Label &, const bool)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ColorTool@F@UnSetColor#&1$@S@TDF_Label#$@E@XCAFDoc_ColorType#1",
+      "nativeName": "XCAFDoc_ColorTool::UnSetColor",
+      "signature": "XCAFDoc_ColorTool::UnSetColor: void (const TDF_Label &, const XCAFDoc_ColorType) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@AddDimTol#I#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S3_#1",
+      "nativeName": "XCAFDoc_DimTolTool::AddDimTol",
+      "signature": "XCAFDoc_DimTolTool::AddDimTol: TDF_Label (const int, const occ::handle<NCollection_HArray1<double>> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetDimTol#&1$@S@TDF_Label#&I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#&$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S6_#1",
+      "nativeName": "XCAFDoc_DimTolTool::GetDimTol",
+      "signature": "XCAFDoc_DimTolTool::GetDimTol: bool (const TDF_Label &, int &, occ::handle<NCollection_HArray1<double>> &, occ::handle<TCollection_HAsciiString> &, occ::handle<TCollection_HAsciiString> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetDimTolLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::GetDimTolLabels",
+      "signature": "XCAFDoc_DimTolTool::GetDimTolLabels: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsDimTol#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_DimTolTool::IsDimTol",
+      "signature": "XCAFDoc_DimTolTool::IsDimTol: bool (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDimTol#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_DimTolTool::SetDimTol",
+      "signature": "XCAFDoc_DimTolTool::SetDimTol: void (const TDF_Label &, const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetViewLabelsForShape#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_ViewTool::GetViewLabelsForShape",
+      "signature": "XCAFDoc_ViewTool::GetViewLabelsForShape: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@IsLocked#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::IsLocked",
+      "signature": "XCAFDoc_ViewTool::IsLocked: bool (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@Lock#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::Lock",
+      "signature": "XCAFDoc_ViewTool::Lock: void (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@SetView#&1$@S@NCollection_Sequence>#$@S@TDF_Label#S0_#&1S2_#1",
+      "nativeName": "XCAFDoc_ViewTool::SetView",
+      "signature": "XCAFDoc_ViewTool::SetView: void (const NCollection_Sequence<TDF_Label> &, const NCollection_Sequence<TDF_Label> &, const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@Unlock#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::Unlock",
+      "signature": "XCAFDoc_ViewTool::Unlock: void (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetMaterial#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::GetMaterial: occ::handle<XCAFDoc_VisMaterial> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetMaterials#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetMaterials",
+      "signature": "XCAFDoc_VisMaterialTool::GetMaterials: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@IsMaterial#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::IsMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::IsMaterial: bool (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Private initialized session or existing identity-checked document; bounded copied tables, command-atomic metadata and copied diagnostics."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Quantity_Color@F@Blue#1",
+      "nativeName": "Quantity_Color::Blue",
+      "signature": "Quantity_Color::Blue: double () const noexcept",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Green#1",
+      "nativeName": "Quantity_Color::Green",
+      "signature": "Quantity_Color::Green: double () const noexcept",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Red#1",
+      "nativeName": "Quantity_Color::Red",
+      "signature": "Quantity_Color::Red: double () const noexcept",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@Alpha#1",
+      "nativeName": "Quantity_ColorRGBA::Alpha",
+      "signature": "Quantity_ColorRGBA::Alpha: float () const noexcept",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@GetRGB#1",
+      "nativeName": "Quantity_ColorRGBA::GetRGB",
+      "signature": "Quantity_ColorRGBA::GetRGB: const Quantity_Color &() const noexcept",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TCollection_HAsciiString@F@ToCString#1",
+      "nativeName": "TCollection_HAsciiString::ToCString",
+      "signature": "TCollection_HAsciiString::ToCString: const char *() const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@Backup#",
+      "nativeName": "TDF_Attribute::Backup",
+      "signature": "TDF_Attribute::Backup: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@More#1",
+      "nativeName": "TDF_AttributeIterator::More",
+      "signature": "TDF_AttributeIterator::More: bool () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Next#",
+      "nativeName": "TDF_AttributeIterator::Next",
+      "signature": "TDF_AttributeIterator::Next: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@TDF_AttributeIterator#&1$@S@TDF_Label#b#",
+      "nativeName": "TDF_AttributeIterator::TDF_AttributeIterator",
+      "signature": "TDF_AttributeIterator::TDF_AttributeIterator: void (const TDF_Label &, const bool)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Value#1",
+      "nativeName": "TDF_AttributeIterator::Value",
+      "signature": "TDF_AttributeIterator::Value: occ::handle<TDF_Attribute> () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@GetID#S",
+      "nativeName": "TDataStd_Name::GetID",
+      "signature": "TDataStd_Name::GetID: const Standard_GUID &()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "nativeName": "TDataStd_Name::Set",
+      "signature": "TDataStd_Name::Set: occ::handle<TDataStd_Name> (const TDF_Label &, const TCollection_ExtendedString &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@HasOpenCommand#1",
+      "nativeName": "TDocStd_Document::HasOpenCommand",
+      "signature": "TDocStd_Document::HasOpenCommand: bool () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@Main#1",
+      "nativeName": "TDocStd_Document::Main",
+      "signature": "TDocStd_Document::Main: TDF_Label () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@SetUndoLimit#I#",
+      "nativeName": "TDocStd_Document::SetUndoLimit",
+      "signature": "TDocStd_Document::SetUndoLimit: void (const int)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@TDocStd_Document#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDocStd_Document::TDocStd_Document",
+      "signature": "TDocStd_Document::TDocStd_Document: void (const TCollection_ExtendedString &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Color@F@GetColorRGBA#1",
+      "nativeName": "XCAFDoc_Color::GetColorRGBA",
+      "signature": "XCAFDoc_Color::GetColorRGBA: const Quantity_ColorRGBA &() const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Color@F@Set#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "XCAFDoc_Color::Set",
+      "signature": "XCAFDoc_Color::Set: void (const Quantity_ColorRGBA &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefShapeLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S2_#S",
+      "nativeName": "XCAFDoc_DimTolTool::GetRefShapeLabel",
+      "signature": "XCAFDoc_DimTolTool::GetRefShapeLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckColorTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckColorTool",
+      "signature": "XCAFDoc_DocumentTool::CheckColorTool: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckDimTolTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckDimTolTool",
+      "signature": "XCAFDoc_DocumentTool::CheckDimTolTool: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckViewTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckViewTool",
+      "signature": "XCAFDoc_DocumentTool::CheckViewTool: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckVisMaterialTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckVisMaterialTool",
+      "signature": "XCAFDoc_DocumentTool::CheckVisMaterialTool: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ColorTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ColorTool",
+      "signature": "XCAFDoc_DocumentTool::ColorTool: occ::handle<XCAFDoc_ColorTool> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@DimTolTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::DimTolTool",
+      "signature": "XCAFDoc_DocumentTool::DimTolTool: occ::handle<XCAFDoc_DimTolTool> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ViewTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::ViewTool",
+      "signature": "XCAFDoc_DocumentTool::ViewTool: occ::handle<XCAFDoc_ViewTool> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@VisMaterialTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::VisMaterialTool",
+      "signature": "XCAFDoc_DocumentTool::VisMaterialTool: occ::handle<XCAFDoc_VisMaterialTool> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsShape",
+      "signature": "XCAFDoc_ShapeTool::IsShape: bool (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_View@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_View::Set",
+      "signature": "XCAFDoc_View::Set: occ::handle<XCAFDoc_View> (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_View@F@SetObject#&1$@N@opencascade@S@handle>#$@S@XCAFView_Object#",
+      "nativeName": "XCAFDoc_View::SetObject",
+      "signature": "XCAFDoc_View::SetObject: void (const occ::handle<XCAFView_Object> &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@AddView#",
+      "nativeName": "XCAFDoc_ViewTool::AddView",
+      "signature": "XCAFDoc_ViewTool::AddView: TDF_Label ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefGDTLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_ViewTool::GetRefGDTLabel",
+      "signature": "XCAFDoc_ViewTool::GetRefGDTLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefShapeLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_ViewTool::GetRefShapeLabel",
+      "signature": "XCAFDoc_ViewTool::GetRefShapeLabel: bool (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetViewLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::GetViewLabels",
+      "signature": "XCAFDoc_ViewTool::GetViewLabels: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@IsView#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_ViewTool::IsView",
+      "signature": "XCAFDoc_ViewTool::IsView: bool (const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@RemoveView#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_ViewTool::RemoveView",
+      "signature": "XCAFDoc_ViewTool::RemoveView: void (const TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@BaseColor#1",
+      "nativeName": "XCAFDoc_VisMaterial::BaseColor",
+      "signature": "XCAFDoc_VisMaterial::BaseColor: Quantity_ColorRGBA () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@HasCommonMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::HasCommonMaterial",
+      "signature": "XCAFDoc_VisMaterial::HasCommonMaterial: bool () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@HasPbrMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::HasPbrMaterial",
+      "signature": "XCAFDoc_VisMaterial::HasPbrMaterial: bool () const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@PbrMaterial#1",
+      "nativeName": "XCAFDoc_VisMaterial::PbrMaterial",
+      "signature": "XCAFDoc_VisMaterial::PbrMaterial: const XCAFDoc_VisMaterialPBR &() const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@SetPbrMaterial#&1$@S@XCAFDoc_VisMaterialPBR#",
+      "nativeName": "XCAFDoc_VisMaterial::SetPbrMaterial",
+      "signature": "XCAFDoc_VisMaterial::SetPbrMaterial: void (const XCAFDoc_VisMaterialPBR &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@XCAFDoc_VisMaterial#",
+      "nativeName": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial",
+      "signature": "XCAFDoc_VisMaterial::XCAFDoc_VisMaterial: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialPBR@F@XCAFDoc_VisMaterialPBR#",
+      "nativeName": "XCAFDoc_VisMaterialPBR::XCAFDoc_VisMaterialPBR",
+      "signature": "XCAFDoc_VisMaterialPBR::XCAFDoc_VisMaterialPBR: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@AddMaterial#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::AddMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::AddMaterial: TDF_Label (const occ::handle<XCAFDoc_VisMaterial> &, const TCollection_AsciiString &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetShapeMaterial#&1$@S@TDF_Label#&S1_#S",
+      "nativeName": "XCAFDoc_VisMaterialTool::GetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::GetShapeMaterial: bool (const TDF_Label &, TDF_Label &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@SetShapeMaterial#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_VisMaterialTool::SetShapeMaterial",
+      "signature": "XCAFDoc_VisMaterialTool::SetShapeMaterial: void (const TDF_Label &, const TDF_Label &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetBackPlaneDistance#d#",
+      "nativeName": "XCAFView_Object::SetBackPlaneDistance",
+      "signature": "XCAFView_Object::SetBackPlaneDistance: void (double)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetFrontPlaneDistance#d#",
+      "nativeName": "XCAFView_Object::SetFrontPlaneDistance",
+      "signature": "XCAFView_Object::SetFrontPlaneDistance: void (double)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetName#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "XCAFView_Object::SetName",
+      "signature": "XCAFView_Object::SetName: void (occ::handle<TCollection_HAsciiString>)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetProjectionPoint#&1$@S@gp_Pnt#",
+      "nativeName": "XCAFView_Object::SetProjectionPoint",
+      "signature": "XCAFView_Object::SetProjectionPoint: void (const gp_Pnt &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetType#$@E@XCAFView_ProjectionType#",
+      "nativeName": "XCAFView_Object::SetType",
+      "signature": "XCAFView_Object::SetType: void (XCAFView_ProjectionType)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetUpDirection#&1$@S@gp_Dir#",
+      "nativeName": "XCAFView_Object::SetUpDirection",
+      "signature": "XCAFView_Object::SetUpDirection: void (const gp_Dir &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetViewDirection#&1$@S@gp_Dir#",
+      "nativeName": "XCAFView_Object::SetViewDirection",
+      "signature": "XCAFView_Object::SetViewDirection: void (const gp_Dir &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetWindowHorizontalSize#d#",
+      "nativeName": "XCAFView_Object::SetWindowHorizontalSize",
+      "signature": "XCAFView_Object::SetWindowHorizontalSize: void (double)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetWindowVerticalSize#d#",
+      "nativeName": "XCAFView_Object::SetWindowVerticalSize",
+      "signature": "XCAFView_Object::SetWindowVerticalSize: void (double)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetZoomFactor#d#",
+      "nativeName": "XCAFView_Object::SetZoomFactor",
+      "signature": "XCAFView_Object::SetZoomFactor: void (double)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@UnsetBackPlaneClipping#",
+      "nativeName": "XCAFView_Object::UnsetBackPlaneClipping",
+      "signature": "XCAFView_Object::UnsetBackPlaneClipping: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@UnsetFrontPlaneClipping#",
+      "nativeName": "XCAFView_Object::UnsetFrontPlaneClipping",
+      "signature": "XCAFView_Object::UnsetFrontPlaneClipping: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@XCAFView_Object#",
+      "nativeName": "XCAFView_Object::XCAFView_Object",
+      "signature": "XCAFView_Object::XCAFView_Object: void ()",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XmlMXCAFDoc_ColorDriver@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_Persistent#&$@S@XmlObjMgt_SRelocationTable#1",
+      "nativeName": "XmlMXCAFDoc_ColorDriver::Paste",
+      "signature": "XmlMXCAFDoc_ColorDriver::Paste: void (const occ::handle<TDF_Attribute> &, XmlObjMgt_Persistent &, XmlObjMgt_SRelocationTable &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XmlMXCAFDoc_ColorDriver@F@Paste#&1$@S@XmlObjMgt_Persistent#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_RRelocationTable#1",
+      "nativeName": "XmlMXCAFDoc_ColorDriver::Paste",
+      "signature": "XmlMXCAFDoc_ColorDriver::Paste: bool (const XmlObjMgt_Persistent &, const occ::handle<TDF_Attribute> &, XmlObjMgt_RRelocationTable &) const",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    },
+    {
+      "stableId": "c:@S@XmlMXCAFDoc_ColorDriver@F@XmlMXCAFDoc_ColorDriver#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#",
+      "nativeName": "XmlMXCAFDoc_ColorDriver::XmlMXCAFDoc_ColorDriver",
+      "signature": "XmlMXCAFDoc_ColorDriver::XmlMXCAFDoc_ColorDriver: void (const occ::handle<Message_Messenger> &)",
+      "guard": "AXDocumentMetadata",
+      "reason": "Actually used initialized/copy-only metadata prerequisite; no tool or transient view escapes."
+    }
+  ]
+}

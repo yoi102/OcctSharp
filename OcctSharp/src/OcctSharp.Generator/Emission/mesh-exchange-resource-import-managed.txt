@@ -1,0 +1,107 @@
+
+ // The pinned OBJ reader resolves MTL textures against the OBJ folder and converts
+ // texture names to ASCII. Normalize only explicit references in a private copy;
+ // source identities/relative graph and all geometry/material values remain exact.
+ static (string Main,Dictionary<string,string> Names) ObjSdkGraph(string stage,string main,string[] names,List<FileStream> locks)
+ {
+  string folder=Path.Combine(stage,"sdk-obj");Directory.CreateDirectory(folder);
+  var forward=new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+  var reverse=new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+  for(int n=0;n<names.Length;++n){string alias="r"+n.ToString("D3",System.Globalization.CultureInfo.InvariantCulture)+Path.GetExtension(names[n]);forward.Add(names[n],alias);reverse.Add("sdk-obj/"+alias,names[n]);}
+  var materials=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+  foreach(string line in File.ReadLines(Path.Combine(stage,main)))if(line.Trim().StartsWith("mtllib ",StringComparison.Ordinal))materials.Add(ResourceName(line.Trim()[7..].Trim()));
+  foreach(string name in names)
+  {
+   string source=Path.Combine(stage,name),target=Path.Combine(folder,forward[name]);
+   if(name.Equals(main,StringComparison.OrdinalIgnoreCase))
+   {
+    using var output=new StreamWriter(target,false,ProjectionCodec.Utf8);
+    foreach(string line in File.ReadLines(source)){string trimmed=line.Trim();output.WriteLine(trimmed.StartsWith("mtllib ",StringComparison.Ordinal)?"mtllib "+forward[ResourceName(trimmed[7..].Trim())]:line);}
+   }
+   else if(materials.Contains(name))
+   {
+    using var output=new StreamWriter(target,false,ProjectionCodec.Utf8);
+    foreach(string line in File.ReadLines(source))
+    {
+     string row=line.Trim();int space=row.IndexOfAny([' ','\t']);string keyword=space<0?row:row[..space];
+     if(space<0||!keyword.StartsWith("map_",StringComparison.OrdinalIgnoreCase)&&!keyword.Equals("bump",StringComparison.OrdinalIgnoreCase)){output.WriteLine(line);continue;}
+     string local=ResourceName(row[(space+1)..].Trim());
+     string original=ResourceName(Path.GetRelativePath(stage,Path.GetFullPath(local,Path.GetDirectoryName(source)!)).Replace('\\','/'));
+     output.WriteLine(keyword+" "+forward[original]);
+    }
+   }
+   else File.Copy(source,target,false);
+   locks.Add(new FileStream(target,FileMode.Open,FileAccess.Read,FileShare.Read));
+  }
+  return(Path.Combine(folder,forward[main]),reverse);
+ }
+
+ static void GltfResourceIndices(JsonElement root)
+ {
+  static JsonElement[] Rows(JsonElement parent,string key,int limit)
+  {
+   if(!parent.TryGetProperty(key,out var array))return [];
+   if(array.ValueKind!=JsonValueKind.Array||array.GetArrayLength()>limit)throw new InvalidDataException("Resource table budget/type: "+key);
+   return array.EnumerateArray().ToArray();
+  }
+  static int Index(JsonElement value,int count)
+  {
+   if(!value.TryGetInt32(out int index)||index<0||index>=count)throw new InvalidDataException("Resource index is outside its exact array.");
+   return index;
+  }
+  var images=Rows(root,"images",128);var views=Rows(root,"bufferViews",65536);
+  foreach(var image in images)
+  {
+   bool uri=image.TryGetProperty("uri",out _),view=image.TryGetProperty("bufferView",out var bufferView);
+   if(uri==view)throw new InvalidDataException("Image requires one exact resource source.");
+   if(view)Index(bufferView,views.Length);
+   if(image.TryGetProperty("mimeType",out var mime)&&mime.GetString()!="image/png")throw new NotSupportedException("Only PNG resource textures are admitted.");
+   if(view&&!image.TryGetProperty("mimeType",out _))throw new InvalidDataException("Buffer-view image requires its PNG MIME type.");
+  }
+  var samplers=Rows(root,"samplers",128);var textures=Rows(root,"textures",128);
+  foreach(var texture in textures){Index(texture.GetProperty("source"),images.Length);if(texture.TryGetProperty("sampler",out var sampler))Index(sampler,samplers.Length);}
+  void Texture(JsonElement parent,string key)
+  {
+   if(!parent.TryGetProperty(key,out var value))return;
+   Index(value.GetProperty("index"),textures.Length);
+   if(value.TryGetProperty("texCoord",out var coordinate)&&(!coordinate.TryGetInt32(out int channel)||channel!=0))throw new NotSupportedException("Only the first imported texture coordinate channel is admitted.");
+  }
+  var materials=Rows(root,"materials",4096);
+  foreach(var material in materials)
+  {
+   if(material.TryGetProperty("pbrMetallicRoughness",out var pbr)){Texture(pbr,"baseColorTexture");Texture(pbr,"metallicRoughnessTexture");}
+   Texture(material,"normalTexture");Texture(material,"occlusionTexture");Texture(material,"emissiveTexture");
+  }
+  foreach(var mesh in Rows(root,"meshes",4096))foreach(var primitive in Rows(mesh,"primitives",100000))if(primitive.TryGetProperty("material",out var material))Index(material,materials.Length);
+ }
+// CE owned local resources; legacy flat Read keeps its original admission limits.
+ static string ResourceName(string value){ArgumentException.ThrowIfNullOrWhiteSpace(value);ProjectionCodec.CheckText(value,1024);if(Path.IsPathRooted(value)||value.Contains('\\')||value.Contains('%')||value.Contains(':')||value.Any(c=>c<32))throw new ArgumentException("Mesh resource URI must be an exact local relative path.");var parts=value.Split('/');if(parts.Length>8||parts.Any(part=>string.IsNullOrEmpty(part)||part is "." or ".."||part.IndexOfAny(Path.GetInvalidFileNameChars())>=0||part.EndsWith('.')||part.EndsWith(' ')))throw new ArgumentException("Invalid nested mesh resource path.");foreach(string part in parts){string stem=part.Split('.')[0];if(stem.Equals("CON",StringComparison.OrdinalIgnoreCase)||stem.Equals("PRN",StringComparison.OrdinalIgnoreCase)||stem.Equals("AUX",StringComparison.OrdinalIgnoreCase)||stem.Equals("NUL",StringComparison.OrdinalIgnoreCase)||stem.Length==4&&(stem.StartsWith("COM",StringComparison.OrdinalIgnoreCase)||stem.StartsWith("LPT",StringComparison.OrdinalIgnoreCase))&&char.IsAsciiDigit(stem[3]))throw new ArgumentException("Reserved resource path segment.");}return value;}
+ static ConfiguredMeshFile ResourceFile(string root,string relative){relative=ResourceName(relative);string path=Path.GetFullPath(relative,root);if(!path.StartsWith(Path.TrimEndingDirectorySeparator(root)+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new ArgumentException("Resource is outside its input root.");NoReparse(path);long bytes=new FileInfo(path).Length;if(bytes is <=0 or >67108864)throw new InvalidDataException("Mesh resource byte budget.");return new(relative,path,Digest(path),bytes);}
+ static string[] ResourceGraph(string main,ConfiguredMeshFormat format){var names=new HashSet<string>(StringComparer.OrdinalIgnoreCase){ResourceName(Path.GetFileName(main))};string parent=Path.GetDirectoryName(main)!;void Add(string value){string valid=ResourceName(value);if(names.Count>=128&&!names.Contains(valid))throw new InvalidDataException("Mesh resource file budget.");names.Add(valid);}
+  if(format==ConfiguredMeshFormat.Gltf){using var json=JsonDocument.Parse(File.ReadAllBytes(main),new JsonDocumentOptions{MaxDepth=32});GltfGraph(json.RootElement);GltfResourceIndices(json.RootElement);if(json.RootElement.TryGetProperty("extensionsUsed",out var extensions)&&extensions.EnumerateArray().Any(x=>x.GetString()=="KHR_draco_mesh_compression"))throw new NotSupportedException("Compressed mesh import is deferred.");if(json.RootElement.TryGetProperty("buffers",out var buffers))foreach(var buffer in buffers.EnumerateArray()){if(!buffer.TryGetProperty("uri",out var uri))throw new InvalidDataException("glTF JSON requires an explicit local buffer.");Add(uri.GetString()??throw new InvalidDataException("Null buffer URI."));}if(json.RootElement.TryGetProperty("images",out var images)){if(images.ValueKind!=JsonValueKind.Array||images.GetArrayLength()>128)throw new InvalidDataException("Mesh image table budget/type.");foreach(var image in images.EnumerateArray()){if(image.TryGetProperty("uri",out var uri))Add(uri.GetString()??throw new InvalidDataException("Null image URI."));else if(!image.TryGetProperty("bufferView",out _))throw new InvalidDataException("Image has no exact resource source.");}}}
+  else{foreach(string line in File.ReadLines(main)){string text=line.Trim();if(!text.StartsWith("mtllib ",StringComparison.Ordinal))continue;string name=ResourceName(text[7..].Trim());Add(name);string material=Path.GetFullPath(name,parent);NoReparse(material);if(new FileInfo(material).Length>67108864)throw new InvalidDataException("MTL byte budget.");foreach(string mtlLine in File.ReadLines(material)){string row=mtlLine.Trim();int space=row.IndexOf(' ');if(space<0)continue;string keyword=row[..space];if(!keyword.StartsWith("map_",StringComparison.OrdinalIgnoreCase)&&!keyword.Equals("bump",StringComparison.OrdinalIgnoreCase))continue;string texture=ResourceName(row[(space+1)..].Trim());Add(Path.GetRelativePath(parent,Path.GetFullPath(texture,Path.GetDirectoryName(material)!)).Replace('\\','/'));}}}
+  return names.Order(StringComparer.OrdinalIgnoreCase).ToArray();}
+ static void CleanResources(string root){string absolute=Path.GetFullPath(root),temporary=Path.TrimEndingDirectorySeparator(Path.GetFullPath(Path.GetTempPath()));if(!string.Equals(Path.GetDirectoryName(absolute),temporary,StringComparison.OrdinalIgnoreCase)||!Path.GetFileName(absolute).StartsWith("OcctSharp.MeshExchange.",StringComparison.Ordinal))throw new IOException("Unexpected owned resource staging directory.");if(!Directory.Exists(absolute))return;NoReparse(absolute);foreach(string file in Directory.GetFiles(absolute,"*",SearchOption.AllDirectories)){NoReparse(file);File.Delete(file);}foreach(string directory in Directory.GetDirectories(absolute,"*",SearchOption.AllDirectories).OrderByDescending(x=>x.Length)){NoReparse(directory);Directory.Delete(directory,false);}Directory.Delete(absolute,false);}
+ /// <summary>Imports an explicit bounded local nested glTF/OBJ graph. PNG textures are copied into native material-owned encoded buffers before staging is deleted; source files are not required by the returned document.</summary>
+ public static unsafe ConfiguredMeshReadResult ReadResources(string path,ConfiguredMeshFormat format,MeshCoordinateConfiguration configuration){ArgumentNullException.ThrowIfNull(configuration);Profile(format,configuration,true);Ready();string full=Path.GetFullPath(path),parent=Path.GetDirectoryName(full)!,name=ResourceName(Path.GetFileName(full));NoReparse(full);long mainBytes=new FileInfo(full).Length;if(mainBytes is <=0 or >67108864)throw new InvalidDataException("Mesh main file byte budget.");string[] names=ResourceGraph(full,format);long total=0;var files=names.Select(n=>{var row=ResourceFile(parent,n);if(row.Bytes<=0||(total+=row.Bytes)>67108864)throw new InvalidDataException("Aggregate mesh resource byte budget.");return row;}).ToArray();string stage=Stage();var locks=new List<FileStream>();TDocStdDocument? document=null;Shape? shape=null;
+  try{foreach(var row in files){string target=Path.GetFullPath(row.FileName,stage);Directory.CreateDirectory(Path.GetDirectoryName(target)!);using(var input=new FileStream(row.FullPath,FileMode.Open,FileAccess.Read,FileShare.Read)){using var output=new FileStream(target,FileMode.CreateNew,FileAccess.Write,FileShare.None);byte[] buffer=new byte[65536];long copied=0;int read;while((read=input.Read(buffer))!=0){if((copied+=read)>row.Bytes)throw new IOException("Mesh resource changed during bounded staging.");output.Write(buffer,0,read);}if(copied!=row.Bytes)throw new IOException("Mesh resource truncated during staging.");}locks.Add(new FileStream(target,FileMode.Open,FileAccess.Read,FileShare.Read));if(Digest(target)!=row.Sha256)throw new IOException("Copied mesh resource hash mismatch.");}if(!ResourceGraph(Path.Combine(stage,name),format).SequenceEqual(names,StringComparer.OrdinalIgnoreCase))throw new IOException("Resource graph changed while copying.");string nativePath=Path.Combine(stage,name);Dictionary<string,string>? nativeNames=null;if(format==ConfiguredMeshFormat.Obj){var normalized=ObjSdkGraph(stage,name,names,locks);nativePath=normalized.Main;nativeNames=normalized.Names;}using var writer=ProjectionCodec.Writer(2);writer.Write(82);Coordinates(writer,configuration);byte[] bytes=ProjectionCodec.Bytes(writer);nint owner,geometry,token;fixed(byte* p=bytes)NativeError.ThrowIfFailed(ReadResourcesNative(nativePath,(int)format,p,bytes.Length,out owner,out geometry,out token),"mesh_resource_read");using var payload=new ProjectionPayloadHandle(token,2);document=TDocStdDocument.FromNative(owner,"mesh_resource_read")??throw new InvalidDataException("Null mesh resource document.");shape=ShapeFactory.FromNativeHandle(geometry,"mesh_resource_read");using var reader=ProjectionCodec.Reader(payload,2);if(reader.ReadInt32()!=82)throw new InvalidDataException("Wrong mesh resource diagnostics.");var applied=Coordinates(reader);int status=reader.ReadInt32(),count=ProjectionCodec.Count(reader,128);var external=new string[count];for(int n=0;n<count;++n){string original=ProjectionCodec.Text(reader),absolute=Path.GetFullPath(original,stage);string relative=ResourceName(Path.GetRelativePath(stage,absolute).Replace('\\','/'));if(nativeNames is not null){if(!nativeNames.TryGetValue(relative,out string? originalName))throw new InvalidDataException("Native OBJ reported an unadmitted normalized resource.");relative=originalName;}if(!names.Contains(relative,StringComparer.OrdinalIgnoreCase))throw new InvalidDataException("Native mesh reader reported an unadmitted resource.");external[n]=Path.GetFullPath(relative,parent);}count=ProjectionCodec.Count(reader);var metadata=new Dictionary<string,string>(StringComparer.Ordinal);for(int n=0;n<count;++n)metadata.Add(ProjectionCodec.Text(reader),ProjectionCodec.Text(reader));count=ProjectionCodec.Count(reader);var roots=new StepCafRoot[count];for(int n=0;n<count;++n)roots[n]=new(ProjectionCodec.Text(reader),ProjectionCodec.Text(reader));ProjectionCodec.End(reader);foreach(var stream in locks)stream.Dispose();locks.Clear();CleanResources(stage);return new(document,shape,new(applied,null,status,Array.AsReadOnly(external),new System.Collections.ObjectModel.ReadOnlyDictionary<string,string>(metadata),Array.AsReadOnly(files),Array.AsReadOnly(roots)));}
+  catch{shape?.Dispose();document?.Dispose();throw;}finally{foreach(var stream in locks)stream.Dispose();CleanResources(stage);}}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_mesh_config_read_resources",StringMarshalling=StringMarshalling.Utf8)]private static unsafe partial NativeStatus ReadResourcesNative(string path,int format,byte* bytes,int length,out nint document,out nint shape,out nint result);
+
+ /// <summary>Copies encoded PNG bytes and decoded corner colors from one native material-owned texture. The snapshot survives document disposal.</summary>
+ public static unsafe MeshTextureSnapshot? ReadTexture(DocumentProjectionContext document,DocumentProjectionLabel material,MeshTextureSlot slot)
+ {
+  ArgumentNullException.ThrowIfNull(document);document.Validate(material);if(!Enum.IsDefined(slot))throw new ArgumentOutOfRangeException(nameof(slot));Ready();
+  NativeError.ThrowIfFailed(TextureNative(document.Parent,document.Domain,material.Entry,(int)slot,out nint token),"mesh_texture_snapshot");
+  using var payload=new ProjectionPayloadHandle(token,2);using var reader=ProjectionCodec.Reader(payload,2);
+  if(reader.ReadInt32()!=83)throw new InvalidDataException("Wrong mesh texture snapshot.");
+  if(!ProjectionCodec.Boolean(reader)){ProjectionCodec.End(reader);return null;}
+  int width=reader.ReadInt32(),height=reader.ReadInt32(),size=ProjectionCodec.Count(reader,8388608);
+  if(width<=0||height<=0||(long)width*height>16777216)throw new InvalidDataException("Texture dimensions outside copied profile.");
+  byte[] bytes=reader.ReadBytes(size);if(bytes.Length!=size)throw new InvalidDataException("Truncated encoded PNG snapshot.");
+  int count=ProjectionCodec.Count(reader,4);var corners=new MeshTexturePixel[count];
+  for(int n=0;n<count;++n)corners[n]=new(reader.ReadInt32(),reader.ReadInt32(),reader.ReadDouble(),reader.ReadDouble(),reader.ReadDouble(),reader.ReadDouble());
+  ProjectionCodec.End(reader);return new(slot,width,height,Array.AsReadOnly(bytes),Array.AsReadOnly(corners));
+ }
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_mesh_texture_snapshot",StringMarshalling=StringMarshalling.Utf8)]
+ private static partial NativeStatus TextureNative(SafeHandle document,int domain,string entry,int slot,out nint result);

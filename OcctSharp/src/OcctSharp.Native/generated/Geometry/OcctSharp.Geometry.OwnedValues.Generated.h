@@ -141,8 +141,14 @@ typedef struct OcctSharp_Owned_HLRAlgo_EdgeStatusHandle OcctSharp_Owned_HLRAlgo_
 typedef struct OcctSharp_Owned_HLRAlgo_InterferenceHandle OcctSharp_Owned_HLRAlgo_InterferenceHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_IntersectionHandle OcctSharp_Owned_HLRAlgo_IntersectionHandle;
 typedef struct OcctSharp_Owned_HLRAlgo_ProjectorHandle OcctSharp_Owned_HLRAlgo_ProjectorHandle;
+typedef struct OcctSharp_Owned_HatchGen_DomainHandle OcctSharp_Owned_HatchGen_DomainHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnElementHandle OcctSharp_Owned_HatchGen_PointOnElementHandle;
+typedef struct OcctSharp_Owned_HatchGen_PointOnHatchingHandle OcctSharp_Owned_HatchGen_PointOnHatchingHandle;
 typedef struct OcctSharp_Owned_Hatch_HatcherHandle OcctSharp_Owned_Hatch_HatcherHandle;
+typedef struct OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle OcctSharp_Owned_IGESConvGeom_GeomBuilderHandle;
 typedef struct OcctSharp_Owned_IGESData_DefSwitchHandle OcctSharp_Owned_IGESData_DefSwitchHandle;
+typedef struct OcctSharp_Owned_IGESData_DirCheckerHandle OcctSharp_Owned_IGESData_DirCheckerHandle;
+typedef struct OcctSharp_Owned_IGESData_GlobalSectionHandle OcctSharp_Owned_IGESData_GlobalSectionHandle;
 typedef struct OcctSharp_Owned_IGESData_IGESTypeHandle OcctSharp_Owned_IGESData_IGESTypeHandle;
 typedef struct OcctSharp_Owned_IntAna2d_AnaIntersectionHandle OcctSharp_Owned_IntAna2d_AnaIntersectionHandle;
 typedef struct OcctSharp_Owned_IntAna2d_ConicHandle OcctSharp_Owned_IntAna2d_ConicHandle;
@@ -163,6 +169,7 @@ typedef struct OcctSharp_Owned_IntCurve_PConicHandle OcctSharp_Owned_IntCurve_PC
 typedef struct OcctSharp_Owned_IntPolyh_CoupleHandle OcctSharp_Owned_IntPolyh_CoupleHandle;
 typedef struct OcctSharp_Owned_IntPolyh_EdgeHandle OcctSharp_Owned_IntPolyh_EdgeHandle;
 typedef struct OcctSharp_Owned_IntPolyh_PointHandle OcctSharp_Owned_IntPolyh_PointHandle;
+typedef struct OcctSharp_Owned_IntPolyh_StartPointHandle OcctSharp_Owned_IntPolyh_StartPointHandle;
 typedef struct OcctSharp_Owned_IntPolyh_TriangleHandle OcctSharp_Owned_IntPolyh_TriangleHandle;
 typedef struct OcctSharp_Owned_IntRes2d_DomainHandle OcctSharp_Owned_IntRes2d_DomainHandle;
 typedef struct OcctSharp_Owned_IntRes2d_IntersectionPointHandle OcctSharp_Owned_IntRes2d_IntersectionPointHandle;
@@ -174,17 +181,23 @@ typedef struct OcctSharp_Owned_IntSurf_PathPointHandle OcctSharp_Owned_IntSurf_P
 typedef struct OcctSharp_Owned_IntSurf_QuadricHandle OcctSharp_Owned_IntSurf_QuadricHandle;
 typedef struct OcctSharp_Owned_IntSurf_TransitionHandle OcctSharp_Owned_IntSurf_TransitionHandle;
 typedef struct OcctSharp_Owned_IntTools_BaseRangeSampleHandle OcctSharp_Owned_IntTools_BaseRangeSampleHandle;
+typedef struct OcctSharp_Owned_IntTools_CommonPrtHandle OcctSharp_Owned_IntTools_CommonPrtHandle;
+typedef struct OcctSharp_Owned_IntTools_CurveHandle OcctSharp_Owned_IntTools_CurveHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_CurveRangeSampleHandle OcctSharp_Owned_IntTools_CurveRangeSampleHandle;
 typedef struct OcctSharp_Owned_IntTools_MarkedRangeSetHandle OcctSharp_Owned_IntTools_MarkedRangeSetHandle;
 typedef struct OcctSharp_Owned_IntTools_RangeHandle OcctSharp_Owned_IntTools_RangeHandle;
+typedef struct OcctSharp_Owned_IntTools_RootHandle OcctSharp_Owned_IntTools_RootHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle;
 typedef struct OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle;
+typedef struct OcctSharp_Owned_Intf_SectionPointHandle OcctSharp_Owned_Intf_SectionPointHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalHandle OcctSharp_Owned_Intrv_IntervalHandle;
 typedef struct OcctSharp_Owned_Intrv_IntervalsHandle OcctSharp_Owned_Intrv_IntervalsHandle;
 typedef struct OcctSharp_Owned_LProp_CurAndInfHandle OcctSharp_Owned_LProp_CurAndInfHandle;
 typedef struct OcctSharp_Owned_MAT2d_CutCurveHandle OcctSharp_Owned_MAT2d_CutCurveHandle;
+typedef struct OcctSharp_Owned_Message_ExecStatusHandle OcctSharp_Owned_Message_ExecStatusHandle;
 typedef struct OcctSharp_Owned_NLPlate_NLPlateHandle OcctSharp_Owned_NLPlate_NLPlateHandle;
+typedef struct OcctSharp_Owned_OSD_ProtectionHandle OcctSharp_Owned_OSD_ProtectionHandle;
 typedef struct OcctSharp_Owned_Poly_TriangleHandle OcctSharp_Owned_Poly_TriangleHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxHandle OcctSharp_Owned_ProjLib_ComputeApproxHandle;
 typedef struct OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle OcctSharp_Owned_ProjLib_ComputeApproxOnPolarSurfaceHandle;
@@ -198,6 +211,8 @@ typedef struct OcctSharp_Owned_Quantity_ColorRGBAHandle OcctSharp_Owned_Quantity
 typedef struct OcctSharp_Owned_Quantity_DateHandle OcctSharp_Owned_Quantity_DateHandle;
 typedef struct OcctSharp_Owned_Quantity_PeriodHandle OcctSharp_Owned_Quantity_PeriodHandle;
 typedef struct OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle OcctSharp_Owned_RWMesh_CoordinateSystemConverterHandle;
+typedef struct OcctSharp_Owned_SelectBasics_PickResultHandle OcctSharp_Owned_SelectBasics_PickResultHandle;
+typedef struct OcctSharp_Owned_SelectMgr_ViewClipRangeHandle OcctSharp_Owned_SelectMgr_ViewClipRangeHandle;
 typedef struct OcctSharp_Owned_ShapeAnalysis_WireOrderHandle OcctSharp_Owned_ShapeAnalysis_WireOrderHandle;
 typedef struct OcctSharp_Owned_StepAP203_ApprovedItemHandle OcctSharp_Owned_StepAP203_ApprovedItemHandle;
 typedef struct OcctSharp_Owned_StepAP203_CertifiedItemHandle OcctSharp_Owned_StepAP203_CertifiedItemHandle;
@@ -230,6 +245,7 @@ typedef struct OcctSharp_Owned_StepBasic_ProductOrFormationOrDefinitionHandle Oc
 typedef struct OcctSharp_Owned_StepBasic_RoleSelectHandle OcctSharp_Owned_StepBasic_RoleSelectHandle;
 typedef struct OcctSharp_Owned_StepBasic_SourceItemHandle OcctSharp_Owned_StepBasic_SourceItemHandle;
 typedef struct OcctSharp_Owned_StepBasic_UnitHandle OcctSharp_Owned_StepBasic_UnitHandle;
+typedef struct OcctSharp_Owned_StepData_FieldHandle OcctSharp_Owned_StepData_FieldHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle OcctSharp_Owned_StepDimTol_DatumOrCommonDatumHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle OcctSharp_Owned_StepDimTol_DatumReferenceModifierHandle;
 typedef struct OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle OcctSharp_Owned_StepDimTol_DatumSystemOrReferenceHandle;
@@ -2910,6 +2926,103 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_geomplate_makeappr
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_geomplate_makeapprox_create_2(const OcctSharp_GeomPlateSurfaceHandle* arg0, double arg1, int32_t arg2, int32_t arg3, double arg4, int32_t arg5, int32_t arg6, double arg7, OcctSharp_Owned_GeomPlate_MakeApproxHandle** result);
 // Source: c:@S@GeomPlate_MakeApprox@F@Surface#1
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_geomplate_makeapprox_surface_3(const OcctSharp_Owned_GeomPlate_MakeApproxHandle* receiver, OcctSharp_GeomBSplineSurfaceHandle** result);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_release(OcctSharp_Owned_HatchGen_DomainHandle* handle);
+// Source: c:@S@HatchGen_Domain@F@FirstPoint#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_firstpoint_0(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result);
+// Source: c:@S@HatchGen_Domain@F@HasFirstPoint#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_hasfirstpoint_1(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_Domain@F@HasSecondPoint#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_hassecondpoint_2(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_3(OcctSharp_Owned_HatchGen_DomainHandle** result);
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#S0_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_4(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg1, OcctSharp_Owned_HatchGen_DomainHandle** result);
+// Source: c:@S@HatchGen_Domain@F@HatchGen_Domain#&1$@S@HatchGen_PointOnHatching#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_create_5(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, int32_t arg1, OcctSharp_Owned_HatchGen_DomainHandle** result);
+// Source: c:@S@HatchGen_Domain@F@SecondPoint#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_secondpoint_6(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result);
+// Source: c:@S@HatchGen_Domain@F@SetFirstPoint#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setfirstpoint_7(const OcctSharp_Owned_HatchGen_DomainHandle* receiver);
+// Source: c:@S@HatchGen_Domain@F@SetFirstPoint#&1$@S@HatchGen_PointOnHatching#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setfirstpoint_8(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0);
+// Source: c:@S@HatchGen_Domain@F@SetPoints#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setpoints_9(const OcctSharp_Owned_HatchGen_DomainHandle* receiver);
+// Source: c:@S@HatchGen_Domain@F@SetPoints#&1$@S@HatchGen_PointOnHatching#S0_#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setpoints_10(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg1);
+// Source: c:@S@HatchGen_Domain@F@SetSecondPoint#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setsecondpoint_11(const OcctSharp_Owned_HatchGen_DomainHandle* receiver);
+// Source: c:@S@HatchGen_Domain@F@SetSecondPoint#&1$@S@HatchGen_PointOnHatching#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_domain_setsecondpoint_12(const OcctSharp_Owned_HatchGen_DomainHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_release(OcctSharp_Owned_HatchGen_PointOnElementHandle* handle);
+// Source: c:@S@HatchGen_PointOnElement@F@HatchGen_PointOnElement#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_create_0(OcctSharp_Owned_HatchGen_PointOnElementHandle** result);
+// Source: c:@S@HatchGen_PointOnElement@F@IntersectionType#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_intersectiontype_1(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_PointOnElement@F@IsDifferent#&1$@S@HatchGen_PointOnElement#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_isdifferent_2(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1, int32_t* result);
+// Source: c:@S@HatchGen_PointOnElement@F@IsIdentical#&1$@S@HatchGen_PointOnElement#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_isidentical_3(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1, int32_t* result);
+// Source: c:@S@HatchGen_PointOnElement@F@SetIntersectionType#$@E@HatchGen_IntersectionType#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setintersectiontype_4(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_index_5(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_parameter_6(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, double* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_position_7(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_segmentbeginning_8(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_segmentend_9(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setindex_10(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setparameter_11(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, double arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setposition_12(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setsegmentbeginning_13(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonelement_setsegmentend_14(const OcctSharp_Owned_HatchGen_PointOnElementHandle* receiver, int32_t arg0);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_release(OcctSharp_Owned_HatchGen_PointOnHatchingHandle* handle);
+// Source: c:@S@HatchGen_PointOnHatching@F@AddPoint#&1$@S@HatchGen_PointOnElement#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_addpoint_0(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnElementHandle* arg0, double arg1);
+// Source: c:@S@HatchGen_PointOnHatching@F@ClrPoints#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_clrpoints_1(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver);
+// Source: c:@S@HatchGen_PointOnHatching@F@HatchGen_PointOnHatching#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_create_2(OcctSharp_Owned_HatchGen_PointOnHatchingHandle** result);
+// Source: c:@S@HatchGen_PointOnHatching@F@IsEqual#&1$@S@HatchGen_PointOnHatching#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_isequal_3(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result);
+// Source: c:@S@HatchGen_PointOnHatching@F@IsGreater#&1$@S@HatchGen_PointOnHatching#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_isgreater_4(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result);
+// Source: c:@S@HatchGen_PointOnHatching@F@IsLower#&1$@S@HatchGen_PointOnHatching#d#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_islower_5(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* arg0, double arg1, int32_t* result);
+// Source: c:@S@HatchGen_PointOnHatching@F@NbPoints#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_nbpoints_6(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_PointOnHatching@F@Point#I#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_point_7(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0, OcctSharp_Owned_HatchGen_PointOnElementHandle** result);
+// Source: c:@S@HatchGen_PointOnHatching@F@RemPoint#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_rempoint_8(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Index#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_index_9(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Parameter#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_parameter_10(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, double* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@Position#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_position_11(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentBeginning#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_segmentbeginning_12(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SegmentEnd#1
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_segmentend_13(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t* result);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetIndex#I#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setindex_14(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetParameter#d#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setparameter_15(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, double arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetPosition#$@E@TopAbs_Orientation#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setposition_16(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentBeginning#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setsegmentbeginning_17(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0);
+// Source: c:@S@HatchGen_IntersectionPoint@F@SetSegmentEnd#b#
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatchgen_pointonhatching_setsegmentend_18(const OcctSharp_Owned_HatchGen_PointOnHatchingHandle* receiver, int32_t arg0);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_owned_hatch_hatcher_release(OcctSharp_Owned_Hatch_HatcherHandle* handle);
 // Source: c:@S@Hatch_Hatcher@F@AddLine#&1$@S@gp_Dir2d#d#
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hatch_hatcher_addline_0(const OcctSharp_Owned_Hatch_HatcherHandle* receiver, OcctSharp_Value_Direction2d arg0, double arg1);

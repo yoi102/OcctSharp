@@ -18,8 +18,9 @@ into one ambiguous version string.
 
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
-- The current line began at `8.0.1-preview.1`; the current package is
-  `8.0.1-preview.24` (Batch Y; validation status in STATUS). Increment the preview counter for an
+- The current line began at `8.0.1-preview.1`; the current local candidate is
+  `8.0.1-preview.45` (selection workspaces; final delivery status in STATUS).
+  Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -32,11 +33,25 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.24 managed assembly identities remain `0.1.0.0`; native ABI is 1.68 and bridge
-  implementation is 0.76.0. Batch Y keeps schema 1.13. Each batch is locally packaged
+  Preview.31 managed assembly identities remain `0.1.0.0`; native ABI is 1.75 and bridge
+  implementation is 0.83.0. Configuration schema remains 1.13. Each candidate is locally packaged
   and checked; publication is not part of the completion workflow.
 
 ## Runtime identity
+
+Preview.31 adds Batch AG through separate grid support and operation export families.
+Preview.30 and earlier package versions remain immutable. ABI 1.75 / bridge 0.83.0
+are checked against the frozen Preview.30 export and managed API baselines.
+Current execution evidence is in STATUS.
+
+Preview.30 added Batch AF through the copied Array1/Sequence export family.
+Its complete local engineering evidence remains in the Preview.30 status history.
+
+Preview.29 consolidates the existing AD/AE and Cadoryx development changes. Its
+native minor increment covers compatible additions relative to Preview.28; the
+Release comparison before the version increment found 303 added exports and zero
+removals. Complete Release/Debug compatibility and delivery results are recorded
+in STATUS. Existing suffixed Preview.28 packages retain their original identities.
 
 The managed SDK should be able to query and report:
 
@@ -297,3 +312,13 @@ An OCCT upgrade report must classify:
 - Friendly public API changes.
 - Behavioral, ownership, and packaging changes.
 - Compatibility impact and required migration.
+
+Preview.52 development adds BB exact copied curve computations; ABI 1.95, bridge 0.103.0. Full delivery is incomplete until batch-bb/delivery-result.json PASS.
+
+Preview.53 development adds BC association diagnostics; ABI 1.96, bridge 0.104.0. Delivery requires batch-bc/delivery-result.json PASS.
+
+BD development: Preview.54, ABI 1.97, bridge 0.105.0.
+Delivery incomplete until its final source/payload freeze is PASS.
+
+BE development: Preview.55, ABI 1.98, bridge 0.106.0.
+Delivery incomplete until its final source/payload freeze is PASS.

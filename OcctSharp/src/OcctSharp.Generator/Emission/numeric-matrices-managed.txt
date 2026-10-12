@@ -1,0 +1,111 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Interop;
+using OcctSharp.OwnedValues;
+using OcctSharp.Numeric;
+namespace OcctSharp.OwnedValues {
+/// <summary>Copied numeric operations. Synchronize concurrent mutation of this existing mutable owner.</summary>
+public sealed partial class MathMatrix {
+ /// <summary>Copies finite row-major input, preserving explicit bounds. At most 1,048,576 values.</summary>
+ public static unsafe MathMatrix FromValues(CopiedGrid<double> values){ArgumentNullException.ThrowIfNull(values);var data=values.ToArray();fixed(double* p=data){NativeError.ThrowIfFailed(NumericInterop.Create(p,data.Length,values.RowLower,values.Rows,values.ColumnLower,values.Columns,out var result),"numeric_create");return FromNative(result);}}
+ /// <summary>Returns an independent immutable copy.</summary>
+ public unsafe CopiedGrid<double> Snapshot(){NativeError.ThrowIfFailed(NumericInterop.Copy(NativeHandle,null,0,out int lr,out int rows,out int lc,out int cols),"numeric_size");var data=new double[checked(rows*cols)];fixed(double* p=data)NativeError.ThrowIfFailed(NumericInterop.Copy(NativeHandle,p,data.Length,out lr,out rows,out lc,out cols),"numeric_copy");return new(data,rows,cols,lr,lc);}
+ MathMatrix NumericOperation(int operation,MathMatrix? right=null,double scalar=0){NativeError.ThrowIfFailed(NumericInterop.Operation(NativeHandle,(right??this).NativeHandle,operation,scalar,out var result),"numeric_operation");return FromNative(result);}
+ /// <summary>Deep copy into an independent owner.</summary>
+ public MathMatrix Clone()=>NumericOperation(0);
+ /// <summary>Functional addition; input owners remain unchanged.</summary>
+ public MathMatrix Added(MathMatrix right){ArgumentNullException.ThrowIfNull(right);return NumericOperation(1,right);}
+ /// <summary>Functional subtraction; input owners remain unchanged.</summary>
+ public MathMatrix Subtracted(MathMatrix right){ArgumentNullException.ThrowIfNull(right);return NumericOperation(2,right);}
+ /// <summary>Functional matrix product.</summary>
+ public MathMatrix Multiplied(MathMatrix right){ArgumentNullException.ThrowIfNull(right);return NumericOperation(3,right);}
+ /// <summary>Functional scalar product.</summary>
+ public MathMatrix Multiplied(double scalar)=>NumericOperation(4,scalar:scalar);
+ /// <summary>Functional division by a finite nonzero scalar.</summary>
+ public MathMatrix Divided(double scalar)=>NumericOperation(5,scalar:scalar);
+ /// <summary>Functional negation.</summary>
+ public MathMatrix Opposite()=>NumericOperation(6);
+ /// <summary>Transposes values and their row/column domains.</summary>
+ public MathMatrix Transposed()=>NumericOperation(7);
+ /// <summary>Copies the native matrix inverse. Singular input throws.</summary>
+ public MathMatrix Inverse()=>NumericOperation(8);
+ /// <summary>Computes this matrix transposed, multiplied by right.</summary>
+ public MathMatrix TransposeMultiplied(MathMatrix right){ArgumentNullException.ThrowIfNull(right);return NumericOperation(9,right);}
+ /// <summary>Native TMultiplied scalar operation: scales without transposing.</summary>
+ public MathMatrix TMultiplied(double scalar)=>NumericOperation(10,scalar:scalar);
+ unsafe MathMatrix NumericVector(int operation,int index,ReadOnlySpan<double> values){fixed(double* p=values){NativeError.ThrowIfFailed(NumericInterop.Vector(NativeHandle,operation,index,p,values.Length,out var result),"numeric_vector");return FromNative(result);}}
+ /// <summary>Copies a row into a column grid whose row domain is the original column domain.</summary>
+ public CopiedGrid<double> RowSnapshot(int row){using var value=NumericVector(0,row,[]);return value.Snapshot();}
+ /// <summary>Copies a column, preserving its row domain.</summary>
+ public CopiedGrid<double> ColumnSnapshot(int column){using var value=NumericVector(1,column,[]);return value.Snapshot();}
+ /// <summary>Returns a copy with one replaced row.</summary>
+ public MathMatrix WithRow(int row,ReadOnlySpan<double> values)=>NumericVector(2,row,values);
+ /// <summary>Returns a copy with one replaced column.</summary>
+ public MathMatrix WithColumn(int column,ReadOnlySpan<double> values)=>NumericVector(3,column,values);
+ /// <summary>Copies the matrix-vector product.</summary>
+ public CopiedGrid<double> MultiplyVector(ReadOnlySpan<double> values){using var value=NumericVector(4,0,values);return value.Snapshot();}
+ /// <summary>Creates the outer product of two copied vectors.</summary>
+ public static unsafe MathMatrix OuterProduct(ReadOnlySpan<double> left,ReadOnlySpan<double> right,int rowLower=1,int columnLower=1){fixed(double* a=left,b=right){NativeError.ThrowIfFailed(NumericInterop.Outer(a,left.Length,rowLower,b,right.Length,columnLower,out var p),"numeric_outer");return FromNative(p);}}
+ /// <summary>Solves a copied right-hand side using fresh private solver state. An unfinished decomposition returns no values.</summary>
+ public NumericSolveResult Solve(MathMatrix right,NumericSolver solver=NumericSolver.Gauss,double tolerance=1e-12){ArgumentNullException.ThrowIfNull(right);if(!Enum.IsDefined(solver))throw new ArgumentOutOfRangeException(nameof(solver));return SolveCore(right,(int)solver,tolerance);}
+ /// <summary>Computes the Gauss inverse with an explicit completion result.</summary>
+ public NumericSolveResult GaussInverse(double tolerance=1e-12)=>SolveCore(this,3,tolerance);
+ /// <summary>Computes a pseudoinverse with fresh SVD state for each tolerance.</summary>
+ public NumericSolveResult PseudoInverse(double tolerance=1e-12)=>SolveCore(this,4,tolerance);
+ /// <summary>Solves a selected inclusive rectangle by Householder. RHS rows match the selected rectangle.</summary>
+ public NumericSolveResult SolveSubmatrix(MathMatrix right,int firstRow,int lastRow,int firstColumn,int lastColumn,double tolerance=1e-12){ArgumentNullException.ThrowIfNull(right);return SolveCore(right,5,tolerance,firstRow,lastRow,firstColumn,lastColumn);}
+ NumericSolveResult SolveCore(MathMatrix right,int method,double tolerance,int r0=0,int r1=0,int c0=0,int c1=0){NativeError.ThrowIfFailed(NumericInterop.Solve(NativeHandle,right.NativeHandle,method,tolerance,r0,r1,c0,c1,out var p,out int done,out double residual,out double determinant),"numeric_solve");if(done==0)return new(false,null,null,null);using var value=FromNative(p);return new(true,value.Snapshot(),method<3||method==5?residual:null,method==0||method==3?determinant:null);}
+}
+}
+namespace OcctSharp.Numeric {
+/// <summary>Private numerical decomposition, rebuilt on every call.</summary>
+public enum NumericSolver { /// <summary>Square nonsingular system.</summary>
+ Gauss, /// <summary>Full-column-rank least squares.</summary>
+ Householder, /// <summary>Rank-deficient or rectangular least squares.</summary>
+ SingularValueDecomposition }
+/// <summary>Detached values, Frobenius residual when solving RHS, and determinant for Gauss. Failure publishes no partial values.</summary>
+public sealed record NumericSolveResult(bool IsDone,CopiedGrid<double>? Values,double? ResidualNorm,double? Determinant);
+/// <summary>Banded result. Weighted results append solved weights after the coordinate columns; status zero means success.</summary>
+public sealed record SplineSolveResult(int Status,CopiedGrid<double>? Values){ /// <summary>Whether every result was published.</summary>
+ public bool IsDone=>Status==0&&Values is not null; }
+internal sealed partial class NumericBandHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal NumericBandHandle(nint value):base(true){SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_band_release")]internal static partial void Release(nint value);
+}
+/// <summary>Immutable private factorization for a clamped nonperiodic spline interpolation matrix.</summary>
+public sealed partial class SplineMatrixSystem:IDisposable {
+ readonly NumericBandHandle handle;
+ NumericBandHandle NativeHandle {get{ObjectDisposedException.ThrowIf(handle.IsClosed,this);return handle;}}
+ SplineMatrixSystem(nint p,int status,int pivot){try{handle=new(p);}catch{NumericBandHandle.Release(p);throw;}Status=status;PivotIndex=pivot;}
+ static SplineMatrixSystem()=>NativeLibraryResolver.EnsureRegistered(typeof(SplineMatrixSystem).Assembly);
+ /// <summary>Zero for a usable factorization, nonzero for native noncompletion.</summary>
+ public int Status {get;}
+ /// <summary>One-based failing diagonal when known; zero otherwise.</summary>
+ public int PivotIndex {get;}
+ /// <summary>Copies parameters/contact orders, checks all band writes, and factors privately. Arrays contain one row per pole.</summary>
+ public static unsafe SplineMatrixSystem Create(ReadOnlySpan<double> flatKnots,int degree,ReadOnlySpan<double> parameters,ReadOnlySpan<int> contactOrders){if(contactOrders.Length!=parameters.Length)throw new ArgumentException("Contact count mismatch.",nameof(contactOrders));fixed(double* k=flatKnots,p=parameters)fixed(int* c=contactOrders){NativeError.ThrowIfFailed(CreateNative(k,flatKnots.Length,degree,p,c,parameters.Length,out var result,out int status,out int pivot),"spline_band_create");return new(result,status,pivot);}}
+ /// <summary>Copies the unfactored band storage. The main diagonal is column degree+1.</summary>
+ public CopiedGrid<double> MatrixSnapshot(){NativeError.ThrowIfFailed(MatrixNative(NativeHandle,out var p),"spline_band_matrix");using var matrix=MathMatrix.FromNative(p);return matrix.Snapshot();}
+ /// <summary>Copies basis derivatives: row zero is position, columns use one-based pole indices of the local support.</summary>
+ public static unsafe CopiedGrid<double> EvaluateBasis(ReadOnlySpan<double> flatKnots,int degree,double parameter,int derivativeOrder=0){fixed(double* k=flatKnots){NativeError.ThrowIfFailed(BasisNative(k,flatKnots.Length,degree,parameter,derivativeOrder,out var p),"spline_basis");using var matrix=MathMatrix.FromNative(p);return matrix.Snapshot();}}
+ /// <summary>Solves copied 2D/3D point rows. Null weights mean unweighted; an empty weights array is invalid. Homogeneous coordinates are retained when requested. Weighted output appends weights.</summary>
+ public unsafe SplineSolveResult Solve(CopiedGrid<double> points,double[]? weights=null,bool homogeneous=false){ArgumentNullException.ThrowIfNull(points);if(points.Columns is not (2 or 3))throw new ArgumentException("Expected point rows with two or three columns.",nameof(points));if(weights is not null&&weights.Length!=points.Rows)throw new ArgumentException("Weight count mismatch.",nameof(weights));var data=points.ToArray();var copiedWeights=weights is null?null:(double[])weights.Clone();fixed(double* d=data,w=copiedWeights){NativeError.ThrowIfFailed(SolveNative(NativeHandle,d,data.Length,points.Columns,w,copiedWeights?.Length??0,homogeneous?1:0,out var p,out int status),"spline_band_solve");if(status!=0)return new(status,null);using var matrix=MathMatrix.FromNative(p);return new(0,matrix.Snapshot());}}
+ /// <summary>Releases private storage after in-flight calls complete.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_basis")]private static unsafe partial NativeStatus BasisNative(double* knots,int count,int degree,double parameter,int derivative, out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_band_create")]private static unsafe partial NativeStatus CreateNative(double* knots,int count,int degree,double* parameters,int* contacts,int rows,out nint result,out int status,out int pivot);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_band_matrix")]private static partial NativeStatus MatrixNative(NumericBandHandle token,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_band_solve")]private static unsafe partial NativeStatus SolveNative(NumericBandHandle token,double* data,int count,int dimension,double* weights,int weightCount,int homogeneous,out nint result,out int status);
+}
+internal static unsafe partial class NumericInterop {
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_matrix_create")]internal static partial NativeStatus Create(double* data,int count,int lr,int rows,int lc,int cols,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_matrix_copy")]internal static partial NativeStatus Copy(MathMatrix.OwnedHandle token,double* data,int capacity,out int lr,out int rows,out int lc,out int cols);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_matrix_operation")]internal static partial NativeStatus Operation(MathMatrix.OwnedHandle left,MathMatrix.OwnedHandle right,int operation,double scalar,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_matrix_vector")]internal static partial NativeStatus Vector(MathMatrix.OwnedHandle token,int operation,int index,double* data,int count,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_outer_product")]internal static partial NativeStatus Outer(double* left,int rows,int lr,double* right,int cols,int lc,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_numeric_solve")]internal static partial NativeStatus Solve(MathMatrix.OwnedHandle matrix,MathMatrix.OwnedHandle rhs,int method,double tolerance,int r0,int r1,int c0,int c1,out nint result,out int done,out double residual,out double determinant);
+}
+}

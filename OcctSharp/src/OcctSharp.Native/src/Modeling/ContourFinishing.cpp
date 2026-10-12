@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 #include "Modeling/ContourPrograms.hxx"
 #include "Modeling/ScalarLaws.hxx"
 #include <BRepFilletAPI_MakeFillet.hxx>
@@ -23,7 +24,7 @@ struct RadiusEvidence { double Error = 0; int Samples = 0; };
 // OCCT 8.0.1's Law_Function setter clears the radius sequence without retaining
 // the supplied law. Use the checked sample API instead; expose measured adapter
 // error, never advertise this native interpolation as an exact arbitrary law.
-RadiusEvidence ApplyLaw(BRepFilletAPI_MakeFillet& algorithm, int contour,
+RadiusEvidence ApplyLaw(OcctSharpGenerated::LocalMakeFilletBuilder& algorithm, int contour,
   const ScalarLawData& law, double tolerance) {
   RadiusEvidence evidence;
   if (algorithm.Closed(contour)) {
@@ -69,7 +70,7 @@ RadiusEvidence ApplyLaw(BRepFilletAPI_MakeFillet& algorithm, int contour,
   }
   return evidence;
 }
-void Faults(BRepFilletAPI_MakeFillet& algorithm, const InputGraph& graph, Result& result) {
+void Faults(OcctSharpGenerated::LocalMakeFilletBuilder& algorithm, const InputGraph& graph, Result& result) {
   const int contours = algorithm.NbFaultyContours(), vertices = algorithm.NbFaultyVertices();
   Require(contours >= 0 && contours <= 256 && vertices >= 0 && vertices <= 100000, "Fillet fault count exceeds the limit.");
   for (int i = 1; i <= contours; ++i) {
@@ -87,7 +88,7 @@ void Faults(BRepFilletAPI_MakeFillet& algorithm, const InputGraph& graph, Result
     if (!partial.IsNull()) { result.Data().Info.partial = 1; result.Add(partial, Partial); }
   }
 }
-void Simulate(BRepFilletAPI_MakeFillet& algorithm, Result& result) {
+void Simulate(OcctSharpGenerated::LocalMakeFilletBuilder& algorithm, Result& result) {
   for (int ic = 1; ic <= algorithm.NbContours(); ++ic) {
     algorithm.Simulate(ic); const int surfaces = algorithm.NbSurf(ic);
     Require(surfaces >= 0 && surfaces <= 65536, "Too many simulated fillet patches.");
@@ -149,7 +150,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_contour_fillet(const OcctSharp_ShapeHa
       }
       seeds.push_back(p.seed);
     }
-    BRepFilletAPI_MakeFillet algorithm(graph.At(0), static_cast<ChFi3d_FilletShape>(o.representation));
+    OcctSharpGenerated::LocalMakeFilletBuilder algorithm(graph.At(0), static_cast<ChFi3d_FilletShape>(o.representation));
     algorithm.SetParams(o.tangent_tolerance, o.tolerance_3d, o.tolerance_2d, o.approximation_3d, o.approximation_2d, o.deflection);
     const GeomAbs_Shape continuity[] = {GeomAbs_C0, GeomAbs_C1, GeomAbs_C2};
     algorithm.SetContinuity(continuity[o.continuity], o.angular_tolerance);

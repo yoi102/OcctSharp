@@ -104,7 +104,8 @@ public static class GenerationReportWriter
         if (!dependencyClosure.IsComplete)
         {
             throw new InvalidDataException(
-                $"Generated shard dependency closure has {dependencyClosure.Issues.Count(static issue => issue.Code == "SD001")} unresolved emitted signature references.");
+                $"Generated shard dependency closure has {dependencyClosure.Issues.Count(static issue => issue.Code == "SD001")} unresolved emitted signature references: "
+                + string.Join("; ",dependencyClosure.Issues.Where(static issue=>issue.Code=="SD001").Select(static issue=>$"{issue.SourceStableId} {issue.ReferenceKind} {issue.NativeType}")));
         }
 
         return new GenerationReportSet(

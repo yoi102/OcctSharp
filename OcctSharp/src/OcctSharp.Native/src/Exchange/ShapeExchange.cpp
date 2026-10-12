@@ -1,3 +1,5 @@
+#include "../../generated/DataExchange/OcctSharp.DataExchange.StepAdapters.Generated.hxx"
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 // Native Exchange/ShapeExchange implementation. Public contracts and ownership are unchanged.
 #include "Exchange/ShapeExchange.hxx"
 #include "OcctSharp.Native.Internal.hxx"
@@ -101,12 +103,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step(
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STEP file.");
     }
 
-    if (reader.TransferRoots() <= 0)
+    if (OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader)() <= 0)
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP file produced no transferable roots.");
     }
 
-    TopoDS_Shape shape = reader.OneShape();
+    TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader)();
     if (shape.IsNull())
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
@@ -130,15 +132,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_iges(
   {
     ValidatePath(file_path);
     IGESControl_Reader reader;
-    if (reader.ReadFile(file_path) != IFSelect_RetDone)
+    if (OcctSharpGenerated::StepAdapters::XSControl_Reader_ReadFile_Bind(reader)(file_path) != IFSelect_RetDone)
     {
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the IGES file.");
     }
-    if (reader.TransferRoots() <= 0)
+    if (OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader)() <= 0)
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The IGES file produced no transferable roots.");
     }
-    TopoDS_Shape shape = reader.OneShape();
+    TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader)();
     if (shape.IsNull())
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The IGES transfer produced a null shape.");
@@ -167,13 +169,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step_report(
     out_report->read_status = static_cast<int32_t>(readStatus);
     if (readStatus != IFSelect_RetDone)
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STEP file.");
-    out_report->candidate_root_count = reader.NbRootsForTransfer();
-    out_report->system_length_unit = reader.SystemLengthUnit();
-    out_report->transferred_root_count = reader.TransferRoots();
-    out_report->shape_count = reader.NbShapes();
+    out_report->candidate_root_count = OcctSharpGenerated::StepAdapters::STEPControl_Reader_NbRootsForTransfer_Bind(reader)();
+    out_report->system_length_unit = OcctSharpGenerated::StepAdapters::STEPControl_Reader_SystemLengthUnit_Bind(reader)();
+    out_report->transferred_root_count = OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader)();
+    out_report->shape_count = OcctSharpGenerated::StepAdapters::XSControl_Reader_NbShapes_Bind(reader)();
     if (out_report->transferred_root_count <= 0)
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP file produced no transferable roots.");
-    TopoDS_Shape shape = reader.OneShape();
+    TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader)();
     if (shape.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
@@ -198,12 +200,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_open(
     if (reader->ReadStatus != IFSelect_RetDone)
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not open the STEP reader session.");
     if (target_system_length_unit > 0.0)
-      reader->Reader.SetSystemLengthUnit(target_system_length_unit);
+      OcctSharpGenerated::StepAdapters::STEPControl_Reader_SetSystemLengthUnit_Bind(reader->Reader)(target_system_length_unit);
 
     NCollection_Sequence<TCollection_AsciiString> length_units;
     NCollection_Sequence<TCollection_AsciiString> angle_units;
     NCollection_Sequence<TCollection_AsciiString> solid_angle_units;
-    reader->Reader.FileUnits(length_units, angle_units, solid_angle_units);
+    OcctSharpGenerated::StepAdapters::STEPControl_Reader_FileUnits_Bind(reader->Reader)(length_units, angle_units, solid_angle_units);
     for (NCollection_Sequence<TCollection_AsciiString>::Iterator iterator(length_units); iterator.More(); iterator.Next())
       reader->LengthUnits.emplace_back(iterator.Value().ToCString());
     for (NCollection_Sequence<TCollection_AsciiString>::Iterator iterator(angle_units); iterator.More(); iterator.Next())
@@ -212,9 +214,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_open(
       reader->SolidAngleUnits.emplace_back(iterator.Value().ToCString());
 
     *out_info = {
-      reader->Reader.NbRootsForTransfer(),
+      OcctSharpGenerated::StepAdapters::STEPControl_Reader_NbRootsForTransfer_Bind(reader->Reader)(),
       static_cast<int32_t>(reader->ReadStatus),
-      reader->Reader.SystemLengthUnit(),
+      OcctSharpGenerated::StepAdapters::STEPControl_Reader_SystemLengthUnit_Bind(reader->Reader)(),
       static_cast<int32_t>(reader->LengthUnits.size()),
       static_cast<int32_t>(reader->AngleUnits.size()),
       static_cast<int32_t>(reader->SolidAngleUnits.size()) };
@@ -268,13 +270,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_transfer_root(
   return Guard([&]
   {
     ValidateStepReader(reader);
-    const int32_t root_count = reader->Reader.NbRootsForTransfer();
+    const int32_t root_count = OcctSharpGenerated::StepAdapters::STEPControl_Reader_NbRootsForTransfer_Bind(reader->Reader)();
     if (root_index < 0 || root_index >= root_count)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The zero-based STEP root index is outside the candidate range.");
-    reader->Reader.ClearShapes();
-    if (!reader->Reader.TransferRoot(root_index + 1))
+    OcctSharpGenerated::StepAdapters::XSControl_Reader_ClearShapes_Bind(reader->Reader)();
+    if (!OcctSharpGenerated::StepAdapters::STEPControl_Reader_TransferRoot_Bind(reader->Reader)(root_index + 1))
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the selected STEP root.");
-    TopoDS_Shape shape = reader->Reader.OneShape();
+    TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader->Reader)();
     if (shape.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The selected STEP root produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
@@ -389,7 +391,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_stl(
   {
     ValidateShape(shape);
     ValidatePath(file_path);
-    BRepMesh_IncrementalMesh mesh(shape->Value, linear_deflection, false, angular_deflection, true);
+    OcctSharpGenerated::PrivateMeshBuilder mesh(shape->Value, linear_deflection, false, angular_deflection, true);
     StlAPI_Writer writer;
     writer.ASCIIMode() = binary == 0;
     if (!writer.Write(shape->Value, file_path))

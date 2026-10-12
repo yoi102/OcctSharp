@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@XSControl_Reader@F@GetShapeFixParameters#1",
+      "nativeName": "XSControl_Reader::GetShapeFixParameters",
+      "signature": "XSControl_Reader::GetShapeFixParameters: const XSAlgo_ShapeProcessor::ParameterMap &() const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "XSControl_Reader::NbRootsForTransfer",
+      "signature": "XSControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@RootForTransfer#I#",
+      "nativeName": "XSControl_Reader::RootForTransfer",
+      "signature": "XSControl_Reader::RootForTransfer: occ::handle<Standard_Transient> (const int)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetNorm#*1C#",
+      "nativeName": "XSControl_Reader::SetNorm",
+      "signature": "XSControl_Reader::SetNorm: bool (const char *const)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@SetShapeFixParameters#&1$@S@DE_ShapeFixParameters#&1$@S@NCollection_DataMap>#$@S@TCollection_AsciiString#S4_#$@S@NCollection_DefaultHasher>#S4_#",
+      "nativeName": "XSControl_Reader::SetShapeFixParameters",
+      "signature": "XSControl_Reader::SetShapeFixParameters: void (const DE_ShapeFixParameters &, const XSAlgo_ShapeProcessor::ParameterMap &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Shape#I#1",
+      "nativeName": "XSControl_Reader::Shape",
+      "signature": "XSControl_Reader::Shape: TopoDS_Shape (const int) const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferEntity",
+      "signature": "XSControl_Reader::TransferEntity: bool (const occ::handle<Standard_Transient> &, const Message_ProgressRange &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferOne#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferOne",
+      "signature": "XSControl_Reader::TransferOne: bool (const int, const Message_ProgressRange &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferOneRoot#I#&1$@S@Message_ProgressRange#",
+      "nativeName": "XSControl_Reader::TransferOneRoot",
+      "signature": "XSControl_Reader::TransferOneRoot: bool (const int, const Message_ProgressRange &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@XSControl_Reader#",
+      "nativeName": "XSControl_Reader::XSControl_Reader",
+      "signature": "XSControl_Reader::XSControl_Reader: void ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Private initialized native norm/actor and copied repair configuration; exact file/root/model domain, bounded selection and complete deep-copied topology with per-root native diagnostics."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LoadedFile#1",
+      "nativeName": "IFSelect_WorkSession::LoadedFile",
+      "signature": "IFSelect_WorkSession::LoadedFile: const char *() const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ModelCheckList#b#",
+      "nativeName": "IFSelect_WorkSession::ModelCheckList",
+      "signature": "IFSelect_WorkSession::ModelCheckList: Interface_CheckIterator (const bool)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Controller@F@Init#S",
+      "nativeName": "IGESControl_Controller::Init",
+      "signature": "IGESControl_Controller::Init: bool ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESControl_Reader#",
+      "nativeName": "IGESControl_Reader::IGESControl_Reader",
+      "signature": "IGESControl_Reader::IGESControl_Reader: void ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "IGESControl_Reader::NbRootsForTransfer",
+      "signature": "IGESControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IGESToBRep_Actor@F@IGESToBRep_Actor#",
+      "nativeName": "IGESToBRep_Actor::IGESToBRep_Actor",
+      "signature": "IGESToBRep_Actor::IGESToBRep_Actor: void ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@IGESToBRep_Actor@F@SetModel#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#",
+      "nativeName": "IGESToBRep_Actor::SetModel",
+      "signature": "IGESToBRep_Actor::SetModel: void (const occ::handle<Interface_InterfaceModel> &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CFail#I#b#1",
+      "nativeName": "Interface_Check::CFail",
+      "signature": "Interface_Check::CFail: const char *(const int, const bool) const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@CWarning#I#b#1",
+      "nativeName": "Interface_Check::CWarning",
+      "signature": "Interface_Check::CWarning: const char *(const int, const bool) const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbFails#1",
+      "nativeName": "Interface_Check::NbFails",
+      "signature": "Interface_Check::NbFails: int () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_Check@F@NbWarnings#1",
+      "nativeName": "Interface_Check::NbWarnings",
+      "signature": "Interface_Check::NbWarnings: int () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@More#1",
+      "nativeName": "Interface_CheckIterator::More",
+      "signature": "Interface_CheckIterator::More: bool () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Next#1",
+      "nativeName": "Interface_CheckIterator::Next",
+      "signature": "Interface_CheckIterator::Next: void () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Number#1",
+      "nativeName": "Interface_CheckIterator::Number",
+      "signature": "Interface_CheckIterator::Number: int () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Start#1",
+      "nativeName": "Interface_CheckIterator::Start",
+      "signature": "Interface_CheckIterator::Start: void () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_CheckIterator@F@Value#1",
+      "nativeName": "Interface_CheckIterator::Value",
+      "signature": "Interface_CheckIterator::Value: const occ::handle<Interface_Check> &() const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NbEntities#1",
+      "nativeName": "Interface_InterfaceModel::NbEntities",
+      "signature": "Interface_InterfaceModel::NbEntities: int () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Number#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_InterfaceModel::Number",
+      "signature": "Interface_InterfaceModel::Number: int (const occ::handle<Standard_Transient> &) const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@STEPControl_ActorRead@F@STEPControl_ActorRead#&1$@N@opencascade@S@handle>#$@S@Interface_InterfaceModel#",
+      "nativeName": "STEPControl_ActorRead::STEPControl_ActorRead",
+      "signature": "STEPControl_ActorRead::STEPControl_ActorRead: void (const occ::handle<Interface_InterfaceModel> &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Controller@F@Init#S",
+      "nativeName": "STEPControl_Controller::Init",
+      "signature": "STEPControl_Controller::Init: bool ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@NbRootsForTransfer#",
+      "nativeName": "STEPControl_Reader::NbRootsForTransfer",
+      "signature": "STEPControl_Reader::NbRootsForTransfer: int ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "STEPControl_Reader::ReadFile",
+      "signature": "STEPControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@STEPControl_Reader#",
+      "nativeName": "STEPControl_Reader::STEPControl_Reader",
+      "signature": "STEPControl_Reader::STEPControl_Reader: void ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ClearShapes#",
+      "nativeName": "XSControl_Reader::ClearShapes",
+      "signature": "XSControl_Reader::ClearShapes: void ()",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbShapes#1",
+      "nativeName": "XSControl_Reader::NbShapes",
+      "signature": "XSControl_Reader::NbShapes: int () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@LastCheckList#1",
+      "nativeName": "XSControl_TransferReader::LastCheckList",
+      "signature": "XSControl_TransferReader::LastCheckList: Interface_CheckIterator () const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_TransferReader@F@SetActor#&1$@N@opencascade@S@handle>#$@S@Transfer_ActorOfTransientProcess#",
+      "nativeName": "XSControl_TransferReader::SetActor",
+      "signature": "XSControl_TransferReader::SetActor: void (const occ::handle<Transfer_ActorOfTransientProcess> &)",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    },
+    {
+      "stableId": "c:@S@XSControl_WorkSession@F@TransferReader#1",
+      "nativeName": "XSControl_WorkSession::TransferReader",
+      "signature": "XSControl_WorkSession::TransferReader: const occ::handle<XSControl_TransferReader> &() const",
+      "guard": "BDPrivateRootTransfer",
+      "reason": "Actually called private actor initialization, exact model/root identity, copied diagnostic or independent topology publication prerequisite; existing declarations reused."
+    }
+  ]
+}

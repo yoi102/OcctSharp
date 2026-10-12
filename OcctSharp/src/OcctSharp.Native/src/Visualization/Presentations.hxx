@@ -24,6 +24,7 @@ int64_t FindPresentationId(
 void ValidateSubshape(
   const opencascade::handle<AIS_ColoredShape>& presentation,
   const OcctSharp_ShapeHandle* subshape);
+void ValidateSubshape(const opencascade::handle<AIS_ColoredShape>& presentation, const TopoDS_Shape& subshape);
 
 bool TryGetXdeStyleColor(
   const XCAFPrs_Style& style,

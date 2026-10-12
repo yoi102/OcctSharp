@@ -11,6 +11,8 @@
     <Compile Include="..\OcctSharp\Interop\**\*.cs" Exclude="..\OcctSharp\Interop\NativeError.cs;..\OcctSharp\Interop\NativeLibraryResolver.cs;..\OcctSharp\Interop\NativeStatus.cs" Link="Interop\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\OcctSharp\Shape.cs" Link="Shape.cs" />
     <Compile Include="..\OcctSharp\ShapeFactory.cs" Link="ShapeFactory.cs" />
+    <Compile Include="..\OcctSharp\FreeformAuthoring.cs" Link="FreeformAuthoring.cs" />
+    <Compile Include="..\OcctSharp\FreeformTypes.cs" Link="FreeformTypes.cs" />
     <Compile Include="..\OcctSharp\GeometrySnapshots.cs" Link="GeometrySnapshots.cs" />
     <Compile Include="..\OcctSharp\TopologyAdjacencyMap.cs" Link="TopologyAdjacencyMap.cs" />
     <Compile Include="..\OcctSharp\ShapeTransform.cs" Link="ShapeTransform.cs" />

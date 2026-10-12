@@ -2,7 +2,12 @@
 
 ## Current entry points
 
+- [AZ Foundation diagnostics](BATCH_AZ_FOUNDATION_DIAGNOSTICS.md).
+
 - [Current status](STATUS.md) — the single current progress and evidence summary.
+- [Preview.67 overall/code-origin review](PROGRESS_PREVIEW_67_REVIEW.md) — last frozen public baseline, module declaration accounting and remaining gates.
+- [BR–CI authorized long round](NEXT_ROUND_BR_CI_PLAN.md) — eighteen workflows, BR implementation under delivery validation.
+- [BR generated compatible adapters](BATCH_BR_GENERATOR_COMPATIBILITY.md) — preserved ABI/API, exact Manual conversion and embedded-input provenance.
 - [Development workflow](WORKFLOW.md) — task sizing, commits, validation selection and documentation maintenance.
 - [ADR-0091](adr/0091-proportionate-development-workflow.md) — accepted workflow relaxation and source-size exception policy.
 - [Historical status](STATUS_HISTORY_THROUGH_PREVIEW_22.md) — preserved checkpoint evidence; old active-loop text is not current.
@@ -224,6 +229,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Versioning](VERSIONING.md) — SDK, generator, ABI, and OCCT version relationships.
 - [Testing](TESTING.md) — validation layers and evidence requirements.
 - [Known issues](KNOWN_ISSUES.md) — tracked open and resolved limitations.
+
+- [Batch AT exchange sessions](BATCH_AT_EXCHANGE_SESSIONS.md) — copied headers,
+  same-session selections and restored metadata export under ADR-0112.
 
 ## Background documents
 

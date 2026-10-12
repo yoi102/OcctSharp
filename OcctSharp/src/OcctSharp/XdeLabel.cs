@@ -3,7 +3,7 @@ using OcctSharp.Interop;
 namespace OcctSharp;
 
 /// <summary>Represents an XDE label by stable entry and remains parent-bound to its document.</summary>
-public sealed class XdeLabel
+public sealed partial class XdeLabel
 {
     internal XdeLabel(XdeDocument document, string entry)
     {

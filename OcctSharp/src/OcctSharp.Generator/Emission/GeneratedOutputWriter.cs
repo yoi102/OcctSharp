@@ -57,7 +57,8 @@ public static class GeneratedOutputWriter
                         file.ProductModule.ToString(),
                         file.ApiLayer.ToString(),
                         file.OutputShard))
-                    .ToArray());
+                    .ToArray(),
+                GeneratorResourceProvenance.Capture());
             string manifestContent = JsonSerializer.Serialize(
                 manifest,
                 ManifestJsonOptions) + "\n";

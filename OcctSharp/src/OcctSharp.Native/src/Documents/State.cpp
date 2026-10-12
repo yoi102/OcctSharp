@@ -1,3 +1,5 @@
+#include "../../generated/Foundation/OcctSharp.Foundation.DocumentIdentityAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Documents/State implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Documents/State.hxx"
@@ -49,32 +51,32 @@ std::string DocumentLabelEntry(const TDF_Label& label)
 std::string DocumentGuid(const Standard_GUID& guid)
 {
   char value[Standard_GUID_SIZE_ALLOC] = {};
-  guid.ToCString(value);
+  OcctSharpGenerated::DocumentIdentityAdapters::Standard_GUID_ToCString_Bind(guid)(value);
   return std::string(value);
 }
 
 int32_t DocumentAttributeKindOf(const occ::handle<TDF_Attribute>& attribute)
 {
   const Standard_GUID& id = attribute->ID();
-  if (id == TDataStd_Name::GetID()) return DocumentAttributeName;
-  if (id == TDataStd_Comment::GetID()) return DocumentAttributeComment;
-  if (id == TDataStd_AsciiString::GetID()) return DocumentAttributeAsciiString;
-  if (id == TDataStd_Integer::GetID()) return DocumentAttributeInteger;
-  if (id == TDataStd_Real::GetID()) return DocumentAttributeReal;
-  if (id == TDataStd_IntegerArray::GetID()) return DocumentAttributeIntegerArray;
-  if (id == TDataStd_RealArray::GetID()) return DocumentAttributeRealArray;
-  if (id == TDF_Reference::GetID()) return DocumentAttributeReference;
-  if (id == TDataStd_ReferenceArray::GetID()) return DocumentAttributeReferenceArray;
-  if (id == TDataStd_TreeNode::GetDefaultTreeID()) return DocumentAttributeTreeNode;
-  if (id == TNaming_NamedShape::GetID()) return DocumentAttributeNamedShape;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID()) return DocumentAttributeName;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_Comment_GetID()) return DocumentAttributeComment;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_AsciiString_GetID()) return DocumentAttributeAsciiString;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_Integer_GetID()) return DocumentAttributeInteger;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_Real_GetID()) return DocumentAttributeReal;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_GetID()) return DocumentAttributeIntegerArray;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID()) return DocumentAttributeRealArray;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDF_Reference_GetID()) return DocumentAttributeReference;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_GetID()) return DocumentAttributeReferenceArray;
+  if (id == OcctSharpGenerated::DocumentAdapters::TDataStd_TreeNode_GetDefaultTreeID()) return DocumentAttributeTreeNode;
+  if (id == OcctSharpGenerated::DocumentAdapters::TNaming_NamedShape_GetID()) return DocumentAttributeNamedShape;
   return DocumentAttributeUnknown;
 }
 
 std::vector<occ::handle<TDF_Attribute>> DocumentAttributes(const TDF_Label& label)
 {
   std::vector<occ::handle<TDF_Attribute>> attributes;
-  for (TDF_AttributeIterator iterator(label); iterator.More(); iterator.Next())
-    attributes.push_back(iterator.Value());
+  for (OcctSharpGenerated::DocumentAdapters::PrivateTDFAttributeIterator iterator(label); OcctSharpGenerated::DocumentAdapters::TDF_AttributeIterator_More(iterator); OcctSharpGenerated::DocumentAdapters::TDF_AttributeIterator_Next(iterator))
+    attributes.push_back(OcctSharpGenerated::DocumentAdapters::TDF_AttributeIterator_Value(iterator));
   std::sort(attributes.begin(), attributes.end(), [](const auto& left, const auto& right)
   {
     const std::string leftId = DocumentGuid(left->ID());
@@ -89,17 +91,17 @@ const Standard_GUID& DocumentKindId(const int32_t kind)
 {
   switch (kind)
   {
-    case DocumentAttributeName: return TDataStd_Name::GetID();
-    case DocumentAttributeComment: return TDataStd_Comment::GetID();
-    case DocumentAttributeAsciiString: return TDataStd_AsciiString::GetID();
-    case DocumentAttributeInteger: return TDataStd_Integer::GetID();
-    case DocumentAttributeReal: return TDataStd_Real::GetID();
-    case DocumentAttributeIntegerArray: return TDataStd_IntegerArray::GetID();
-    case DocumentAttributeRealArray: return TDataStd_RealArray::GetID();
-    case DocumentAttributeReference: return TDF_Reference::GetID();
-    case DocumentAttributeReferenceArray: return TDataStd_ReferenceArray::GetID();
-    case DocumentAttributeTreeNode: return TDataStd_TreeNode::GetDefaultTreeID();
-    case DocumentAttributeNamedShape: return TNaming_NamedShape::GetID();
+    case DocumentAttributeName: return OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID();
+    case DocumentAttributeComment: return OcctSharpGenerated::DocumentAdapters::TDataStd_Comment_GetID();
+    case DocumentAttributeAsciiString: return OcctSharpGenerated::DocumentAdapters::TDataStd_AsciiString_GetID();
+    case DocumentAttributeInteger: return OcctSharpGenerated::DocumentAdapters::TDataStd_Integer_GetID();
+    case DocumentAttributeReal: return OcctSharpGenerated::DocumentAdapters::TDataStd_Real_GetID();
+    case DocumentAttributeIntegerArray: return OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_GetID();
+    case DocumentAttributeRealArray: return OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID();
+    case DocumentAttributeReference: return OcctSharpGenerated::DocumentAdapters::TDF_Reference_GetID();
+    case DocumentAttributeReferenceArray: return OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_GetID();
+    case DocumentAttributeTreeNode: return OcctSharpGenerated::DocumentAdapters::TDataStd_TreeNode_GetDefaultTreeID();
+    case DocumentAttributeNamedShape: return OcctSharpGenerated::DocumentAdapters::TNaming_NamedShape_GetID();
     default: throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The document attribute kind is unsupported.");
   }
 }
@@ -112,20 +114,20 @@ std::string DocumentTextValue(
   if (kind == DocumentAttributeName)
   {
     occ::handle<TDataStd_Name> attribute;
-    if (!label.FindAttribute(TDataStd_Name::GetID(), attribute)) { found = false; return {}; }
-    return ExtendedToUtf8(attribute->Get());
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID(), attribute)) { found = false; return {}; }
+    return ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(attribute)));
   }
   if (kind == DocumentAttributeComment)
   {
     occ::handle<TDataStd_Comment> attribute;
-    if (!label.FindAttribute(TDataStd_Comment::GetID(), attribute)) { found = false; return {}; }
-    return ExtendedToUtf8(attribute->Get());
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_Comment_GetID(), attribute)) { found = false; return {}; }
+    return ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(attribute)));
   }
   if (kind == DocumentAttributeAsciiString)
   {
     occ::handle<TDataStd_AsciiString> attribute;
-    if (!label.FindAttribute(TDataStd_AsciiString::GetID(), attribute)) { found = false; return {}; }
-    return std::string(attribute->Get().ToCString());
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_AsciiString_GetID(), attribute)) { found = false; return {}; }
+    return std::string(OcctSharpGenerated::DocumentAdapters::TDataStd_AsciiString_Get(*(attribute)).ToCString());
   }
   throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested attribute is not textual.");
 }
@@ -133,8 +135,8 @@ std::string DocumentTextValue(
 occ::handle<TDataStd_TreeNode> DocumentTreeNode(const TDF_Label& label, const bool create)
 {
   occ::handle<TDataStd_TreeNode> node;
-  if (!label.FindAttribute(TDataStd_TreeNode::GetDefaultTreeID(), node) && create)
-    node = TDataStd_TreeNode::Set(label);
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_TreeNode_GetDefaultTreeID(), node) && create)
+    node = OcctSharpGenerated::DocumentAdapters::TDataStd_TreeNode_Set(label);
   return node;
 }
 
@@ -142,7 +144,7 @@ occ::handle<TDF_Delta> DocumentHistoryDelta(
   const OcctSharp_OcafDocumentHandle* document, const bool redo, const int32_t index)
 {
   ValidateOcafDocument(document);
-  const auto& list = redo ? document->Document->GetRedos() : document->Document->GetUndos();
+  const auto& list = redo ? OcctSharpGenerated::DocumentAdapters::TDocStd_Document_GetRedos(*(document->Document)) : OcctSharpGenerated::DocumentAdapters::TDocStd_Document_GetUndos(*(document->Document));
   if (index < 1 || index > list.Size())
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The history index is outside the valid 1-based range.");
   int32_t current = 1;
@@ -154,11 +156,11 @@ occ::handle<TDF_Delta> DocumentHistoryDelta(
 std::vector<std::string> DocumentHistoryLabels(const occ::handle<TDF_Delta>& delta)
 {
   std::vector<std::string> entries;
-  for (NCollection_List<occ::handle<TDF_AttributeDelta>>::Iterator iterator(delta->AttributeDeltas());
+  for (NCollection_List<occ::handle<TDF_AttributeDelta>>::Iterator iterator(OcctSharpGenerated::DocumentAdapters::TDF_Delta_AttributeDeltas(*(delta)));
        iterator.More(); iterator.Next())
   {
-    const TDF_Label label = iterator.Value()->Label();
-    if (!label.IsNull()) entries.push_back(DocumentLabelEntry(label));
+    const TDF_Label label = OcctSharpGenerated::DocumentAdapters::TDF_AttributeDelta_Label(*(iterator.Value()));
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label)) entries.push_back(DocumentLabelEntry(label));
   }
   std::sort(entries.begin(), entries.end());
   entries.erase(std::unique(entries.begin(), entries.end()), entries.end());
@@ -182,9 +184,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_save_format(
   {
     RequireClosedDocumentCommand(document);
     ValidatePath(file_path);
-    document->Document->ChangeStorageFormat(TCollection_ExtendedString(
+    OcctSharpGenerated::DocumentAdapters::TDocStd_Document_ChangeStorageFormat(*(document->Document),TCollection_ExtendedString(
       xde != 0 ? (xml != 0 ? "XmlXCAF" : "BinXCAF") : (xml != 0 ? "XmlOcaf" : "BinOcaf")));
-    const PCDM_StoreStatus status = document->Application->SaveAs(
+    const PCDM_StoreStatus status = OcctSharpGenerated::DocumentAdapters::TDocStd_Application_SaveAs(*(document->Application),
       document->Document, TCollection_ExtendedString(file_path, true));
     if (status != PCDM_SS_OK)
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not save the requested document format.");
@@ -202,11 +204,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_label_info(
   return Guard([&]
   {
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    *tag = label.Tag(); *depth = label.Depth(); *is_root = label.IsRoot() ? 1 : 0;
-    if (!label.IsRoot())
+    *tag = OcctSharpGenerated::DocumentAdapters::TDF_Label_Tag(label); *depth = OcctSharpGenerated::DocumentAdapters::TDF_Label_Depth(label); *is_root = OcctSharpGenerated::DocumentAdapters::TDF_Label_IsRoot(label) ? 1 : 0;
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_IsRoot(label))
     {
       *has_parent = 1;
-      CopyUtf8Result(DocumentLabelEntry(label.Father()), parent_buffer, parent_capacity, parent_written);
+      CopyUtf8Result(DocumentLabelEntry(OcctSharpGenerated::DocumentAdapters::TDF_Label_Father(label)), parent_buffer, parent_capacity, parent_written);
     }
   });
 }
@@ -219,8 +221,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_child_entry(
   {
     if (index < 1) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Child indices are 1-based.");
     int32_t current = 1;
-    for (TDF_ChildIterator iterator(ResolveOcafLabel(document, entry), false); iterator.More(); iterator.Next(), ++current)
-      if (current == index) { CopyUtf8Result(DocumentLabelEntry(iterator.Value()), buffer, capacity, written); return; }
+    for (OcctSharpGenerated::DocumentAdapters::PrivateTDFChildIterator iterator(ResolveOcafLabel(document, entry), false); OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_More(iterator); OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_Next(iterator), ++current)
+      if (current == index) { CopyUtf8Result(DocumentLabelEntry(OcctSharpGenerated::DocumentAdapters::TDF_ChildIterator_Value(iterator)), buffer, capacity, written); return; }
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The child index is out of range.");
   });
 }
@@ -248,7 +250,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_attribute_info(
     const auto& attribute = attributes[static_cast<size_t>(index - 1)];
     *kind = DocumentAttributeKindOf(attribute);
     CopyUtf8Result(DocumentGuid(attribute->ID()), id_buffer, id_capacity, id_written);
-    CopyUtf8Result(std::string(attribute->DynamicType()->Name()), type_buffer, type_capacity, type_written);
+    CopyUtf8Result(std::string(OcctSharpGenerated::DocumentIdentityAdapters::TDF_Attribute_DynamicType_Bind(*(attribute))()->Name()), type_buffer, type_capacity, type_written);
   });
 }
 
@@ -286,9 +288,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_text_set(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (kind == DocumentAttributeName) TDataStd_Name::Set(label, MakeExtendedUtf8(utf8, length));
-    else if (kind == DocumentAttributeComment) TDataStd_Comment::Set(label, MakeExtendedUtf8(utf8, length));
-    else if (kind == DocumentAttributeAsciiString) TDataStd_AsciiString::Set(label, MakeAsciiString(utf8, length));
+    if (kind == DocumentAttributeName) OcctSharpGenerated::DocumentAdapters::TDataStd_Name_Set(label, MakeExtendedUtf8(utf8, length));
+    else if (kind == DocumentAttributeComment) OcctSharpGenerated::DocumentAdapters::TDataStd_Comment_Set(label, MakeExtendedUtf8(utf8, length));
+    else if (kind == DocumentAttributeAsciiString) OcctSharpGenerated::DocumentAdapters::TDataStd_AsciiString_Set(label, MakeAsciiString(utf8, length));
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested attribute is not textual.");
   });
 }
@@ -306,12 +308,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_scalar_get(
     if (kind == DocumentAttributeInteger)
     {
       occ::handle<TDataStd_Integer> attribute;
-      if (label.FindAttribute(TDataStd_Integer::GetID(), attribute)) { *has_value = 1; *integer_value = attribute->Get(); }
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_Integer_GetID(), attribute)) { *has_value = 1; *integer_value = attribute->Get(); }
     }
     else if (kind == DocumentAttributeReal)
     {
       occ::handle<TDataStd_Real> attribute;
-      if (label.FindAttribute(TDataStd_Real::GetID(), attribute)) { *has_value = 1; *real_value = attribute->Get(); }
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_Real_GetID(), attribute)) { *has_value = 1; *real_value = attribute->Get(); }
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested attribute is not scalar.");
   });
@@ -325,11 +327,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_scalar_set(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (kind == DocumentAttributeInteger) TDataStd_Integer::Set(label, integer_value);
+    if (kind == DocumentAttributeInteger) OcctSharpGenerated::DocumentAdapters::TDataStd_Integer_Set(label, integer_value);
     else if (kind == DocumentAttributeReal)
     {
       if (!std::isfinite(real_value)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Real attributes must be finite.");
-      TDataStd_Real::Set(label, real_value);
+      OcctSharpGenerated::DocumentAdapters::TDataStd_Real_Set(label, real_value);
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested attribute is not scalar.");
   });
@@ -341,7 +343,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_attribute_remove(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
-    ResolveOcafLabel(document, entry).ForgetAttribute(DocumentKindId(kind));
+    OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(ResolveOcafLabel(document, entry),DocumentKindId(kind));
   });
 }
 
@@ -358,13 +360,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_array_info(
     if (kind == DocumentAttributeIntegerArray)
     {
       occ::handle<TDataStd_IntegerArray> attribute;
-      if (label.FindAttribute(TDataStd_IntegerArray::GetID(), attribute))
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_GetID(), attribute))
       { *has_value = 1; *lower = attribute->Lower(); *count = attribute->Upper() - attribute->Lower() + 1; }
     }
     else if (kind == DocumentAttributeRealArray)
     {
       occ::handle<TDataStd_RealArray> attribute;
-      if (label.FindAttribute(TDataStd_RealArray::GetID(), attribute))
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID(), attribute))
       { *has_value = 1; *lower = attribute->Lower(); *count = attribute->Upper() - attribute->Lower() + 1; }
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested attribute is not an array.");
@@ -380,7 +382,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_integer_array_copy(
   return Guard([&]
   {
     occ::handle<TDataStd_IntegerArray> attribute;
-    if (!ResolveOcafLabel(document, entry).FindAttribute(TDataStd_IntegerArray::GetID(), attribute))
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_GetID(), attribute))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The document label has no integer array.");
     const int32_t count = attribute->Upper() - attribute->Lower() + 1;
     ValidateDocumentOutputArray(values, capacity, count, "The integer-array output buffer is too small.");
@@ -398,7 +400,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_real_array_copy(
   return Guard([&]
   {
     occ::handle<TDataStd_RealArray> attribute;
-    if (!ResolveOcafLabel(document, entry).FindAttribute(TDataStd_RealArray::GetID(), attribute))
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID(), attribute))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The document label has no real array.");
     const int32_t count = attribute->Upper() - attribute->Lower() + 1;
     ValidateDocumentOutputArray(values, capacity, count, "The real-array output buffer is too small.");
@@ -415,12 +417,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_integer_array_set(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document); ValidateArray(values, count, "The integer-array input is invalid.");
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (count == 0) { label.ForgetAttribute(TDataStd_IntegerArray::GetID()); return; }
+    if (count == 0) { OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_GetID()); return; }
     const int64_t upper64 = static_cast<int64_t>(lower) + count - 1;
     if (upper64 < std::numeric_limits<int32_t>::min() || upper64 > std::numeric_limits<int32_t>::max())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The integer-array bounds overflow Int32.");
     const int32_t upper = static_cast<int32_t>(upper64);
-    auto attribute = TDataStd_IntegerArray::Set(label, lower, upper);
+    auto attribute = OcctSharpGenerated::DocumentAdapters::TDataStd_IntegerArray_Set(label, lower, upper);
     for (int32_t offset = 0; offset < count; ++offset) attribute->SetValue(lower + offset, values[offset]);
   });
 }
@@ -433,12 +435,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_real_array_set(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document); ValidateArray(values, count, "The real-array input is invalid.");
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (count == 0) { label.ForgetAttribute(TDataStd_RealArray::GetID()); return; }
+    if (count == 0) { OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID()); return; }
     const int64_t upper64 = static_cast<int64_t>(lower) + count - 1;
     if (upper64 < std::numeric_limits<int32_t>::min() || upper64 > std::numeric_limits<int32_t>::max())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The real-array bounds overflow Int32.");
     const int32_t upper = static_cast<int32_t>(upper64);
-    auto attribute = TDataStd_RealArray::Set(label, lower, upper);
+    auto attribute = OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_Set(label, lower, upper);
     for (int32_t offset = 0; offset < count; ++offset)
     {
       if (!std::isfinite(values[offset])) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Real-array values must be finite.");
@@ -460,12 +462,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_info(
     if (array == 0)
     {
       occ::handle<TDF_Reference> attribute;
-      if (label.FindAttribute(TDF_Reference::GetID(), attribute)) { *has_value = 1; *count = 1; }
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDF_Reference_GetID(), attribute)) { *has_value = 1; *count = 1; }
     }
     else
     {
       occ::handle<TDataStd_ReferenceArray> attribute;
-      if (label.FindAttribute(TDataStd_ReferenceArray::GetID(), attribute))
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_GetID(), attribute))
       { *has_value = 1; *count = attribute->Upper() - attribute->Lower() + 1; }
     }
   });
@@ -483,18 +485,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_entry(
     {
       if (index != 1) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A direct reference has exactly one 1-based item.");
       occ::handle<TDF_Reference> attribute;
-      if (!label.FindAttribute(TDF_Reference::GetID(), attribute))
+      if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDF_Reference_GetID(), attribute))
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The document label has no direct reference.");
-      target = attribute->Get();
+      target = OcctSharpGenerated::DocumentAdapters::TDF_Reference_Get(*(attribute));
     }
     else
     {
       occ::handle<TDataStd_ReferenceArray> attribute;
-      if (!label.FindAttribute(TDataStd_ReferenceArray::GetID(), attribute))
+      if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_GetID(), attribute))
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The document label has no reference array.");
       const int32_t count = attribute->Upper() - attribute->Lower() + 1;
       if (index < 1 || index > count) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The reference-array index is out of range.");
-      target = attribute->Value(attribute->Lower() + index - 1);
+      target = OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_Value(*(attribute),attribute->Lower() + index - 1);
     }
     CopyUtf8Result(DocumentLabelEntry(target), buffer, capacity, written);
   });
@@ -506,7 +508,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_set(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
-    TDF_Reference::Set(ResolveOcafLabel(document, entry), ResolveOcafLabel(document, target_entry));
+    OcctSharpGenerated::DocumentAdapters::TDF_Reference_Set(ResolveOcafLabel(document, entry), ResolveOcafLabel(document, target_entry));
   });
 }
 
@@ -520,10 +522,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_array_set(
     if (count < 0 || (count > 0 && target_entries == nullptr))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The reference-array input is invalid.");
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (count == 0) { label.ForgetAttribute(TDataStd_ReferenceArray::GetID()); return; }
-    auto attribute = TDataStd_ReferenceArray::Set(label, 1, count);
+    if (count == 0) { OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_GetID()); return; }
+    auto attribute = OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_Set(label, 1, count);
     for (int32_t index = 0; index < count; ++index)
-      attribute->SetValue(index + 1, ResolveOcafLabel(document, target_entries[index]));
+      OcctSharpGenerated::DocumentAdapters::TDataStd_ReferenceArray_SetValue(*(attribute),index + 1, ResolveOcafLabel(document, target_entries[index]));
   });
 }
 
@@ -553,12 +555,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_tree_entry(
     if (parent != 0)
     {
       if (index != 1 || !node->HasFather()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The application tree node has no requested parent.");
-      CopyUtf8Result(DocumentLabelEntry(node->Father()->Label()), buffer, capacity, written); return;
+      CopyUtf8Result(DocumentLabelEntry(OcctSharpGenerated::DocumentAdapters::TDF_Attribute_Label(*(node->Father()))), buffer, capacity, written); return;
     }
     if (index < 1) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Tree child indices are 1-based.");
     int32_t current = 1;
     for (auto child = node->First(); !child.IsNull(); child = child->Next(), ++current)
-      if (current == index) { CopyUtf8Result(DocumentLabelEntry(child->Label()), buffer, capacity, written); return; }
+      if (current == index) { CopyUtf8Result(DocumentLabelEntry(OcctSharpGenerated::DocumentAdapters::TDF_Attribute_Label(*(child))), buffer, capacity, written); return; }
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The application tree child index is out of range.");
   });
 }
@@ -599,8 +601,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_named_shape_get(
   return Guard([&]
   {
     occ::handle<TNaming_NamedShape> attribute;
-    if (!ResolveOcafLabel(document, entry).FindAttribute(TNaming_NamedShape::GetID(), attribute)) return;
-    const TopoDS_Shape value = TNaming_Tool::GetShape(attribute);
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::DocumentAdapters::TNaming_NamedShape_GetID(), attribute)) return;
+    const TopoDS_Shape value = OcctSharpGenerated::DocumentAdapters::TNaming_Tool_GetShape(attribute);
     if (!value.IsNull()) { *has_shape = 1; *shape = AllocateShape(value); }
   });
 }
@@ -611,7 +613,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_named_shape_set(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document); ValidateUsableShape(shape);
-    TNaming_Builder(ResolveOcafLabel(document, entry)).Generated(shape->Value);
+    OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Generated(OcctSharpGenerated::DocumentAdapters::PrivateTNamingBuilder(ResolveOcafLabel(document, entry)),shape->Value);
   });
 }
 
@@ -627,8 +629,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_commit_named_command(
     *changed = committed ? 1 : 0;
     if (committed && length > 0)
     {
-      const auto& undos = document->Document->GetUndos();
-      if (!undos.IsEmpty()) undos.First()->SetName(MakeExtendedUtf8(utf8, length));
+      const auto& undos = OcctSharpGenerated::DocumentAdapters::TDocStd_Document_GetUndos(*(document->Document));
+      if (!undos.IsEmpty()) OcctSharpGenerated::DocumentAdapters::TDF_Delta_SetName(*(undos.First()),MakeExtendedUtf8(utf8, length));
     }
   });
 }
@@ -692,9 +694,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_entry_info(
   {
     const auto delta = DocumentHistoryDelta(document, redo != 0, index);
     *begin_time = delta->BeginTime(); *end_time = delta->EndTime();
-    *delta_count = delta->AttributeDeltas().Size();
+    *delta_count = OcctSharpGenerated::DocumentAdapters::TDF_Delta_AttributeDeltas(*(delta)).Size();
     *label_count = static_cast<int32_t>(DocumentHistoryLabels(delta).size());
-    *name_length = delta->Name().LengthOfCString();
+    *name_length = OcctSharpGenerated::DocumentAdapters::TDF_Delta_Name(*(delta)).LengthOfCString();
   });
 }
 
@@ -704,7 +706,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_entry_name(
 {
   return Guard([&]
   {
-    CopyUtf8Result(ExtendedToUtf8(DocumentHistoryDelta(document, redo != 0, index)->Name()), buffer, capacity, written);
+    CopyUtf8Result(ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDF_Delta_Name(*(DocumentHistoryDelta(document, redo != 0, index)))), buffer, capacity, written);
   });
 }
 

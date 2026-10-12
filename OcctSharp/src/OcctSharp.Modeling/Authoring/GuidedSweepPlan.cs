@@ -39,7 +39,7 @@ public sealed record GuidedSweepOptions
 }
 
 /// <summary>Owns a private copy of the complete source dependency graph, including attachment/support identities.</summary>
-public sealed class GuidedSweepPlan : IDisposable
+public sealed partial class GuidedSweepPlan : IDisposable
 {
     private readonly Shape[] inputs;
     private readonly SweepSectionRaw[] sections;

@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #pragma once
 
 // Private native Exchange/XdeExchange contract; never a public ABI or a second owner.
@@ -119,9 +121,9 @@ OcctSharp_Status WriteXdeMeshDocument(
     shapeTool->GetFreeShapes(roots);
     for (int32_t index = 1; index <= roots.Length(); ++index)
     {
-      const TopoDS_Shape shape = shapeTool->GetShape(roots.Value(index));
+      const TopoDS_Shape shape = (static_cast<void>(shapeTool),OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(roots.Value(index)));
       if (shape.IsNull()) continue;
-      BRepMesh_IncrementalMesh mesher(shape, 0.1, false, 0.5, true);
+      OcctSharpGenerated::PrivateMeshBuilder mesher(shape, 0.1, false, 0.5, true);
       if (!mesher.IsDone())
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not triangulate an XDE scene root for mesh export.");
     }

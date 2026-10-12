@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Add",
+      "signature": "BRepBuilderAPI_MakeFace::Add: void (const TopoDS_Wire &)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void ()",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const TopoDS_Wire &, const bool)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const double)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const TopoDS_Wire &, const bool)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Pln &, const TopoDS_Wire &, const bool)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Face",
+      "signature": "BRepBuilderAPI_MakeFace::Face: const TopoDS_Face &() const",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Init",
+      "signature": "BRepBuilderAPI_MakeFace::Init: void (const occ::handle<Geom_Surface> &, const bool, const double)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Init",
+      "signature": "BRepBuilderAPI_MakeFace::Init: void (const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double)",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::IsDone",
+      "signature": "BRepBuilderAPI_MakeFace::IsDone: bool () const",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Shape",
+      "signature": "BRepBuilderAPI_MakeShape::Shape: const TopoDS_Shape &()",
+      "guard": "BXCallPrivateFaceAdapters",
+      "reason": "Exact initialized stack receiver; owning TopoDS value copies; caller input/graph/validation/options/error/publication semantics retained."
+    }
+  ],
+  "supportingOperations": []
+}

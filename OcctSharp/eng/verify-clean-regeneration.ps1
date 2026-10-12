@@ -22,7 +22,7 @@ $temporaryBase = [IO.Path]::GetFullPath([IO.Path]::GetTempPath())
 $temporaryRoot = Join-Path $temporaryBase "OcctSharp-clean-$([Guid]::NewGuid().ToString('N'))"
 [IO.Directory]::CreateDirectory($temporaryRoot) | Out-Null
 try {
-    $files = @(& git -C $repositoryRoot ls-files --cached --others --exclude-standard)
+    $files = @(& git -c core.quotepath=false -C $repositoryRoot ls-files --cached --others --exclude-standard)
     if ($LASTEXITCODE -ne 0 -or $files.Count -eq 0) {
         throw 'Unable to enumerate the repository source set for clean regeneration.'
     }

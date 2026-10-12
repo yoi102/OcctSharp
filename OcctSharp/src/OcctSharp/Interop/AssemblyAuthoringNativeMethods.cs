@@ -5,6 +5,11 @@ namespace OcctSharp.Interop;
 
 internal static partial class NativeMethods
 {
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_copy_transformed_definition", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CopyTransformedXdeDefinition(
+        OcafDocumentHandle destination, OcafDocumentHandle source, string entry, TransformHandle transform,
+        nint resultEntryBuffer, int resultEntryCapacity, out int resultEntryWritten);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_shape", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetXdeDefinitionShape(OcafDocumentHandle document, string entry, ShapeHandle shape);

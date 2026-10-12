@@ -646,6 +646,15 @@ public partial class Shape : IDisposable
         return new ShapeValidationReport(isValid != 0, issues);
     }
 
+    /// <summary>Runs OCCT self-interference analysis on a private geometry copy. This is separate from local BRepCheck validity.</summary>
+    public ShapeSelfInterferenceReport GetSelfInterferenceReport()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(NativeMethods.GetShapeSelfInterference(handle,out int self,out int other),"shape_self_interference");
+        if(self<0||other<0)throw new OcctException(NativeStatus.UnknownException.ToString(),"Invalid self-interference counts.");
+        return new(self,other);
+    }
+
     /// <summary>Computes an OCCT boolean union and returns an independently owned result.</summary>
     public Shape Fuse(Shape other)
     {
@@ -820,7 +829,8 @@ public partial class Shape : IDisposable
             units ?? new InspectionUnits());
     }
 
-    /// <summary>Copies length, area, or volume properties with centroid and inertia.</summary>
+    /// <summary>Copies length, area, or volume properties with centroid and inertia.
+    /// Area and volume use adaptive integration over exact knot spans at relative tolerance 1e-9.</summary>
     public ShapeInspectionProperties InspectProperties(
         InspectionPropertyKind kind,
         InspectionUnits? units = null)
@@ -836,6 +846,23 @@ public partial class Shape : IDisposable
             new(raw.Center.X, raw.Center.Y, raw.Center.Z),
             new(raw.I11, raw.I12, raw.I13, raw.I21, raw.I22, raw.I23, raw.I31, raw.I32, raw.I33),
             units ?? new InspectionUnits());
+    }
+
+    /// <summary>Copies adaptively integrated area or volume, centroid and inertia.
+    /// The OCCT error estimate describes numerical convergence, not geometric/model uncertainty.</summary>
+    public AdaptiveShapeInspection InspectAdaptiveProperties(
+        InspectionPropertyKind kind, double relativeTolerance = 1e-9, InspectionUnits? units = null)
+    {
+        if (kind is not (InspectionPropertyKind.Area or InspectionPropertyKind.Volume))
+            throw new ArgumentOutOfRangeException(nameof(kind));
+        if (!double.IsFinite(relativeTolerance) || relativeTolerance is < 1e-12 or > 1e-3)
+            throw new ArgumentOutOfRangeException(nameof(relativeTolerance));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(NativeMethods.GetAdaptiveInspectionProperties(handle, (int)kind,
+            relativeTolerance, out InspectionPropertiesRaw raw, out double error), "shape_adaptive_inspection_properties");
+        return new(new(kind, raw.Mass, new(raw.Center.X, raw.Center.Y, raw.Center.Z),
+            new(raw.I11, raw.I12, raw.I13, raw.I21, raw.I22, raw.I23, raw.I31, raw.I32, raw.I33),
+            units ?? new InspectionUnits()), relativeTolerance, error);
     }
 
     /// <summary>Measures the angle between two linear edges or two planar faces.</summary>

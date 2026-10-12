@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildSchoenbergPoints#I#&1$@S@NCollection_Array1>#d#&S1_#S",
+      "nativeName": "BSplCLib::BuildSchoenbergPoints",
+      "signature": "BSplCLib::BuildSchoenbergPoints: void (const int, const NCollection_Array1<double> &, NCollection_Array1<double> &)",
+      "guard": "BuildSchoenbergPoints",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FirstUKnotIndex#I#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::FirstUKnotIndex",
+      "signature": "BSplCLib::FirstUKnotIndex: int (const int, const NCollection_Array1<int> &)",
+      "guard": "FirstUKnotIndex",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FlatIndex#I#I#&1$@S@NCollection_Array1>#I#b#S",
+      "nativeName": "BSplCLib::FlatIndex",
+      "signature": "BSplCLib::FlatIndex: int (const int, const int, const NCollection_Array1<int> &, const bool)",
+      "guard": "FlatIndex",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Hunt#&1$@S@NCollection_Array1>#d#d#&I#S",
+      "nativeName": "BSplCLib::Hunt",
+      "signature": "BSplCLib::Hunt: void (const NCollection_Array1<double> &, const double, int &)",
+      "guard": "Hunt",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegreeCountKnots#I#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::IncreaseDegreeCountKnots",
+      "signature": "BSplCLib::IncreaseDegreeCountKnots: int (const int, const int, const bool, const NCollection_Array1<int> &)",
+      "guard": "IncreaseDegreeCountKnots",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IsRational#&1$@S@NCollection_Array1>#d#I#I#d#S",
+      "nativeName": "BSplCLib::IsRational",
+      "signature": "BSplCLib::IsRational: bool (const NCollection_Array1<double> &, const int, const int, const double)",
+      "guard": "IsRational",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotAnalysis#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&$@E@GeomAbs_BSplKnotDistribution#&I#S",
+      "nativeName": "BSplCLib::KnotAnalysis",
+      "signature": "BSplCLib::KnotAnalysis: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, GeomAbs_BSplKnotDistribution &, int &)",
+      "guard": "KnotAnalysis",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotForm#&1$@S@NCollection_Array1>#d#I#I#S",
+      "nativeName": "BSplCLib::KnotForm",
+      "signature": "BSplCLib::KnotForm: BSplCLib_KnotDistribution (const NCollection_Array1<double> &, const int, const int)",
+      "guard": "KnotForm",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequence#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#b#S",
+      "nativeName": "BSplCLib::KnotSequence",
+      "signature": "BSplCLib::KnotSequence: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, const bool)",
+      "guard": "KnotSequence",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequence#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#&S1_#S",
+      "nativeName": "BSplCLib::KnotSequence",
+      "signature": "BSplCLib::KnotSequence: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool, NCollection_Array1<double> &)",
+      "guard": "KnotSequence",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequenceLength#&1$@S@NCollection_Array1>#I#I#b#S",
+      "nativeName": "BSplCLib::KnotSequenceLength",
+      "signature": "BSplCLib::KnotSequenceLength: int (const NCollection_Array1<int> &, const int, const bool)",
+      "guard": "KnotSequenceLength",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Knots#&1$@S@NCollection_Array1>#d#&S1_#&$@S@NCollection_Array1>#I#b#S",
+      "nativeName": "BSplCLib::Knots",
+      "signature": "BSplCLib::Knots: void (const NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const bool)",
+      "guard": "Knots",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotsLength#&1$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplCLib::KnotsLength",
+      "signature": "BSplCLib::KnotsLength: int (const NCollection_Array1<double> &, const bool)",
+      "guard": "KnotsLength",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LastUKnotIndex#I#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::LastUKnotIndex",
+      "signature": "BSplCLib::LastUKnotIndex: int (const int, const NCollection_Array1<int> &)",
+      "guard": "LastUKnotIndex",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MinKnotMult#&1$@S@NCollection_Array1>#I#I#I#S",
+      "nativeName": "BSplCLib::MinKnotMult",
+      "signature": "BSplCLib::MinKnotMult: int (const NCollection_Array1<int> &, const int, const int)",
+      "guard": "MinKnotMult",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MultForm#&1$@S@NCollection_Array1>#I#I#I#S",
+      "nativeName": "BSplCLib::MultForm",
+      "signature": "BSplCLib::MultForm: BSplCLib_MultDistribution (const NCollection_Array1<int> &, const int, const int)",
+      "guard": "MultForm",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NbPoles#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::NbPoles",
+      "signature": "BSplCLib::NbPoles: int (const int, const bool, const NCollection_Array1<int> &)",
+      "guard": "NbPoles",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PoleIndex#I#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::PoleIndex",
+      "signature": "BSplCLib::PoleIndex: int (const int, const int, const bool, const NCollection_Array1<int> &)",
+      "guard": "PoleIndex",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&S1_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt> &, NCollection_Array1<gp_Pnt> &)",
+      "guard": "PolesCoefficients",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&S1_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "PolesCoefficients",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareTrimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#d#&I#S4_#S",
+      "nativeName": "BSplCLib::PrepareTrimming",
+      "signature": "BSplCLib::PrepareTrimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const double, int &, int &)",
+      "guard": "PrepareTrimming",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareUnperiodize#I#&1$@S@NCollection_Array1>#I#&I#S2_#S",
+      "nativeName": "BSplCLib::PrepareUnperiodize",
+      "signature": "BSplCLib::PrepareUnperiodize: void (const int, const NCollection_Array1<int> &, int &, int &)",
+      "guard": "PrepareUnperiodize",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@UnitWeights#I#S",
+      "nativeName": "BSplCLib::UnitWeights",
+      "signature": "BSplCLib::UnitWeights: NCollection_Array1<double> (const int)",
+      "guard": "UnitWeights",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@GetPoles#&1$@S@NCollection_Array1>#d#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#b#S",
+      "nativeName": "BSplSLib::GetPoles",
+      "signature": "BSplSLib::GetPoles: void (const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, const bool)",
+      "guard": "GetPoles",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@GetPoles#&1$@S@NCollection_Array1>#d#&$@S@NCollection_Array2>#$@S@gp_Pnt#b#S",
+      "nativeName": "BSplSLib::GetPoles",
+      "signature": "BSplSLib::GetPoles: void (const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, const bool)",
+      "guard": "GetPoles",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@IsRational#&1$@S@NCollection_Array2>#d#I#I#I#I#d#S",
+      "nativeName": "BSplSLib::IsRational",
+      "signature": "BSplSLib::IsRational: bool (const NCollection_Array2<double> &, const int, const int, const int, const int, const double)",
+      "guard": "IsRational",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@PolesCoefficients#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&S1_#S",
+      "nativeName": "BSplSLib::PolesCoefficients",
+      "signature": "BSplSLib::PolesCoefficients: void (const NCollection_Array2<gp_Pnt> &, NCollection_Array2<gp_Pnt> &)",
+      "guard": "PolesCoefficients",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Reverse#&$@S@NCollection_Array2>#$@S@gp_Pnt#I#b#S",
+      "nativeName": "BSplSLib::Reverse",
+      "signature": "BSplSLib::Reverse: void (NCollection_Array2<gp_Pnt> &, const int, const bool)",
+      "guard": "Reverse",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Reverse#&$@S@NCollection_Array2>#d#I#b#S",
+      "nativeName": "BSplSLib::Reverse",
+      "signature": "BSplSLib::Reverse: void (NCollection_Array2<double> &, const int, const bool)",
+      "guard": "Reverse",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@SetPoles#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplSLib::SetPoles",
+      "signature": "BSplSLib::SetPoles: void (const NCollection_Array2<gp_Pnt> &, NCollection_Array1<double> &, const bool)",
+      "guard": "SetPoles",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@SetPoles#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplSLib::SetPoles",
+      "signature": "BSplSLib::SetPoles: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, NCollection_Array1<double> &, const bool)",
+      "guard": "SetPoles",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@UnitWeights#I#I#S",
+      "nativeName": "BSplSLib::UnitWeights",
+      "signature": "BSplSLib::UnitWeights: NCollection_Array2<double> (const int, const int)",
+      "guard": "UnitWeights",
+      "reason": "Checked one-based owning numeric/gp copies and audited scalar references; pinned sizes and bounds checked before the kernel."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#S",
+      "nativeName": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom2d_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, const double)",
+      "guard": "C0BSplineToArrayOfC1BSplineCurve",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#d#S",
+      "nativeName": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom2d_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, const double, const double)",
+      "guard": "C0BSplineToArrayOfC1BSplineCurve",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "Geom2dConvert::ConcatC1",
+      "signature": "Geom2dConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double)",
+      "guard": "ConcatC1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#d#S",
+      "nativeName": "Geom2dConvert::ConcatC1",
+      "signature": "Geom2dConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double, const double)",
+      "guard": "ConcatC1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatG1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "Geom2dConvert::ConcatG1",
+      "signature": "Geom2dConvert::ConcatG1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double)",
+      "guard": "ConcatG1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#S",
+      "nativeName": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, const double)",
+      "guard": "C0BSplineToArrayOfC1BSplineCurve",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#d#S",
+      "nativeName": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, const double, const double)",
+      "guard": "C0BSplineToArrayOfC1BSplineCurve",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "GeomConvert::ConcatC1",
+      "signature": "GeomConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double)",
+      "guard": "ConcatC1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#d#S",
+      "nativeName": "GeomConvert::ConcatC1",
+      "signature": "GeomConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double, const double)",
+      "guard": "ConcatC1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatG1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "GeomConvert::ConcatG1",
+      "signature": "GeomConvert::ConcatG1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double)",
+      "guard": "ConcatG1",
+      "reason": "Closed typed curve copies; zero-based native concat inputs; independently owned results and atomic publication."
+    }
+  ],
+  "supportingOperations": []
+}

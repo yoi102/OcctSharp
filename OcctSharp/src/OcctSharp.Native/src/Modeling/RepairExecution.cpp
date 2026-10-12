@@ -1,5 +1,6 @@
 #include "Modeling/Repair.hxx"
 #include "Modeling/Topology.hxx"
+#include "../../generated/Modeling/OcctSharp.Modeling.BooleanRepairAdapters.Generated.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Registry.hxx"
 #include "Runtime/Shape.hxx"
@@ -31,10 +32,10 @@ TopoDS_Shape NonNull(TopoDS_Shape value) {
 std::vector<std::pair<TopoDS_Shape, int>> Relations(const TopoDS_Shape& from, const Outcome& outcome) {
   std::vector<std::pair<TopoDS_Shape, int>> result;
   if (!outcome.History.IsNull() && SupportsShapeHistory(from)) {
-    for (const auto& item : outcome.History->Modified(from)) result.emplace_back(item, 1);
-    for (const auto& item : outcome.History->Generated(from)) result.emplace_back(item, 2);
+    for (const auto& item : OcctSharpGenerated::RepairHistoryModified(*outcome.History, from)) result.emplace_back(item, 1);
+    for (const auto& item : OcctSharpGenerated::RepairHistoryGenerated(*outcome.History, from)) result.emplace_back(item, 2);
     if (!result.empty()) return result;
-    if (outcome.History->IsRemoved(from)) { result.emplace_back(TopoDS_Shape(), 3); return result; }
+    if (OcctSharpGenerated::RepairHistoryRemoved(*outcome.History, from)) { result.emplace_back(TopoDS_Shape(), 3); return result; }
   }
   if (!outcome.Context.IsNull()) {
     if (outcome.Context->IsRecorded(from) && outcome.Context->Value(from).IsNull()) {

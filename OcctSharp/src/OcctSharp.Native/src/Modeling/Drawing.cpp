@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 // Native Modeling/Drawing implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Conversions.hxx"
 #include "Modeling/Drawing.hxx"
@@ -146,7 +147,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_drawing_compute(
       for (int32_t index = 0; index < shape_count; ++index)
       {
         ValidateUsableShape(shapes[index]);
-        BRepMesh_IncrementalMesh mesh(shapes[index]->Value, deflection, false, 0.5, true);
+        OcctSharpGenerated::PrivateMeshBuilder mesh(shapes[index]->Value, deflection, false, 0.5, true);
         algorithm->Load(shapes[index]->Value);
       }
       algorithm->Projector(projector);

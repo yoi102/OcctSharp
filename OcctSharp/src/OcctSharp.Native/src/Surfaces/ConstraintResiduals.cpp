@@ -1,5 +1,5 @@
 #include "Surfaces/ConstraintResiduals.hxx"
-#include <GeomAPI_ProjectPointOnSurf.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.ProjectionAdapters.Generated.hxx"
 #include <GeomLProp_SLProps.hxx>
 #include <gp_Vec.hxx>
 #include <algorithm>
@@ -23,7 +23,7 @@ OcctSharp_ConstraintResidual SurfaceResidual(const opencascade::handle<Geom_Surf
   const gp_Pnt& target, const opencascade::handle<Geom_Surface>& support, double supportU, double supportV,
   int order, double tolerance) {
   OcctSharp_ConstraintResidual value{};
-  GeomAPI_ProjectPointOnSurf projection(target, result, tolerance);
+  OcctSharpGenerated::SurfaceProjector projection(target, result, tolerance);
   if (!projection.IsDone() || projection.NbPoints() == 0) return value;
   double u, v; projection.LowerDistanceParameters(u, v); value.position = projection.LowerDistance();
   if (!std::isfinite(value.position)) return value;

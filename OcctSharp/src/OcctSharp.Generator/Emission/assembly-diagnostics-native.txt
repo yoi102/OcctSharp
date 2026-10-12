@@ -1,0 +1,108 @@
+#include "OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include <BRepBuilderAPI_MakeEdge.hxx>
+#include <BRepBuilderAPI_MakeWire.hxx>
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRepLib_MakeWire.hxx>
+#include <BRepLib.hxx>
+#include <BRepCheck_Analyzer.hxx>
+#include <BRep_Builder.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Edge.hxx>
+#include <TopoDS_Wire.hxx>
+#include <TopoDS_Face.hxx>
+#include <TopoDS_Vertex.hxx>
+#include <TopoDS_Iterator.hxx>
+#include <TopExp_Explorer.hxx>
+#include <TopoDS_Compound.hxx>
+#include <ShapeAnalysis_Wire.hxx>
+#include <Geom_Curve.hxx>
+#include <Geom2d_Curve.hxx>
+#include <Geom2d_Line.hxx>
+#include <Geom_Surface.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <Geom2d_BSplineCurve.hxx>
+#include <Geom_BSplineSurface.hxx>
+#include <array>
+using namespace OcctSharpTopologyCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_GeomCurveHandle* ValidateGeomCurve(const OcctSharp_GeomCurveHandle*);
+const OcctSharp_GeomBSplineCurveHandle* ValidateGeomBSplineCurve(const OcctSharp_GeomBSplineCurveHandle*);
+const OcctSharp_Geom2dCurveHandle* ValidateGeom2dCurve(const OcctSharp_Geom2dCurveHandle*);
+const OcctSharp_Geom2dBSplineCurveHandle* ValidateGeom2dBSplineCurve(const OcctSharp_Geom2dBSplineCurveHandle*);
+const OcctSharp_GeomSurfaceHandle* ValidateGeomSurface(const OcctSharp_GeomSurfaceHandle*);
+const OcctSharp_GeomBSplineSurfaceHandle* ValidateGeomBSplineSurface(const OcctSharp_GeomBSplineSurfaceHandle*);
+}
+namespace {
+struct AssemblyOutput { std::array<TopoDS_Shape,3> shapes; std::array<int,8> info{}; AssemblyOutput(){info[6]=-1;} };
+void Finite(double v){Require(std::isfinite(v)&&std::abs(v)<=1e12,"Assembly coordinate or parameter exceeds budget.");}
+void CheckTolerance(double v){Finite(v);Require(v>0&&v<=1,"Assembly tolerance must be positive and at most one.");}
+void Budget(const TopoDS_Shape& s){std::vector<TopoDS_Shape> pending{s};int visited=0;while(!pending.empty()){Require(++visited<=16384,"Assembly shape exceeds traversal budget.");auto item=pending.back();pending.pop_back();for(TopoDS_Iterator it(item);it.More();it.Next()){Require(pending.size()+visited<16384,"Assembly shape exceeds traversal budget.");pending.push_back(it.Value());}}}
+TopoDS_Shape CopyShape(const TopoDS_Shape& s){Budget(s);BRepBuilderAPI_Copy copy(s,true,false);Require(copy.IsDone(),"Assembly shape copy failed.");return copy.Shape();}
+std::vector<TopoDS_Shape> CopyGraph(const std::vector<TopoDS_Shape>& input){
+ Require(input.size()<=4096,"Assembly input exceeds shape budget.");if(input.empty())return {};
+ TopoDS_Compound graph;BRep_Builder builder;builder.MakeCompound(graph);int edges=0;for(const auto& s:input){Require(!s.IsNull(),"Null assembly input.");Budget(s);for(TopExp_Explorer it(s,TopAbs_EDGE);it.More();it.Next())Require(++edges<=4096,"Assembly input exceeds edge budget before copying.");builder.Add(graph,s);}
+ BRepBuilderAPI_Copy copy(graph,true,false);Require(copy.IsDone(),"Assembly graph copy failed.");std::vector<TopoDS_Shape> result;
+ for(const auto& s:input){auto mapped=copy.ModifiedShape(s);Require(!mapped.IsNull(),"Assembly copy correspondence missing.");result.push_back(mapped);}return result;
+}
+occ::handle<Geom_Surface> Surface(const void* source,int kind){Require(source&&(kind==0||kind==1),"Invalid assembly surface.");occ::handle<Geom_Surface> value=kind==0?OcctSharpGenerated::ValidateGeomSurface(static_cast<const OcctSharp_GeomSurfaceHandle*>(source))->Value:OcctSharpGenerated::ValidateGeomBSplineSurface(static_cast<const OcctSharp_GeomBSplineSurfaceHandle*>(source))->Value;auto copy=occ::handle<Geom_Surface>::DownCast(value->Copy());Require(!copy.IsNull(),"Surface copy failed.");return copy;}
+void Capture(const std::shared_ptr<AssemblyOutput>& out,const TopoDS_Shape& s){
+ BRepCheck_Analyzer check(s,true,false,true);out->info[2]=check.IsValid()?1:0;
+ out->info[3]=s.Closed()?1:0;NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> edges;TopExp::MapShapes(s,TopAbs_EDGE,edges);Require(edges.Extent()<=4096,"Assembly output edge budget exceeded.");out->info[4]=edges.Extent();
+ if(out->info[2]){out->info[0]=1;out->shapes[0]=s;}
+}
+void Publish(const std::shared_ptr<AssemblyOutput>& out,void** result){Publication<AssemblyOutput> publication(out);*result=publication.Commit();}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_edge(const void* source,int32_t kind,int32_t dimension,const void* surface,int32_t surfaceKind,double first,double last,const double* endpoints,int32_t pointCount,double tolerance,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Finite(first);Finite(last);CheckTolerance(tolerance);Require(first!=last&&std::isfinite(last-first)&&kind>=0&&kind<=1&&(dimension==2||dimension==3)&&(pointCount==0||pointCount==6)&&(pointCount==0||endpoints),"Invalid assembly edge request.");
+  gp_Pnt a,b;if(pointCount){for(int i=0;i<6;++i)Finite(endpoints[i]);a=gp_Pnt(endpoints[0],endpoints[1],endpoints[2]);b=gp_Pnt(endpoints[3],endpoints[4],endpoints[5]);}
+  BRepBuilderAPI_MakeEdge maker;
+  if(dimension==3){occ::handle<Geom_Curve> value=kind==0?OcctSharpGenerated::ValidateGeomCurve(static_cast<const OcctSharp_GeomCurveHandle*>(source))->Value:OcctSharpGenerated::ValidateGeomBSplineCurve(static_cast<const OcctSharp_GeomBSplineCurveHandle*>(source))->Value;auto curve=occ::handle<Geom_Curve>::DownCast(value->Copy());Require(!curve.IsNull(),"3D curve copy failed.");Require(std::min(first,last)>=curve->FirstParameter()&&std::max(first,last)<=curve->LastParameter(),"Assembly curve interval outside domain.");if(pointCount)maker.Init(curve,a,b,first,last);else maker.Init(curve,first,last);}
+  else{occ::handle<Geom2d_Curve> value=kind==0?OcctSharpGenerated::ValidateGeom2dCurve(static_cast<const OcctSharp_Geom2dCurveHandle*>(source))->Value:OcctSharpGenerated::ValidateGeom2dBSplineCurve(static_cast<const OcctSharp_Geom2dBSplineCurveHandle*>(source))->Value;auto curve=occ::handle<Geom2d_Curve>::DownCast(value->Copy());auto support=Surface(surface,surfaceKind);Require(!curve.IsNull(),"PCurve copy failed.");Require(std::min(first,last)>=curve->FirstParameter()&&std::max(first,last)<=curve->LastParameter(),"Assembly pcurve interval outside domain.");if(pointCount)maker.Init(curve,support,a,b,first,last);else maker.Init(curve,support,first,last);}
+  auto out=std::make_shared<AssemblyOutput>();out->info[1]=static_cast<int>(maker.Error());
+  if(maker.IsDone()){auto edge=maker.Edge();bool built=dimension==3||BRepLib::BuildCurve3d(edge,tolerance,GeomAbs_C1,14,256);out->info[5]=built?1:0;if(built){Capture(out,edge);if(out->info[0])out->shapes={edge,maker.Vertex1(),maker.Vertex2()};}}
+  Publish(out,result);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_wire(const void* input,int32_t backend,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(backend==0||backend==1,"Unknown assembly wire backend.");auto source=OcctSharpOwned::Lease<const ShapeSet>(input);for(const auto& s:source->values)Require(s.ShapeType()==TopAbs_EDGE||s.ShapeType()==TopAbs_WIRE,"Assembly accepts only edges or wires.");auto shapes=CopyGraph(source->values);auto out=std::make_shared<AssemblyOutput>();out->info[6]=-1;out->info[7]=1;
+  if(backend==0){BRepBuilderAPI_MakeWire maker;for(size_t i=0;i<shapes.size();++i){if(shapes[i].ShapeType()==TopAbs_WIRE)maker.Add(TopoDS::Wire(shapes[i]));else maker.Add(TopoDS::Edge(shapes[i]));if(!maker.IsDone()){out->info[6]=static_cast<int>(i);break;}}out->info[1]=static_cast<int>(maker.Error());if(maker.IsDone()&&out->info[6]<0){Capture(out,maker.Wire());if(out->info[0])out->shapes={maker.Wire(),maker.Edge(),maker.Vertex()};}}
+  else{BRepLib_MakeWire maker;for(size_t i=0;i<shapes.size();++i){if(shapes[i].ShapeType()==TopAbs_WIRE)maker.Add(TopoDS::Wire(shapes[i]));else maker.Add(TopoDS::Edge(shapes[i]));if(!maker.IsDone()){out->info[6]=static_cast<int>(i);break;}}out->info[1]=static_cast<int>(maker.Error());if(maker.IsDone()&&out->info[6]<0){Capture(out,maker.Wire());if(out->info[0])out->shapes={maker.Wire(),maker.Edge(),maker.Vertex()};}}
+  Publish(out,result);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_face(const void* token,const void* surface,int32_t kind,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto wire=OcctSharpOwned::Lease<const AssemblyOutput>(token);Require(wire->info[0]&&wire->shapes[0].ShapeType()==TopAbs_WIRE&&wire->shapes[0].Closed(),"A completed closed assembly wire is required.");auto support=Surface(surface,kind);auto copied=TopoDS::Wire(CopyShape(wire->shapes[0]));BRepBuilderAPI_MakeFace maker(support,copied,true);auto out=std::make_shared<AssemblyOutput>();out->info[7]=2;out->info[1]=static_cast<int>(maker.Error());if(maker.IsDone())Capture(out,maker.Face());Publish(out,result);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_surface_wire(const void* surface,int32_t kind,const double* points,int32_t count,int32_t makeFace,double tolerance,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckTolerance(tolerance);Require(points&&count>=2&&count<=4097&&(makeFace==0||makeFace==1),"Invalid surface-wire request.");for(int i=0;i<count*2;++i)Finite(points[i]);
+  if(makeFace)Require(count>=4&&points[0]==points[(count-1)*2]&&points[1]==points[(count-1)*2+1],"Face boundary must explicitly repeat its first UV endpoint.");
+  auto support=Surface(surface,kind);double u0=0,u1=0,v0=0,v1=0;support->Bounds(u0,u1,v0,v1);for(int i=0;i<count;++i)Require(points[i*2]>=u0&&points[i*2]<=u1&&points[i*2+1]>=v0&&points[i*2+1]<=v1,"UV boundary point outside surface domain.");auto out=std::make_shared<AssemblyOutput>();out->info[6]=-1;BRepBuilderAPI_MakeWire wire;
+  for(int i=1;i<count;++i){gp_Pnt2d a(points[(i-1)*2],points[(i-1)*2+1]),b(points[i*2],points[i*2+1]);double distance=a.Distance(b);Require(std::isfinite(distance)&&distance>1e-12,"Degenerate UV boundary segment.");
+   out->info[7]=0;occ::handle<Geom2d_Curve> curve=new Geom2d_Line(a,gp_Dir2d(b.X()-a.X(),b.Y()-a.Y()));BRepBuilderAPI_MakeEdge edge;edge.Init(curve,support,0.0,distance);out->info[1]=static_cast<int>(edge.Error());
+   if(!edge.IsDone()||!BRepLib::BuildCurve3d(edge.Edge(),tolerance,GeomAbs_C1,14,256)){out->info[6]=i-1;Publish(out,result);return;}
+   out->info[7]=1;wire.Add(edge.Edge());out->info[1]=static_cast<int>(wire.Error());if(!wire.IsDone()){out->info[6]=i-1;Publish(out,result);return;}
+  }
+  if(makeFace){out->info[7]=2;Require(wire.Wire().Closed(),"Assembled surface wire is not closed.");BRepBuilderAPI_MakeFace face(support,wire.Wire(),true);out->info[1]=static_cast<int>(face.Error());if(face.IsDone()){Capture(out,face.Face());if(out->info[0])out->shapes[1]=wire.Wire();}}
+  else Capture(out,wire.Wire());out->info[5]=1;Publish(out,result);
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_info(const void* token,int32_t* values,int32_t capacity){return Guard([&]{Require(values&&capacity>=8,"Insufficient assembly diagnostic capacity.");auto out=OcctSharpOwned::Lease<const AssemblyOutput>(token);std::copy(out->info.begin(),out->info.end(),values);});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_shape(const void* token,int32_t role,OcctSharp_ShapeHandle** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(role>=0&&role<=2,"Invalid assembly shape role.");auto out=OcctSharpOwned::Lease<const AssemblyOutput>(token);Require(out->info[0],"Incomplete assembly cannot publish topology.");if(!out->shapes[role].IsNull())*result=OcctSharp_Internal_AllocateShape(CopyShape(out->shapes[role]));});
+}
+void OCCTSHARP_CALL occtsharp_assembly_diagnostics_release(void* token){OcctSharpOwned::Release(token,typeid(AssemblyOutput));}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_validate(const OcctSharp_ShapeHandle* source,int32_t exact,int32_t parallel,int32_t* values,int32_t capacity){
+ return Guard([&]{Require(values&&capacity>=5&&(exact==0||exact==1)&&(parallel==0||parallel==1),"Invalid assembly validation request.");auto shape=CopyShape(ShapeValue(source));BRepCheck_Analyzer check(shape,true,false,false);check.SetExactMethod(exact!=0);check.SetParallel(parallel!=0);check.Init(shape,true);
+  NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> all;TopExp::MapShapes(shape,all);Require(all.Extent()<=16384,"Validation shape budget exceeded.");int invalid=0;for(int i=1;i<=all.Extent();++i)if(!check.IsValid(all.FindKey(i)))++invalid;
+  std::array<int,5> copied={check.IsValid()?1:0,check.IsExactMethod()?1:0,check.IsParallel()?1:0,all.Extent(),invalid};std::copy(copied.begin(),copied.end(),values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_assembly_diagnostics_wire_check(const OcctSharp_ShapeHandle* source,int32_t wireIndex,double precision,int32_t* small,uint32_t* statuses){
+ if(!small||!statuses)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*small=0;*statuses=0;
+  return Guard([&]{CheckTolerance(precision);auto face=CopyShape(ShapeValue(source));Require(face.ShapeType()==TopAbs_FACE,"Wire area diagnostic requires a face.");NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> wires;TopExp::MapShapes(face,TopAbs_WIRE,wires);Require(wireIndex>=0&&wireIndex<wires.Extent(),"Wire index outside copied face.");auto wire=TopoDS::Wire(wires.FindKey(wireIndex+1));ShapeAnalysis_Wire check;check.SetPrecision(precision);check.Load(wire);check.SetFace(TopoDS::Face(face));Require(check.IsReady()&&check.NbEdges()<=4096,"Wire analyzer not ready or exceeds budget.");bool found=check.CheckSmallArea(wire);uint32_t mask=0;for(int i=0;i<=18;++i)if(check.LastCheckStatus(static_cast<ShapeExtend_Status>(i)))mask|=1U<<i;*small=found?1:0;*statuses=mask;});
+}

@@ -206,6 +206,13 @@ public readonly record struct ShapeInspectionProperties(
 
 public enum RadialGeometryKind { Circle = 0, Cylinder = 1, Cone = 2 }
 
+/// <summary>Copied numerical properties and OCCT's relative convergence estimate.
+/// This estimate is not a bound on geometric tolerances or modeling uncertainty.</summary>
+public readonly record struct AdaptiveShapeInspection(
+    ShapeInspectionProperties Properties,
+    double RequestedRelativeTolerance,
+    double EstimatedRelativeError);
+
 public readonly record struct ShapeRadialMeasurement(
     RadialGeometryKind GeometryKind,
     double Radius,

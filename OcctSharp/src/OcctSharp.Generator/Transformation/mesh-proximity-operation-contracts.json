@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#d#",
+      "nativeName": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity",
+      "signature": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity: void (const double)",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ElementSet1",
+      "signature": "BRepExtrema_ShapeProximity::ElementSet1: const occ::handle<BRepExtrema_TriangleSet> &() const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ElementSet2",
+      "signature": "BRepExtrema_ShapeProximity::ElementSet2: const occ::handle<BRepExtrema_TriangleSet> &() const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape1#I#1",
+      "nativeName": "BRepExtrema_ShapeProximity::GetSubShape1",
+      "signature": "BRepExtrema_ShapeProximity::GetSubShape1: const TopoDS_Shape &(const int) const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape2#I#1",
+      "nativeName": "BRepExtrema_ShapeProximity::GetSubShape2",
+      "signature": "BRepExtrema_ShapeProximity::GetSubShape2: const TopoDS_Shape &(const int) const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@IsDone#1",
+      "nativeName": "BRepExtrema_ShapeProximity::IsDone",
+      "signature": "BRepExtrema_ShapeProximity::IsDone: bool () const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape1#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepExtrema_ShapeProximity::LoadShape1",
+      "signature": "BRepExtrema_ShapeProximity::LoadShape1: bool (const TopoDS_Shape &)",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape2#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepExtrema_ShapeProximity::LoadShape2",
+      "signature": "BRepExtrema_ShapeProximity::LoadShape2: bool (const TopoDS_Shape &)",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::OverlapSubShapes1",
+      "signature": "BRepExtrema_ShapeProximity::OverlapSubShapes1: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::OverlapSubShapes2",
+      "signature": "BRepExtrema_ShapeProximity::OverlapSubShapes2: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Perform#",
+      "nativeName": "BRepExtrema_ShapeProximity::Perform",
+      "signature": "BRepExtrema_ShapeProximity::Perform: void ()",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Tolerance#1",
+      "nativeName": "BRepExtrema_ShapeProximity::Tolerance",
+      "signature": "BRepExtrema_ShapeProximity::Tolerance: double () const",
+      "guard": "BOMeshProximity",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@BRepExtrema_ProximityValueTool#",
+      "nativeName": "BRepExtrema_ProximityValueTool::BRepExtrema_ProximityValueTool",
+      "signature": "BRepExtrema_ProximityValueTool::BRepExtrema_ProximityValueTool: void ()",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@IsDone#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::IsDone",
+      "signature": "BRepExtrema_ProximityValueTool::IsDone: bool () const",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadShapeLists#&1$@S@NCollection_DynamicArray>#$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepExtrema_ProximityValueTool::LoadShapeLists",
+      "signature": "BRepExtrema_ProximityValueTool::LoadShapeLists: void (const NCollection_DynamicArray<TopoDS_Shape> &, const NCollection_DynamicArray<TopoDS_Shape> &)",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadTriangleSets#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "nativeName": "BRepExtrema_ProximityValueTool::LoadTriangleSets",
+      "signature": "BRepExtrema_ProximityValueTool::LoadTriangleSets: void (const occ::handle<BRepExtrema_TriangleSet> &, const occ::handle<BRepExtrema_TriangleSet> &)",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@Perform#&d#",
+      "nativeName": "BRepExtrema_ProximityValueTool::Perform",
+      "signature": "BRepExtrema_ProximityValueTool::Perform: void (double &)",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPoints#&$@S@gp_Pnt#S0_#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::ProximityPoints",
+      "signature": "BRepExtrema_ProximityValueTool::ProximityPoints: void (gp_Pnt &, gp_Pnt &) const",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPointsStatus#&$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#S0_#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::ProximityPointsStatus",
+      "signature": "BRepExtrema_ProximityValueTool::ProximityPointsStatus: void (ProxPnt_Status &, ProxPnt_Status &) const",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@SetNbSamplePoints#I#I#",
+      "nativeName": "BRepExtrema_ProximityValueTool::SetNbSamplePoints",
+      "signature": "BRepExtrema_ProximityValueTool::SetNbSamplePoints: void (const int, const int)",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_TriangleSet@F@Size#1",
+      "nativeName": "BRepExtrema_TriangleSet::Size",
+      "signature": "BRepExtrema_TriangleSet::Size: int () const",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Polygon3D#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#S",
+      "nativeName": "BRep_Tool::Polygon3D",
+      "signature": "BRep_Tool::Polygon3D: const occ::handle<Poly_Polygon3D> &(const TopoDS_Edge &, TopLoc_Location &)",
+      "guard": "BOMeshProximity",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    }
+  ],
+  "supportingOperations": []
+}

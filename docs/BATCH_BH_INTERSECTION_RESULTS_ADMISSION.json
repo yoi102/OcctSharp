@@ -1,0 +1,358 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "8.0.1-preview.57",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "642CE5371011281C0384DD3EF94BE7D721366CFE7D9814233C0B9E62A785E48D",
+  "declarations": [
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@BuildPCurves#d#d#&d#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S",
+      "nativeName": "GeomInt_IntSS::BuildPCurves",
+      "signature": "GeomInt_IntSS::BuildPCurves: void (const double, const double, double &, const occ::handle<Geom_Surface> &, const occ::handle<Geom_Curve> &, occ::handle<Geom2d_Curve> &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@BuildPCurves#d#d#d#d#d#d#&d#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S",
+      "nativeName": "GeomInt_IntSS::BuildPCurves",
+      "signature": "GeomInt_IntSS::BuildPCurves: void (const double, const double, const double, const double, const double, const double, double &, const occ::handle<Geom_Surface> &, const occ::handle<Geom_Curve> &, occ::handle<Geom2d_Curve> &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@GeomInt_IntSS#&&$@S@GeomInt_IntSS#",
+      "nativeName": "GeomInt_IntSS::GeomInt_IntSS",
+      "signature": "GeomInt_IntSS::GeomInt_IntSS: void (GeomInt_IntSS &&)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@GeomInt_IntSS#&1$@S@GeomInt_IntSS#",
+      "nativeName": "GeomInt_IntSS::GeomInt_IntSS",
+      "signature": "GeomInt_IntSS::GeomInt_IntSS: void (const GeomInt_IntSS &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@MakeBSpline#&1$@N@opencascade@S@handle>#$@S@IntPatch_WLine#I#I#S",
+      "nativeName": "GeomInt_IntSS::MakeBSpline",
+      "signature": "GeomInt_IntSS::MakeBSpline: occ::handle<Geom_Curve> (const occ::handle<IntPatch_WLine> &, const int, const int)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@MakeBSpline2d#&1$@N@opencascade@S@handle>#$@S@IntPatch_WLine#I#I#b#S",
+      "nativeName": "GeomInt_IntSS::MakeBSpline2d",
+      "signature": "GeomInt_IntSS::MakeBSpline2d: occ::handle<Geom2d_BSplineCurve> (const occ::handle<IntPatch_WLine> &, const int, const int, const bool)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@SetTolFixTangents#d#d#",
+      "nativeName": "GeomInt_IntSS::SetTolFixTangents",
+      "signature": "GeomInt_IntSS::SetTolFixTangents: void (const double, const double)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Declared in the fixed SDK header but no definition in the pinned GeomInt sources and no linked implementation in the installed library; explicit native link failure recorded. Not a callable SDK binding."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TolFixTangents#&d#S0_#",
+      "nativeName": "GeomInt_IntSS::TolFixTangents",
+      "signature": "GeomInt_IntSS::TolFixTangents: void (double &, double &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Declared in the fixed SDK header but no definition in the pinned GeomInt sources and no linked implementation in the installed library; explicit native link failure recorded. Not a callable SDK binding."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TreatRLine#&1$@N@opencascade@S@handle>#$@S@IntPatch_RLine#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_Surface#S3_#&$@N@opencascade@S@handle>#$@S@Geom_Curve#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S9_#&d#S",
+      "nativeName": "GeomInt_IntSS::TreatRLine",
+      "signature": "GeomInt_IntSS::TreatRLine: void (const occ::handle<IntPatch_RLine> &, const occ::handle<GeomAdaptor_Surface> &, const occ::handle<GeomAdaptor_Surface> &, occ::handle<Geom_Curve> &, occ::handle<Geom2d_Curve> &, occ::handle<Geom2d_Curve> &, double &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TrimILineOnSurfBoundaries#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#&1$@S@Bnd_Box2d#S3_#&$@S@NCollection_DynamicArray>#d#S",
+      "nativeName": "GeomInt_IntSS::TrimILineOnSurfBoundaries",
+      "signature": "GeomInt_IntSS::TrimILineOnSurfBoundaries: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom2d_Curve> &, const Bnd_Box2d &, const Bnd_Box2d &, NCollection_DynamicArray<double> &)",
+      "header": "GeomInt_IntSS.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Face#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Face",
+      "signature": "IntCurvesFace_ShapeIntersector::Face: const TopoDS_Face &(const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@IntCurvesFace_ShapeIntersector#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector",
+      "signature": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector: void ()",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@IntCurvesFace_ShapeIntersector#&1$@S@IntCurvesFace_ShapeIntersector#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector",
+      "signature": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector: void (const IntCurvesFace_ShapeIntersector &)",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@IsDone#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::IsDone",
+      "signature": "IntCurvesFace_ShapeIntersector::IsDone: bool () const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Load#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Load",
+      "signature": "IntCurvesFace_ShapeIntersector::Load: void (const TopoDS_Shape &, const double)",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@NbPnt#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::NbPnt",
+      "signature": "IntCurvesFace_ShapeIntersector::NbPnt: int () const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Perform",
+      "signature": "IntCurvesFace_ShapeIntersector::Perform: void (const occ::handle<Adaptor3d_Curve> &, const double, const double)",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Perform#&1$@S@gp_Lin#d#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Perform",
+      "signature": "IntCurvesFace_ShapeIntersector::Perform: void (const gp_Lin &, const double, const double)",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@PerformNearest#&1$@S@gp_Lin#d#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::PerformNearest",
+      "signature": "IntCurvesFace_ShapeIntersector::PerformNearest: void (const gp_Lin &, const double, const double)",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Pnt#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Pnt",
+      "signature": "IntCurvesFace_ShapeIntersector::Pnt: const gp_Pnt &(const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@SortResult#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::SortResult",
+      "signature": "IntCurvesFace_ShapeIntersector::SortResult: void ()",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "reason": "Nearest receiver reuse, duplicate sorting/copy constructors and raw internal walking/restriction curves require other contracts."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@State#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::State",
+      "signature": "IntCurvesFace_ShapeIntersector::State: TopAbs_State (const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Transition#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Transition",
+      "signature": "IntCurvesFace_ShapeIntersector::Transition: IntCurveSurface_TransitionOnCurve (const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@UParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::UParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::UParameter: double (const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@VParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::VParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::VParameter: double (const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@WParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::WParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::WParameter: double (const int) const",
+      "header": "IntCurvesFace_ShapeIntersector.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "reason": "Private initialized bounded/coupled intersection profile."
+    }
+  ],
+  "prerequisites": [],
+  "newPrerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@Boundary#I#1",
+      "nativeName": "GeomInt_IntSS::Boundary",
+      "signature": "GeomInt_IntSS::Boundary: const occ::handle<Geom_Curve> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@GeomInt_IntSS#",
+      "nativeName": "GeomInt_IntSS::GeomInt_IntSS",
+      "signature": "GeomInt_IntSS::GeomInt_IntSS: void ()",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@HasLineOnS1#I#1",
+      "nativeName": "GeomInt_IntSS::HasLineOnS1",
+      "signature": "GeomInt_IntSS::HasLineOnS1: bool (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@HasLineOnS2#I#1",
+      "nativeName": "GeomInt_IntSS::HasLineOnS2",
+      "signature": "GeomInt_IntSS::HasLineOnS2: bool (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@IsDone#1",
+      "nativeName": "GeomInt_IntSS::IsDone",
+      "signature": "GeomInt_IntSS::IsDone: bool () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@Line#I#1",
+      "nativeName": "GeomInt_IntSS::Line",
+      "signature": "GeomInt_IntSS::Line: const occ::handle<Geom_Curve> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@LineOnS1#I#1",
+      "nativeName": "GeomInt_IntSS::LineOnS1",
+      "signature": "GeomInt_IntSS::LineOnS1: const occ::handle<Geom2d_Curve> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@LineOnS2#I#1",
+      "nativeName": "GeomInt_IntSS::LineOnS2",
+      "signature": "GeomInt_IntSS::LineOnS2: const occ::handle<Geom2d_Curve> &(const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@NbBoundaries#1",
+      "nativeName": "GeomInt_IntSS::NbBoundaries",
+      "signature": "GeomInt_IntSS::NbBoundaries: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@NbLines#1",
+      "nativeName": "GeomInt_IntSS::NbLines",
+      "signature": "GeomInt_IntSS::NbLines: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@NbPoints#1",
+      "nativeName": "GeomInt_IntSS::NbPoints",
+      "signature": "GeomInt_IntSS::NbPoints: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#d#b#b#b#",
+      "nativeName": "GeomInt_IntSS::Perform",
+      "signature": "GeomInt_IntSS::Perform: void (const occ::handle<Geom_Surface> &, const occ::handle<Geom_Surface> &, const double, const bool, const bool, const bool)",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@Pnt2d#I#b#1",
+      "nativeName": "GeomInt_IntSS::Pnt2d",
+      "signature": "GeomInt_IntSS::Pnt2d: gp_Pnt2d (const int, const bool) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@Point#I#1",
+      "nativeName": "GeomInt_IntSS::Point",
+      "signature": "GeomInt_IntSS::Point: gp_Pnt (const int) const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TolReached2d#1",
+      "nativeName": "GeomInt_IntSS::TolReached2d",
+      "signature": "GeomInt_IntSS::TolReached2d: double () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    },
+    {
+      "stableId": "c:@S@GeomInt_IntSS@F@TolReached3d#1",
+      "nativeName": "GeomInt_IntSS::TolReached3d",
+      "signature": "GeomInt_IntSS::TolReached3d: double () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Existing exact GeomInt computation/output reused in a coupled copy workflow; no new migration."
+    }
+  ]
+}

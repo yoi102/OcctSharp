@@ -88,20 +88,36 @@ public sealed class LongTailClassificationTests
     }
 
     [Theory]
-    [InlineData("OpenGl_GLESExtensions.hxx", "HD002")]
-    [InlineData("RWGltf_GltfOStreamWriter.hxx", "HD003")]
-    [InlineData("NCollection_Haft.h", "HD004")]
-    [InlineData("BOPDS_Map.hxx", "HD005")]
-    public void AssignsStableHeaderFailureCodes(string header, string expectedCode)
+    [InlineData("OpenGl_GLESExtensions.hxx", "error: unknown type name 'GLenum'", "HD002")]
+    [InlineData("RWGltf_GltfOStreamWriter.hxx", "error: 'rapidjson/prettywriter.h' file not found", "HD003")]
+    [InlineData("NCollection_Haft.h", "error: This file is usable only in C++/CLI (.NET) programs", "HD004")]
+    [InlineData("BOPDS_DataMapOfIntegerListOfPaveBlock.hxx", "error: 'BOPDS_ListOfPaveBlock.hxx' file not found", "HD005")]
+    public void AssignsStableHeaderFailureCodes(string header, string error, string expectedCode)
     {
         OcctFinalClassification result = LongTailClassification.Create(
             [],
             [header],
             new HashSet<string>(StringComparer.Ordinal),
-            [new OcctInventoryFailure(header, "error: dependency file not found")]);
+            [new OcctInventoryFailure(header, error)]);
 
         Assert.True(result.IsComplete);
         Assert.Equal(expectedCode, Assert.Single(result.Headers).Code);
+    }
+
+    [Theory]
+    [InlineData("IVtk_Types.hxx")]
+    [InlineData("OpenGl_GLESExtensions.hxx")]
+    [InlineData("RWGltf_GltfOStreamWriter.hxx")]
+    [InlineData("NCollection_Haft.h")]
+    [InlineData("BOPDS_DataMapOfIntegerListOfPaveBlock.hxx")]
+    [InlineData("Unknown.hxx")]
+    public void FamiliarHeaderNamesDoNotMaskAnUnknownParseFailure(string header)
+    {
+        var result = LongTailClassification.Create([], [header], new HashSet<string>(StringComparer.Ordinal),
+            [new OcctInventoryFailure(header, "error: 'unrelated.h' file not found")]);
+        var disposition = Assert.Single(result.Headers);
+        Assert.Equal("HD099", disposition.Code);
+        Assert.Equal("Blocked", disposition.State);
     }
 
     [Fact]

@@ -1,0 +1,567 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetAlphaMode#$@E@Graphic3d_AlphaMode#f#",
+      "nativeName": "Graphic3d_Aspects::SetAlphaMode",
+      "signature": "Graphic3d_Aspects::SetAlphaMode: void (Graphic3d_AlphaMode, float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_Aspects::SetBackInteriorColor",
+      "signature": "Graphic3d_Aspects::SetBackInteriorColor: void (const Quantity_ColorRGBA &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_Aspects::SetBackMaterial",
+      "signature": "Graphic3d_Aspects::SetBackMaterial: void (const Graphic3d_MaterialAspect &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetFrontMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_Aspects::SetFrontMaterial",
+      "signature": "Graphic3d_Aspects::SetFrontMaterial: void (const Graphic3d_MaterialAspect &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_Aspects::SetInteriorColor",
+      "signature": "Graphic3d_Aspects::SetInteriorColor: void (const Quantity_ColorRGBA &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Angle#1",
+      "nativeName": "Graphic3d_CLight::Angle",
+      "signature": "Graphic3d_CLight::Angle: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Color#1",
+      "nativeName": "Graphic3d_CLight::Color",
+      "signature": "Graphic3d_CLight::Color: const Quantity_Color &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Concentration#1",
+      "nativeName": "Graphic3d_CLight::Concentration",
+      "signature": "Graphic3d_CLight::Concentration: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@ConstAttenuation#1",
+      "nativeName": "Graphic3d_CLight::ConstAttenuation",
+      "signature": "Graphic3d_CLight::ConstAttenuation: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Direction#1",
+      "nativeName": "Graphic3d_CLight::Direction",
+      "signature": "Graphic3d_CLight::Direction: gp_Dir () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Intensity#1",
+      "nativeName": "Graphic3d_CLight::Intensity",
+      "signature": "Graphic3d_CLight::Intensity: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@LinearAttenuation#1",
+      "nativeName": "Graphic3d_CLight::LinearAttenuation",
+      "signature": "Graphic3d_CLight::LinearAttenuation: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Position#1",
+      "nativeName": "Graphic3d_CLight::Position",
+      "signature": "Graphic3d_CLight::Position: const gp_Pnt &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Range#1",
+      "nativeName": "Graphic3d_CLight::Range",
+      "signature": "Graphic3d_CLight::Range: float () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAngle#f#",
+      "nativeName": "Graphic3d_CLight::SetAngle",
+      "signature": "Graphic3d_CLight::SetAngle: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAttenuation#f#f#",
+      "nativeName": "Graphic3d_CLight::SetAttenuation",
+      "signature": "Graphic3d_CLight::SetAttenuation: void (float, float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_CLight::SetColor",
+      "signature": "Graphic3d_CLight::SetColor: void (const Quantity_Color &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetConcentration#f#",
+      "nativeName": "Graphic3d_CLight::SetConcentration",
+      "signature": "Graphic3d_CLight::SetConcentration: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetDirection#&1$@S@gp_Dir#",
+      "nativeName": "Graphic3d_CLight::SetDirection",
+      "signature": "Graphic3d_CLight::SetDirection: void (const gp_Dir &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetIntensity#f#",
+      "nativeName": "Graphic3d_CLight::SetIntensity",
+      "signature": "Graphic3d_CLight::SetIntensity: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetRange#f#",
+      "nativeName": "Graphic3d_CLight::SetRange",
+      "signature": "Graphic3d_CLight::SetRange: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Graphic3d_CubeMapOrder#c#c#c#c#c#c#",
+      "nativeName": "Graphic3d_CubeMapOrder::Graphic3d_CubeMapOrder",
+      "signature": "Graphic3d_CubeMapOrder::Graphic3d_CubeMapOrder: void (unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Validated#1",
+      "nativeName": "Graphic3d_CubeMapOrder::Validated",
+      "signature": "Graphic3d_CubeMapOrder::Validated: Graphic3d_ValidatedCubeMapOrder () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapPacked@F@Graphic3d_CubeMapPacked#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#&1$@S@Graphic3d_ValidatedCubeMapOrder#",
+      "nativeName": "Graphic3d_CubeMapPacked::Graphic3d_CubeMapPacked",
+      "signature": "Graphic3d_CubeMapPacked::Graphic3d_CubeMapPacked: void (const occ::handle<Image_PixMap> &, const Graphic3d_ValidatedCubeMapOrder &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapSeparate@F@Graphic3d_CubeMapSeparate#&1$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Image_PixMap#",
+      "nativeName": "Graphic3d_CubeMapSeparate::Graphic3d_CubeMapSeparate",
+      "signature": "Graphic3d_CubeMapSeparate::Graphic3d_CubeMapSeparate: void (const NCollection_Array1<occ::handle<Image_PixMap>> &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CView@F@DisplayedStructures#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "Graphic3d_CView::DisplayedStructures",
+      "signature": "Graphic3d_CView::DisplayedStructures: void (NCollection_Map<occ::handle<Graphic3d_Structure>> &) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_MaterialAspect::Graphic3d_MaterialAspect",
+      "signature": "Graphic3d_MaterialAspect::Graphic3d_MaterialAspect: void ()",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetAmbientColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_MaterialAspect::SetAmbientColor",
+      "signature": "Graphic3d_MaterialAspect::SetAmbientColor: void (const Quantity_Color &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetDiffuseColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_MaterialAspect::SetDiffuseColor",
+      "signature": "Graphic3d_MaterialAspect::SetDiffuseColor: void (const Quantity_Color &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetPBRMaterial#&1$@S@Graphic3d_PBRMaterial#",
+      "nativeName": "Graphic3d_MaterialAspect::SetPBRMaterial",
+      "signature": "Graphic3d_MaterialAspect::SetPBRMaterial: void (const Graphic3d_PBRMaterial &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetTransparency#f#",
+      "nativeName": "Graphic3d_MaterialAspect::SetTransparency",
+      "signature": "Graphic3d_MaterialAspect::SetTransparency: void (const float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@Graphic3d_PBRMaterial#",
+      "nativeName": "Graphic3d_PBRMaterial::Graphic3d_PBRMaterial",
+      "signature": "Graphic3d_PBRMaterial::Graphic3d_PBRMaterial: void ()",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_PBRMaterial::SetColor",
+      "signature": "Graphic3d_PBRMaterial::SetColor: void (const Quantity_ColorRGBA &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetEmission#&1$@S@NCollection_Vec3>#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetEmission",
+      "signature": "Graphic3d_PBRMaterial::SetEmission: void (const NCollection_Vec3<float> &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetIOR#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetIOR",
+      "signature": "Graphic3d_PBRMaterial::SetIOR: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetMetallic#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetMetallic",
+      "signature": "Graphic3d_PBRMaterial::SetMetallic: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetRoughness#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetRoughness",
+      "signature": "Graphic3d_PBRMaterial::SetRoughness: void (float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneS#f#f#f#f#",
+      "nativeName": "Graphic3d_Texture2Dplane::SetPlaneS",
+      "signature": "Graphic3d_Texture2Dplane::SetPlaneS: void (const float, const float, const float, const float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneT#f#f#f#f#",
+      "nativeName": "Graphic3d_Texture2Dplane::SetPlaneT",
+      "signature": "Graphic3d_Texture2Dplane::SetPlaneT: void (const float, const float, const float, const float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetRotation#f#",
+      "nativeName": "Graphic3d_TextureParams::SetRotation",
+      "signature": "Graphic3d_TextureParams::SetRotation: void (const float)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetScale#$@S@NCollection_Vec2>#f#",
+      "nativeName": "Graphic3d_TextureParams::SetScale",
+      "signature": "Graphic3d_TextureParams::SetScale: void (const NCollection_Vec2<float>)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetTranslation#$@S@NCollection_Vec2>#f#",
+      "nativeName": "Graphic3d_TextureParams::SetTranslation",
+      "signature": "Graphic3d_TextureParams::SetTranslation: void (const NCollection_Vec2<float>)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#",
+      "nativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+      "signature": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings: void ()",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+      "signature": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings: void (const Graphic3d_ZLayerSettings &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetClearDepth#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetClearDepth",
+      "signature": "Graphic3d_ZLayerSettings::SetClearDepth: void (const bool)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthTest#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetEnableDepthTest",
+      "signature": "Graphic3d_ZLayerSettings::SetEnableDepthTest: void (const bool)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthWrite#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetEnableDepthWrite",
+      "signature": "Graphic3d_ZLayerSettings::SetEnableDepthWrite: void (const bool)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetImmediate#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetImmediate",
+      "signature": "Graphic3d_ZLayerSettings::SetImmediate: void (const bool)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_AlienPixMap@F@Load#*1c#k#&1$@S@TCollection_AsciiString#",
+      "nativeName": "Image_AlienPixMap::Load",
+      "signature": "Image_AlienPixMap::Load: bool (const uint8_t *, const size_t, const TCollection_AsciiString &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@ChangeRow#k#",
+      "nativeName": "Image_PixMap::ChangeRow",
+      "signature": "Image_PixMap::ChangeRow: uint8_t *(size_t)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@InitTrash#$@E@Image_Format#k#k#k#",
+      "nativeName": "Image_PixMap::InitTrash",
+      "signature": "Image_PixMap::InitTrash: bool (Image_Format, const size_t, const size_t, const size_t)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@PixelColor#I#I#b#1",
+      "nativeName": "Image_PixMap::PixelColor",
+      "signature": "Image_PixMap::PixelColor: Quantity_ColorRGBA (int, int, bool) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@Row#k#1",
+      "nativeName": "Image_PixMap::Row",
+      "signature": "Image_PixMap::Row: const uint8_t *(size_t) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SetPixelColor#I#I#&1$@S@Quantity_ColorRGBA#b#",
+      "nativeName": "Image_PixMap::SetPixelColor",
+      "signature": "Image_PixMap::SetPixelColor: void (const int, const int, const Quantity_ColorRGBA &, const bool)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeX#1",
+      "nativeName": "Image_PixMap::SizeX",
+      "signature": "Image_PixMap::SizeX: size_t () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeY#1",
+      "nativeName": "Image_PixMap::SizeY",
+      "signature": "Image_PixMap::SizeY: size_t () const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@OpenGl_GraphicDriver@F@GetSharedContext#b#1",
+      "nativeName": "OpenGl_GraphicDriver::GetSharedContext",
+      "signature": "OpenGl_GraphicDriver::GetSharedContext: const occ::handle<OpenGl_Context> &(bool) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Prs3d_Drawer@F@ShadingAspect#1",
+      "nativeName": "Prs3d_Drawer::ShadingAspect",
+      "signature": "Prs3d_Drawer::ShadingAspect: const occ::handle<Prs3d_ShadingAspect> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@Prs3d_ShadingAspect@F@Aspect#1",
+      "nativeName": "Prs3d_ShadingAspect::Aspect",
+      "signature": "Prs3d_ShadingAspect::Aspect: const occ::handle<Graphic3d_AspectFillArea3d> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsMgr_PresentableObject@F@Attributes#1",
+      "nativeName": "PrsMgr_PresentableObject::Attributes",
+      "signature": "PrsMgr_PresentableObject::Attributes: const occ::handle<Prs3d_Drawer> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_ImageDumpOptions@F@V3d_ImageDumpOptions#",
+      "nativeName": "V3d_ImageDumpOptions::V3d_ImageDumpOptions",
+      "signature": "V3d_ImageDumpOptions::V3d_ImageDumpOptions: void ()",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ActiveLights#1",
+      "nativeName": "V3d_View::ActiveLights",
+      "signature": "V3d_View::ActiveLights: const NCollection_List<occ::handle<Graphic3d_CLight>> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ChangeRenderingParams#",
+      "nativeName": "V3d_View::ChangeRenderingParams",
+      "signature": "V3d_View::ChangeRenderingParams: Graphic3d_RenderingParams &()",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@IsActiveLight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1",
+      "nativeName": "V3d_View::IsActiveLight",
+      "signature": "V3d_View::IsActiveLight: bool (const occ::handle<V3d_Light> &) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@RenderingParams#1",
+      "nativeName": "V3d_View::RenderingParams",
+      "signature": "V3d_View::RenderingParams: const Graphic3d_RenderingParams &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_View::SetLightOn",
+      "signature": "V3d_View::SetLightOn: void (const occ::handle<V3d_Light> &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ToPixMap#&$@S@Image_PixMap#&1$@S@V3d_ImageDumpOptions#",
+      "nativeName": "V3d_View::ToPixMap",
+      "signature": "V3d_View::ToPixMap: bool (Image_PixMap &, const V3d_ImageDumpOptions &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@View#1",
+      "nativeName": "V3d_View::View",
+      "signature": "V3d_View::View: const occ::handle<Graphic3d_CView> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ActiveLights#1",
+      "nativeName": "V3d_Viewer::ActiveLights",
+      "signature": "V3d_Viewer::ActiveLights: const NCollection_List<occ::handle<Graphic3d_CLight>> &() const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@AddZLayer#&I#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "V3d_Viewer::AddZLayer",
+      "signature": "V3d_Viewer::AddZLayer: bool (Graphic3d_ZLayerId &, const Graphic3d_ZLayerSettings &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@GetAllZLayers#&$@S@NCollection_Sequence>#I#1",
+      "nativeName": "V3d_Viewer::GetAllZLayers",
+      "signature": "V3d_Viewer::GetAllZLayers: void (NCollection_Sequence<int> &) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOff#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_Viewer::SetLightOff",
+      "signature": "V3d_Viewer::SetLightOff: void (const occ::handle<V3d_Light> &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_Viewer::SetLightOn",
+      "signature": "V3d_Viewer::SetLightOn: void (const occ::handle<V3d_Light> &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetZLayerSettings#I#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "V3d_Viewer::SetZLayerSettings",
+      "signature": "V3d_Viewer::SetZLayerSettings: void (const Graphic3d_ZLayerId, const Graphic3d_ZLayerSettings &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ZLayerSettings#I#1",
+      "nativeName": "V3d_Viewer::ZLayerSettings",
+      "signature": "V3d_Viewer::ZLayerSettings: const Graphic3d_ZLayerSettings &(const Graphic3d_ZLayerId) const",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@TopoDS_Shape#",
+      "nativeName": "PrsDim_DiameterDimension::PrsDim_DiameterDimension",
+      "signature": "PrsDim_DiameterDimension::PrsDim_DiameterDimension: void (const TopoDS_Shape &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsDim_Dimension@F@SetDisplayUnits#&1$@S@TCollection_AsciiString#",
+      "nativeName": "PrsDim_Dimension::SetDisplayUnits",
+      "signature": "PrsDim_Dimension::SetDisplayUnits: void (const TCollection_AsciiString &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsDim_Dimension@F@SetModelUnits#&1$@S@TCollection_AsciiString#",
+      "nativeName": "PrsDim_Dimension::SetModelUnits",
+      "signature": "PrsDim_Dimension::SetModelUnits: void (const TCollection_AsciiString &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#&1$@S@gp_Pnt#S0_#&1$@S@gp_Pln#",
+      "nativeName": "PrsDim_LengthDimension::PrsDim_LengthDimension",
+      "signature": "PrsDim_LengthDimension::PrsDim_LengthDimension: void (const gp_Pnt &, const gp_Pnt &, const gp_Pln &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    },
+    {
+      "stableId": "c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@TopoDS_Shape#",
+      "nativeName": "PrsDim_RadiusDimension::PrsDim_RadiusDimension",
+      "signature": "PrsDim_RadiusDimension::PrsDim_RadiusDimension: void (const TopoDS_Shape &)",
+      "guard": "CGViewerResourceParentThreadPolicy",
+      "reason": "Exact fixed SDK call under existing viewer owner-thread, registry and parent validation; original SDK receiver/copy/return type and success-only publication retained. Allocation factories preserve new; omitted trailing constructor arguments are delegated to original SDK defaults. Borrowed context, texture and light returns never escape the caller scope."
+    }
+  ],
+  "supportingOperations": []
+}

@@ -6,6 +6,8 @@
 #include "Runtime/Shape.hxx"
 #include "Runtime/Validation.hxx"
 #include <BRepCheck_Analyzer.hxx>
+#include <BOPAlgo_ArgumentAnalyzer.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
 #include <BRepCheck_Result.hxx>
 #include <BRepCheck_Status.hxx>
 #include <BRepTools_ReShape.hxx>
@@ -447,6 +449,50 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
     ValidateUsableShape(shape);
     BRepCheck_Analyzer analyzer(shape->Value);
     *out_is_valid = analyzer.IsValid() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_self_interference(
+  const OcctSharp_ShapeHandle* shape, int32_t* out_self_fault_count, int32_t* out_other_fault_count)
+{
+  if (out_self_fault_count == nullptr || out_other_fault_count == nullptr)
+  {
+    SetLastError("A self-interference count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_self_fault_count = 0;
+  *out_other_fault_count = 0;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    // Analysis may update geometry caches. Protect the caller's graph and share no analyzer state.
+    BRepBuilderAPI_Copy copy(shape->Value, true, false);
+    if (!copy.IsDone() || copy.Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "Could not copy the self-interference input.");
+    BOPAlgo_ArgumentAnalyzer analyzer;
+    analyzer.SetShape1(copy.Shape());
+    analyzer.SetRunParallel(false);
+    analyzer.StopOnFirstFaulty() = false;
+    analyzer.ArgumentTypeMode() = false;
+    analyzer.SelfInterMode() = true;
+    analyzer.SmallEdgeMode() = false;
+    analyzer.RebuildFaceMode() = false;
+    analyzer.TangentMode() = false;
+    analyzer.MergeVertexMode() = false;
+    analyzer.MergeEdgeMode() = false;
+    analyzer.ContinuityMode() = false;
+    analyzer.CurveOnSurfaceMode() = false;
+    analyzer.Perform();
+    if (analyzer.HasErrors())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The self-interference analysis did not complete.");
+    int32_t self = 0, other = 0;
+    for (const auto& item : analyzer.GetCheckResult())
+    {
+      if (item.GetCheckStatus() == BOPAlgo_SelfIntersect) ++self;
+      else ++other;
+    }
+    *out_self_fault_count = self;
+    *out_other_fault_count = other;
   });
 }
 

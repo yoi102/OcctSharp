@@ -12,6 +12,9 @@ public sealed record DiscoveryConfiguration(
         GenerationScopeConfiguration.Precision,
     ];
 
+    public IReadOnlyList<string> ViewerSupportWorkflows { get; init; } = [];
+    public IReadOnlyList<string> ConsumerSupportWorkflows { get; init; } = [];
+
     public bool AutoGenerationScopes { get; init; }
 
     public IReadOnlyList<SharedHandleScopeConfiguration> SharedHandleScopes { get; init; } = [];
@@ -31,6 +34,11 @@ public sealed record DiscoveryConfiguration(
 
     public IReadOnlyList<string> ExcludedHeaders { get; init; } = [];
 
+    /// <summary>Hash-pinned SDK include fragments missing from the binary distribution.</summary>
+    public IReadOnlyList<SupplementalIncludeConfiguration> SupplementalIncludes { get; init; } = [];
+
+    internal IReadOnlyList<string> AdditionalIncludeDirectories { get; init; } = [];
+
     public IReadOnlyList<ManualBindingConfiguration> ManualBindings { get; init; } = [];
 
     public IReadOnlyList<ExcludedBindingConfiguration> ExcludedBindings { get; init; } = [];
@@ -38,6 +46,8 @@ public sealed record DiscoveryConfiguration(
     /// <summary>Whole source packages excluded from automatic core-package generation with an explicit disposition.</summary>
     public IReadOnlyList<ExcludedAutoPackageConfiguration> ExcludedAutoPackages { get; init; } = [];
 }
+
+public sealed record SupplementalIncludeConfiguration(string Path, string Sha256);
 
 public sealed record ManualBindingConfiguration
 {

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cone#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cone &, const double, const double, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Cylinder#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Cylinder &, const double, const double, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Pln &, const double, const double, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Sphere#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Sphere &, const double, const double, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Torus#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Torus &, const double, const double, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Circ#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Circ &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Elips#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Elips &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Hypr#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Hypr &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Lin#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Lin &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Parab#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Parab &, const double, const double)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Finite initialized private constructor with copied geometry/vertex graph, independent completed topology and native error diagnostics."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@CurveOnSurface#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#&d#S7_#*b#S",
+      "nativeName": "BRep_Tool::CurveOnSurface",
+      "signature": "BRep_Tool::CurveOnSurface: occ::handle<Geom2d_Curve> (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, double &, double &, bool *)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Range#&1$@S@TopoDS_Edge#&d#S2_#S",
+      "nativeName": "BRep_Tool::Range",
+      "signature": "BRep_Tool::Range: void (const TopoDS_Edge &, double &, double &)",
+      "guard": "BLParameterizedConstruction",
+      "reason": "Required private completion, copied geometric representation or native range dependency. Existing dispositions are reused without migration credit."
+    }
+  ],
+  "supportingOperations": []
+}

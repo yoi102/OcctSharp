@@ -1,0 +1,188 @@
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+#pragma warning disable CS1591
+
+public enum SketchCurveExpressionKind { Primitive=1,Offset=2,Continuation=3 }
+
+/// <summary>Immutable owned finite curve expression. Offset geometry retains its
+/// exact basis and signed right-normal distance; it is never fitted to B-spline.</summary>
+public sealed class SketchCurveExpression2d
+{
+    public const int MaximumDepth=64;
+    private SketchCurveExpression2d(SketchCurve2d primitive)
+    {
+        Kind=SketchCurveExpressionKind.Primitive;Primitive=primitive;FirstParameter=primitive.FirstParameter;LastParameter=primitive.LastParameter;
+        Reversed=primitive.Reversed;Depth=1;
+    }
+    private SketchCurveExpression2d(SketchCurveExpressionKind kind,SketchCurveExpression2d basis,double distance,double first,double last,bool reversed)
+    {
+        if(!double.IsFinite(distance))throw new ArgumentOutOfRangeException(nameof(distance));
+        if(!double.IsFinite(first)||!double.IsFinite(last)||first>=last||kind==SketchCurveExpressionKind.Offset&&(first<basis.FirstParameter||last>basis.LastParameter))
+            throw new ArgumentOutOfRangeException(nameof(first),"Curve expression interval is invalid for its finite basis.");
+        if(basis.Depth>=MaximumDepth)throw new ArgumentException("Curve expression exceeds its64-node resource bound.",nameof(basis));
+        Kind=kind;Basis=basis;SignedOffset=distance;FirstParameter=first;LastParameter=last;Reversed=reversed;Depth=basis.Depth+1;
+    }
+    public SketchCurveExpressionKind Kind {get;}
+    private bool HasContinuation=>Kind==SketchCurveExpressionKind.Continuation||Basis?.HasContinuation==true;
+    public SketchCurve2d? Primitive {get;}
+    public SketchCurveExpression2d? Basis {get;}
+    public double SignedOffset {get;}
+    public double FirstParameter {get;}
+    public double LastParameter {get;}
+    public bool Reversed {get;}
+    public int Depth {get;}
+    public static SketchCurveExpression2d FromCurve(SketchCurve2d primitive)
+    {ArgumentNullException.ThrowIfNull(primitive);return new(primitive);}
+    /// <summary>Positive distance follows the right normal of the directed basis.</summary>
+    public SketchCurveExpression2d Offset(double signedDistance)=>new(SketchCurveExpressionKind.Offset,this,signedDistance,FirstParameter,LastParameter,Reversed);
+    public SketchCurveExpression2d Reverse()=>Basis is null?FromCurve(Primitive!.Reverse()):
+        new(Kind,Basis,SignedOffset,FirstParameter,LastParameter,!Reversed);
+    public SketchCurveExpression2d Trim(double firstNormalized,double lastNormalized)
+    {
+        if(!double.IsFinite(firstNormalized)||!double.IsFinite(lastNormalized)||firstNormalized<0||lastNormalized>1||firstNormalized>=lastNormalized)
+            throw new ArgumentOutOfRangeException(nameof(firstNormalized));
+        // Exact selections retain the authored native bounds. Recomputing
+        // Last-(Last-First) can fall one ulp outside a finite offset basis.
+        if(firstNormalized==0&&lastNormalized==1)return this;
+        if(Basis is null)return FromCurve(Primitive!.Trim(firstNormalized,lastNormalized));
+        double span=LastParameter-FirstParameter;
+        double first=Reversed?(lastNormalized==1?FirstParameter:LastParameter-lastNormalized*span):
+            (firstNormalized==0?FirstParameter:FirstParameter+firstNormalized*span);
+        double last=Reversed?(firstNormalized==0?LastParameter:LastParameter-firstNormalized*span):
+            (lastNormalized==1?LastParameter:FirstParameter+lastNormalized*span);
+        return new(Kind,Basis,SignedOffset,first,last,Reversed);
+    }
+    /// <summary>Owns the exact analytic continuation of this curve into a larger
+    /// finite native interval. Primitive author data and parameter units remain
+    /// on Basis. Polynomial/rational terminal spans are continued exactly; no
+    /// tangent-line extension or curve fitting is used. Singular/invalid rational
+    /// continuations and loss of finite C1 continuity are explicit failures.</summary>
+    public SketchCurveExpression2d ContinueNativeRange(double first,double last)
+    {
+        if(!double.IsFinite(first)||!double.IsFinite(last)||first>FirstParameter||last<LastParameter||first>=last)
+            throw new ArgumentOutOfRangeException(nameof(first),"Continuation must include the current finite domain.");
+        return new(SketchCurveExpressionKind.Continuation,this,0,first,last,Reversed);
+    }
+    public SketchCurveExpression2d Transform(SketchTransform2d transform)
+    {
+        if(Basis is null)return FromCurve(Primitive!.Transform(transform));
+        var leaf=this;while(leaf.Basis is not null)leaf=leaf.Basis;
+        bool paramMirror=(leaf.Primitive!.Kind is SketchCurveKind.Circle or SketchCurveKind.Ellipse)&&transform.ReversesOrientation;
+        double parameterScale=leaf.Primitive.Kind==SketchCurveKind.Segment?transform.UniformScale:1;
+        double first=(paramMirror?-LastParameter:FirstParameter)*parameterScale;
+        double last=(paramMirror?-FirstParameter:LastParameter)*parameterScale;
+        return new(Kind,Basis.Transform(transform),SignedOffset*transform.UniformScale*(transform.ReversesOrientation?-1:1),
+            first,last,Reversed^paramMirror);
+    }
+    public unsafe SketchEvaluation Evaluate(double parameter,bool normalized=true)
+    {
+        double native=NativeParameter(parameter,normalized);RequireRuntime(HasContinuation?80:77);
+        return WithExpression<SketchEvaluation>((nodes,count)=>
+        {
+            NativeError.ThrowIfFailed(NativeMethods.SketchExpressionEvaluate(nodes,count,native,out var value),"sketch_expression_evaluate");
+            return new(new(value.Point.X,value.Point.Y),new(value.Derivative.X,value.Derivative.Y),value.Parameter,
+                (value.Parameter-FirstParameter)/(LastParameter-FirstParameter));
+        });
+    }
+    /// <summary>Exact analytic derivative in directed native-parameter units.</summary>
+    public unsafe SketchVector2d Derivative(double parameter,int order,bool normalized=true)
+    {
+        if(order is <1 or >3)throw new ArgumentOutOfRangeException(nameof(order));
+        double native=NativeParameter(parameter,normalized);RequireRuntime(HasContinuation?80:77);
+        return WithExpression<SketchVector2d>((nodes,count)=>
+        {
+            NativeError.ThrowIfFailed(NativeMethods.SketchExpressionDerivative(nodes,count,native,order,out var value),"sketch_expression_derivative");
+            return new(value.X,value.Y);
+        });
+    }
+    public unsafe Shape ToEdge(SketchPlane plane)
+    {
+        ArgumentNullException.ThrowIfNull(plane);RequireRuntime(HasContinuation?80:77);
+        return WithExpression<Shape>((nodes,count)=>
+        {
+            SketchPlaneRaw value=plane.ToRaw();
+            NativeError.ThrowIfFailed(NativeMethods.SketchExpressionMakeEdge(nodes,count,&value,out nint shape),"sketch_expression_make_edge");
+            return ShapeFactory.FromNativeHandle(shape,"sketch_expression_make_edge");
+        });
+    }
+    /// <summary>Copies the native orthogonal projection solutions inside the
+    /// finite interval, ordered by distance and directed native parameter.</summary>
+    public unsafe IReadOnlyList<SketchProjection> Project(SketchPoint2d point)
+    {
+        point.Validate(nameof(point));RequireRuntime(HasContinuation?80:77);
+        return WithExpression<IReadOnlyList<SketchProjection>>((nodes,count)=>
+        {
+            var rawPoint=new SketchPoint2dRaw(point.X,point.Y);
+            NativeError.ThrowIfFailed(NativeMethods.SketchExpressionProject(nodes,count,rawPoint,null,0,out int resultCount),
+                "sketch_expression_project_count");
+            SketchProjectionRaw[] values=new SketchProjectionRaw[resultCount];
+            fixed(SketchProjectionRaw* buffer=values)
+                NativeError.ThrowIfFailed(NativeMethods.SketchExpressionProject(nodes,count,rawPoint,buffer,values.Length,out resultCount),
+                    "sketch_expression_project");
+            return Array.AsReadOnly(values.Take(resultCount).Select(value=>new SketchProjection(
+                new(value.Point.X,value.Point.Y),value.Parameter,NormalizedParameter(value.Parameter),value.Distance)).ToArray());
+        });
+    }
+    /// <summary>Classifies two finite operands, including coincident intervals.
+    /// Passing the same object still means two operands, not self intersection.</summary>
+    public unsafe SketchIntersectionInspection InspectIntersections(SketchCurveExpression2d other,double tolerance=1e-7)
+    {
+        ArgumentNullException.ThrowIfNull(other);SketchModeling.ValidateTolerance(tolerance,nameof(tolerance));RequireRuntime(HasContinuation||other.HasContinuation?80:77);
+        return WithExpression((first,firstCount)=>other.WithExpression((second,secondCount)=>
+            ReadIntersections(first,firstCount,second,secondCount,other,tolerance)));
+    }
+    /// <summary>Classifies self intersections without treating the entire curve
+    /// as a coincident second operand.</summary>
+    public unsafe SketchIntersectionInspection InspectSelfIntersections(double tolerance=1e-7)
+    {
+        SketchModeling.ValidateTolerance(tolerance,nameof(tolerance));RequireRuntime(HasContinuation?80:77);
+        return WithExpression((nodes,count)=>ReadIntersections(nodes,count,null,0,this,tolerance));
+    }
+    private unsafe SketchIntersectionInspection ReadIntersections(SketchExpressionNodeRaw* first,int firstCount,
+        SketchExpressionNodeRaw* second,int secondCount,SketchCurveExpression2d other,double tolerance)
+    {
+        NativeError.ThrowIfFailed(NativeMethods.SketchExpressionIntersect(first,firstCount,second,secondCount,tolerance,
+            null,0,out int count,out int pointCount,out int intervalCount),"sketch_expression_intersect_count");
+        SketchIntersectionRaw[] values=new SketchIntersectionRaw[count];
+        fixed(SketchIntersectionRaw* buffer=values)
+            NativeError.ThrowIfFailed(NativeMethods.SketchExpressionIntersect(first,firstCount,second,secondCount,tolerance,
+                buffer,values.Length,out count,out pointCount,out intervalCount),"sketch_expression_intersect");
+        return new(values.Take(count).Select(value=>new SketchIntersection(new(value.Point.X,value.Point.Y),
+            value.FirstParameter,value.SecondParameter,NormalizedParameter(value.FirstParameter),
+            other.NormalizedParameter(value.SecondParameter))).ToArray(),pointCount,intervalCount);
+    }
+    private double NormalizedParameter(double native)=>(native-FirstParameter)/(LastParameter-FirstParameter);
+    private double NativeParameter(double value,bool normalized)
+    {
+        if(!double.IsFinite(value)||normalized&&(value<0||value>1))throw new ArgumentOutOfRangeException(nameof(value));
+        double native=normalized?(value==0?FirstParameter:value==1?LastParameter:FirstParameter+value*(LastParameter-FirstParameter)):value;
+        if(native<FirstParameter||native>LastParameter)throw new ArgumentOutOfRangeException(nameof(value));
+        return native;
+    }
+    internal static void RequireRuntime(int minimumMinor=117)
+    {
+        minimumMinor=Math.Max(minimumMinor,117);var abi=OcctRuntime.Info.AbiVersion;
+        if(abi.Major!=1||abi.Minor<minimumMinor)throw new BadImageFormatException($"Exact sketch expressions require ABI1.{minimumMinor} or later.");
+    }
+    private unsafe delegate TResult ExpressionAction<TResult>(SketchExpressionNodeRaw* nodes,int count);
+    private unsafe TResult WithExpression<TResult>(ExpressionAction<TResult> action)
+    {
+        if(Basis is null)return Primitive!.WithRaw(raw=>
+        {
+            SketchExpressionNodeRaw node=new(){Kind=1,BasisIndex=-1,Curve=*raw};return action(&node,1);
+        });
+        return Basis.WithExpression((nodes,count)=>
+        {
+            // The primitive's pinned arrays stay alive for this entire callback.
+            // Each prefix owns its node buffer;no pointer escapes into the DTO.
+            SketchExpressionNodeRaw[] prefix=new SketchExpressionNodeRaw[count+1];
+            new ReadOnlySpan<SketchExpressionNodeRaw>(nodes,count).CopyTo(prefix);
+            prefix[count]=new(){Kind=(int)Kind,BasisIndex=count-1,SignedOffset=SignedOffset,
+                Curve=new(){FirstParameter=FirstParameter,LastParameter=LastParameter,Reversed=Reversed?1:0}};
+            fixed(SketchExpressionNodeRaw* pointer=prefix)return action(pointer,count+1);
+        });
+    }
+}
+#pragma warning restore CS1591

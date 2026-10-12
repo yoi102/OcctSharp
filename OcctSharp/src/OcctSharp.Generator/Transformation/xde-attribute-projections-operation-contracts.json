@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@AddLayer#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::AddLayer",
+      "signature": "XCAFDoc_LayerTool::AddLayer: TDF_Label (const TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@FindLayer#&1$@S@TCollection_ExtendedString#&$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::FindLayer",
+      "signature": "XCAFDoc_LayerTool::FindLayer: bool (const TCollection_ExtendedString &, TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayer#&1$@S@TDF_Label#&$@S@TCollection_ExtendedString#1",
+      "nativeName": "XCAFDoc_LayerTool::GetLayer",
+      "signature": "XCAFDoc_LayerTool::GetLayer: bool (const TDF_Label &, TCollection_ExtendedString &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetLayerLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::GetLayerLabels",
+      "signature": "XCAFDoc_LayerTool::GetLayerLabels: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@GetShapesOfLayer#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "nativeName": "XCAFDoc_LayerTool::GetShapesOfLayer",
+      "signature": "XCAFDoc_LayerTool::GetShapesOfLayer: void (const TDF_Label &, NCollection_Sequence<TDF_Label> &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsLayer#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::IsLayer",
+      "signature": "XCAFDoc_LayerTool::IsLayer: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@IsVisible#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::IsVisible",
+      "signature": "XCAFDoc_LayerTool::IsVisible: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@RemoveLayer#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_LayerTool::RemoveLayer",
+      "signature": "XCAFDoc_LayerTool::RemoveLayer: void (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetLayer#&1$@S@TDF_Label#S0_#b#1",
+      "nativeName": "XCAFDoc_LayerTool::SetLayer",
+      "signature": "XCAFDoc_LayerTool::SetLayer: void (const TDF_Label &, const TDF_Label &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@SetVisibility#&1$@S@TDF_Label#b#1",
+      "nativeName": "XCAFDoc_LayerTool::SetVisibility",
+      "signature": "XCAFDoc_LayerTool::SetVisibility: void (const TDF_Label &, const bool) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_LayerTool@F@UnSetOneLayer#&1$@S@TDF_Label#S0_#1",
+      "nativeName": "XCAFDoc_LayerTool::UnSetOneLayer",
+      "signature": "XCAFDoc_LayerTool::UnSetOneLayer: bool (const TDF_Label &, const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_Note::Get",
+      "signature": "XCAFDoc_Note::Get: occ::handle<XCAFDoc_Note> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@IsMine#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_Note::IsMine",
+      "signature": "XCAFDoc_Note::IsMine: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@TimeStamp#1",
+      "nativeName": "XCAFDoc_Note::TimeStamp",
+      "signature": "XCAFDoc_Note::TimeStamp: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@UserName#1",
+      "nativeName": "XCAFDoc_Note::UserName",
+      "signature": "XCAFDoc_Note::UserName: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteBalloon@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_NoteBalloon::Get",
+      "signature": "XCAFDoc_NoteBalloon::Get: occ::handle<XCAFDoc_NoteBalloon> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Comment#1",
+      "nativeName": "XCAFDoc_NoteComment::Comment",
+      "signature": "XCAFDoc_NoteComment::Comment: const TCollection_ExtendedString &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NoteComment@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_NoteComment::Get",
+      "signature": "XCAFDoc_NoteComment::Get: occ::handle<XCAFDoc_NoteComment> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@AddNote#&1$@S@TDF_Label#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::AddNote",
+      "signature": "XCAFDoc_NotesTool::AddNote: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &, const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateBalloon#&1$@S@TCollection_ExtendedString#S0_#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::CreateBalloon",
+      "signature": "XCAFDoc_NotesTool::CreateBalloon: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@CreateComment#&1$@S@TCollection_ExtendedString#S0_#S0_#",
+      "nativeName": "XCAFDoc_NotesTool::CreateComment",
+      "signature": "XCAFDoc_NotesTool::CreateComment: occ::handle<XCAFDoc_Note> (const TCollection_ExtendedString &, const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@DeleteNote#&1$@S@TDF_Label#",
+      "nativeName": "XCAFDoc_NotesTool::DeleteNote",
+      "signature": "XCAFDoc_NotesTool::DeleteNote: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@FindAnnotatedItem#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::FindAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::FindAnnotatedItem: TDF_Label (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAnnotatedItems#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAnnotatedItems",
+      "signature": "XCAFDoc_NotesTool::GetAnnotatedItems: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetAttrNotes#&1$@S@XCAFDoc_AssemblyItemId#&1$@S@Standard_GUID#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetAttrNotes",
+      "signature": "XCAFDoc_NotesTool::GetAttrNotes: int (const XCAFDoc_AssemblyItemId &, const Standard_GUID &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: void (NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: int (const TDF_Label &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetNotes#&1$@S@XCAFDoc_AssemblyItemId#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetNotes",
+      "signature": "XCAFDoc_NotesTool::GetNotes: int (const XCAFDoc_AssemblyItemId &, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@GetSubshapeNotes#&1$@S@XCAFDoc_AssemblyItemId#I#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::GetSubshapeNotes",
+      "signature": "XCAFDoc_NotesTool::GetSubshapeNotes: int (const XCAFDoc_AssemblyItemId &, int, NCollection_Sequence<TDF_Label> &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@IsAnnotatedItem#&1$@S@TDF_Label#1",
+      "nativeName": "XCAFDoc_NotesTool::IsAnnotatedItem",
+      "signature": "XCAFDoc_NotesTool::IsAnnotatedItem: bool (const TDF_Label &) const",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@RemoveNote#&1$@S@TDF_Label#S0_#b#",
+      "nativeName": "XCAFDoc_NotesTool::RemoveNote",
+      "signature": "XCAFDoc_NotesTool::RemoveNote: bool (const TDF_Label &, const TDF_Label &, bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Document-bound layer/note operations, validated same-document labels and detached table/association/Unicode projections."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemId@F@ToString#1",
+      "nativeName": "XCAFDoc_AssemblyItemId::ToString",
+      "signature": "XCAFDoc_AssemblyItemId::ToString: TCollection_AsciiString () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@Get#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_AssemblyItemRef::Get",
+      "signature": "XCAFDoc_AssemblyItemRef::Get: occ::handle<XCAFDoc_AssemblyItemRef> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetGUID#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetGUID",
+      "signature": "XCAFDoc_AssemblyItemRef::GetGUID: Standard_GUID () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetItem#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetItem",
+      "signature": "XCAFDoc_AssemblyItemRef::GetItem: const XCAFDoc_AssemblyItemId &() const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetSubshapeIndex#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::GetSubshapeIndex",
+      "signature": "XCAFDoc_AssemblyItemRef::GetSubshapeIndex: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsGUID#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsGUID",
+      "signature": "XCAFDoc_AssemblyItemRef::IsGUID: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsOrphan#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsOrphan",
+      "signature": "XCAFDoc_AssemblyItemRef::IsOrphan: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@IsSubshapeIndex#1",
+      "nativeName": "XCAFDoc_AssemblyItemRef::IsSubshapeIndex",
+      "signature": "XCAFDoc_AssemblyItemRef::IsSubshapeIndex: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckLayerTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckLayerTool",
+      "signature": "XCAFDoc_DocumentTool::CheckLayerTool: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@CheckNotesTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::CheckNotesTool",
+      "signature": "XCAFDoc_DocumentTool::CheckNotesTool: bool (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@LayerTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::LayerTool",
+      "signature": "XCAFDoc_DocumentTool::LayerTool: occ::handle<XCAFDoc_LayerTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@NotesTool#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_DocumentTool::NotesTool",
+      "signature": "XCAFDoc_DocumentTool::NotesTool: occ::handle<XCAFDoc_NotesTool> (const TDF_Label &)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@Set#&1$@S@TDF_Label#b#S",
+      "nativeName": "XCAFDoc_DocumentTool::Set",
+      "signature": "XCAFDoc_DocumentTool::Set: occ::handle<XCAFDoc_DocumentTool> (const TDF_Label &, const bool)",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Note@F@IsOrphan#1",
+      "nativeName": "XCAFDoc_Note::IsOrphan",
+      "signature": "XCAFDoc_Note::IsOrphan: bool () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@NbAnnotatedItems#1",
+      "nativeName": "XCAFDoc_NotesTool::NbAnnotatedItems",
+      "signature": "XCAFDoc_NotesTool::NbAnnotatedItems: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_NotesTool@F@NbNotes#1",
+      "nativeName": "XCAFDoc_NotesTool::NbNotes",
+      "signature": "XCAFDoc_NotesTool::NbNotes: int () const",
+      "guard": "ASDocumentBound",
+      "reason": "Explicitly used private prerequisite; already-bound IDs remain reused, not new migration."
+    }
+  ]
+}

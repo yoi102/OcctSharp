@@ -1,0 +1,180 @@
+#include "OcctSharp.ConsumerSketchExpressionGeometry.Generated.hxx"
+#include "Modeling/Sketch.hxx"
+#include "Runtime/Error.hxx"
+#include "Runtime/Shape.hxx"
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <BRepCheck_Analyzer.hxx>
+#include <BRepClass_FaceClassifier.hxx>
+#include <BRep_Builder.hxx>
+#include <BRep_Tool.hxx>
+#include <GeomAPI.hxx>
+#include <Geom2dAdaptor_Curve.hxx>
+#include <Geom2d_OffsetCurve.hxx>
+#include <Geom2d_TrimmedCurve.hxx>
+#include <Geom2d_BezierCurve.hxx>
+#include <Geom2d_BSplineCurve.hxx>
+#include <Geom2d_Line.hxx>
+#include <Geom2d_Circle.hxx>
+#include <Geom2d_Ellipse.hxx>
+#include <Geom2dConvert.hxx>
+#include <BSplCLib.hxx>
+#include <NCollection_Array1.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <Geom_BezierCurve.hxx>
+#include <Geom_Circle.hxx>
+#include <Geom_Ellipse.hxx>
+#include <Geom_Line.hxx>
+#include <Geom_OffsetCurve.hxx>
+#include <Geom_Plane.hxx>
+#include <Geom_TrimmedCurve.hxx>
+#include <TopExp_Explorer.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Face.hxx>
+#include <TopoDS_Wire.hxx>
+#include <cmath>
+#include <cstdint>
+#include <limits>
+#include <vector>
+#include <algorithm>
+#include <gp.hxx>
+#include <gp_Circ.hxx>
+#include <gp_Elips.hxx>
+#include <gp_Lin.hxx>
+
+using namespace OcctSharp::Native;
+namespace {
+void Require(bool condition,const char* message) {
+  if(!condition)throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT,message);
+}
+void PointInPlane(const gp_Pnt& point,const gp_Pln& plane,double tolerance) {
+  Require(plane.Distance(point)<=tolerance,"Expression wire support does not lie in the requested plane.");
+}
+}
+namespace OcctSharp::Native {
+namespace {
+opencascade::handle<Geom2d_BSplineCurve> ContinueSpline(
+  const opencascade::handle<Geom2d_BSplineCurve>& source,double first,double last) {
+  auto copy=opencascade::handle<Geom2d_BSplineCurve>::DownCast(source->Copy());
+  if(copy->IsPeriodic())return copy;
+  const auto lower=copy->FirstParameter(),upper=copy->LastParameter();
+  if(first>=lower&&last<=upper){copy->Segment(first,last);return copy;}
+  // Clamp the original finite support,then change only its repeated endpoint
+  // knots. Polar de Boor evaluation gives the new homogeneous control values
+  // algebraically;internal knots/multiplicities/parameter units are unchanged.
+  copy->Segment(lower,upper);
+  const int degree=copy->Degree(),count=copy->NbPoles();
+  Require(copy->Multiplicity(1)==degree+1&&copy->Multiplicity(copy->NbKnots())==degree+1,
+    "Exact continuation could not clamp the native spline endpoints.");
+  NCollection_Array1<double> knots(1,copy->NbKnots());copy->Knots(knots);
+  NCollection_Array1<int> multiplicities(1,copy->NbKnots());copy->Multiplicities(multiplicities);
+  std::vector<double> old_flat,new_flat;
+  for(int i=1;i<=copy->NbKnots();++i)for(int j=0;j<multiplicities(i);++j)old_flat.push_back(knots(i));
+  knots(1)=std::min(first,lower);knots(copy->NbKnots())=std::max(last,upper);
+  for(int i=1;i<=copy->NbKnots();++i)for(int j=0;j<multiplicities(i);++j)new_flat.push_back(knots(i));
+  Require(old_flat.size()==static_cast<std::size_t>(count+degree+1),"Unexpected clamped spline knot relationship.");
+  struct Homogeneous {double x,y,w;};
+  NCollection_Array1<gp_Pnt2d> poles(1,count);NCollection_Array1<double> weights(1,count);
+  for(int control=0;control<count;++control) {
+    bool changed=false;
+    for(int j=1;j<=degree;++j)changed|=new_flat[static_cast<std::size_t>(control+j)]!=old_flat[static_cast<std::size_t>(control+j)];
+    if(!changed){poles(control+1)=copy->Pole(control+1);weights(control+1)=copy->Weight(control+1);continue;}
+    const int span=std::min(control+degree,count-1);
+    std::vector<Homogeneous> values(static_cast<std::size_t>(degree+1));
+    for(int j=0;j<=degree;++j) {
+      const int index=span-degree+j+1;const auto point=copy->Pole(index);const double weight=copy->Weight(index);
+      values[static_cast<std::size_t>(j)]={point.X()*weight,point.Y()*weight,weight};
+    }
+    for(int r=1;r<=degree;++r)for(int j=degree;j>=r;--j) {
+      const int index=span-degree+j;
+      const auto left=old_flat[static_cast<std::size_t>(index)],right=old_flat[static_cast<std::size_t>(index+degree-r+1)];
+      const double parameter=new_flat[static_cast<std::size_t>(control+r)];
+      // A zero-width knot span contributes a zero de Boor basis term. Its
+      // arbitrary polar argument must not reject a later,nonzero surviving
+      // branch. The convention alpha=0 matches scalar de Boor at repeats.
+      const double alpha=right==left?0:(parameter-left)/(right-left);
+      const auto a=values[static_cast<std::size_t>(j-1)],b=values[static_cast<std::size_t>(j)];
+      values[static_cast<std::size_t>(j)]={a.x+alpha*(b.x-a.x),a.y+alpha*(b.y-a.y),a.w+alpha*(b.w-a.w)};
+    }
+    const auto result=values.back();
+    Require(std::isfinite(result.x)&&std::isfinite(result.y)&&std::isfinite(result.w)&&result.w>0,
+      "Exact rational continuation has a nonpositive/nonfinite homogeneous weight.");
+    poles(control+1)=gp_Pnt2d(result.x/result.w,result.y/result.w);weights(control+1)=result.w;
+  }
+  return copy->IsRational()?new Geom2d_BSplineCurve(poles,weights,knots,multiplicities,degree,false):
+    new Geom2d_BSplineCurve(poles,knots,multiplicities,degree,false);
+}
+}
+opencascade::handle<Geom2d_Curve> ContinueSketchCurve2d(
+  const opencascade::handle<Geom2d_Curve>& curve,double first,double last) {
+  Require(!curve.IsNull()&&std::isfinite(first)&&std::isfinite(last)&&first<last,"Invalid finite continuation range.");
+  opencascade::handle<Geom2d_Curve> result;
+  if(const auto trim=opencascade::handle<Geom2d_TrimmedCurve>::DownCast(curve);!trim.IsNull())
+    return ContinueSketchCurve2d(trim->BasisCurve(),first,last);
+  if(const auto offset=opencascade::handle<Geom2d_OffsetCurve>::DownCast(curve);!offset.IsNull()) {
+    // Match the existing expression contract:the finite offset BASIS is C1.
+    // OCCT lowers the reported continuity of an offset by one;requiring C1
+    // on the result would reject an already supported C1 spline basis.
+    return new Geom2d_OffsetCurve(ContinueSketchCurve2d(offset->BasisCurve(),first,last),offset->Offset(),true);
+  } else if(const auto bezier=opencascade::handle<Geom2d_BezierCurve>::DownCast(curve);!bezier.IsNull()) {
+    // Segment changes Bernstein coordinates exactly, even beyond[0,1]. Its
+    // native range becomes[0,1];an exact knot reparameterization restores the
+    // original parameter units. This is algebraic conversion,never fitting.
+    const auto copy=opencascade::handle<Geom2d_BezierCurve>::DownCast(bezier->Copy());
+    copy->Segment(first,last);
+    auto spline=Geom2dConvert::CurveToBSplineCurve(copy);
+    NCollection_Array1<double> knots(1,spline->NbKnots());spline->Knots(knots);
+    BSplCLib::Reparametrize(first,last,knots);spline->SetKnots(knots);result=spline;
+  } else if(const auto spline=opencascade::handle<Geom2d_BSplineCurve>::DownCast(curve);!spline.IsNull()) {
+    result=ContinueSpline(spline,first,last);
+  } else if(!opencascade::handle<Geom2d_Line>::DownCast(curve).IsNull()||
+    !opencascade::handle<Geom2d_Circle>::DownCast(curve).IsNull()||
+    !opencascade::handle<Geom2d_Ellipse>::DownCast(curve).IsNull())result=opencascade::handle<Geom2d_Curve>::DownCast(curve->Copy());
+  else throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH,"Unsupported exact continuation basis.");
+  Geom2dAdaptor_Curve domain(result,first,last);const auto continuity=domain.Continuity();
+  Require(continuity==GeomAbs_C1||continuity==GeomAbs_C2||continuity==GeomAbs_C3||continuity==GeomAbs_CN,
+    "Exact continuation finite interval must be at least C1.");
+  return result;
+}
+opencascade::handle<Geom_Curve> LiftExactSketchCurve2d(
+  const opencascade::handle<Geom2d_Curve>& curve,const gp_Pln& plane) {
+  Require(!curve.IsNull(),"Cannot lift a null exact sketch curve.");
+  if(const auto trim=opencascade::handle<Geom2d_TrimmedCurve>::DownCast(curve);!trim.IsNull())
+    return new Geom_TrimmedCurve(LiftExactSketchCurve2d(trim->BasisCurve(),plane),trim->FirstParameter(),trim->LastParameter(),true,false);
+  if(const auto offset=opencascade::handle<Geom2d_OffsetCurve>::DownCast(curve);!offset.IsNull())
+    return new Geom_OffsetCurve(LiftExactSketchCurve2d(offset->BasisCurve(),plane),offset->Offset(),plane.Axis().Direction(),true);
+  const auto result=GeomAPI::To3d(curve,plane);Require(!result.IsNull(),"Exact continuation could not be lifted.");return result;
+}
+opencascade::handle<Geom2d_Curve> ProjectExactSketchCurve(const opencascade::handle<Geom_Curve>& curve,
+  const gp_Pln& plane,double first,double last,double tolerance,int depth) {
+  Require(!curve.IsNull()&&depth<=64,"Invalid or over-deep native expression basis.");
+  if(const auto trimmed=opencascade::handle<Geom_TrimmedCurve>::DownCast(curve);!trimmed.IsNull())
+    return new Geom2d_TrimmedCurve(ProjectExactSketchCurve(trimmed->BasisCurve(),plane,first,last,tolerance,depth+1),first,last,true,false);
+  if(const auto offset=opencascade::handle<Geom_OffsetCurve>::DownCast(curve);!offset.IsNull()) {
+    Require(offset->Direction().IsParallel(plane.Axis().Direction(),1e-10),"Offset direction is not parallel to the sketch plane normal.");
+    const auto basis=ProjectExactSketchCurve(offset->BasisCurve(),plane,first,last,tolerance,depth+1);
+    Geom2dAdaptor_Curve domain(basis,first,last);const auto continuity=domain.Continuity();
+    Require(continuity==GeomAbs_C1||continuity==GeomAbs_C2||continuity==GeomAbs_C3||continuity==GeomAbs_CN,
+      "Exact offset pcurve finite basis must be at least C1.");
+    const double sign=offset->Direction().Dot(plane.Axis().Direction())<0?-1.0:1.0;
+    return new Geom2d_OffsetCurve(basis,offset->Offset()*sign,true);
+  }
+  if(const auto line=opencascade::handle<Geom_Line>::DownCast(curve);!line.IsNull()) {
+    PointInPlane(line->Lin().Location(),plane,tolerance);
+    Require(std::abs(line->Lin().Direction().Dot(plane.Axis().Direction()))<=1e-10,"Line direction leaves the sketch plane.");
+  } else if(const auto circle=opencascade::handle<Geom_Circle>::DownCast(curve);!circle.IsNull()) {
+    PointInPlane(circle->Circ().Location(),plane,tolerance);
+    Require(circle->Circ().Axis().Direction().IsParallel(plane.Axis().Direction(),1e-10),"Circle support is not in the sketch plane.");
+  } else if(const auto ellipse=opencascade::handle<Geom_Ellipse>::DownCast(curve);!ellipse.IsNull()) {
+    PointInPlane(ellipse->Elips().Location(),plane,tolerance);
+    Require(ellipse->Elips().Axis().Direction().IsParallel(plane.Axis().Direction(),1e-10),"Ellipse support is not in the sketch plane.");
+  } else if(const auto bezier=opencascade::handle<Geom_BezierCurve>::DownCast(curve);!bezier.IsNull()) {
+    for(int i=1;i<=bezier->NbPoles();++i)PointInPlane(bezier->Pole(i),plane,tolerance);
+  } else if(const auto spline=opencascade::handle<Geom_BSplineCurve>::DownCast(curve);!spline.IsNull()) {
+    for(int i=1;i<=spline->NbPoles();++i)PointInPlane(spline->Pole(i),plane,tolerance);
+  } else throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH,"The wire contains an unsupported exact sketch basis.");
+  auto result=GeomAPI::To2d(curve,plane);
+  Require(!result.IsNull(),"Exact sketch support could not be projected into its plane.");
+  return result;
+}
+}

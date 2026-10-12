@@ -1,71 +1,86 @@
 # Current Status
 
-- Last updated: 2026-09-23.
-- Instruction maintenance: AGENTS and WORKFLOW now route reading by task, distinguish
-  historical checklists, avoid extra duplicate verification and pause only work dependent
-  on a required scope decision. See the [ADR-0091 clarification](adr/0091-proportionate-development-workflow.md#clarification-2026-09-17).
-  Documentation QA passed (205 documents, 497 local links and paired fences), as did
-  whitespace checks for this change. Product builds/tests/repacking: NOT RUN for this
-  documentation-only maintenance; existing package evidence remains tied to its baseline.
-- Development follow-up: [Cadoryx Boolean topology history](BOOLEAN_TOPOLOGY_HISTORY.md), Release/Debug native and affected managed builds, 6/6 focused tests per actual native configuration (including multi-argument history), C11/exports and 62-DLL identity checks passed. The 2026-09-23 focused rerun confirmed test-output bridge hashes match the local Release/Debug builds; the default bundled Preview.28 runtime lacks this new export and must not be used for these source-tree tests. Fourteen local .2 packages, native payload/lock hashes, an isolated direct-module NuGet consumer and Cadoryx 306 tests passed before this test-only addition. Cadoryx owns the final desktop evidence in its ROADMAP; full upstream release gates are NOT RUN. The following Batch AC delivery describes the unchanged Preview.28 baseline.
-- Baseline work: [Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md). Implementation and
-  Release/Debug tests pass; local delivery checks are complete. Public-release
-  readiness remains false because hosted CI, signing and publication are not run,
-  and 32 SDK headers remain explicit Clang parse exclusions.
-- Candidate: 8.0.1-preview.28 / ABI 1.72 / bridge 0.80.0.
-- Entry: c55a969, completed Preview.27;
-  [its evidence is archived](STATUS_HISTORY_THROUGH_PREVIEW_27.md).
-- Twelve modules, one facade, one Native DLL and fourteen packages remain the product layout.
-- GitHub push, hosted CI, signing and NuGet publication: NOT RUN, outside this task.
+- Updated2026-10-12 (Asia/Tokyo).
+- BR–CI18/18 authorized batches frozen local PASS; planned batches remaining0.
+- Final local candidate Preview.84 / ABI1.117 / bridge0.132.0.
+- Authority: OcctSharp/artifacts/batch-ci/delivery-result.json. CH Preview.83 packages remain immutable.
+- [Whole-round freeze and remaining work](BATCH_CI_ROUND_FREEZE.md); [continuous plan](NEXT_ROUND_BR_CI_PLAN.md).
+- [Unchanged overall/module accounting](PROGRESS_PREVIEW_83.md):116366 declarations, Emitted28020, Manual598,
+  Blocked38341, Skipped49407, Pending0; parser exclusions28. Non-Skipped28618/66959=42.7396%.
+- Round Emitted+653:629 Manual migrations and24 other classification transitions. CH41 bounded support outputs give0 declaration credit.
+- CI adds0 generated declarations/Manual migrations. All13 managed binaries retain every execution section byte
+  except exact version/MVID/debug/ProductVersion changes;26 unrelated mutation fixtures rejected; API+0/-0.
+- Full CH Release/Debug/cold Generator379/Runtime1902 and actual Debug1902/62 DLLs are reused after2116 identities.
+  Full suites NOT RERUN in CI.379 generated outputs and62 native DLLs unchanged.41498 exports,59287 API signatures,4462 forwarders.
+- Fresh Preview84:14 packages/two clean consumers, source/payload/content/license/provenance/checksum verification PASS.
+- Pinned Cadoryx1030 inputs/21 projects: both builds and original5909 tests PASS with packaged Release native.
+  Original full smoke,3 M6 runs (3tiers/20 dual-view cycles),production open and fresh Ready/full-window capture PASS at Preview83.
+  Candidate84 application suites/benchmarks NOT RERUN; execution equivalence verified. CPU timing is not physical latency.
+-598 Manual rows link to31 owner/algorithm exception groups; full migration admission remains separate.
+  Pinned AppSweep deferred.18 planned batches do not establish whole-SDK or product completion.
+- Next work: exact consumer-driven admission, reusable generator rules, narrow Blocked/exclusion causes and separate AppSweep audit.
+- Repository source delivery is recorded in Git history. Hosted CI, signing, public NuGet, external CAD, physical GPU removal,
+  physical display/input latency, mixed-DPI/RDP and human application acceptance: NOT RUN.
 
-## Implemented migration
+### Cadoryx A5 private render-health continuation (2026-10-11)
 
-AC adds 1,924 exact generated IDs and 225 owned classes across 53 OCCT packages and
-nine modules. The generated manifest currently contains 25,627 IDs and 155 files.
-The final coverage manifest classifies 116,263 parsed declarations: 61,571 Pending,
-32,008 Skipped, 21,467 Supported and 1,217 accepted Manual IDs. It emits 25,627 IDs
-across 155 files. The full inventory scanned 7,058/7,090 headers; the remaining 32
-are explicit parser exclusions. This is an accounting snapshot, not a claim that all
-OCCT APIs are migrated.
+The public BQ Preview.67 / ABI1.110 / bridge0.118.0 completion above is unchanged.
+Isolated private SDK28 is based on accepted SDK27 at
+8.0.1-preview.31.cadoryx.render-health.28 / ABI1.87 / bridge0.95.0.
+Both actual native/managed builds passed with0 warnings/errors; exports+2/API+8,
+no removals, old61 native dependencies and all1031 prepared sources exact.
+The facade owns the health enum; generated4176 forwarders stay byte-identical.
+The first post-build guard falsely expected a self-forwarder. Its FAIL and
+original scripts remain; the same build was audited without replay.
+[Build audit](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/build-1-verification.json).
+Actual Release/Debug focused12 each passed; all20 complete320 PNGs directly reviewed.
+[Image audit](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/images-1-verification.json).
+Full Release1358 passed; Debug1358 independently passed.
+The14 private packages now passed exact tested13/Release-native62 content,
+pinned dependencies, licenses and additional current manual contract snapshots.
+[Package audit](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/pack14-1-verification.json).
+Fresh private-only locked consumers passed Release/Debug using packaged Release native,
+retaining old42/28/32/initial10 plus five health/reupload/isolation families and
+actual thread/disposed-owner rejection (ObjectName=OcctSharp.OcctViewer).
+[Public consumer audit](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/public-consumer-2-verification.json).
+All60 complete320 PNGs exactly match accepted prior public frames.
+[Full image audit](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/public-images-1-verification.json).
+The first public fixture's8 CS1061 internal-property errors remain; a separate
+consumer2 uses public native-selection wrapper identity/Hide/Show/full pixels.
+No public API widening, package replay or unchanged runtime-suite replay occurred.
+Actual absent/invalid context faults, physical GPU removal and WPF recovery remain
+NOT RUN. Presentation reupload is not context destruction or a hardware diagnosis.
+Cadoryx prepared isolated recovery4/role1059; SDK27 full6448 continues separately.
+Public BQ source/delivery, production integration, commits and publication are unchanged.
 
-The new catalogue covers analytic spline conversion/projection, surface construction,
-intersection and interval workflows, HLR, wire ordering, initialized numeric/color/date
-values, 88 STEP SELECT containers and independent exchange/mesh/material settings.
-Registry lifetime and copied-reference publication reuse ADR-0096. New const receivers
-resolve const overloads; a frozen owner epoch preserves AB bodies. Supporting inherited
-operations, typed SELECT setters, factories and releases are counted separately from
-migrated declarations. Full-library migration is incomplete.
+### Cadoryx generator correction after the SDK28 draft (2026-10-11)
 
-## Executed checks
+The user requires new OcctSharp bindings to respect the generation pipeline.
+The SDK28 manual bridge and accepted evidence are immutable. Its prepared WPF
+integration build queue has not been launched. A separate [SDK29 preparation](../OcctSharp/artifacts/cadoryx-a5-render-health-generated-29-draft-1/preparation-1.json)
+contains1034 source inputs, retains all175 original generated files and original
+test assertions, and replaces three manual low-level files with planned generator
+output. The existing facade and interop assembly owner stay unchanged; ABI1.87
+and bridge0.95.0 are retained because this is a code-origin correction with the
+same intended exports/API. Actual compatibility remains a required check.
 
-- PASS: Release/Debug native and managed build/link; Generator 177/177; Runtime 568/568,
-  including 26 new AC tests.
-- PASS: deterministic generation and complete, acyclic module dependency closure.
-- PASS: 36,408 previous generated native functions and header declarations preserved,
-  including 122 old owned release functions; no changed bodies/prototypes or removals.
-- PASS: 3,633 managed API additions and zero removals, for 55,076 signatures and
-  4,097 facade type forwarders. Native export audit: 40,569 exports, with 3,408 generated
-  C ABI additions and eight exact MSVC constructor closures; zero removals and Debug parity.
-- PASS: final Release/Debug C11 checks for 40 headers, geometric ABI fixtures and registry
-  fixtures with 250 release races / 16,000 acquisitions per configuration.
-- PASS: actual Debug-native Runtime 568/568 in an isolated directory; all 62 DLL hashes checked.
-- PASS: positive and 11 rejection accounting fixtures using an isolated synthetic inventory.
-- PASS: bundled 62-DLL runtime matches the current Release build.
-- PASS: clean source rebuild and full suites, with all 155 generated files byte-identical.
-- PASS: fourteen Preview.28 packages and both clean facade/direct-module consumers.
-- PASS: full release-check final inventory/classification, release metadata, checksums
-  and provenance; 32 parser-limited headers are explicitly excluded.
-- PASS: final package-content verification (203 stable documents, 73 runtime/license
-  files, five checksums and final provenance).
+The standard generation entry invokes an explicit render-health-v1 support rule
+with four pinned OCCT8.0.1 header hashes, embedded templates and deterministic
+manifest-owned outputs. It emits bounded support glue, not newly admitted OCCT
+declaration StableIds: no Emitted/Manual inventory gain is claimed. Four C#
+source/runner syntax checks passed. Actual generation, rule tests, semantic
+compilation, native runtime, packages and WPF recovery remain NOT RUN. The queued
+generator check waits for the existing Cadoryx both6448 independent full result;
+it cannot launch a competing native/build consumer. Public BQ and SDK28 results
+remain separate and unchanged.
 
-The current Release bridge is 21,829,632 bytes with SHA256
-`FBB48038700D99DDDA301CF68DD35A1C5560DDA2DD4E2DED0AAE4BA62F538A98`.
-These checks mark the AC local engineering delivery complete. They do not make this a
-full OCCT migration or a public release.
-
-## Remaining migration
-
-Borrowed adaptors, retained external buffers, general sequences and mutable owning
-outputs remain future work. Four declared SDK methods lack both Release and Debug
-symbols and remain Blocked; see the batch record. Follow [WORKFLOW](WORKFLOW.md)
-for impact-based verification and useful batch sizing without a fixed capability count.
+SDK29 application continuation (2026-10-11): Cadoryx prepared a separate
+recovery4/role1059 workspace with all original6448 test sources unchanged. Its
+native baseline hash is deliberately unset until the actual generated SDK29
+package is verified; the SDK28 hash is not reused as SDK29 evidence. Package14,
+fresh public consumers, real lock refresh, WPF semantic compilation and the
+complete context/recovery matrix remain NOT RUN. The existing generator/native/
+runtime queue still waits for current Cadoryx both6448. F5-only SDK27 original
+Bonsai workflows were prepared with byte-identical prompts/checks/budgets and
+queued after the same lane ends; they do not depend on SDK29 feature success.
+Public BQ, SDK28 frozen results and production integration remain unchanged.

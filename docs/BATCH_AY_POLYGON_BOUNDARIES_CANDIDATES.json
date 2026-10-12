@@ -1,0 +1,1849 @@
+{
+  "state": "AUDIT_INPUT_NOT_ADMISSION",
+  "baseline": "8.0.1-preview.48",
+  "inventorySha256": "823D6033574ACCFEA6DA00E8E38DBA8C5F54274627A8D87105409942B1C1CD9E",
+  "candidates": [
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@AddLink#&1$@S@Poly_MakeLoops@S@Link#",
+      "NativeName": "Poly_MakeLoops::AddLink",
+      "NativeSignature": "Poly_MakeLoops::AddLink: void (const Link &)",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theLink",
+          "Type": {
+            "NativeSpelling": "const Link &",
+            "CanonicalSpelling": "const Poly_MakeLoops::Link &",
+            "BaseNativeSpelling": "const Link",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Link",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@AddLink#&1$@S@Poly_MakeLoops@S@Link#",
+        "NativeName": "Poly_MakeLoops::AddLink",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@FindLink#&1$@S@Poly_MakeLoops@S@Link#1",
+      "NativeName": "Poly_MakeLoops::FindLink",
+      "NativeSignature": "Poly_MakeLoops::FindLink: Link (const Link &) const",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "Link",
+        "CanonicalSpelling": "Poly_MakeLoops::Link",
+        "BaseNativeSpelling": "Link",
+        "BaseCanonicalSpelling": "Poly_MakeLoops::Link",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theLink",
+          "Type": {
+            "NativeSpelling": "const Link &",
+            "CanonicalSpelling": "const Poly_MakeLoops::Link &",
+            "BaseNativeSpelling": "const Link",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Link",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@FindLink#&1$@S@Poly_MakeLoops@S@Link#1",
+        "NativeName": "Poly_MakeLoops::FindLink",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@GetHangingLinks#&$@S@NCollection_List>#$@S@Poly_MakeLoops@S@Link#1",
+      "NativeName": "Poly_MakeLoops::GetHangingLinks",
+      "NativeSignature": "Poly_MakeLoops::GetHangingLinks: void (ListOfLink &) const",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theLinks",
+          "Type": {
+            "NativeSpelling": "ListOfLink &",
+            "CanonicalSpelling": "NCollection_List<Poly_MakeLoops::Link> &",
+            "BaseNativeSpelling": "ListOfLink",
+            "BaseCanonicalSpelling": "NCollection_List<Poly_MakeLoops::Link>",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": "NCollection_List",
+            "TemplateArguments": [
+              {
+                "Kind": "Type",
+                "Spelling": "Link"
+              }
+            ],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@GetHangingLinks#&$@S@NCollection_List>#$@S@Poly_MakeLoops@S@Link#1",
+        "NativeName": "Poly_MakeLoops::GetHangingLinks",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@GetLoop#I#1",
+      "NativeName": "Poly_MakeLoops::GetLoop",
+      "NativeSignature": "Poly_MakeLoops::GetLoop: const Loop &(int) const",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const Loop &",
+        "CanonicalSpelling": "const NCollection_List<Poly_MakeLoops::Link> &",
+        "BaseNativeSpelling": "const Loop",
+        "BaseCanonicalSpelling": "const NCollection_List<Poly_MakeLoops::Link>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "NCollection_List",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "Link"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theIndex",
+          "Type": {
+            "NativeSpelling": "int",
+            "CanonicalSpelling": "int",
+            "BaseNativeSpelling": "int",
+            "BaseCanonicalSpelling": "int",
+            "Layers": [
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@GetLoop#I#1",
+        "NativeName": "Poly_MakeLoops::GetLoop",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@GetNbHanging#1",
+      "NativeName": "Poly_MakeLoops::GetNbHanging",
+      "NativeSignature": "Poly_MakeLoops::GetNbHanging: int () const",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "int",
+        "CanonicalSpelling": "int",
+        "BaseNativeSpelling": "int",
+        "BaseCanonicalSpelling": "int",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@GetNbHanging#1",
+        "NativeName": "Poly_MakeLoops::GetNbHanging",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@GetNbLoops#1",
+      "NativeName": "Poly_MakeLoops::GetNbLoops",
+      "NativeSignature": "Poly_MakeLoops::GetNbLoops: int () const",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "int",
+        "CanonicalSpelling": "int",
+        "BaseNativeSpelling": "int",
+        "BaseCanonicalSpelling": "int",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@GetNbLoops#1",
+        "NativeName": "Poly_MakeLoops::GetNbLoops",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@Perform#",
+      "NativeName": "Poly_MakeLoops::Perform",
+      "NativeSignature": "Poly_MakeLoops::Perform: int ()",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "int",
+        "CanonicalSpelling": "int",
+        "BaseNativeSpelling": "int",
+        "BaseCanonicalSpelling": "int",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@Perform#",
+        "NativeName": "Poly_MakeLoops::Perform",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@ReplaceLink#&1$@S@Poly_MakeLoops@S@Link#S0_#",
+      "NativeName": "Poly_MakeLoops::ReplaceLink",
+      "NativeSignature": "Poly_MakeLoops::ReplaceLink: void (const Link &, const Link &)",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theLink",
+          "Type": {
+            "NativeSpelling": "const Link &",
+            "CanonicalSpelling": "const Poly_MakeLoops::Link &",
+            "BaseNativeSpelling": "const Link",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Link",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        },
+        {
+          "Position": 1,
+          "Name": "theNewLink",
+          "Type": {
+            "NativeSpelling": "const Link &",
+            "CanonicalSpelling": "const Poly_MakeLoops::Link &",
+            "BaseNativeSpelling": "const Link",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Link",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@ReplaceLink#&1$@S@Poly_MakeLoops@S@Link#S0_#",
+        "NativeName": "Poly_MakeLoops::ReplaceLink",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@Reset#*1$@S@Poly_MakeLoops@S@Helper#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+      "NativeName": "Poly_MakeLoops::Reset",
+      "NativeSignature": "Poly_MakeLoops::Reset: void (const Helper *, const occ::handle<NCollection_BaseAllocator> &)",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theHelper",
+          "Type": {
+            "NativeSpelling": "const Helper *",
+            "CanonicalSpelling": "const Poly_MakeLoops::Helper *",
+            "BaseNativeSpelling": "const Helper",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Helper",
+            "Layers": [
+              {
+                "Kind": "PointerIndirection",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        },
+        {
+          "Position": 1,
+          "Name": "theAlloc",
+          "Type": {
+            "NativeSpelling": "const occ::handle<NCollection_BaseAllocator> &",
+            "CanonicalSpelling": "const opencascade::handle<NCollection_BaseAllocator> &",
+            "BaseNativeSpelling": "const occ::handle<NCollection_BaseAllocator>",
+            "BaseCanonicalSpelling": "const opencascade::handle<NCollection_BaseAllocator>",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": "occ::handle",
+            "TemplateArguments": [
+              {
+                "Kind": "Type",
+                "Spelling": "NCollection_BaseAllocator"
+              }
+            ],
+            "IsOcctHandle": true,
+            "HandleTargetType": "NCollection_BaseAllocator"
+          },
+          "HasDefaultArgument": true
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@Reset#*1$@S@Poly_MakeLoops@S@Helper#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+        "NativeName": "Poly_MakeLoops::Reset",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_MakeLoops@F@SetLinkOrientation#&1$@S@Poly_MakeLoops@S@Link#$@S@Poly_MakeLoops@E@LinkFlag#",
+      "NativeName": "Poly_MakeLoops::SetLinkOrientation",
+      "NativeSignature": "Poly_MakeLoops::SetLinkOrientation: LinkFlag (const Link &, const LinkFlag)",
+      "Kind": "Method",
+      "Header": "Poly_MakeLoops.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "LinkFlag",
+        "CanonicalSpelling": "Poly_MakeLoops::LinkFlag",
+        "BaseNativeSpelling": "LinkFlag",
+        "BaseCanonicalSpelling": "Poly_MakeLoops::LinkFlag",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theLink",
+          "Type": {
+            "NativeSpelling": "const Link &",
+            "CanonicalSpelling": "const Poly_MakeLoops::Link &",
+            "BaseNativeSpelling": "const Link",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::Link",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        },
+        {
+          "Position": 1,
+          "Name": "theOrient",
+          "Type": {
+            "NativeSpelling": "const LinkFlag",
+            "CanonicalSpelling": "const Poly_MakeLoops::LinkFlag",
+            "BaseNativeSpelling": "const LinkFlag",
+            "BaseCanonicalSpelling": "const Poly_MakeLoops::LinkFlag",
+            "Layers": [
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_MakeLoops@F@SetLinkOrientation#&1$@S@Poly_MakeLoops@S@Link#$@S@Poly_MakeLoops@E@LinkFlag#",
+        "NativeName": "Poly_MakeLoops::SetLinkOrientation",
+        "Kind": "Method",
+        "Header": "Poly_MakeLoops.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL102",
+        "Category": "NonTransientReceiverOwnership"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@ChangeNodes#",
+      "NativeName": "Poly_Polygon3D::ChangeNodes",
+      "NativeSignature": "Poly_Polygon3D::ChangeNodes: NCollection_Array1<gp_Pnt> &()",
+      "Kind": "Method",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<gp_Pnt> &",
+        "CanonicalSpelling": "NCollection_Array1<gp_Pnt> &",
+        "BaseNativeSpelling": "NCollection_Array1<gp_Pnt>",
+        "BaseCanonicalSpelling": "NCollection_Array1<gp_Pnt>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "gp_Pnt"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@ChangeNodes#",
+        "NativeName": "Poly_Polygon3D::ChangeNodes",
+        "Kind": "Method",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@ChangeParameters#1",
+      "NativeName": "Poly_Polygon3D::ChangeParameters",
+      "NativeSignature": "Poly_Polygon3D::ChangeParameters: NCollection_Array1<double> &() const",
+      "Kind": "Method",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<double> &",
+        "CanonicalSpelling": "NCollection_Array1<double> &",
+        "BaseNativeSpelling": "NCollection_Array1<double>",
+        "BaseCanonicalSpelling": "NCollection_Array1<double>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "double"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@ChangeParameters#1",
+        "NativeName": "Poly_Polygon3D::ChangeParameters",
+        "Kind": "Method",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "NativeName": "Poly_Polygon3D::DumpJson",
+      "NativeSignature": "Poly_Polygon3D::DumpJson: void (Standard_OStream &, int) const",
+      "Kind": "Method",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theOStream",
+          "Type": {
+            "NativeSpelling": "Standard_OStream &",
+            "CanonicalSpelling": "std::basic_ostream<char> &",
+            "BaseNativeSpelling": "Standard_OStream",
+            "BaseCanonicalSpelling": "std::basic_ostream<char>",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": "std::basic_ostream",
+            "TemplateArguments": [
+              {
+                "Kind": "Type",
+                "Spelling": "char"
+              },
+              {
+                "Kind": "Type",
+                "Spelling": "char_traits<char>"
+              }
+            ],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        },
+        {
+          "Position": 1,
+          "Name": "theDepth",
+          "Type": {
+            "NativeSpelling": "int",
+            "CanonicalSpelling": "int",
+            "BaseNativeSpelling": "int",
+            "BaseCanonicalSpelling": "int",
+            "Layers": [
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": true
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+        "NativeName": "Poly_Polygon3D::DumpJson",
+        "Kind": "Method",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@Nodes#1",
+      "NativeName": "Poly_Polygon3D::Nodes",
+      "NativeSignature": "Poly_Polygon3D::Nodes: const NCollection_Array1<gp_Pnt> &() const",
+      "Kind": "Method",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const NCollection_Array1<gp_Pnt> &",
+        "CanonicalSpelling": "const NCollection_Array1<gp_Pnt> &",
+        "BaseNativeSpelling": "const NCollection_Array1<gp_Pnt>",
+        "BaseCanonicalSpelling": "const NCollection_Array1<gp_Pnt>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "gp_Pnt"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@Nodes#1",
+        "NativeName": "Poly_Polygon3D::Nodes",
+        "Kind": "Method",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@Parameters#1",
+      "NativeName": "Poly_Polygon3D::Parameters",
+      "NativeSignature": "Poly_Polygon3D::Parameters: const NCollection_Array1<double> &() const",
+      "Kind": "Method",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const NCollection_Array1<double> &",
+        "CanonicalSpelling": "const NCollection_Array1<double> &",
+        "BaseNativeSpelling": "const NCollection_Array1<double>",
+        "BaseCanonicalSpelling": "const NCollection_Array1<double>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "double"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@Parameters#1",
+        "NativeName": "Poly_Polygon3D::Parameters",
+        "Kind": "Method",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&&$@S@Poly_Polygon3D#",
+      "NativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "NativeSignature": "Poly_Polygon3D::Poly_Polygon3D: void (Poly_Polygon3D &&)",
+      "Kind": "Constructor",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": null,
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "",
+          "Type": {
+            "NativeSpelling": "Poly_Polygon3D &&",
+            "CanonicalSpelling": "Poly_Polygon3D &&",
+            "BaseNativeSpelling": "Poly_Polygon3D",
+            "BaseCanonicalSpelling": "Poly_Polygon3D",
+            "Layers": [
+              {
+                "Kind": "RValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&&$@S@Poly_Polygon3D#",
+        "NativeName": "Poly_Polygon3D::Poly_Polygon3D",
+        "Kind": "Constructor",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL203",
+        "Category": "RValueReferenceTransfer"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@Poly_Polygon3D#",
+      "NativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "NativeSignature": "Poly_Polygon3D::Poly_Polygon3D: void (const Poly_Polygon3D &)",
+      "Kind": "Constructor",
+      "Header": "Poly_Polygon3D.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": null,
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "",
+          "Type": {
+            "NativeSpelling": "const Poly_Polygon3D &",
+            "CanonicalSpelling": "const Poly_Polygon3D &",
+            "BaseNativeSpelling": "const Poly_Polygon3D",
+            "BaseCanonicalSpelling": "const Poly_Polygon3D",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@Poly_Polygon3D#",
+        "NativeName": "Poly_Polygon3D::Poly_Polygon3D",
+        "Kind": "Constructor",
+        "Header": "Poly_Polygon3D.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL208",
+        "Category": "UnmappedValueType"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@get_type_descriptor#S",
+      "NativeName": "Poly_Polygon3D::get_type_descriptor",
+      "NativeSignature": "Poly_Polygon3D::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "Kind": "Method",
+      "Header": "Standard_Type.hxx",
+      "Access": "Public",
+      "ProductModule": "Foundation",
+      "IsStatic": true,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const occ::handle<Standard_Type> &",
+        "CanonicalSpelling": "const opencascade::handle<Standard_Type> &",
+        "BaseNativeSpelling": "const occ::handle<Standard_Type>",
+        "BaseCanonicalSpelling": "const opencascade::handle<Standard_Type>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "occ::handle",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "Standard_Type"
+          }
+        ],
+        "IsOcctHandle": true,
+        "HandleTargetType": "Standard_Type"
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@get_type_descriptor#S",
+        "NativeName": "Poly_Polygon3D::get_type_descriptor",
+        "Kind": "Method",
+        "Header": "Standard_Type.hxx",
+        "SourcePackage": "Standard",
+        "SourceToolkit": "TKernel",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_Polygon3D@F@get_type_name#S",
+      "NativeName": "Poly_Polygon3D::get_type_name",
+      "NativeSignature": "Poly_Polygon3D::get_type_name: const char *()",
+      "Kind": "Method",
+      "Header": "Standard_Type.hxx",
+      "Access": "Public",
+      "ProductModule": "Foundation",
+      "IsStatic": true,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const char *",
+        "CanonicalSpelling": "const char *",
+        "BaseNativeSpelling": "const char",
+        "BaseCanonicalSpelling": "const char",
+        "Layers": [
+          {
+            "Kind": "PointerIndirection",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_Polygon3D@F@get_type_name#S",
+        "NativeName": "Poly_Polygon3D::get_type_name",
+        "Kind": "Method",
+        "Header": "Standard_Type.hxx",
+        "SourcePackage": "Standard",
+        "SourceToolkit": "TKernel",
+        "State": "Blocked",
+        "Code": "BL202",
+        "Category": "RawPointerLifetime"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodeArray#",
+      "NativeName": "Poly_PolygonOnTriangulation::ChangeNodeArray",
+      "NativeSignature": "Poly_PolygonOnTriangulation::ChangeNodeArray: NCollection_Array1<int> &()",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<int> &",
+        "CanonicalSpelling": "NCollection_Array1<int> &",
+        "BaseNativeSpelling": "NCollection_Array1<int>",
+        "BaseCanonicalSpelling": "NCollection_Array1<int>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "int"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodeArray#",
+        "NativeName": "Poly_PolygonOnTriangulation::ChangeNodeArray",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodes#",
+      "NativeName": "Poly_PolygonOnTriangulation::ChangeNodes",
+      "NativeSignature": "Poly_PolygonOnTriangulation::ChangeNodes: NCollection_Array1<int> &()",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<int> &",
+        "CanonicalSpelling": "NCollection_Array1<int> &",
+        "BaseNativeSpelling": "NCollection_Array1<int>",
+        "BaseCanonicalSpelling": "NCollection_Array1<int>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "int"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeNodes#",
+        "NativeName": "Poly_PolygonOnTriangulation::ChangeNodes",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameterArray#",
+      "NativeName": "Poly_PolygonOnTriangulation::ChangeParameterArray",
+      "NativeSignature": "Poly_PolygonOnTriangulation::ChangeParameterArray: NCollection_Array1<double> &()",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<double> &",
+        "CanonicalSpelling": "NCollection_Array1<double> &",
+        "BaseNativeSpelling": "NCollection_Array1<double>",
+        "BaseCanonicalSpelling": "NCollection_Array1<double>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "double"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameterArray#",
+        "NativeName": "Poly_PolygonOnTriangulation::ChangeParameterArray",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameters#",
+      "NativeName": "Poly_PolygonOnTriangulation::ChangeParameters",
+      "NativeSignature": "Poly_PolygonOnTriangulation::ChangeParameters: NCollection_Array1<double> &()",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "NCollection_Array1<double> &",
+        "CanonicalSpelling": "NCollection_Array1<double> &",
+        "BaseNativeSpelling": "NCollection_Array1<double>",
+        "BaseCanonicalSpelling": "NCollection_Array1<double>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "double"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@ChangeParameters#",
+        "NativeName": "Poly_PolygonOnTriangulation::ChangeParameters",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "NativeName": "Poly_PolygonOnTriangulation::DumpJson",
+      "NativeSignature": "Poly_PolygonOnTriangulation::DumpJson: void (Standard_OStream &, int) const",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theOStream",
+          "Type": {
+            "NativeSpelling": "Standard_OStream &",
+            "CanonicalSpelling": "std::basic_ostream<char> &",
+            "BaseNativeSpelling": "Standard_OStream",
+            "BaseCanonicalSpelling": "std::basic_ostream<char>",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": "std::basic_ostream",
+            "TemplateArguments": [
+              {
+                "Kind": "Type",
+                "Spelling": "char"
+              },
+              {
+                "Kind": "Type",
+                "Spelling": "char_traits<char>"
+              }
+            ],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        },
+        {
+          "Position": 1,
+          "Name": "theDepth",
+          "Type": {
+            "NativeSpelling": "int",
+            "CanonicalSpelling": "int",
+            "BaseNativeSpelling": "int",
+            "BaseCanonicalSpelling": "int",
+            "Layers": [
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": true
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+        "NativeName": "Poly_PolygonOnTriangulation::DumpJson",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Nodes#1",
+      "NativeName": "Poly_PolygonOnTriangulation::Nodes",
+      "NativeSignature": "Poly_PolygonOnTriangulation::Nodes: const NCollection_Array1<int> &() const",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const NCollection_Array1<int> &",
+        "CanonicalSpelling": "const NCollection_Array1<int> &",
+        "BaseNativeSpelling": "const NCollection_Array1<int>",
+        "BaseCanonicalSpelling": "const NCollection_Array1<int>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "NCollection_Array1",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "int"
+          }
+        ],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Nodes#1",
+        "NativeName": "Poly_PolygonOnTriangulation::Nodes",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameters#1",
+      "NativeName": "Poly_PolygonOnTriangulation::Parameters",
+      "NativeSignature": "Poly_PolygonOnTriangulation::Parameters: const occ::handle<NCollection_HArray1<double>> &() const",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": true,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const occ::handle<NCollection_HArray1<double>> &",
+        "CanonicalSpelling": "const opencascade::handle<NCollection_HArray1<double>> &",
+        "BaseNativeSpelling": "const occ::handle<NCollection_HArray1<double>>",
+        "BaseCanonicalSpelling": "const opencascade::handle<NCollection_HArray1<double>>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "occ::handle",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "NCollection_HArray1<double>"
+          }
+        ],
+        "IsOcctHandle": true,
+        "HandleTargetType": "NCollection_HArray1<double>"
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Parameters#1",
+        "NativeName": "Poly_PolygonOnTriangulation::Parameters",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&&$@S@Poly_PolygonOnTriangulation#",
+      "NativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "NativeSignature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (Poly_PolygonOnTriangulation &&)",
+      "Kind": "Constructor",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": null,
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "",
+          "Type": {
+            "NativeSpelling": "Poly_PolygonOnTriangulation &&",
+            "CanonicalSpelling": "Poly_PolygonOnTriangulation &&",
+            "BaseNativeSpelling": "Poly_PolygonOnTriangulation",
+            "BaseCanonicalSpelling": "Poly_PolygonOnTriangulation",
+            "Layers": [
+              {
+                "Kind": "RValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": false
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&&$@S@Poly_PolygonOnTriangulation#",
+        "NativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+        "Kind": "Constructor",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL203",
+        "Category": "RValueReferenceTransfer"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@Poly_PolygonOnTriangulation#",
+      "NativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "NativeSignature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const Poly_PolygonOnTriangulation &)",
+      "Kind": "Constructor",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": null,
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "",
+          "Type": {
+            "NativeSpelling": "const Poly_PolygonOnTriangulation &",
+            "CanonicalSpelling": "const Poly_PolygonOnTriangulation &",
+            "BaseNativeSpelling": "const Poly_PolygonOnTriangulation",
+            "BaseCanonicalSpelling": "const Poly_PolygonOnTriangulation",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": null,
+            "TemplateArguments": [],
+            "IsOcctHandle": false,
+            "HandleTargetType": null
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@Poly_PolygonOnTriangulation#",
+        "NativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+        "Kind": "Constructor",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL208",
+        "Category": "UnmappedValueType"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "NativeName": "Poly_PolygonOnTriangulation::SetParameters",
+      "NativeSignature": "Poly_PolygonOnTriangulation::SetParameters: void (const occ::handle<NCollection_HArray1<double>> &)",
+      "Kind": "Method",
+      "Header": "Poly_PolygonOnTriangulation.hxx",
+      "Access": "Public",
+      "ProductModule": "MeshData",
+      "IsStatic": false,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "void",
+        "CanonicalSpelling": "void",
+        "BaseNativeSpelling": "void",
+        "BaseCanonicalSpelling": "void",
+        "Layers": [
+          {
+            "Kind": "Value",
+            "IsConstQualified": false
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [
+        {
+          "Position": 0,
+          "Name": "theParameters",
+          "Type": {
+            "NativeSpelling": "const occ::handle<NCollection_HArray1<double>> &",
+            "CanonicalSpelling": "const opencascade::handle<NCollection_HArray1<double>> &",
+            "BaseNativeSpelling": "const occ::handle<NCollection_HArray1<double>>",
+            "BaseCanonicalSpelling": "const opencascade::handle<NCollection_HArray1<double>>",
+            "Layers": [
+              {
+                "Kind": "LValueReference",
+                "IsConstQualified": false
+              },
+              {
+                "Kind": "Value",
+                "IsConstQualified": true
+              }
+            ],
+            "TemplateName": "occ::handle",
+            "TemplateArguments": [
+              {
+                "Kind": "Type",
+                "Spelling": "NCollection_HArray1<double>"
+              }
+            ],
+            "IsOcctHandle": true,
+            "HandleTargetType": "NCollection_HArray1<double>"
+          },
+          "HasDefaultArgument": false
+        }
+      ],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+        "NativeName": "Poly_PolygonOnTriangulation::SetParameters",
+        "Kind": "Method",
+        "Header": "Poly_PolygonOnTriangulation.hxx",
+        "SourcePackage": "Poly",
+        "SourceToolkit": "TKMath",
+        "State": "Blocked",
+        "Code": "BL205",
+        "Category": "UnselectedHandleTarget"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_descriptor#S",
+      "NativeName": "Poly_PolygonOnTriangulation::get_type_descriptor",
+      "NativeSignature": "Poly_PolygonOnTriangulation::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "Kind": "Method",
+      "Header": "Standard_Type.hxx",
+      "Access": "Public",
+      "ProductModule": "Foundation",
+      "IsStatic": true,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const occ::handle<Standard_Type> &",
+        "CanonicalSpelling": "const opencascade::handle<Standard_Type> &",
+        "BaseNativeSpelling": "const occ::handle<Standard_Type>",
+        "BaseCanonicalSpelling": "const opencascade::handle<Standard_Type>",
+        "Layers": [
+          {
+            "Kind": "LValueReference",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": "occ::handle",
+        "TemplateArguments": [
+          {
+            "Kind": "Type",
+            "Spelling": "Standard_Type"
+          }
+        ],
+        "IsOcctHandle": true,
+        "HandleTargetType": "Standard_Type"
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_descriptor#S",
+        "NativeName": "Poly_PolygonOnTriangulation::get_type_descriptor",
+        "Kind": "Method",
+        "Header": "Standard_Type.hxx",
+        "SourcePackage": "Standard",
+        "SourceToolkit": "TKernel",
+        "State": "Blocked",
+        "Code": "BL204",
+        "Category": "BorrowedOrOutputReference"
+      }
+    },
+    {
+      "StableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_name#S",
+      "NativeName": "Poly_PolygonOnTriangulation::get_type_name",
+      "NativeSignature": "Poly_PolygonOnTriangulation::get_type_name: const char *()",
+      "Kind": "Method",
+      "Header": "Standard_Type.hxx",
+      "Access": "Public",
+      "ProductModule": "Foundation",
+      "IsStatic": true,
+      "IsConst": false,
+      "IsTemplated": false,
+      "IsPureVirtual": false,
+      "ReturnType": {
+        "NativeSpelling": "const char *",
+        "CanonicalSpelling": "const char *",
+        "BaseNativeSpelling": "const char",
+        "BaseCanonicalSpelling": "const char",
+        "Layers": [
+          {
+            "Kind": "PointerIndirection",
+            "IsConstQualified": false
+          },
+          {
+            "Kind": "Value",
+            "IsConstQualified": true
+          }
+        ],
+        "TemplateName": null,
+        "TemplateArguments": [],
+        "IsOcctHandle": false,
+        "HandleTargetType": null
+      },
+      "Parameters": [],
+      "baselineClassification": {
+        "StableId": "c:@S@Poly_PolygonOnTriangulation@F@get_type_name#S",
+        "NativeName": "Poly_PolygonOnTriangulation::get_type_name",
+        "Kind": "Method",
+        "Header": "Standard_Type.hxx",
+        "SourcePackage": "Standard",
+        "SourceToolkit": "TKernel",
+        "State": "Blocked",
+        "Code": "BL202",
+        "Category": "RawPointerLifetime"
+      }
+    }
+  ]
+}

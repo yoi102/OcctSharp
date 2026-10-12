@@ -1,11 +1,82 @@
 using OcctSharp;
 
+if(Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CE_CONSUMER_EVIDENCE") is {} ceEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_CE_EVIDENCE",Path.Combine(ceEvidence,"module-resources"));
+OcctSharp.Tests.Shared.BatchCEExchangeWorkflow.Run();
+if(Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CD_CONSUMER_EVIDENCE") is {} cdEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_CD_EVIDENCE_DIR",Path.Combine(cdEvidence,"module-fields"));
+OcctSharp.Tests.Shared.BatchCDStepWorkflow.RunNative();
+
+OcctSharp.Tests.Shared.BatchBRCompatibilityWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBTCoupledConstraintWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBUUnitWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBVPeriodicProjectionWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBWNonuniformFittingWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_BX_CONSUMER_EVIDENCE") is {} bxEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_BX_EVIDENCE", Path.Combine(bxEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchBXTypedTopologyWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_BY_CONSUMER_EVIDENCE") is {} byEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_BY_EVIDENCE", Path.Combine(byEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchBYBooleanRepairWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_BZ_CONSUMER_EVIDENCE") is {} bzEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_BZ_EVIDENCE", Path.Combine(bzEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchBZLocalFeatureWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CA_CONSUMER_EVIDENCE") is {} caEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_CA_EVIDENCE", Path.Combine(caEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchCAMeshWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CB_CONSUMER_EVIDENCE") is {} cbEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_CB_EVIDENCE", Path.Combine(cbEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchCBDocumentWorkflow.Run();
+if (Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CC_CONSUMER_EVIDENCE") is {} ccEvidence)
+    Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_CC_EVIDENCE", Path.Combine(ccEvidence, "module-visible"));
+OcctSharp.Tests.Shared.BatchCCLocatedAssemblyWorkflow.Run();
+OcctSharp.Tests.Shared.BatchCCLocatedAssemblyWorkflow.RunRejections();
+
 OcctSharp.Tests.Shared.BatchXProjectionWorkflow.Run();
 OcctSharp.Tests.Shared.BatchYGeometryWorkflow.Run();
 OcctSharp.Tests.Shared.BatchZValueWorkflow.Run();
 OcctSharp.Tests.Shared.BatchAAReferenceWorkflow.Run();
 OcctSharp.Tests.Shared.BatchABOwnedWorkflow.Run();
 OcctSharp.Tests.Shared.BatchACOwnedUtilityWorkflow.Run();
+OcctSharp.Tests.Shared.BatchADOwnedDataWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAEExchangeScalarWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAFCopiedCollectionsWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAGSurfaceInterpolationWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAHBulkAnalysisWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAITopologyExchangeWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAJRepairWorkspaceWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAKTransferRecordsWorkflow.Run();
+OcctSharp.Tests.Shared.BatchALNumericWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAMSplineWorkflow.Run();
+OcctSharp.Tests.Shared.BatchANWriterWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAPModelingWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAQHatchingWorkflow.Run();
+OcctSharp.Tests.Shared.BatchARMeshWorkflow.Run();
+OcctSharp.Tests.Shared.BatchASDocumentWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAWGeometryWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAYBoundaryWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAXMetadataWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAVFoundationWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBAAssemblyWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBBSamplingWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBCAssociationWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBDExchangeWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBEMeshWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAZDiagnosticWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBFNumericWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBGModelingWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBHIntersectionWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBICollectionWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBJLocalStepWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBKConfiguredMeshWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBLConstructionWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBMFiniteExtremaWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBNBoundedTextWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBOMeshProximityWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBPLocalExportWorkflow.Run();
+OcctSharp.Tests.Shared.BatchBQWholeRoundWorkflow.Run();
+OcctSharp.Tests.Shared.BatchATExchangeWorkflow.Run();
+OcctSharp.Tests.Shared.BatchAUIntegratedWorkflow.Run();
 
 byte[] frameInput = [10,20,30,255];
 var frame = ViewerColorFrame.FromRgba(1,1,frameInput);
@@ -21,6 +92,14 @@ if (runtime.OcctVersion != "8.0.1")
 }
 
 using Shape box = ShapeFactory.CreateBox(10, 20, 30);
+if (!box.GetSelfInterferenceReport().IsClear ||
+    typeof(ShapeSelfInterferenceReport).Assembly.GetName().Name != "OcctSharp.Modeling")
+    throw new InvalidOperationException("The direct Modeling self-interference report failed.");
+using (var shift = GpTrsf.Create(1, 0, 0))
+using (var shifted = box.Transformed(shift))
+using (var overlap = ShapeFactory.CreateCompound([box, shifted]))
+    if (overlap.GetSelfInterferenceReport().IsClear)
+        throw new InvalidOperationException("The direct Modeling consumer missed compound interference.");
 if (box.IsNull || box.Kind != ShapeKind.Solid || box.FaceCount != 6)
 {
     throw new InvalidOperationException("The direct Modeling package did not create a valid six-face box.");

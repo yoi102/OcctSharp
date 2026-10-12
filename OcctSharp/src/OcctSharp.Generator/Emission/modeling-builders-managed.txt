@@ -1,0 +1,92 @@
+#nullable enable
+using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.ModelingWorkspaces;
+
+internal sealed partial class ModelingWorkflowHandle : SafeHandleZeroOrMinusOneIsInvalid {
+ readonly int kind;
+ internal ModelingWorkflowHandle(nint value,int kind):base(true){this.kind=kind;SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle,kind);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_builder_release")]internal static partial void Release(nint value,int kind);
+}
+/// <summary>Owns a frozen private construction result. Failure retains diagnostics and exposes no partial topology.</summary>
+public sealed partial class ModelingBuilderResult : IDisposable {
+ readonly ModelingWorkflowHandle handle;
+ internal ModelingBuilderResult(nint value,bool done,int error){try{handle=new(value,0);IsDone=done;Error=error;}catch{ModelingWorkflowHandle.Release(value,0);throw;}}
+ /// <summary>Native completion gate.</summary>
+ public bool IsDone {get;}
+ /// <summary>BRepLib_EdgeError or BRepLib_WireError according to the constructing operation.</summary>
+ public int Error {get;}
+ /// <summary>Returns a geometry-deep-copied primary edge/wire; unfinished builders throw.</summary>
+ public Shape Shape=>GetRelatedShape(0)!;
+ /// <summary>Role 0: primary result. Edge roles 1/2: first/last vertex. Wire roles 1/2: last edge/connecting vertex. Null means no such topology. Each query is a new deep copy.</summary>
+ public Shape? GetRelatedShape(int role){ObjectDisposedException.ThrowIf(handle.IsClosed,this);if(role<0||role>2)throw new ArgumentOutOfRangeException(nameof(role));if(!IsDone)throw new InvalidOperationException("Builder did not complete; no topology published.");NativeError.ThrowIfFailed(ShapeNative(handle,role,out var value),"modeling_builder_shape");return value==0?null:ShapeFactory.FromNativeHandle(value,"modeling_builder_shape");}
+ /// <summary>Releases storage; previously copied results survive.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_builder_shape")]private static partial NativeStatus ShapeNative(ModelingWorkflowHandle handle,int role,out nint result);
+}
+/// <summary>Six independent content-analysis collection flags.</summary>
+[Flags]public enum ShapeContentGroups {
+ /// <summary>No groups.</summary>
+ None=0,
+ /// <summary>Large spline sections.</summary>
+ BigSpline=1,
+ /// <summary>Indirect surfaces.</summary>
+ Indirect=2,
+ /// <summary>Offset surfaces.</summary>
+ OffsetSurface=4,
+ /// <summary>Trimmed 3D curves.</summary>
+ Trimmed3d=8,
+ /// <summary>Offset curves.</summary>
+ OffsetCurve=16,
+ /// <summary>Trimmed 2D curves.</summary>
+ Trimmed2d=32,
+ /// <summary>All groups.</summary>
+ All=63
+}
+/// <summary>Initialized counts and private groups. Counts are native traversal statistics, not necessarily unique topology counts.</summary>
+public sealed partial class ShapeContentSnapshot : IDisposable {
+ readonly ModelingWorkflowHandle handle;
+ internal ShapeContentSnapshot(nint value,int[] counts){try{handle=new(value,1);Counts=new ReadOnlyDictionary<string,int>(CountNames.Select((name,i)=>new KeyValuePair<string,int>(name,counts[i])).ToDictionary(x=>x.Key,x=>x.Value));}catch{ModelingWorkflowHandle.Release(value,1);throw;}}
+ static readonly string[] CountNames=["NbBSplibeSurf","NbBezierSurf","NbBigSplines","NbC0Curves","NbC0Surfaces","NbEdges","NbFaceWithSevWires","NbFaces","NbFreeEdges","NbFreeFaces","NbFreeWires","NbIndirectSurf","NbNoPCurve","NbOffsetCurves","NbOffsetSurf","NbSharedEdges","NbSharedFaces","NbSharedFreeEdges","NbSharedFreeWires","NbSharedShells","NbSharedSolids","NbSharedVertices","NbSharedWires","NbShells","NbSolids","NbSolidsWithVoids","NbTrimSurf","NbTrimmedCurve2d","NbTrimmedCurve3d","NbVertices","NbWireWithSevSeams","NbWireWitnSeam","NbWires"];
+ /// <summary>Detached native-named counts, including historical SDK spelling.</summary>
+ public IReadOnlyDictionary<string,int> Counts {get;}
+ /// <summary>Copies a group: 0..5 is BigSpline, Indirect, OffsetSurface, Trimmed3d, OffsetCurve, Trimmed2d.</summary>
+ public OwnedShapeSet GetGroup(int index){ObjectDisposedException.ThrowIf(handle.IsClosed,this);if(index<0||index>5)throw new ArgumentOutOfRangeException(nameof(index));NativeError.ThrowIfFailed(GroupNative(handle,index,out var value),"modeling_contents_group");return new(value);}
+ /// <summary>Releases group storage; counts and previously copied groups remain usable.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_contents_group")]private static partial NativeStatus GroupNative(ModelingWorkflowHandle handle,int group,out nint result);
+}
+/// <summary>Copied local check. Optional values exist only when the native check returns true; failure status is retained separately.</summary>
+public sealed record WireLocalDiagnostic(bool Found,uint StatusMask,GpPoint2d? First,GpPoint2d? Second,int? ShortEdge,double? Parameter) {
+ /// <summary>Tests a native ShapeExtend_Status ordinal 0..18.</summary>
+ public bool HasStatus(int ordinal){if(ordinal<0||ordinal>18)throw new ArgumentOutOfRangeException(nameof(ordinal));return (StatusMask&(1U<<ordinal))!=0;}
+}
+/// <summary>Private modeling operations. Synchronize external source mutation while inputs are copied.</summary>
+public static partial class ModelingBuilders {
+ static ModelingBuilders()=>NativeLibraryResolver.EnsureRegistered(typeof(ModelingBuilders).Assembly);
+ /// <summary>Builds a finite segment; identical points return unfinished native diagnostics.</summary>
+ public static unsafe ModelingBuilderResult Edge(GpPoint first,GpPoint last){double* points=stackalloc double[6]{first.X,first.Y,first.Z,last.X,last.Y,last.Z};NativeError.ThrowIfFailed(EdgePointsNative(0,points,0,0,out var value,out var done,out var error),"modeling_builder_edge");return new(value,done!=0,error);}
+ /// <summary>Deep-copies an owning curve and builds a finite interval; reversed bounds preserve native orientation.</summary>
+ public static unsafe ModelingBuilderResult Edge(GeomCurve curve,double first,double last){ArgumentNullException.ThrowIfNull(curve);NativeError.ThrowIfFailed(EdgeCurveNative(curve.NativeHandle,null,first,last,out var value,out var done,out var error),"modeling_builder_curve");return new(value,done!=0,error);}
+ /// <summary>Builds ordered copied edges, stopping at the first disconnected edge. Empty input reports EmptyWire.</summary>
+ public static ModelingBuilderResult Wire(OwnedShapeSet edges){ArgumentNullException.ThrowIfNull(edges);NativeError.ThrowIfFailed(WireNative(edges.NativeHandle,out var value,out var done,out var error),"modeling_builder_wire");return new(value,done!=0,error);}
+ /// <summary>Copies geometry and explicitly initializes all SDK counters before analysis.</summary>
+ public static unsafe ShapeContentSnapshot Contents(Shape source,ShapeContentGroups groups=ShapeContentGroups.All){ArgumentNullException.ThrowIfNull(source);var counts=new int[33];fixed(int* p=counts){NativeError.ThrowIfFailed(ContentsNative(source.Handle,(int)groups,p,counts.Length,out var value),"modeling_contents_create");return new(value,counts);}}
+ /// <summary>Checks degeneration on a native one-based edge in an exact face-member wire.</summary>
+ public static WireLocalDiagnostic CheckDegenerated(Shape wire,Shape face,int index,double precision=1e-6)=>Check(wire,face,index,precision,0,0);
+ /// <summary>Checks lacking pcurve connection; native failure flags remain distinct from an ordinary false.</summary>
+ public static WireLocalDiagnostic CheckLacking(Shape wire,Shape face,int index,double tolerance=0,double precision=1e-6)=>Check(wire,face,index,precision,tolerance,1);
+ /// <summary>Checks a notch and publishes its index/parameter only when found.</summary>
+ public static WireLocalDiagnostic CheckNotchedEdges(Shape wire,Shape face,int index,double tolerance=1e-6,double precision=1e-6)=>Check(wire,face,index,precision,tolerance,2);
+ static unsafe WireLocalDiagnostic Check(Shape wire,Shape face,int index,double precision,double tolerance,int mode){ArgumentNullException.ThrowIfNull(wire);ArgumentNullException.ThrowIfNull(face);double* p=stackalloc double[4];NativeError.ThrowIfFailed(CheckNative(wire.Handle,face.Handle,index,precision,tolerance,mode,p,out var hit,out var shortEdge,out var statuses),"modeling_wire_check");return new(hit!=0,statuses,hit!=0&&mode!=2?new(p[0],p[1]):null,hit!=0&&mode!=2?new(p[2],p[3]):null,hit!=0&&mode==2?shortEdge:null,hit!=0&&mode==2?p[0]:null);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_builder_edge")]private static unsafe partial NativeStatus EdgePointsNative(nint curve,double* points,double first,double last,out nint result,out int done,out int error);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_builder_edge")]private static unsafe partial NativeStatus EdgeCurveNative(GeomCurveHandle curve,double* points,double first,double last,out nint result,out int done,out int error);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_builder_wire")]private static partial NativeStatus WireNative(TopologyCollectionHandle edges,out nint result,out int done,out int error);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_contents_create")]private static unsafe partial NativeStatus ContentsNative(ShapeHandle source,int flags,int* counts,int capacity,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_modeling_wire_check")]private static unsafe partial NativeStatus CheckNative(ShapeHandle wire,ShapeHandle face,int index,double precision,double tolerance,int mode,double* values,out int found,out int shortIndex,out uint statuses);
+}

@@ -1,5 +1,94 @@
 # Type Mapping
 
+AW TM030 maps exact spline kernels/filling receivers to bounded copied rows and
+private owned surfaces. TM031 maps new initialized vertex/edge assembly with a
+validation gate. Raw callbacks/scratch references and input representation flags
+stay deferred. See [ADR-0115](adr/0115-private-filling-kernels-and-controlled-topology-assembly.md).
+
+AV TM029 maps exact call-private Foundation value operations to bounded copied
+text/scalars. It preserves UTF16 code-unit indices with checked edit boundaries,
+pure OSD syntax, copied color vectors and proven unit dimensions. See
+[ADR-0114](adr/0114-generated-call-private-foundation-values.md).
+
+AP's TM021 is the exact private modeling profile in
+[ADR-0108](adr/0108-generated-private-modeling-builders.md). Its reusable emitter
+does not admit unlisted signatures or general borrowed references.
+
+AN's TM020 maps only exact private writer diagnostics and prerequisites to
+DataExchange; see [ADR-0106](adr/0106-private-writer-diagnostics.md).
+It does not expose arbitrary mutable finder processes or model pointers.
+
+AM's exact signature rule TM019 targets Geometry and private spline workspaces;
+see [ADR-0105](adr/0105-private-spline-workspaces.md). It does not globally map
+borrowed pointers or scalar references to public buffers.
+
+## Batch AJ closed repair-workspace profile
+
+TM016 maps only the exact AJ catalogue's private containers, coupled shape/list
+maps, wire data and configured repair controls. It does not extend InitialTypeMap
+or admit arbitrary mutable maps, sequences, references or external contexts.
+Private HSequence signatures are handled before the generic shared-handle rule.
+One generated Modeling C ABI header, five native implementation shards and three
+managed files use typed leased registry owners and SafeHandles. New TopoDS Oriented
+support copies the value while retaining TShape/location. See
+[ADR-0101](adr/0101-generated-coupled-repair-workspaces.md).
+
+## Batch AI exact topology and exchange profile
+
+The closed AI catalogue adds TM015Shape for copied list/sequence/map shape values,
+TM015Entity for detached retained entity sequences/private iterators/graphs,
+TM015Text for immediate UTF8 strings, and TM015Control for private default progress
+ranges. These projections apply only to exact admitted/prerequisite IDs and
+signatures, without extending InitialTypeMap. Modeling owns shape sets/algorithm
+results; DataExchange owns retained entity sets/cursors/private sessions/graphs
+and references Modeling. The dependency graph stays acyclic. History/model identity
+checks do not use geometric similarity. See [ADR-0100](adr/0100-generated-topology-and-exchange-collections.md).
+
+## Batch AH exact bulk and typed curve profile
+
+TM014 is limited to the 42 exact AH declarations. It maps sized numeric/gp copies,
+audited scalar refs and closed typed spline/HArray containers. It does not add a
+general reference, pointer, matrix, evaluator or arbitrary-template projection.
+Scalar refs use value-copy initialization and success-only publication. Curve elements
+use independent intrusive deep copies held inside typed leased registry owners.
+[ADR-0099](adr/0099-generated-bulk-analysis-and-typed-curve-collections.md) and the
+[AH contract](BATCH_AH_BULK_ANALYSIS.md) specify bounds and lifetime restrictions.
+
+## Batch AG grid and retained profile
+
+TM013 applies only to exact AG signatures: Array2<gp_Pnt/double>, tangent
+Array1<gp_Vec/gp_Vec2d>, Boolean Array1 and retained HArray1 inputs. Existing AF
+Array1 profiles are reused. HArray inputs project immutable managed arrays, then
+deep-copy into intrusive native owners retained by the algorithm. Boolean elements
+use normalized uint8_t in the raw ABI and CopiedArray<bool> publicly. Grid dimensions,
+storage offsets and capacity are checked. Nullable pointers and arbitrary templates
+remain blocked. General InitialTypeMap behavior is unchanged. TM012 owns the three
+non-transient algorithm families. See [ADR-0098](adr/0098-generated-surface-grids-and-retained-interpolation.md).
+
+## Batch AF copied collection profile
+
+[ADR-0097](adr/0097-generated-copied-arrays-and-sequences.md) adds exact-operation
+TM011 for Array1<double/int/gp_Pnt/gp_Pnt2d> and Sequence<double>. The managed
+containers are CopiedArray<T>/CopiedSequence<T>; gp_Pnt uses Coordinates3d. Signed
+lower bounds and counts are explicit; arrays are nonempty and reserve INT_MIN/INT_MAX
+endpoint indices for safe pinned-kernel arithmetic. Sequences may be empty.
+Domain guards enforce one-based arrays where the selected algorithm needs
+them. TM012 covers the two new stable-address point-fitting owners. Both rules are
+scoped to the signature catalogue; InitialTypeMap still rejects arbitrary templates,
+arrays, mutable references and pointers. All support is generated from rules and
+templates; no handwritten native binding exception is added.
+
+
+## Owned data workflow extension
+
+[Batch AD](BATCH_AD_OWNED_DATA_WORKFLOWS.md) extends the exact TM010 catalogue.
+`HatchGen_PointOnElement`, `HatchGen_PointOnHatching` and
+`SelectBasics_PickResult` join the explicitly copyable result set. Scalar, enum
+and gp ref outputs retain the existing success-only publication contract: a
+returned false value is a successful native call, not an exception. Default-null
+curve results reuse TM006 nullable retained handles. No general sequence,
+template vector, external buffer or pointer mapping is added.
+
 ## Batch AC audited utility extension
 
 [Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md) extends the exact TM010 catalogue while
@@ -106,10 +195,11 @@ all C++ exceptions; managed raw helpers translate status through the common erro
 Preview.22 direct-return static ABIs and overload identities are preserved.
 
 An individual const scalar reference can describe a sequence start in OCCT. SC-061
-keeps BSplCLib::FlatBezierKnots Blocked/BL209 until a sized array contract exists; its
-header explicitly describes the whole flat-knot array. Type-map acceptance alone is
-not declaration acceptance. The original selected-surface reference audit found this
-exception among 35 non-handle reference returns. Current validation belongs in STATUS.
+keeps BSplCLib::FlatBezierKnots outside generic scalar emission; its header explicitly
+describes the whole flat-knot array. A dedicated manual buffer binding now copies all
+`2 * (degree + 1)` values after degree and capacity checks. Type-map acceptance alone
+is not declaration acceptance. Other dimensioned array-start references still need
+their own explicit contracts. Current validation belongs in STATUS.
 Historical initial-rule descriptions below predate this additive expansion.
 
 ## Policy
@@ -240,7 +330,23 @@ independent retained wrappers. Package expansion still requires an independently
 value-copy constructor, so a type cannot enter the selected scope solely because its
 constructor depends on another handle.
 
+## Batch AE exchange scalars
+
+Batch AE adds no general type-map rule. Its two DataExchange non-transient
+owners select existing integer, Boolean and double value mappings only. STEP
+indexed setters and IGES string handles remain excluded; their representation
+and lifetime need separate contracts.
+
 ## Change process
+
+Batch AL uses signature-specific `TM018` in dependency-closure reporting for its
+closed numeric adapter. It belongs to Foundation and does not change InitialTypeMap.
+Only exact admitted IDs, canonical signatures and public accessible declarations
+can select the numeric emitter. Private matrix/solver pointers become existing
+MathMatrix owners, immutable CopiedGrid<double> results or SplineMatrixSystem
+SafeHandles; arbitrary references and external buffers remain unmapped. See
+[the AL contract](BATCH_AL_NUMERIC_MATRICES.md) and
+[ADR-0104](adr/0104-copied-numeric-matrices-and-private-solvers.md).
 
 1. Identify the canonical native type and all affected use sites.
 2. Determine semantics and ownership from OCCT source/API evidence.
@@ -248,3 +354,83 @@ constructor depends on another handle.
 4. Add focused model, emission, compile, runtime, and lifetime tests as applicable.
 5. Regenerate and review affected symbol counts.
 6. Update this document when the semantic contract changes.
+
+## TM022: exact copied curved hatching workflow
+
+[ADR-0109](adr/0109-generated-copied-curved-hatching.md) projects only the frozen Geom2dHatch/event prerequisite catalogue to Geometry private workflow snapshots. No general borrowed intersector/adaptor or mutable container mapping is admitted. Existing emitted/manual prerequisites remain separately reused.
+
+TM023 / TM024 are exact copied Poly data / private controlled meshing catalogues
+under ADR-0110. They do not globally map borrowed arrays or mutable references.
+Missing channels stay absent; native neighbor zero becomes public -1. Native flags
+and effective parameter values remain copied diagnostics. MeshData does not gain
+a Modeling dependency; Mesh uses its already accepted Modeling reference.
+
+TM025 / TM026 are exact document/XDE projection catalogues under ADR-0111.
+Private keyed maps and label sequences become bounded immutable copied values;
+document owner domains and context identity remain explicit. Native containers,
+attribute handles, callbacks, arbitrary filters and raw document pointers receive
+no new global mapping. Existing feature-specific parametric state remains reused.
+
+TM027 / ADR-0112 admits only exact exchange-session operations. Private reader,
+header/selector/model references become bounded copied metadata and session IDs;
+no general mutable entity/model/container map is introduced. STEP schema and
+IGES units/scale remain read-only; external actors, streams and callbacks deferred.
+
+TM028 / ADR-0113 admits exact parent-bound point/box volume operations. Initialize
+rectangular frusta before setters/build; copy eight proved vertices and bounded
+planes, optional hit fields and scalar colors. Scene picking uses AIS. Pure copied
+values and generated core belong to Visualization; friendly Viewer/presentation
+adapters remain in Facade. No general camera/window/intersector mapping.
+
+TM032 / TM033 / ADR-0116 admits only exact reviewed initialized/copy-only operations.
+No general mutable container, callback or borrowed tool/session mapping is added.
+
+TM034 / ADR-0117 admits only exact reviewed initialized/copy-only operations.
+No general mutable container, callback or borrowed tool/session mapping is added.
+
+TM035 / [ADR-0118](adr/0118-audited-foundation-function-diagnostics.md) extends
+closed workflows to explicitly audited public header functions only. Exact
+kind/header/package/toolkit provenance supplements signature admission. Copied
+numeric optional results, strict bounded message formats and initialized private
+buffers do not broaden general pointer/reference/free-function mappings.
+
+TM036 / [ADR-0119](adr/0119-initialized-assembly-and-copied-validation.md) extends
+exact call-private assembly with copied geometry graphs and face-member diagnostics.
+No general builder/borrowed-topology or automatic history mapping is introduced.
+
+TM037 / [ADR-0120](adr/0120-bounded-native-curve-computations.md) admits only exact copied bounded curve computations and reused projection operations. It adds no general adaptor/callback/borrowed Extrema mapping.
+
+TM038 / [ADR-0121](adr/0121-identity-bound-document-association-diagnostics.md) admits exact command-scoped association edits and copied diagnostics. Uninitialized naming getters, undo-unsafe imported flag mutation and general borrowed attributes/maps remain deferred.
+
+## TM039: Private identity-bound selected-root transfer
+
+Exact admitted signatures use the closed-workflow profile. Copied input/output and
+private typed registry owners follow [ADR-0122](adr/0122-private-identity-bound-selected-root-transfer.md). Raw borrowed
+entities, topology history and mutable buffers are not promoted.
+
+## TM040: Exact copied mesh boundary diagnostics
+
+Exact admitted signatures use the closed-workflow profile. Copied input/output and
+private typed registry owners follow [ADR-0123](adr/0123-exact-copied-mesh-boundary-diagnostics.md). Raw borrowed
+entities, topology history and mutable buffers are not promoted.
+
+## TM041: finite copied numeric aggregates
+
+Eleven exact MathLin/MathUtils signatures follow [ADR-0124](adr/0124-finite-copied-numeric-results-and-sdk-supplements.md). Optional native matrices/vectors/scalars are private and copied only after full finite validation; arbitrary result structs, pointer lifetimes and callbacks are not promoted.
+
+## TM042: copied modeling result/source profile
+
+[BG](BATCH_BG_MODELING_RESULTS.md) admits 19 exact operations and eight private prerequisites. It maps only the reviewed closed workflow; general reference/pointer mappings stay unchanged. Finite initialized configuration, bounded whole-graph inputs, atomic copied diagnostic buffers and valid success-only topology are mandatory.
+
+## TM043 / TM044: finite and coupled intersection profiles
+
+[BH](BATCH_BH_INTERSECTION_RESULTS.md) maps 13 exact finite-hit declarations in Modeling and three pcurve construction/trim declarations in Geometry. Existing GeomInt operations are reused in independent coupled result workflows. Two declared tangent-setting methods lack fixed-source definitions/linked implementations and remain deferred. General reference/pointer mapping stays closed.
+TM045: exact direct collection signatures map only to the private typed projection profile. GUID/type/bounds/presence and reference context remain explicit; generic raw array/list receivers are not unlocked. See [BI](BATCH_BI_DIRECT_COLLECTIONS.md).
+TM046 maps exact STEPCAF root/external-result and STEPConstruct graph signatures only into a private bounded local workspace. No reader/session/map/reference escapes. See [BJ](BATCH_BJ_LOCAL_STEP_ASSEMBLY.md).
+TM047 admits exact private converter/Common material/mesh diagnostics operations into Xde, preserving the existing DataExchange dependency direction. Existing MeshUpAxis and setters are reused. See [BK](BATCH_BK_CONFIGURED_MESH.md).
+TM048 admits only the exact BL constructor and native representation/range catalogue. Global type mapping is unchanged; no curve, surface, builder or borrowed vertex reference escapes. See [BL](BATCH_BL_PARAMETERIZED_CONSTRUCTION.md).
+TM049 admits only the exact BM finite solver catalogue. No borrowed solver/adaptor/point reference or arbitrary reconfiguration escapes; global mapping is unchanged. See [BM](BATCH_BM_FINITE_EXTREMA.md).
+TM050 admits exact explicit-length string operations and bounded Unicode transformations. Global pointer/view mapping and AV/SC-008 rules are unchanged. See [BN](BATCH_BN_BOUNDED_TEXT_TRANSFORMS.md).
+TM051 admits exact initialized private face-mesh overlap/value operations and necessary bounded dependencies. No global map/BVH/pointer mapping changes. See [BO](BATCH_BO_MESH_PROXIMITY.md).
+TM052 admits exact private initialized selected-sequence STEPCAF operations and required bounded dependencies. No global writer/sequence/map mapping changes. See [BP](BATCH_BP_LOCAL_STEP_EXPORT.md).
+TM053 admits the exact BSplCLib::FlatBezierKnots static sequence into the existing bounded copied-buffer API. It preserves degree/capacity guards and prohibits generic scalar-reference emission; no new ownership category or global pointer mapping is introduced. See [BR](BATCH_BR_GENERATOR_COMPATIBILITY.md).

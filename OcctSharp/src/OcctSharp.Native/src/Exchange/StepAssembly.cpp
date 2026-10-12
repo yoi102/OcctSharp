@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Exchange/StepAssembly implementation. Public contracts and ownership are unchanged.
 #include "Exchange/XdeExchange.hxx"
 #include "Geometry/Transforms.hxx"
@@ -49,7 +51,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
     occ::handle<XCAFDoc_ShapeTool> outputShapeTool =
       XCAFDoc_DocumentTool::ShapeTool(outputDocument->Main());
     TDF_Label outputAssembly = outputShapeTool->NewShape();
-    TDataStd_Name::Set(outputAssembly, TCollection_ExtendedString("OcctSharp Assembly"));
+    OcctSharpGenerated::DocumentAdapters::TDataStd_Name_Set(outputAssembly, TCollection_ExtendedString("OcctSharp Assembly"));
 
     int32_t rootCount = 0;
     for (int32_t inputIndex = 0; inputIndex < input_count; ++inputIndex)
@@ -94,9 +96,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
            rootIterator.Next())
       {
         NCollection_DataMap<TDF_Label, TDF_Label> labelMap;
-        TDF_Label clonedRoot = XCAFDoc_Editor::CloneShapeLabel(
+        TDF_Label clonedRoot = OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneShapeLabel(
           rootIterator.Value(), sourceShapeTool, outputShapeTool, labelMap);
-        if (clonedRoot.IsNull())
+        if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(clonedRoot))
         {
           throw OperationFailure(
             OCCTSHARP_STATUS_TRANSFER_FAILED,
@@ -108,9 +110,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
         {
           occ::handle<TDataStd_TreeNode> materialReference;
           const bool hasMaterialReference =
-            labelIterator.Key().FindAttribute(XCAFDoc::MaterialRefGUID(), materialReference)
+            OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(labelIterator.Key(),XCAFDoc::MaterialRefGUID(), materialReference)
             && materialReference->HasFather();
-          XCAFDoc_Editor::CloneMetaData(
+          OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneMetaData(
             labelIterator.Key(),
             labelIterator.Value(),
             &visualMaterialMap,
@@ -124,7 +126,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
             // STEPCAF material export operates on top-level part labels. Preserve a
             // subshape assignment in its original cloned label and also promote it
             // to the corresponding part root for round-trip STEP material export.
-            XCAFDoc_Editor::CloneMetaData(
+            OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneMetaData(
               labelIterator.Key(),
               clonedRoot,
               &visualMaterialMap,
@@ -140,7 +142,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
           outputAssembly,
           clonedRoot,
           TopLoc_Location(transform));
-        if (component.IsNull())
+        if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(component))
         {
           throw OperationFailure(
             OCCTSHARP_STATUS_TRANSFER_FAILED,

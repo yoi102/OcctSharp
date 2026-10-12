@@ -53,6 +53,12 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_repair_subshape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus RepairSubshape(ShapeHandle shape, int index, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_repair_find_topology_index")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RepairFindTopologyIndex(ShapeHandle source, ShapeHandle selected, out int index);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_repair_find_topology_partner_index")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RepairFindTopologyPartnerIndex(ShapeHandle source, ShapeHandle selected, out int index);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_repair_inspect")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static unsafe partial NativeStatus RepairInspect(ShapeHandle shape, in RepairInspectionRaw options,

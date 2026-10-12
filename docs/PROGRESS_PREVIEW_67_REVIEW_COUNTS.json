@@ -1,0 +1,550 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-11",
+  "state": "DOCUMENTATION_REVIEW_NOT_NEW_DELIVERY",
+  "baseline": "8.0.1-preview.67",
+  "nativeAbi": "1.110",
+  "bridgeVersion": "0.118.0",
+  "inputs": [
+    {
+      "path": "OcctSharp/artifacts/generator-reports/full-inventory.json",
+      "sha256": "7EE9AE651B2603D4B7953DD450AA1391038083DCBFE2B465A296970CC8E65528"
+    },
+    {
+      "path": "OcctSharp/generated/manifest.json",
+      "sha256": "FB79D33C7B842D88531769519485D23C1B8E13A8946AD9C7D4D4C50FE19B11B7"
+    },
+    {
+      "path": "OcctSharp/artifacts/batch-bq/authorized-round-result.json",
+      "sha256": "1C3ED12C08E67ACDBAC54483342D2BBC63407CFE106063ED52BD5689B38D1F3F"
+    },
+    {
+      "path": "docs/PROGRESS_PREVIEW_67_COUNTS.json",
+      "sha256": "0EA9755234E6F3F11C8A5722C212C1EBC88773B404D4ED9616F272685552A556"
+    }
+  ],
+  "liveVerification": {
+    "inventoryMatchesFrozenAuthority": true,
+    "generatedManifestFilesChecked": 309,
+    "allGeneratedFileHashesMatch": true,
+    "sixAuthorityChainHashesMatch": true,
+    "allFrozenSourceAndPackagePayloadsReaudited": false
+  },
+  "total": 116366,
+  "states": {
+    "Blocked": 38365,
+    "Emitted": 27367,
+    "Manual": 1227,
+    "Skipped": 49407
+  },
+  "pending": 0,
+  "implementedDeclarations": 28594,
+  "nonSkippedDenominator": 66959,
+  "nonSkippedCoveragePercent": 42.7037,
+  "productCompletionPercent": null,
+  "headers": {
+    "total": 7090,
+    "scanned": 7062,
+    "failed": 28,
+    "fullSemanticScanComplete": false
+  },
+  "failedHeaders": [
+    "BOPDS_DataMapOfIntegerListOfPaveBlock.hxx",
+    "BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx",
+    "BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx",
+    "BOPDS_VectorOfListOfPaveBlock.hxx",
+    "Graphic3d_MapIteratorOfMapOfStructure.hxx",
+    "IVtkDraw_HighlightAndSelectionPipeline.hxx",
+    "IVtkDraw_Interactor.hxx",
+    "IVtkOCC_SelectableObject.hxx",
+    "IVtkOCC_Shape.hxx",
+    "IVtkOCC_ShapeMesher.hxx",
+    "IVtkOCC_ShapePickerAlgo.hxx",
+    "IVtkTools.hxx",
+    "IVtkTools_DisplayModeFilter.hxx",
+    "IVtkTools_ShapeDataSource.hxx",
+    "IVtkTools_ShapeObject.hxx",
+    "IVtkTools_ShapePicker.hxx",
+    "IVtkTools_SubPolyDataFilter.hxx",
+    "IVtkVTK_ShapeData.hxx",
+    "IVtkVTK_View.hxx",
+    "IVtk_IShape.hxx",
+    "IVtk_IShapeData.hxx",
+    "IVtk_IShapeMesher.hxx",
+    "IVtk_IShapePickerAlgo.hxx",
+    "IVtk_Types.hxx",
+    "NCollection_Haft.h",
+    "OpenGl_GLESExtensions.hxx",
+    "RWGltf_GltfOStreamWriter.hxx",
+    "TObj_Container.hxx"
+  ],
+  "generated": {
+    "stableIds": 27367,
+    "files": 309,
+    "csharp": 122,
+    "cpp": 90,
+    "h": 85,
+    "hxx": 12
+  },
+  "blockedReasons": {
+    "NonTransientReceiverOwnership": 14438,
+    "NonTransientValueConstruction": 5465,
+    "UnmappedValueType": 5113,
+    "BorrowedOrOutputReference": 4973,
+    "RawPointerLifetime": 3547,
+    "UnselectedHandleTarget": 2530,
+    "RValueReferenceTransfer": 1277,
+    "TemplateInstantiationProjection": 475,
+    "MissingToolkitProvenance": 421,
+    "UnverifiedFreeFunctionExport": 117,
+    "CallableEligibilityInvariant": 8,
+    "CrossModuleProjectionContract": 1
+  },
+  "modules": [
+    {
+      "module": "Foundation",
+      "states": {
+        "Emitted": 3722,
+        "Manual": 10,
+        "Blocked": 7163,
+        "Skipped": 15592
+      },
+      "total": 26487,
+      "implemented": 3732,
+      "nonSkippedDenominator": 10895,
+      "nonSkippedCoveragePercent": 34.25,
+      "blockedReasons": {
+        "RawPointerLifetime": 2743,
+        "BorrowedOrOutputReference": 2637,
+        "NonTransientReceiverOwnership": 811,
+        "NonTransientValueConstruction": 451,
+        "UnmappedValueType": 231,
+        "MissingToolkitProvenance": 143,
+        "TemplateInstantiationProjection": 63,
+        "UnselectedHandleTarget": 43,
+        "RValueReferenceTransfer": 40,
+        "UnverifiedFreeFunctionExport": 1
+      },
+      "topBlockedFamilies": {
+        "TCollection_AsciiString": 86,
+        "TCollection_ExtendedString": 60,
+        "OSD_File": 29,
+        "TCollection_HAsciiString": 29,
+        "MathUtils": 24,
+        "Message_Messenger": 22,
+        "ExprIntrp_Analysis": 21,
+        "MathLin": 20,
+        "TCollection_HExtendedString": 19,
+        "Units_Measurement": 19,
+        "Message": 18,
+        "Resource_Manager": 18
+      }
+    },
+    {
+      "module": "Geometry",
+      "states": {
+        "Emitted": 6257,
+        "Manual": 195,
+        "Blocked": 5308,
+        "Skipped": 5217
+      },
+      "total": 16977,
+      "implemented": 6452,
+      "nonSkippedDenominator": 11760,
+      "nonSkippedCoveragePercent": 54.86,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 2517,
+        "NonTransientValueConstruction": 1442,
+        "UnmappedValueType": 487,
+        "BorrowedOrOutputReference": 391,
+        "UnselectedHandleTarget": 147,
+        "TemplateInstantiationProjection": 139,
+        "RValueReferenceTransfer": 88,
+        "RawPointerLifetime": 79,
+        "MissingToolkitProvenance": 9,
+        "CallableEligibilityInvariant": 8,
+        "CrossModuleProjectionContract": 1
+      },
+      "topBlockedFamilies": {
+        "BSplCLib": 73,
+        "AdvApp2Var_MathBase": 39,
+        "Adaptor3d_HSurfaceTool": 38,
+        "AppDef_Variational": 37,
+        "GeomFill_AppSweep": 34,
+        "PLib": 32,
+        "BiTgte_Blend": 30,
+        "Approx_SweepApproximation": 29,
+        "GeomToIGES_GeomSurface": 29,
+        "Extrema_Curve2dTool": 28,
+        "Extrema_CurveTool": 27,
+        "Geom2dHatch_Hatching": 26
+      }
+    },
+    {
+      "module": "Modeling",
+      "states": {
+        "Emitted": 3076,
+        "Manual": 573,
+        "Blocked": 11381,
+        "Skipped": 8978
+      },
+      "total": 24008,
+      "implemented": 3649,
+      "nonSkippedDenominator": 15030,
+      "nonSkippedCoveragePercent": 24.28,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 6546,
+        "NonTransientValueConstruction": 2065,
+        "UnmappedValueType": 1337,
+        "BorrowedOrOutputReference": 478,
+        "UnselectedHandleTarget": 320,
+        "MissingToolkitProvenance": 230,
+        "RValueReferenceTransfer": 126,
+        "UnverifiedFreeFunctionExport": 116,
+        "RawPointerLifetime": 95,
+        "TemplateInstantiationProjection": 68
+      },
+      "topBlockedFamilies": {
+        "BRepGraphInc_Storage": 247,
+        "TopOpeBRepBuild_Builder": 182,
+        "TopOpeBRepDS_DataStructure": 99,
+        "BOPDS_DS": 75,
+        "BOPTools_AlgoTools": 55,
+        "TopOpeBRep_FacesFiller": 51,
+        "HLRBRep_BSurfaceTool": 50,
+        "TopOpeBRepTool_TOOL": 50,
+        "TopOpeBRep_VPointInter": 49,
+        "TopOpeBRep_LineInter": 48,
+        "TopOpeBRepDS_BuildTool": 47,
+        "BRepPrim_OneAxis": 46
+      }
+    },
+    {
+      "module": "MeshData",
+      "states": {
+        "Emitted": 153,
+        "Manual": 22,
+        "Blocked": 124,
+        "Skipped": 235
+      },
+      "total": 534,
+      "implemented": 175,
+      "nonSkippedDenominator": 299,
+      "nonSkippedCoveragePercent": 58.53,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 50,
+        "BorrowedOrOutputReference": 23,
+        "NonTransientValueConstruction": 20,
+        "UnselectedHandleTarget": 14,
+        "UnmappedValueType": 7,
+        "RawPointerLifetime": 5,
+        "RValueReferenceTransfer": 4,
+        "TemplateInstantiationProjection": 1
+      },
+      "topBlockedFamilies": {
+        "Poly_CoherentNode": 16,
+        "Poly": 12,
+        "Poly_CoherentTriangle": 12,
+        "Poly_CoherentLink": 9,
+        "Poly_CoherentTriPtr": 9,
+        "Poly_ArrayOfNodes": 8,
+        "Poly_ArrayOfUVNodes": 8,
+        "Poly_CoherentTriangulation": 8,
+        "Poly_PolygonOnTriangulation": 8,
+        "Poly_Triangulation": 8,
+        "Poly_MergeNodesTool": 6,
+        "Poly_Polygon3D": 5
+      }
+    },
+    {
+      "module": "Mesh",
+      "states": {
+        "Emitted": 181,
+        "Manual": 2,
+        "Blocked": 307,
+        "Skipped": 572
+      },
+      "total": 1062,
+      "implemented": 183,
+      "nonSkippedDenominator": 490,
+      "nonSkippedCoveragePercent": 37.35,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 104,
+        "UnmappedValueType": 83,
+        "NonTransientValueConstruction": 50,
+        "BorrowedOrOutputReference": 39,
+        "UnselectedHandleTarget": 20,
+        "RValueReferenceTransfer": 5,
+        "TemplateInstantiationProjection": 4,
+        "RawPointerLifetime": 2
+      },
+      "topBlockedFamilies": {
+        "BRepMesh_Delaun": 24,
+        "BRepMesh_DataStructureOfDelaun": 19,
+        "BRepMesh_VertexInspector": 16,
+        "BRepMesh_DefaultRangeSplitter": 15,
+        "BRepMesh_CircleTool": 14,
+        "BRepMesh_ShapeTool": 12,
+        "BRepMesh_PairOfIndex": 11,
+        "BRepMesh_SelectorOfDataStructureOfDelaun": 11,
+        "BRepMesh_VertexTool": 10,
+        "BRepMesh_CircleInspector": 9,
+        "BRepMesh_Triangle": 9,
+        "BRepMesh_GeomTool": 8
+      }
+    },
+    {
+      "module": "Documents",
+      "states": {
+        "Emitted": 1540,
+        "Manual": 126,
+        "Blocked": 2272,
+        "Skipped": 3337
+      },
+      "total": 7275,
+      "implemented": 1666,
+      "nonSkippedDenominator": 3938,
+      "nonSkippedCoveragePercent": 42.31,
+      "blockedReasons": {
+        "UnmappedValueType": 577,
+        "NonTransientReceiverOwnership": 569,
+        "BorrowedOrOutputReference": 424,
+        "UnselectedHandleTarget": 309,
+        "NonTransientValueConstruction": 249,
+        "RValueReferenceTransfer": 94,
+        "RawPointerLifetime": 31,
+        "TemplateInstantiationProjection": 17,
+        "MissingToolkitProvenance": 2
+      },
+      "topBlockedFamilies": {
+        "BinObjMgt_Persistent": 58,
+        "FSD_BinaryFile": 50,
+        "CDF_Store": 28,
+        "FSD_File": 28,
+        "BinTools_ShapeSet": 27,
+        "CDM_Document": 24,
+        "Storage_Data": 24,
+        "Storage_HeaderData": 21,
+        "BinTools_IStream": 20,
+        "StdStorage_HeaderData": 20,
+        "TNaming_Identifier": 20,
+        "TDataStd_ReferenceList": 19
+      }
+    },
+    {
+      "module": "DataExchange",
+      "states": {
+        "Emitted": 7664,
+        "Manual": 51,
+        "Blocked": 7961,
+        "Skipped": 8998
+      },
+      "total": 24674,
+      "implemented": 7715,
+      "nonSkippedDenominator": 15676,
+      "nonSkippedCoveragePercent": 49.22,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 2896,
+        "UnmappedValueType": 1430,
+        "UnselectedHandleTarget": 1162,
+        "NonTransientValueConstruction": 897,
+        "RValueReferenceTransfer": 776,
+        "RawPointerLifetime": 420,
+        "BorrowedOrOutputReference": 321,
+        "MissingToolkitProvenance": 30,
+        "TemplateInstantiationProjection": 29
+      },
+      "topBlockedFamilies": {
+        "IGESData_ParamReader": 61,
+        "IFSelect_WorkSession": 55,
+        "StepData_StepWriter": 52,
+        "StepToGeom": 48,
+        "STEPConstruct_Part": 46,
+        "IGESToBRep_CurveAndSurface": 45,
+        "IFSelect_SessionFile": 38,
+        "STEPConstruct_RenderingProperties": 38,
+        "STEPConstruct_AP203Context": 37,
+        "IFSelect_ContextModif": 33,
+        "XSControl_Utils": 33,
+        "DE_Wrapper": 32
+      }
+    },
+    {
+      "module": "Xde",
+      "states": {
+        "Emitted": 637,
+        "Manual": 132,
+        "Blocked": 599,
+        "Skipped": 566
+      },
+      "total": 1934,
+      "implemented": 769,
+      "nonSkippedDenominator": 1368,
+      "nonSkippedCoveragePercent": 56.21,
+      "blockedReasons": {
+        "UnmappedValueType": 254,
+        "BorrowedOrOutputReference": 135,
+        "UnselectedHandleTarget": 82,
+        "NonTransientReceiverOwnership": 61,
+        "NonTransientValueConstruction": 34,
+        "RValueReferenceTransfer": 27,
+        "TemplateInstantiationProjection": 5,
+        "RawPointerLifetime": 1
+      },
+      "topBlockedFamilies": {
+        "XCAFDoc_ShapeTool": 41,
+        "XCAFDoc_ColorTool": 35,
+        "XCAFDoc_NotesTool": 32,
+        "XCAFDoc_LayerTool": 27,
+        "XCAFDoc": 24,
+        "STEPCAFControl_Reader": 19,
+        "XCAFPrs_DocumentExplorer": 19,
+        "XCAFDoc_DimTolTool": 18,
+        "XCAFDoc_DocumentTool": 16,
+        "XCAFDoc_VisMaterialTool": 15,
+        "STEPCAFControl_Writer": 14,
+        "XCAFDoc_MaterialTool": 14
+      }
+    },
+    {
+      "module": "Visualization",
+      "states": {
+        "Emitted": 4137,
+        "Manual": 116,
+        "Blocked": 3231,
+        "Skipped": 4106
+      },
+      "total": 11590,
+      "implemented": 4253,
+      "nonSkippedDenominator": 7484,
+      "nonSkippedCoveragePercent": 56.83,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 884,
+        "UnmappedValueType": 707,
+        "BorrowedOrOutputReference": 506,
+        "UnselectedHandleTarget": 433,
+        "NonTransientValueConstruction": 257,
+        "RawPointerLifetime": 171,
+        "TemplateInstantiationProjection": 149,
+        "RValueReferenceTransfer": 117,
+        "MissingToolkitProvenance": 7
+      },
+      "topBlockedFamilies": {
+        "AIS_ViewController": 122,
+        "TPrsStd_ConstraintTools": 44,
+        "OpenGl_Context": 42,
+        "OpenGl_ShaderProgram": 41,
+        "Graphic3d_GraduatedTrihedron": 33,
+        "SelectMgr_RectangularFrustum": 33,
+        "Graphic3d_CView": 30,
+        "V3d_View": 29,
+        "V3d_Viewer": 29,
+        "OpenGl_View": 28,
+        "AIS_ColorScale": 27,
+        "Graphic3d_Aspects": 27
+      }
+    },
+    {
+      "module": "IVtk",
+      "states": {
+        "Emitted": 0,
+        "Manual": 0,
+        "Blocked": 0,
+        "Skipped": 47
+      },
+      "total": 47,
+      "implemented": 0,
+      "nonSkippedDenominator": 0,
+      "nonSkippedCoveragePercent": null,
+      "blockedReasons": {},
+      "topBlockedFamilies": {}
+    },
+    {
+      "module": "Draw",
+      "states": {
+        "Emitted": 0,
+        "Manual": 0,
+        "Blocked": 19,
+        "Skipped": 1759
+      },
+      "total": 1778,
+      "implemented": 0,
+      "nonSkippedDenominator": 19,
+      "nonSkippedCoveragePercent": 0.0,
+      "blockedReasons": {
+        "BorrowedOrOutputReference": 19
+      },
+      "topBlockedFamilies": {
+        "QABugs": 19
+      }
+    }
+  ],
+  "completedRound": {
+    "completed": 6,
+    "remaining": 0,
+    "generatedDelta": 91,
+    "manualDelta": 0,
+    "authorities": [
+      {
+        "batch": "BL",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bl/delivery-result.json",
+        "sha256": "322AA79699BD26AD9FBCCB43AB445A2DD839F7E4E82DA02C197704D52877F8EE",
+        "generatedDelta": 17
+      },
+      {
+        "batch": "BM",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bm/delivery-result.json",
+        "sha256": "834243CA36B5E35FD723783AA5B10DC82C85FAC88A10F6EA2394DA95C9744F38",
+        "generatedDelta": 23
+      },
+      {
+        "batch": "BN",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bn/delivery-result.json",
+        "sha256": "0E24985FD2ED949F29DEF4C76DE446939027191410399644247BAF9DEB188D37",
+        "generatedDelta": 14
+      },
+      {
+        "batch": "BO",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bo/delivery-result.json",
+        "sha256": "EA695D45400942326FE472488AAD5C9401D16595440C25521BB4B17BE19A6257",
+        "generatedDelta": 22
+      },
+      {
+        "batch": "BP",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bp/delivery-result.json",
+        "sha256": "9940045FF681F2749E59BA8B5F865B86EAEDCA7A59CF1F2D26DA2122A8F60E4E",
+        "generatedDelta": 15
+      },
+      {
+        "batch": "BQ",
+        "state": "PASS",
+        "path": "OcctSharp/artifacts/batch-bq/delivery-result.json",
+        "sha256": "348FD40B0936FB30129EE634248D838FF444B9EF4A62E81962B0449A5CB180E4",
+        "generatedDelta": 0
+      }
+    ]
+  },
+  "proposedRound": {
+    "first": "BR",
+    "last": "CI",
+    "batches": 18,
+    "state": "PROPOSED_NOT_STARTED",
+    "implemented": 0,
+    "exactAdmissionPerformed": false
+  },
+  "checksRerunThisReview": [],
+  "notRunThisReview": [
+    "Builds",
+    "Generator/Runtime suites",
+    "Native lifetime/ABI tests",
+    "Package consumers",
+    "Full frozen payload audit"
+  ],
+  "externalGates": "NOT RUN; see STATUS; no public release claim",
+  "privateCadoryxContinuationIntegratedIntoPublicBaseline": false
+}

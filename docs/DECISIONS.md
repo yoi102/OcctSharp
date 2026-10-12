@@ -1,5 +1,7 @@
 # Architecture Decisions
 
+- [ADR-0108](adr/0108-generated-private-modeling-builders.md): accepted private modeling builders and copied diagnostics.
+
 Accepted decisions live in individual ADR files and are append-only in spirit.
 Superseded ADRs remain available and point to their replacements.
 
@@ -7,6 +9,13 @@ Superseded ADRs remain available and point to their replacements.
 
 | ADR | Decision | Status |
 |---|---|---|
+| [ADR-0139](adr/0139-generated-exact-consumer-prerequisites.md) | Exact generated consumer support with existing result owners and viewer-owned shared source IDs | Accepted for CH; delivery separately gated |
+| [ADR-0137](adr/0137-private-located-assembly-normalization.md) | Exact private shared-clone normalization of located assembly definitions and semantic XDE value delegates | Accepted for CC; delivery separately gated |
+| [ADR-0101](adr/0101-generated-coupled-repair-workspaces.md) | Closed coupled repair workspaces, private deep repair receivers and exact replacement evidence | Accepted |
+| [ADR-0100](adr/0100-generated-topology-and-exchange-collections.md) | Exact owning topology collections and retained exchange entities with private cursors and one transfer epoch | Accepted |
+| [ADR-0099](adr/0099-generated-bulk-analysis-and-typed-curve-collections.md) | Exact sized bulk operations and independent typed spline collection ownership | Accepted |
+| [ADR-0098](adr/0098-generated-surface-grids-and-retained-interpolation.md) | Exact Array2 grids and retained HArray interpolation with independent snapshots and finite flat-height results | Accepted |
+| [ADR-0097](adr/0097-generated-copied-arrays-and-sequences.md) | Exact copied Array1/Sequence profiles with immutable snapshots and transactional result publication | Accepted |
 | [ADR-0096](adr/0096-generated-owned-nontransient-values.md) | Audited owning non-transient instances with stable storage and leased non-reused token handles | Accepted |
 | [ADR-0095](adr/0095-generated-reference-operations.md) | Audited copied mutable-reference operations with atomic managed publication | Accepted |
 | [ADR-0094](adr/0094-generated-geometric-value-operations.md) | Copied geometric instance operations and transform coefficients | Accepted |
@@ -104,6 +113,13 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0090](adr/0090-viewer-owned-render-resources-and-copied-frames.md) | Viewer-owned rendering resources, explicit asset recipes and copied color/depth frames | Accepted; complete exit evidence in STATUS |
 | [ADR-0091](adr/0091-proportionate-development-workflow.md) | Flexible work/commit sizing, proportionate validation, current-state separation and bounded source-size exceptions | Accepted |
 
+## Cadoryx private viewer-source design
+
+[ADR-0102](adr/0102-cadoryx-shared-viewer-sources.md) records source snapshots,
+explicit style revisions and preserved instance/selection owners. Frozen .12
+Release gates pass; complete A5, Debug, packaging and application acceptance
+remain pending.
+
 ## Pending decisions
 
 | ID | Decision needed | Required by |
@@ -122,3 +138,60 @@ New ADRs should include:
 - Consequences and migration impact.
 - Validation required.
 - Links to related decisions, issues, and documents.
+
+- [ADR-0103: Generated private transfer records](adr/0103-generated-private-transfer-records.md): exact index domains, one transfer epoch, detached records/checks and functional shape binders.
+
+- [ADR-0104: Copied numeric matrices and private solvers](adr/0104-copied-numeric-matrices-and-private-solvers.md): bounded copied matrices, fresh decomposition state and immutable spline factors.
+
+- [ADR-0105: Private spline workspaces](adr/0105-private-spline-workspaces.md): typed curve/surface caches, canonical coefficient copies and atomic interpolation.
+- [ADR-0106: Private writer diagnostics](adr/0106-private-writer-diagnostics.md): one writer epoch, copied checks and exact source/map/model domains.
+- [ADR-0107: Reproducible local delivery inputs](adr/0107-reproducible-local-delivery-inputs.md): shared native build lock, frozen package input identities and precise SDK exclusions.
+
+- [ADR-0109](adr/0109-generated-copied-curved-hatching.md): TM022 copied curved hatching, gated optional domains and independent 2D/3D trimmed curves.
+
+- [ADR-0110](adr/0110-generated-poly-data-and-controlled-meshing.md): TM023 copied Poly channels/bounds/conditional connectivity and TM024 copied meshing parameters/status with independently owned topology.
+
+- [ADR-0111](adr/0111-generated-document-and-xde-attribute-projections.md): TM025/026 parent-bound document operations, atomic NamedData replacement and copied XDE layer/note projections.
+
+- [ADR-0112](adr/0112-generated-private-exchange-header-sessions.md): TM027 private exchange sessions, copied headers and domain-scoped selections with restored metadata export.
+
+- [ADR-0113](adr/0113-generated-parent-bound-selection-workspaces.md): TM028 copied selecting volumes, strict source stamps, world scene hits and actual live selection repaint.
+
+- [ADR-0114](adr/0114-generated-call-private-foundation-values.md): TM029 bounded call-private Foundation values, UTF16 edit boundaries and proven explicit unit dimensions.
+
+- [ADR-0115](adr/0115-private-filling-kernels-and-controlled-topology-assembly.md): TM030 copied spline/filling workflows and TM031 initialized validated new topology.
+
+- [ADR-0116](adr/0116-private-xde-metadata-and-stepcaf-workspaces.md): TM032 / TM033 exact copied AX workflows.
+
+- [ADR-0117](adr/0117-copied-polygons-and-unambiguous-native-loops.md): TM034 exact copied AY workflows.
+
+- [ADR-0118](adr/0118-audited-foundation-function-diagnostics.md): TM035 exact header-function provenance and call-private copied diagnostics.
+
+- [ADR-0119](adr/0119-initialized-assembly-and-copied-validation.md): TM036 copied geometry graphs, initialized assembly and identity-scoped validation.
+
+- [ADR-0120](adr/0120-bounded-native-curve-computations.md): TM037 private bounded curve sampling, arc length and copied projections.
+
+- [ADR-0121](adr/0121-identity-bound-document-association-diagnostics.md): TM038 exact document/context association diagnostics and atomic edits.
+
+- [ADR-0122: Private identity-bound selected-root transfer](adr/0122-private-identity-bound-selected-root-transfer.md) — Accepted 2026-10-10.
+
+- [ADR-0123: Exact copied mesh boundary diagnostics](adr/0123-exact-copied-mesh-boundary-diagnostics.md) — Accepted 2026-10-10.
+
+- [ADR-0124](adr/0124-finite-copied-numeric-results-and-sdk-supplements.md): Accepted; TM041 finite copied aggregates and hash-pinned SDK include fragments.
+
+- [ADR-0125: copied modeling source diagnostics](adr/0125-copied-modeling-source-diagnostics.md) — Accepted.
+
+- [ADR-0126: coupled intersection domains](adr/0126-coupled-intersection-result-domains.md) — Accepted.
+- [ADR-0127: direct collection transactions/persistence](adr/0127-direct-collection-transaction-and-persistence.md) — accepted.
+- [ADR-0128: local STEPCAF assembly epochs](adr/0128-local-step-assembly-epochs.md) — accepted.
+- [ADR-0129: configured mesh document exchange](adr/0129-configured-mesh-document-exchange.md) — accepted.
+- [ADR-0130: private finite parameterized construction](adr/0130-private-parameterized-construction.md) — accepted within the authorized BL–BQ scope.
+- [ADR-0131: finite extrema with coupled copied output](adr/0131-private-finite-extrema.md) — accepted within the authorized BL–BQ scope.
+- [ADR-0132: bounded text batch publication](adr/0132-bounded-text-batch-publication.md) — accepted within the authorized BL–BQ scope.
+- [ADR-0133: private mesh proximity](adr/0133-private-mesh-proximity.md) — accepted within the authorized BL–BQ scope.
+- [ADR-0134: private canonical STEP export](adr/0134-private-canonical-step-export.md) — accepted within the authorized BL–BQ scope.
+
+- [ADR-0135](adr/0135-generated-compatible-legacy-adapters.md): TM053 compatible whole-sequence copy, generator-owned legacy adapters and embedded-input provenance within authorized BR–CI.
+
+- [ADR-0136](adr/0136-call-private-coupled-constraint-copies.md): TM054 initialized nested3D/2D constraint copies, bounded enumeration and atomic detached publication.
+- [ADR-0138](adr/0138-owned-mesh-resource-import.md): CE nested local mesh resources and native material-owned copied encoded textures; existing flat profile preserved.

@@ -6,6 +6,311 @@ using OcctSharp.Generated;
 using OcctSharp.Interop;
 using OcctSharp.Values;
 namespace OcctSharp.OwnedValues;
+/// <summary>Owns a stable-address Message_ExecStatus. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class MessageExecStatus : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private MessageExecStatus(OwnedHandle handle) => _handle = handle;
+  static MessageExecStatus() => NativeLibraryResolver.EnsureRegistered(typeof(MessageExecStatus).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static MessageExecStatus FromNative(nint value) {
+    try { return new MessageExecStatus(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Message_ExecStatus@F@Add#&1$@S@Message_ExecStatus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_add_0")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_add_0(OwnedHandle receiver, MessageExecStatus.OwnedHandle arg0);
+  /// <summary>Invokes Message_ExecStatus::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Add(MessageExecStatus arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_add_0(NativeHandle, arg0.NativeHandle), "occtsharp_owned_message_execstatus_add_0");
+  }
+  // Source: c:@S@Message_ExecStatus@F@And#&1$@S@Message_ExecStatus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_and_1")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_and_1(OwnedHandle receiver, MessageExecStatus.OwnedHandle arg0);
+  /// <summary>Invokes Message_ExecStatus::And. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void And(MessageExecStatus arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_and_1(NativeHandle, arg0.NativeHandle), "occtsharp_owned_message_execstatus_and_1");
+  }
+  // Source: c:@S@Message_ExecStatus@F@Clear#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_clear_2")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_clear_2(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::Clear. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Clear() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_clear_2(NativeHandle), "occtsharp_owned_message_execstatus_clear_2");
+  }
+  // Source: c:@S@Message_ExecStatus@F@ClearAllAlarm#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_clearallalarm_3")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_clearallalarm_3(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::ClearAllAlarm. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ClearAllAlarm() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_clearallalarm_3(NativeHandle), "occtsharp_owned_message_execstatus_clearallalarm_3");
+  }
+  // Source: c:@S@Message_ExecStatus@F@ClearAllDone#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_clearalldone_4")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_clearalldone_4(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::ClearAllDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ClearAllDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_clearalldone_4(NativeHandle), "occtsharp_owned_message_execstatus_clearalldone_4");
+  }
+  // Source: c:@S@Message_ExecStatus@F@ClearAllFail#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_clearallfail_5")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_clearallfail_5(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::ClearAllFail. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ClearAllFail() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_clearallfail_5(NativeHandle), "occtsharp_owned_message_execstatus_clearallfail_5");
+  }
+  // Source: c:@S@Message_ExecStatus@F@ClearAllWarn#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_clearallwarn_6")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_clearallwarn_6(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::ClearAllWarn. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ClearAllWarn() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_clearallwarn_6(NativeHandle), "occtsharp_owned_message_execstatus_clearallwarn_6");
+  }
+  // Source: c:@S@Message_ExecStatus@F@IsAlarm#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_isalarm_7")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_isalarm_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Message_ExecStatus::IsAlarm. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsAlarm() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_isalarm_7(NativeHandle, out int result), "occtsharp_owned_message_execstatus_isalarm_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_isdone_8")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_isdone_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Message_ExecStatus::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_isdone_8(NativeHandle, out int result), "occtsharp_owned_message_execstatus_isdone_8");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@IsFail#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_isfail_9")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_isfail_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Message_ExecStatus::IsFail. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsFail() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_isfail_9(NativeHandle, out int result), "occtsharp_owned_message_execstatus_isfail_9");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@IsWarn#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_iswarn_10")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_iswarn_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Message_ExecStatus::IsWarn. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsWarn() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_iswarn_10(NativeHandle, out int result), "occtsharp_owned_message_execstatus_iswarn_10");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@Message_ExecStatus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_create_11")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_create_11(out nint result);
+  /// <summary>Invokes Message_ExecStatus::Message_ExecStatus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MessageExecStatus Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_create_11(out nint result), "occtsharp_owned_message_execstatus_create_11");
+    var managedResult = MessageExecStatus.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@SetAllAlarm#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_setallalarm_12")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_setallalarm_12(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::SetAllAlarm. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAllAlarm() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_setallalarm_12(NativeHandle), "occtsharp_owned_message_execstatus_setallalarm_12");
+  }
+  // Source: c:@S@Message_ExecStatus@F@SetAllDone#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_setalldone_13")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_setalldone_13(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::SetAllDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAllDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_setalldone_13(NativeHandle), "occtsharp_owned_message_execstatus_setalldone_13");
+  }
+  // Source: c:@S@Message_ExecStatus@F@SetAllFail#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_setallfail_14")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_setallfail_14(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::SetAllFail. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAllFail() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_setallfail_14(NativeHandle), "occtsharp_owned_message_execstatus_setallfail_14");
+  }
+  // Source: c:@S@Message_ExecStatus@F@SetAllWarn#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_setallwarn_15")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_setallwarn_15(OwnedHandle receiver);
+  /// <summary>Invokes Message_ExecStatus::SetAllWarn. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAllWarn() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_setallwarn_15(NativeHandle), "occtsharp_owned_message_execstatus_setallwarn_15");
+  }
+  // Source: c:@S@Message_ExecStatus@F@LocalStatusIndex#$@E@Message_Status#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_localstatusindex_16")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_localstatusindex_16(int arg0, out int result);
+  /// <summary>Invokes Message_ExecStatus::LocalStatusIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static int LocalStatusIndex(MessageStatus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_localstatusindex_16((int)arg0, out int result), "occtsharp_owned_message_execstatus_localstatusindex_16");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@StatusIndex#$@E@Message_Status#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_statusindex_17")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_statusindex_17(int arg0, out int result);
+  /// <summary>Invokes Message_ExecStatus::StatusIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static int StatusIndex(MessageStatus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_statusindex_17((int)arg0, out int result), "occtsharp_owned_message_execstatus_statusindex_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Message_ExecStatus@F@TypeOfStatus#$@E@Message_Status#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_message_execstatus_typeofstatus_18")]
+  private static partial NativeStatus Native_occtsharp_owned_message_execstatus_typeofstatus_18(int arg0, out int result);
+  /// <summary>Invokes Message_ExecStatus::TypeOfStatus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MessageStatusType TypeOfStatus(MessageStatus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_message_execstatus_typeofstatus_18((int)arg0, out int result), "occtsharp_owned_message_execstatus_typeofstatus_18");
+    var managedResult = (MessageStatusType)result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address OSD_Protection. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class OSDProtection : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private OSDProtection(OwnedHandle handle) => _handle = handle;
+  static OSDProtection() => NativeLibraryResolver.EnsureRegistered(typeof(OSDProtection).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static OSDProtection FromNative(nint value) {
+    try { return new OSDProtection(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@OSD_Protection@F@Add#&$@E@OSD_SingleProtection#S1_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_add_0")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_add_0(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1);
+  /// <summary>Invokes OSD_Protection::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Add(ref OSDSingleProtection arg0, OSDSingleProtection arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_add_0(NativeHandle, (int)arg0, out int updatedArg0, (int)arg1), "occtsharp_owned_osd_protection_add_0");
+    arg0 = (OSDSingleProtection)updatedArg0;
+  }
+  // Source: c:@S@OSD_Protection@F@Group#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_group_1")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_group_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes OSD_Protection::Group. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public OSDSingleProtection Group() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_group_1(NativeHandle, out int result), "occtsharp_owned_osd_protection_group_1");
+    var managedResult = (OSDSingleProtection)result;
+    return managedResult;
+  }
+  // Source: c:@S@OSD_Protection@F@OSD_Protection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_create_2(out nint result);
+  /// <summary>Invokes OSD_Protection::OSD_Protection. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static OSDProtection Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_create_2(out nint result), "occtsharp_owned_osd_protection_create_2");
+    var managedResult = OSDProtection.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@OSD_Protection@F@OSD_Protection#$@E@OSD_SingleProtection#S0_#S0_#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_create_3(int arg0, int arg1, int arg2, int arg3, out nint result);
+  /// <summary>Invokes OSD_Protection::OSD_Protection. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static OSDProtection Create(OSDSingleProtection arg0, OSDSingleProtection arg1, OSDSingleProtection arg2, OSDSingleProtection arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_create_3((int)arg0, (int)arg1, (int)arg2, (int)arg3, out nint result), "occtsharp_owned_osd_protection_create_3");
+    var managedResult = OSDProtection.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@OSD_Protection@F@SetGroup#$@E@OSD_SingleProtection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_setgroup_4")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_setgroup_4(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes OSD_Protection::SetGroup. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetGroup(OSDSingleProtection arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_setgroup_4(NativeHandle, (int)arg0), "occtsharp_owned_osd_protection_setgroup_4");
+  }
+  // Source: c:@S@OSD_Protection@F@SetSystem#$@E@OSD_SingleProtection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_setsystem_5")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_setsystem_5(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes OSD_Protection::SetSystem. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSystem(OSDSingleProtection arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_setsystem_5(NativeHandle, (int)arg0), "occtsharp_owned_osd_protection_setsystem_5");
+  }
+  // Source: c:@S@OSD_Protection@F@SetUser#$@E@OSD_SingleProtection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_setuser_6")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_setuser_6(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes OSD_Protection::SetUser. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetUser(OSDSingleProtection arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_setuser_6(NativeHandle, (int)arg0), "occtsharp_owned_osd_protection_setuser_6");
+  }
+  // Source: c:@S@OSD_Protection@F@SetValues#$@E@OSD_SingleProtection#S0_#S0_#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_setvalues_7")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_setvalues_7(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3);
+  /// <summary>Invokes OSD_Protection::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(OSDSingleProtection arg0, OSDSingleProtection arg1, OSDSingleProtection arg2, OSDSingleProtection arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_setvalues_7(NativeHandle, (int)arg0, (int)arg1, (int)arg2, (int)arg3), "occtsharp_owned_osd_protection_setvalues_7");
+  }
+  // Source: c:@S@OSD_Protection@F@SetWorld#$@E@OSD_SingleProtection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_setworld_8")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_setworld_8(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes OSD_Protection::SetWorld. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetWorld(OSDSingleProtection arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_setworld_8(NativeHandle, (int)arg0), "occtsharp_owned_osd_protection_setworld_8");
+  }
+  // Source: c:@S@OSD_Protection@F@Sub#&$@E@OSD_SingleProtection#S1_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_sub_9")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_sub_9(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1);
+  /// <summary>Invokes OSD_Protection::Sub. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Sub(ref OSDSingleProtection arg0, OSDSingleProtection arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_sub_9(NativeHandle, (int)arg0, out int updatedArg0, (int)arg1), "occtsharp_owned_osd_protection_sub_9");
+    arg0 = (OSDSingleProtection)updatedArg0;
+  }
+  // Source: c:@S@OSD_Protection@F@System#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_system_10")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_system_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes OSD_Protection::System. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public OSDSingleProtection System() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_system_10(NativeHandle, out int result), "occtsharp_owned_osd_protection_system_10");
+    var managedResult = (OSDSingleProtection)result;
+    return managedResult;
+  }
+  // Source: c:@S@OSD_Protection@F@User#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_user_11")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_user_11(OwnedHandle receiver, out int result);
+  /// <summary>Invokes OSD_Protection::User. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public OSDSingleProtection User() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_user_11(NativeHandle, out int result), "occtsharp_owned_osd_protection_user_11");
+    var managedResult = (OSDSingleProtection)result;
+    return managedResult;
+  }
+  // Source: c:@S@OSD_Protection@F@Values#&$@E@OSD_SingleProtection#S0_#S0_#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_values_12")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_values_12(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, out int updatedArg1, int arg2, out int updatedArg2, int arg3, out int updatedArg3);
+  /// <summary>Invokes OSD_Protection::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Values(ref OSDSingleProtection arg0, ref OSDSingleProtection arg1, ref OSDSingleProtection arg2, ref OSDSingleProtection arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_values_12(NativeHandle, (int)arg0, out int updatedArg0, (int)arg1, out int updatedArg1, (int)arg2, out int updatedArg2, (int)arg3, out int updatedArg3), "occtsharp_owned_osd_protection_values_12");
+    arg0 = (OSDSingleProtection)updatedArg0;
+    arg1 = (OSDSingleProtection)updatedArg1;
+    arg2 = (OSDSingleProtection)updatedArg2;
+    arg3 = (OSDSingleProtection)updatedArg3;
+  }
+  // Source: c:@S@OSD_Protection@F@World#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_osd_protection_world_13")]
+  private static partial NativeStatus Native_occtsharp_owned_osd_protection_world_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes OSD_Protection::World. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public OSDSingleProtection World() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_osd_protection_world_13(NativeHandle, out int result), "occtsharp_owned_osd_protection_world_13");
+    var managedResult = (OSDSingleProtection)result;
+    return managedResult;
+  }
+}
 /// <summary>Owns a stable-address Quantity_Color. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class QuantityColor : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {

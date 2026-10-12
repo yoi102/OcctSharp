@@ -1,0 +1,207 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.RepairWorkspaces;
+internal static unsafe partial class RepairInterop {
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_create")]internal static partial NativeStatus SessionCreate(ShapeHandle source,ShapeHandle face,int kind,double precision,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_create")]internal static partial NativeStatus SessionWithoutFace(ShapeHandle source,nint face,int kind,double precision,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_shape")]internal static partial NativeStatus SessionShape(RepairHandle token,int selector,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_perform")]internal static partial NativeStatus Perform(RepairHandle token,int operation,out int changed);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_status")]internal static partial NativeStatus Status(RepairHandle token,int status,int operation,out int value);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_mode")]internal static partial NativeStatus Mode(RepairHandle token,int mode,int value);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_workspace_create")]internal static partial NativeStatus WorkspaceCreate(RepairHandle token,int operation,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_workspace_consume")]internal static partial NativeStatus Consume(RepairHandle token,RepairHandle workspace,int drop,double angle,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_wire_reorder")]internal static partial NativeStatus Reorder(RepairHandle token,int closed,out int changed);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_face_loops")]internal static partial NativeStatus FaceLoops(RepairHandle token,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_replace")]internal static partial NativeStatus Replace(RepairHandle token,TopologyCollectionHandle inputs,TopologyCollectionHandle outputs,int operation);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_copy_vertex")]internal static partial NativeStatus CopyVertex(RepairHandle token,ShapeHandle input,double* position,int capacity,double tolerance,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_session_snapshot")]internal static partial NativeStatus Snapshot(RepairHandle token,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_coupled_repair_result_shape")]internal static partial NativeStatus ResultShape(RepairHandle token,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_result_relation")]internal static partial NativeStatus Relation(RepairHandle token,ShapeHandle input,int* values,int capacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_result_paths")]internal static partial NativeStatus Paths(RepairHandle token,ShapeHandle input,int selector,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_apply_until")]internal static partial NativeStatus ApplyUntil(RepairHandle token,int until,int buildmode,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_repair_solid_from_shell")]internal static partial NativeStatus SolidFromShell(ShapeHandle shell,out nint result);
+}
+/// <summary>Private native repair receiver category.</summary>
+public enum RepairSessionKind {
+ /// <summary>Wireframe gaps and coupled small-edge maps.</summary>
+ Wireframe,
+ /// <summary>Ordered wire fixes on an exact support face.</summary>
+ Wire,
+ /// <summary>Face fixes and coupled orientation/split maps.</summary>
+ Face,
+ /// <summary>Shell fixes.</summary>
+ Shell,
+ /// <summary>Solid fixes.</summary>
+ Solid,
+ /// <summary>Explicit exact replacement, removal and merge requests.</summary>
+ Replacement
+}
+/// <summary>Copied mode selectors for wire receivers. Boolean selectors accept only 0 or 1; all others accept -1, 0 or 1.</summary>
+public enum WireRepairMode {
+ /// <summary>Reorder edges.</summary>
+ Reorder,
+ /// <summary>Fix small edges.</summary>
+ Small,
+ /// <summary>Fix connections.</summary>
+ Connected,
+ /// <summary>Fix edge curves.</summary>
+ EdgeCurves,
+ /// <summary>Fix degenerated edges.</summary>
+ Degenerated,
+ /// <summary>Fix self intersection.</summary>
+ SelfIntersection,
+ /// <summary>Fix lacking edges.</summary>
+ Lacking,
+ /// <summary>Fix 3D gaps.</summary>
+ Gaps3d,
+ /// <summary>Fix 2D gaps.</summary>
+ Gaps2d,
+ /// <summary>Fix reversed pcurves.</summary>
+ Reversed2d,
+ /// <summary>Remove pcurves.</summary>
+ RemovePCurve,
+ /// <summary>Add pcurves.</summary>
+ AddPCurve,
+ /// <summary>Remove 3D curves.</summary>
+ RemoveCurve3d,
+ /// <summary>Add 3D curves.</summary>
+ AddCurve3d,
+ /// <summary>Fix seams.</summary>
+ Seam,
+ /// <summary>Fix shifted curves.</summary>
+ Shifted,
+ /// <summary>Fix same parameter.</summary>
+ SameParameter,
+ /// <summary>Fix vertex tolerances.</summary>
+ VertexTolerance,
+ /// <summary>Fix notched edges.</summary>
+ NotchedEdges,
+ /// <summary>Fix tails.</summary>
+ Tail,
+ /// <summary>Fix self intersecting edges.</summary>
+ SelfIntersectingEdge,
+ /// <summary>Fix intersecting edges.</summary>
+ IntersectingEdges,
+ /// <summary>Fix nonadjacent intersecting edges.</summary>
+ NonAdjacentIntersectingEdges,
+ /// <summary>Remove loops.</summary>
+ RemoveLoop,
+ /// <summary>Boolean gap-by-range policy.</summary>
+ GapsByRanges,
+ /// <summary>Boolean pcurve preference.</summary>
+ PreferencePCurve
+}
+/// <summary>Copied face-receiver mode selectors.</summary>
+public enum FaceRepairMode {
+ /// <summary>Fix intersecting wires.</summary>
+ IntersectingWires,
+ /// <summary>Fix loop wires.</summary>
+ LoopWires,
+ /// <summary>Split faces.</summary>
+ SplitFace,
+ /// <summary>Automatically correct precision.</summary>
+ AutoCorrectPrecision,
+ /// <summary>Fix missing seams.</summary>
+ MissingSeam,
+ /// <summary>Fix periodic degeneration.</summary>
+ PeriodicDegenerated
+}
+/// <summary>Native relation evidence. Unavailable remains fallible and never triggers automatic rebinding.</summary>
+public enum RepairRelationEvidence {
+ /// <summary>No native change was reported and no replacement relation exists.</summary>
+ Unchanged,
+ /// <summary>The native history records removal.</summary>
+ Removed,
+ /// <summary>The native history records modified or generated paths.</summary>
+ Modified,
+ /// <summary>The history type is unsupported or native changes lack a recorded relation.</summary>
+ Unavailable
+}
+/// <summary>Copied native signed status, relation availability and leaf bookkeeping.</summary>
+public readonly record struct RepairRelationInfo(int DirectStatus,RepairRelationEvidence Evidence,bool SupportedHistoryType,bool IsNewLeaf);
+/// <summary>Owns deep-copied topology and geometry plus a private ReShape context. Calls serialize. Native mutation failure retires the receiver; validation errors preserve the current epoch.</summary>
+public sealed unsafe class TopologyRepairSession : IDisposable {
+ readonly RepairHandle handle;
+ readonly RepairSessionKind kind;
+ RepairHandle NativeHandle=>handle.Live(this);
+ TopologyRepairSession(nint p,RepairSessionKind kind){handle=RepairHandle.Own(p,2);this.kind=kind;}
+ void RequireKind(RepairSessionKind expected){if(kind!=expected)throw new InvalidOperationException("Operation does not match this repair receiver.");}
+ /// <summary>Constructs a receiver. Wire repair requires a support face containing the exact input edges. Other categories derive their type from source.</summary>
+ public static TopologyRepairSession Create(Shape source,RepairSessionKind kind,double precision=1e-6,Shape? supportFace=null){ArgumentNullException.ThrowIfNull(source);nint p;
+  if(supportFace is null)RepairInterop.Check(RepairInterop.SessionWithoutFace(source.Handle,0,(int)kind,precision,out p));else RepairInterop.Check(RepairInterop.SessionCreate(source.Handle,supportFace.Handle,(int)kind,precision,out p));return new(p,kind);}
+ Shape Get(int selector){RepairInterop.Check(RepairInterop.SessionShape(NativeHandle,selector,out var p));return ShapeFactory.FromNativeHandle(p,"repair_session_shape");}
+ /// <summary>Gets an independently deep-copied current result. Snapshot provides result and history in one common identity domain.</summary>
+ public Shape Shape=>Get(0);
+ /// <summary>Gets the current face receiver's face.</summary>
+ public Shape Face=>Get(1);
+ /// <summary>Gets the current shell receiver's shell.</summary>
+ public Shape Shell=>Get(2);
+ /// <summary>Gets copied unoriented/error faces from a shell receiver.</summary>
+ public Shape ErrorFaces=>Get(3);
+ /// <summary>Gets the wire receiver's support face.</summary>
+ public Shape WireSupportFace=>Get(4);
+ /// <summary>Builds the current wire with WireAPIMake.</summary>
+ public Shape WireAPIMake=>Get(5);
+ /// <summary>Runs configured fixes; wireframe defaults to gap repair. Native false means no reported change.</summary>
+ public bool Perform(){RepairInterop.Check(RepairInterop.Perform(NativeHandle,0,out var n));return n!=0;}
+ /// <summary>Runs wireframe's complete small-edge fix; invalidates older coupled workspaces.</summary>
+ public bool FixSmallEdges(){RepairInterop.Check(RepairInterop.Perform(NativeHandle,1,out var n));return n!=0;}
+ /// <summary>Queries a native ShapeExtend status. Wireframe operations 0/1 select gap/small; wire operations 0..3 select reorder/connected/small/edge curves.</summary>
+ public bool Status(ShapeExtendStatus status,int operation=0){RepairInterop.Check(RepairInterop.Status(NativeHandle,(int)status,operation,out var n));return n!=0;}
+ /// <summary>Sets a copied wire mode, advancing the configuration epoch.</summary>
+ public void SetWireMode(WireRepairMode mode,int value){RequireKind(RepairSessionKind.Wire);RepairInterop.Check(RepairInterop.Mode(NativeHandle,(int)mode,value));}
+ /// <summary>Sets a copied face mode, advancing the configuration epoch.</summary>
+ public void SetFaceMode(FaceRepairMode mode,int value){RequireKind(RepairSessionKind.Face);RepairInterop.Check(RepairInterop.Mode(NativeHandle,(int)mode,value));}
+ /// <summary>Sets shell orientation mode using native -1/0/1 semantics.</summary>
+ public void SetShellOrientationMode(int value){RequireKind(RepairSessionKind.Shell);RepairInterop.Check(RepairInterop.Mode(NativeHandle,0,value));}
+ /// <summary>Sets the wireframe small-edge drop policy.</summary>
+ public void SetDropSmallEdges(bool drop){RequireKind(RepairSessionKind.Wireframe);RepairInterop.Check(RepairInterop.Mode(NativeHandle,0,drop?1:0));}
+ /// <summary>Detects small edges and freezes all four coupled collections together.</summary>
+ public RepairCoupledWorkspace CheckSmallEdges(){RepairInterop.Check(RepairInterop.WorkspaceCreate(NativeHandle,0,out var p));return new(p);}
+ /// <summary>Fixes face orientation and freezes its split-face map at the resulting epoch.</summary>
+ public RepairCoupledWorkspace FixFaceOrientation(){RepairInterop.Check(RepairInterop.WorkspaceCreate(NativeHandle,1,out var p));return new(p);}
+ /// <summary>Consumes a small-edge workspace from this exact receiver and epoch. Successful calls invalidate that workspace for further consumption.</summary>
+ public RepairCoupledWorkspace MergeSmallEdges(RepairCoupledWorkspace workspace,bool drop=false,double limitAngle=-1){RequireKind(RepairSessionKind.Wireframe);ArgumentNullException.ThrowIfNull(workspace);RepairInterop.Check(RepairInterop.Consume(NativeHandle,workspace.NativeHandle,drop?1:0,limitAngle,out var p));return new(p);}
+ /// <summary>Consumes this face receiver's orientation map from the same epoch.</summary>
+ public RepairCoupledWorkspace SplitFace(RepairCoupledWorkspace workspace){RequireKind(RepairSessionKind.Face);ArgumentNullException.ThrowIfNull(workspace);RepairInterop.Check(RepairInterop.Consume(NativeHandle,workspace.NativeHandle,0,-1,out var p));return new(p);}
+ /// <summary>Computes a private order and applies it to the same wire receiver.</summary>
+ public bool ReorderWire(bool closed=true){RepairInterop.Check(RepairInterop.Reorder(NativeHandle,closed?1:0,out var n));return n!=0;}
+ /// <summary>Fixes face loop wires and returns every resulting wire.</summary>
+ public RepairCoupledWorkspace FixFaceLoops(){RepairInterop.Check(RepairInterop.FaceLoops(NativeHandle,out var p));return new(p);}
+ /// <summary>Records an exact source replacement. Multiple same-type outputs form a native compound, preserving every split path.</summary>
+ public void Replace(Shape sourceMember,OwnedShapeSet replacements){ArgumentNullException.ThrowIfNull(sourceMember);ArgumentNullException.ThrowIfNull(replacements);using var inputs=OwnedShapeSet.Create(sourceMember);RepairInterop.Check(RepairInterop.Replace(NativeHandle,inputs.NativeHandle,replacements.NativeHandle,0));}
+ /// <summary>Records removal of one exact original source member.</summary>
+ public void Remove(Shape sourceMember){ArgumentNullException.ThrowIfNull(sourceMember);using var inputs=OwnedShapeSet.Create(sourceMember);using var outputs=OwnedShapeSet.Create();RepairInterop.Check(RepairInterop.Replace(NativeHandle,inputs.NativeHandle,outputs.NativeHandle,1));}
+ /// <summary>Records a native merge of distinct exact original members; every input retains the common output history path.</summary>
+ public void Merge(OwnedShapeSet sourceMembers,Shape replacement){ArgumentNullException.ThrowIfNull(sourceMembers);ArgumentNullException.ThrowIfNull(replacement);using var outputs=OwnedShapeSet.Create(replacement);RepairInterop.Check(RepairInterop.Replace(NativeHandle,sourceMembers.NativeHandle,outputs.NativeHandle,2));}
+ /// <summary>Copies or updates an exact original vertex inside the private context; the returned vertex is independent.</summary>
+ public Shape CopyVertex(Shape original,double tolerance,GpPoint? position=null){ArgumentNullException.ThrowIfNull(original);double* values=stackalloc double[3];if(position is{} p){values[0]=p.X;values[1]=p.Y;values[2]=p.Z;}RepairInterop.Check(RepairInterop.CopyVertex(NativeHandle,original.Handle,values,position.HasValue?3:0,tolerance,out var native));return ShapeFactory.FromNativeHandle(native,"repair_copy_vertex");}
+ /// <summary>Applies the private replacement context with explicit native TopAbs type 0..8 and build mode 0..2; returns an independent copy.</summary>
+ public Shape ApplyUntil(int nativeShapeType=8,int buildMode=0){RepairInterop.Check(RepairInterop.ApplyUntil(NativeHandle,nativeShapeType,buildMode,out var p));return ShapeFactory.FromNativeHandle(p,"repair_apply_until");}
+ /// <summary>Freezes result geometry and all native replacement paths together. Unsupported or unrecorded evidence remains unavailable.</summary>
+ public RepairResultSnapshot Snapshot(){RepairInterop.Check(RepairInterop.Snapshot(NativeHandle,out var p));return new(p);}
+ /// <summary>Releases the receiver; workspaces retain their parent and detached snapshots remain usable.</summary>
+ public void Dispose()=>handle.Dispose();
+}
+/// <summary>Owns a frozen result and native history in a common copied identity domain. Queries require exact original source membership, including location and excluding orientation as native IsSame specifies.</summary>
+public sealed unsafe class RepairResultSnapshot : IDisposable {
+ readonly RepairHandle handle;
+ RepairHandle NativeHandle=>handle.Live(this);
+ internal RepairResultSnapshot(nint p)=>handle=RepairHandle.Own(p,4);
+ /// <summary>Returns an owning result retaining this snapshot's frozen TShape graph.</summary>
+ public Shape Shape {get{RepairInterop.Check(RepairInterop.ResultShape(NativeHandle,out var p));return ShapeFactory.FromNativeHandle(p,"repair_result_shape");}}
+ /// <summary>Gets signed direct status and fallible relation evidence.</summary>
+ public RepairRelationInfo Relation(Shape original){ArgumentNullException.ThrowIfNull(original);int* values=stackalloc int[4];RepairInterop.Check(RepairInterop.Relation(NativeHandle,original.Handle,values,4));return new(values[0],(RepairRelationEvidence)values[1],values[2]!=0,values[3]!=0);}
+ OwnedShapeSet Paths(Shape original,int selector){ArgumentNullException.ThrowIfNull(original);RepairInterop.Check(RepairInterop.Paths(NativeHandle,original.Handle,selector,out var p));return new(p);}
+ /// <summary>Returns all native modified paths. A split remains multiple results.</summary>
+ public OwnedShapeSet Modified(Shape original)=>Paths(original,0);
+ /// <summary>Returns all native generated paths.</summary>
+ public OwnedShapeSet Generated(Shape original)=>Paths(original,1);
+ /// <summary>Returns the native replacement leaf, possibly a compound; removal returns an empty set.</summary>
+ public OwnedShapeSet Leaf(Shape original)=>Paths(original,2);
+ /// <summary>Releases history storage; previously obtained results survive.</summary>
+ public void Dispose()=>handle.Dispose();
+}

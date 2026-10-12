@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "1.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "BU frozen Preview.70",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "939F6D7C2F9FCE045C470DA4FA5ABC88883FBBF3D7B0A680309754E3ACCC46D6",
+  "declarations": [
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#$@E@Extrema_ExtAlgo#",
+      "specialCaseId": "SC-056",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf: void (const gp_Pnt &, const occ::handle<Geom_Surface> &, const double, const Extrema_ExtAlgo)",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve: void (const gp_Pnt &, const occ::handle<Geom_Curve> &, const double, const double)",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NbPoints#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::NbPoints",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::NbPoints: int () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NearestPoint#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::NearestPoint",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::NearestPoint: gp_Pnt () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistance#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::LowerDistance",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::LowerDistance: double () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistanceParameter#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::LowerDistanceParameter",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::LowerDistanceParameter: double () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#$@E@Extrema_ExtAlgo#",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf: void (const gp_Pnt &, const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double, const Extrema_ExtAlgo)",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@IsDone#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::IsDone",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::IsDone: bool () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NbPoints#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::NbPoints",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::NbPoints: int () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NearestPoint#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::NearestPoint",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::NearestPoint: gp_Pnt () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistance#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::LowerDistance",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::LowerDistance: double () const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistanceParameters#&d#S0_#1",
+      "specialCaseId": "SC-033",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::LowerDistanceParameters",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::LowerDistanceParameters: void (double &, double &) const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "specialCaseId": "SC-042",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve: void (const gp_Pnt &, const occ::handle<Geom_Curve> &)",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Distance#I#1",
+      "specialCaseId": "SC-042",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Distance",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::Distance: double (const int) const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Parameter#I#1",
+      "specialCaseId": "SC-042",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Parameter",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::Parameter: double (const int) const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Point#I#1",
+      "specialCaseId": "SC-042",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Point",
+      "nativeSignature": "GeomAPI_ProjectPointOnCurve::Point: gp_Pnt (const int) const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@Parameters#I#&d#S0_#1",
+      "specialCaseId": "SC-053",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::Parameters",
+      "nativeSignature": "GeomAPI_ProjectPointOnSurf::Parameters: void (const int, double &, double &) const",
+      "module": "Geometry",
+      "disposition": "REQUIRES_EXACT_OWNER_WORKFLOW_AUDIT",
+      "reason": "Existing SpecialCase composes native ownership/algorithm or parent/session scope; generic signature eligibility alone does not prove equivalent behavior.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@IsPeriodic#1",
+      "nativeName": "GeomAdaptor_Curve::IsPeriodic",
+      "header": "GeomAdaptor_Curve.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Curve::IsPeriodic: bool () const"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@Period#1",
+      "nativeName": "GeomAdaptor_Curve::Period",
+      "header": "GeomAdaptor_Curve.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Curve::Period: double () const"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@IsUPeriodic#1",
+      "nativeName": "GeomAdaptor_Surface::IsUPeriodic",
+      "header": "GeomAdaptor_Surface.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Surface::IsUPeriodic: bool () const"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@IsVPeriodic#1",
+      "nativeName": "GeomAdaptor_Surface::IsVPeriodic",
+      "header": "GeomAdaptor_Surface.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Surface::IsVPeriodic: bool () const"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@UPeriod#1",
+      "nativeName": "GeomAdaptor_Surface::UPeriod",
+      "header": "GeomAdaptor_Surface.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Surface::UPeriod: double () const"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@VPeriod#1",
+      "nativeName": "GeomAdaptor_Surface::VPeriod",
+      "header": "GeomAdaptor_Surface.hxx",
+      "state": "Emitted",
+      "exactSignatureAudit": "Pinned installed header/source identity and discovered signature verified",
+      "nativeSignature": "GeomAdaptor_Surface::VPeriod: double () const"
+    }
+  ],
+  "generatedSdkDelta": 0,
+  "manualToEmitted": 17,
+  "manualDelta": -17,
+  "affectedGeneratedFiles": [
+    {
+      "path": "src/OcctSharp.Native/generated/Geometry/OcctSharp.Geometry.CurveSampling.Generated.cpp",
+      "baselineSha256": "607207B5B98416267130F97BDDC64067B6EB3A5502B6C451C2CE06CBDC19847F",
+      "reason": "Only audited periodic U/V finite-window admission rule changes; exact final diff and runtime checks required."
+    }
+  ],
+  "callerFiles": [
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/GeometryInspection.cpp",
+      "sha256": "1E52F3B5EBCA54C9BF115A6D45D3F6EBE74847BFB069416BCE47A75E7553DC16"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Freeform.cpp",
+      "sha256": "BD9E11054C3BB9C125B8831F17E4E5603A5878E98BD188BA7D25C0194FD0C8F3"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/ConstraintResiduals.cpp",
+      "sha256": "A4B77D4DD54EC8AD738906C1CE874892A27AAAA51EB69FECD61872952858542D"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/SurfaceInspection.cpp",
+      "sha256": "CFF59D2F5B90D4B1BBE5B97F7DA2D1CA2624AC515ACCC071F51F35C64A0DD5AF"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/SurfaceCurves.cpp",
+      "sha256": "481C9D42F63FF04823BCD442CA66526B09B5C6BEBFA5230F1505D9854913BF65"
+    }
+  ],
+  "outcome": "Finite periodic UV projection and equivalent generated native projection helpers"
+}

@@ -1,0 +1,470 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const occ::handle<Geom_Curve> &, const double, const double)",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@BRepLib_MakeEdge#&1$@S@gp_Pnt#S0_#",
+      "nativeName": "BRepLib_MakeEdge::BRepLib_MakeEdge",
+      "signature": "BRepLib_MakeEdge::BRepLib_MakeEdge: void (const gp_Pnt &, const gp_Pnt &)",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Edge#",
+      "nativeName": "BRepLib_MakeEdge::Edge",
+      "signature": "BRepLib_MakeEdge::Edge: const TopoDS_Edge &()",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Error#1",
+      "nativeName": "BRepLib_MakeEdge::Error",
+      "signature": "BRepLib_MakeEdge::Error: BRepLib_EdgeError () const",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Vertex1#1",
+      "nativeName": "BRepLib_MakeEdge::Vertex1",
+      "signature": "BRepLib_MakeEdge::Vertex1: const TopoDS_Vertex &() const",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeEdge@F@Vertex2#1",
+      "nativeName": "BRepLib_MakeEdge::Vertex2",
+      "signature": "BRepLib_MakeEdge::Vertex2: const TopoDS_Vertex &() const",
+      "guard": "APPrivate",
+      "reason": "Call-private initialized builder; deep-copied curve; done/error separated; no unfinished result access."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const TopoDS_Edge &)",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void ()",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Edge#1",
+      "nativeName": "BRepLib_MakeWire::Edge",
+      "signature": "BRepLib_MakeWire::Edge: const TopoDS_Edge &() const",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Error#1",
+      "nativeName": "BRepLib_MakeWire::Error",
+      "signature": "BRepLib_MakeWire::Error: BRepLib_WireError () const",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Vertex#1",
+      "nativeName": "BRepLib_MakeWire::Vertex",
+      "signature": "BRepLib_MakeWire::Vertex: const TopoDS_Vertex &() const",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Wire#",
+      "nativeName": "BRepLib_MakeWire::Wire",
+      "signature": "BRepLib_MakeWire::Wire: const TopoDS_Wire &()",
+      "guard": "APPrivate",
+      "reason": "Private builder receives one common geometry-copy graph; failure publishes diagnostics only, never partial wire."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@BigSplineSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::BigSplineSec",
+      "signature": "ShapeAnalysis_ShapeContents::BigSplineSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@Clear#",
+      "nativeName": "ShapeAnalysis_ShapeContents::Clear",
+      "signature": "ShapeAnalysis_ShapeContents::Clear: void ()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ClearFlags#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ClearFlags",
+      "signature": "ShapeAnalysis_ShapeContents::ClearFlags: void ()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@IndirectSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::IndirectSec",
+      "signature": "ShapeAnalysis_ShapeContents::IndirectSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyBigSplineMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyBigSplineMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyBigSplineMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyIndirectMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyIndirectMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyIndirectMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyOffsetCurveMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyOffsetCurveMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyOffsetCurveMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyOffsetSurfaceMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyOffsetSurfaceMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyOffsetSurfaceMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyTrimmed2dMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyTrimmed2dMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyTrimmed2dMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ModifyTrimmed3dMode#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ModifyTrimmed3dMode",
+      "signature": "ShapeAnalysis_ShapeContents::ModifyTrimmed3dMode: bool &()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbBSplibeSurf#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbBSplibeSurf",
+      "signature": "ShapeAnalysis_ShapeContents::NbBSplibeSurf: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbBezierSurf#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbBezierSurf",
+      "signature": "ShapeAnalysis_ShapeContents::NbBezierSurf: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbBigSplines#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbBigSplines",
+      "signature": "ShapeAnalysis_ShapeContents::NbBigSplines: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbC0Curves#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbC0Curves",
+      "signature": "ShapeAnalysis_ShapeContents::NbC0Curves: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbC0Surfaces#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbC0Surfaces",
+      "signature": "ShapeAnalysis_ShapeContents::NbC0Surfaces: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbEdges#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbEdges",
+      "signature": "ShapeAnalysis_ShapeContents::NbEdges: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbFaceWithSevWires#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbFaceWithSevWires",
+      "signature": "ShapeAnalysis_ShapeContents::NbFaceWithSevWires: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbFaces#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbFaces",
+      "signature": "ShapeAnalysis_ShapeContents::NbFaces: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbFreeEdges#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbFreeEdges",
+      "signature": "ShapeAnalysis_ShapeContents::NbFreeEdges: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbFreeFaces#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbFreeFaces",
+      "signature": "ShapeAnalysis_ShapeContents::NbFreeFaces: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbFreeWires#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbFreeWires",
+      "signature": "ShapeAnalysis_ShapeContents::NbFreeWires: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbIndirectSurf#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbIndirectSurf",
+      "signature": "ShapeAnalysis_ShapeContents::NbIndirectSurf: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbNoPCurve#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbNoPCurve",
+      "signature": "ShapeAnalysis_ShapeContents::NbNoPCurve: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbOffsetCurves#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbOffsetCurves",
+      "signature": "ShapeAnalysis_ShapeContents::NbOffsetCurves: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbOffsetSurf#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbOffsetSurf",
+      "signature": "ShapeAnalysis_ShapeContents::NbOffsetSurf: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedEdges#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedEdges",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedEdges: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedFaces#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedFaces",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedFaces: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedFreeEdges#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedFreeEdges",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedFreeEdges: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedFreeWires#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedFreeWires",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedFreeWires: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedShells#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedShells",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedShells: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedSolids#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedSolids",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedSolids: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedVertices#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedVertices",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedVertices: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSharedWires#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSharedWires",
+      "signature": "ShapeAnalysis_ShapeContents::NbSharedWires: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbShells#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbShells",
+      "signature": "ShapeAnalysis_ShapeContents::NbShells: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSolids#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSolids",
+      "signature": "ShapeAnalysis_ShapeContents::NbSolids: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbSolidsWithVoids#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbSolidsWithVoids",
+      "signature": "ShapeAnalysis_ShapeContents::NbSolidsWithVoids: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbTrimSurf#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbTrimSurf",
+      "signature": "ShapeAnalysis_ShapeContents::NbTrimSurf: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbTrimmedCurve2d#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbTrimmedCurve2d",
+      "signature": "ShapeAnalysis_ShapeContents::NbTrimmedCurve2d: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbTrimmedCurve3d#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbTrimmedCurve3d",
+      "signature": "ShapeAnalysis_ShapeContents::NbTrimmedCurve3d: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbVertices#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbVertices",
+      "signature": "ShapeAnalysis_ShapeContents::NbVertices: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbWireWithSevSeams#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbWireWithSevSeams",
+      "signature": "ShapeAnalysis_ShapeContents::NbWireWithSevSeams: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbWireWitnSeam#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbWireWitnSeam",
+      "signature": "ShapeAnalysis_ShapeContents::NbWireWitnSeam: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@NbWires#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::NbWires",
+      "signature": "ShapeAnalysis_ShapeContents::NbWires: int () const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@OffsetCurveSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::OffsetCurveSec",
+      "signature": "ShapeAnalysis_ShapeContents::OffsetCurveSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@OffsetSurfaceSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::OffsetSurfaceSec",
+      "signature": "ShapeAnalysis_ShapeContents::OffsetSurfaceSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@Perform#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeAnalysis_ShapeContents::Perform",
+      "signature": "ShapeAnalysis_ShapeContents::Perform: void (const TopoDS_Shape &)",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@ShapeAnalysis_ShapeContents#",
+      "nativeName": "ShapeAnalysis_ShapeContents::ShapeAnalysis_ShapeContents",
+      "signature": "ShapeAnalysis_ShapeContents::ShapeAnalysis_ShapeContents: void ()",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@Trimmed2dSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::Trimmed2dSec",
+      "signature": "ShapeAnalysis_ShapeContents::Trimmed2dSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_ShapeContents@F@Trimmed3dSec#1",
+      "nativeName": "ShapeAnalysis_ShapeContents::Trimmed3dSec",
+      "signature": "ShapeAnalysis_ShapeContents::Trimmed3dSec: const occ::handle<NCollection_HSequence<TopoDS_Shape>> &() const",
+      "guard": "APPrivate",
+      "reason": "Initialized private content analysis; explicit flags, copied counts and six owning shape groups."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckDegenerated#I#&$@S@gp_Pnt2d#S0_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckDegenerated",
+      "signature": "ShapeAnalysis_Wire::CheckDegenerated: bool (const int, gp_Pnt2d &, gp_Pnt2d &)",
+      "guard": "APPrivate",
+      "reason": "Exact face-member wire is copied together; bounded index, initialized coupled outputs and explicit native failure/status."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckLacking#I#d#&$@S@gp_Pnt2d#S0_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckLacking",
+      "signature": "ShapeAnalysis_Wire::CheckLacking: bool (const int, const double, gp_Pnt2d &, gp_Pnt2d &)",
+      "guard": "APPrivate",
+      "reason": "Exact face-member wire is copied together; bounded index, initialized coupled outputs and explicit native failure/status."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckNotchedEdges#I#&I#&d#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckNotchedEdges",
+      "signature": "ShapeAnalysis_Wire::CheckNotchedEdges: bool (const int, int &, double &, const double)",
+      "guard": "APPrivate",
+      "reason": "Exact face-member wire is copied together; bounded index, initialized coupled outputs and explicit native failure/status."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Init#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_Wire::Init",
+      "signature": "ShapeAnalysis_Wire::Init: void (const TopoDS_Wire &, const TopoDS_Face &, const double)",
+      "guard": "APPrivate",
+      "reason": "Exact face-member wire is copied together; bounded index, initialized coupled outputs and explicit native failure/status."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepLib_Command@F@IsDone#1",
+      "nativeName": "BRepLib_Command::IsDone",
+      "signature": "BRepLib_Command::IsDone: bool () const",
+      "guard": "APPrivate",
+      "reason": "Done gate inherited by private Edge/Wire builders."
+    }
+  ]
+}

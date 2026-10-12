@@ -1,3 +1,5 @@
+#include "../../generated/Visualization/OcctSharp.ConsumerViewerSources.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
 // Native Visualization/Selection implementation. Public contracts and ownership are unchanged.
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
@@ -53,7 +55,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_move_to(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    viewer->Context->MoveTo(x, y, viewer->View, false);
+    viewer->Context->MoveTo(x, y, viewer->View, true);
     *detected = viewer->Context->HasDetected() ? 1 : 0;
   });
 }
@@ -75,6 +77,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_at(
     ValidateViewerThread(viewer);
     viewer->Context->MoveTo(x, y, viewer->View, false);
     viewer->Context->SelectDetected(AIS_SelectionScheme_Replace);
+    viewer->Context->UpdateCurrentViewer();
     *selected_count = viewer->Context->NbSelected();
   });
 }
@@ -97,6 +100,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_at_mode(
     ValidateViewerThread(viewer);
     viewer->Context->MoveTo(x, y, viewer->View, false);
     viewer->Context->SelectDetected(ToSelectionScheme(selection_mode));
+    viewer->Context->UpdateCurrentViewer();
     *selected_count = viewer->Context->NbSelected();
   });
 }
@@ -108,6 +112,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_selection(
   {
     ValidateViewerThread(viewer);
     viewer->Context->ClearSelected(false);
+    viewer->Context->UpdateCurrentViewer();
   });
 }
 
@@ -178,9 +183,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_topology_snapshot(
           throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "A selected AIS object is outside the managed presentation registry.");
         if (!viewer->Context->HasSelectedShape())
           throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The selected AIS owner does not expose topology.");
-        TopoDS_Shape selected_shape = viewer->Context->SelectedShape();
+        TopoDS_Shape selected_shape = OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SelectedShape_Bind(*(viewer->Context))();
         if (selected_shape.IsNull())
           throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null selected topology shape.");
+        selected_shape=ResolveSourceSelection(viewer,presentation_id,selected_shape);
         presentation_ids[index] = presentation_id;
         shapes[index] = AllocateShape(std::move(selected_shape));
         ++index;
@@ -224,10 +230,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_detected_topology_snapshot(
   {
     ValidateViewerThread(viewer);
     if (!viewer->Context->HasDetected() || !viewer->Context->HasDetectedShape()) return;
-    const TopoDS_Shape detected = viewer->Context->DetectedShape();
+    TopoDS_Shape detected = OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_DetectedShape_Bind(*(viewer->Context))();
     if (detected.IsNull()) return;
-    *presentation_id = FindPresentationId(viewer, viewer->Context->DetectedInteractive());
-    *shape = AllocateShape(detected);
+    const auto id=FindPresentationId(viewer,viewer->Context->DetectedInteractive());
+    if(viewer->InstanceSources.contains(id))
+    { const auto owner=viewer->Context->DetectedOwner();
+      if(owner.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE,"Detected source instance has no native owner.");
+      detected.Location(owner->Location()*detected.Location()); }
+    *shape=AllocateShape(ResolveSourceSelection(viewer,id,detected));
+    *presentation_id=id;
   });
 }
 
@@ -244,10 +255,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_rectangle(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    viewer->Context->SelectRectangle(
+    OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SelectRectangle_Bind(*(viewer->Context))(
       NCollection_Vec2<int>(std::min(min_x, max_x), std::min(min_y, max_y)),
       NCollection_Vec2<int>(std::max(min_x, max_x), std::max(min_y, max_y)),
       viewer->View, ToSelectionScheme(selection_mode));
+    viewer->Context->UpdateCurrentViewer();
     *selected_count = viewer->Context->NbSelected();
   });
 }
@@ -272,7 +284,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_polygon(
     NCollection_Array1<gp_Pnt2d> polyline(1, point_count);
     for (int32_t index = 0; index < point_count; ++index)
       polyline.SetValue(index + 1, gp_Pnt2d(points[index].x, points[index].y));
-    viewer->Context->SelectPolygon(polyline, viewer->View, ToSelectionScheme(selection_mode));
+    OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SelectPolygon_Bind(*(viewer->Context))(polyline, viewer->View, ToSelectionScheme(selection_mode));
+    viewer->Context->UpdateCurrentViewer();
     *selected_count = viewer->Context->NbSelected();
   });
 }
@@ -323,7 +336,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selection_bounds(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const Bnd_Box box = viewer->Context->BoundingBoxOfSelection(viewer->View);
+    const Bnd_Box box = OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_BoundingBoxOfSelection_Bind(*(viewer->Context))(viewer->View);
     if (box.IsVoid()) return;
     box.Get(bounds->min_x, bounds->min_y, bounds->min_z,
             bounds->max_x, bounds->max_y, bounds->max_z);

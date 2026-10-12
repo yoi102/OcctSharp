@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@MaxFaceTolerance#&1$@S@TopoDS_Face#S",
+      "nativeName": "BRepMesh_ShapeTool::MaxFaceTolerance",
+      "signature": "BRepMesh_ShapeTool::MaxFaceTolerance: double (const TopoDS_Face &)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@Range#&1$@S@TopoDS_Edge#&$@N@opencascade@S@handle>#$@S@Geom_Curve#&d#S5_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::Range",
+      "signature": "BRepMesh_ShapeTool::Range: bool (const TopoDS_Edge &, occ::handle<Geom_Curve> &, double &, double &, const bool)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@Range#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&d#S7_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::Range",
+      "signature": "BRepMesh_ShapeTool::Range: bool (const TopoDS_Edge &, const TopoDS_Face &, occ::handle<Geom2d_Curve> &, double &, double &, const bool)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UVPoints#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#&$@S@gp_Pnt2d#S4_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::UVPoints",
+      "signature": "BRepMesh_ShapeTool::UVPoints: bool (const TopoDS_Edge &, const TopoDS_Face &, gp_Pnt2d &, gp_Pnt2d &, const bool)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@GetFreeNodes#&$@S@NCollection_List>#I#1",
+      "nativeName": "Poly_CoherentTriangulation::GetFreeNodes",
+      "signature": "Poly_CoherentTriangulation::GetFreeNodes: bool (NCollection_List<int> &) const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Nodes#1",
+      "nativeName": "Poly_Polygon2D::Nodes",
+      "signature": "Poly_Polygon2D::Nodes: const NCollection_Array1<gp_Pnt2d> &() const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Poly_Polygon2D#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "Poly_Polygon2D::Poly_Polygon2D",
+      "signature": "Poly_Polygon2D::Poly_Polygon2D: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangles#1",
+      "nativeName": "Poly_Triangulation::Triangles",
+      "signature": "Poly_Triangulation::Triangles: const NCollection_Array1<Poly_Triangle> &() const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+      "nativeName": "Poly_CoherentTriangulation::Poly_CoherentTriangulation",
+      "signature": "Poly_CoherentTriangulation::Poly_CoherentTriangulation: void (const occ::handle<Poly_Triangulation> &, const occ::handle<NCollection_BaseAllocator> &)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Copy#1",
+      "nativeName": "Poly_Polygon2D::Copy",
+      "signature": "Poly_Polygon2D::Copy: occ::handle<Poly_Polygon2D> () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Deflection#1",
+      "nativeName": "Poly_Polygon2D::Deflection",
+      "signature": "Poly_Polygon2D::Deflection: double () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Deflection#d#",
+      "nativeName": "Poly_Polygon2D::Deflection",
+      "signature": "Poly_Polygon2D::Deflection: void (const double)",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@NbNodes#1",
+      "nativeName": "Poly_Polygon2D::NbNodes",
+      "signature": "Poly_Polygon2D::NbNodes: int () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "nativeName": "Poly_Triangle::Get",
+      "signature": "Poly_Triangle::Get: void (int &, int &, int &) const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Copy#1",
+      "nativeName": "Poly_Triangulation::Copy",
+      "signature": "Poly_Triangulation::Copy: occ::handle<Poly_Triangulation> () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasDeferredData#1",
+      "nativeName": "Poly_Triangulation::HasDeferredData",
+      "signature": "Poly_Triangulation::HasDeferredData: bool () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasGeometry#1",
+      "nativeName": "Poly_Triangulation::HasGeometry",
+      "signature": "Poly_Triangulation::HasGeometry: bool () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Node#I#1",
+      "nativeName": "Poly_Triangulation::Node",
+      "signature": "Poly_Triangulation::Node: gp_Pnt (int) const",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused."
+    }
+  ]
+}

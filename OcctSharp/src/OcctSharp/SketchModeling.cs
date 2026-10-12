@@ -59,6 +59,24 @@ public static class SketchModeling
         }
     }
 
+    /// <summary>Copies exact point/overlap classification separately from legacy endpoint enumeration.</summary>
+    public static unsafe SketchIntersectionInspection InspectIntersections(
+        SketchCurve2d first, SketchCurve2d second, double tolerance = 1e-7)
+    {
+        ArgumentNullException.ThrowIfNull(first); ArgumentNullException.ThrowIfNull(second);
+        ValidateTolerance(tolerance, nameof(tolerance));
+        int pointCount=0,intervalCount=0;
+        // Legacy Intersect(a,a) means self-intersection; this API explicitly classifies two operands.
+        SketchCurve2d operand=ReferenceEquals(first,second)?second.Reverse().Reverse():second;
+        first.WithRaw(a=>operand.WithRaw(b=>
+        {
+            NativeError.ThrowIfFailed(NativeMethods.SketchIntersectionCounts(a,b,tolerance,out pointCount,out intervalCount),
+                "sketch_curve_intersection_counts");
+            return 0;
+        }));
+        return new(Intersect(first,operand,tolerance),pointCount,intervalCount);
+    }
+
     public static unsafe Shape CreateEdge(SketchCurve2d curve, SketchPlane plane)
     {
         ArgumentNullException.ThrowIfNull(curve); ArgumentNullException.ThrowIfNull(plane);
@@ -76,15 +94,6 @@ public static class SketchModeling
     }
 }
 
-public enum SketchDiagnosticCode
-{
-    Gap = 1,
-    DuplicateCurve = 2,
-    ZeroLength = 3,
-    SelfIntersection = 4,
-    OpenChain = 5,
-    AmbiguousNesting = 6
-}
 
 public readonly record struct SketchDiagnostic(
     SketchDiagnosticCode Code, string Message, int FirstCurveIndex = -1, int SecondCurveIndex = -1);
@@ -288,14 +297,9 @@ public sealed class SketchCurveChain2d
         double total = 0;
         for (int index = 0; index + 1 < breaks.Length; ++index)
         {
-            double a = breaks[index], b = breaks[index + 1], middle = (a + b) / 2;
-            // Evaluate one-sided at knot breaks so a piecewise-linear spline's
-            // derivative on the next span does not pollute the previous span.
-            double fa = Value(a == 0 ? a : Math.BitIncrement(a));
-            double fb = Value(b == 1 ? b : Math.BitDecrement(b));
-            double fm = Value(middle);
-            double whole = (b - a) * (fa + 4 * fm + fb) / 6;
-            total += Integrate(a, b, fa, fm, fb, whole, 1e-10 * Math.Max(1, Math.Abs(whole)), 20);
+            double a = breaks[index], b = breaks[index + 1];
+            double whole = Gauss(a, b, true);
+            total += Integrate(a, b, 1e-10 * Math.Max(1, Math.Abs(whole)), 20);
         }
         return total;
 
@@ -306,18 +310,34 @@ public sealed class SketchCurveChain2d
                 * (curve.LastParameter - curve.FirstParameter);
         }
 
-        double Integrate(double a, double b, double fa, double fm, double fb,
-            double whole, double tolerance, int depth)
+        double Gauss(double a, double b, bool high)
         {
-            double middle = (a + b) / 2;
-            double leftMiddle = Value((a + middle) / 2), rightMiddle = Value((middle + b) / 2);
-            double left = (middle - a) * (fa + 4 * leftMiddle + fm) / 6;
-            double right = (b - middle) * (fm + 4 * rightMiddle + fb) / 6;
-            double error = left + right - whole;
-            if (Math.Abs(error) <= 15 * tolerance) return left + right + error / 15;
+            // Interior Gauss nodes avoid C0 knot derivatives entirely. A one-ULP
+            // normalized nudge can round back onto the native knot, so Simpson
+            // endpoints do not reliably select a one-sided native derivative.
+            ReadOnlySpan<double> nodes = high
+                ? [.9894009349916499,.9445750230732326,.8656312023878318,.7554044083550030,
+                   .6178762444026438,.4580167776572274,.2816035507792589,.0950125098376374]
+                : [.9602898564975363,.7966664774136267,.5255324099163290,.1834346424956498];
+            ReadOnlySpan<double> weights = high
+                ? [.02715245941175409,.06225352393864789,.09515851168249278,.12462897125553387,
+                   .14959598881657673,.16915651939500254,.18260341504492359,.18945061045506850]
+                : [.1012285362903763,.2223810344533745,.3137066458778873,.3626837833783620];
+            double middle = (a + b) / 2, half = (b - a) / 2, sum = 0;
+            for (int i = 0; i < nodes.Length; ++i)
+                sum += weights[i] * (Value(middle - half * nodes[i]) + Value(middle + half * nodes[i]));
+            return half * sum;
+        }
+
+        double Integrate(double a, double b, double tolerance, int depth)
+        {
+            double lower = Gauss(a, b, false), higher = Gauss(a, b, true);
+            if (Math.Abs(higher - lower) <= tolerance) return higher;
             if (depth == 0) throw new InvalidOperationException("Sketch area integration did not converge.");
-            return Integrate(a, middle, fa, leftMiddle, fm, left, tolerance / 2, depth - 1)
-                + Integrate(middle, b, fm, rightMiddle, fb, right, tolerance / 2, depth - 1);
+            double middle = (a + b) / 2;
+            if (middle == a || middle == b) throw new InvalidOperationException("Sketch area integration exhausted parameter precision.");
+            return Integrate(a, middle, tolerance / 2, depth - 1)
+                + Integrate(middle, b, tolerance / 2, depth - 1);
         }
     }
 }

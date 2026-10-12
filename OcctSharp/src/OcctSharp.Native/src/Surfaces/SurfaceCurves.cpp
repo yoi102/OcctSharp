@@ -10,7 +10,7 @@
 #include <Geom_RectangularTrimmedSurface.hxx>
 #include <GeomAPI_IntCS.hxx>
 #include <BRepAlgoAPI_Common.hxx>
-#include <GeomAPI_ProjectPointOnSurf.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.ProjectionAdapters.Generated.hxx"
 #include <Geom2dAPI_ProjectPointOnCurve.hxx>
 #include <TopExp.hxx>
 #include <TopExp_Explorer.hxx>
@@ -184,7 +184,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_surface_intersect_curve(
     common.SetNonDestructive(true); common.SetFuzzyValue(tolerance); common.Build();
     Require(common.IsDone() && !common.HasErrors(), "Coincident interval clipping failed.");
     auto uvAt = [&](const gp_Pnt& world) {
-      GeomAPI_ProjectPointOnSurf projection(world.Transformed(data.location.Transformation().Inverted()),
+      OcctSharpGenerated::SurfaceProjector projection(world.Transformed(data.location.Transformation().Inverted()),
         data.surface, data.u0, data.u1, data.v0, data.v1, tolerance);
       Require(projection.NbPoints() > 0, "An intersection witness could not be mapped to UV.");
       double u, v; projection.LowerDistanceParameters(u, v); return gp_Pnt2d(u, v);

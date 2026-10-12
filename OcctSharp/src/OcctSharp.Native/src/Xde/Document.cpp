@@ -1,5 +1,8 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Xde/Document implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
+#include "Documents/NamedDataPersistence.hxx"
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Registry.hxx"
@@ -43,9 +46,9 @@ void InitializeXdeTools(const occ::handle<TDocStd_Document>& document)
   XCAFDoc_DocumentTool::LayerTool(main);
   XCAFDoc_DocumentTool::DimTolTool(main);
   XCAFDoc_DocumentTool::MaterialTool(main);
-  XCAFDoc_DocumentTool::VisMaterialTool(main);
+  OcctSharpGenerated::XdeAdapters::XCAFDoc_DocumentTool_VisMaterialTool(main);
   XCAFDoc_DocumentTool::ViewTool(main);
-  XCAFDoc_DocumentTool::ClippingPlaneTool(main);
+  OcctSharpGenerated::XdeAdapters::XCAFDoc_DocumentTool_ClippingPlaneTool(main);
 }
 
 std::vector<TDF_Label> CloneXdeRootsIntoDocument(
@@ -77,9 +80,9 @@ std::vector<TDF_Label> CloneXdeRootsIntoDocument(
        root_iterator.Next())
   {
     NCollection_DataMap<TDF_Label, TDF_Label> label_map;
-    TDF_Label cloned_root = XCAFDoc_Editor::CloneShapeLabel(
+    TDF_Label cloned_root = OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneShapeLabel(
       root_iterator.Value(), source_shape_tool, output_shape_tool, label_map);
-    if (cloned_root.IsNull())
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(cloned_root))
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "An XDE shape tree could not be cloned into the destination document.");
 
     for (NCollection_DataMap<TDF_Label, TDF_Label>::Iterator label_iterator(label_map);
@@ -87,11 +90,11 @@ std::vector<TDF_Label> CloneXdeRootsIntoDocument(
     {
       occ::handle<TDataStd_TreeNode> material_reference;
       const bool has_material_reference =
-        label_iterator.Key().FindAttribute(XCAFDoc::MaterialRefGUID(), material_reference)
+        OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label_iterator.Key(),XCAFDoc::MaterialRefGUID(), material_reference)
         && material_reference->HasFather();
       const occ::handle<NCollection_HSequence<TCollection_ExtendedString>> source_layers =
         source_layer_tool->GetLayers(label_iterator.Key());
-      XCAFDoc_Editor::CloneMetaData(
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneMetaData(
         label_iterator.Key(), label_iterator.Value(), &visual_material_map,
         true, false, true, true, true);
       if (!source_layers.IsNull())
@@ -102,7 +105,7 @@ std::vector<TDF_Label> CloneXdeRootsIntoDocument(
       }
       if (has_material_reference && label_iterator.Value() != cloned_root)
       {
-        XCAFDoc_Editor::CloneMetaData(
+        OcctSharpGenerated::XdeAdapters::XCAFDoc_Editor_CloneMetaData(
           label_iterator.Key(), cloned_root, &visual_material_map,
           false, false, true, false, false);
       }
@@ -115,8 +118,7 @@ std::vector<TDF_Label> CloneXdeRootsIntoDocument(
 OcctSharp_OcafDocumentHandle* CreateOwnedXdeDocument()
 {
   opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
-  BinXCAFDrivers::DefineFormat(application);
-  XmlXCAFDrivers::DefineFormat(application);
+  ConfigureSafeNamedDataDrivers(application);
   opencascade::handle<TDocStd_Document> document;
   application->NewDocument(TCollection_ExtendedString("BinXCAF"), document);
   if (document.IsNull())

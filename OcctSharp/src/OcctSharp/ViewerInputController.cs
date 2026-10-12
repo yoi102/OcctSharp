@@ -13,8 +13,16 @@ public sealed class ViewerInputController
     private int lastX;
     private int lastY;
     private bool dragged;
+    private bool rectangleSelectionEnabled;
 
     internal ViewerInputController(OcctViewer viewer) => this.viewer = viewer;
+
+    /// <summary>Enables left-drag rectangle selection; the default retains click-only selection.</summary>
+    public bool RectangleSelectionEnabled
+    {
+        get { viewer.EnsureThread(); return rectangleSelectionEnabled; }
+        set { viewer.EnsureThread(); rectangleSelectionEnabled = value; }
+    }
 
     /// <summary>Begins a pointer gesture in client-pixel coordinates.</summary>
     public void PointerPressed(
@@ -23,6 +31,7 @@ public sealed class ViewerInputController
         int y,
         ViewerModifierKeys modifiers = ViewerModifierKeys.None)
     {
+        viewer.EnsureThread();
         ValidateButton(button);
         ValidateModifiers(modifiers);
         pressedButton = button;
@@ -40,17 +49,18 @@ public sealed class ViewerInputController
         ViewerPointerButtons buttons = ViewerPointerButtons.None,
         ViewerModifierKeys modifiers = ViewerModifierKeys.None)
     {
+        viewer.EnsureThread();
         ValidateButtons(buttons);
         ValidateModifiers(modifiers);
-        if (Math.Abs(x - pressX) > 2 || Math.Abs(y - pressY) > 2) dragged = true;
-        if ((buttons & ViewerPointerButtons.Right) != 0)
+        if (pressedButton is not null && (Math.Abs((long)x - pressX) > 2 || Math.Abs((long)y - pressY) > 2)) dragged = true;
+        if (pressedButton == ViewerPointerButton.Right && (buttons & ViewerPointerButtons.Right) != 0)
         {
             viewer.Rotate(x, y);
             lastX = x;
             lastY = y;
             return false;
         }
-        if ((buttons & ViewerPointerButtons.Middle) != 0)
+        if (pressedButton == ViewerPointerButton.Middle && (buttons & ViewerPointerButtons.Middle) != 0)
         {
             viewer.Pan(x - lastX, lastY - y);
             lastX = x;
@@ -62,6 +72,16 @@ public sealed class ViewerInputController
         return viewer.MoveTo(x, y);
     }
 
+    /// <summary>Cancels the current pointer gesture after capture loss without selecting or moving the camera.</summary>
+    public void CancelPointerGesture()
+    {
+        viewer.EnsureThread();
+        pressedButton = null;
+        dragged = false;
+        pressX = lastX;
+        pressY = lastY;
+    }
+
     /// <summary>Ends a pointer gesture; an undragged left release performs selection.</summary>
     public IReadOnlyList<ViewerPresentation> PointerReleased(
         ViewerPointerButton button,
@@ -69,14 +89,20 @@ public sealed class ViewerInputController
         int y,
         ViewerModifierKeys modifiers = ViewerModifierKeys.None)
     {
+        viewer.EnsureThread();
         ValidateButton(button);
         ValidateModifiers(modifiers);
+        bool shouldRectangle = rectangleSelectionEnabled && dragged
+            && pressedButton == ViewerPointerButton.Left && button == ViewerPointerButton.Left
+            && pressX != x && pressY != y;
         bool shouldSelect = pressedButton == ViewerPointerButton.Left
             && button == ViewerPointerButton.Left
             && !dragged;
         pressedButton = null;
         lastX = x;
         lastY = y;
+        if (shouldRectangle)
+            return viewer.SelectRectangle(pressX, pressY, x, y, SelectionMode(modifiers));
         if (!shouldSelect)
         {
             viewer.MoveTo(x, y);
@@ -88,6 +114,7 @@ public sealed class ViewerInputController
     /// <summary>Applies a conventional 120-unit wheel notch zoom at the current view.</summary>
     public void MouseWheel(int delta, int x, int y, ViewerModifierKeys modifiers = ViewerModifierKeys.None)
     {
+        viewer.EnsureThread();
         ValidateModifiers(modifiers);
         if (delta == 0) return;
         viewer.MoveTo(x, y);
@@ -97,11 +124,12 @@ public sealed class ViewerInputController
     /// <summary>Forwards one semantic keyboard command and returns whether it was handled.</summary>
     public bool KeyDown(ViewerInputKey key, ViewerModifierKeys modifiers = ViewerModifierKeys.None)
     {
+        viewer.EnsureThread();
         if (!Enum.IsDefined(key)) throw new ArgumentOutOfRangeException(nameof(key));
         ValidateModifiers(modifiers);
         switch (key)
         {
-            case ViewerInputKey.Escape: viewer.ClearSelection(); break;
+            case ViewerInputKey.Escape: CancelPointerGesture(); viewer.ClearSelection(); break;
             case ViewerInputKey.FitAll: viewer.FitAll(); break;
             case ViewerInputKey.Front: viewer.SetProjection(ViewerProjection.Front); break;
             case ViewerInputKey.Back: viewer.SetProjection(ViewerProjection.Back); break;

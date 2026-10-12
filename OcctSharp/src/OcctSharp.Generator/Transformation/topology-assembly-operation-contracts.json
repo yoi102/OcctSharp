@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "signature": "BRep_Builder::MakeEdge: void (TopoDS_Edge &, const occ::handle<Geom_Curve> &, const double) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeVertex#&$@S@TopoDS_Vertex#&1$@S@gp_Pnt#d#1",
+      "nativeName": "BRep_Builder::MakeVertex",
+      "signature": "BRep_Builder::MakeVertex: void (TopoDS_Vertex &, const gp_Pnt &, const double) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeVertex#&$@S@TopoDS_Vertex#1",
+      "nativeName": "BRep_Builder::MakeVertex",
+      "signature": "BRep_Builder::MakeVertex: void (TopoDS_Vertex &) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Range#&1$@S@TopoDS_Edge#d#d#b#1",
+      "nativeName": "BRep_Builder::Range",
+      "signature": "BRep_Builder::Range: void (const TopoDS_Edge &, const double, const double, const bool) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@SameParameter#&1$@S@TopoDS_Edge#b#1",
+      "nativeName": "BRep_Builder::SameParameter",
+      "signature": "BRep_Builder::SameParameter: void (const TopoDS_Edge &, const bool) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@SameRange#&1$@S@TopoDS_Edge#b#1",
+      "nativeName": "BRep_Builder::SameRange",
+      "signature": "BRep_Builder::SameRange: void (const TopoDS_Edge &, const bool) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#d#1",
+      "nativeName": "BRep_Builder::UpdateEdge",
+      "signature": "BRep_Builder::UpdateEdge: void (const TopoDS_Edge &, const double) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#&1$@S@gp_Pnt#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const gp_Pnt &, const double) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#&1$@S@TopoDS_Edge#d#1",
+      "nativeName": "BRep_Builder::UpdateVertex",
+      "signature": "BRep_Builder::UpdateVertex: void (const TopoDS_Vertex &, const double, const TopoDS_Edge &, const double) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool () const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@TopoDS_Builder@F@Add#&$@S@TopoDS_Shape#&1S1_#1",
+      "nativeName": "TopoDS_Builder::Add",
+      "signature": "TopoDS_Builder::Add: void (TopoDS_Shape &, const TopoDS_Shape &) const",
+      "guard": "AWPrivateAssembly",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    }
+  ]
+}

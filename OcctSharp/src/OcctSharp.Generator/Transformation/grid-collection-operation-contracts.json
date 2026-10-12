@@ -1,0 +1,585 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [
+    {
+      "nativeName": "GeomAPI_PointsToBSplineSurface"
+    },
+    {
+      "nativeName": "GeomAPI_Interpolate"
+    },
+    {
+      "nativeName": "Geom2dAPI_Interpolate"
+    }
+  ],
+  "operations": [
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Geom2dAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#b#d#",
+      "nativeName": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate",
+      "signature": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate: void (const occ::handle<NCollection_HArray1<gp_Pnt2d>> &, const occ::handle<NCollection_HArray1<double>> &, const bool, const double)",
+      "guard": "InterpolateCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Load#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#b#b#",
+      "nativeName": "Geom2dAPI_Interpolate::Load",
+      "signature": "Geom2dAPI_Interpolate::Load: void (const NCollection_Array1<gp_Vec2d> &, const occ::handle<NCollection_HArray1<bool>> &, const bool)",
+      "guard": "TangentLoad",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Load#&1$@S@gp_Vec2d#S0_#b#",
+      "nativeName": "Geom2dAPI_Interpolate::Load",
+      "signature": "Geom2dAPI_Interpolate::Load: void (const gp_Vec2d &, const gp_Vec2d &, const bool)",
+      "guard": "TangentLoad",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Load#&1$@S@NCollection_Array1>#$@S@gp_Vec#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#b#b#",
+      "nativeName": "GeomAPI_Interpolate::Load",
+      "signature": "GeomAPI_Interpolate::Load: void (const NCollection_Array1<gp_Vec> &, const occ::handle<NCollection_HArray1<bool>> &, const bool)",
+      "guard": "TangentLoad",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface",
+      "signature": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface",
+      "signature": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface",
+      "signature": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#&1$@S@NCollection_Array2>#d#d#d#d#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface",
+      "signature": "GeomAPI_PointsToBSplineSurface::GeomAPI_PointsToBSplineSurface: void (const NCollection_Array2<double> &, const double, const double, const double, const double, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#$@S@gp_Pnt#$@E@Approx_ParametrizationType#I#I#$@E@GeomAbs_Shape#d#b#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Init",
+      "signature": "GeomAPI_PointsToBSplineSurface::Init: void (const NCollection_Array2<gp_Pnt> &, const Approx_ParametrizationType, const int, const int, const GeomAbs_Shape, const double, const bool)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#$@S@gp_Pnt#d#d#d#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Init",
+      "signature": "GeomAPI_PointsToBSplineSurface::Init: void (const NCollection_Array2<gp_Pnt> &, const double, const double, const double, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#d#d#d#d#d#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Init",
+      "signature": "GeomAPI_PointsToBSplineSurface::Init: void (const NCollection_Array2<double> &, const double, const double, const double, const double, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Interpolate#&1$@S@NCollection_Array2>#$@S@gp_Pnt#$@E@Approx_ParametrizationType#b#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Interpolate",
+      "signature": "GeomAPI_PointsToBSplineSurface::Interpolate: void (const NCollection_Array2<gp_Pnt> &, const Approx_ParametrizationType, const bool)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Interpolate#&1$@S@NCollection_Array2>#d#d#d#d#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Interpolate",
+      "signature": "GeomAPI_PointsToBSplineSurface::Interpolate: void (const NCollection_Array2<double> &, const double, const double, const double, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@InsertUKnots#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#",
+      "nativeName": "Geom_BSplineSurface::InsertUKnots",
+      "signature": "Geom_BSplineSurface::InsertUKnots: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@InsertVKnots#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#",
+      "nativeName": "Geom_BSplineSurface::InsertVKnots",
+      "signature": "Geom_BSplineSurface::InsertVKnots: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Poles#&$@S@NCollection_Array2>#$@S@gp_Pnt#1",
+      "nativeName": "Geom_BSplineSurface::Poles",
+      "signature": "Geom_BSplineSurface::Poles: void (NCollection_Array2<gp_Pnt> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Poles#1",
+      "nativeName": "Geom_BSplineSurface::Poles",
+      "signature": "Geom_BSplineSurface::Poles: const NCollection_Array2<gp_Pnt> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetPoleCol#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BSplineSurface::SetPoleCol",
+      "signature": "Geom_BSplineSurface::SetPoleCol: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetPoleCol#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetPoleCol",
+      "signature": "Geom_BSplineSurface::SetPoleCol: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetPoleRow#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BSplineSurface::SetPoleRow",
+      "signature": "Geom_BSplineSurface::SetPoleRow: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetPoleRow#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetPoleRow",
+      "signature": "Geom_BSplineSurface::SetPoleRow: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetUKnots#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetUKnots",
+      "signature": "Geom_BSplineSurface::SetUKnots: void (const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetVKnots#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetVKnots",
+      "signature": "Geom_BSplineSurface::SetVKnots: void (const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetWeightCol#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetWeightCol",
+      "signature": "Geom_BSplineSurface::SetWeightCol: void (const int, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@SetWeightRow#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BSplineSurface::SetWeightRow",
+      "signature": "Geom_BSplineSurface::SetWeightRow: void (const int, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UKnotSequence#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineSurface::UKnotSequence",
+      "signature": "Geom_BSplineSurface::UKnotSequence: void (NCollection_Array1<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UKnotSequence#1",
+      "nativeName": "Geom_BSplineSurface::UKnotSequence",
+      "signature": "Geom_BSplineSurface::UKnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UKnots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineSurface::UKnots",
+      "signature": "Geom_BSplineSurface::UKnots: void (NCollection_Array1<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UKnots#1",
+      "nativeName": "Geom_BSplineSurface::UKnots",
+      "signature": "Geom_BSplineSurface::UKnots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UMultiplicities#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "Geom_BSplineSurface::UMultiplicities",
+      "signature": "Geom_BSplineSurface::UMultiplicities: void (NCollection_Array1<int> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@UMultiplicities#1",
+      "nativeName": "Geom_BSplineSurface::UMultiplicities",
+      "signature": "Geom_BSplineSurface::UMultiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VKnotSequence#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineSurface::VKnotSequence",
+      "signature": "Geom_BSplineSurface::VKnotSequence: void (NCollection_Array1<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VKnotSequence#1",
+      "nativeName": "Geom_BSplineSurface::VKnotSequence",
+      "signature": "Geom_BSplineSurface::VKnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VKnots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "Geom_BSplineSurface::VKnots",
+      "signature": "Geom_BSplineSurface::VKnots: void (NCollection_Array1<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VKnots#1",
+      "nativeName": "Geom_BSplineSurface::VKnots",
+      "signature": "Geom_BSplineSurface::VKnots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VMultiplicities#&$@S@NCollection_Array1>#I#1",
+      "nativeName": "Geom_BSplineSurface::VMultiplicities",
+      "signature": "Geom_BSplineSurface::VMultiplicities: void (NCollection_Array1<int> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@VMultiplicities#1",
+      "nativeName": "Geom_BSplineSurface::VMultiplicities",
+      "signature": "Geom_BSplineSurface::VMultiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Weights#&$@S@NCollection_Array2>#d#1",
+      "nativeName": "Geom_BSplineSurface::Weights",
+      "signature": "Geom_BSplineSurface::Weights: void (NCollection_Array2<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@WeightsArray#1",
+      "nativeName": "Geom_BSplineSurface::WeightsArray",
+      "signature": "Geom_BSplineSurface::WeightsArray: const NCollection_Array2<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleColAfter#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::InsertPoleColAfter",
+      "signature": "Geom_BezierSurface::InsertPoleColAfter: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleColAfter#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::InsertPoleColAfter",
+      "signature": "Geom_BezierSurface::InsertPoleColAfter: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleColBefore#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::InsertPoleColBefore",
+      "signature": "Geom_BezierSurface::InsertPoleColBefore: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleColBefore#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::InsertPoleColBefore",
+      "signature": "Geom_BezierSurface::InsertPoleColBefore: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleRowAfter#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::InsertPoleRowAfter",
+      "signature": "Geom_BezierSurface::InsertPoleRowAfter: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleRowAfter#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::InsertPoleRowAfter",
+      "signature": "Geom_BezierSurface::InsertPoleRowAfter: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleRowBefore#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::InsertPoleRowBefore",
+      "signature": "Geom_BezierSurface::InsertPoleRowBefore: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@InsertPoleRowBefore#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::InsertPoleRowBefore",
+      "signature": "Geom_BezierSurface::InsertPoleRowBefore: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Poles#&$@S@NCollection_Array2>#$@S@gp_Pnt#1",
+      "nativeName": "Geom_BezierSurface::Poles",
+      "signature": "Geom_BezierSurface::Poles: void (NCollection_Array2<gp_Pnt> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Poles#1",
+      "nativeName": "Geom_BezierSurface::Poles",
+      "signature": "Geom_BezierSurface::Poles: const NCollection_Array2<gp_Pnt> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetPoleCol#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::SetPoleCol",
+      "signature": "Geom_BezierSurface::SetPoleCol: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetPoleCol#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::SetPoleCol",
+      "signature": "Geom_BezierSurface::SetPoleCol: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetPoleRow#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::SetPoleRow",
+      "signature": "Geom_BezierSurface::SetPoleRow: void (const int, const NCollection_Array1<gp_Pnt> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetPoleRow#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::SetPoleRow",
+      "signature": "Geom_BezierSurface::SetPoleRow: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetWeightCol#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::SetWeightCol",
+      "signature": "Geom_BezierSurface::SetWeightCol: void (const int, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@SetWeightRow#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Geom_BezierSurface::SetWeightRow",
+      "signature": "Geom_BezierSurface::SetWeightRow: void (const int, const NCollection_Array1<double> &)",
+      "guard": "SurfaceEdit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@UKnotSequence#1",
+      "nativeName": "Geom_BezierSurface::UKnotSequence",
+      "signature": "Geom_BezierSurface::UKnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@UKnots#1",
+      "nativeName": "Geom_BezierSurface::UKnots",
+      "signature": "Geom_BezierSurface::UKnots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@UMultiplicities#1",
+      "nativeName": "Geom_BezierSurface::UMultiplicities",
+      "signature": "Geom_BezierSurface::UMultiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@VKnotSequence#1",
+      "nativeName": "Geom_BezierSurface::VKnotSequence",
+      "signature": "Geom_BezierSurface::VKnotSequence: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@VKnots#1",
+      "nativeName": "Geom_BezierSurface::VKnots",
+      "signature": "Geom_BezierSurface::VKnots: const NCollection_Array1<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@VMultiplicities#1",
+      "nativeName": "Geom_BezierSurface::VMultiplicities",
+      "signature": "Geom_BezierSurface::VMultiplicities: const NCollection_Array1<int> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Weights#&$@S@NCollection_Array2>#d#1",
+      "nativeName": "Geom_BezierSurface::Weights",
+      "signature": "Geom_BezierSurface::Weights: void (NCollection_Array2<double> &) const",
+      "guard": "SurfaceOutput",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@WeightsArray#1",
+      "nativeName": "Geom_BezierSurface::WeightsArray",
+      "signature": "Geom_BezierSurface::WeightsArray: const NCollection_Array2<double> &() const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Curve#1",
+      "nativeName": "Geom2dAPI_Interpolate::Curve",
+      "signature": "Geom2dAPI_Interpolate::Curve: const occ::handle<Geom2d_BSplineCurve> &() const",
+      "guard": "Done",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Geom2dAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt2d#b#d#",
+      "nativeName": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate",
+      "signature": "Geom2dAPI_Interpolate::Geom2dAPI_Interpolate: void (const occ::handle<NCollection_HArray1<gp_Pnt2d>> &, const bool, const double)",
+      "guard": "InterpolateCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@IsDone#1",
+      "nativeName": "Geom2dAPI_Interpolate::IsDone",
+      "signature": "Geom2dAPI_Interpolate::IsDone: bool () const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom2dAPI_Interpolate@F@Perform#",
+      "nativeName": "Geom2dAPI_Interpolate::Perform",
+      "signature": "Geom2dAPI_Interpolate::Perform: void ()",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Curve#1",
+      "nativeName": "GeomAPI_Interpolate::Curve",
+      "signature": "GeomAPI_Interpolate::Curve: const occ::handle<Geom_BSplineCurve> &() const",
+      "guard": "Done",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@GeomAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#b#d#",
+      "nativeName": "GeomAPI_Interpolate::GeomAPI_Interpolate",
+      "signature": "GeomAPI_Interpolate::GeomAPI_Interpolate: void (const occ::handle<NCollection_HArray1<gp_Pnt>> &, const occ::handle<NCollection_HArray1<double>> &, const bool, const double)",
+      "guard": "InterpolateCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@GeomAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt#b#d#",
+      "nativeName": "GeomAPI_Interpolate::GeomAPI_Interpolate",
+      "signature": "GeomAPI_Interpolate::GeomAPI_Interpolate: void (const occ::handle<NCollection_HArray1<gp_Pnt>> &, const bool, const double)",
+      "guard": "InterpolateCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@IsDone#1",
+      "nativeName": "GeomAPI_Interpolate::IsDone",
+      "signature": "GeomAPI_Interpolate::IsDone: bool () const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Load#&1$@S@gp_Vec#S0_#b#",
+      "nativeName": "GeomAPI_Interpolate::Load",
+      "signature": "GeomAPI_Interpolate::Load: void (const gp_Vec &, const gp_Vec &, const bool)",
+      "guard": "TangentLoad",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Perform#",
+      "nativeName": "GeomAPI_Interpolate::Perform",
+      "signature": "GeomAPI_Interpolate::Perform: void ()",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Init",
+      "signature": "GeomAPI_PointsToBSplineSurface::Init: void (const NCollection_Array2<gp_Pnt> &, const int, const int, const GeomAbs_Shape, const double)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Interpolate#&1$@S@NCollection_Array2>#$@S@gp_Pnt#b#",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Interpolate",
+      "signature": "GeomAPI_PointsToBSplineSurface::Interpolate: void (const NCollection_Array2<gp_Pnt> &, const bool)",
+      "guard": "SurfaceFit",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@IsDone#1",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::IsDone",
+      "signature": "GeomAPI_PointsToBSplineSurface::IsDone: bool () const",
+      "guard": "None",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Surface#1",
+      "nativeName": "GeomAPI_PointsToBSplineSurface::Surface",
+      "signature": "GeomAPI_PointsToBSplineSurface::Surface: const occ::handle<Geom_BSplineSurface> &() const",
+      "guard": "Done",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#S5_#I#I#b#b#",
+      "nativeName": "Geom_BSplineSurface::Geom_BSplineSurface",
+      "signature": "Geom_BSplineSurface::Geom_BSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool)",
+      "guard": "SurfaceCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#",
+      "nativeName": "Geom_BSplineSurface::Geom_BSplineSurface",
+      "signature": "Geom_BSplineSurface::Geom_BSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool)",
+      "guard": "SurfaceCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Geom_BezierSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#",
+      "nativeName": "Geom_BezierSurface::Geom_BezierSurface",
+      "signature": "Geom_BezierSurface::Geom_BezierSurface: void (const NCollection_Array2<gp_Pnt> &)",
+      "guard": "SurfaceCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Geom_BezierSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#",
+      "nativeName": "Geom_BezierSurface::Geom_BezierSurface",
+      "signature": "Geom_BezierSurface::Geom_BezierSurface: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &)",
+      "guard": "SurfaceCreate",
+      "reason": "Audited Batch AG grid/retained-interpolation copy contract; ADR-0098."
+    }
+  ]
+}

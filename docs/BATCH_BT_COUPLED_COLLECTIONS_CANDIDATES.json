@@ -1,0 +1,155 @@
+{
+  "state": "EXACT_SOURCE_AUDIT_INPUT_NOT_ADMITTED",
+  "baseline": "BS tooling on BR Preview.68",
+  "primaryCount": 16,
+  "primary": [
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void ()",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#S6_#S9_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Vec#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Vec> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Vec#S3_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Vec> &, const NCollection_Array1<gp_Vec> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@AppDef_MultiPointConstraint#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@gp_Vec2d#S3_#",
+      "nativeName": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint",
+      "signature": "AppDef_MultiPointConstraint::AppDef_MultiPointConstraint: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<gp_Vec2d> &, const NCollection_Array1<gp_Vec2d> &)",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Curv#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Curv",
+      "signature": "AppDef_MultiPointConstraint::Curv: gp_Vec (const int) const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Curv2d#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Curv2d",
+      "signature": "AppDef_MultiPointConstraint::Curv2d: gp_Vec2d (const int) const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@IsCurvaturePoint#1",
+      "nativeName": "AppDef_MultiPointConstraint::IsCurvaturePoint",
+      "signature": "AppDef_MultiPointConstraint::IsCurvaturePoint: bool () const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@IsTangencyPoint#1",
+      "nativeName": "AppDef_MultiPointConstraint::IsTangencyPoint",
+      "signature": "AppDef_MultiPointConstraint::IsTangencyPoint: bool () const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Tang#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Tang",
+      "signature": "AppDef_MultiPointConstraint::Tang: gp_Vec (const int) const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppDef_MultiPointConstraint@F@Tang2d#I#1",
+      "nativeName": "AppDef_MultiPointConstraint::Tang2d",
+      "signature": "AppDef_MultiPointConstraint::Tang2d: gp_Vec2d (const int) const",
+      "state": "Blocked"
+    }
+  ],
+  "supporting": [
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@NbPoints#1",
+      "nativeName": "AppParCurves_MultiPoint::NbPoints",
+      "signature": "AppParCurves_MultiPoint::NbPoints: int () const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@NbPoints2d#1",
+      "nativeName": "AppParCurves_MultiPoint::NbPoints2d",
+      "signature": "AppParCurves_MultiPoint::NbPoints2d: int () const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@Point#I#1",
+      "nativeName": "AppParCurves_MultiPoint::Point",
+      "signature": "AppParCurves_MultiPoint::Point: const gp_Pnt &(const int) const",
+      "state": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AppParCurves_MultiPoint@F@Point2d#I#1",
+      "nativeName": "AppParCurves_MultiPoint::Point2d",
+      "signature": "AppParCurves_MultiPoint::Point2d: const gp_Pnt2d &(const int) const",
+      "state": "Blocked"
+    }
+  ],
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sourceFiles": [
+    {
+      "path": "src/ModelingData/TKGeomBase/AppDef/AppDef_MultiPointConstraint.hxx",
+      "sha256": "0F9A714DE33524D59390EB46897D1147CE1ECD343146DB61F22239192BB2ED68"
+    },
+    {
+      "path": "src/ModelingData/TKGeomBase/AppDef/AppDef_MultiPointConstraint.cxx",
+      "sha256": "47013E5B40AA298D458FF4752707A0AA61C944A0E4ECACC46BD5621B68EBE589"
+    },
+    {
+      "path": "src/ModelingData/TKGeomBase/AppParCurves/AppParCurves_MultiPoint.hxx",
+      "sha256": "8D5B3DEF9CACE7C2C7DAB425CBDAE664C9C163E512835E73D603960F498216B7"
+    },
+    {
+      "path": "src/ModelingData/TKGeomBase/AppParCurves/AppParCurves_MultiPoint.cxx",
+      "sha256": "910B2EFD3C5193617BEC902E9E0A767A012163780F843AA8DFF55F160D49F704"
+    }
+  ],
+  "constraints": [
+    "Call-private initialized SDK objects; no native shallow copy escapes",
+    "3D and2D index domains remain distinct; internal SDK normalizes to one-based",
+    "Paired positions/tangents/curvatures must have exact per-dimension counts",
+    "Nested batch flattened with explicit row offsets and total budget; all-or-nothing copied publication",
+    "No undefined getter for absent tangent/curvature; empty groups explicit; no callbacks"
+  ]
+}

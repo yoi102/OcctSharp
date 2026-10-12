@@ -60,6 +60,10 @@ internal static partial class NativeMethods
     internal static unsafe partial NativeStatus SketchCurveIntersect(
         SketchCurveRaw* first, SketchCurveRaw* second, double tolerance,
         SketchIntersectionRaw* results, int capacity, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_sketch_curve_intersection_counts")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SketchIntersectionCounts(
+        SketchCurveRaw* first,SketchCurveRaw* second,double tolerance,out int pointCount,out int overlapIntervalCount);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_sketch_curve_make_edge")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

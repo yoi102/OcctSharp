@@ -1,5 +1,10 @@
 namespace OcctSharp;
 
+/// <summary>Viewer-owned view cube labels and idle appearance. Values may be changed at runtime.</summary>
+public sealed record ViewerCubeAppearance(
+    string Front, string Back, string Left, string Right, string Top, string Bottom,
+    string FontFamily = "Segoe UI", double FontHeight = 18, double IdleTransparency = 0.55);
+
 /// <summary>Linear RGB presentation color with components in the inclusive range 0 to 1.</summary>
 public readonly record struct ViewerColor(double Red, double Green, double Blue)
 {
@@ -122,6 +127,79 @@ public enum ViewerProjection
     /// <summary>Z-up right axonometric view.</summary>
     Axonometric = 6
 }
+
+/// <summary>OCCT view-cube face, edge, and corner directions in a Z-up scene.</summary>
+public enum ViewerCubeOrientation
+{
+    /// <summary>View from +X.</summary>
+    XPositive = 0,
+    /// <summary>View from +Y.</summary>
+    YPositive = 1,
+    /// <summary>View from +Z.</summary>
+    ZPositive = 2,
+    /// <summary>View from -X.</summary>
+    XNegative = 3,
+    /// <summary>View from -Y.</summary>
+    YNegative = 4,
+    /// <summary>View from -Z.</summary>
+    ZNegative = 5,
+    /// <summary>View from +X +Y.</summary>
+    XPositiveYPositive = 6,
+    /// <summary>View from +X +Z.</summary>
+    XPositiveZPositive = 7,
+    /// <summary>View from +Y +Z.</summary>
+    YPositiveZPositive = 8,
+    /// <summary>View from -X -Y.</summary>
+    XNegativeYNegative = 9,
+    /// <summary>View from -X +Y.</summary>
+    XNegativeYPositive = 10,
+    /// <summary>View from -X -Z.</summary>
+    XNegativeZNegative = 11,
+    /// <summary>View from -X +Z.</summary>
+    XNegativeZPositive = 12,
+    /// <summary>View from -Y -Z.</summary>
+    YNegativeZNegative = 13,
+    /// <summary>View from -Y +Z.</summary>
+    YNegativeZPositive = 14,
+    /// <summary>View from +X -Y.</summary>
+    XPositiveYNegative = 15,
+    /// <summary>View from +X -Z.</summary>
+    XPositiveZNegative = 16,
+    /// <summary>View from +Y -Z.</summary>
+    YPositiveZNegative = 17,
+    /// <summary>View from +X +Y +Z.</summary>
+    XPositiveYPositiveZPositive = 18,
+    /// <summary>View from +X -Y +Z.</summary>
+    XPositiveYNegativeZPositive = 19,
+    /// <summary>View from +X +Y -Z.</summary>
+    XPositiveYPositiveZNegative = 20,
+    /// <summary>View from -X +Y +Z.</summary>
+    XNegativeYPositiveZPositive = 21,
+    /// <summary>View from +X -Y -Z.</summary>
+    XPositiveYNegativeZNegative = 22,
+    /// <summary>View from -X +Y -Z.</summary>
+    XNegativeYPositiveZNegative = 23,
+    /// <summary>View from -X -Y +Z.</summary>
+    XNegativeYNegativeZPositive = 24,
+    /// <summary>View from -X -Y -Z.</summary>
+    XNegativeYNegativeZNegative = 25
+}
+
+/// <summary>Roll direction around the current camera view axis.</summary>
+public enum ViewerCubeTurn
+{
+    /// <summary>No roll; the hit refers to a cube face, edge, or corner.</summary>
+    None = 0,
+    /// <summary>Counterclockwise camera roll.</summary>
+    Left = 1,
+    /// <summary>Clockwise camera roll.</summary>
+    Right = 2
+}
+
+/// <summary>A copied hit on a cube orientation or one of its curved roll arrows.</summary>
+/// <param name="Orientation">The selected cube direction, if any.</param>
+/// <param name="Turn">The selected roll arrow, if any.</param>
+public readonly record struct ViewerCubeHit(ViewerCubeOrientation? Orientation, ViewerCubeTurn Turn);
 
 /// <summary>How detected objects change the current selection.</summary>
 public enum ViewerSelectionMode

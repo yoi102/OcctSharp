@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Poly_CoherentTriangle@F@Node#I#1",
+      "nativeName": "Poly_CoherentTriangle::Node",
+      "signature": "Poly_CoherentTriangle::Node: int (const int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@AddTriangle#I#I#I#",
+      "nativeName": "Poly_CoherentTriangulation::AddTriangle",
+      "signature": "Poly_CoherentTriangulation::AddTriangle: Poly_CoherentTriangle *(const int, const int, const int)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@RemoveTriangle#&$@S@Poly_CoherentTriangle#",
+      "nativeName": "Poly_CoherentTriangulation::RemoveTriangle",
+      "signature": "Poly_CoherentTriangulation::RemoveTriangle: bool (Poly_CoherentTriangle &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@ReplaceNodes#&$@S@Poly_CoherentTriangle#I#I#I#",
+      "nativeName": "Poly_CoherentTriangulation::ReplaceNodes",
+      "signature": "Poly_CoherentTriangulation::ReplaceNodes: bool (Poly_CoherentTriangle &, const int, const int, const int)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@SetNode#&1$@S@gp_XYZ#I#",
+      "nativeName": "Poly_CoherentTriangulation::SetNode",
+      "signature": "Poly_CoherentTriangulation::SetNode: int (const gp_XYZ &, const int)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Triangle#I#1",
+      "nativeName": "Poly_CoherentTriangulation::Triangle",
+      "signature": "Poly_CoherentTriangulation::Triangle: const Poly_CoherentTriangle &(const int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Poly_Connect#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#",
+      "nativeName": "Poly_Connect::Poly_Connect",
+      "signature": "Poly_Connect::Poly_Connect: void (const occ::handle<Poly_Triangulation> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Triangles#I#&I#S0_#S0_#1",
+      "nativeName": "Poly_Connect::Triangles",
+      "signature": "Poly_Connect::Triangles: void (const int, int &, int &, int &) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@AddTriangle#*1$@S@gp_XYZ#",
+      "nativeName": "Poly_MergeNodesTool::AddTriangle",
+      "signature": "Poly_MergeNodesTool::AddTriangle: void (const gp_XYZ *)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@ChangeOutput#",
+      "nativeName": "Poly_MergeNodesTool::ChangeOutput",
+      "signature": "Poly_MergeNodesTool::ChangeOutput: occ::handle<Poly_Triangulation> &()",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "signature": "Poly_Polygon3D::Poly_Polygon3D: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "signature": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation: void (const NCollection_Array1<int> &, const NCollection_Array1<double> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Normal#I#&$@S@NCollection_Vec3>#f#1",
+      "nativeName": "Poly_Triangulation::Normal",
+      "signature": "Poly_Triangulation::Normal: void (int, NCollection_Vec3<float> &) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@NCollection_Vec3>#f#",
+      "nativeName": "Poly_Triangulation::SetNormal",
+      "signature": "Poly_Triangulation::SetNormal: void (const int, const NCollection_Vec3<float> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetTriangle#I#&1$@S@Poly_Triangle#",
+      "nativeName": "Poly_Triangulation::SetTriangle",
+      "signature": "Poly_Triangulation::SetTriangle: void (int, const Poly_Triangle &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#",
+      "nativeName": "Poly_Triangulation::SetUVNode",
+      "signature": "Poly_Triangulation::SetUVNode: void (int, const gp_Pnt2d &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangle#I#1",
+      "nativeName": "Poly_Triangulation::Triangle",
+      "signature": "Poly_Triangulation::Triangle: const Poly_Triangle &(int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Normal#I#1",
+      "nativeName": "Poly_Triangulation::Normal",
+      "signature": "Poly_Triangulation::Normal: gp_Dir (int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@UVNode#I#1",
+      "nativeName": "Poly_Triangulation::UVNode",
+      "signature": "Poly_Triangulation::UVNode: gp_Pnt2d (int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#&1$@S@TopoDS_Shape#&1$@S@IMeshTools_Parameters#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh",
+      "signature": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh: void (const TopoDS_Shape &, const IMeshTools_Parameters &, const Message_ProgressRange &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#&1$@S@TopoDS_Shape#d#b#d#b#",
+      "nativeName": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh",
+      "signature": "BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh: void (const TopoDS_Shape &, const double, const bool, const double, const bool)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "nativeName": "Poly_Triangle::Get",
+      "signature": "Poly_Triangle::Get: void (int &, int &, int &) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepMesh_DiscretRoot@F@IsDone#1",
+      "nativeName": "BRepMesh_DiscretRoot::IsDone",
+      "signature": "BRepMesh_DiscretRoot::IsDone: bool () const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@NTriangles#1",
+      "nativeName": "Poly_CoherentTriangulation::NTriangles",
+      "signature": "Poly_CoherentTriangulation::NTriangles: int () const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+      "nativeName": "Poly_CoherentTriangulation::Poly_CoherentTriangulation",
+      "signature": "Poly_CoherentTriangulation::Poly_CoherentTriangulation: void (const occ::handle<NCollection_BaseAllocator> &)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@ElementNodeIndex#I#1",
+      "nativeName": "Poly_MergeNodesTool::ElementNodeIndex",
+      "signature": "Poly_MergeNodesTool::ElementNodeIndex: int (int) const",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@Poly_MergeNodesTool#d#d#I#",
+      "nativeName": "Poly_MergeNodesTool::Poly_MergeNodesTool",
+      "signature": "Poly_MergeNodesTool::Poly_MergeNodesTool: void (const double, const double, const int)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@SetDropDegenerative#b#",
+      "nativeName": "Poly_MergeNodesTool::SetDropDegenerative",
+      "signature": "Poly_MergeNodesTool::SetDropDegenerative: void (bool)",
+      "guard": "CAPrivateMeshDataAndToolProfile",
+      "reason": "Call-private mesh/coherent/weld helpers; copied triangle indices/value returns; mutable SDK data and transient triangle pointers never published through C ABI; original validation/index/transform/channel/budget/failure/publication preserved."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@CustomAspectsMap#1",
+      "nativeName": "AIS_ColoredShape::CustomAspectsMap",
+      "signature": "AIS_ColoredShape::CustomAspectsMap: const NCollection_DataMap<TopoDS_Shape, occ::handle<AIS_ColoredDrawer>, TopTools_ShapeMapHasher> &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Shape@F@Shape#1",
+      "nativeName": "AIS_Shape::Shape",
+      "signature": "AIS_Shape::Shape: const TopoDS_Shape &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Eye#1",
+      "nativeName": "Graphic3d_Camera::Eye",
+      "signature": "Graphic3d_Camera::Eye: const gp_Pnt &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@OrientationMatrix#1",
+      "nativeName": "Graphic3d_Camera::OrientationMatrix",
+      "signature": "Graphic3d_Camera::OrientationMatrix: const NCollection_Mat4<double> &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@ProjectionMatrix#1",
+      "nativeName": "Graphic3d_Camera::ProjectionMatrix",
+      "signature": "Graphic3d_Camera::ProjectionMatrix: const NCollection_Mat4<double> &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@SetUp#&1$@S@gp_Dir#",
+      "nativeName": "Graphic3d_Camera::SetUp",
+      "signature": "Graphic3d_Camera::SetUp: void (const gp_Dir &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Up#1",
+      "nativeName": "Graphic3d_Camera::Up",
+      "signature": "Graphic3d_Camera::Up: const gp_Dir &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Camera#1",
+      "nativeName": "V3d_View::Camera",
+      "signature": "V3d_View::Camera: const occ::handle<Graphic3d_Camera> &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SetColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@Quantity_Color#b#",
+      "nativeName": "AIS_InteractiveContext::SetColor",
+      "signature": "AIS_InteractiveContext::SetColor: void (const occ::handle<AIS_InteractiveObject> &, const Quantity_Color &, const bool)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectedShape#1",
+      "nativeName": "AIS_InteractiveContext::SelectedShape",
+      "signature": "AIS_InteractiveContext::SelectedShape: TopoDS_Shape () const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomColor#&1$@S@TopoDS_Shape#&1$@S@Quantity_Color#",
+      "nativeName": "AIS_ColoredShape::SetCustomColor",
+      "signature": "AIS_ColoredShape::SetCustomColor: void (const TopoDS_Shape &, const Quantity_Color &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomTransparency#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "AIS_ColoredShape::SetCustomTransparency",
+      "signature": "AIS_ColoredShape::SetCustomTransparency: void (const TopoDS_Shape &, double)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomWidth#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "AIS_ColoredShape::SetCustomWidth",
+      "signature": "AIS_ColoredShape::SetCustomWidth: void (const TopoDS_Shape &, const double)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@UnsetCustomAspects#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "AIS_ColoredShape::UnsetCustomAspects",
+      "signature": "AIS_ColoredShape::UnsetCustomAspects: void (const TopoDS_Shape &, const bool)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@DetectedShape#1",
+      "nativeName": "AIS_InteractiveContext::DetectedShape",
+      "signature": "AIS_InteractiveContext::DetectedShape: const TopoDS_Shape &() const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectRectangle#&1$@S@NCollection_Vec2>#I#S0_#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_InteractiveContext::SelectRectangle",
+      "signature": "AIS_InteractiveContext::SelectRectangle: AIS_StatusOfPick (const NCollection_Vec2<int> &, const NCollection_Vec2<int> &, const occ::handle<V3d_View> &, const AIS_SelectionScheme)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectPolygon#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_InteractiveContext::SelectPolygon",
+      "signature": "AIS_InteractiveContext::SelectPolygon: AIS_StatusOfPick (const NCollection_Array1<gp_Pnt2d> &, const occ::handle<V3d_View> &, const AIS_SelectionScheme)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@BoundingBoxOfSelection#&1$@N@opencascade@S@handle>#$@S@V3d_View#1",
+      "nativeName": "AIS_InteractiveContext::BoundingBoxOfSelection",
+      "signature": "AIS_InteractiveContext::BoundingBoxOfSelection: Bnd_Box (const occ::handle<V3d_View> &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ClipPlane@F@Graphic3d_ClipPlane#&1$@S@gp_Pln#",
+      "nativeName": "Graphic3d_ClipPlane::Graphic3d_ClipPlane",
+      "signature": "Graphic3d_ClipPlane::Graphic3d_ClipPlane: void (const gp_Pln &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ClipPlane@F@SetEquation#&1$@S@gp_Pln#",
+      "nativeName": "Graphic3d_ClipPlane::SetEquation",
+      "signature": "Graphic3d_ClipPlane::SetEquation: void (const gp_Pln &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Convert#I#I#&d#S0_#S0_#1",
+      "nativeName": "V3d_View::Convert",
+      "signature": "V3d_View::Convert: void (const int, const int, double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Convert#d#d#d#&I#S0_#1",
+      "nativeName": "V3d_View::Convert",
+      "signature": "V3d_View::Convert: void (const double, const double, const double, int &, int &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ConvertWithProj#I#I#&d#S0_#S0_#S0_#S0_#S0_#1",
+      "nativeName": "V3d_View::ConvertWithProj",
+      "signature": "V3d_View::ConvertWithProj: void (const int, const int, double &, double &, double &, double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@At#&d#S0_#S0_#1",
+      "nativeName": "V3d_View::At",
+      "signature": "V3d_View::At: void (double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Eye#&d#S0_#S0_#1",
+      "nativeName": "V3d_View::Eye",
+      "signature": "V3d_View::Eye: void (double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Proj#&d#S0_#S0_#1",
+      "nativeName": "V3d_View::Proj",
+      "signature": "V3d_View::Proj: void (double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Up#&d#S0_#S0_#1",
+      "nativeName": "V3d_View::Up",
+      "signature": "V3d_View::Up: void (double &, double &, double &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Dump#*1C#&1$@E@Graphic3d_BufferType#",
+      "nativeName": "V3d_View::Dump",
+      "signature": "V3d_View::Dump: bool (const char *const, const Graphic3d_BufferType &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@Location#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1",
+      "nativeName": "AIS_InteractiveContext::Location",
+      "signature": "AIS_InteractiveContext::Location: TopLoc_Location (const occ::handle<AIS_InteractiveObject> &) const",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SetLocation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@TopLoc_Location#",
+      "nativeName": "AIS_InteractiveContext::SetLocation",
+      "signature": "AIS_InteractiveContext::SetLocation: void (const occ::handle<AIS_InteractiveObject> &, const TopLoc_Location &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Attach#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@AIS_Manipulator@S@OptionsForAttach#",
+      "nativeName": "AIS_Manipulator::Attach",
+      "signature": "AIS_Manipulator::Attach: void (const occ::handle<AIS_InteractiveObject> &, const OptionsForAttach &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetGap#f#",
+      "nativeName": "AIS_Manipulator::SetGap",
+      "signature": "AIS_Manipulator::SetGap: void (const float)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetPosition#&1$@S@gp_Ax2#",
+      "nativeName": "AIS_Manipulator::SetPosition",
+      "signature": "AIS_Manipulator::SetPosition: void (const gp_Ax2 &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetSize#f#",
+      "nativeName": "AIS_Manipulator::SetSize",
+      "signature": "AIS_Manipulator::SetSize: void (const float)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Transform#&1$@S@gp_Trsf#",
+      "nativeName": "AIS_Manipulator::Transform",
+      "signature": "AIS_Manipulator::Transform: void (const gp_Trsf &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Transform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_Manipulator::Transform",
+      "signature": "AIS_Manipulator::Transform: gp_Trsf (const int, const int, const occ::handle<V3d_View> &)",
+      "guard": "CFViewerParentThreadPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    }
+  ],
+  "supportingOperations": []
+}

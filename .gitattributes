@@ -13,4 +13,11 @@ CMakeLists.txt text eol=lf
 *.ps1 text eol=crlf
 *.bat text eol=crlf
 *.dll -text
+OcctSharp/src/OcctSharp.Generator/Emission/*.txt text eol=lf
 OcctSharp/runtime/win-x64/licenses/** -text whitespace=-trailing-space
+# Preserve generator-owned byte hashes, including mixed template line endings.
+OcctSharp/src/OcctSharp.Native/generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+OcctSharp/src/OcctSharp/Generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# CAD fixtures are identity-checked data; retain writer spacing and exact bytes.
+OcctSharp/tests/Fixtures/** -text whitespace=-trailing-space,cr-at-eol
+OcctSharp/tests/**/Fixtures/** -text whitespace=-trailing-space,cr-at-eol

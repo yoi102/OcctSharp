@@ -1,0 +1,1909 @@
+{
+  "baseline": "8.0.1-preview.33",
+  "state": "PLANNED_CANDIDATES_NOT_ADMITTED",
+  "scope": "AJ coupled repair workspaces, ordered wire data and exact replacement history",
+  "baselineInventorySha256": "5E56DDD838AE57ACCC99A260867BFDCD838CDBC4DA7AD63954ACE0620D86AAB4",
+  "baselineDiscoverySha256": "CE945733A3B0A218A49CFEF1A87D3731F09BB7565E53EA02C713B820F707BD94",
+  "candidateCount": 188,
+  "familyCount": 16,
+  "families": {
+    "BRepTools_History": 9,
+    "BRepTools_ReShape": 7,
+    "ShapeAnalysis_FreeBounds": 10,
+    "ShapeAnalysis_Shell": 9,
+    "ShapeAnalysis_Wire": 22,
+    "ShapeBuild_ReShape": 2,
+    "ShapeExtend_WireData": 17,
+    "ShapeFix_ComposeShell": 5,
+    "ShapeFix_Edge": 15,
+    "ShapeFix_Face": 13,
+    "ShapeFix_Shell": 5,
+    "ShapeFix_Solid": 4,
+    "ShapeFix_SplitTool": 5,
+    "ShapeFix_Wire": 35,
+    "ShapeFix_WireSegment": 27,
+    "ShapeFix_Wireframe": 3
+  },
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepTools_History@F@AddGenerated#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepTools_History::AddGenerated",
+      "signature": "BRepTools_History::AddGenerated: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 154,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@AddModified#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepTools_History::AddModified",
+      "signature": "BRepTools_History::AddModified: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 158,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@BRepTools_History#&1$@S@BRepTools_History#",
+      "nativeName": "BRepTools_History::BRepTools_History",
+      "signature": "BRepTools_History::BRepTools_History: void (const BRepTools_History &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 89,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "BRepTools_History::Dump",
+      "signature": "BRepTools_History::Dump: void (Standard_OStream &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 221,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@IsSupportedType#&1$@S@TopoDS_Shape#S",
+      "nativeName": "BRepTools_History::IsSupportedType",
+      "signature": "BRepTools_History::IsSupportedType: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 145,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Merge#&1$@S@BRepTools_History#",
+      "nativeName": "BRepTools_History::Merge",
+      "signature": "BRepTools_History::Merge: void (const BRepTools_History &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 205,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Remove#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepTools_History::Remove",
+      "signature": "BRepTools_History::Remove: void (const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 161,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@ReplaceGenerated#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepTools_History::ReplaceGenerated",
+      "signature": "BRepTools_History::ReplaceGenerated: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 164,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@ReplaceModified#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepTools_History::ReplaceModified",
+      "signature": "BRepTools_History::ReplaceModified: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_History.hxx",
+      "sourceLine": 168,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@BRepTools_ReShape#&1$@S@BRepTools_ReShape#",
+      "nativeName": "BRepTools_ReShape::BRepTools_ReShape",
+      "signature": "BRepTools_ReShape::BRepTools_ReShape: void (const BRepTools_ReShape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 52,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@CopyVertex#&1$@S@TopoDS_Vertex#&1$@S@gp_Pnt#d#",
+      "nativeName": "BRepTools_ReShape::CopyVertex",
+      "signature": "BRepTools_ReShape::CopyVertex: TopoDS_Vertex (const TopoDS_Vertex &, const gp_Pnt &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 149,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@CopyVertex#&1$@S@TopoDS_Vertex#d#",
+      "nativeName": "BRepTools_ReShape::CopyVertex",
+      "signature": "BRepTools_ReShape::CopyVertex: TopoDS_Vertex (const TopoDS_Vertex &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 142,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@IsNewShape#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_ReShape::IsNewShape",
+      "signature": "BRepTools_ReShape::IsNewShape: bool (const TopoDS_Shape &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 155,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@ModeConsiderLocation#",
+      "nativeName": "BRepTools_ReShape::ModeConsiderLocation",
+      "signature": "BRepTools_ReShape::ModeConsiderLocation: bool &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 136,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Status#&1$@S@TopoDS_Shape#&S1_#b#",
+      "nativeName": "BRepTools_ReShape::Status",
+      "signature": "BRepTools_ReShape::Status: int (const TopoDS_Shape &, TopoDS_Shape &, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 117,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@ValueLeaf#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_ReShape::ValueLeaf",
+      "signature": "BRepTools_ReShape::ValueLeaf: TopoDS_Shape (const TopoDS_Shape &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "BRepTools_ReShape.hxx",
+      "sourceLine": 108,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectEdgesToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#&S1_#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectEdgesToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectEdgesToWires: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool, occ::handle<NCollection_HSequence<TopoDS_Shape>> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 130,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectEdgesToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectEdgesToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectEdgesToWires: occ::handle<NCollection_HSequence<TopoDS_Shape>> (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 124,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectWiresToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#&$@S@NCollection_DataMap>#S3_#S3_#$@S@TopTools_ShapeMapHasher#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectWiresToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectWiresToWires: occ::handle<NCollection_HSequence<TopoDS_Shape>> (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool, NCollection_DataMap<TopoDS_Shape, TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 175,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectWiresToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#&S1_#&$@S@NCollection_DataMap>#S3_#S3_#$@S@TopTools_ShapeMapHasher#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectWiresToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectWiresToWires: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool, occ::handle<NCollection_HSequence<TopoDS_Shape>> &, NCollection_DataMap<TopoDS_Shape, TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 183,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectWiresToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#&S1_#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectWiresToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectWiresToWires: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool, occ::handle<NCollection_HSequence<TopoDS_Shape>> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 148,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ConnectWiresToWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::ConnectWiresToWires",
+      "signature": "ShapeAnalysis_FreeBounds::ConnectWiresToWires: occ::handle<NCollection_HSequence<TopoDS_Shape>> (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 142,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@DispatchWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#&$@S@TopoDS_Compound#S4_#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::DispatchWires",
+      "signature": "ShapeAnalysis_FreeBounds::DispatchWires: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, TopoDS_Compound &, TopoDS_Compound &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 207,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ShapeAnalysis_FreeBounds#",
+      "nativeName": "ShapeAnalysis_FreeBounds::ShapeAnalysis_FreeBounds",
+      "signature": "ShapeAnalysis_FreeBounds::ShapeAnalysis_FreeBounds: void ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 66,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ShapeAnalysis_FreeBounds#&1$@S@TopoDS_Shape#d#b#b#",
+      "nativeName": "ShapeAnalysis_FreeBounds::ShapeAnalysis_FreeBounds",
+      "signature": "ShapeAnalysis_FreeBounds::ShapeAnalysis_FreeBounds: void (const TopoDS_Shape &, const double, const bool, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 79,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@SplitWires#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@S@TopoDS_Shape#d#b#&S1_#S4_#S",
+      "nativeName": "ShapeAnalysis_FreeBounds::SplitWires",
+      "signature": "ShapeAnalysis_FreeBounds::SplitWires: void (const occ::handle<NCollection_HSequence<TopoDS_Shape>> &, const double, const bool, occ::handle<NCollection_HSequence<TopoDS_Shape>> &, occ::handle<NCollection_HSequence<TopoDS_Shape>> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "sourceLine": 197,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@Clear#",
+      "nativeName": "ShapeAnalysis_Shell::Clear",
+      "signature": "ShapeAnalysis_Shell::Clear: void ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 40,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@FreeEdges#1",
+      "nativeName": "ShapeAnalysis_Shell::FreeEdges",
+      "signature": "ShapeAnalysis_Shell::FreeEdges: TopoDS_Compound () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 78,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@HasConnectedEdges#1",
+      "nativeName": "ShapeAnalysis_Shell::HasConnectedEdges",
+      "signature": "ShapeAnalysis_Shell::HasConnectedEdges: bool () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 81,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@HasFreeEdges#1",
+      "nativeName": "ShapeAnalysis_Shell::HasFreeEdges",
+      "signature": "ShapeAnalysis_Shell::HasFreeEdges: bool () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 74,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@IsLoaded#&1$@S@TopoDS_Shape#1",
+      "nativeName": "ShapeAnalysis_Shell::IsLoaded",
+      "signature": "ShapeAnalysis_Shell::IsLoaded: bool (const TopoDS_Shape &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 57,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@LoadShells#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeAnalysis_Shell::LoadShells",
+      "signature": "ShapeAnalysis_Shell::LoadShells: void (const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 43,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@Loaded#I#1",
+      "nativeName": "ShapeAnalysis_Shell::Loaded",
+      "signature": "ShapeAnalysis_Shell::Loaded: TopoDS_Shape (const int) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 64,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@NbLoaded#1",
+      "nativeName": "ShapeAnalysis_Shell::NbLoaded",
+      "signature": "ShapeAnalysis_Shell::NbLoaded: int () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 60,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@ShapeAnalysis_Shell#&1$@S@ShapeAnalysis_Shell#",
+      "nativeName": "ShapeAnalysis_Shell::ShapeAnalysis_Shell",
+      "signature": "ShapeAnalysis_Shell::ShapeAnalysis_Shell: void (const ShapeAnalysis_Shell &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "sourceLine": 31,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckDegenerated#I#&$@S@gp_Pnt2d#S0_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckDegenerated",
+      "signature": "ShapeAnalysis_Wire::CheckDegenerated: bool (const int, gp_Pnt2d &, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 323,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckIntersectingEdges#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#&$@S@NCollection_Sequence>#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckIntersectingEdges",
+      "signature": "ShapeAnalysis_Wire::CheckIntersectingEdges: bool (const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &, NCollection_Sequence<double> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 393,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckIntersectingEdges#I#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#&$@S@NCollection_Sequence>#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckIntersectingEdges",
+      "signature": "ShapeAnalysis_Wire::CheckIntersectingEdges: bool (const int, const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &, NCollection_Sequence<double> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 406,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckLacking#I#d#&$@S@gp_Pnt2d#S0_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckLacking",
+      "signature": "ShapeAnalysis_Wire::CheckLacking: bool (const int, const double, gp_Pnt2d &, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 436,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckLoop#&$@S@NCollection_IndexedMap>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#&$@S@NCollection_DataMap>#S2_#$@S@NCollection_List>#S2_#S3_#&$@S@NCollection_Map>#S2_#S3_#S7_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckLoop",
+      "signature": "ShapeAnalysis_Wire::CheckLoop: bool (NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 512,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckNotchedEdges#I#&I#&d#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckNotchedEdges",
+      "signature": "ShapeAnalysis_Wire::CheckNotchedEdges: bool (const int, int &, double &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 459,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckOrder#&$@S@ShapeAnalysis_WireOrder#b#b#b#",
+      "nativeName": "ShapeAnalysis_Wire::CheckOrder",
+      "signature": "ShapeAnalysis_Wire::CheckOrder: bool (ShapeAnalysis_WireOrder &, bool, bool, bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 259,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSeam#I#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#&d#S3_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSeam",
+      "signature": "ShapeAnalysis_Wire::CheckSeam: bool (const int, occ::handle<Geom2d_Curve> &, occ::handle<Geom2d_Curve> &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 298,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSelfIntersectingEdge#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSelfIntersectingEdge",
+      "signature": "ShapeAnalysis_Wire::CheckSelfIntersectingEdge: bool (const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 375,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckShapeConnect#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckShapeConnect",
+      "signature": "ShapeAnalysis_Wire::CheckShapeConnect: bool (const TopoDS_Shape &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 496,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckShapeConnect#&d#S0_#S0_#S0_#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckShapeConnect",
+      "signature": "ShapeAnalysis_Wire::CheckShapeConnect: bool (double &, double &, double &, double &, const TopoDS_Shape &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 503,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSmallArea#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSmallArea",
+      "signature": "ShapeAnalysis_Wire::CheckSmallArea: bool (const TopoDS_Wire &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 465,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckTail#&1$@S@TopoDS_Edge#S0_#d#d#d#&S1_#S2_#S2_#S2_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckTail",
+      "signature": "ShapeAnalysis_Wire::CheckTail: bool (const TopoDS_Edge &, const TopoDS_Edge &, const double, const double, const double, TopoDS_Edge &, TopoDS_Edge &, TopoDS_Edge &, TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 519,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Face#1",
+      "nativeName": "ShapeAnalysis_Wire::Face",
+      "signature": "ShapeAnalysis_Wire::Face: const TopoDS_Face &() const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 165,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Init#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_Wire::Init",
+      "signature": "ShapeAnalysis_Wire::Init: void (const occ::handle<ShapeExtend_WireData> &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 116,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Init#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_Wire::Init",
+      "signature": "ShapeAnalysis_Wire::Init: void (const TopoDS_Wire &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 110,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Load#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::Load",
+      "signature": "ShapeAnalysis_Wire::Load: void (const TopoDS_Wire &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 121,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetFace#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeAnalysis_Wire::SetFace",
+      "signature": "ShapeAnalysis_Wire::SetFace: void (const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 127,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#",
+      "nativeName": "ShapeAnalysis_Wire::SetFace",
+      "signature": "ShapeAnalysis_Wire::SetFace: void (const TopoDS_Face &, const occ::handle<ShapeAnalysis_Surface> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 130,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#",
+      "nativeName": "ShapeAnalysis_Wire::SetSurface",
+      "signature": "ShapeAnalysis_Wire::SetSurface: void (const occ::handle<Geom_Surface> &, const TopLoc_Location &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 140,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void (const occ::handle<ShapeExtend_WireData> &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 104,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@S@ShapeAnalysis_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void (const ShapeAnalysis_Wire &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "sourceLine": 89,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeBuild_ReShape@F@Apply#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#I#",
+      "nativeName": "ShapeBuild_ReShape::Apply",
+      "signature": "ShapeBuild_ReShape::Apply: TopoDS_Shape (const TopoDS_Shape &, const TopAbs_ShapeEnum, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeBuild_ReShape.hxx",
+      "sourceLine": 69,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeBuild_ReShape@F@Status#&1$@S@TopoDS_Shape#&S1_#b#",
+      "nativeName": "ShapeBuild_ReShape::Status",
+      "signature": "ShapeBuild_ReShape::Status: int (const TopoDS_Shape &, TopoDS_Shape &, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeBuild_ReShape.hxx",
+      "sourceLine": 95,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Add#&1$@S@TopoDS_Edge#I#",
+      "nativeName": "ShapeExtend_WireData::Add",
+      "signature": "ShapeExtend_WireData::Add: void (const TopoDS_Edge &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 118,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Add#&1$@S@TopoDS_Shape#I#",
+      "nativeName": "ShapeExtend_WireData::Add",
+      "signature": "ShapeExtend_WireData::Add: void (const TopoDS_Shape &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 129,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Add#&1$@S@TopoDS_Wire#I#",
+      "nativeName": "ShapeExtend_WireData::Add",
+      "signature": "ShapeExtend_WireData::Add: void (const TopoDS_Wire &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 123,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@AddOriented#&1$@S@TopoDS_Edge#I#",
+      "nativeName": "ShapeExtend_WireData::AddOriented",
+      "signature": "ShapeExtend_WireData::AddOriented: void (const TopoDS_Edge &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 137,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@AddOriented#&1$@S@TopoDS_Shape#I#",
+      "nativeName": "ShapeExtend_WireData::AddOriented",
+      "signature": "ShapeExtend_WireData::AddOriented: void (const TopoDS_Shape &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 149,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@AddOriented#&1$@S@TopoDS_Wire#I#",
+      "nativeName": "ShapeExtend_WireData::AddOriented",
+      "signature": "ShapeExtend_WireData::AddOriented: void (const TopoDS_Wire &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 145,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Index#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeExtend_WireData::Index",
+      "signature": "ShapeExtend_WireData::Index: int (const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 197,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Init#&1$@S@TopoDS_Wire#b#b#",
+      "nativeName": "ShapeExtend_WireData::Init",
+      "signature": "ShapeExtend_WireData::Init: bool (const TopoDS_Wire &, const bool, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 84,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@ManifoldMode#",
+      "nativeName": "ShapeExtend_WireData::ManifoldMode",
+      "signature": "ShapeExtend_WireData::ManifoldMode: bool &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 189,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@NonmanifoldEdge#I#1",
+      "nativeName": "ShapeExtend_WireData::NonmanifoldEdge",
+      "signature": "ShapeExtend_WireData::NonmanifoldEdge: TopoDS_Edge (const int) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 177,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@NonmanifoldEdges#1",
+      "nativeName": "ShapeExtend_WireData::NonmanifoldEdges",
+      "signature": "ShapeExtend_WireData::NonmanifoldEdges: occ::handle<NCollection_HSequence<TopoDS_Shape>> () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 182,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Reverse#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeExtend_WireData::Reverse",
+      "signature": "ShapeExtend_WireData::Reverse: void (const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 168,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Set#&1$@S@TopoDS_Edge#I#",
+      "nativeName": "ShapeExtend_WireData::Set",
+      "signature": "ShapeExtend_WireData::Set: void (const TopoDS_Edge &, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 156,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@ShapeExtend_WireData#&1$@S@ShapeExtend_WireData#",
+      "nativeName": "ShapeExtend_WireData::ShapeExtend_WireData",
+      "signature": "ShapeExtend_WireData::ShapeExtend_WireData: void (const ShapeExtend_WireData &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 59,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@ShapeExtend_WireData#&1$@S@TopoDS_Wire#b#b#",
+      "nativeName": "ShapeExtend_WireData::ShapeExtend_WireData",
+      "signature": "ShapeExtend_WireData::ShapeExtend_WireData: void (const TopoDS_Wire &, const bool, const bool)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 67,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Wire#1",
+      "nativeName": "ShapeExtend_WireData::Wire",
+      "signature": "ShapeExtend_WireData::Wire: TopoDS_Wire () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 211,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@WireAPIMake#1",
+      "nativeName": "ShapeExtend_WireData::WireAPIMake",
+      "signature": "ShapeExtend_WireData::WireAPIMake: TopoDS_Wire () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeExtend_WireData.hxx",
+      "sourceLine": 218,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@ClosedMode#",
+      "nativeName": "ShapeFix_ComposeShell::ClosedMode",
+      "signature": "ShapeFix_ComposeShell::ClosedMode: bool &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_ComposeShell.hxx",
+      "sourceLine": 103,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@DispatchWires#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#&$@S@NCollection_Sequence>#$@S@ShapeFix_WireSegment#1",
+      "nativeName": "ShapeFix_ComposeShell::DispatchWires",
+      "signature": "ShapeFix_ComposeShell::DispatchWires: void (NCollection_Sequence<TopoDS_Shape> &, NCollection_Sequence<ShapeFix_WireSegment> &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_ComposeShell.hxx",
+      "sourceLine": 136,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@Init#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_CompositeSurface#&1$@S@TopLoc_Location#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeFix_ComposeShell::Init",
+      "signature": "ShapeFix_ComposeShell::Init: void (const occ::handle<ShapeExtend_CompositeSurface> &, const TopLoc_Location &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeFix_ComposeShell.hxx",
+      "sourceLine": 92,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@Result#1",
+      "nativeName": "ShapeFix_ComposeShell::Result",
+      "signature": "ShapeFix_ComposeShell::Result: const TopoDS_Shape &() const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_ComposeShell.hxx",
+      "sourceLine": 119,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ComposeShell@F@ShapeFix_ComposeShell#&1$@S@ShapeFix_ComposeShell#",
+      "nativeName": "ShapeFix_ComposeShell::ShapeFix_ComposeShell",
+      "signature": "ShapeFix_ComposeShell::ShapeFix_ComposeShell: void (const ShapeFix_ComposeShell &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_ComposeShell.hxx",
+      "sourceLine": 81,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixAddCurve3d#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeFix_Edge::FixAddCurve3d",
+      "signature": "ShapeFix_Edge::FixAddCurve3d: bool (const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 129,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixAddPCurve#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#b#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#d#",
+      "nativeName": "ShapeFix_Edge::FixAddPCurve",
+      "signature": "ShapeFix_Edge::FixAddPCurve: bool (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const bool, const occ::handle<ShapeAnalysis_Surface> &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 114,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixAddPCurve#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#b#d#",
+      "nativeName": "ShapeFix_Edge::FixAddPCurve",
+      "signature": "ShapeFix_Edge::FixAddPCurve: bool (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &, const bool, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 84,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixAddPCurve#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#b#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#d#",
+      "nativeName": "ShapeFix_Edge::FixAddPCurve",
+      "signature": "ShapeFix_Edge::FixAddPCurve: bool (const TopoDS_Edge &, const TopoDS_Face &, const bool, const occ::handle<ShapeAnalysis_Surface> &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 91,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixAddPCurve#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#b#d#",
+      "nativeName": "ShapeFix_Edge::FixAddPCurve",
+      "signature": "ShapeFix_Edge::FixAddPCurve: bool (const TopoDS_Edge &, const TopoDS_Face &, const bool, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 78,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixRemoveCurve3d#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeFix_Edge::FixRemoveCurve3d",
+      "signature": "ShapeFix_Edge::FixRemoveCurve3d: bool (const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 75,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixRemovePCurve#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#",
+      "nativeName": "ShapeFix_Edge::FixRemovePCurve",
+      "signature": "ShapeFix_Edge::FixRemovePCurve: bool (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 67,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixRemovePCurve#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeFix_Edge::FixRemovePCurve",
+      "signature": "ShapeFix_Edge::FixRemovePCurve: bool (const TopoDS_Edge &, const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 57,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixReversed2d#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#",
+      "nativeName": "ShapeFix_Edge::FixReversed2d",
+      "signature": "ShapeFix_Edge::FixReversed2d: bool (const TopoDS_Edge &, const occ::handle<Geom_Surface> &, const TopLoc_Location &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 156,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixReversed2d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeFix_Edge::FixReversed2d",
+      "signature": "ShapeFix_Edge::FixReversed2d: bool (const TopoDS_Edge &, const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 143,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixSameParameter#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeFix_Edge::FixSameParameter",
+      "signature": "ShapeFix_Edge::FixSameParameter: bool (const TopoDS_Edge &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 228,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixSameParameter#&1$@S@TopoDS_Edge#d#",
+      "nativeName": "ShapeFix_Edge::FixSameParameter",
+      "signature": "ShapeFix_Edge::FixSameParameter: bool (const TopoDS_Edge &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 193,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixVertexTolerance#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeFix_Edge::FixVertexTolerance",
+      "signature": "ShapeFix_Edge::FixVertexTolerance: bool (const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 141,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@FixVertexTolerance#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeFix_Edge::FixVertexTolerance",
+      "signature": "ShapeFix_Edge::FixVertexTolerance: bool (const TopoDS_Edge &, const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 131,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Edge@F@ShapeFix_Edge#&1$@S@ShapeFix_Edge#",
+      "nativeName": "ShapeFix_Edge::ShapeFix_Edge",
+      "signature": "ShapeFix_Edge::ShapeFix_Edge: void (const ShapeFix_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Edge.hxx",
+      "sourceLine": 46,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeFix_Face::Add",
+      "signature": "ShapeFix_Face::Add: void (const TopoDS_Wire &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 152,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@AutoCorrectPrecisionMode#",
+      "nativeName": "ShapeFix_Face::AutoCorrectPrecisionMode",
+      "signature": "ShapeFix_Face::AutoCorrectPrecisionMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 134,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@Face#1",
+      "nativeName": "ShapeFix_Face::Face",
+      "signature": "ShapeFix_Face::Face: TopoDS_Face () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 143,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixIntersectingWiresMode#",
+      "nativeName": "ShapeFix_Face::FixIntersectingWiresMode",
+      "signature": "ShapeFix_Face::FixIntersectingWiresMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 122,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixLoopWire#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
+      "nativeName": "ShapeFix_Face::FixLoopWire",
+      "signature": "ShapeFix_Face::FixLoopWire: bool (NCollection_Sequence<TopoDS_Shape> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 213,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixLoopWiresMode#",
+      "nativeName": "ShapeFix_Face::FixLoopWiresMode",
+      "signature": "ShapeFix_Face::FixLoopWiresMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 126,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixMissingSeamMode#",
+      "nativeName": "ShapeFix_Face::FixMissingSeamMode",
+      "signature": "ShapeFix_Face::FixMissingSeamMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 110,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixOrientation#&$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@NCollection_List>#S2_#$@S@TopTools_ShapeMapHasher#",
+      "nativeName": "ShapeFix_Face::FixOrientation",
+      "signature": "ShapeFix_Face::FixOrientation: bool (NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 186,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixPeriodicDegeneratedMode#",
+      "nativeName": "ShapeFix_Face::FixPeriodicDegeneratedMode",
+      "signature": "ShapeFix_Face::FixPeriodicDegeneratedMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 138,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixSplitFace#&1$@S@NCollection_DataMap>#$@S@TopoDS_Shape#$@S@NCollection_List>#S2_#$@S@TopTools_ShapeMapHasher#",
+      "nativeName": "ShapeFix_Face::FixSplitFace",
+      "signature": "ShapeFix_Face::FixSplitFace: bool (const NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL206",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 225,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixSplitFaceMode#",
+      "nativeName": "ShapeFix_Face::FixSplitFaceMode",
+      "signature": "ShapeFix_Face::FixSplitFaceMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 130,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@Init#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeFix_Face::Init",
+      "signature": "ShapeFix_Face::Init: void (const TopoDS_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 67,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@ShapeFix_Face#&1$@S@ShapeFix_Face#",
+      "nativeName": "ShapeFix_Face::ShapeFix_Face",
+      "signature": "ShapeFix_Face::ShapeFix_Face: void (const ShapeFix_Face &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Face.hxx",
+      "sourceLine": 52,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@ErrorFaces#1",
+      "nativeName": "ShapeFix_Shell::ErrorFaces",
+      "signature": "ShapeFix_Shell::ErrorFaces: TopoDS_Compound () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Shell.hxx",
+      "sourceLine": 86,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@FixOrientationMode#",
+      "nativeName": "ShapeFix_Shell::FixOrientationMode",
+      "signature": "ShapeFix_Shell::FixOrientationMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Shell.hxx",
+      "sourceLine": 113,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@Init#&1$@S@TopoDS_Shell#",
+      "nativeName": "ShapeFix_Shell::Init",
+      "signature": "ShapeFix_Shell::Init: void (const TopoDS_Shell &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Shell.hxx",
+      "sourceLine": 48,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@ShapeFix_Shell#&1$@S@ShapeFix_Shell#",
+      "nativeName": "ShapeFix_Shell::ShapeFix_Shell",
+      "signature": "ShapeFix_Shell::ShapeFix_Shell: void (const ShapeFix_Shell &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Shell.hxx",
+      "sourceLine": 37,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@Shell#",
+      "nativeName": "ShapeFix_Shell::Shell",
+      "signature": "ShapeFix_Shell::Shell: TopoDS_Shell ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Shell.hxx",
+      "sourceLine": 76,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Init#&1$@S@TopoDS_Solid#",
+      "nativeName": "ShapeFix_Solid::Init",
+      "signature": "ShapeFix_Solid::Init: void (const TopoDS_Solid &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Solid.hxx",
+      "sourceLine": 50,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Shape#",
+      "nativeName": "ShapeFix_Solid::Shape",
+      "signature": "ShapeFix_Solid::Shape: TopoDS_Shape ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Solid.hxx",
+      "sourceLine": 101,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@ShapeFix_Solid#&1$@S@ShapeFix_Solid#",
+      "nativeName": "ShapeFix_Solid::ShapeFix_Solid",
+      "signature": "ShapeFix_Solid::ShapeFix_Solid: void (const ShapeFix_Solid &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Solid.hxx",
+      "sourceLine": 39,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@SolidFromShell#&1$@S@TopoDS_Shell#",
+      "nativeName": "ShapeFix_Solid::SolidFromShell",
+      "signature": "ShapeFix_Solid::SolidFromShell: TopoDS_Solid (const TopoDS_Shell &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Solid.hxx",
+      "sourceLine": 60,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@CutEdge#&1$@S@TopoDS_Edge#d#d#&1$@S@TopoDS_Face#&b#1",
+      "nativeName": "ShapeFix_SplitTool::CutEdge",
+      "signature": "ShapeFix_SplitTool::CutEdge: bool (const TopoDS_Edge &, const double, const double, const TopoDS_Face &, bool &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_SplitTool.hxx",
+      "sourceLine": 67,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@ShapeFix_SplitTool#",
+      "nativeName": "ShapeFix_SplitTool::ShapeFix_SplitTool",
+      "signature": "ShapeFix_SplitTool::ShapeFix_SplitTool: void ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeFix_SplitTool.hxx",
+      "sourceLine": 39,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@SplitEdge#&1$@S@TopoDS_Edge#d#&1$@S@TopoDS_Vertex#&1$@S@TopoDS_Face#&S1_#S6_#d#d#1",
+      "nativeName": "ShapeFix_SplitTool::SplitEdge",
+      "signature": "ShapeFix_SplitTool::SplitEdge: bool (const TopoDS_Edge &, const double, const TopoDS_Vertex &, const TopoDS_Face &, TopoDS_Edge &, TopoDS_Edge &, const double, const double) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_SplitTool.hxx",
+      "sourceLine": 44,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@SplitEdge#&1$@S@TopoDS_Edge#d#&1$@S@TopoDS_Vertex#d#S2_#&1$@S@TopoDS_Face#&$@S@NCollection_Sequence>#$@S@TopoDS_Shape#&I#&1$@N@opencascade@S@handle>#$@S@ShapeBuild_ReShape#d#d#1",
+      "nativeName": "ShapeFix_SplitTool::SplitEdge",
+      "signature": "ShapeFix_SplitTool::SplitEdge: bool (const TopoDS_Edge &, const double, const TopoDS_Vertex &, const double, const TopoDS_Vertex &, const TopoDS_Face &, NCollection_Sequence<TopoDS_Shape> &, int &, const occ::handle<ShapeBuild_ReShape> &, const double, const double) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_SplitTool.hxx",
+      "sourceLine": 77,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_SplitTool@F@SplitEdge#&1$@S@TopoDS_Edge#d#d#&1$@S@TopoDS_Vertex#&1$@S@TopoDS_Face#&S1_#S6_#d#d#1",
+      "nativeName": "ShapeFix_SplitTool::SplitEdge",
+      "signature": "ShapeFix_SplitTool::SplitEdge: bool (const TopoDS_Edge &, const double, const double, const TopoDS_Vertex &, const TopoDS_Face &, TopoDS_Edge &, TopoDS_Edge &, const double, const double) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_SplitTool.hxx",
+      "sourceLine": 56,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Face#1",
+      "nativeName": "ShapeFix_Wire::Face",
+      "signature": "ShapeFix_Wire::Face: const TopoDS_Face &() const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 169,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixAddCurve3dMode#",
+      "nativeName": "ShapeFix_Wire::FixAddCurve3dMode",
+      "signature": "ShapeFix_Wire::FixAddCurve3dMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 231,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixAddPCurveMode#",
+      "nativeName": "ShapeFix_Wire::FixAddPCurveMode",
+      "signature": "ShapeFix_Wire::FixAddPCurveMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 227,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixConnectedMode#",
+      "nativeName": "ShapeFix_Wire::FixConnectedMode",
+      "signature": "ShapeFix_Wire::FixConnectedMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 203,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixDegeneratedMode#",
+      "nativeName": "ShapeFix_Wire::FixDegeneratedMode",
+      "signature": "ShapeFix_Wire::FixDegeneratedMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 207,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixEdgeCurvesMode#",
+      "nativeName": "ShapeFix_Wire::FixEdgeCurvesMode",
+      "signature": "ShapeFix_Wire::FixEdgeCurvesMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 205,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixGaps2dMode#",
+      "nativeName": "ShapeFix_Wire::FixGaps2dMode",
+      "signature": "ShapeFix_Wire::FixGaps2dMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 221,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixGaps3dMode#",
+      "nativeName": "ShapeFix_Wire::FixGaps3dMode",
+      "signature": "ShapeFix_Wire::FixGaps3dMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 213,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixGapsByRangesMode#",
+      "nativeName": "ShapeFix_Wire::FixGapsByRangesMode",
+      "signature": "ShapeFix_Wire::FixGapsByRangesMode: bool &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 197,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixIntersectingEdgesMode#",
+      "nativeName": "ShapeFix_Wire::FixIntersectingEdgesMode",
+      "signature": "ShapeFix_Wire::FixIntersectingEdgesMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 245,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixLackingMode#",
+      "nativeName": "ShapeFix_Wire::FixLackingMode",
+      "signature": "ShapeFix_Wire::FixLackingMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 211,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixNonAdjacentIntersectingEdgesMode#",
+      "nativeName": "ShapeFix_Wire::FixNonAdjacentIntersectingEdgesMode",
+      "signature": "ShapeFix_Wire::FixNonAdjacentIntersectingEdgesMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 253,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixNotchedEdgesMode#",
+      "nativeName": "ShapeFix_Wire::FixNotchedEdgesMode",
+      "signature": "ShapeFix_Wire::FixNotchedEdgesMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 241,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixRemoveCurve3dMode#",
+      "nativeName": "ShapeFix_Wire::FixRemoveCurve3dMode",
+      "signature": "ShapeFix_Wire::FixRemoveCurve3dMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 229,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixRemovePCurveMode#",
+      "nativeName": "ShapeFix_Wire::FixRemovePCurveMode",
+      "signature": "ShapeFix_Wire::FixRemovePCurveMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 225,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixReorder#&1$@S@ShapeAnalysis_WireOrder#",
+      "nativeName": "ShapeFix_Wire::FixReorder",
+      "signature": "ShapeFix_Wire::FixReorder: bool (const ShapeAnalysis_WireOrder &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 338,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixReorderMode#",
+      "nativeName": "ShapeFix_Wire::FixReorderMode",
+      "signature": "ShapeFix_Wire::FixReorderMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 199,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixReversed2dMode#",
+      "nativeName": "ShapeFix_Wire::FixReversed2dMode",
+      "signature": "ShapeFix_Wire::FixReversed2dMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 223,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixSameParameterMode#",
+      "nativeName": "ShapeFix_Wire::FixSameParameterMode",
+      "signature": "ShapeFix_Wire::FixSameParameterMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 237,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixSeamMode#",
+      "nativeName": "ShapeFix_Wire::FixSeamMode",
+      "signature": "ShapeFix_Wire::FixSeamMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 233,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixSelfIntersectingEdgeMode#",
+      "nativeName": "ShapeFix_Wire::FixSelfIntersectingEdgeMode",
+      "signature": "ShapeFix_Wire::FixSelfIntersectingEdgeMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 243,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixSelfIntersectionMode#",
+      "nativeName": "ShapeFix_Wire::FixSelfIntersectionMode",
+      "signature": "ShapeFix_Wire::FixSelfIntersectionMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 209,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixShiftedMode#",
+      "nativeName": "ShapeFix_Wire::FixShiftedMode",
+      "signature": "ShapeFix_Wire::FixShiftedMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 235,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixSmallMode#",
+      "nativeName": "ShapeFix_Wire::FixSmallMode",
+      "signature": "ShapeFix_Wire::FixSmallMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 201,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixTailMode#",
+      "nativeName": "ShapeFix_Wire::FixTailMode",
+      "signature": "ShapeFix_Wire::FixTailMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 255,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@FixVertexToleranceMode#",
+      "nativeName": "ShapeFix_Wire::FixVertexToleranceMode",
+      "signature": "ShapeFix_Wire::FixVertexToleranceMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 239,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Init#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeFix_Wire::Init",
+      "signature": "ShapeFix_Wire::Init: void (const TopoDS_Wire &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 108,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ModifyRemoveLoopMode#",
+      "nativeName": "ShapeFix_Wire::ModifyRemoveLoopMode",
+      "signature": "ShapeFix_Wire::ModifyRemoveLoopMode: int &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 182,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Perform#&1$@S@Message_ProgressRange#",
+      "nativeName": "ShapeFix_Wire::Perform",
+      "signature": "ShapeFix_Wire::Perform: bool (const Message_ProgressRange &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 272,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@PreferencePCurveMode#",
+      "nativeName": "ShapeFix_Wire::PreferencePCurveMode",
+      "signature": "ShapeFix_Wire::PreferencePCurveMode: bool &()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 192,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@SetFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#",
+      "nativeName": "ShapeFix_Wire::SetFace",
+      "signature": "ShapeFix_Wire::SetFace: void (const TopoDS_Face &, const occ::handle<ShapeAnalysis_Surface> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 126,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@SetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#",
+      "nativeName": "ShapeFix_Wire::SetSurface",
+      "signature": "ShapeFix_Wire::SetSurface: void (const occ::handle<Geom_Surface> &, const TopLoc_Location &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL205",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 136,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ShapeFix_Wire#&1$@S@ShapeFix_Wire#",
+      "nativeName": "ShapeFix_Wire::ShapeFix_Wire",
+      "signature": "ShapeFix_Wire::ShapeFix_Wire: void (const ShapeFix_Wire &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 87,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ShapeFix_Wire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeFix_Wire::ShapeFix_Wire",
+      "signature": "ShapeFix_Wire::ShapeFix_Wire: void (const TopoDS_Wire &, const TopoDS_Face &, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 96,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@WireAPIMake#1",
+      "nativeName": "ShapeFix_Wire::WireAPIMake",
+      "signature": "ShapeFix_Wire::WireAPIMake: TopoDS_Wire () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wire.hxx",
+      "sourceLine": 160,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@AddEdge#I#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeFix_WireSegment::AddEdge",
+      "signature": "ShapeFix_WireSegment::AddEdge: void (const int, const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 110,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@AddEdge#I#&1$@S@TopoDS_Edge#I#I#I#I#",
+      "nativeName": "ShapeFix_WireSegment::AddEdge",
+      "signature": "ShapeFix_WireSegment::AddEdge: void (const int, const TopoDS_Edge &, const int, const int, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 114,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@CheckPatchIndex#I#1",
+      "nativeName": "ShapeFix_WireSegment::CheckPatchIndex",
+      "signature": "ShapeFix_WireSegment::CheckPatchIndex: bool (const int) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 148,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@Clear#",
+      "nativeName": "ShapeFix_WireSegment::Clear",
+      "signature": "ShapeFix_WireSegment::Clear: void ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 73,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@DefineIUMax#I#I#",
+      "nativeName": "ShapeFix_WireSegment::DefineIUMax",
+      "signature": "ShapeFix_WireSegment::DefineIUMax: void (const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 130,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@DefineIUMin#I#I#",
+      "nativeName": "ShapeFix_WireSegment::DefineIUMin",
+      "signature": "ShapeFix_WireSegment::DefineIUMin: void (const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 128,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@DefineIVMax#I#I#",
+      "nativeName": "ShapeFix_WireSegment::DefineIVMax",
+      "signature": "ShapeFix_WireSegment::DefineIVMax: void (const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 137,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@DefineIVMin#I#I#",
+      "nativeName": "ShapeFix_WireSegment::DefineIVMin",
+      "signature": "ShapeFix_WireSegment::DefineIVMin: void (const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 132,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@Edge#I#1",
+      "nativeName": "ShapeFix_WireSegment::Edge",
+      "signature": "ShapeFix_WireSegment::Edge: TopoDS_Edge (const int) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 102,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@FirstVertex#1",
+      "nativeName": "ShapeFix_WireSegment::FirstVertex",
+      "signature": "ShapeFix_WireSegment::FirstVertex: TopoDS_Vertex () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 89,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@GetPatchIndex#I#&I#S0_#S0_#S0_#1",
+      "nativeName": "ShapeFix_WireSegment::GetPatchIndex",
+      "signature": "ShapeFix_WireSegment::GetPatchIndex: void (const int, int &, int &, int &, int &) const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 140,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@GetVertex#1",
+      "nativeName": "ShapeFix_WireSegment::GetVertex",
+      "signature": "ShapeFix_WireSegment::GetVertex: TopoDS_Vertex () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 152,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@IsClosed#1",
+      "nativeName": "ShapeFix_WireSegment::IsClosed",
+      "signature": "ShapeFix_WireSegment::IsClosed: bool () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 96,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@IsVertex#1",
+      "nativeName": "ShapeFix_WireSegment::IsVertex",
+      "signature": "ShapeFix_WireSegment::IsVertex: bool () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 154,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@LastVertex#1",
+      "nativeName": "ShapeFix_WireSegment::LastVertex",
+      "signature": "ShapeFix_WireSegment::LastVertex: TopoDS_Vertex () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 93,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@Load#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#",
+      "nativeName": "ShapeFix_WireSegment::Load",
+      "signature": "ShapeFix_WireSegment::Load: void (const occ::handle<ShapeExtend_WireData> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 76,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@NbEdges#1",
+      "nativeName": "ShapeFix_WireSegment::NbEdges",
+      "signature": "ShapeFix_WireSegment::NbEdges: int () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 99,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@Orientation#$@E@TopAbs_Orientation#",
+      "nativeName": "ShapeFix_WireSegment::Orientation",
+      "signature": "ShapeFix_WireSegment::Orientation: void (const TopAbs_Orientation)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 82,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@Orientation#1",
+      "nativeName": "ShapeFix_WireSegment::Orientation",
+      "signature": "ShapeFix_WireSegment::Orientation: TopAbs_Orientation () const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 85,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@SetEdge#I#&1$@S@TopoDS_Edge#",
+      "nativeName": "ShapeFix_WireSegment::SetEdge",
+      "signature": "ShapeFix_WireSegment::SetEdge: void (const int, const TopoDS_Edge &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 105,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@SetPatchIndex#I#I#I#I#I#",
+      "nativeName": "ShapeFix_WireSegment::SetPatchIndex",
+      "signature": "ShapeFix_WireSegment::SetPatchIndex: void (const int, const int, const int, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 122,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@SetVertex#&1$@S@TopoDS_Vertex#",
+      "nativeName": "ShapeFix_WireSegment::SetVertex",
+      "signature": "ShapeFix_WireSegment::SetVertex: void (const TopoDS_Vertex &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 150,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@ShapeFix_WireSegment#",
+      "nativeName": "ShapeFix_WireSegment::ShapeFix_WireSegment",
+      "signature": "ShapeFix_WireSegment::ShapeFix_WireSegment: void ()",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 62,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@ShapeFix_WireSegment#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#$@E@TopAbs_Orientation#",
+      "nativeName": "ShapeFix_WireSegment::ShapeFix_WireSegment",
+      "signature": "ShapeFix_WireSegment::ShapeFix_WireSegment: void (const occ::handle<ShapeExtend_WireData> &, const TopAbs_Orientation)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 65,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@ShapeFix_WireSegment#&1$@S@ShapeFix_WireSegment#",
+      "nativeName": "ShapeFix_WireSegment::ShapeFix_WireSegment",
+      "signature": "ShapeFix_WireSegment::ShapeFix_WireSegment: void (const ShapeFix_WireSegment &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 56,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@ShapeFix_WireSegment#&1$@S@TopoDS_Wire#$@E@TopAbs_Orientation#",
+      "nativeName": "ShapeFix_WireSegment::ShapeFix_WireSegment",
+      "signature": "ShapeFix_WireSegment::ShapeFix_WireSegment: void (const TopoDS_Wire &, const TopAbs_Orientation)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 69,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_WireSegment@F@WireData#1",
+      "nativeName": "ShapeFix_WireSegment::WireData",
+      "signature": "ShapeFix_WireSegment::WireData: const occ::handle<ShapeExtend_WireData> &() const",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "header": "ShapeFix_WireSegment.hxx",
+      "sourceLine": 79,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@CheckSmallEdges#&$@S@NCollection_Map>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#&$@S@NCollection_DataMap>#S2_#$@S@NCollection_List>#S2_#S3_#S4_#S0_#",
+      "nativeName": "ShapeFix_Wireframe::CheckSmallEdges",
+      "signature": "ShapeFix_Wireframe::CheckSmallEdges: bool (NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wireframe.hxx",
+      "sourceLine": 58,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@Load#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeFix_Wireframe::Load",
+      "signature": "ShapeFix_Wireframe::Load: void (const TopoDS_Shape &)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "header": "ShapeFix_Wireframe.hxx",
+      "sourceLine": 45,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@MergeSmallEdges#&$@S@NCollection_Map>#$@S@TopoDS_Shape#$@S@TopTools_ShapeMapHasher#&$@S@NCollection_DataMap>#S2_#$@S@NCollection_List>#S2_#S3_#S4_#S0_#b#d#",
+      "nativeName": "ShapeFix_Wireframe::MergeSmallEdges",
+      "signature": "ShapeFix_Wireframe::MergeSmallEdges: bool (NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_DataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> &, NCollection_Map<TopoDS_Shape, TopTools_ShapeMapHasher> &, const bool, const double)",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL204",
+      "header": "ShapeFix_Wireframe.hxx",
+      "sourceLine": 73,
+      "gate": "Audit private repair/context epoch, deep detached workspace copies, exact shape identity, nested map/list order and all-result publication; reject shared mutable aliases, unproved split/merge history, callbacks and missing SDK symbols."
+    }
+  ]
+}

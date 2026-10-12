@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Face#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Face",
+      "signature": "IntCurvesFace_ShapeIntersector::Face: const TopoDS_Face &(const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@IntCurvesFace_ShapeIntersector#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector",
+      "signature": "IntCurvesFace_ShapeIntersector::IntCurvesFace_ShapeIntersector: void ()",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@IsDone#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::IsDone",
+      "signature": "IntCurvesFace_ShapeIntersector::IsDone: bool () const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Load#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Load",
+      "signature": "IntCurvesFace_ShapeIntersector::Load: void (const TopoDS_Shape &, const double)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@NbPnt#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::NbPnt",
+      "signature": "IntCurvesFace_ShapeIntersector::NbPnt: int () const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Perform",
+      "signature": "IntCurvesFace_ShapeIntersector::Perform: void (const occ::handle<Adaptor3d_Curve> &, const double, const double)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Perform#&1$@S@gp_Lin#d#d#",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Perform",
+      "signature": "IntCurvesFace_ShapeIntersector::Perform: void (const gp_Lin &, const double, const double)",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Pnt#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Pnt",
+      "signature": "IntCurvesFace_ShapeIntersector::Pnt: const gp_Pnt &(const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@State#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::State",
+      "signature": "IntCurvesFace_ShapeIntersector::State: TopAbs_State (const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@Transition#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::Transition",
+      "signature": "IntCurvesFace_ShapeIntersector::Transition: IntCurveSurface_TransitionOnCurve (const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@UParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::UParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::UParameter: double (const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@VParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::VParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::VParameter: double (const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    },
+    {
+      "stableId": "c:@S@IntCurvesFace_ShapeIntersector@F@WParameter#I#1",
+      "nativeName": "IntCurvesFace_ShapeIntersector::WParameter",
+      "signature": "IntCurvesFace_ShapeIntersector::WParameter: double (const int) const",
+      "guard": "BHPrivateCoupledIntersectionResults",
+      "reason": "Initialized call-owned solver, bounded private inputs, optional coupled geometry and atomically copied finite diagnostics."
+    }
+  ],
+  "supportingOperations": []
+}

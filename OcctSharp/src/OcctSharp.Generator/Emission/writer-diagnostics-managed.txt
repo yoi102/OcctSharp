@@ -1,0 +1,117 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using System.Text.Json;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.TransferRecords;
+internal sealed partial class WriterDiagnosticHandle : SafeHandleZeroOrMinusOneIsInvalid {
+ internal WriterDiagnosticHandle(nint value):base(true){SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_writer_diagnostics_release")]internal static partial void Release(nint token);
+}
+/// <summary>Private writer format; IGES uses millimetres and BRep mode.</summary>
+public enum WriterTransferFormat {
+ /// <summary>STEP shape writer.</summary>
+ Step=0,
+ /// <summary>IGES millimetre BRep writer.</summary>
+ Iges=1
+}
+/// <summary>A zero-based source position bound to one private writer session.</summary>
+public readonly record struct WriterSourceIndex {
+ internal Guid Domain {get;}
+ /// <summary>Zero-based source position.</summary>
+ public int Value {get;}
+ internal WriterSourceIndex(Guid domain,int value){Domain=domain;Value=value;}
+}
+/// <summary>A positive entity number bound to one private output model.</summary>
+public readonly record struct WriterModelNumber {
+ internal Guid Domain {get;}
+ /// <summary>One-based native model entity number.</summary>
+ public int Value {get;}
+ internal WriterModelNumber(Guid domain,int value){Domain=domain;Value=value;}
+}
+/// <summary>A positive finder-map position bound to one writer epoch.</summary>
+public readonly record struct WriterMapIndex {
+ internal Guid Domain {get;}
+ /// <summary>One-based native finder-map index.</summary>
+ public int Value {get;}
+ internal WriterMapIndex(Guid domain,int value){Domain=domain;Value=value;}
+}
+/// <summary>Exact binder projection. Complete=false retains proved numbers but signals unknown binders or results outside the model. Order and duplicates are retained.</summary>
+public sealed record WriterResultProjection(bool HasBinder,bool Complete,IReadOnlyList<WriterModelNumber> ModelNumbers,IReadOnlyList<TransferMessage> Messages);
+/// <summary>Input result. Status is STEP IFSelect_ReturnStatus (Done=1), or IGES boolean (true=1). Orientation is TopAbs orientation relation, not success. Null indices mean no exact mapped result.</summary>
+public sealed record WriterSourceResult(WriterSourceIndex Source,int Status,WriterMapIndex? MapIndex,int Orientation,WriterModelNumber? SingleModelNumber,WriterResultProjection Results) {
+ /// <summary>Native transfer return code reported success, independently of exact mapping and file output.</summary>
+ public bool TransferSucceeded=>Status==1;
+}
+/// <summary>One exact finder-process entry; nonshape mappers make native type statistics unavailable.</summary>
+public sealed record WriterMapping(WriterMapIndex MapIndex,bool ShapeMapper,WriterResultProjection Results);
+/// <summary>Immutable copied metadata. No native model, writer or source lifetime is retained.</summary>
+public sealed class WriterTransferSnapshot {
+ readonly Guid domain;
+ internal WriterTransferSnapshot(JsonElement root,Guid domain){
+  this.domain=domain;Format=(WriterTransferFormat)root.GetProperty("Format").GetInt32();FileName=root.GetProperty("FileName").GetString()!;WriteStatus=root.GetProperty("WriteStatus").GetInt32();
+  EntityTypes=TransferRecordInterop.List(root.GetProperty("EntityTypes").EnumerateArray().Select(x=>x.GetString()!));
+  Sources=TransferRecordInterop.List(root.GetProperty("Sources").EnumerateArray().Select((x,i)=>new WriterSourceResult(new(domain,i),x.GetProperty("Status").GetInt32(),x.GetProperty("MapIndex").GetInt32() is var m && m>0?new WriterMapIndex(domain,m):null,x.GetProperty("Orientation").GetInt32(),x.GetProperty("SingleModelNumber").GetInt32() is var n && n>0?new WriterModelNumber(domain,n):null,Projection(x))));
+  Mappings=TransferRecordInterop.List(root.GetProperty("Mappings").EnumerateArray().Select(x=>new WriterMapping(new(domain,x.GetProperty("MapIndex").GetInt32()),x.GetProperty("ShapeMapper").GetBoolean(),Projection(x))));
+  ProcessChecks=TransferRecordInterop.Checks(root,"ProcessChecks");ResultChecks=TransferRecordInterop.Checks(root,"ResultChecks");StatisticsAvailable=root.GetProperty("StatisticsAvailable").GetBoolean();
+  Statistics=TransferRecordInterop.List(root.GetProperty("Statistics").EnumerateArray().Select(x=>new TransferTypeStatistics(x[0].GetInt32(),x[1].GetInt32(),x[2].GetInt32(),x[3].GetInt32(),x[4].GetInt32(),x[5].GetInt32(),x[6].GetInt32(),x[7].GetInt32())));
+ }
+ WriterResultProjection Projection(JsonElement x)=>new(x.GetProperty("HasBinder").GetBoolean(),x.GetProperty("Complete").GetBoolean(),TransferRecordInterop.List(x.GetProperty("ModelNumbers").EnumerateArray().Select(n=>new WriterModelNumber(domain,n.GetInt32()))),TransferRecordInterop.Messages(x));
+ /// <summary>Selected exchange format.</summary>
+ public WriterTransferFormat Format {get;}
+ /// <summary>Requested output filename. A filename alone does not establish a successful write.</summary>
+ public string FileName {get;}
+ /// <summary>STEP IFSelect_ReturnStatus or IGES boolean; -1 means no entities, so writing was not attempted.</summary>
+ public int WriteStatus {get;}
+ /// <summary>Native writer returned success.</summary>
+ public bool WriteSucceeded=>WriteStatus==1;
+ /// <summary>Copied dynamic type names in native model order.</summary>
+ public IReadOnlyList<string> EntityTypes {get;}
+ /// <summary>Results in input order, including duplicate input positions.</summary>
+ public IReadOnlyList<WriterSourceResult> Sources {get;}
+ /// <summary>All finder-process map entries.</summary>
+ public IReadOnlyList<WriterMapping> Mappings {get;}
+ /// <summary>Unconverted copied process diagnostics; native labels are not model numbers.</summary>
+ public IReadOnlyList<TransferCheck> ProcessChecks {get;}
+ /// <summary>Converted checks whose positive labels refer to model entities; zero means unproved.</summary>
+ public IReadOnlyList<TransferCheck> ResultChecks {get;}
+ /// <summary>True only when every finder was a nonnull shape mapper safe for SDK statistics.</summary>
+ public bool StatisticsAvailable {get;}
+ /// <summary>Native buckets for TopAbs kinds 0 through 8, or empty when unavailable.</summary>
+ public IReadOnlyList<TransferTypeStatistics> Statistics {get;}
+ /// <summary>Creates a bounded source index in this session.</summary>
+ public WriterSourceIndex SourceIndex(int index){if(index<0 || index>=Sources.Count)throw new ArgumentOutOfRangeException(nameof(index));return new(domain,index);}
+ /// <summary>Creates a bounded entity number in this model.</summary>
+ public WriterModelNumber ModelNumber(int number){if(number<1 || number>EntityTypes.Count)throw new ArgumentOutOfRangeException(nameof(number));return new(domain,number);}
+ /// <summary>Creates a bounded finder-map index in this epoch.</summary>
+ public WriterMapIndex MapIndex(int index){if(index<1 || index>Mappings.Count)throw new ArgumentOutOfRangeException(nameof(index));return new(domain,index);}
+ /// <summary>Returns a source observation, rejecting default and foreign indices.</summary>
+ public WriterSourceResult GetSource(WriterSourceIndex index){if(index.Domain!=domain)throw new ArgumentException("Foreign source index.",nameof(index));return Sources[index.Value];}
+ /// <summary>Returns a copied entity type, rejecting default and foreign numbers.</summary>
+ public string GetEntityType(WriterModelNumber number){if(number.Domain!=domain)throw new ArgumentException("Foreign model number.",nameof(number));return EntityTypes[number.Value-1];}
+ /// <summary>Returns a finder-map observation, rejecting default and foreign indices.</summary>
+ public WriterMapping GetMapping(WriterMapIndex index){if(index.Domain!=domain)throw new ArgumentException("Foreign finder-map index.",nameof(index));return Mappings[index.Value-1];}
+}
+/// <summary>Deep-copies inputs and owns one serialized STEP/IGES export epoch. Callers synchronize source mutation during Create. Native exceptions retire the epoch; return-code failures remain inspectable.</summary>
+public sealed unsafe partial class WriterTransferSession : IDisposable {
+ readonly WriterDiagnosticHandle handle;readonly Guid domain=Guid.NewGuid();
+ static WriterTransferSession()=>NativeLibraryResolver.EnsureRegistered(typeof(WriterTransferSession).Assembly);
+ WriterTransferSession(nint token,int count){try{handle=new(token);}catch{WriterDiagnosticHandle.Release(token);throw;}SourceCount=count;}
+ WriterDiagnosticHandle NativeHandle {get{ObjectDisposedException.ThrowIf(handle.IsClosed,this);return handle;}}
+ /// <summary>Number of copied input positions.</summary>
+ public int SourceCount {get;}
+ /// <summary>Creates an independent private session. Empty input is allowed and never writes a file.</summary>
+ public static WriterTransferSession Create(OwnedShapeSet sources,WriterTransferFormat format=WriterTransferFormat.Step){ArgumentNullException.ThrowIfNull(sources);if(format!=WriterTransferFormat.Step && format!=WriterTransferFormat.Iges)throw new ArgumentOutOfRangeException(nameof(format));NativeError.ThrowIfFailed(CreateNative(sources.NativeHandle,(int)format,out var p,out var n),"writer_create");return new(p,n);}
+ /// <summary>Transfers each input once, writes when there are model entities, and returns frozen metadata. Existing target files follow the SDK writer's overwrite semantics.</summary>
+ public WriterTransferSnapshot TransferAndWrite(string path){TransferRecordInterop.TextInput(path);NativeError.ThrowIfFailed(RunNative(NativeHandle,path),"writer_transfer_write");return Snapshot();}
+ /// <summary>Copies the completed epoch's frozen metadata, without rerunning transfer or inspecting a mutable writer.</summary>
+ public WriterTransferSnapshot Snapshot(){var owner=NativeHandle;NativeError.ThrowIfFailed(TextNative(owner,null,0,out int n),"writer_snapshot_size");if(n<1 || n>64*1024*1024)throw new InvalidDataException("Invalid writer snapshot size.");var bytes=new byte[n];fixed(byte* p=bytes)NativeError.ThrowIfFailed(TextNative(owner,p,n,out n),"writer_snapshot_text");using var doc=JsonDocument.Parse(bytes.AsMemory(0,n-1));return new(doc.RootElement,domain);}
+ /// <summary>Releases private source storage. Obtained snapshots remain usable.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_writer_diagnostics_create")]private static partial NativeStatus CreateNative(TopologyCollectionHandle shapes,int format,out nint token,out int count);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_writer_diagnostics_run",StringMarshalling=StringMarshalling.Utf8)]private static partial NativeStatus RunNative(WriterDiagnosticHandle token,string path);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_writer_diagnostics_text")]private static partial NativeStatus TextNative(WriterDiagnosticHandle token,byte* buffer,int capacity,out int length);
+}

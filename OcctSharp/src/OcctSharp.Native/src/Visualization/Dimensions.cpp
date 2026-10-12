@@ -1,3 +1,4 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.RenderResourceAdapters.Generated.hxx"
 // Native Visualization/Dimensions implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Conversions.hxx"
 #include "OcctSharp.Native.Internal.hxx"
@@ -49,8 +50,8 @@ void ConfigureDimension(
   if (!std::isfinite(red) || !std::isfinite(green) || !std::isfinite(blue)
       || red < 0.0 || red > 1.0 || green < 0.0 || green > 1.0 || blue < 0.0 || blue > 1.0)
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer dimension RGB values are invalid.");
-  dimension->SetModelUnits(TCollection_AsciiString(modelUnits == nullptr ? "" : modelUnits));
-  dimension->SetDisplayUnits(TCollection_AsciiString(displayUnits == nullptr ? "" : displayUnits));
+  OcctSharpGenerated::RenderResourceAdapters::PrsDim_Dimension_SetModelUnits_Bind(*(dimension))(TCollection_AsciiString(modelUnits == nullptr ? "" : modelUnits));
+  OcctSharpGenerated::RenderResourceAdapters::PrsDim_Dimension_SetDisplayUnits_Bind(*(dimension))(TCollection_AsciiString(displayUnits == nullptr ? "" : displayUnits));
   if (hasCustomValue != 0) dimension->SetCustomValue(customValue);
   else dimension->SetComputedValue();
   dimension->SetFlyout(flyout);
@@ -92,7 +93,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_create(
       if (points == nullptr || point_count != 2 || plane == nullptr
           || !IsFinite(points[0]) || !IsFinite(points[1]))
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A length dimension requires two finite points and one plane.");
-      dimension = new PrsDim_LengthDimension(
+      dimension = OcctSharpGenerated::RenderResourceAdapters::ConstructPrsDimLengthDimension(
         gp_Pnt(points[0].x, points[0].y, points[0].z),
         gp_Pnt(points[1].x, points[1].y, points[1].z),
         gp_Pln(plane->a, plane->b, plane->c, plane->d));
@@ -111,8 +112,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_create(
     {
       ValidateUsableShape(shape);
       dimension = kind == 2
-        ? opencascade::handle<PrsDim_Dimension>(new PrsDim_RadiusDimension(shape->Value))
-        : opencascade::handle<PrsDim_Dimension>(new PrsDim_DiameterDimension(shape->Value));
+        ? opencascade::handle<PrsDim_Dimension>(OcctSharpGenerated::RenderResourceAdapters::ConstructPrsDimRadiusDimension(shape->Value))
+        : opencascade::handle<PrsDim_Dimension>(OcctSharpGenerated::RenderResourceAdapters::ConstructPrsDimDiameterDimension(shape->Value));
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer dimension kind is unsupported.");
     ConfigureDimension(dimension, model_units, display_units, has_custom_value, custom_value,

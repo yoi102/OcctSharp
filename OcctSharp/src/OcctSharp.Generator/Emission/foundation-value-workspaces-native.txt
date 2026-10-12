@@ -1,0 +1,196 @@
+#include "OcctSharp.Foundation.CopiedSupport.Generated.hxx"
+#include <TCollection_AsciiString.hxx>
+#include <TCollection_ExtendedString.hxx>
+#include <OSD_Path.hxx>
+#include <Quantity_Color.hxx>
+#include <UnitsAPI.hxx>
+#include <Units_UnitSentence.hxx>
+#include <Units_Dimensions.hxx>
+#include <string_view>
+#include <charconv>
+#include <cctype>
+#include <mutex>
+using namespace OcctSharpCollections;
+namespace {
+constexpr int ValueLimit=1048576;
+struct FoundationResult { std::vector<std::string> strings; std::vector<double> values; };
+// UnitSentence calls the SDK's shared dictionary/lexicon outside individual API
+// method locks. Hold one bridge lock across validation and conversion together.
+std::mutex FoundationUnitMutex;
+std::string Text(const char* data,int size,bool ascii) {
+ Require(size>=0&&size<=ValueLimit&&(size==0||data),"Invalid text buffer.");
+ std::string s(size?data:"",size);
+ for(size_t i=0;i<s.size();) {
+  unsigned char c=s[i++];Require(c!=0,"Embedded NUL is forbidden.");
+  if(c<128)continue;Require(!ascii,"ASCII text must contain only seven-bit characters.");
+  int n=c>=0xF0&&c<=0xF4?3:c>=0xE0&&c<=0xEF?2:c>=0xC2&&c<=0xDF?1:0;
+  Require(n>0&&i+n<=s.size(),"Invalid UTF8 sequence.");unsigned cp=c&((1u<<(6-n))-1);
+  for(int j=0;j<n;++j){unsigned char b=s[i++];Require((b&0xC0)==0x80,"Invalid UTF8 continuation.");cp=(cp<<6)|(b&63);}
+  Require(cp>=(n==1?128u:n==2?2048u:65536u)&&cp<=0x10FFFF&&!(cp>=0xD800&&cp<=0xDFFF),"Noncanonical UTF8 or surrogate.");
+ }
+ return s;
+}
+std::string CopyText(const TCollection_AsciiString& s){Require(s.Length()<=ValueLimit,"Text output limit exceeded.");return std::string(s.ToCString(),s.Length());}
+std::string CopyText(const TCollection_ExtendedString& s){
+ int n=s.LengthOfCString();Require(n>=0&&n<=ValueLimit,"UTF8 output limit exceeded.");
+ std::vector<char> buffer(static_cast<size_t>(n)+1);char* pointer=buffer.data();int written=s.ToUTF8CString(pointer);
+ Require(written>=0&&written<=n,"Invalid UTF8 output count.");return Text(buffer.data(),written,false);
+}
+template<class S> int CheckedInteger(const S& value){
+ std::string s=CopyText(value);size_t first=0,last=s.size();
+ while(first<last&&std::isspace(static_cast<unsigned char>(s[first])))++first;
+ while(last>first&&std::isspace(static_cast<unsigned char>(s[last-1])))--last;
+ if(first<last&&s[first]=='+')++first;Require(first<last,"Input is not a complete integer.");
+ int result=0;auto parsed=std::from_chars(s.data()+first,s.data()+last,result);
+ Require(parsed.ec==std::errc()&&parsed.ptr==s.data()+last,"Integer syntax or range is invalid.");return result;
+}
+void Boundary(const TCollection_ExtendedString& s,int count) {
+ Require(count>=0&&count<=s.Length(),"UTF16 position outside text.");
+ if(count>0&&count<s.Length())Require(!(s.Value(count)>=0xD800&&s.Value(count)<=0xDBFF&&s.Value(count+1)>=0xDC00&&s.Value(count+1)<=0xDFFF),"Operation would split a surrogate pair.");
+}
+template<class S> void StringWork(S& a,const S& b,int op,int p,int q,int flag,FoundationResult& out){
+ int length=a.Length();Require(int64_t(length)+b.Length()<=ValueLimit,"Combined text limit exceeded.");
+ auto boundary=[&](int count){if constexpr(std::is_same_v<S,TCollection_ExtendedString>)Boundary(a,count);else Require(count>=0&&count<=length,"Text position outside input.");};
+ double number=0;S remainder;
+ switch(op){
+ case 0:break;
+ case 1:a=a.Cat(b);break;
+ case 2:a.AssignCat(b);break;
+ case 3:a.Copy(b);break;
+ case 4:boundary(p-1);a.Insert(p,b);break;
+ case 5:a.Prepend(b);break;
+ case 6:number=a.Search(b);break;
+ case 7:number=a.SearchFromEnd(b);break;
+ case 8:number=a.StartsWith(b);break;
+ case 9:number=a.EndsWith(b);break;
+ case 10:number=a.IsEqual(b);break;
+ case 11:number=a.IsDifferent(b);break;
+ case 12:number=a.IsGreater(b);break;
+ case 13:number=a.IsLess(b);break;
+ case 14:Require(p>=1&&q>=p&&q<=length,"Invalid substring range.");boundary(p-1);boundary(q);a=a.SubString(p,q);break;
+ case 15:boundary(p);remainder=a.Split(p);break;
+ case 16:Require(p>=1&&q>=0&&int64_t(p)-1+q<=length,"Invalid removal range.");boundary(p-1);boundary(p-1+q);a.Remove(p,q);break;
+ case 17:boundary(p);a.Trunc(p);break;
+ case 18:Require(p>=1&&p<=length,"Invalid character index.");number=a.Value(p);break;
+ case 19:number=a.IsIntegerValue();break;
+ case 20:{int expected=CheckedInteger(a);Require(a.IsIntegerValue(),"Input is not an integer.");number=a.IntegerValue();Require(number==expected,"SDK integer conversion mismatch.");break;}
+ case 21:number=a.IsRealValue(flag!=0);break;
+ case 22:Require(a.IsRealValue(true),"Input is not a complete real value.");number=a.RealValue();Require(std::isfinite(number),"Nonfinite parsed number.");break;
+ case 23:
+  if constexpr(std::is_same_v<S,TCollection_AsciiString>)number=S::IsSameString(a,b,flag!=0);
+  else number=a.IsSameString(b,flag!=0);break;
+ default:
+  if constexpr(std::is_same_v<S,TCollection_AsciiString>){
+   Require(p>=0&&p<=ValueLimit&&q>=1&&q<=127,"Invalid ASCII padding or replacement character.");
+   switch(op){
+   case 24:a.Capitalize();break;case 25:a.Clear();break;case 26:a.LeftAdjust();break;case 27:a.RightAdjust();break;
+   case 28:a.LowerCase();break;case 29:a.UpperCase();break;case 30:a.Center(p,static_cast<char>(q));break;
+   case 31:a.LeftJustify(p,static_cast<char>(q));break;case 32:a.RightJustify(p,static_cast<char>(q));break;
+   case 33:Require(p>0&&p<128,"Invalid replacement character.");a.ChangeAll(static_cast<char>(p),static_cast<char>(q),flag!=0);break;
+   case 34:Require(p>0&&p<128,"Invalid removal character.");if(flag==2)a.RemoveAll(static_cast<char>(p));else a.RemoveAll(static_cast<char>(p),flag!=0);break;
+   case 35:Require(p>0,"Token index must be positive.");a=a.Token(b.ToCString(),p);break;
+   case 36:boundary(p);a.InsertAfter(p,b);break;case 37:boundary(p-1);a.InsertBefore(p,b);break;
+   case 38:number=S::IsEqual(std::string_view(a.ToCString(),a.Length()),b);break;
+   case 39:number=S::IsEqual(a,std::string_view(b.ToCString(),b.Length()));break;
+   default:Require(false,"Unknown ASCII operation.");}
+  }else Require(false,"ASCII-only operation requested on Unicode text.");
+ }
+ out.strings={CopyText(a),CopyText(remainder)};out.values={number,static_cast<double>(a.Length()),static_cast<double>(a.IsEmpty()),static_cast<double>(a.IsAscii())};
+ if constexpr(std::is_same_v<S,TCollection_AsciiString>)out.values.push_back(a.UsefullLength());
+ else {out.values.push_back(a.LengthOfCString());const char16_t* copied=a.ToExtString();Require(a.Length()==0||copied,"Missing UTF16 storage.");}
+}
+void PathWork(const std::string& text,const std::string& other,int op,int system,int index,FoundationResult& out){
+ Require(system>=OSD_Default&&system<=OSD_Aix,"Invalid path system ordinal.");auto type=static_cast<OSD_SysType>(system);
+ TCollection_AsciiString input(text.c_str()),b(other.c_str());bool sdkValid=OSD_Path::IsValid(input,type);
+ OSD_Path original(input,type);OSD_Path path(original);TCollection_AsciiString result;
+ switch(op){case 0:break;case 1:path.SetName(b);break;case 2:path.SetExtension(b);break;case 3:path.SetTrek(b);break;
+ case 4:path.DownTrek(b);break;case 5:path.UpTrek();break;
+ case 6:Require(index>=1&&index<=path.TrekLength(),"Invalid trek index.");result=path.TrekValue(index);break;
+ case 7:result=OSD_Path::RelativePath(input,b);break;case 8:result=OSD_Path::AbsolutePath(input,b);break;
+ default:Require(false,"Unknown path operation.");}
+ TCollection_AsciiString node,user,password,disk,trek,name,extension,full;
+ path.Values(node,user,password,disk,trek,name,extension);path.SystemName(full,type);
+ Require(node.IsEqual(path.Node())&&user.IsEqual(path.UserName())&&password.IsEqual(path.Password())&&disk.IsEqual(path.Disk())&&trek.IsEqual(path.Trek())&&name.IsEqual(path.Name())&&extension.IsEqual(path.Extension()),"Inconsistent copied path components.");
+ out.strings={CopyText(full),CopyText(node),CopyText(user),CopyText(password),CopyText(disk),CopyText(trek),CopyText(name),CopyText(extension),CopyText(result)};
+ const char* s=text.c_str();out.values={static_cast<double>(path.TrekLength()),static_cast<double>(OSD_Path::IsAbsolutePath(s)),static_cast<double>(OSD_Path::IsRelativePath(s)),static_cast<double>(OSD_Path::IsDosPath(s)),static_cast<double>(OSD_Path::IsUnixPath(s)),static_cast<double>(OSD_Path::IsUncPath(s)),static_cast<double>(OSD_Path::IsUncExtendedPath(s)),static_cast<double>(OSD_Path::IsNtExtendedPath(s)),static_cast<double>(OSD_Path::IsRemoteProtocolPath(s)),static_cast<double>(OSD_Path::IsContentProtocolPath(s)),static_cast<double>(sdkValid)};
+}
+void ColorWork(const std::string& text,int op,int arg,const double* vector,FoundationResult& out){
+ Quantity_Color color;NCollection_Vec3<float> v(0,0,0),result(0,0,0);
+ if(vector)for(int i=0;i<3;++i){Require(std::isfinite(vector[i])&&std::abs(vector[i])<=std::numeric_limits<float>::max(),"Invalid color vector.");v[i]=static_cast<float>(vector[i]);}
+ if(op==0)Require(Quantity_Color::ColorFromHex(text.c_str(),color),"Invalid color hex.");
+ else if(op==1){Quantity_NameOfColor name;Require(Quantity_Color::ColorFromName(text.c_str(),name)&&Quantity_Color::ColorFromName(text.c_str(),color),"Unknown color name.");}
+ else if(op==2)Quantity_Color::Argb2color(arg,color);
+ else {
+  Require(vector,"Missing color vector.");switch(op){
+  case 3:result=Quantity_Color::Convert_sRGB_To_LinearRGB(v);break;case 4:result=Quantity_Color::Convert_LinearRGB_To_sRGB(v);break;
+  case 5:result=Quantity_Color::Convert_HLS_To_LinearRGB(v);break;case 6:result=Quantity_Color::Convert_HLS_To_sRGB(v);break;
+  case 7:result=Quantity_Color::Convert_Lab_To_Lch(v);break;case 8:result=Quantity_Color::Convert_Lab_To_LinearRGB(v);break;
+  case 9:result=Quantity_Color::Convert_Lch_To_Lab(v);break;case 10:result=Quantity_Color::Convert_LinearRGB_To_HLS(v);break;
+  case 11:result=Quantity_Color::Convert_LinearRGB_To_Lab(v);break;case 12:result=Quantity_Color::Convert_sRGB_To_HLS(v);break;
+  default:Require(false,"Unknown color conversion.");}
+  for(int i=0;i<3;++i)Require(std::isfinite(result[i]),"Nonfinite color conversion result.");out.values={result[0],result[1],result[2]};return;
+ }
+ Quantity_Color copy(color);const auto& rgb=copy.Rgb();double r,g,b;copy.Values(r,g,b,Quantity_TOC_RGB);
+ Require(r==copy.Red()&&g==copy.Green()&&b==copy.Blue(),"Color scalar projection mismatch.");
+ Require(copy.Name()==Quantity_Color::Name(r,g,b),"Color name projection mismatch.");
+ out.values={rgb[0],rgb[1],rgb[2],static_cast<double>(copy.Name())};out.strings={CopyText(Quantity_Color::ColorToHex(copy,arg!=0)),std::string(Quantity_Color::StringName(copy.Name()))};
+}
+// Validate expression structure before the SDK evaluator indexes neighboring tokens.
+// Bound nesting/factors/exponents; SDK sentence analysis still proves unit symbols.
+struct UnitGrammar {
+ const std::string& text;size_t at=0;int factors=0;
+ void Space(){while(at<text.size()&&text[at]==' ')++at;}
+ void Factor(int depth){
+  Space();Require(depth<=16&&++factors<=32&&at<text.size(),"Unit expression complexity exceeded.");
+  if(text[at]=='('){++at;Expression(depth+1);Space();Require(at<text.size()&&text[at]==')',"Unbalanced unit parentheses.");++at;}
+  else {size_t start=at;while(at<text.size()&&((text[at]>='a'&&text[at]<='z')||(text[at]>='A'&&text[at]<='Z')))++at;Require(at>start,"Expected unit symbol.");}
+  Space();if(at+1<text.size()&&text[at]=='*'&&text[at+1]=='*'){
+   at+=2;Space();if(at<text.size()&&(text[at]=='+'||text[at]=='-'))++at;
+   size_t start=at;int power=0;while(at<text.size()&&text[at]>='0'&&text[at]<='9'){power=power*10+text[at++]-'0';Require(power<=16,"Unit exponent limit exceeded.");}Require(at>start,"Missing unit exponent.");
+  }
+ }
+ void Expression(int depth){Factor(depth);Space();while(at<text.size()&&(text[at]=='*'||text[at]=='/')){++at;Factor(depth);Space();}}
+ void Validate(){Expression(0);Space();Require(at==text.size(),"Invalid unit expression syntax.");}
+};
+occ::handle<Units_Dimensions> UnitDimension(const std::string& unit){
+ Require(!unit.empty()&&unit.size()<=256,"Unit expression must contain 1 to 256 ASCII bytes.");
+ UnitGrammar{unit}.Validate();
+ Units_UnitSentence sentence(unit.c_str());Require(sentence.IsDone(),"Unknown unit expression.");auto token=sentence.Evaluate();
+ Require(!token.IsNull(),"Unit expression evaluation failed.");auto dimension=token->Dimensions();Require(!dimension.IsNull(),"Unit expression has no dimension.");return dimension;
+}
+void UnitWork(const std::string& from,const std::string& to,int op,int kind,double input,FoundationResult& out){
+ Require(std::isfinite(input),"Unit value must be finite.");occ::handle<Units_Dimensions> dimension;double result=input;
+ if(op<=2){dimension=UnitDimension(from);if(op==0){auto target=UnitDimension(to);Require(dimension->IsEqual(target),"Incompatible unit dimensions.");result=UnitsAPI::AnyToAny(input,from.c_str(),to.c_str());}
+  else if(op==1){occ::handle<Units_Dimensions> actual;double first=UnitsAPI::AnyToSI(input,from.c_str(),actual);Require(!actual.IsNull()&&actual->IsEqual(dimension),"Unit dimension mismatch.");result=UnitsAPI::AnyToSI(input,from.c_str());Require(result==first,"Unit conversion mismatch.");}
+  else result=UnitsAPI::AnyFromSI(input,from.c_str());
+ }else if(op==3){switch(kind){case 0:dimension=UnitsAPI::DimensionLess();break;case 1:dimension=UnitsAPI::DimensionMass();break;case 2:dimension=UnitsAPI::DimensionLength();break;case 3:dimension=UnitsAPI::DimensionTime();break;case 4:dimension=UnitsAPI::DimensionElectricCurrent();break;case 5:dimension=UnitsAPI::DimensionThermodynamicTemperature();break;case 6:dimension=UnitsAPI::DimensionAmountOfSubstance();break;case 7:dimension=UnitsAPI::DimensionLuminousIntensity();break;case 8:dimension=UnitsAPI::DimensionPlaneAngle();break;case 9:dimension=UnitsAPI::DimensionSolidAngle();break;default:Require(false,"Unknown dimension kind.");}}
+ else if(op==4){Require(!from.empty()&&from.size()<=256,"Invalid quantity name.");dimension=UnitsAPI::Dimensions(from.c_str());}
+ else Require(false,"Unknown unit operation.");
+ Require(!dimension.IsNull()&&std::isfinite(result),"Invalid unit result.");out.values={result,dimension->Mass(),dimension->Length(),dimension->Time(),dimension->ElectricCurrent(),dimension->ThermodynamicTemperature(),dimension->AmountOfSubstance(),dimension->LuminousIntensity(),dimension->PlaneAngle(),dimension->SolidAngle()};
+}
+}
+void OCCTSHARP_CALL occtsharp_foundation_values_release(void* token){OcctSharpOwned::Release(token,typeid(FoundationResult));}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_foundation_values_execute(int32_t family,int32_t operation,const char* text,int32_t size,const char* other,int32_t otherSize,int32_t p,int32_t q,int32_t flags,const double* numbers,int32_t numberCount,void** result){
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(family>=0&&family<=4&&flags>=0&&flags<=2&&numberCount>=0&&numberCount<=3&&(numberCount==0||numbers),"Invalid copied value request.");
+  std::string a=Text(text,size,family!=1),b=Text(other,otherSize,family!=1);auto out=std::make_shared<FoundationResult>();
+  switch(family){
+  case 0:{TCollection_AsciiString original;if(!a.empty())original=TCollection_AsciiString(a.c_str());TCollection_AsciiString copy(original),second(b.c_str());StringWork(copy,second,operation,p,q,flags,*out);break;}
+  case 1:{TCollection_ExtendedString original;if(!a.empty())original=TCollection_ExtendedString(a.c_str(),true);TCollection_ExtendedString copy(original),second(b.c_str(),true);StringWork(copy,second,operation,p,q,flags,*out);break;}
+  case 2:PathWork(a,b,operation,p,q,*out);break;
+  case 3:Require(numberCount==0||numberCount==3,"Color requires three components.");ColorWork(a,operation,p,numberCount?numbers:nullptr,*out);break;
+  case 4:{Require(numberCount==1,"Unit operation requires one value.");std::lock_guard<std::mutex> lock(FoundationUnitMutex);UnitWork(a,b,operation,p,numbers[0],*out);break;}
+  }
+  for(double value:out->values)Require(std::isfinite(value),"Nonfinite copied scalar.");Publication<FoundationResult> publication(out);*result=publication.Commit();
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_foundation_values_info(const void* token,int32_t* strings,int32_t* values){
+ return Guard([&]{Require(strings&&values,"Missing output counts.");auto out=OcctSharpOwned::Lease<const FoundationResult>(token);*strings=static_cast<int>(out->strings.size());*values=static_cast<int>(out->values.size());});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_foundation_values_text(const void* token,int32_t index,char* buffer,int32_t capacity,int32_t* written){
+ return Guard([&]{Require(written&&capacity>=0,"Invalid copied text output.");auto out=OcctSharpOwned::Lease<const FoundationResult>(token);Require(index>=0&&static_cast<size_t>(index)<out->strings.size(),"Invalid copied text index.");const auto& s=out->strings[index];
+  if(!buffer&&capacity==0){*written=static_cast<int>(s.size());return;}Require(buffer&&capacity>=static_cast<int>(s.size()),"Insufficient copied text capacity.");std::copy(s.begin(),s.end(),buffer);*written=static_cast<int>(s.size());});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_foundation_values_numbers(const void* token,double* buffer,int32_t capacity){
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const FoundationResult>(token);Require(buffer&&capacity>=static_cast<int>(out->values.size()),"Insufficient scalar capacity.");std::copy(out->values.begin(),out->values.end(),buffer);});
+}

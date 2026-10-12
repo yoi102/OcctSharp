@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Xde/Pmi implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Foundation/Text.hxx"
@@ -53,7 +55,7 @@ opencascade::handle<XCAFDoc_ViewTool> GetViewTool(const OcctSharp_OcafDocumentHa
 opencascade::handle<XCAFDoc_ClippingPlaneTool> GetClippingPlaneTool(const OcctSharp_OcafDocumentHandle* document)
 {
   ValidateOcafDocument(document);
-  return XCAFDoc_DocumentTool::ClippingPlaneTool(document->Document->Main());
+  return OcctSharpGenerated::XdeAdapters::XCAFDoc_DocumentTool_ClippingPlaneTool(document->Document->Main());
 }
 
 opencascade::handle<TCollection_HAsciiString> MakePmiString(const char* value)
@@ -94,10 +96,10 @@ NCollection_Sequence<TDF_Label> ResolveEntries(
 std::vector<TDF_Label> PmiLabels(const OcctSharp_OcafDocumentHandle* document, const int32_t kind)
 {
   NCollection_Sequence<TDF_Label> labels;
-  if (kind == 0) GetDimTolTool(document)->GetDimensionLabels(labels);
-  else if (kind == 1) GetDimTolTool(document)->GetGeomToleranceLabels(labels);
-  else if (kind == 2) GetDimTolTool(document)->GetDatumLabels(labels);
-  else if (kind == 3) GetViewTool(document)->GetViewLabels(labels);
+  if (kind == 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetDimensionLabels_Bind(*(GetDimTolTool(document)))(labels);
+  else if (kind == 1) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetGeomToleranceLabels_Bind(*(GetDimTolTool(document)))(labels);
+  else if (kind == 2) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetDatumLabels_Bind(*(GetDimTolTool(document)))(labels);
+  else if (kind == 3) OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetViewLabels_Bind(*(GetViewTool(document)))(labels);
   else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI item kind is outside the supported range.");
   std::vector<TDF_Label> result;
   result.reserve(static_cast<size_t>(labels.Size()));
@@ -111,7 +113,7 @@ opencascade::handle<XCAFDimTolObjects_DimensionObject> GetDimensionObject(
 {
   opencascade::handle<XCAFDoc_Dimension> attribute;
   const TDF_Label label = ResolveOcafLabel(document, entry);
-  if (!label.FindAttribute(XCAFDoc_Dimension::GetID(), attribute))
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_Dimension_GetID(), attribute))
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a semantic dimension.");
   const auto object = attribute->GetObject();
   if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The semantic dimension has no value object.");
@@ -123,7 +125,7 @@ opencascade::handle<XCAFDimTolObjects_GeomToleranceObject> GetToleranceObject(
 {
   opencascade::handle<XCAFDoc_GeomTolerance> attribute;
   const TDF_Label label = ResolveOcafLabel(document, entry);
-  if (!label.FindAttribute(XCAFDoc_GeomTolerance::GetID(), attribute))
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_GeomTolerance_GetID(), attribute))
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a geometric tolerance.");
   const auto object = attribute->GetObject();
   if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The geometric tolerance has no value object.");
@@ -135,12 +137,12 @@ opencascade::handle<XCAFDimTolObjects_DatumObject> GetDatumObject(
 {
   opencascade::handle<XCAFDoc_Datum> attribute;
   const TDF_Label label = ResolveOcafLabel(document, entry);
-  if (!label.FindAttribute(XCAFDoc_Datum::GetID(), attribute))
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_GetID(), attribute))
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a datum.");
   const auto object = attribute->GetObject();
   if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The datum has no value object.");
   opencascade::handle<TDataStd_RealArray> point;
-  if (label.FindChild(17, false).FindAttribute(TDataStd_RealArray::GetID(), point)
+  if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(OcctSharpGenerated::DocumentAdapters::TDF_Label_FindChild(label,17, false),OcctSharpGenerated::DocumentAdapters::TDataStd_RealArray_GetID(), point)
       && point->Length() == 3)
   {
     const int32_t lower = point->Lower();
@@ -167,7 +169,7 @@ void SetDimensionObject(
     if (!std::isfinite(values[index])) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension values must be finite.");
     valueArray->SetValue(index + 1, values[index]);
   }
-  object->SetValues(valueArray);
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetValues_Bind(*(object))(valueArray);
   if (data.has_qualifier) object->SetQualifier(static_cast<XCAFDimTolObjects_DimensionQualifier>(data.qualifier));
   if (data.has_angular_qualifier) object->SetAngularQualifier(static_cast<XCAFDimTolObjects_AngularQualifier>(data.angular_qualifier));
   if (data.has_class_of_tolerance)
@@ -178,17 +180,17 @@ void SetDimensionObject(
   NCollection_Sequence<XCAFDimTolObjects_DimensionModif> modifierValues;
   for (int32_t index = 0; index < modifierCount; ++index)
     modifierValues.Append(static_cast<XCAFDimTolObjects_DimensionModif>(modifiers[index]));
-  object->SetModifiers(modifierValues);
-  if (data.has_direction) object->SetDirection(ToDirection(data.direction));
-  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetModifiers_Bind(*(object))(modifierValues);
+  if (data.has_direction) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetDirection_Bind(*(object))(ToDirection(data.direction));
+  if (data.has_plane) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPlane_Bind(*(object))(ToAxis(data.plane));
   if (data.has_first_point) object->SetPoint(ToPoint(data.first_point));
   if (data.has_second_point) object->SetPoint2(ToPoint(data.second_point));
   if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
   object->SetSemanticName(MakePmiString(semanticName));
-  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), MakePmiString(presentationName));
   if ((description != nullptr && description[0] != '\0') || (descriptionName != nullptr && descriptionName[0] != '\0'))
     object->AddDescription(MakePmiString(description), MakePmiString(descriptionName));
-  XCAFDoc_Dimension::Set(label)->SetObject(object);
+  OcctSharpGenerated::XdeAdapters::XCAFDoc_Dimension_Set(label)->SetObject(object);
 }
 
 void SetToleranceObject(
@@ -210,17 +212,17 @@ void SetToleranceObject(
   NCollection_Sequence<XCAFDimTolObjects_GeomToleranceModif> modifierValues;
   for (int32_t index = 0; index < modifierCount; ++index)
     modifierValues.Append(static_cast<XCAFDimTolObjects_GeomToleranceModif>(modifiers[index]));
-  object->SetModifiers(modifierValues);
-  if (data.has_axis) object->SetAxis(ToAxis(data.axis));
-  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetModifiers_Bind(*(object))(modifierValues);
+  if (data.has_axis) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetAxis_Bind(*(object))(ToAxis(data.axis));
+  if (data.has_plane) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetPlane_Bind(*(object))(ToAxis(data.plane));
   if (data.has_point) object->SetPoint(ToPoint(data.point));
   if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
   if (data.affected_plane_type != 0)
-    object->SetAffectedPlane(ToPlane(data.affected_plane),
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetAffectedPlane_Bind(*(object))(ToPlane(data.affected_plane),
       static_cast<XCAFDimTolObjects_ToleranceZoneAffectedPlane>(data.affected_plane_type));
   object->SetSemanticName(MakePmiString(semanticName));
-  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
-  XCAFDoc_GeomTolerance::Set(label)->SetObject(object);
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), MakePmiString(presentationName));
+  OcctSharpGenerated::XdeAdapters::XCAFDoc_GeomTolerance_Set(label)->SetObject(object);
 }
 
 void SetDatumObject(
@@ -242,15 +244,15 @@ void SetDatumObject(
   NCollection_Sequence<XCAFDimTolObjects_DatumSingleModif> modifierValues;
   for (int32_t index = 0; index < modifierCount; ++index)
     modifierValues.Append(static_cast<XCAFDimTolObjects_DatumSingleModif>(modifiers[index]));
-  object->SetModifiers(modifierValues);
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetModifiers_Bind(*(object))(modifierValues);
   if (data.has_modifier_with_value)
     object->SetModifierWithValue(static_cast<XCAFDimTolObjects_DatumModifWithValue>(data.modifier_with_value), data.modifier_value);
-  if (data.has_target_axis) object->SetDatumTargetAxis(ToAxis(data.target_axis));
-  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  if (data.has_target_axis) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetDatumTargetAxis_Bind(*(object))(ToAxis(data.target_axis));
+  if (data.has_plane) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetPlane_Bind(*(object))(ToAxis(data.plane));
   if (data.has_point) object->SetPoint(ToPoint(data.point));
   if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
-  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
-  auto attribute = XCAFDoc_Datum::Set(label, MakePmiString(name), MakePmiString(description), MakePmiString(identification));
+  OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), MakePmiString(presentationName));
+  auto attribute = OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_Set(label, MakePmiString(name), MakePmiString(description), MakePmiString(identification));
   attribute->SetObject(object);
 }
 
@@ -273,7 +275,7 @@ std::string PmiText(const OcctSharp_OcafDocumentHandle* document, const int32_t 
   else if (kind == 2)
   {
     opencascade::handle<XCAFDoc_Datum> attribute;
-    ResolveOcafLabel(document, entry).FindAttribute(XCAFDoc_Datum::GetID(), attribute);
+    OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_GetID(), attribute);
     const auto object = GetDatumObject(document, entry);
     if (field == 0) return CopyPmiString(attribute->GetName());
     if (field == 1) return CopyPmiString(attribute->GetDescription());
@@ -298,25 +300,25 @@ NCollection_Sequence<TDF_Label> ReferenceLabels(
   const TDF_Label label = ResolveOcafLabel(document, entry);
   if (relation == 0 || relation == 1 || relation == 2 || relation == 4)
   {
-    XCAFDoc_DimTolTool::GetRefShapeLabel(label, first, second);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetRefShapeLabel(label, first, second);
     if (relation == 1) return second;
     return first;
   }
-  if (relation == 3) XCAFDoc_DimTolTool::GetDatumOfTolerLabels(label, first);
-  else if (relation == 5) GetDimTolTool(document)->GetTolerOfDatumLabels(label, first);
+  if (relation == 3) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetDatumOfTolerLabels(label, first);
+  else if (relation == 5) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_GetTolerOfDatumLabels_Bind(*(GetDimTolTool(document)))(label, first);
   else if (relation == 6)
   {
     const auto viewTool = GetViewTool(document);
-    if (!viewTool->IsView(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_IsView_Bind(*(viewTool))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
-    viewTool->GetRefShapeLabel(label, first);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefShapeLabel_Bind(*(viewTool))(label, first);
   }
   else if (relation == 7)
   {
     const auto viewTool = GetViewTool(document);
-    if (!viewTool->IsView(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_IsView_Bind(*(viewTool))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
-    viewTool->GetRefGDTLabel(label, first);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ViewTool_GetRefGDTLabel_Bind(*(viewTool))(label, first);
   }
   else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI reference relation is unsupported.");
   return first;
@@ -357,7 +359,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_create(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
-    const TDF_Label label = GetDimTolTool(document)->AddDimension();
+    const TDF_Label label = OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_AddDimension_Bind(*(GetDimTolTool(document)))();
     SetDimensionObject(label, *data, values, valueCount, modifiers, modifierCount,
       semanticName, presentationName, description, descriptionName);
     CopyLabelEntry(label, buffer, capacity, written);
@@ -375,15 +377,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_update(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!GetDimTolTool(document)->IsDimension(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsDimension_Bind(*(GetDimTolTool(document)))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a semantic dimension.");
     const auto previous = GetDimensionObject(document, entry);
     SetDimensionObject(label, *data, values, valueCount, modifiers, modifierCount,
       semanticName, presentationName, description, descriptionName);
     const auto updated = GetDimensionObject(document, entry);
-    updated->SetPath(previous->GetPath());
-    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
-    XCAFDoc_Dimension::Set(label)->SetObject(updated);
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPath_Bind(*(updated))(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPath_Bind(*(previous))());
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPresentation_Bind(*(updated))(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPresentation_Bind(*(previous))(), previous->GetPresentationName());
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_Dimension_Set(label)->SetObject(updated);
   });
 }
 
@@ -397,7 +399,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_create(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
-    const TDF_Label label = GetDimTolTool(document)->AddGeomTolerance();
+    const TDF_Label label = OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_AddGeomTolerance_Bind(*(GetDimTolTool(document)))();
     SetToleranceObject(label, *data, modifiers, modifierCount, semanticName, presentationName);
     CopyLabelEntry(label, buffer, capacity, written);
   });
@@ -413,13 +415,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_update(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!GetDimTolTool(document)->IsGeomTolerance(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsGeomTolerance_Bind(*(GetDimTolTool(document)))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a geometric tolerance.");
     const auto previous = GetToleranceObject(document, entry);
     SetToleranceObject(label, *data, modifiers, modifierCount, semanticName, presentationName);
     const auto updated = GetToleranceObject(document, entry);
-    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
-    XCAFDoc_GeomTolerance::Set(label)->SetObject(updated);
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetPresentation_Bind(*(updated))(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetPresentation_Bind(*(previous))(), previous->GetPresentationName());
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_GeomTolerance_Set(label)->SetObject(updated);
   });
 }
 
@@ -434,7 +436,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_create(
   return Guard([&]
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
-    const TDF_Label label = GetDimTolTool(document)->AddDatum();
+    const TDF_Label label = OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_AddDatum_Bind(*(GetDimTolTool(document)))();
     SetDatumObject(label, *data, modifiers, modifierCount, name, description, identification, semanticName, presentationName);
     CopyLabelEntry(label, buffer, capacity, written);
   });
@@ -451,14 +453,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_update(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (!GetDimTolTool(document)->IsDatum(label))
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsDatum_Bind(*(GetDimTolTool(document)))(label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a datum.");
     const auto previous = GetDatumObject(document, entry);
     SetDatumObject(label, *data, modifiers, modifierCount, name, description, identification, semanticName, presentationName);
     const auto updated = GetDatumObject(document, entry);
-    updated->SetDatumTarget(previous->GetDatumTarget());
-    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
-    XCAFDoc_Datum::Set(label)->SetObject(updated);
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetDatumTarget_Bind(*(updated))(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetDatumTarget_Bind(*(previous))());
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetPresentation_Bind(*(updated))(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetPresentation_Bind(*(previous))(), previous->GetPresentationName());
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_Set(label)->SetObject(updated);
   });
 }
 
@@ -480,25 +482,25 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_get(
     bool isHole = false;
     XCAFDimTolObjects_DimensionFormVariance variance;
     XCAFDimTolObjects_DimensionGrade grade;
-    data->has_class_of_tolerance = object->GetClassOfTolerance(isHole, variance, grade) ? 1 : 0;
+    data->has_class_of_tolerance = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetClassOfTolerance_Bind(*(object))(isHole, variance, grade) ? 1 : 0;
     data->is_hole = isHole ? 1 : 0;
     data->form_variance = static_cast<int32_t>(variance);
     data->grade = static_cast<int32_t>(grade);
-    object->GetNbOfDecimalPlaces(data->left_decimal_places, data->right_decimal_places);
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetNbOfDecimalPlaces_Bind(*(object))(data->left_decimal_places, data->right_decimal_places);
     gp_Dir direction;
-    data->has_direction = object->GetDirection(direction) ? 1 : 0;
+    data->has_direction = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetDirection_Bind(*(object))(direction) ? 1 : 0;
     if (data->has_direction) data->direction = { direction.X(), direction.Y(), direction.Z() };
     data->has_plane = object->HasPlane() ? 1 : 0;
-    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    if (data->has_plane) data->plane = CopyAxis(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPlane_Bind(*(object))());
     data->has_first_point = object->HasPoint() ? 1 : 0;
     if (data->has_first_point) data->first_point = CopyPoint(object->GetPoint());
     data->has_second_point = object->HasPoint2() ? 1 : 0;
     if (data->has_second_point) data->second_point = CopyPoint(object->GetPoint2());
     data->has_text_point = 1;
-    data->text_point = CopyPoint(object->GetPointTextAttach());
-    const auto values = object->GetValues();
+    data->text_point = CopyPoint(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPointTextAttach_Bind(*(object))());
+    const auto values = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetValues_Bind(*(object))();
     *valueCount = values.IsNull() ? 0 : values->Length();
-    *modifierCount = object->GetModifiers().Size();
+    *modifierCount = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetModifiers_Bind(*(object))().Size();
   });
 }
 
@@ -520,16 +522,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_get(
     data->zone_modifier_value = object->GetValueOfZoneModifier();
     data->maximum_value_modifier = object->GetMaxValueModifier();
     data->has_axis = object->HasAxis() ? 1 : 0;
-    if (data->has_axis) data->axis = CopyAxis(object->GetAxis());
+    if (data->has_axis) data->axis = CopyAxis(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetAxis_Bind(*(object))());
     data->has_plane = object->HasPlane() ? 1 : 0;
-    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    if (data->has_plane) data->plane = CopyAxis(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetPlane_Bind(*(object))());
     data->has_point = object->HasPoint() ? 1 : 0;
-    if (data->has_point) data->point = CopyPoint(object->GetPoint());
+    if (data->has_point) data->point = CopyPoint(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetPoint_Bind(*(object))());
     data->has_text_point = object->HasPointText() ? 1 : 0;
-    if (data->has_text_point) data->text_point = CopyPoint(object->GetPointTextAttach());
+    if (data->has_text_point) data->text_point = CopyPoint(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetPointTextAttach_Bind(*(object))());
     data->affected_plane_type = static_cast<int32_t>(object->GetAffectedPlaneType());
-    if (object->HasAffectedPlane()) data->affected_plane = CopyPlane(object->GetAffectedPlane());
-    *modifierCount = object->GetModifiers().Size();
+    if (object->HasAffectedPlane()) data->affected_plane = CopyPlane(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetAffectedPlane_Bind(*(object))());
+    *modifierCount = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetModifiers_Bind(*(object))().Size();
   });
 }
 
@@ -550,20 +552,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_get(
     data->target_width = object->GetDatumTargetWidth();
     data->target_number = object->GetDatumTargetNumber();
     data->has_target_axis = object->HasDatumTargetParams() ? 1 : 0;
-    if (data->has_target_axis) data->target_axis = CopyAxis(object->GetDatumTargetAxis());
+    if (data->has_target_axis) data->target_axis = CopyAxis(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetDatumTargetAxis_Bind(*(object))());
     data->has_plane = object->HasPlane() ? 1 : 0;
-    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    if (data->has_plane) data->plane = CopyAxis(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetPlane_Bind(*(object))());
     data->has_point = object->HasPoint() ? 1 : 0;
-    if (data->has_point) data->point = CopyPoint(object->GetPoint());
+    if (data->has_point) data->point = CopyPoint(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetPoint_Bind(*(object))());
     data->has_text_point = object->HasPointText() ? 1 : 0;
-    if (data->has_text_point) data->text_point = CopyPoint(object->GetPointTextAttach());
+    if (data->has_text_point) data->text_point = CopyPoint(OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetPointTextAttach_Bind(*(object))());
     XCAFDimTolObjects_DatumModifWithValue modifier;
     double modifierValue = 0.0;
-    object->GetModifierWithValue(modifier, modifierValue);
+    OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetModifierWithValue_Bind(*(object))(modifier, modifierValue);
     data->modifier_with_value = static_cast<int32_t>(modifier);
     data->modifier_value = modifierValue;
     data->has_modifier_with_value = std::abs(modifierValue) > 0.0 ? 1 : 0;
-    *modifierCount = object->GetModifiers().Size();
+    *modifierCount = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetModifiers_Bind(*(object))().Size();
   });
 }
 
@@ -579,25 +581,25 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_numeric_item(
     if (index < 1) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "PMI numeric item indices are 1-based.");
     if (kind == 0 && field == 0)
     {
-      const auto values = GetDimensionObject(document, entry)->GetValues();
+      const auto values = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetValues_Bind(*(GetDimensionObject(document, entry)))();
       if (values.IsNull() || index > values->Length()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension value index is out of range.");
       *realValue = values->Value(index); return;
     }
     if (kind == 0 && field == 1)
     {
-      const auto values = GetDimensionObject(document, entry)->GetModifiers();
+      const auto values = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetModifiers_Bind(*(GetDimensionObject(document, entry)))();
       if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension modifier index is out of range.");
       *integerValue = static_cast<int32_t>(values.Value(index)); return;
     }
     if (kind == 1 && field == 0)
     {
-      const auto values = GetToleranceObject(document, entry)->GetModifiers();
+      const auto values = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetModifiers_Bind(*(GetToleranceObject(document, entry)))();
       if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Tolerance modifier index is out of range.");
       *integerValue = static_cast<int32_t>(values.Value(index)); return;
     }
     if (kind == 2 && field == 0)
     {
-      const auto values = GetDatumObject(document, entry)->GetModifiers();
+      const auto values = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetModifiers_Bind(*(GetDatumObject(document, entry)))();
       if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Datum modifier index is out of range.");
       *integerValue = static_cast<int32_t>(values.Value(index)); return;
     }
@@ -631,24 +633,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_aux_shape(
     if (kind == 0)
     {
       const auto object = GetDimensionObject(document, entry);
-      if (role == 0) object->SetPath(TopoDS::Edge(shape->Value));
-      else if (role == 1) object->SetPresentation(shape->Value, MakePmiString(name));
+      if (role == 0) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPath_Bind(*(object))(TopoDS::Edge(shape->Value));
+      else if (role == 1) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPresentation_Bind(*(object))(shape->Value, MakePmiString(name));
       else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The dimension shape role is unsupported.");
-      XCAFDoc_Dimension::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Dimension_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else if (kind == 1 && role == 1)
     {
       const auto object = GetToleranceObject(document, entry);
-      object->SetPresentation(shape->Value, MakePmiString(name));
-      XCAFDoc_GeomTolerance::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetPresentation_Bind(*(object))(shape->Value, MakePmiString(name));
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_GeomTolerance_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else if (kind == 2)
     {
       const auto object = GetDatumObject(document, entry);
-      if (role == 0) object->SetDatumTarget(shape->Value);
-      else if (role == 1) object->SetPresentation(shape->Value, MakePmiString(name));
+      if (role == 0) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetDatumTarget_Bind(*(object))(shape->Value);
+      else if (role == 1) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetPresentation_Bind(*(object))(shape->Value, MakePmiString(name));
       else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The datum shape role is unsupported.");
-      XCAFDoc_Datum::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
   });
@@ -663,22 +665,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_clear_aux_shape(
     if (kind == 0)
     {
       const auto object = GetDimensionObject(document, entry);
-      if (role == 0) object->SetPath(TopoDS_Edge());
-      else object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
-      XCAFDoc_Dimension::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      if (role == 0) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPath_Bind(*(object))(TopoDS_Edge());
+      else OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), object->GetPresentationName());
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Dimension_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else if (kind == 1)
     {
       const auto object = GetToleranceObject(document, entry);
-      object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
-      XCAFDoc_GeomTolerance::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), object->GetPresentationName());
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_GeomTolerance_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else if (kind == 2)
     {
       const auto object = GetDatumObject(document, entry);
-      if (role == 0) object->SetDatumTarget(TopoDS_Shape());
-      else object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
-      XCAFDoc_Datum::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+      if (role == 0) OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetDatumTarget_Bind(*(object))(TopoDS_Shape());
+      else OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_SetPresentation_Bind(*(object))(TopoDS_Shape(), object->GetPresentationName());
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Datum_Set(ResolveOcafLabel(document, entry))->SetObject(object);
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
   });
@@ -693,9 +695,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_get_aux_shape(
   return Guard([&]
   {
     TopoDS_Shape value;
-    if (kind == 0) value = role == 0 ? GetDimensionObject(document, entry)->GetPath() : GetDimensionObject(document, entry)->GetPresentation();
-    else if (kind == 1) value = GetToleranceObject(document, entry)->GetPresentation();
-    else if (kind == 2) value = role == 0 ? GetDatumObject(document, entry)->GetDatumTarget() : GetDatumObject(document, entry)->GetPresentation();
+    if (kind == 0) value = role == 0 ? OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPath_Bind(*(GetDimensionObject(document, entry)))() : OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DimensionObject_GetPresentation_Bind(*(GetDimensionObject(document, entry)))();
+    else if (kind == 1) value = OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_GeomToleranceObject_GetPresentation_Bind(*(GetToleranceObject(document, entry)))();
+    else if (kind == 2) value = role == 0 ? OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetDatumTarget_Bind(*(GetDatumObject(document, entry)))() : OcctSharpGenerated::XdeAdapters::XCAFDimTolObjects_DatumObject_GetPresentation_Bind(*(GetDatumObject(document, entry)))();
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
     if (!value.IsNull()) { *hasShape = 1; *shape = AllocateShape(value); }
   });
@@ -711,20 +713,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_references(
     const TDF_Label item = ResolveOcafLabel(document, entry);
     const NCollection_Sequence<TDF_Label> first = ResolveEntries(document, firstEntries);
     const NCollection_Sequence<TDF_Label> second = ResolveEntries(document, secondEntries);
-    if (kind == 0) GetDimTolTool(document)->SetDimension(first, second, item);
-    else if (kind == 1) GetDimTolTool(document)->SetGeomTolerance(first, item);
-    else if (kind == 2) GetDimTolTool(document)->SetDatum(first, item);
+    if (kind == 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_SetDimension_Bind(*(GetDimTolTool(document)))(first, second, item);
+    else if (kind == 1) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_SetGeomTolerance_Bind(*(GetDimTolTool(document)))(first, item);
+    else if (kind == 2) OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_SetDatum_Bind(*(GetDimTolTool(document)))(first, item);
     else if (kind == 3)
     {
       opencascade::handle<XCAFDoc_GraphNode> toleranceNode;
-      if (item.FindAttribute(XCAFDoc::DatumTolRefGUID(), toleranceNode))
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(item,OcctSharpGenerated::XdeAdapters::XCAFDoc_DatumTolRefGUID(), toleranceNode))
       {
         while (toleranceNode->NbChildren() > 0)
           toleranceNode->UnSetChild(1);
       }
-      item.ForgetAttribute(XCAFDoc::DatumTolRefGUID());
+      OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(item,OcctSharpGenerated::XdeAdapters::XCAFDoc_DatumTolRefGUID());
       for (NCollection_Sequence<TDF_Label>::Iterator iterator(first); iterator.More(); iterator.Next())
-        GetDimTolTool(document)->SetDatumToGeomTol(iterator.Value(), item);
+        OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_SetDatumToGeomTol_Bind(*(GetDimTolTool(document)))(iterator.Value(), item);
     }
     else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI reference kind is unsupported.");
   });
@@ -757,10 +759,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_remove(
   {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    const bool valid = kind == 0 ? GetDimTolTool(document)->IsDimension(label)
-      : kind == 1 ? GetDimTolTool(document)->IsGeomTolerance(label)
-      : kind == 2 ? GetDimTolTool(document)->IsDatum(label) : false;
+    const bool valid = kind == 0 ? OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsDimension_Bind(*(GetDimTolTool(document)))(label)
+      : kind == 1 ? OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsGeomTolerance_Bind(*(GetDimTolTool(document)))(label)
+      : kind == 2 ? OcctSharpGenerated::XdeAdapters::XCAFDoc_DimTolTool_IsDatum_Bind(*(GetDimTolTool(document)))(label) : false;
     if (!valid) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not the requested PMI kind.");
-    label.ForgetAllAttributes(true);
+    OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAllAttributes(label,true);
   });
 }

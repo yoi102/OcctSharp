@@ -1,0 +1,14 @@
+using OcctSharp.ConstructionWorkspaces;
+using OcctSharp.ExtremaResults;
+using OcctSharp.IntersectionResults;
+namespace OcctSharp.Tests.Shared;
+internal static class BatchBMFiniteExtremaWorkflow {
+ internal static GeomCurve Line(GpPoint origin,GpXyz direction){using var result=ParameterizedConstruction.AnalyticEdge(AnalyticConstructionCurve.Line,new(origin,new(0,0,1),direction),-4,4);using var edge=result.CopyShape();return FiniteExtremaGeometry.CopyCurve(edge);}
+ internal static void CheckRows(FiniteExtremaResult result){foreach(var row in result.Rows.Concat(result.EndpointCombinations)){if(row.Points is not {} pair)continue;var a=result.EvaluateSource(0,pair.First.FirstParameter,pair.First.SecondParameter??0);var b=result.EvaluateSource(1,pair.Second.FirstParameter,pair.Second.SecondParameter??0);if(Distance(a,pair.First.Point)>1e-5||Distance(b,pair.Second.Point)>1e-5||Math.Abs(Distance(a,b)*Distance(a,b)-row.SquareDistance)>1e-5)throw new InvalidOperationException("BM coupled copied parameters/points/distance failed.");}}
+ internal static double Distance(GpPoint a,GpPoint b)=>BatchBHIntersectionWorkflow.Distance(a.X,a.Y,a.Z,b.X,b.Y,b.Z);
+ internal static void Run(){
+  using var first=Line(new(0,0,0),new(1,0,0));using var second=Line(new(0,0,2),new(0,1,0));using var cc=FiniteExtrema.CurveCurve(first,new(-3,3),second,new(-3,3));if(!cc.IsDone||cc.IsParallel||cc.Rows.Count!=1||Math.Abs(cc.Rows[0].SquareDistance-4)>1e-7||cc.EndpointCombinations.Count!=4)throw new InvalidOperationException("BM finite CC fixture failed.");CheckRows(cc);first.Dispose();second.Dispose();CheckRows(cc);
+  using var face=ParameterizedConstruction.AnalyticFace(AnalyticConstructionSurface.Plane,ConstructionFrame.World,-4,4,-4,4);using var shape=face.CopyShape();using var surface=RayIntersections.CopySurface(shape);using var upper=Line(new(0,0,2),new(1,0,0));using var cs=FiniteExtrema.CurveSurface(upper,new(-3,3),surface,new(-4,4,-4,4));if(!cs.IsDone||!cs.IsParallel||cs.Rows.Count!=1||cs.Rows[0].Points is not null||Math.Abs(cs.Rows[0].SquareDistance-4)>1e-7)throw new InvalidOperationException("BM parallel CS distance/missing point pair failed.");
+  using var upperFace=ParameterizedConstruction.AnalyticFace(AnalyticConstructionSurface.Plane,new(new(0,0,3),new(0,0,1),new(1,0,0)),-4,4,-4,4);using var upperShape=upperFace.CopyShape();using var upperSurface=RayIntersections.CopySurface(upperShape);using var ss=FiniteExtrema.SurfaceSurface(surface,new(-4,4,-4,4),upperSurface,new(-4,4,-4,4));if(!ss.IsDone||!ss.IsParallel||ss.Rows.Count!=1||ss.Rows[0].Points is not null||Math.Abs(ss.Rows[0].SquareDistance-9)>1e-7)throw new InvalidOperationException("BM parallel SS distance/missing point pair failed.");surface.Dispose();upperSurface.Dispose();CheckRows(cc);var copied=cc.Rows;cc.Dispose();if(copied[0].Points is null)throw new InvalidOperationException("BM detached values failed.");
+ }
+}

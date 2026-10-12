@@ -1,3 +1,4 @@
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #include "Mesh/MeshAuthoring.hxx"
 #include "Runtime/Error.hxx"
 #include <Poly_CoherentTriangulation.hxx>
@@ -34,7 +35,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_weld_nodes(const OcctSharp_Author
     Require(std::isfinite(tolerance) && tolerance >= 0 && tolerance <= std::numeric_limits<float>::max() &&
       (tolerance == 0 || tolerance >= std::numeric_limits<float>::min()), "Weld tolerance is outside OCCT's supported float hashing range.");
     Require(partitionCount == count && capacity >= count && (count == 0 || (partitions && representatives)), "Invalid weld buffers.");
-    struct Partition { occ::handle<Poly_MergeNodesTool> tool; std::vector<int> representatives; };
+    struct Partition { occ::handle<OcctSharpGenerated::PrivateMergeNodesTool> tool; std::vector<int> representatives; };
     std::map<int, Partition> tools; std::vector<int> result(count);
     for (int i = 0; i < count; ++i) {
       const auto& v = vertices[i];
@@ -43,8 +44,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_weld_nodes(const OcctSharp_Author
         std::abs(v.z) <= std::numeric_limits<float>::max(), "Mesh positions exceed the OCCT weld hash range.");
       auto& partition = tools[partitions[i]];
       if (partition.tool.IsNull()) {
-        partition.tool = new Poly_MergeNodesTool(3.14159265358979323846, tolerance);
-        partition.tool->ChangeOutput().Nullify(); partition.tool->SetDropDegenerative(false);
+        partition.tool = new OcctSharpGenerated::PrivateMergeNodesTool(3.14159265358979323846, tolerance);
+        partition.tool->ClearOutput(); partition.tool->SetDropDegenerative(false);
       }
       // OCCT explicitly supports use as a merge map with no output triangulation.
       // A three-point element inserts one position without deriving an artificial surface normal.
@@ -81,7 +82,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_coherent_patch(const OcctSharp_Au
     }
     if (appendedCount) result.insert(result.end(), appended, appended + appendedCount);
     ValidateCoherent(result.data(), static_cast<int>(result.size()));
-    Poly_CoherentTriangulation coherent;
+    OcctSharpGenerated::PrivateCoherentBuilder coherent;
     for (int i = 0; i < vertexCount; ++i) coherent.SetNode(gp_XYZ(vertices[i].x, vertices[i].y, vertices[i].z));
     std::vector<Poly_CoherentTriangle*> sourceTriangles;
     for (int i = 0; i < triangleCount; ++i) {
@@ -123,7 +124,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_remove_degenerate(const OcctSharp
       if (area > minimumArea && length > minimumLength) continue;
       // Removal-only policy deliberately avoids RemoveDegenerated's implicit vertex collapse.
       // Isolate each removed facet so even a non-manifold input is filtered without rewiring survivors.
-      Poly_CoherentTriangulation facet;
+      OcctSharpGenerated::PrivateCoherentBuilder facet;
       facet.SetNode(pa); facet.SetNode(pb); facet.SetNode(pc);
       auto* item = facet.AddTriangle(0, 1, 2);
       Require(item && facet.RemoveTriangle(*item) && facet.NTriangles() == 0, "OCCT coherent triangle removal failed.");

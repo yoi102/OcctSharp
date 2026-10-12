@@ -1,0 +1,653 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@Accept#I#I#",
+      "nativeName": "BRepExtrema_OverlapTool::Accept",
+      "signature": "BRepExtrema_OverlapTool::Accept: bool (const int, const int)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@BRepExtrema_OverlapTool#",
+      "nativeName": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool",
+      "signature": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool: void ()",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@BRepExtrema_OverlapTool#&&$@S@BRepExtrema_OverlapTool#",
+      "nativeName": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool",
+      "signature": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool: void (BRepExtrema_OverlapTool &&)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@BRepExtrema_OverlapTool#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "nativeName": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool",
+      "signature": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool: void (const occ::handle<BRepExtrema_TriangleSet> &, const occ::handle<BRepExtrema_TriangleSet> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@BRepExtrema_OverlapTool#&1$@S@BRepExtrema_OverlapTool#",
+      "nativeName": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool",
+      "signature": "BRepExtrema_OverlapTool::BRepExtrema_OverlapTool: void (const BRepExtrema_OverlapTool &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@IsDone#1",
+      "nativeName": "BRepExtrema_OverlapTool::IsDone",
+      "signature": "BRepExtrema_OverlapTool::IsDone: bool () const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@LoadTriangleSets#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "nativeName": "BRepExtrema_OverlapTool::LoadTriangleSets",
+      "signature": "BRepExtrema_OverlapTool::LoadTriangleSets: void (const occ::handle<BRepExtrema_TriangleSet> &, const occ::handle<BRepExtrema_TriangleSet> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@MarkDirty#",
+      "nativeName": "BRepExtrema_OverlapTool::MarkDirty",
+      "signature": "BRepExtrema_OverlapTool::MarkDirty: void ()",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@OverlapSubShapes1#1",
+      "nativeName": "BRepExtrema_OverlapTool::OverlapSubShapes1",
+      "signature": "BRepExtrema_OverlapTool::OverlapSubShapes1: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@OverlapSubShapes2#1",
+      "nativeName": "BRepExtrema_OverlapTool::OverlapSubShapes2",
+      "signature": "BRepExtrema_OverlapTool::OverlapSubShapes2: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@Perform#d#",
+      "nativeName": "BRepExtrema_OverlapTool::Perform",
+      "signature": "BRepExtrema_OverlapTool::Perform: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@RejectNode#&1$@S@NCollection_Vec3>#d#S0_#S0_#S0_#&d#1",
+      "nativeName": "BRepExtrema_OverlapTool::RejectNode",
+      "signature": "BRepExtrema_OverlapTool::RejectNode: bool (const BVH_Vec3d &, const BVH_Vec3d &, const BVH_Vec3d &, const BVH_Vec3d &, double &) const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_OverlapTool@F@SetElementFilter#*$@S@BRepExtrema_ElementFilter#",
+      "nativeName": "BRepExtrema_OverlapTool::SetElementFilter",
+      "signature": "BRepExtrema_OverlapTool::SetElementFilter: void (BRepExtrema_ElementFilter *)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@Accept#I#&1d#",
+      "nativeName": "BRepExtrema_ProximityDistTool::Accept",
+      "signature": "BRepExtrema_ProximityDistTool::Accept: bool (const int, const double &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@BRepExtrema_ProximityDistTool#",
+      "nativeName": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool",
+      "signature": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool: void ()",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@BRepExtrema_ProximityDistTool#&&$@S@BRepExtrema_ProximityDistTool#",
+      "nativeName": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool",
+      "signature": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool: void (BRepExtrema_ProximityDistTool &&)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@BRepExtrema_ProximityDistTool#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#I#&1$@S@NCollection_LinearVector>#$@S@NCollection_Vec3>#d#&1$@S@NCollection_DynamicArray>#$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#S0_#&1$@S@NCollection_DynamicArray>#$@S@TopoDS_Shape#S9_#",
+      "nativeName": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool",
+      "signature": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool: void (const occ::handle<BRepExtrema_TriangleSet> &, const int, const BVH_Array3d &, const NCollection_DynamicArray<ProxPnt_Status> &, const occ::handle<BRepExtrema_TriangleSet> &, const NCollection_DynamicArray<TopoDS_Shape> &, const NCollection_DynamicArray<TopoDS_Shape> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@BRepExtrema_ProximityDistTool#&1$@S@BRepExtrema_ProximityDistTool#",
+      "nativeName": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool",
+      "signature": "BRepExtrema_ProximityDistTool::BRepExtrema_ProximityDistTool: void (const BRepExtrema_ProximityDistTool &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@IsEdgeOnBorder#I#I#I#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#S",
+      "nativeName": "BRepExtrema_ProximityDistTool::IsEdgeOnBorder",
+      "signature": "BRepExtrema_ProximityDistTool::IsEdgeOnBorder: bool (const int, const int, const int, const occ::handle<Poly_Triangulation> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@IsNodeOnBorder#I#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#S",
+      "nativeName": "BRepExtrema_ProximityDistTool::IsNodeOnBorder",
+      "signature": "BRepExtrema_ProximityDistTool::IsNodeOnBorder: bool (const int, const occ::handle<Poly_Triangulation> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@LoadAdditionalPointsFirstSet#&1$@S@NCollection_LinearVector>#$@S@NCollection_Vec3>#d#&1$@S@NCollection_DynamicArray>#$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#",
+      "nativeName": "BRepExtrema_ProximityDistTool::LoadAdditionalPointsFirstSet",
+      "signature": "BRepExtrema_ProximityDistTool::LoadAdditionalPointsFirstSet: void (const BVH_Array3d &, const NCollection_DynamicArray<ProxPnt_Status> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@LoadShapeLists#&1$@S@NCollection_DynamicArray>#$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepExtrema_ProximityDistTool::LoadShapeLists",
+      "signature": "BRepExtrema_ProximityDistTool::LoadShapeLists: void (const NCollection_DynamicArray<TopoDS_Shape> &, const NCollection_DynamicArray<TopoDS_Shape> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@LoadTriangleSets#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "nativeName": "BRepExtrema_ProximityDistTool::LoadTriangleSets",
+      "signature": "BRepExtrema_ProximityDistTool::LoadTriangleSets: void (const occ::handle<BRepExtrema_TriangleSet> &, const occ::handle<BRepExtrema_TriangleSet> &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@Perform#",
+      "nativeName": "BRepExtrema_ProximityDistTool::Perform",
+      "signature": "BRepExtrema_ProximityDistTool::Perform: void ()",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@ProximityDistance#1",
+      "nativeName": "BRepExtrema_ProximityDistTool::ProximityDistance",
+      "signature": "BRepExtrema_ProximityDistTool::ProximityDistance: double () const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@ProximityPoints#&$@S@NCollection_Vec3>#d#S0_#1",
+      "nativeName": "BRepExtrema_ProximityDistTool::ProximityPoints",
+      "signature": "BRepExtrema_ProximityDistTool::ProximityPoints: void (BVH_Vec3d &, BVH_Vec3d &) const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@ProximityPointsStatus#&$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#S0_#1",
+      "nativeName": "BRepExtrema_ProximityDistTool::ProximityPointsStatus",
+      "signature": "BRepExtrema_ProximityDistTool::ProximityPointsStatus: void (ProxPnt_Status &, ProxPnt_Status &) const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityDistTool@F@RejectNode#&1$@S@NCollection_Vec3>#d#S0_#&d#1",
+      "nativeName": "BRepExtrema_ProximityDistTool::RejectNode",
+      "signature": "BRepExtrema_ProximityDistTool::RejectNode: bool (const BVH_Vec3d &, const BVH_Vec3d &, double &) const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#&&$@S@BRepExtrema_ShapeProximity#",
+      "nativeName": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity",
+      "signature": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity: void (BRepExtrema_ShapeProximity &&)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#&1$@S@BRepExtrema_ShapeProximity#",
+      "nativeName": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity",
+      "signature": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity: void (const BRepExtrema_ShapeProximity &)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#&1$@S@TopoDS_Shape#S0_#d#",
+      "nativeName": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity",
+      "signature": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity: void (const TopoDS_Shape &, const TopoDS_Shape &, const double)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@BRepExtrema_ShapeProximity#d#",
+      "nativeName": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity",
+      "signature": "BRepExtrema_ShapeProximity::BRepExtrema_ShapeProximity: void (const double)",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ElementSet1",
+      "signature": "BRepExtrema_ShapeProximity::ElementSet1: const occ::handle<BRepExtrema_TriangleSet> &() const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ElementSet2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ElementSet2",
+      "signature": "BRepExtrema_ShapeProximity::ElementSet2: const occ::handle<BRepExtrema_TriangleSet> &() const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape1#I#1",
+      "nativeName": "BRepExtrema_ShapeProximity::GetSubShape1",
+      "signature": "BRepExtrema_ShapeProximity::GetSubShape1: const TopoDS_Shape &(const int) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@GetSubShape2#I#1",
+      "nativeName": "BRepExtrema_ShapeProximity::GetSubShape2",
+      "signature": "BRepExtrema_ShapeProximity::GetSubShape2: const TopoDS_Shape &(const int) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@IsDone#1",
+      "nativeName": "BRepExtrema_ShapeProximity::IsDone",
+      "signature": "BRepExtrema_ShapeProximity::IsDone: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape1#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepExtrema_ShapeProximity::LoadShape1",
+      "signature": "BRepExtrema_ShapeProximity::LoadShape1: bool (const TopoDS_Shape &)",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@LoadShape2#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepExtrema_ShapeProximity::LoadShape2",
+      "signature": "BRepExtrema_ShapeProximity::LoadShape2: bool (const TopoDS_Shape &)",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::OverlapSubShapes1",
+      "signature": "BRepExtrema_ShapeProximity::OverlapSubShapes1: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@OverlapSubShapes2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::OverlapSubShapes2",
+      "signature": "BRepExtrema_ShapeProximity::OverlapSubShapes2: const NCollection_DataMap<int, TColStd_PackedMapOfInteger> &() const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Perform#",
+      "nativeName": "BRepExtrema_ShapeProximity::Perform",
+      "signature": "BRepExtrema_ShapeProximity::Perform: void ()",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ProxPntStatus1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ProxPntStatus1",
+      "signature": "BRepExtrema_ShapeProximity::ProxPntStatus1: const ProxPnt_Status &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ProxPntStatus2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ProxPntStatus2",
+      "signature": "BRepExtrema_ShapeProximity::ProxPntStatus2: const ProxPnt_Status &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Proximity#1",
+      "nativeName": "BRepExtrema_ShapeProximity::Proximity",
+      "signature": "BRepExtrema_ShapeProximity::Proximity: double () const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ProximityPoint1#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ProximityPoint1",
+      "signature": "BRepExtrema_ShapeProximity::ProximityPoint1: const gp_Pnt &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@ProximityPoint2#1",
+      "nativeName": "BRepExtrema_ShapeProximity::ProximityPoint2",
+      "signature": "BRepExtrema_ShapeProximity::ProximityPoint2: const gp_Pnt &() const",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@SetNbSamples1#I#",
+      "nativeName": "BRepExtrema_ShapeProximity::SetNbSamples1",
+      "signature": "BRepExtrema_ShapeProximity::SetNbSamples1: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@SetNbSamples2#I#",
+      "nativeName": "BRepExtrema_ShapeProximity::SetNbSamples2",
+      "signature": "BRepExtrema_ShapeProximity::SetNbSamples2: void (const int)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@SetTolerance#d#",
+      "nativeName": "BRepExtrema_ShapeProximity::SetTolerance",
+      "signature": "BRepExtrema_ShapeProximity::SetTolerance: void (const double)",
+      "decision": "DEFERRED",
+      "reason": "No new public internal visitor/BVH/callback, arbitrary reconfiguration, copy/move or borrowed primitive/tool access workflow."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ShapeProximity@F@Tolerance#1",
+      "nativeName": "BRepExtrema_ShapeProximity::Tolerance",
+      "signature": "BRepExtrema_ShapeProximity::Tolerance: double () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized private face-mesh workflow with exact input-domain pairing, mode-specific copied diagnostics and no escaped BVH/maps."
+    }
+  ],
+  "baseline": "8.0.1-preview.64",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "83540904F7132431FDAFF3560CB0D05D40ACB495EA99D536CCD1A9E642F4BA9A",
+  "prerequisites": [
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@BRepExtrema_ProximityValueTool#",
+      "nativeName": "BRepExtrema_ProximityValueTool::BRepExtrema_ProximityValueTool",
+      "signature": "BRepExtrema_ProximityValueTool::BRepExtrema_ProximityValueTool: void ()",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@IsDone#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::IsDone",
+      "signature": "BRepExtrema_ProximityValueTool::IsDone: bool () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadShapeLists#&1$@S@NCollection_DynamicArray>#$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepExtrema_ProximityValueTool::LoadShapeLists",
+      "signature": "BRepExtrema_ProximityValueTool::LoadShapeLists: void (const NCollection_DynamicArray<TopoDS_Shape> &, const NCollection_DynamicArray<TopoDS_Shape> &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@LoadTriangleSets#&1$@N@opencascade@S@handle>#$@S@BRepExtrema_TriangleSet#S0_#",
+      "nativeName": "BRepExtrema_ProximityValueTool::LoadTriangleSets",
+      "signature": "BRepExtrema_ProximityValueTool::LoadTriangleSets: void (const occ::handle<BRepExtrema_TriangleSet> &, const occ::handle<BRepExtrema_TriangleSet> &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@Perform#&d#",
+      "nativeName": "BRepExtrema_ProximityValueTool::Perform",
+      "signature": "BRepExtrema_ProximityValueTool::Perform: void (double &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPoints#&$@S@gp_Pnt#S0_#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::ProximityPoints",
+      "signature": "BRepExtrema_ProximityValueTool::ProximityPoints: void (gp_Pnt &, gp_Pnt &) const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@ProximityPointsStatus#&$@S@BRepExtrema_ProximityDistTool@E@ProxPnt_Status#S0_#1",
+      "nativeName": "BRepExtrema_ProximityValueTool::ProximityPointsStatus",
+      "signature": "BRepExtrema_ProximityValueTool::ProximityPointsStatus: void (ProxPnt_Status &, ProxPnt_Status &) const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_ProximityValueTool@F@SetNbSamplePoints#I#I#",
+      "nativeName": "BRepExtrema_ProximityValueTool::SetNbSamplePoints",
+      "signature": "BRepExtrema_ProximityValueTool::SetNbSamplePoints: void (const int, const int)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_TriangleSet@F@Size#1",
+      "nativeName": "BRepExtrema_TriangleSet::Size",
+      "signature": "BRepExtrema_TriangleSet::Size: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Polygon3D#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#S",
+      "nativeName": "BRep_Tool::Polygon3D",
+      "signature": "BRep_Tool::Polygon3D: const occ::handle<Poly_Polygon3D> &(const TopoDS_Edge &, TopLoc_Location &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency."
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepGProp@F@SurfaceProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#S",
+      "nativeName": "BRepGProp::SurfaceProperties",
+      "signature": "BRepGProp::SurfaceProperties: void (const TopoDS_Shape &, GProp_GProps &, const bool, const bool)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@UVBounds#&1$@S@TopoDS_Face#&d#S2_#S2_#S2_#S",
+      "nativeName": "BRepTools::UVBounds",
+      "signature": "BRepTools::UVBounds: void (const TopoDS_Face &, double &, double &, double &, double &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Curve#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#&d#S4_#S",
+      "nativeName": "BRep_Tool::Curve",
+      "signature": "BRep_Tool::Curve: const occ::handle<Geom_Curve> &(const TopoDS_Edge &, TopLoc_Location &, double &, double &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Surface#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#S",
+      "nativeName": "BRep_Tool::Surface",
+      "signature": "BRep_Tool::Surface: const occ::handle<Geom_Surface> &(const TopoDS_Face &, TopLoc_Location &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Triangulation#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#i#S",
+      "nativeName": "BRep_Tool::Triangulation",
+      "signature": "BRep_Tool::Triangulation: const occ::handle<Poly_Triangulation> &(const TopoDS_Face &, TopLoc_Location &, const Poly_MeshPurpose)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@GProp_GProps@F@GProp_GProps#",
+      "nativeName": "GProp_GProps::GProp_GProps",
+      "signature": "GProp_GProps::GProp_GProps: void ()",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GProp_GProps@F@Mass#1",
+      "nativeName": "GProp_GProps::Mass",
+      "signature": "GProp_GProps::Mass: double () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@Degree#1",
+      "nativeName": "GeomAdaptor_Curve::Degree",
+      "signature": "GeomAdaptor_Curve::Degree: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "GeomAdaptor_Curve::GeomAdaptor_Curve",
+      "signature": "GeomAdaptor_Curve::GeomAdaptor_Curve: void (const occ::handle<Geom_Curve> &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@GetType#1",
+      "nativeName": "GeomAdaptor_Curve::GetType",
+      "signature": "GeomAdaptor_Curve::GetType: GeomAbs_CurveType () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@NbPoles#1",
+      "nativeName": "GeomAdaptor_Curve::NbPoles",
+      "signature": "GeomAdaptor_Curve::NbPoles: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@GeomAdaptor_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "GeomAdaptor_Surface::GeomAdaptor_Surface",
+      "signature": "GeomAdaptor_Surface::GeomAdaptor_Surface: void (const occ::handle<Geom_Surface> &)",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@GetType#1",
+      "nativeName": "GeomAdaptor_Surface::GetType",
+      "signature": "GeomAdaptor_Surface::GetType: GeomAbs_SurfaceType () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@NbUPoles#1",
+      "nativeName": "GeomAdaptor_Surface::NbUPoles",
+      "signature": "GeomAdaptor_Surface::NbUPoles: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@NbVPoles#1",
+      "nativeName": "GeomAdaptor_Surface::NbVPoles",
+      "signature": "GeomAdaptor_Surface::NbVPoles: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@UDegree#1",
+      "nativeName": "GeomAdaptor_Surface::UDegree",
+      "signature": "GeomAdaptor_Surface::UDegree: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@VDegree#1",
+      "nativeName": "GeomAdaptor_Surface::VDegree",
+      "signature": "GeomAdaptor_Surface::VDegree: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetCurve@F@BasisCurve#1",
+      "nativeName": "Geom_OffsetCurve::BasisCurve",
+      "signature": "Geom_OffsetCurve::BasisCurve: occ::handle<Geom_Curve> () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetCurve@F@Offset#1",
+      "nativeName": "Geom_OffsetCurve::Offset",
+      "signature": "Geom_OffsetCurve::Offset: double () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetSurface@F@BasisSurface#1",
+      "nativeName": "Geom_OffsetSurface::BasisSurface",
+      "signature": "Geom_OffsetSurface::BasisSurface: const occ::handle<Geom_Surface> &() const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetSurface@F@Offset#1",
+      "nativeName": "Geom_OffsetSurface::Offset",
+      "signature": "Geom_OffsetSurface::Offset: double () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_RectangularTrimmedSurface@F@BasisSurface#1",
+      "nativeName": "Geom_RectangularTrimmedSurface::BasisSurface",
+      "signature": "Geom_RectangularTrimmedSurface::BasisSurface: occ::handle<Geom_Surface> () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_TrimmedCurve@F@BasisCurve#1",
+      "nativeName": "Geom_TrimmedCurve::BasisCurve",
+      "signature": "Geom_TrimmedCurve::BasisCurve: occ::handle<Geom_Curve> () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "nativeName": "Poly_Triangle::Get",
+      "signature": "Poly_Triangle::Get: void (int &, int &, int &) const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Deflection#1",
+      "nativeName": "Poly_Triangulation::Deflection",
+      "signature": "Poly_Triangulation::Deflection: double () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasDeferredData#1",
+      "nativeName": "Poly_Triangulation::HasDeferredData",
+      "signature": "Poly_Triangulation::HasDeferredData: bool () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasGeometry#1",
+      "nativeName": "Poly_Triangulation::HasGeometry",
+      "signature": "Poly_Triangulation::HasGeometry: bool () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Node#I#1",
+      "nativeName": "Poly_Triangulation::Node",
+      "signature": "Poly_Triangulation::Node: gp_Pnt (int) const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangle#I#1",
+      "nativeName": "Poly_Triangulation::Triangle",
+      "signature": "Poly_Triangulation::Triangle: const Poly_Triangle &(int) const",
+      "reason": "Required private mesh initialization/completeness, bounded geometry/refinement, independent copy or completion-guarded native value diagnostic dependency.",
+      "baselineDisposition": "Manual"
+    }
+  ]
+}

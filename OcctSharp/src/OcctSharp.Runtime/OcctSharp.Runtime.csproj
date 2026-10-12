@@ -4,6 +4,7 @@
     <Description>Runtime loading, ABI identity, errors, and shared interop contracts for OcctSharp.</Description>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\OcctSharp\ExchangePathStage.cs" Link="ExchangePathStage.cs" />
     <Compile Include="..\OcctSharp\OcctException.cs" Link="OcctException.cs" />
     <Compile Include="..\OcctSharp\OcctRuntime.cs" Link="OcctRuntime.cs" />
     <Compile Include="..\OcctSharp\OcctRuntimeInfo.cs" Link="OcctRuntimeInfo.cs" />

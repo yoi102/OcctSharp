@@ -1,0 +1,27 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace OcctSharp.Interop;
+
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_source_shape")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateViewerShapeSource(ViewerHandle viewer, ShapeHandle shape, out long sourceId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_source_xde", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateViewerXdeSource(ViewerHandle viewer, OcafDocumentHandle document, string entry, out long sourceId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_source_display")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus DisplayViewerSource(ViewerHandle viewer, long sourceId, TransformHandle transform, out long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_source_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReleaseViewerSource(ViewerHandle viewer, long sourceId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_source_refresh_xde", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RefreshViewerXdeSource(ViewerHandle viewer, long sourceId, OcafDocumentHandle document, string entry);
+}

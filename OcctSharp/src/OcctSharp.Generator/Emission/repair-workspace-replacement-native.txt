@@ -1,0 +1,123 @@
+#include "OcctSharp.Modeling.RepairSupport.Generated.hxx"
+#include <ShapeFix_Edge.hxx>
+#include <ShapeFix_SplitTool.hxx>
+#include <ShapeAnalysis_Edge.hxx>
+#include <Geom2d_Curve.hxx>
+#include <BRep_Tool.hxx>
+using namespace OcctSharpRepair;
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_replace(const void* token,const void* inputs,const void* outputs,int32_t operation) {
+ return Guard([&]{Require(operation>=0 && operation<=2,"Invalid replacement operation.");auto in=OcctSharpOwned::Lease<const ShapeSet>(inputs);auto out=OcctSharpOwned::Lease<const ShapeSet>(outputs);
+  Require(!in->values.empty() && in->values.size()<=256 && out->values.size()<=256,"Invalid replacement counts.");
+  Require(operation==1?out->values.empty():!out->values.empty(),"Replacement output mismatch.");Require(operation==2?out->values.size()==1:in->values.size()==1,"Replacement input mismatch.");
+  auto session=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(session->mutex);session->Live();Require(session->kind==5,"Explicit replacements require a replacement session.");
+  ShapeKeys unique;NCollection_List<TopoDS_Shape> parts;auto type=in->values[0].ShapeType();
+  for(const auto& s:in->values){Require(s.ShapeType()==type && unique.Add(s),"Replacement inputs must be distinct and have one type.");parts.Append(session->Exact(s));}
+  for(const auto& s:out->values)Require(s.ShapeType()==type,"Replacement outputs must match input type.");
+  Require(out->values.size()<=1 || type!=TopAbs_VERTEX,"Native history cannot retain a multi-vertex replacement carrier.");
+  TopoDS_Shape replacement;BRep_Builder builder;
+  if(!out->values.empty()){TopoDS_Compound all;builder.MakeCompound(all);for(const auto& s:out->values)builder.Add(all,s);BRepBuilderAPI_Copy copy(all,true,false);Require(copy.IsDone(),"Replacement copy failed.");
+   if(out->values.size()==1)replacement=copy.ModifiedShape(out->values[0]);
+   else{if(type==TopAbs_EDGE){TopoDS_Wire carrier;builder.MakeWire(carrier);replacement=carrier;}
+    else if(type==TopAbs_FACE){TopoDS_Shell carrier;builder.MakeShell(carrier);replacement=carrier;}
+    else if(type==TopAbs_SOLID){TopoDS_CompSolid carrier;builder.MakeCompSolid(carrier);replacement=carrier;}
+    else{TopoDS_Compound carrier;builder.MakeCompound(carrier);replacement=carrier;}
+    for(const auto& s:out->values)builder.Add(replacement,copy.ModifiedShape(s));}}
+  Mutate(*session,[&]{if(operation==1)session->context->Remove(parts.First());else if(operation==0)session->context->Replace(parts.First(),replacement);else session->context->Merge(parts,replacement);session->changed=true;});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_copy_vertex(const void* token,const OcctSharp_ShapeHandle* input,const double* position,int32_t capacity,double tolerance,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(std::isfinite(tolerance) && tolerance>=0 && tolerance<=1e3,"Invalid vertex tolerance.");Require(capacity==0 || (position && capacity==3),"Invalid vertex position.");
+  if(capacity==3)for(int i=0;i<3;++i)Require(std::isfinite(position[i]),"Nonfinite vertex position.");auto original=Typed(input,TopAbs_VERTEX);
+  auto session=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(session->mutex);session->Live();Require(session->kind==5,"Vertex copy requires replacement session.");
+  auto privateVertex=TopoDS::Vertex(session->Exact(original));
+  Mutate(*session,[&]{auto vertex=capacity==0?session->context->CopyVertex(privateVertex,tolerance):session->context->CopyVertex(privateVertex,gp_Pnt(position[0],position[1],position[2]),tolerance);
+   *result=OcctSharp_Internal_AllocateShape(DeepCopy(vertex));session->changed=true;});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_session_snapshot(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto session=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(session->mutex);session->Live();
+  try{auto current=session->Current();Require(!current.IsNull(),"Null repaired shape cannot be published.");auto nativeHistory=session->context->History();auto history=std::make_shared<History>();
+   BRep_Builder builder;TopoDS_Compound all;builder.MakeCompound(all);builder.Add(all,current);int64_t count=1;
+   for(int i=1;i<=session->originals.Extent();++i){HistoryRow row;row.original=session->originals(i);auto privateShape=session->Exact(row.original);TopoDS_Shape direct;
+    row.status=session->context->Status(privateShape,direct,false);row.supported=BRepTools_History::IsSupportedType(privateShape);
+    auto leaf=session->context->ValueLeaf(privateShape);if(!leaf.IsNull()){row.leaf.push_back(leaf);row.newShape=session->context->IsNewShape(leaf);builder.Add(all,leaf);Require(++count<=MaxItems*8,"History too large.");}
+    if(row.supported){row.removed=nativeHistory->IsRemoved(privateShape);
+     for(NCollection_List<TopoDS_Shape>::Iterator j(nativeHistory->Modified(privateShape));j.More();j.Next()){row.modified.push_back(j.Value());builder.Add(all,j.Value());Require(++count<=MaxItems*8,"History too large.");}
+     for(NCollection_List<TopoDS_Shape>::Iterator j(nativeHistory->Generated(privateShape));j.More();j.Next()){row.generated.push_back(j.Value());builder.Add(all,j.Value());Require(++count<=MaxItems*8,"History too large.");}}
+    row.evidence=!row.supported?3:row.removed?1:!row.modified.empty() || !row.generated.empty()?2:session->changed?3:0;history->rows.push_back(std::move(row));}
+   BRepBuilderAPI_Copy freeze(all,true,false);Require(freeze.IsDone(),"Final repair snapshot failed.");history->result=freeze.ModifiedShape(current);history->translated=new BRepTools_History();
+   for(auto& row:history->rows){for(auto* list:{&row.modified,&row.generated,&row.leaf})for(auto& s:*list)s=freeze.ModifiedShape(s);
+    if(row.removed)history->translated->Remove(row.original);
+    for(const auto& s:row.modified)history->translated->AddModified(row.original,s);for(const auto& s:row.generated)history->translated->AddGenerated(row.original,s);}
+   Publication<History> publication(history);*result=publication.Commit();}
+  catch(...){session->retired=true;throw;}});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_coupled_repair_result_shape(const void* token,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto history=OcctSharpOwned::Lease<const History>(token);*result=OcctSharp_Internal_AllocateShape(history->result);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_result_relation(const void* token,const OcctSharp_ShapeHandle* input,int32_t* values,int32_t capacity) {
+ if(!values || capacity!=4)return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+ return Guard([&]{auto shape=ShapeValue(input);auto history=OcctSharpOwned::Lease<const History>(token);
+  for(const auto& row:history->rows)if(row.original.IsSame(shape)){int data[4]={row.status,row.evidence,row.supported?1:0,row.newShape?1:0};std::copy(data,data+4,values);return;}
+  Require(false,"History requires an exact original member.");});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_result_paths(const void* token,const OcctSharp_ShapeHandle* input,int32_t selector,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(selector>=0 && selector<=2,"Unknown history path selector.");auto shape=ShapeValue(input);auto history=OcctSharpOwned::Lease<const History>(token);
+  for(const auto& row:history->rows)if(row.original.IsSame(shape)){
+   if(selector==2)*result=PublishValues(row.leaf);else *result=PublishShapes(selector==0?history->translated->Modified(shape):history->translated->Generated(shape));return;}
+  Require(false,"History requires an exact original member.");});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_edge_fix(const OcctSharp_ShapeHandle* input,const OcctSharp_ShapeHandle* support,int32_t operation,double tolerance,int32_t seam,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckPrecision(tolerance);Flag(seam);Require(operation>=0 && operation<=8,"Unknown edge fix.");auto original=Typed(input,TopAbs_EDGE);TopoDS_Shape face;
+ bool needsFace=operation==1 || operation==3 || operation==5 || operation==7 || operation==8;
+  BRep_Builder builder;TopoDS_Compound all;builder.MakeCompound(all);builder.Add(all,original);
+  if(needsFace){face=Typed(support,TopAbs_FACE);Require(Member(face,original),"Edge must belong to the exact support face.");builder.Add(all,face);}
+  BRepBuilderAPI_Copy copy(all,true,false);Require(copy.IsDone(),"Edge copy failed.");auto edge=TopoDS::Edge(copy.ModifiedShape(original));TopoDS_Face f;if(needsFace)f=TopoDS::Face(copy.ModifiedShape(face));ShapeFix_Edge tool;bool changed=false;
+  switch(operation){case 0:changed=tool.FixAddCurve3d(edge);break;case 1:changed=tool.FixAddPCurve(edge,f,seam!=0,tolerance);break;
+   case 2:changed=tool.FixRemoveCurve3d(edge);break;case 3:changed=tool.FixRemovePCurve(edge,f);break;
+   case 4:changed=tool.FixSameParameter(edge,tolerance);break;case 5:changed=tool.FixSameParameter(edge,f,tolerance);break;
+   case 6:changed=tool.FixVertexTolerance(edge);break;case 7:changed=tool.FixVertexTolerance(edge,f);break;
+   case 8:changed=tool.FixReversed2d(edge,f);break;}
+  auto workspace=std::make_shared<Workspace>();workspace->kind=4;workspace->changed=changed;workspace->shapes.push_back(edge);if(needsFace)workspace->shapes.push_back(f);
+  DetachWorkspace(*workspace);Publication<Workspace> publication(workspace);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_edge_split(const OcctSharp_ShapeHandle* input,const OcctSharp_ShapeHandle* support,const OcctSharp_ShapeHandle* vertex1,const OcctSharp_ShapeHandle* vertex2,int32_t operation,double first,double last,double tolerance3d,double tolerance2d,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{CheckPrecision(tolerance3d);CheckPrecision(tolerance2d);Require(operation>=0 && operation<=3 && std::isfinite(first) && std::isfinite(last),"Invalid split arguments.");
+  auto original=Typed(input,TopAbs_EDGE);auto face=Typed(support,TopAbs_FACE);Require(Member(face,original),"Split edge must be exact face member.");
+  TopoDS_Shape v1,v2;if(operation!=2)v1=Typed(vertex1,TopAbs_VERTEX);if(operation==3)v2=Typed(vertex2,TopAbs_VERTEX);
+  BRep_Builder builder;TopoDS_Compound all;builder.MakeCompound(all);builder.Add(all,face);if(!v1.IsNull())builder.Add(all,v1);if(!v2.IsNull())builder.Add(all,v2);
+  BRepBuilderAPI_Copy copy(all,true,false);Require(copy.IsDone(),"Split input copy failed.");auto edge=TopoDS::Edge(copy.ModifiedShape(original));auto f=TopoDS::Face(copy.ModifiedShape(face));
+  ShapeAnalysis_Edge analyzer;opencascade::handle<Geom2d_Curve> pcurve;double lower,upper;
+  Require(analyzer.PCurve(edge,f,pcurve,lower,upper,true) && !pcurve.IsNull(),"Split requires a pcurve.");
+  Require(first>=std::min(lower,upper) && first<=std::max(lower,upper) && (operation==0 || (last>=std::min(lower,upper) && last<=std::max(lower,upper))),"Split parameter outside pcurve range.");
+  ShapeFix_SplitTool tool;auto workspace=std::make_shared<Workspace>();workspace->kind=5;TopoDS_Edge a,b;
+  if(operation==0 || operation==1){auto v=TopoDS::Vertex(copy.ModifiedShape(v1));workspace->changed=operation==0?tool.SplitEdge(edge,first,v,f,a,b,tolerance3d,tolerance2d):tool.SplitEdge(edge,first,last,v,f,a,b,tolerance3d,tolerance2d);
+   if(workspace->changed){Require(!a.IsNull() && !b.IsNull(),"Incomplete split result.");workspace->shapes={a,b};}}
+  else if(operation==2){bool line=false;workspace->changed=tool.CutEdge(edge,first,last,f,line);workspace->selected=line?1:0;workspace->shapes={edge};}
+  else {Require(first<last,"Split span must be increasing.");auto context=opencascade::handle<ShapeBuild_ReShape>(new ShapeBuild_ReShape());NCollection_Sequence<TopoDS_Shape> edges;int selected=0;
+   workspace->changed=tool.SplitEdge(edge,first,TopoDS::Vertex(copy.ModifiedShape(v1)),last,TopoDS::Vertex(copy.ModifiedShape(v2)),f,edges,selected,context,tolerance3d,tolerance2d);
+   Require(edges.Length()<=MaxItems && selected>=0 && selected<=edges.Length(),"Invalid split sequence/index.");workspace->selected=selected;for(int i=1;i<=edges.Length();++i)workspace->shapes.push_back(edges(i));}
+  DetachWorkspace(*workspace);Publication<Workspace> publication(workspace);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_workspace_selected(const void* token,int32_t* selected) {
+ if(!selected)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*selected=0;
+ return Guard([&]{auto workspace=OcctSharpOwned::Lease<const Workspace>(token);*selected=workspace->selected;});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_apply_until(const void* token,int32_t until,int32_t buildmode,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(until>=0 && until<=8 && buildmode>=0 && buildmode<=2,"Invalid reshape limits.");auto session=OcctSharpOwned::Lease<Session>(token);std::lock_guard<std::mutex> lock(session->mutex);session->Live();Require(session->kind==5,"Bounded apply requires replacement session.");
+  Mutate(*session,[&]{auto shape=session->context->Apply(session->working,static_cast<TopAbs_ShapeEnum>(until),buildmode);Require(!shape.IsNull(),"Bounded apply returned null.");*result=OcctSharp_Internal_AllocateShape(DeepCopy(shape));});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_solid_from_shell(const OcctSharp_ShapeHandle* source,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto shell=TopoDS::Shell(DeepCopy(Typed(source,TopAbs_SHELL)));Require(BRepCheck_Analyzer(shell).IsValid(),"Invalid shell topology.");ShapeFix_Solid tool;
+  auto solid=tool.SolidFromShell(shell);Require(!solid.IsNull(),"Solid construction failed.");*result=OcctSharp_Internal_AllocateShape(solid);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_oriented_shape(const OcctSharp_ShapeHandle* source,int32_t orientation,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(orientation>=0 && orientation<=3,"Invalid shape orientation.");*result=OcctSharp_Internal_AllocateShape(ShapeValue(source).Oriented(static_cast<TopAbs_Orientation>(orientation)));});
+}

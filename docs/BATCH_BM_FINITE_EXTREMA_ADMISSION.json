@@ -1,0 +1,578 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "E23194FD6A908447165346B32B6879642420E6BB438155E54D9D1B5402820AE1",
+  "declarations": [
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Extrema_ExtCC#&1$@S@Adaptor3d_Curve#S0_#d#d#",
+      "nativeName": "Extrema_ExtCC::Extrema_ExtCC",
+      "signature": "Extrema_ExtCC::Extrema_ExtCC: void (const Adaptor3d_Curve &, const Adaptor3d_Curve &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Extrema_ExtCC#&1$@S@Adaptor3d_Curve#S0_#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCC::Extrema_ExtCC",
+      "signature": "Extrema_ExtCC::Extrema_ExtCC: void (const Adaptor3d_Curve &, const Adaptor3d_Curve &, const double, const double, const double, const double, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Extrema_ExtCC#d#d#",
+      "nativeName": "Extrema_ExtCC::Extrema_ExtCC",
+      "signature": "Extrema_ExtCC::Extrema_ExtCC: void (const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@GetSingleSolutionFlag#1",
+      "nativeName": "Extrema_ExtCC::GetSingleSolutionFlag",
+      "signature": "Extrema_ExtCC::GetSingleSolutionFlag: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Initialize#&1$@S@Adaptor3d_Curve#S0_#d#d#",
+      "nativeName": "Extrema_ExtCC::Initialize",
+      "signature": "Extrema_ExtCC::Initialize: void (const Adaptor3d_Curve &, const Adaptor3d_Curve &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Initialize#&1$@S@Adaptor3d_Curve#S0_#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCC::Initialize",
+      "signature": "Extrema_ExtCC::Initialize: void (const Adaptor3d_Curve &, const Adaptor3d_Curve &, const double, const double, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsDone#1",
+      "nativeName": "Extrema_ExtCC::IsDone",
+      "signature": "Extrema_ExtCC::IsDone: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@IsParallel#1",
+      "nativeName": "Extrema_ExtCC::IsParallel",
+      "signature": "Extrema_ExtCC::IsParallel: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@NbExt#1",
+      "nativeName": "Extrema_ExtCC::NbExt",
+      "signature": "Extrema_ExtCC::NbExt: int () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Perform#",
+      "nativeName": "Extrema_ExtCC::Perform",
+      "signature": "Extrema_ExtCC::Perform: void ()",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@Points#I#&$@S@Extrema_POnCurv#S0_#1",
+      "nativeName": "Extrema_ExtCC::Points",
+      "signature": "Extrema_ExtCC::Points: void (const int, Extrema_POnCurv &, Extrema_POnCurv &) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetCurve#I#&1$@S@Adaptor3d_Curve#",
+      "nativeName": "Extrema_ExtCC::SetCurve",
+      "signature": "Extrema_ExtCC::SetCurve: void (const int, const Adaptor3d_Curve &)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetCurve#I#&1$@S@Adaptor3d_Curve#d#d#",
+      "nativeName": "Extrema_ExtCC::SetCurve",
+      "signature": "Extrema_ExtCC::SetCurve: void (const int, const Adaptor3d_Curve &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetRange#I#d#d#",
+      "nativeName": "Extrema_ExtCC::SetRange",
+      "signature": "Extrema_ExtCC::SetRange: void (const int, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetSingleSolutionFlag#b#",
+      "nativeName": "Extrema_ExtCC::SetSingleSolutionFlag",
+      "signature": "Extrema_ExtCC::SetSingleSolutionFlag: void (const bool)",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SetTolerance#I#d#",
+      "nativeName": "Extrema_ExtCC::SetTolerance",
+      "signature": "Extrema_ExtCC::SetTolerance: void (const int, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtCC::SquareDistance",
+      "signature": "Extrema_ExtCC::SquareDistance: double (const int) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCC@F@TrimmedSquareDistances#&d#S0_#S0_#S0_#&$@S@gp_Pnt#S1_#S1_#S1_#1",
+      "nativeName": "Extrema_ExtCC::TrimmedSquareDistances",
+      "signature": "Extrema_ExtCC::TrimmedSquareDistances: void (double &, double &, double &, double &, gp_Pnt &, gp_Pnt &, gp_Pnt &, gp_Pnt &) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Extrema_ExtCS#",
+      "nativeName": "Extrema_ExtCS::Extrema_ExtCS",
+      "signature": "Extrema_ExtCS::Extrema_ExtCS: void ()",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Extrema_ExtCS#&1$@S@Adaptor3d_Curve#&1$@S@Adaptor3d_Surface#d#d#",
+      "nativeName": "Extrema_ExtCS::Extrema_ExtCS",
+      "signature": "Extrema_ExtCS::Extrema_ExtCS: void (const Adaptor3d_Curve &, const Adaptor3d_Surface &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Extrema_ExtCS#&1$@S@Adaptor3d_Curve#&1$@S@Adaptor3d_Surface#d#d#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCS::Extrema_ExtCS",
+      "signature": "Extrema_ExtCS::Extrema_ExtCS: void (const Adaptor3d_Curve &, const Adaptor3d_Surface &, const double, const double, const double, const double, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Initialize#&1$@S@Adaptor3d_Surface#d#d#",
+      "nativeName": "Extrema_ExtCS::Initialize",
+      "signature": "Extrema_ExtCS::Initialize: void (const Adaptor3d_Surface &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Initialize#&1$@S@Adaptor3d_Surface#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtCS::Initialize",
+      "signature": "Extrema_ExtCS::Initialize: void (const Adaptor3d_Surface &, const double, const double, const double, const double, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsDone#1",
+      "nativeName": "Extrema_ExtCS::IsDone",
+      "signature": "Extrema_ExtCS::IsDone: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@IsParallel#1",
+      "nativeName": "Extrema_ExtCS::IsParallel",
+      "signature": "Extrema_ExtCS::IsParallel: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@NbExt#1",
+      "nativeName": "Extrema_ExtCS::NbExt",
+      "signature": "Extrema_ExtCS::NbExt: int () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Perform#&1$@S@Adaptor3d_Curve#d#d#",
+      "nativeName": "Extrema_ExtCS::Perform",
+      "signature": "Extrema_ExtCS::Perform: void (const Adaptor3d_Curve &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@Points#I#&$@S@Extrema_POnCurv#&$@S@Extrema_POnSurf#1",
+      "nativeName": "Extrema_ExtCS::Points",
+      "signature": "Extrema_ExtCS::Points: void (const int, Extrema_POnCurv &, Extrema_POnSurf &) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtCS@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtCS::SquareDistance",
+      "signature": "Extrema_ExtCS::SquareDistance: double (const int) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void ()",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&&$@S@Extrema_ExtSS#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void (Extrema_ExtSS &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&1$@S@Adaptor3d_Surface#S0_#d#d#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void (const Adaptor3d_Surface &, const Adaptor3d_Surface &, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&1$@S@Adaptor3d_Surface#S0_#d#d#d#d#d#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void (const Adaptor3d_Surface &, const Adaptor3d_Surface &, const double, const double, const double, const double, const double, const double, const double, const double, const double, const double)",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Extrema_ExtSS#&1$@S@Extrema_ExtSS#",
+      "nativeName": "Extrema_ExtSS::Extrema_ExtSS",
+      "signature": "Extrema_ExtSS::Extrema_ExtSS: void (const Extrema_ExtSS &)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Initialize#&1$@S@Adaptor3d_Surface#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtSS::Initialize",
+      "signature": "Extrema_ExtSS::Initialize: void (const Adaptor3d_Surface &, const double, const double, const double, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsDone#1",
+      "nativeName": "Extrema_ExtSS::IsDone",
+      "signature": "Extrema_ExtSS::IsDone: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@IsParallel#1",
+      "nativeName": "Extrema_ExtSS::IsParallel",
+      "signature": "Extrema_ExtSS::IsParallel: bool () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@NbExt#1",
+      "nativeName": "Extrema_ExtSS::NbExt",
+      "signature": "Extrema_ExtSS::NbExt: int () const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Perform#&1$@S@Adaptor3d_Surface#d#d#d#d#d#",
+      "nativeName": "Extrema_ExtSS::Perform",
+      "signature": "Extrema_ExtSS::Perform: void (const Adaptor3d_Surface &, const double, const double, const double, const double, const double)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@Points#I#&$@S@Extrema_POnSurf#S0_#1",
+      "nativeName": "Extrema_ExtSS::Points",
+      "signature": "Extrema_ExtSS::Points: void (const int, Extrema_POnSurf &, Extrema_POnSurf &) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_ExtSS@F@SquareDistance#I#1",
+      "nativeName": "Extrema_ExtSS::SquareDistance",
+      "signature": "Extrema_ExtSS::SquareDistance: double (const int) const",
+      "decision": "ADMITTED",
+      "reason": "Initialized finite-domain private solver with coupled copied distances/parameters/point pairs; completion and parallel cases are explicit."
+    },
+    {
+      "stableId": "c:@S@Extrema_POnCurv@F@Extrema_POnCurv#&&$@S@Extrema_POnCurv#",
+      "nativeName": "Extrema_POnCurv::Extrema_POnCurv",
+      "signature": "Extrema_POnCurv::Extrema_POnCurv: void (Extrema_POnCurv &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_POnCurv@F@Extrema_POnCurv#&1$@S@Extrema_POnCurv#",
+      "nativeName": "Extrema_POnCurv::Extrema_POnCurv",
+      "signature": "Extrema_POnCurv::Extrema_POnCurv: void (const Extrema_POnCurv &)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_POnSurf@F@Extrema_POnSurf#&&$@S@Extrema_POnSurf#",
+      "nativeName": "Extrema_POnSurf::Extrema_POnSurf",
+      "signature": "Extrema_POnSurf::Extrema_POnSurf: void (Extrema_POnSurf &&)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@Extrema_POnSurf@F@Extrema_POnSurf#&1$@S@Extrema_POnSurf#",
+      "nativeName": "Extrema_POnSurf::Extrema_POnSurf",
+      "signature": "Extrema_POnSurf::Extrema_POnSurf: void (const Extrema_POnSurf &)",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@Extrema#1",
+      "nativeName": "GeomAPI_ExtremaCurveCurve::Extrema",
+      "signature": "GeomAPI_ExtremaCurveCurve::Extrema: const Extrema_ExtCC &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@operator double#1",
+      "nativeName": "GeomAPI_ExtremaCurveCurve::operator double",
+      "signature": "GeomAPI_ExtremaCurveCurve::operator double: double () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@operator int#1",
+      "nativeName": "GeomAPI_ExtremaCurveCurve::operator int",
+      "signature": "GeomAPI_ExtremaCurveCurve::operator int: int () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveSurface@F@Extrema#1",
+      "nativeName": "GeomAPI_ExtremaCurveSurface::Extrema",
+      "signature": "GeomAPI_ExtremaCurveSurface::Extrema: const Extrema_ExtCS &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveSurface@F@operator double#1",
+      "nativeName": "GeomAPI_ExtremaCurveSurface::operator double",
+      "signature": "GeomAPI_ExtremaCurveSurface::operator double: double () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveSurface@F@operator int#1",
+      "nativeName": "GeomAPI_ExtremaCurveSurface::operator int",
+      "signature": "GeomAPI_ExtremaCurveSurface::operator int: int () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaSurfaceSurface@F@Extrema#1",
+      "nativeName": "GeomAPI_ExtremaSurfaceSurface::Extrema",
+      "signature": "GeomAPI_ExtremaSurfaceSurface::Extrema: const Extrema_ExtSS &() const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaSurfaceSurface@F@operator double#1",
+      "nativeName": "GeomAPI_ExtremaSurfaceSurface::operator double",
+      "signature": "GeomAPI_ExtremaSurfaceSurface::operator double: double () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaSurfaceSurface@F@operator int#1",
+      "nativeName": "GeomAPI_ExtremaSurfaceSurface::operator int",
+      "signature": "GeomAPI_ExtremaSurfaceSurface::operator int: int () const",
+      "decision": "DEFERRED",
+      "reason": "No additional safe finite workflow for borrowed GeomAPI solver references, implicit conversions, mutable receiver reconfiguration, copy/move or output-record mutation."
+    }
+  ],
+  "baseline": "8.0.1-preview.62",
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRep_Tool@F@Curve#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#&d#S4_#S",
+      "nativeName": "BRep_Tool::Curve",
+      "signature": "BRep_Tool::Curve: const occ::handle<Geom_Curve> &(const TopoDS_Edge &, TopLoc_Location &, double &, double &)",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnCurv@F@Extrema_POnCurv#",
+      "nativeName": "Extrema_POnCurv::Extrema_POnCurv",
+      "signature": "Extrema_POnCurv::Extrema_POnCurv: void ()",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnCurv@F@Parameter#1",
+      "nativeName": "Extrema_POnCurv::Parameter",
+      "signature": "Extrema_POnCurv::Parameter: double () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnCurv@F@Value#1",
+      "nativeName": "Extrema_POnCurv::Value",
+      "signature": "Extrema_POnCurv::Value: const gp_Pnt &() const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnSurf@F@Extrema_POnSurf#",
+      "nativeName": "Extrema_POnSurf::Extrema_POnSurf",
+      "signature": "Extrema_POnSurf::Extrema_POnSurf: void ()",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnSurf@F@Parameter#&d#S0_#1",
+      "nativeName": "Extrema_POnSurf::Parameter",
+      "signature": "Extrema_POnSurf::Parameter: void (double &, double &) const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Extrema_POnSurf@F@Value#1",
+      "nativeName": "Extrema_POnSurf::Value",
+      "signature": "Extrema_POnSurf::Value: const gp_Pnt &() const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@Degree#1",
+      "nativeName": "GeomAdaptor_Curve::Degree",
+      "signature": "GeomAdaptor_Curve::Degree: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "GeomAdaptor_Curve::GeomAdaptor_Curve",
+      "signature": "GeomAdaptor_Curve::GeomAdaptor_Curve: void (const occ::handle<Geom_Curve> &)",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "GeomAdaptor_Curve::GeomAdaptor_Curve",
+      "signature": "GeomAdaptor_Curve::GeomAdaptor_Curve: void (const occ::handle<Geom_Curve> &, const double, const double)",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@GetType#1",
+      "nativeName": "GeomAdaptor_Curve::GetType",
+      "signature": "GeomAdaptor_Curve::GetType: GeomAbs_CurveType () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Curve@F@NbPoles#1",
+      "nativeName": "GeomAdaptor_Curve::NbPoles",
+      "signature": "GeomAdaptor_Curve::NbPoles: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@GeomAdaptor_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "GeomAdaptor_Surface::GeomAdaptor_Surface",
+      "signature": "GeomAdaptor_Surface::GeomAdaptor_Surface: void (const occ::handle<Geom_Surface> &)",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@GeomAdaptor_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#d#",
+      "nativeName": "GeomAdaptor_Surface::GeomAdaptor_Surface",
+      "signature": "GeomAdaptor_Surface::GeomAdaptor_Surface: void (const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double, const double)",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@GetType#1",
+      "nativeName": "GeomAdaptor_Surface::GetType",
+      "signature": "GeomAdaptor_Surface::GetType: GeomAbs_SurfaceType () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@NbUPoles#1",
+      "nativeName": "GeomAdaptor_Surface::NbUPoles",
+      "signature": "GeomAdaptor_Surface::NbUPoles: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@NbVPoles#1",
+      "nativeName": "GeomAdaptor_Surface::NbVPoles",
+      "signature": "GeomAdaptor_Surface::NbVPoles: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@UDegree#1",
+      "nativeName": "GeomAdaptor_Surface::UDegree",
+      "signature": "GeomAdaptor_Surface::UDegree: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@GeomAdaptor_Surface@F@VDegree#1",
+      "nativeName": "GeomAdaptor_Surface::VDegree",
+      "signature": "GeomAdaptor_Surface::VDegree: int () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_Curve@F@Value#d#1",
+      "nativeName": "Geom_Curve::Value",
+      "signature": "Geom_Curve::Value: gp_Pnt (const double) const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetCurve@F@BasisCurve#1",
+      "nativeName": "Geom_OffsetCurve::BasisCurve",
+      "signature": "Geom_OffsetCurve::BasisCurve: occ::handle<Geom_Curve> () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetCurve@F@Offset#1",
+      "nativeName": "Geom_OffsetCurve::Offset",
+      "signature": "Geom_OffsetCurve::Offset: double () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetSurface@F@BasisSurface#1",
+      "nativeName": "Geom_OffsetSurface::BasisSurface",
+      "signature": "Geom_OffsetSurface::BasisSurface: const occ::handle<Geom_Surface> &() const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetSurface@F@Offset#1",
+      "nativeName": "Geom_OffsetSurface::Offset",
+      "signature": "Geom_OffsetSurface::Offset: double () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_RectangularTrimmedSurface@F@BasisSurface#1",
+      "nativeName": "Geom_RectangularTrimmedSurface::BasisSurface",
+      "signature": "Geom_RectangularTrimmedSurface::BasisSurface: occ::handle<Geom_Surface> () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_Surface@F@Value#d#d#1",
+      "nativeName": "Geom_Surface::Value",
+      "signature": "Geom_Surface::Value: gp_Pnt (const double, const double) const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_TrimmedCurve@F@BasisCurve#1",
+      "nativeName": "Geom_TrimmedCurve::BasisCurve",
+      "signature": "Geom_TrimmedCurve::BasisCurve: occ::handle<Geom_Curve> () const",
+      "reason": "Necessary private bounded adaptor, complexity guard or coupled point/parameter copy dependency.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

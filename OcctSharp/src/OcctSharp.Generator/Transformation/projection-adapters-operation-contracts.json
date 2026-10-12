@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#$@E@Extrema_ExtAlgo#",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf",
+      "signature": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf: void (const gp_Pnt &, const occ::handle<Geom_Surface> &, const double, const Extrema_ExtAlgo)",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve",
+      "signature": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve: void (const gp_Pnt &, const occ::handle<Geom_Curve> &, const double, const double)",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NbPoints#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::NbPoints",
+      "signature": "GeomAPI_ProjectPointOnCurve::NbPoints: int () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NearestPoint#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::NearestPoint",
+      "signature": "GeomAPI_ProjectPointOnCurve::NearestPoint: gp_Pnt () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistance#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::LowerDistance",
+      "signature": "GeomAPI_ProjectPointOnCurve::LowerDistance: double () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistanceParameter#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::LowerDistanceParameter",
+      "signature": "GeomAPI_ProjectPointOnCurve::LowerDistanceParameter: double () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#$@E@Extrema_ExtAlgo#",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf",
+      "signature": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf: void (const gp_Pnt &, const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double, const Extrema_ExtAlgo)",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@IsDone#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::IsDone",
+      "signature": "GeomAPI_ProjectPointOnSurf::IsDone: bool () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NbPoints#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::NbPoints",
+      "signature": "GeomAPI_ProjectPointOnSurf::NbPoints: int () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NearestPoint#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::NearestPoint",
+      "signature": "GeomAPI_ProjectPointOnSurf::NearestPoint: gp_Pnt () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistance#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::LowerDistance",
+      "signature": "GeomAPI_ProjectPointOnSurf::LowerDistance: double () const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistanceParameters#&d#S0_#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::LowerDistanceParameters",
+      "signature": "GeomAPI_ProjectPointOnSurf::LowerDistanceParameters: void (double &, double &) const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve",
+      "signature": "GeomAPI_ProjectPointOnCurve::GeomAPI_ProjectPointOnCurve: void (const gp_Pnt &, const occ::handle<Geom_Curve> &)",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Distance#I#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Distance",
+      "signature": "GeomAPI_ProjectPointOnCurve::Distance: double (const int) const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Parameter#I#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Parameter",
+      "signature": "GeomAPI_ProjectPointOnCurve::Parameter: double (const int) const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Point#I#1",
+      "nativeName": "GeomAPI_ProjectPointOnCurve::Point",
+      "signature": "GeomAPI_ProjectPointOnCurve::Point: gp_Pnt (const int) const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@Parameters#I#&d#S0_#1",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::Parameters",
+      "signature": "GeomAPI_ProjectPointOnSurf::Parameters: void (const int, double &, double &) const",
+      "guard": "BVCallPrivateProjectionAdapters",
+      "reason": "Equivalent stack-local SDK receiver and copied getters; caller validation, frames, clipping, errors and publication unchanged."
+    }
+  ],
+  "supportingOperations": []
+}

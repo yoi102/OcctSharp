@@ -135,6 +135,17 @@ public readonly record struct SketchIntersection(
     SketchPoint2d Point, double FirstNativeParameter, double SecondNativeParameter,
     double FirstNormalizedParameter, double SecondNormalizedParameter);
 
+/// <summary>Copied isolated-point and coincident-interval classification. Endpoints also include interval boundaries.</summary>
+public sealed class SketchIntersectionInspection
+{
+    internal SketchIntersectionInspection(IReadOnlyList<SketchIntersection> endpoints,int pointCount,int overlapIntervalCount)
+        => (Endpoints,PointCount,OverlapIntervalCount)=(Array.AsReadOnly(endpoints.ToArray()),pointCount,overlapIntervalCount);
+    public IReadOnlyList<SketchIntersection> Endpoints {get;}
+    public int PointCount {get;}
+    public int OverlapIntervalCount {get;}
+    public bool HasOverlappingIntervals=>OverlapIntervalCount>0;
+}
+
 /// <summary>An immutable copied analytic or freeform 2D curve definition.</summary>
 public sealed class SketchCurve2d
 {

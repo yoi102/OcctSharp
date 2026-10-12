@@ -1,0 +1,2106 @@
+{
+  "schemaVersion": "1.0",
+  "state": "AUDITED_IMPLEMENTING",
+  "baseline": "8.0.1-preview.43",
+  "inventorySha256": "D0B901CA629170A1DC88E70427631D0FAD4FA23BB73A782C472359AFCA99D2BE",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "17F3F212759F59FA0BCC0A4D0ECF6E157F366675E03AB6162C58888FAF1CE437",
+  "declarations": [
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@APIHeaderSection_MakeHeader#&&$@S@APIHeaderSection_MakeHeader#",
+      "nativeName": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader",
+      "signature": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader: void (APIHeaderSection_MakeHeader &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@APIHeaderSection_MakeHeader#&1$@N@opencascade@S@handle>#$@S@StepData_StepModel#",
+      "nativeName": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader",
+      "signature": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader: void (const occ::handle<StepData_StepModel> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@APIHeaderSection_MakeHeader#&1$@S@APIHeaderSection_MakeHeader#",
+      "nativeName": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader",
+      "signature": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader: void (const APIHeaderSection_MakeHeader &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@APIHeaderSection_MakeHeader#I#",
+      "nativeName": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader",
+      "signature": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader: void (const int)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@AddSchemaIdentifier#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::AddSchemaIdentifier",
+      "signature": "APIHeaderSection_MakeHeader::AddSchemaIdentifier: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Apply#&1$@N@opencascade@S@handle>#$@S@StepData_StepModel#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Apply",
+      "signature": "APIHeaderSection_MakeHeader::Apply: void (const occ::handle<StepData_StepModel> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Author#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Author",
+      "signature": "APIHeaderSection_MakeHeader::Author: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@AuthorValue#I#1",
+      "nativeName": "APIHeaderSection_MakeHeader::AuthorValue",
+      "signature": "APIHeaderSection_MakeHeader::AuthorValue: occ::handle<TCollection_HAsciiString> (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Authorisation#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Authorisation",
+      "signature": "APIHeaderSection_MakeHeader::Authorisation: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Description#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Description",
+      "signature": "APIHeaderSection_MakeHeader::Description: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@DescriptionValue#I#1",
+      "nativeName": "APIHeaderSection_MakeHeader::DescriptionValue",
+      "signature": "APIHeaderSection_MakeHeader::DescriptionValue: occ::handle<TCollection_HAsciiString> (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@FdValue#1",
+      "nativeName": "APIHeaderSection_MakeHeader::FdValue",
+      "signature": "APIHeaderSection_MakeHeader::FdValue: occ::handle<HeaderSection_FileDescription> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@FnValue#1",
+      "nativeName": "APIHeaderSection_MakeHeader::FnValue",
+      "signature": "APIHeaderSection_MakeHeader::FnValue: occ::handle<HeaderSection_FileName> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@FsValue#1",
+      "nativeName": "APIHeaderSection_MakeHeader::FsValue",
+      "signature": "APIHeaderSection_MakeHeader::FsValue: occ::handle<HeaderSection_FileSchema> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFd#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFd",
+      "signature": "APIHeaderSection_MakeHeader::HasFd: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFn#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFn",
+      "signature": "APIHeaderSection_MakeHeader::HasFn: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFs#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFs",
+      "signature": "APIHeaderSection_MakeHeader::HasFs: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@ImplementationLevel#1",
+      "nativeName": "APIHeaderSection_MakeHeader::ImplementationLevel",
+      "signature": "APIHeaderSection_MakeHeader::ImplementationLevel: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Init#*1C#",
+      "nativeName": "APIHeaderSection_MakeHeader::Init",
+      "signature": "APIHeaderSection_MakeHeader::Init: void (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@IsDone#1",
+      "nativeName": "APIHeaderSection_MakeHeader::IsDone",
+      "signature": "APIHeaderSection_MakeHeader::IsDone: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Name#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Name",
+      "signature": "APIHeaderSection_MakeHeader::Name: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@NbAuthor#1",
+      "nativeName": "APIHeaderSection_MakeHeader::NbAuthor",
+      "signature": "APIHeaderSection_MakeHeader::NbAuthor: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@NbDescription#1",
+      "nativeName": "APIHeaderSection_MakeHeader::NbDescription",
+      "signature": "APIHeaderSection_MakeHeader::NbDescription: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@NbOrganization#1",
+      "nativeName": "APIHeaderSection_MakeHeader::NbOrganization",
+      "signature": "APIHeaderSection_MakeHeader::NbOrganization: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@NbSchemaIdentifiers#1",
+      "nativeName": "APIHeaderSection_MakeHeader::NbSchemaIdentifiers",
+      "signature": "APIHeaderSection_MakeHeader::NbSchemaIdentifiers: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@NewModel#&1$@N@opencascade@S@handle>#$@S@Interface_Protocol#1",
+      "nativeName": "APIHeaderSection_MakeHeader::NewModel",
+      "signature": "APIHeaderSection_MakeHeader::NewModel: occ::handle<StepData_StepModel> (const occ::handle<Interface_Protocol> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Organization#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Organization",
+      "signature": "APIHeaderSection_MakeHeader::Organization: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@OrganizationValue#I#1",
+      "nativeName": "APIHeaderSection_MakeHeader::OrganizationValue",
+      "signature": "APIHeaderSection_MakeHeader::OrganizationValue: occ::handle<TCollection_HAsciiString> (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@OriginatingSystem#1",
+      "nativeName": "APIHeaderSection_MakeHeader::OriginatingSystem",
+      "signature": "APIHeaderSection_MakeHeader::OriginatingSystem: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@PreprocessorVersion#1",
+      "nativeName": "APIHeaderSection_MakeHeader::PreprocessorVersion",
+      "signature": "APIHeaderSection_MakeHeader::PreprocessorVersion: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SchemaIdentifiers#1",
+      "nativeName": "APIHeaderSection_MakeHeader::SchemaIdentifiers",
+      "signature": "APIHeaderSection_MakeHeader::SchemaIdentifiers: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SchemaIdentifiersValue#I#1",
+      "nativeName": "APIHeaderSection_MakeHeader::SchemaIdentifiersValue",
+      "signature": "APIHeaderSection_MakeHeader::SchemaIdentifiersValue: occ::handle<TCollection_HAsciiString> (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetAuthor#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetAuthor",
+      "signature": "APIHeaderSection_MakeHeader::SetAuthor: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetAuthorValue#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetAuthorValue",
+      "signature": "APIHeaderSection_MakeHeader::SetAuthorValue: void (const int, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetAuthorisation#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetAuthorisation",
+      "signature": "APIHeaderSection_MakeHeader::SetAuthorisation: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetDescription#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetDescription",
+      "signature": "APIHeaderSection_MakeHeader::SetDescription: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetDescriptionValue#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetDescriptionValue",
+      "signature": "APIHeaderSection_MakeHeader::SetDescriptionValue: void (const int, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetImplementationLevel#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetImplementationLevel",
+      "signature": "APIHeaderSection_MakeHeader::SetImplementationLevel: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetName",
+      "signature": "APIHeaderSection_MakeHeader::SetName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetOrganization#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetOrganization",
+      "signature": "APIHeaderSection_MakeHeader::SetOrganization: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetOrganizationValue#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetOrganizationValue",
+      "signature": "APIHeaderSection_MakeHeader::SetOrganizationValue: void (const int, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetOriginatingSystem#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetOriginatingSystem",
+      "signature": "APIHeaderSection_MakeHeader::SetOriginatingSystem: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetPreprocessorVersion#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetPreprocessorVersion",
+      "signature": "APIHeaderSection_MakeHeader::SetPreprocessorVersion: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetSchemaIdentifiers#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetSchemaIdentifiers",
+      "signature": "APIHeaderSection_MakeHeader::SetSchemaIdentifiers: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetSchemaIdentifiersValue#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetSchemaIdentifiersValue",
+      "signature": "APIHeaderSection_MakeHeader::SetSchemaIdentifiersValue: void (const int, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetTimeStamp#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetTimeStamp",
+      "signature": "APIHeaderSection_MakeHeader::SetTimeStamp: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@TimeStamp#1",
+      "nativeName": "APIHeaderSection_MakeHeader::TimeStamp",
+      "signature": "APIHeaderSection_MakeHeader::TimeStamp: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "APIHeaderSection_MakeHeader.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@Description#1",
+      "nativeName": "HeaderSection_FileDescription::Description",
+      "signature": "HeaderSection_FileDescription::Description: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileDescription.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@HeaderSection_FileDescription#&&$@S@HeaderSection_FileDescription#",
+      "nativeName": "HeaderSection_FileDescription::HeaderSection_FileDescription",
+      "signature": "HeaderSection_FileDescription::HeaderSection_FileDescription: void (HeaderSection_FileDescription &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileDescription.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@HeaderSection_FileDescription#&1$@S@HeaderSection_FileDescription#",
+      "nativeName": "HeaderSection_FileDescription::HeaderSection_FileDescription",
+      "signature": "HeaderSection_FileDescription::HeaderSection_FileDescription: void (const HeaderSection_FileDescription &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileDescription.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@Init#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&1S3_#",
+      "nativeName": "HeaderSection_FileDescription::Init",
+      "signature": "HeaderSection_FileDescription::Init: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "HeaderSection_FileDescription.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@SetDescription#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "HeaderSection_FileDescription::SetDescription",
+      "signature": "HeaderSection_FileDescription::SetDescription: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileDescription.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@get_type_descriptor#S",
+      "nativeName": "HeaderSection_FileDescription::get_type_descriptor",
+      "signature": "HeaderSection_FileDescription::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@get_type_name#S",
+      "nativeName": "HeaderSection_FileDescription::get_type_name",
+      "signature": "HeaderSection_FileDescription::get_type_name: const char *()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@Author#1",
+      "nativeName": "HeaderSection_FileName::Author",
+      "signature": "HeaderSection_FileName::Author: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@HeaderSection_FileName#&&$@S@HeaderSection_FileName#",
+      "nativeName": "HeaderSection_FileName::HeaderSection_FileName",
+      "signature": "HeaderSection_FileName::HeaderSection_FileName: void (HeaderSection_FileName &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@HeaderSection_FileName#&1$@S@HeaderSection_FileName#",
+      "nativeName": "HeaderSection_FileName::HeaderSection_FileName",
+      "signature": "HeaderSection_FileName::HeaderSection_FileName: void (const HeaderSection_FileName &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@Init#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S0_#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#S3_#S0_#S0_#S0_#",
+      "nativeName": "HeaderSection_FileName::Init",
+      "signature": "HeaderSection_FileName::Init: void (const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@Organization#1",
+      "nativeName": "HeaderSection_FileName::Organization",
+      "signature": "HeaderSection_FileName::Organization: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@SetAuthor#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "HeaderSection_FileName::SetAuthor",
+      "signature": "HeaderSection_FileName::SetAuthor: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@SetOrganization#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "HeaderSection_FileName::SetOrganization",
+      "signature": "HeaderSection_FileName::SetOrganization: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileName.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@get_type_descriptor#S",
+      "nativeName": "HeaderSection_FileName::get_type_descriptor",
+      "signature": "HeaderSection_FileName::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@get_type_name#S",
+      "nativeName": "HeaderSection_FileName::get_type_name",
+      "signature": "HeaderSection_FileName::get_type_name: const char *()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@HeaderSection_FileSchema#&&$@S@HeaderSection_FileSchema#",
+      "nativeName": "HeaderSection_FileSchema::HeaderSection_FileSchema",
+      "signature": "HeaderSection_FileSchema::HeaderSection_FileSchema: void (HeaderSection_FileSchema &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileSchema.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@HeaderSection_FileSchema#&1$@S@HeaderSection_FileSchema#",
+      "nativeName": "HeaderSection_FileSchema::HeaderSection_FileSchema",
+      "signature": "HeaderSection_FileSchema::HeaderSection_FileSchema: void (const HeaderSection_FileSchema &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileSchema.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@Init#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "HeaderSection_FileSchema::Init",
+      "signature": "HeaderSection_FileSchema::Init: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileSchema.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@SchemaIdentifiers#1",
+      "nativeName": "HeaderSection_FileSchema::SchemaIdentifiers",
+      "signature": "HeaderSection_FileSchema::SchemaIdentifiers: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileSchema.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@SetSchemaIdentifiers#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "HeaderSection_FileSchema::SetSchemaIdentifiers",
+      "signature": "HeaderSection_FileSchema::SetSchemaIdentifiers: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "HeaderSection_FileSchema.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@get_type_descriptor#S",
+      "nativeName": "HeaderSection_FileSchema::get_type_descriptor",
+      "signature": "HeaderSection_FileSchema::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileSchema@F@get_type_name#S",
+      "nativeName": "HeaderSection_FileSchema::get_type_name",
+      "signature": "HeaderSection_FileSchema::get_type_name: const char *()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@ExtractLabel#1",
+      "nativeName": "IFSelect_SelectType::ExtractLabel",
+      "signature": "IFSelect_SelectType::ExtractLabel: TCollection_AsciiString () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_SelectType.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@IFSelect_SelectType#&&$@S@IFSelect_SelectType#",
+      "nativeName": "IFSelect_SelectType::IFSelect_SelectType",
+      "signature": "IFSelect_SelectType::IFSelect_SelectType: void (IFSelect_SelectType &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_SelectType.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@IFSelect_SelectType#&1$@S@IFSelect_SelectType#",
+      "nativeName": "IFSelect_SelectType::IFSelect_SelectType",
+      "signature": "IFSelect_SelectType::IFSelect_SelectType: void (const IFSelect_SelectType &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_SelectType.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@get_type_descriptor#S",
+      "nativeName": "IFSelect_SelectType::get_type_descriptor",
+      "signature": "IFSelect_SelectType::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@get_type_name#S",
+      "nativeName": "IFSelect_SelectType::get_type_name",
+      "signature": "IFSelect_SelectType::get_type_name: const char *()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@AddNamedItem#*1C#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::AddNamedItem",
+      "signature": "IFSelect_WorkSession::AddNamedItem: int (const char *const, const occ::handle<Standard_Transient> &, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@AppliedDispatches#1",
+      "nativeName": "IFSelect_WorkSession::AppliedDispatches",
+      "signature": "IFSelect_WorkSession::AppliedDispatches: occ::handle<NCollection_HSequence<int>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@CategoryName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::CategoryName",
+      "signature": "IFSelect_WorkSession::CategoryName: const char *(const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@CheckOne#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::CheckOne",
+      "signature": "IFSelect_WorkSession::CheckOne: Interface_CheckIterator (const occ::handle<Standard_Transient> &, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ComputeCounterFromList#&1$@N@opencascade@S@handle>#$@S@IFSelect_SignCounter#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::ComputeCounterFromList",
+      "signature": "IFSelect_WorkSession::ComputeCounterFromList: bool (const occ::handle<IFSelect_SignCounter> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@DumpEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "IFSelect_WorkSession::DumpEntity",
+      "signature": "IFSelect_WorkSession::DumpEntity: void (const occ::handle<Standard_Transient> &, const int, Standard_OStream &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@DumpModel#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::DumpModel",
+      "signature": "IFSelect_WorkSession::DumpModel: void (const int, Standard_OStream &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EvalSelection#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::EvalSelection",
+      "signature": "IFSelect_WorkSession::EvalSelection: Interface_EntityIterator (const occ::handle<IFSelect_Selection> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@FileName#I#1",
+      "nativeName": "IFSelect_WorkSession::FileName",
+      "signature": "IFSelect_WorkSession::FileName: TCollection_AsciiString (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@FinalModifierIdents#b#1",
+      "nativeName": "IFSelect_WorkSession::FinalModifierIdents",
+      "signature": "IFSelect_WorkSession::FinalModifierIdents: occ::handle<NCollection_HSequence<int>> (const bool) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveFileComplete#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveFileComplete",
+      "signature": "IFSelect_WorkSession::GiveFileComplete: const char *(const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveFileRoot#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveFileRoot",
+      "signature": "IFSelect_WorkSession::GiveFileRoot: const char *(const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveList#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::GiveList",
+      "signature": "IFSelect_WorkSession::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveList#*1C#S0_#1",
+      "nativeName": "IFSelect_WorkSession::GiveList",
+      "signature": "IFSelect_WorkSession::GiveList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveListCombined#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#S0_#I#1",
+      "nativeName": "IFSelect_WorkSession::GiveListCombined",
+      "signature": "IFSelect_WorkSession::GiveListCombined: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Pinned SDK declares a null output sequence and calls list->Append on nonempty results; unsafe implementation deferred, never called.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveListFromList#*1C#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::GiveListFromList",
+      "signature": "IFSelect_WorkSession::GiveListFromList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const char *const, const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@GiveSelection#*1C#1",
+      "nativeName": "IFSelect_WorkSession::GiveSelection",
+      "signature": "IFSelect_WorkSession::GiveSelection: occ::handle<IFSelect_Selection> (const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Graph#",
+      "nativeName": "IFSelect_WorkSession::Graph",
+      "signature": "IFSelect_WorkSession::Graph: const Interface_Graph &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@IFSelect_WorkSession#&&$@S@IFSelect_WorkSession#",
+      "nativeName": "IFSelect_WorkSession::IFSelect_WorkSession",
+      "signature": "IFSelect_WorkSession::IFSelect_WorkSession: void (IFSelect_WorkSession &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@IFSelect_WorkSession#&1$@S@IFSelect_WorkSession#",
+      "nativeName": "IFSelect_WorkSession::IFSelect_WorkSession",
+      "signature": "IFSelect_WorkSession::IFSelect_WorkSession: void (const IFSelect_WorkSession &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemIdents#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "IFSelect_WorkSession::ItemIdents",
+      "signature": "IFSelect_WorkSession::ItemIdents: occ::handle<NCollection_HSequence<int>> (const occ::handle<Standard_Type> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemNames#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1",
+      "nativeName": "IFSelect_WorkSession::ItemNames",
+      "signature": "IFSelect_WorkSession::ItemNames: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> (const occ::handle<Standard_Type> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ItemNamesForLabel#*1C#1",
+      "nativeName": "IFSelect_WorkSession::ItemNamesForLabel",
+      "signature": "IFSelect_WorkSession::ItemNamesForLabel: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> (const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LastRunCheckList#1",
+      "nativeName": "IFSelect_WorkSession::LastRunCheckList",
+      "signature": "IFSelect_WorkSession::LastRunCheckList: Interface_CheckIterator () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ListEntities#&1$@S@Interface_EntityIterator#I#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "IFSelect_WorkSession::ListEntities",
+      "signature": "IFSelect_WorkSession::ListEntities: void (const Interface_EntityIterator &, const int, Standard_OStream &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ListItems#*1C#1",
+      "nativeName": "IFSelect_WorkSession::ListItems",
+      "signature": "IFSelect_WorkSession::ListItems: void (const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LoadedFile#1",
+      "nativeName": "IFSelect_WorkSession::LoadedFile",
+      "signature": "IFSelect_WorkSession::LoadedFile: const char *() const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ModelCheckList#b#",
+      "nativeName": "IFSelect_WorkSession::ModelCheckList",
+      "signature": "IFSelect_WorkSession::ModelCheckList: Interface_CheckIterator (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NameIdent#*1C#1",
+      "nativeName": "IFSelect_WorkSession::NameIdent",
+      "signature": "IFSelect_WorkSession::NameIdent: int (const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NamedItem#*1C#1",
+      "nativeName": "IFSelect_WorkSession::NamedItem",
+      "signature": "IFSelect_WorkSession::NamedItem: occ::handle<Standard_Transient> (const char *const) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewIntParam#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewIntParam",
+      "signature": "IFSelect_WorkSession::NewIntParam: occ::handle<IFSelect_IntParam> (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewParamFromStatic#*1C#S0_#",
+      "nativeName": "IFSelect_WorkSession::NewParamFromStatic",
+      "signature": "IFSelect_WorkSession::NewParamFromStatic: occ::handle<Standard_Transient> (const char *const, const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewSelectPointed#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewSelectPointed",
+      "signature": "IFSelect_WorkSession::NewSelectPointed: occ::handle<IFSelect_Selection> (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewTextParam#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewTextParam",
+      "signature": "IFSelect_WorkSession::NewTextParam: occ::handle<TCollection_HAsciiString> (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NewTransformStandard#b#*1C#",
+      "nativeName": "IFSelect_WorkSession::NewTransformStandard",
+      "signature": "IFSelect_WorkSession::NewTransformStandard: occ::handle<IFSelect_Transformer> (const bool, const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NextIdentForLabel#*1C#I#I#1",
+      "nativeName": "IFSelect_WorkSession::NextIdentForLabel",
+      "signature": "IFSelect_WorkSession::NextIdentForLabel: int (const char *const, const int, const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NumberFromLabel#*1C#I#1",
+      "nativeName": "IFSelect_WorkSession::NumberFromLabel",
+      "signature": "IFSelect_WorkSession::NumberFromLabel: int (const char *const, const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintCheckList#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@S@Interface_CheckIterator#b#$@E@IFSelect_PrintCount#1",
+      "nativeName": "IFSelect_WorkSession::PrintCheckList",
+      "signature": "IFSelect_WorkSession::PrintCheckList: void (Standard_OStream &, const Interface_CheckIterator &, const bool, const IFSelect_PrintCount) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintEntityStatus#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::PrintEntityStatus",
+      "signature": "IFSelect_WorkSession::PrintEntityStatus: void (const occ::handle<Standard_Transient> &, Standard_OStream &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@PrintSignatureList#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#&1$@N@opencascade@S@handle>#$@S@IFSelect_SignatureList#$@E@IFSelect_PrintCount#1",
+      "nativeName": "IFSelect_WorkSession::PrintSignatureList",
+      "signature": "IFSelect_WorkSession::PrintSignatureList: void (Standard_OStream &, const occ::handle<IFSelect_SignatureList> &, const IFSelect_PrintCount) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@QueryCheckList#&1$@S@Interface_CheckIterator#",
+      "nativeName": "IFSelect_WorkSession::QueryCheckList",
+      "signature": "IFSelect_WorkSession::QueryCheckList: void (const Interface_CheckIterator &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ReadFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::ReadFile",
+      "signature": "IFSelect_WorkSession::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ReadStream#*1C#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "IFSelect_WorkSession::ReadStream",
+      "signature": "IFSelect_WorkSession::ReadStream: IFSelect_ReturnStatus (const char *const, std::istream &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@RemoveName#*1C#",
+      "nativeName": "IFSelect_WorkSession::RemoveName",
+      "signature": "IFSelect_WorkSession::RemoveName: bool (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@RemoveNamedItem#*1C#",
+      "nativeName": "IFSelect_WorkSession::RemoveNamedItem",
+      "signature": "IFSelect_WorkSession::RemoveNamedItem: bool (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SelectionResult#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::SelectionResult",
+      "signature": "IFSelect_WorkSession::SelectionResult: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<IFSelect_Selection> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SelectionResultFromList#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::SelectionResultFromList",
+      "signature": "IFSelect_WorkSession::SelectionResultFromList: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<IFSelect_Selection> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SendAll#*1C#b#",
+      "nativeName": "IFSelect_WorkSession::SendAll",
+      "signature": "IFSelect_WorkSession::SendAll: IFSelect_ReturnStatus (const char *const, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SendSelected#*1C#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#b#",
+      "nativeName": "IFSelect_WorkSession::SendSelected",
+      "signature": "IFSelect_WorkSession::SendSelected: IFSelect_ReturnStatus (const char *const, const occ::handle<IFSelect_Selection> &, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SentFiles#1",
+      "nativeName": "IFSelect_WorkSession::SentFiles",
+      "signature": "IFSelect_WorkSession::SentFiles: occ::handle<NCollection_HSequence<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SentList#I#1",
+      "nativeName": "IFSelect_WorkSession::SentList",
+      "signature": "IFSelect_WorkSession::SentList: Interface_EntityIterator (const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetDefaultFileRoot#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetDefaultFileRoot",
+      "signature": "IFSelect_WorkSession::SetDefaultFileRoot: bool (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFileExtension#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFileExtension",
+      "signature": "IFSelect_WorkSession::SetFileExtension: void (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFilePrefix#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFilePrefix",
+      "signature": "IFSelect_WorkSession::SetFilePrefix: void (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetFileRoot#&1$@N@opencascade@S@handle>#$@S@IFSelect_Dispatch#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetFileRoot",
+      "signature": "IFSelect_WorkSession::SetFileRoot: bool (const occ::handle<IFSelect_Dispatch> &, const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetLoadedFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetLoadedFile",
+      "signature": "IFSelect_WorkSession::SetLoadedFile: void (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetParams#&1$@S@NCollection_DynamicArray>#$@N@opencascade@S@handle>#$@S@Standard_Transient#&1$@S@NCollection_DynamicArray>#I#",
+      "nativeName": "IFSelect_WorkSession::SetParams",
+      "signature": "IFSelect_WorkSession::SetParams: void (const NCollection_DynamicArray<occ::handle<Standard_Transient>> &, const NCollection_DynamicArray<int> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetSelectPointed#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#I#1",
+      "nativeName": "IFSelect_WorkSession::SetSelectPointed",
+      "signature": "IFSelect_WorkSession::SetSelectPointed: bool (const occ::handle<IFSelect_Selection> &, const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &, const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetTextValue#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#*1C#",
+      "nativeName": "IFSelect_WorkSession::SetTextValue",
+      "signature": "IFSelect_WorkSession::SetTextValue: bool (const occ::handle<TCollection_HAsciiString> &, const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Shareds#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_WorkSession::Shareds",
+      "signature": "IFSelect_WorkSession::Shareds: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Sharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_WorkSession::Sharings",
+      "signature": "IFSelect_WorkSession::Sharings: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SignValue#&1$@N@opencascade@S@handle>#$@S@IFSelect_Signature#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::SignValue",
+      "signature": "IFSelect_WorkSession::SignValue: const char *(const occ::handle<IFSelect_Signature> &, const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Sources#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::Sources",
+      "signature": "IFSelect_WorkSession::Sources: IFSelect_SelectionIterator (const occ::handle<IFSelect_Selection> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@TextValue#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#1",
+      "nativeName": "IFSelect_WorkSession::TextValue",
+      "signature": "IFSelect_WorkSession::TextValue: TCollection_AsciiString (const occ::handle<TCollection_HAsciiString> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ValidityName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::ValidityName",
+      "signature": "IFSelect_WorkSession::ValidityName: const char *(const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@WriteFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::WriteFile",
+      "signature": "IFSelect_WorkSession::WriteFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@WriteFile#*1C#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#",
+      "nativeName": "IFSelect_WorkSession::WriteFile",
+      "signature": "IFSelect_WorkSession::WriteFile: IFSelect_ReturnStatus (const char *const, const occ::handle<IFSelect_Selection> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IFSelect_WorkSession.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@get_type_descriptor#S",
+      "nativeName": "IFSelect_WorkSession::get_type_descriptor",
+      "signature": "IFSelect_WorkSession::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@get_type_name#S",
+      "nativeName": "IFSelect_WorkSession::get_type_name",
+      "signature": "IFSelect_WorkSession::get_type_name: const char *()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@ApplicationProtocol#1",
+      "nativeName": "IGESData_GlobalSection::ApplicationProtocol",
+      "signature": "IGESData_GlobalSection::ApplicationProtocol: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@AuthorName#1",
+      "nativeName": "IGESData_GlobalSection::AuthorName",
+      "signature": "IGESData_GlobalSection::AuthorName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CompanyName#1",
+      "nativeName": "IGESData_GlobalSection::CompanyName",
+      "signature": "IGESData_GlobalSection::CompanyName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CopyRefs#",
+      "nativeName": "IGESData_GlobalSection::CopyRefs",
+      "signature": "IGESData_GlobalSection::CopyRefs: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Date#1",
+      "nativeName": "IGESData_GlobalSection::Date",
+      "signature": "IGESData_GlobalSection::Date: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@EndMark#1",
+      "nativeName": "IGESData_GlobalSection::EndMark",
+      "signature": "IGESData_GlobalSection::EndMark: char () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@FileName#1",
+      "nativeName": "IGESData_GlobalSection::FileName",
+      "signature": "IGESData_GlobalSection::FileName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@HasApplicationProtocol#1",
+      "nativeName": "IGESData_GlobalSection::HasApplicationProtocol",
+      "signature": "IGESData_GlobalSection::HasApplicationProtocol: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@HasLastChangeDate#1",
+      "nativeName": "IGESData_GlobalSection::HasLastChangeDate",
+      "signature": "IGESData_GlobalSection::HasLastChangeDate: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@IGESData_GlobalSection#&&$@S@IGESData_GlobalSection#",
+      "nativeName": "IGESData_GlobalSection::IGESData_GlobalSection",
+      "signature": "IGESData_GlobalSection::IGESData_GlobalSection: void (IGESData_GlobalSection &&)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@IGESData_GlobalSection#&1$@S@IGESData_GlobalSection#",
+      "nativeName": "IGESData_GlobalSection::IGESData_GlobalSection",
+      "signature": "IGESData_GlobalSection::IGESData_GlobalSection: void (const IGESData_GlobalSection &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Init#&1$@N@opencascade@S@handle>#$@S@Interface_ParamSet#&$@N@opencascade@S@handle>#$@S@Interface_Check#",
+      "nativeName": "IGESData_GlobalSection::Init",
+      "signature": "IGESData_GlobalSection::Init: void (const occ::handle<Interface_ParamSet> &, occ::handle<Interface_Check> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@InterfaceVersion#1",
+      "nativeName": "IGESData_GlobalSection::InterfaceVersion",
+      "signature": "IGESData_GlobalSection::InterfaceVersion: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@LastChangeDate#1",
+      "nativeName": "IGESData_GlobalSection::LastChangeDate",
+      "signature": "IGESData_GlobalSection::LastChangeDate: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@MaxMaxCoords#&1$@S@gp_XYZ#",
+      "nativeName": "IGESData_GlobalSection::MaxMaxCoords",
+      "signature": "IGESData_GlobalSection::MaxMaxCoords: void (const gp_XYZ &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@NewDateString#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#I#S",
+      "nativeName": "IGESData_GlobalSection::NewDateString",
+      "signature": "IGESData_GlobalSection::NewDateString: occ::handle<TCollection_HAsciiString> (const occ::handle<TCollection_HAsciiString> &, const int)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@NewDateString#I#I#I#I#I#I#I#S",
+      "nativeName": "IGESData_GlobalSection::NewDateString",
+      "signature": "IGESData_GlobalSection::NewDateString: occ::handle<TCollection_HAsciiString> (const int, const int, const int, const int, const int, const int, const int)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Params#1",
+      "nativeName": "IGESData_GlobalSection::Params",
+      "signature": "IGESData_GlobalSection::Params: occ::handle<Interface_ParamSet> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@ReceiveName#1",
+      "nativeName": "IGESData_GlobalSection::ReceiveName",
+      "signature": "IGESData_GlobalSection::ReceiveName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SendName#1",
+      "nativeName": "IGESData_GlobalSection::SendName",
+      "signature": "IGESData_GlobalSection::SendName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Separator#1",
+      "nativeName": "IGESData_GlobalSection::Separator",
+      "signature": "IGESData_GlobalSection::Separator: char () const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetApplicationProtocol#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetApplicationProtocol",
+      "signature": "IGESData_GlobalSection::SetApplicationProtocol: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetAuthorName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetAuthorName",
+      "signature": "IGESData_GlobalSection::SetAuthorName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetCompanyName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetCompanyName",
+      "signature": "IGESData_GlobalSection::SetCompanyName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetDate#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetDate",
+      "signature": "IGESData_GlobalSection::SetDate: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetEndMark#C#",
+      "nativeName": "IGESData_GlobalSection::SetEndMark",
+      "signature": "IGESData_GlobalSection::SetEndMark: void (const char)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetFileName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetFileName",
+      "signature": "IGESData_GlobalSection::SetFileName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetInterfaceVersion#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetInterfaceVersion",
+      "signature": "IGESData_GlobalSection::SetInterfaceVersion: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetLastChangeDate#",
+      "nativeName": "IGESData_GlobalSection::SetLastChangeDate",
+      "signature": "IGESData_GlobalSection::SetLastChangeDate: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetLastChangeDate#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetLastChangeDate",
+      "signature": "IGESData_GlobalSection::SetLastChangeDate: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetReceiveName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetReceiveName",
+      "signature": "IGESData_GlobalSection::SetReceiveName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetSendName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetSendName",
+      "signature": "IGESData_GlobalSection::SetSendName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetSeparator#C#",
+      "nativeName": "IGESData_GlobalSection::SetSeparator",
+      "signature": "IGESData_GlobalSection::SetSeparator: void (const char)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetSystemId#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetSystemId",
+      "signature": "IGESData_GlobalSection::SetSystemId: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetUnitName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetUnitName",
+      "signature": "IGESData_GlobalSection::SetUnitName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SystemId#1",
+      "nativeName": "IGESData_GlobalSection::SystemId",
+      "signature": "IGESData_GlobalSection::SystemId: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@TranslatedFromHollerith#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#1",
+      "nativeName": "IGESData_GlobalSection::TranslatedFromHollerith",
+      "signature": "IGESData_GlobalSection::TranslatedFromHollerith: occ::handle<TCollection_HAsciiString> (const occ::handle<TCollection_HAsciiString> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Mutable external models/actors, streams, registry mutations, RTTI, redundant alias getters, arbitrary schema/unit changes or unproved receivers are outside the closed file workflow.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitName#1",
+      "nativeName": "IGESData_GlobalSection::UnitName",
+      "signature": "IGESData_GlobalSection::UnitName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning.",
+      "header": "IGESData_GlobalSection.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED"
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@IFSelect_SelectPointed@F@SetList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_SelectPointed::SetList",
+      "signature": "IFSelect_SelectPointed::SetList: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@SetGlobalSection#&1$@S@IGESData_GlobalSection#",
+      "nativeName": "IGESData_IGESModel::SetGlobalSection",
+      "signature": "IGESData_IGESModel::SetGlobalSection: void (const IGESData_GlobalSection &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NextNumberForLabel#*1C#I#b#1",
+      "nativeName": "Interface_InterfaceModel::NextNumberForLabel",
+      "signature": "Interface_InterfaceModel::NextNumberForLabel: int (const char *const, const int, const bool) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Blocked"
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@Header#1",
+      "nativeName": "StepData_StepModel::Header",
+      "signature": "StepData_StepModel::Header: Interface_EntityIterator () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Blocked"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@HeaderSection_FileDescription#",
+      "nativeName": "HeaderSection_FileDescription::HeaderSection_FileDescription",
+      "signature": "HeaderSection_FileDescription::HeaderSection_FileDescription: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@HeaderSection_FileName#",
+      "nativeName": "HeaderSection_FileName::HeaderSection_FileName",
+      "signature": "HeaderSection_FileName::HeaderSection_FileName: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectDeduct@F@SetInput#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#",
+      "nativeName": "IFSelect_SelectDeduct::SetInput",
+      "signature": "IFSelect_SelectDeduct::SetInput: void (const occ::handle<IFSelect_Selection> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectModelEntities@F@IFSelect_SelectModelEntities#",
+      "nativeName": "IFSelect_SelectModelEntities::IFSelect_SelectModelEntities",
+      "signature": "IFSelect_SelectModelEntities::IFSelect_SelectModelEntities: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectModelRoots@F@IFSelect_SelectModelRoots#",
+      "nativeName": "IFSelect_SelectModelRoots::IFSelect_SelectModelRoots",
+      "signature": "IFSelect_SelectModelRoots::IFSelect_SelectModelRoots: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectPointed@F@IFSelect_SelectPointed#",
+      "nativeName": "IFSelect_SelectPointed::IFSelect_SelectPointed",
+      "signature": "IFSelect_SelectPointed::IFSelect_SelectPointed: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@IFSelect_SelectType#&1$@N@opencascade@S@handle>#$@S@Standard_Type#",
+      "nativeName": "IFSelect_SelectType::IFSelect_SelectType",
+      "signature": "IFSelect_SelectType::IFSelect_SelectType: void (const occ::handle<Standard_Type> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@TypeForMatch#1",
+      "nativeName": "IFSelect_SelectType::TypeForMatch",
+      "signature": "IFSelect_SelectType::TypeForMatch: occ::handle<Standard_Type> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ClearFinalModifiers#",
+      "nativeName": "IFSelect_WorkSession::ClearFinalModifiers",
+      "signature": "IFSelect_WorkSession::ClearFinalModifiers: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ClearShareOut#b#",
+      "nativeName": "IFSelect_WorkSession::ClearShareOut",
+      "signature": "IFSelect_WorkSession::ClearShareOut: void (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ComputeGraph#b#",
+      "nativeName": "IFSelect_WorkSession::ComputeGraph",
+      "signature": "IFSelect_WorkSession::ComputeGraph: bool (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EntityLabel#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::EntityLabel",
+      "signature": "IFSelect_WorkSession::EntityLabel: occ::handle<TCollection_HAsciiString> (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EntityName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::EntityName",
+      "signature": "IFSelect_WorkSession::EntityName: occ::handle<TCollection_HAsciiString> (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetErrorHandle#b#",
+      "nativeName": "IFSelect_WorkSession::SetErrorHandle",
+      "signature": "IFSelect_WorkSession::SetErrorHandle: void (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESControl_Reader#",
+      "nativeName": "IGESControl_Reader::IGESControl_Reader",
+      "signature": "IGESControl_Reader::IGESControl_Reader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CascadeUnit#1",
+      "nativeName": "IGESData_GlobalSection::CascadeUnit",
+      "signature": "IGESData_GlobalSection::CascadeUnit: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Resolution#1",
+      "nativeName": "IGESData_GlobalSection::Resolution",
+      "signature": "IGESData_GlobalSection::Resolution: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Scale#1",
+      "nativeName": "IGESData_GlobalSection::Scale",
+      "signature": "IGESData_GlobalSection::Scale: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitFlag#1",
+      "nativeName": "IGESData_GlobalSection::UnitFlag",
+      "signature": "IGESData_GlobalSection::UnitFlag: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@GlobalSection#1",
+      "nativeName": "IGESData_IGESModel::GlobalSection",
+      "signature": "IGESData_IGESModel::GlobalSection: const IGESData_GlobalSection &() const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NbEntities#1",
+      "nativeName": "Interface_InterfaceModel::NbEntities",
+      "signature": "Interface_InterfaceModel::NbEntities: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Number#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_InterfaceModel::Number",
+      "signature": "Interface_InterfaceModel::Number: int (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Value#I#1",
+      "nativeName": "Interface_InterfaceModel::Value",
+      "signature": "Interface_InterfaceModel::Value: const occ::handle<Standard_Transient> &(const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@STEPControl_Reader#",
+      "nativeName": "STEPControl_Reader::STEPControl_Reader",
+      "signature": "STEPControl_Reader::STEPControl_Reader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@AddHeaderEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "StepData_StepModel::AddHeaderEntity",
+      "signature": "StepData_StepModel::AddHeaderEntity: void (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@ClearHeader#",
+      "nativeName": "StepData_StepModel::ClearHeader",
+      "signature": "StepData_StepModel::ClearHeader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@StepData_StepModel#",
+      "nativeName": "StepData_StepModel::StepData_StepModel",
+      "signature": "StepData_StepModel::StepData_StepModel: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

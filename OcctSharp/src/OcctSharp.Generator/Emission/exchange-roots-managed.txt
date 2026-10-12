@@ -1,0 +1,63 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
+using System.Collections.ObjectModel;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Interop;
+using OcctSharp.ExchangeSessions;
+namespace OcctSharp.ExchangeRoots;
+#pragma warning disable CS1591
+public enum RootExchangeFormat { Step,Iges }
+public enum RootTransferRoute { RootRank,ModelNumber,Entity }
+/// <summary>Private actor shape-repair parameters; no Interface_Static value is changed.</summary>
+public sealed record RootRepairOptions(double Tolerance=1e-6,double Minimum=1e-7,double Maximum=1) {
+ internal void Check(){foreach(double value in new[]{Tolerance,Minimum,Maximum})if(!double.IsFinite(value)||value<1e-12||value>1)throw new ArgumentOutOfRangeException(nameof(Tolerance));if(Minimum>Tolerance||Tolerance>Maximum)throw new ArgumentException("Repair tolerances must be ordered.");}
+}
+public readonly record struct ExchangeRootId {
+ internal Guid Domain{get;} public int Rank{get;}
+ internal ExchangeRootId(Guid domain,int rank){Domain=domain;Rank=rank;}
+}
+public sealed record ExchangeRootDiagnostic(ExchangeRootId Id,int ModelNumber,string NativeType);
+/// <summary>Detached exact source-file and private-reader diagnostics. Root IDs remain scoped to the issuing workspace.</summary>
+public sealed record RootWorkspaceSnapshot(string FullPath,string Sha256,string NativeNorm,int ModelCount,IReadOnlyList<ExchangeRootDiagnostic> Roots,IReadOnlyDictionary<string,string> PrivateRepairParameters,IReadOnlyList<ExchangeCheck> Checks);
+public sealed record SelectedRootDiagnostic(ExchangeRootId Id,int ModelNumber,bool NativeSucceeded,bool Completed,int NativeShapeCount,int FirstShapeIndex,int ShapeCount,IReadOnlyList<ExchangeCheck> Checks);
+internal sealed partial class RootExchangeHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ readonly int kind;
+ internal RootExchangeHandle(nint value,int kind):base(true){if(value==0)throw new InvalidOperationException("Null exchange-root handle.");this.kind=kind;SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle,kind);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_release")]internal static partial void Release(nint value,int kind);
+}
+internal static unsafe partial class RootExchangeInterop {
+ internal static RootExchangeHandle Own(nint value,int kind){try{return new(value,kind);}catch{RootExchangeHandle.Release(value,kind);throw;}}
+ internal static JsonDocument Json(RootExchangeHandle value,bool result){NativeError.ThrowIfFailed(result?Result(value,null,0,out int length):Snapshot(value,null,0,out length),"exchange_roots_text_size");if(length<2||length>16777216)throw new InvalidDataException("Invalid exchange diagnostic size.");var bytes=new byte[length];fixed(byte* p=bytes)NativeError.ThrowIfFailed(result?Result(value,p,bytes.Length,out int actual):Snapshot(value,p,bytes.Length,out actual),"exchange_roots_text_copy");return JsonDocument.Parse(bytes);}
+ internal static IReadOnlyDictionary<string,string> Parameters(JsonElement element){var result=new Dictionary<string,string>(StringComparer.Ordinal);foreach(var pair in element.EnumerateObject())result.Add(pair.Name,pair.Value.GetString()!);return new ReadOnlyDictionary<string,string>(result);}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_snapshot")]private static partial NativeStatus Snapshot(RootExchangeHandle handle,byte* data,int capacity,out int length);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_result")]private static partial NativeStatus Result(RootExchangeHandle handle,byte* data,int capacity,out int length);
+}
+/// <summary>One private initialized root-transfer epoch. Uses the existing SDK reader/repair contracts; WorkSession, native model/entities/maps and callbacks stay private.</summary>
+public sealed partial class ExchangeRootWorkspace:IDisposable {
+ readonly RootExchangeHandle handle;readonly Guid domain=Guid.NewGuid();readonly string path,digest;bool consumed;
+ ExchangeRootWorkspace(RootExchangeHandle handle,string path,string digest){this.handle=handle;this.path=path;this.digest=digest;}
+ void Alive(){ObjectDisposedException.ThrowIf(handle.IsClosed,this);}
+ static string Digest(string path){using var stream=File.OpenRead(path);return Convert.ToHexString(SHA256.HashData(stream));}
+ void FileIdentity(){Alive();if(Digest(path)!=digest)throw new IOException("The source file changed after this reader was loaded.");}
+ public static ExchangeRootWorkspace Open(string path,RootExchangeFormat format=RootExchangeFormat.Step,RootRepairOptions? options=null){ArgumentException.ThrowIfNullOrWhiteSpace(path);if(!Enum.IsDefined(format))throw new ArgumentOutOfRangeException(nameof(format));options??=new();options.Check();string full=Path.GetFullPath(path);ExchangeSessionInterop.ValidateText(full,4096);if(new FileInfo(full).Length>134217728)throw new ArgumentOutOfRangeException(nameof(path));string digest=Digest(full);NativeLibraryResolver.EnsureRegistered(typeof(ExchangeRootWorkspace).Assembly);OcctRuntime.EnsureCompatible();NativeError.ThrowIfFailed(OpenNative(full,(int)format,options.Tolerance,options.Minimum,options.Maximum,out var value),"exchange_roots_open");var owner=RootExchangeInterop.Own(value,0);try{var result=new ExchangeRootWorkspace(owner,full,digest);result.FileIdentity();_ = result.Snapshot();return result;}catch{owner.Dispose();throw;}}
+ public RootWorkspaceSnapshot Snapshot(){FileIdentity();using var doc=RootExchangeInterop.Json(handle,false);var r=doc.RootElement;var roots=r.GetProperty("Roots").EnumerateArray().Select(x=>new ExchangeRootDiagnostic(new(domain,x.GetProperty("Rank").GetInt32()),x.GetProperty("ModelNumber").GetInt32(),x.GetProperty("Type").GetString()!)).ToArray();var result=new RootWorkspaceSnapshot(path,digest,r.GetProperty("Norm").GetString()!,r.GetProperty("ModelCount").GetInt32(),Array.AsReadOnly(roots),RootExchangeInterop.Parameters(r.GetProperty("Parameters")),ExchangeSessionInterop.Checks(r.GetProperty("Checks")));FileIdentity();return result;}
+ /// <summary>Transfers selected native roots in order, retaining duplicates. Local false/empty results publish no shape for that row; native exceptions retire the epoch. Invalid selection keeps it fresh.</summary>
+ public unsafe SelectedRootResult Transfer(IEnumerable<ExchangeRootId> roots,RootTransferRoute route=RootTransferRoute.RootRank){FileIdentity();if(consumed)throw new InvalidOperationException("Root transfer epoch already consumed.");if(!Enum.IsDefined(route))throw new ArgumentOutOfRangeException(nameof(route));ArgumentNullException.ThrowIfNull(roots);var rows=roots.Take(4097).ToArray();if(rows.Length<1||rows.Length>4096)throw new ArgumentOutOfRangeException(nameof(roots));var snapshot=Snapshot();var ranks=new int[rows.Length];for(int i=0;i<rows.Length;++i){if(rows[i].Domain!=domain||rows[i].Rank<1||rows[i].Rank>snapshot.Roots.Count)throw new ArgumentException("Root belongs to another workspace or is outside this exact model.",nameof(roots));ranks[i]=rows[i].Rank;}NativeStatus status; nint value;fixed(int* p=ranks){status=TransferNative(handle,p,ranks.Length,(int)route,out value);}consumed=true;NativeError.ThrowIfFailed(status,"exchange_roots_transfer");var owner=RootExchangeInterop.Own(value,1);try{FileIdentity();return new(owner,domain,path,digest,route);}catch{owner.Dispose();throw;}}
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_open",StringMarshalling=StringMarshalling.Utf8)]private static partial NativeStatus OpenNative(string path,int format,double tolerance,double minimum,double maximum,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_transfer")]private static unsafe partial NativeStatus TransferNative(RootExchangeHandle handle,int* ranks,int count,int route,out nint result);
+}
+/// <summary>Owns complete independent root topology. Every GetShape creates another geometry-deep copy. Detached diagnostics survive disposal.</summary>
+public sealed partial class SelectedRootResult:IDisposable {
+ readonly RootExchangeHandle handle;
+ internal SelectedRootResult(RootExchangeHandle owner,Guid domain,string path,string digest,RootTransferRoute route){handle=owner;using var doc=RootExchangeInterop.Json(owner,true);var r=doc.RootElement;FullPath=path;Sha256=digest;Route=route;ShapeCount=r.GetProperty("Shapes").GetInt32();Roots=Array.AsReadOnly(r.GetProperty("Roots").EnumerateArray().Select(x=>new SelectedRootDiagnostic(new(domain,x.GetProperty("Rank").GetInt32()),x.GetProperty("ModelNumber").GetInt32(),x.GetProperty("NativeSucceeded").GetBoolean(),x.GetProperty("Completed").GetBoolean(),x.GetProperty("NativeShapeCount").GetInt32(),x.GetProperty("FirstShapeIndex").GetInt32(),x.GetProperty("ShapeCount").GetInt32(),ExchangeSessionInterop.Checks(x.GetProperty("Checks")))).ToArray());Checks=ExchangeSessionInterop.Checks(r.GetProperty("Checks"));PrivateRepairParameters=RootExchangeInterop.Parameters(r.GetProperty("Parameters"));}
+ public string FullPath{get;} public string Sha256{get;} public RootTransferRoute Route{get;} public int ShapeCount{get;} public IReadOnlyList<SelectedRootDiagnostic> Roots{get;} public IReadOnlyList<ExchangeCheck> Checks{get;} public IReadOnlyDictionary<string,string> PrivateRepairParameters{get;}
+ public bool Completed=>Roots.All(x=>x.Completed);
+ public Shape GetShape(int index){ObjectDisposedException.ThrowIf(handle.IsClosed,this);if(index<0||index>=ShapeCount)throw new ArgumentOutOfRangeException(nameof(index));NativeError.ThrowIfFailed(ShapeNative(handle,index,out var value),"exchange_roots_shape");return ShapeFactory.FromNativeHandle(value,"exchange_roots_shape");}
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_exchange_roots_shape")]private static partial NativeStatus ShapeNative(RootExchangeHandle handle,int index,out nint result);
+}

@@ -1,3 +1,4 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
 // Native Visualization/Manipulators implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Conversions.hxx"
 #include "Geometry/Transforms.hxx"
@@ -10,6 +11,7 @@
 #include "Visualization/Presentations.hxx"
 #include <AIS_Manipulator.hxx>
 #include <AIS_ManipulatorMode.hxx>
+#include <Graphic3d_ZLayerId.hxx>
 #include <Standard_Handle.hxx>
 #include <TopLoc_Location.hxx>
 #include <cmath>
@@ -50,7 +52,7 @@ void ReattachManipulator(
 {
   AIS_Manipulator::OptionsForAttach options;
   options.SetAdjustPosition(false).SetAdjustSize(false).SetEnableModes(false);
-  entry.Value->Attach(FindPresentation(viewer, entry.PresentationId), options);
+  OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_Attach_Bind(*(entry.Value))(FindPresentation(viewer, entry.PresentationId), options);
   entry.Value->SetModeActivationOnDetection(entry.ActivationOnDetection);
   entry.Value->SetZoomPersistence(entry.ZoomPersistence);
   for (int32_t mode = AIS_MM_Translation; mode <= AIS_MM_TranslationPlane; ++mode)
@@ -99,7 +101,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_attach(
     options.SetAdjustPosition(adjust_position != 0)
       .SetAdjustSize(adjust_size != 0)
       .SetEnableModes(enable_modes != 0);
-    manipulator->Attach(presentation, options);
+    OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_Attach_Bind(*(manipulator))(presentation, options);
+    viewer->Context->SetZLayer(manipulator, Graphic3d_ZLayerId_Topmost);
     const int64_t id = viewer->NextManipulatorId++;
     viewer->Manipulators.emplace(
       id, OcctSharp_ViewerHandle::ManipulatorEntry{manipulator, presentation_id});
@@ -116,7 +119,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_part(
     ValidateViewerThread(viewer);
     if (axis < 0 || axis > 2)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Manipulator axes are zero-based from 0 through 2.");
-    FindManipulator(viewer, manipulator_id).Value->SetPart(axis, ToManipulatorMode(mode), enabled != 0);
+    auto& entry = FindManipulator(viewer, manipulator_id);
+    entry.Value->SetPart(axis, ToManipulatorMode(mode), enabled != 0);
+    // SetPart changes the axis flags, but OCCT keeps its existing graphic groups
+    // until the presentation and active selections are recomputed.
+    viewer->Context->Redisplay(entry.Value, false);
   });
 }
 
@@ -153,7 +160,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_position(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    FindManipulator(viewer, manipulator_id).Value->SetPosition(ToAxis(*position));
+    OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_SetPosition_Bind(*(FindManipulator(viewer, manipulator_id).Value))(ToAxis(*position));
   });
 }
 
@@ -172,8 +179,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_appearance(
     const bool mustReattach = entry.Value->IsAttached() && entry.Value->SkinMode() != nativeSkin;
     if (mustReattach) entry.Value->Detach();
     entry.Value->SetSkinMode(nativeSkin);
-    entry.Value->SetSize(static_cast<float>(size));
-    entry.Value->SetGap(static_cast<float>(gap));
+    OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_SetSize_Bind(*(entry.Value))(static_cast<float>(size));
+    OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_SetGap_Bind(*(entry.Value))(static_cast<float>(gap));
     if (mustReattach)
       ReattachManipulator(viewer, entry);
     entry.Size = size;
@@ -201,7 +208,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_start(
   {
     ValidateViewerThread(viewer);
     auto& entry = FindManipulator(viewer, manipulator_id);
-    entry.StartTransformation = viewer->Context->Location(
+    entry.StartTransformation = OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_Location_Bind(*(viewer->Context))(
       FindPresentation(viewer, entry.PresentationId)).Transformation();
     entry.Value->StartTransform(x, y, viewer->View);
     entry.HasActiveTransformation = true;
@@ -218,7 +225,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_transform_mouse(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    *transform = AllocateTransform(FindManipulator(viewer, manipulator_id).Value->Transform(x, y, viewer->View));
+    *transform = AllocateTransform(OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_Transform_Bind(*(FindManipulator(viewer, manipulator_id).Value))(x, y, viewer->View));
   });
 }
 
@@ -232,8 +239,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_transform_custom(
     auto& entry = FindManipulator(viewer, manipulator_id);
     if (!entry.HasActiveTransformation)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A custom manipulator preview requires StartTransform first.");
-    entry.Value->Transform(transform->Value);
-    viewer->Context->SetLocation(
+    OcctSharpGenerated::ViewerAdapters::AIS_Manipulator_Transform_Bind(*(entry.Value))(transform->Value);
+    OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SetLocation_Bind(*(viewer->Context))(
       FindPresentation(viewer, entry.PresentationId),
       TopLoc_Location(entry.StartTransformation.Multiplied(transform->Value)));
   });
@@ -248,7 +255,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_stop(
     auto& entry = FindManipulator(viewer, manipulator_id);
     entry.Value->StopTransform(apply != 0);
     if (apply == 0)
-      viewer->Context->SetLocation(
+      OcctSharpGenerated::ViewerAdapters::AIS_InteractiveContext_SetLocation_Bind(*(viewer->Context))(
         FindPresentation(viewer, entry.PresentationId), TopLoc_Location(entry.StartTransformation));
     entry.HasActiveTransformation = false;
   });

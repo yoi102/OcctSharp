@@ -1,0 +1,1138 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.50",
+  "inventorySha256": "CB03169B0253E522CA298071FE186AD6B203D2DCC5EFB912D5468B9830D51209",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "806558A73207C0AFAA3544F36FE6416766F03832D85CA5351885FDB1639468C7",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void ()",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Error",
+      "signature": "BRepBuilderAPI_MakeEdge::Error: BRepBuilderAPI_EdgeError () const",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Vertex1#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Vertex1",
+      "signature": "BRepBuilderAPI_MakeEdge::Vertex1: const TopoDS_Vertex &() const",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Vertex2#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Vertex2",
+      "signature": "BRepBuilderAPI_MakeEdge::Vertex2: const TopoDS_Vertex &() const",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Add",
+      "signature": "BRepBuilderAPI_MakeWire::Add: void (const TopoDS_Wire &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Edge#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Edge",
+      "signature": "BRepBuilderAPI_MakeWire::Edge: const TopoDS_Edge &() const",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Error",
+      "signature": "BRepBuilderAPI_MakeWire::Error: BRepBuilderAPI_WireError () const",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Vertex#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::Vertex",
+      "signature": "BRepBuilderAPI_MakeWire::Vertex: const TopoDS_Vertex &() const",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@Init#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "BRepCheck_Analyzer::Init",
+      "signature": "BRepCheck_Analyzer::Init: void (const TopoDS_Shape &, const bool)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsExactMethod#",
+      "nativeName": "BRepCheck_Analyzer::IsExactMethod",
+      "signature": "BRepCheck_Analyzer::IsExactMethod: bool ()",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsParallel#",
+      "nativeName": "BRepCheck_Analyzer::IsParallel",
+      "signature": "BRepCheck_Analyzer::IsParallel: bool ()",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepCheck_Analyzer::IsValid",
+      "signature": "BRepCheck_Analyzer::IsValid: bool (const TopoDS_Shape &) const",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@SetExactMethod#b#",
+      "nativeName": "BRepCheck_Analyzer::SetExactMethod",
+      "signature": "BRepCheck_Analyzer::SetExactMethod: void (const bool)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@SetParallel#b#",
+      "nativeName": "BRepCheck_Analyzer::SetParallel",
+      "signature": "BRepCheck_Analyzer::SetParallel: void (const bool)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const TopoDS_Wire &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSmallArea#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSmallArea",
+      "signature": "ShapeAnalysis_Wire::CheckSmallArea: bool (const TopoDS_Wire &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@Load#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::Load",
+      "signature": "ShapeAnalysis_Wire::Load: void (const TopoDS_Wire &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetFace#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeAnalysis_Wire::SetFace",
+      "signature": "ShapeAnalysis_Wire::SetFace: void (const TopoDS_Face &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Fully initialized private builder/checker, bounded copied geometry and complete validated topology only."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@TopoDS_Vertex#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Circ &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Elips &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Hypr#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Hypr &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Lin#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Lin &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#&1$@S@TopoDS_Vertex#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#&1$@S@gp_Pnt#S2_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Parab#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Parab &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Pnt#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge",
+      "signature": "BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge: void (const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Vertex#S6_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Pnt#S6_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom2d_Curve> &, const occ::handle<Geom_Surface> &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopoDS_Vertex#S3_#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const TopoDS_Vertex &, const TopoDS_Vertex &, const double, const double)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Pnt#S3_#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Init",
+      "signature": "BRepBuilderAPI_MakeEdge::Init: void (const occ::handle<Geom_Curve> &, const gp_Pnt &, const gp_Pnt &)",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@operator TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::operator TopoDS_Edge",
+      "signature": "BRepBuilderAPI_MakeEdge::operator TopoDS_Edge: TopoDS_Edge ()",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Edge#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Edge#S0_#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Edge#S0_#S0_#S0_#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void (const TopoDS_Wire &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void (const TopoDS_Wire &, const TopoDS_Edge &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@operator TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::operator TopoDS_Wire",
+      "signature": "BRepBuilderAPI_MakeWire::operator TopoDS_Wire: TopoDS_Wire ()",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&&$@S@BRepCheck_Analyzer#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (BRepCheck_Analyzer &&)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@BRepCheck_Analyzer#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const BRepCheck_Analyzer &)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const NCollection_List<TopoDS_Shape> &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&&$@S@BRepLib_MakeWire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (BRepLib_MakeWire &&)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@BRepLib_MakeWire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const BRepLib_MakeWire &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Edge#S0_#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Edge#S0_#S0_#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Edge#S0_#S0_#S0_#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &, const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Wire &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void (const TopoDS_Wire &, const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@operator TopoDS_Wire#",
+      "nativeName": "BRepLib_MakeWire::operator TopoDS_Wire",
+      "signature": "BRepLib_MakeWire::operator TopoDS_Wire: TopoDS_Wire ()",
+      "header": "BRepLib_MakeWire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckIntersectingEdges#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#&$@S@NCollection_Sequence>#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckIntersectingEdges",
+      "signature": "ShapeAnalysis_Wire::CheckIntersectingEdges: bool (const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &, NCollection_Sequence<double> &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckIntersectingEdges#I#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#&$@S@NCollection_Sequence>#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckIntersectingEdges",
+      "signature": "ShapeAnalysis_Wire::CheckIntersectingEdges: bool (const int, const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &, NCollection_Sequence<double> &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSeam#I#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#&d#S3_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSeam",
+      "signature": "ShapeAnalysis_Wire::CheckSeam: bool (const int, occ::handle<Geom2d_Curve> &, occ::handle<Geom2d_Curve> &, double &, double &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckSelfIntersectingEdge#I#&$@S@NCollection_Sequence>#$@S@IntRes2d_IntersectionPoint#&$@S@NCollection_Sequence>#$@S@gp_Pnt#",
+      "nativeName": "ShapeAnalysis_Wire::CheckSelfIntersectingEdge",
+      "signature": "ShapeAnalysis_Wire::CheckSelfIntersectingEdge: bool (const int, NCollection_Sequence<IntRes2d_IntersectionPoint> &, NCollection_Sequence<gp_Pnt> &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckShapeConnect#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "ShapeAnalysis_Wire::CheckShapeConnect",
+      "signature": "ShapeAnalysis_Wire::CheckShapeConnect: bool (const TopoDS_Shape &, const double)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@CheckTail#&1$@S@TopoDS_Edge#S0_#d#d#d#&S1_#S2_#S2_#S2_#",
+      "nativeName": "ShapeAnalysis_Wire::CheckTail",
+      "signature": "ShapeAnalysis_Wire::CheckTail: bool (const TopoDS_Edge &, const TopoDS_Edge &, const double, const double, const double, TopoDS_Edge &, TopoDS_Edge &, TopoDS_Edge &, TopoDS_Edge &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#",
+      "nativeName": "ShapeAnalysis_Wire::SetFace",
+      "signature": "ShapeAnalysis_Wire::SetFace: void (const TopoDS_Face &, const occ::handle<ShapeAnalysis_Surface> &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopLoc_Location#",
+      "nativeName": "ShapeAnalysis_Wire::SetSurface",
+      "signature": "ShapeAnalysis_Wire::SetSurface: void (const occ::handle<Geom_Surface> &, const TopLoc_Location &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&&$@S@ShapeAnalysis_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void (ShapeAnalysis_Wire &&)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@S@ShapeAnalysis_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void (const ShapeAnalysis_Wire &)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@get_type_descriptor#S",
+      "nativeName": "ShapeAnalysis_Wire::get_type_descriptor",
+      "signature": "ShapeAnalysis_Wire::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@get_type_name#S",
+      "nativeName": "ShapeAnalysis_Wire::get_type_name",
+      "signature": "ShapeAnalysis_Wire::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BAInitializedAssembly",
+      "reason": "Redundant overload, borrowed conversion/reference, moved receiver, partial/unordered list assembly or contextual surface reset without proven pcurve membership remains deferred."
+    }
+  ],
+  "prerequisites": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Error#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Error",
+      "signature": "BRepBuilderAPI_MakeFace::Error: BRepBuilderAPI_FaceError () const",
+      "header": "BRepBuilderAPI_MakeFace.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Blocked"
+    }
+  ],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "header": "BRepBuilderAPI_Copy.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@Edge#",
+      "nativeName": "BRepBuilderAPI_MakeEdge::Edge",
+      "signature": "BRepBuilderAPI_MakeEdge::Edge: const TopoDS_Edge &()",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeEdge::IsDone",
+      "signature": "BRepBuilderAPI_MakeEdge::IsDone: bool () const",
+      "header": "BRepBuilderAPI_MakeEdge.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const TopoDS_Wire &, const bool)",
+      "header": "BRepBuilderAPI_MakeFace.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Face",
+      "signature": "BRepBuilderAPI_MakeFace::Face: const TopoDS_Face &() const",
+      "header": "BRepBuilderAPI_MakeFace.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::IsDone",
+      "signature": "BRepBuilderAPI_MakeFace::IsDone: bool () const",
+      "header": "BRepBuilderAPI_MakeFace.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Add",
+      "signature": "BRepBuilderAPI_MakeWire::Add: void (const TopoDS_Edge &)",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "signature": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire: void ()",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeWire::IsDone",
+      "signature": "BRepBuilderAPI_MakeWire::IsDone: bool () const",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Wire#",
+      "nativeName": "BRepBuilderAPI_MakeWire::Wire",
+      "signature": "BRepBuilderAPI_MakeWire::Wire: const TopoDS_Wire &()",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "BRepCheck_Analyzer::BRepCheck_Analyzer",
+      "signature": "BRepCheck_Analyzer::BRepCheck_Analyzer: void (const TopoDS_Shape &, const bool, const bool, const bool)",
+      "header": "BRepCheck_Analyzer.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepLib@F@BuildCurve3d#&1$@S@TopoDS_Edge#d#$@E@GeomAbs_Shape#I#I#S",
+      "nativeName": "BRepLib::BuildCurve3d",
+      "signature": "BRepLib::BuildCurve3d: bool (const TopoDS_Edge &, const double, const GeomAbs_Shape, const int, const int)",
+      "header": "BRepLib.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepLib_MakeWire::Add",
+      "signature": "BRepLib_MakeWire::Add: void (const TopoDS_Edge &)",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@BRepLib_MakeWire#",
+      "nativeName": "BRepLib_MakeWire::BRepLib_MakeWire",
+      "signature": "BRepLib_MakeWire::BRepLib_MakeWire: void ()",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Edge#1",
+      "nativeName": "BRepLib_MakeWire::Edge",
+      "signature": "BRepLib_MakeWire::Edge: const TopoDS_Edge &() const",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Error#1",
+      "nativeName": "BRepLib_MakeWire::Error",
+      "signature": "BRepLib_MakeWire::Error: BRepLib_WireError () const",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Vertex#1",
+      "nativeName": "BRepLib_MakeWire::Vertex",
+      "signature": "BRepLib_MakeWire::Vertex: const TopoDS_Vertex &() const",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@BRepLib_MakeWire@F@Wire#",
+      "nativeName": "BRepLib_MakeWire::Wire",
+      "signature": "BRepLib_MakeWire::Wire: const TopoDS_Wire &()",
+      "header": "BRepLib_MakeWire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom2d_Line@F@Geom2d_Line#&1$@S@gp_Pnt2d#&1$@S@gp_Dir2d#",
+      "nativeName": "Geom2d_Line::Geom2d_Line",
+      "signature": "Geom2d_Line::Geom2d_Line: void (const gp_Pnt2d &, const gp_Dir2d &)",
+      "header": "Geom2d_Line.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@IsReady#1",
+      "nativeName": "ShapeAnalysis_Wire::IsReady",
+      "signature": "ShapeAnalysis_Wire::IsReady: bool () const",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@LastCheckStatus#$@E@ShapeExtend_Status#1",
+      "nativeName": "ShapeAnalysis_Wire::LastCheckStatus",
+      "signature": "ShapeAnalysis_Wire::LastCheckStatus: bool (const ShapeExtend_Status) const",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@NbEdges#1",
+      "nativeName": "ShapeAnalysis_Wire::NbEdges",
+      "signature": "ShapeAnalysis_Wire::NbEdges: int () const",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@SetPrecision#d#",
+      "nativeName": "ShapeAnalysis_Wire::SetPrecision",
+      "signature": "ShapeAnalysis_Wire::SetPrecision: void (const double)",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "signature": "ShapeAnalysis_Wire::ShapeAnalysis_Wire: void ()",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "guard": "BAInitializedAssembly",
+      "reason": "Actually called private initialization, copy, completion or bounded curve-representation prerequisite.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 #include <BRepAdaptor_Curve.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <GeomLProp_SLProps.hxx>
-#include <GeomAPI_ProjectPointOnSurf.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.ProjectionAdapters.Generated.hxx"
 #include <GCPnts_UniformAbscissa.hxx>
 
 using namespace OcctSharp::SurfaceBridge;
@@ -98,7 +98,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_surface_project_points(
     for (int index = 0; index < point_count; ++index) {
       const auto world = Point(points[index]);
       const auto local = world.Transformed(data.location.Transformation().Inverted());
-      GeomAPI_ProjectPointOnSurf projector(local, data.surface, data.u0, data.u1, data.v0, data.v1, tolerance);
+      OcctSharpGenerated::SurfaceProjector projector(local, data.surface, data.u0, data.u1, data.v0, data.v1, tolerance);
       for (int solution = 1; solution <= projector.NbPoints(); ++solution) {
         double u, v; projector.Parameters(solution, u, v);
         const int state = data.State(u, v, tolerance);

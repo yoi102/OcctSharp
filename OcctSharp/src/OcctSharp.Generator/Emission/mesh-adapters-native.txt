@@ -1,0 +1,72 @@
+#pragma once
+#include <BRepMesh_IncrementalMesh.hxx>
+#include <Poly_CoherentTriangulation.hxx>
+#include <Poly_Connect.hxx>
+#include <Poly_MergeNodesTool.hxx>
+#include <Poly_Polygon3D.hxx>
+#include <Poly_PolygonOnTriangulation.hxx>
+#include <Poly_Triangulation.hxx>
+#include <Poly_Triangle.hxx>
+#include <array>
+namespace OcctSharpGenerated {
+// Native workflow-private helpers. No C ABI receiver, pointer or reference is published.
+struct CopiedMeshTriangle {
+  int a,b,c;
+  explicit CopiedMeshTriangle(const Poly_Triangle& t){t.Get(a,b,c);}
+  void Get(int& x,int& y,int& z)const{x=a;y=b;z=c;}
+};
+inline CopiedMeshTriangle MeshTriangle(const Poly_Triangulation& mesh,int index){return CopiedMeshTriangle(mesh.Triangle(index));}
+inline gp_Pnt2d MeshUVNode(const Poly_Triangulation& mesh,int index){return mesh.UVNode(index);}
+inline gp_Dir MeshNormal(const Poly_Triangulation& mesh,int index){return mesh.Normal(index);}
+inline void MeshNormal(const Poly_Triangulation& mesh,int index,NCollection_Vec3<float>& result){mesh.Normal(index,result);}
+inline void MeshSetNormal(Poly_Triangulation& mesh,int index,const NCollection_Vec3<float>& normal){mesh.SetNormal(index,normal);}
+inline void MeshSetUVNode(Poly_Triangulation& mesh,int index,const gp_Pnt2d& uv){mesh.SetUVNode(index,uv);}
+inline void MeshSetTriangle(Poly_Triangulation& mesh,int index,const Poly_Triangle& triangle){mesh.SetTriangle(index,triangle);}
+inline occ::handle<Poly_Polygon3D> MeshPolygon3D(const NCollection_Array1<gp_Pnt>& points){return new Poly_Polygon3D(points);}
+inline occ::handle<Poly_Polygon3D> MeshPolygon3D(const NCollection_Array1<gp_Pnt>& points,const NCollection_Array1<double>& parameters){return new Poly_Polygon3D(points,parameters);}
+inline occ::handle<Poly_PolygonOnTriangulation> MeshPolygonOnTriangulation(const NCollection_Array1<int>& indices){return new Poly_PolygonOnTriangulation(indices);}
+inline occ::handle<Poly_PolygonOnTriangulation> MeshPolygonOnTriangulation(const NCollection_Array1<int>& indices,const NCollection_Array1<double>& parameters){return new Poly_PolygonOnTriangulation(indices,parameters);}
+class PrivateMeshBuilder final {
+  BRepMesh_IncrementalMesh value;
+public:
+  PrivateMeshBuilder(const TopoDS_Shape& shape,double linear,bool relative=false,double angular=0.5,bool parallel=false):value(shape,linear,relative,angular,parallel){}
+  PrivateMeshBuilder(const TopoDS_Shape& shape,const IMeshTools_Parameters& parameters,const Message_ProgressRange& range=Message_ProgressRange()):value(shape,parameters,range){}
+  bool IsDone()const{return value.IsDone();}
+  PrivateMeshBuilder(const PrivateMeshBuilder&)=delete;
+  PrivateMeshBuilder& operator=(const PrivateMeshBuilder&)=delete;
+};
+class PrivatePolyConnect final {
+  Poly_Connect value;
+public:
+  explicit PrivatePolyConnect(const occ::handle<Poly_Triangulation>& mesh):value(mesh){}
+  void Triangles(int index,int& a,int& b,int& c)const{value.Triangles(index,a,b,c);}
+};
+struct CopiedCoherentTriangle {
+  std::array<int,3> nodes;
+  int Node(int index)const{return nodes.at(index);}
+};
+class PrivateCoherentBuilder final {
+  Poly_CoherentTriangulation value;
+public:
+  PrivateCoherentBuilder()=default;
+  int SetNode(const gp_XYZ& point,int index=-1){return value.SetNode(point,index);}
+  // These SDK pointers are borrowed only by the original call-local mutation program.
+  // They never enter a registry, C ABI output, managed object or published snapshot.
+  Poly_CoherentTriangle* AddTriangle(int a,int b,int c){return value.AddTriangle(a,b,c);}
+  bool ReplaceNodes(Poly_CoherentTriangle& triangle,int a,int b,int c){return value.ReplaceNodes(triangle,a,b,c);}
+  bool RemoveTriangle(Poly_CoherentTriangle& triangle){return value.RemoveTriangle(triangle);}
+  int NTriangles()const{return value.NTriangles();}
+  CopiedCoherentTriangle Triangle(int index)const{const auto& t=value.Triangle(index);return {{t.Node(0),t.Node(1),t.Node(2)}};}
+  PrivateCoherentBuilder(const PrivateCoherentBuilder&)=delete;
+  PrivateCoherentBuilder& operator=(const PrivateCoherentBuilder&)=delete;
+};
+class PrivateMergeNodesTool final : public Standard_Transient {
+  Poly_MergeNodesTool value;
+public:
+  PrivateMergeNodesTool(double angle,double tolerance=0,int facets=-1):value(angle,tolerance,facets){}
+  void ClearOutput(){value.ChangeOutput().Nullify();}
+  void SetDropDegenerative(bool drop){value.SetDropDegenerative(drop);}
+  void AddTriangle(const gp_XYZ* nodes){value.AddTriangle(nodes);}
+  int ElementNodeIndex(int index)const{return value.ElementNodeIndex(index);}
+};
+}

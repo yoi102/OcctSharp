@@ -85,9 +85,14 @@ void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer)
     if (!viewer->View.IsNull())
       for (const auto& plane : viewer->ClipPlanes) viewer->View->RemoveClipPlane(plane.second);
     if (!viewer->Context.IsNull()) viewer->Context->RemoveAll(false);
+    viewer->ViewCube.Nullify();
+    viewer->ViewCubeLeftArrow.Nullify();
+    viewer->ViewCubeRightArrow.Nullify();
     viewer->ActiveFilter.Nullify();
     viewer->ClipPlanes.clear();
     viewer->Presentations.clear();
+    viewer->InstanceSources.clear();
+    viewer->Sources.clear();
     viewer->Dimensions.clear();
     viewer->Rendering = ViewerRenderResources();
     viewer->View.Nullify();

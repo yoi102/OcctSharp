@@ -11,6 +11,8 @@
 OcctSharp/artifacts/
 OcctSharp/build/
 OcctSharp/out/
+**/__pycache__/
+*.pyc
 
 # Machine-specific dependency configuration
 OcctSharp/config/local.settings.json

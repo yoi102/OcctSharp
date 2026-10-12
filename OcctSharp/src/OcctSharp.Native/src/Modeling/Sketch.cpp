@@ -8,7 +8,7 @@
 #include "Runtime/Validation.hxx"
 #include <BRepBuilderAPI_Copy.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepBuilderAPI_MakeWire.hxx>
 #include <BRepCheck_Analyzer.hxx>
 #include <BRepClass_FaceClassifier.hxx>
@@ -394,7 +394,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_profile_make_face(
     ValidateUsableShape(outer_wire);
     if (outer_wire->Value.ShapeType() != TopAbs_WIRE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "The sketch outer loop must be a wire.");
-    BRepBuilderAPI_MakeFace builder(TopoDS::Wire(outer_wire->Value));
+    OcctSharpGenerated::FaceBuilder builder(TopoDS::Wire(outer_wire->Value));
     for (int32_t index = 0; index < inner_wire_count; ++index)
     {
       ValidateUsableShape(inner_wires[index]);
@@ -464,7 +464,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_wire_contains(
     if (wire->Value.ShapeType() != TopAbs_WIRE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Sketch containment requires a wire in the XY plane.");
     const gp_Pnt2d local = ToSketchPoint(point, "The sketch containment point must be finite.");
-    BRepBuilderAPI_MakeFace builder(gp_Pln(gp::XOY()), TopoDS::Wire(wire->Value), true);
+    OcctSharpGenerated::FaceBuilder builder(gp_Pln(gp::XOY()), TopoDS::Wire(wire->Value), true);
     if (!builder.IsDone())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not build the containment face.");
     BRepClass_FaceClassifier classifier(builder.Face(), gp_Pnt(local.X(), local.Y(), 0.0), tolerance);

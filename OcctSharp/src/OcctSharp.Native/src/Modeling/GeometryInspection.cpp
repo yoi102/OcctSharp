@@ -7,12 +7,11 @@
 #include <BRepAdaptor_Curve.hxx>
 #include <BRepAdaptor_Surface.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRep_Tool.hxx>
 #include <GCPnts_AbscissaPoint.hxx>
 #include <Geom2d_Curve.hxx>
-#include <GeomAPI_ProjectPointOnCurve.hxx>
-#include <GeomAPI_ProjectPointOnSurf.hxx>
+#include "../../generated/Geometry/OcctSharp.Geometry.ProjectionAdapters.Generated.hxx"
 #include <Geom_Curve.hxx>
 #include <Geom_RectangularTrimmedSurface.hxx>
 #include <Geom_Surface.hxx>
@@ -239,7 +238,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_project_point(
     const opencascade::handle<Geom_Curve> curve = BRep_Tool::Curve(TopoDS::Edge(edge->Value), first, last);
     if (curve.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no 3D curve to project onto.");
-    GeomAPI_ProjectPointOnCurve projection(gp_Pnt(point.x, point.y, point.z), curve, first, last);
+    OcctSharpGenerated::CurveProjector projection(gp_Pnt(point.x, point.y, point.z), curve, first, last);
     const int count = projection.NbPoints();
     if (count <= 0)
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT found no point projection on the edge curve.");
@@ -335,7 +334,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_project_point(
     const opencascade::handle<Geom_Surface> surface = BRep_Tool::Surface(topology_face);
     if (surface.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The face has no surface to project onto.");
-    GeomAPI_ProjectPointOnSurf projection(
+    OcctSharpGenerated::SurfaceProjector projection(
       gp_Pnt(point.x, point.y, point.z), surface,
       bounds.FirstUParameter(), bounds.LastUParameter(),
       bounds.FirstVParameter(), bounds.LastVParameter(), tolerance);
@@ -409,7 +408,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_trim(
     const opencascade::handle<Geom_RectangularTrimmedSurface> trimmed =
       new Geom_RectangularTrimmedSurface(
         surface, first_u_parameter, last_u_parameter, first_v_parameter, last_v_parameter, true, true);
-    BRepBuilderAPI_MakeFace builder(trimmed, tolerance);
+    OcctSharpGenerated::FaceBuilder builder(trimmed, tolerance);
     if (!builder.IsDone())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not build the trimmed face.");
     TopoDS_Face result = builder.Face();

@@ -1,0 +1,687 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@APIHeaderSection_MakeHeader#&1$@N@opencascade@S@handle>#$@S@StepData_StepModel#",
+      "nativeName": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader",
+      "signature": "APIHeaderSection_MakeHeader::APIHeaderSection_MakeHeader: void (const occ::handle<StepData_StepModel> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Author#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Author",
+      "signature": "APIHeaderSection_MakeHeader::Author: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Authorisation#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Authorisation",
+      "signature": "APIHeaderSection_MakeHeader::Authorisation: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Description#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Description",
+      "signature": "APIHeaderSection_MakeHeader::Description: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@FdValue#1",
+      "nativeName": "APIHeaderSection_MakeHeader::FdValue",
+      "signature": "APIHeaderSection_MakeHeader::FdValue: occ::handle<HeaderSection_FileDescription> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@FnValue#1",
+      "nativeName": "APIHeaderSection_MakeHeader::FnValue",
+      "signature": "APIHeaderSection_MakeHeader::FnValue: occ::handle<HeaderSection_FileName> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFd#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFd",
+      "signature": "APIHeaderSection_MakeHeader::HasFd: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFn#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFn",
+      "signature": "APIHeaderSection_MakeHeader::HasFn: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@HasFs#1",
+      "nativeName": "APIHeaderSection_MakeHeader::HasFs",
+      "signature": "APIHeaderSection_MakeHeader::HasFs: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@ImplementationLevel#1",
+      "nativeName": "APIHeaderSection_MakeHeader::ImplementationLevel",
+      "signature": "APIHeaderSection_MakeHeader::ImplementationLevel: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@IsDone#1",
+      "nativeName": "APIHeaderSection_MakeHeader::IsDone",
+      "signature": "APIHeaderSection_MakeHeader::IsDone: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Name#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Name",
+      "signature": "APIHeaderSection_MakeHeader::Name: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@Organization#1",
+      "nativeName": "APIHeaderSection_MakeHeader::Organization",
+      "signature": "APIHeaderSection_MakeHeader::Organization: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@OriginatingSystem#1",
+      "nativeName": "APIHeaderSection_MakeHeader::OriginatingSystem",
+      "signature": "APIHeaderSection_MakeHeader::OriginatingSystem: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@PreprocessorVersion#1",
+      "nativeName": "APIHeaderSection_MakeHeader::PreprocessorVersion",
+      "signature": "APIHeaderSection_MakeHeader::PreprocessorVersion: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SchemaIdentifiers#1",
+      "nativeName": "APIHeaderSection_MakeHeader::SchemaIdentifiers",
+      "signature": "APIHeaderSection_MakeHeader::SchemaIdentifiers: occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetAuthor#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetAuthor",
+      "signature": "APIHeaderSection_MakeHeader::SetAuthor: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetAuthorisation#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetAuthorisation",
+      "signature": "APIHeaderSection_MakeHeader::SetAuthorisation: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetDescription#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetDescription",
+      "signature": "APIHeaderSection_MakeHeader::SetDescription: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetName",
+      "signature": "APIHeaderSection_MakeHeader::SetName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetOrganization#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetOrganization",
+      "signature": "APIHeaderSection_MakeHeader::SetOrganization: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetOriginatingSystem#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetOriginatingSystem",
+      "signature": "APIHeaderSection_MakeHeader::SetOriginatingSystem: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetPreprocessorVersion#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetPreprocessorVersion",
+      "signature": "APIHeaderSection_MakeHeader::SetPreprocessorVersion: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@SetTimeStamp#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "APIHeaderSection_MakeHeader::SetTimeStamp",
+      "signature": "APIHeaderSection_MakeHeader::SetTimeStamp: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@APIHeaderSection_MakeHeader@F@TimeStamp#1",
+      "nativeName": "APIHeaderSection_MakeHeader::TimeStamp",
+      "signature": "APIHeaderSection_MakeHeader::TimeStamp: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@Init#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&1S3_#",
+      "nativeName": "HeaderSection_FileDescription::Init",
+      "signature": "HeaderSection_FileDescription::Init: void (const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@Init#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S0_#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#S3_#S0_#S0_#S0_#",
+      "nativeName": "HeaderSection_FileName::Init",
+      "signature": "HeaderSection_FileName::Init: void (const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<NCollection_HArray1<occ::handle<TCollection_HAsciiString>>> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &, const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@ExtractLabel#1",
+      "nativeName": "IFSelect_SelectType::ExtractLabel",
+      "signature": "IFSelect_SelectType::ExtractLabel: TCollection_AsciiString () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@CategoryName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::CategoryName",
+      "signature": "IFSelect_WorkSession::CategoryName: const char *(const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@CheckOne#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#b#",
+      "nativeName": "IFSelect_WorkSession::CheckOne",
+      "signature": "IFSelect_WorkSession::CheckOne: Interface_CheckIterator (const occ::handle<Standard_Transient> &, const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EvalSelection#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::EvalSelection",
+      "signature": "IFSelect_WorkSession::EvalSelection: Interface_EntityIterator (const occ::handle<IFSelect_Selection> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LastRunCheckList#1",
+      "nativeName": "IFSelect_WorkSession::LastRunCheckList",
+      "signature": "IFSelect_WorkSession::LastRunCheckList: Interface_CheckIterator () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@LoadedFile#1",
+      "nativeName": "IFSelect_WorkSession::LoadedFile",
+      "signature": "IFSelect_WorkSession::LoadedFile: const char *() const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ModelCheckList#b#",
+      "nativeName": "IFSelect_WorkSession::ModelCheckList",
+      "signature": "IFSelect_WorkSession::ModelCheckList: Interface_CheckIterator (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@NumberFromLabel#*1C#I#1",
+      "nativeName": "IFSelect_WorkSession::NumberFromLabel",
+      "signature": "IFSelect_WorkSession::NumberFromLabel: int (const char *const, const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SelectionResult#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#1",
+      "nativeName": "IFSelect_WorkSession::SelectionResult",
+      "signature": "IFSelect_WorkSession::SelectionResult: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<IFSelect_Selection> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Shareds#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_WorkSession::Shareds",
+      "signature": "IFSelect_WorkSession::Shareds: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@Sharings#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_WorkSession::Sharings",
+      "signature": "IFSelect_WorkSession::Sharings: occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ValidityName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::ValidityName",
+      "signature": "IFSelect_WorkSession::ValidityName: const char *(const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@WriteFile#*1C#",
+      "nativeName": "IFSelect_WorkSession::WriteFile",
+      "signature": "IFSelect_WorkSession::WriteFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@ApplicationProtocol#1",
+      "nativeName": "IGESData_GlobalSection::ApplicationProtocol",
+      "signature": "IGESData_GlobalSection::ApplicationProtocol: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@AuthorName#1",
+      "nativeName": "IGESData_GlobalSection::AuthorName",
+      "signature": "IGESData_GlobalSection::AuthorName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CompanyName#1",
+      "nativeName": "IGESData_GlobalSection::CompanyName",
+      "signature": "IGESData_GlobalSection::CompanyName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CopyRefs#",
+      "nativeName": "IGESData_GlobalSection::CopyRefs",
+      "signature": "IGESData_GlobalSection::CopyRefs: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Date#1",
+      "nativeName": "IGESData_GlobalSection::Date",
+      "signature": "IGESData_GlobalSection::Date: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@FileName#1",
+      "nativeName": "IGESData_GlobalSection::FileName",
+      "signature": "IGESData_GlobalSection::FileName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@HasApplicationProtocol#1",
+      "nativeName": "IGESData_GlobalSection::HasApplicationProtocol",
+      "signature": "IGESData_GlobalSection::HasApplicationProtocol: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@HasLastChangeDate#1",
+      "nativeName": "IGESData_GlobalSection::HasLastChangeDate",
+      "signature": "IGESData_GlobalSection::HasLastChangeDate: bool () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@InterfaceVersion#1",
+      "nativeName": "IGESData_GlobalSection::InterfaceVersion",
+      "signature": "IGESData_GlobalSection::InterfaceVersion: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@LastChangeDate#1",
+      "nativeName": "IGESData_GlobalSection::LastChangeDate",
+      "signature": "IGESData_GlobalSection::LastChangeDate: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@ReceiveName#1",
+      "nativeName": "IGESData_GlobalSection::ReceiveName",
+      "signature": "IGESData_GlobalSection::ReceiveName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SendName#1",
+      "nativeName": "IGESData_GlobalSection::SendName",
+      "signature": "IGESData_GlobalSection::SendName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetAuthorName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetAuthorName",
+      "signature": "IGESData_GlobalSection::SetAuthorName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetCompanyName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetCompanyName",
+      "signature": "IGESData_GlobalSection::SetCompanyName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetDate#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetDate",
+      "signature": "IGESData_GlobalSection::SetDate: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetFileName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetFileName",
+      "signature": "IGESData_GlobalSection::SetFileName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetInterfaceVersion#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetInterfaceVersion",
+      "signature": "IGESData_GlobalSection::SetInterfaceVersion: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetLastChangeDate#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetLastChangeDate",
+      "signature": "IGESData_GlobalSection::SetLastChangeDate: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetReceiveName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetReceiveName",
+      "signature": "IGESData_GlobalSection::SetReceiveName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetSendName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetSendName",
+      "signature": "IGESData_GlobalSection::SetSendName: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SetSystemId#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "IGESData_GlobalSection::SetSystemId",
+      "signature": "IGESData_GlobalSection::SetSystemId: void (const occ::handle<TCollection_HAsciiString> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@SystemId#1",
+      "nativeName": "IGESData_GlobalSection::SystemId",
+      "signature": "IGESData_GlobalSection::SystemId: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitName#1",
+      "nativeName": "IGESData_GlobalSection::UnitName",
+      "signature": "IGESData_GlobalSection::UnitName: occ::handle<TCollection_HAsciiString> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Private initialized reader model; same-session IDs; bounded detached text/checks; temporary copied header replacement restored before returning."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@HeaderSection_FileDescription@F@HeaderSection_FileDescription#",
+      "nativeName": "HeaderSection_FileDescription::HeaderSection_FileDescription",
+      "signature": "HeaderSection_FileDescription::HeaderSection_FileDescription: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@HeaderSection_FileName@F@HeaderSection_FileName#",
+      "nativeName": "HeaderSection_FileName::HeaderSection_FileName",
+      "signature": "HeaderSection_FileName::HeaderSection_FileName: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectDeduct@F@SetInput#&1$@N@opencascade@S@handle>#$@S@IFSelect_Selection#",
+      "nativeName": "IFSelect_SelectDeduct::SetInput",
+      "signature": "IFSelect_SelectDeduct::SetInput: void (const occ::handle<IFSelect_Selection> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectModelEntities@F@IFSelect_SelectModelEntities#",
+      "nativeName": "IFSelect_SelectModelEntities::IFSelect_SelectModelEntities",
+      "signature": "IFSelect_SelectModelEntities::IFSelect_SelectModelEntities: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectModelRoots@F@IFSelect_SelectModelRoots#",
+      "nativeName": "IFSelect_SelectModelRoots::IFSelect_SelectModelRoots",
+      "signature": "IFSelect_SelectModelRoots::IFSelect_SelectModelRoots: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectPointed@F@IFSelect_SelectPointed#",
+      "nativeName": "IFSelect_SelectPointed::IFSelect_SelectPointed",
+      "signature": "IFSelect_SelectPointed::IFSelect_SelectPointed: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectPointed@F@SetList#&1$@N@opencascade@S@handle>#$@S@NCollection_HSequence>#$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "IFSelect_SelectPointed::SetList",
+      "signature": "IFSelect_SelectPointed::SetList: void (const occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@IFSelect_SelectType#&1$@N@opencascade@S@handle>#$@S@Standard_Type#",
+      "nativeName": "IFSelect_SelectType::IFSelect_SelectType",
+      "signature": "IFSelect_SelectType::IFSelect_SelectType: void (const occ::handle<Standard_Type> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_SelectType@F@TypeForMatch#1",
+      "nativeName": "IFSelect_SelectType::TypeForMatch",
+      "signature": "IFSelect_SelectType::TypeForMatch: occ::handle<Standard_Type> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ClearFinalModifiers#",
+      "nativeName": "IFSelect_WorkSession::ClearFinalModifiers",
+      "signature": "IFSelect_WorkSession::ClearFinalModifiers: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ClearShareOut#b#",
+      "nativeName": "IFSelect_WorkSession::ClearShareOut",
+      "signature": "IFSelect_WorkSession::ClearShareOut: void (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@ComputeGraph#b#",
+      "nativeName": "IFSelect_WorkSession::ComputeGraph",
+      "signature": "IFSelect_WorkSession::ComputeGraph: bool (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EntityLabel#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::EntityLabel",
+      "signature": "IFSelect_WorkSession::EntityLabel: occ::handle<TCollection_HAsciiString> (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@EntityName#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "IFSelect_WorkSession::EntityName",
+      "signature": "IFSelect_WorkSession::EntityName: occ::handle<TCollection_HAsciiString> (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IFSelect_WorkSession@F@SetErrorHandle#b#",
+      "nativeName": "IFSelect_WorkSession::SetErrorHandle",
+      "signature": "IFSelect_WorkSession::SetErrorHandle: void (const bool)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESControl_Reader#",
+      "nativeName": "IGESControl_Reader::IGESControl_Reader",
+      "signature": "IGESControl_Reader::IGESControl_Reader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@CascadeUnit#1",
+      "nativeName": "IGESData_GlobalSection::CascadeUnit",
+      "signature": "IGESData_GlobalSection::CascadeUnit: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Resolution#1",
+      "nativeName": "IGESData_GlobalSection::Resolution",
+      "signature": "IGESData_GlobalSection::Resolution: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@Scale#1",
+      "nativeName": "IGESData_GlobalSection::Scale",
+      "signature": "IGESData_GlobalSection::Scale: double () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitFlag#1",
+      "nativeName": "IGESData_GlobalSection::UnitFlag",
+      "signature": "IGESData_GlobalSection::UnitFlag: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@GlobalSection#1",
+      "nativeName": "IGESData_IGESModel::GlobalSection",
+      "signature": "IGESData_IGESModel::GlobalSection: const IGESData_GlobalSection &() const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@SetGlobalSection#&1$@S@IGESData_GlobalSection#",
+      "nativeName": "IGESData_IGESModel::SetGlobalSection",
+      "signature": "IGESData_IGESModel::SetGlobalSection: void (const IGESData_GlobalSection &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NbEntities#1",
+      "nativeName": "Interface_InterfaceModel::NbEntities",
+      "signature": "Interface_InterfaceModel::NbEntities: int () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@NextNumberForLabel#*1C#I#b#1",
+      "nativeName": "Interface_InterfaceModel::NextNumberForLabel",
+      "signature": "Interface_InterfaceModel::NextNumberForLabel: int (const char *const, const int, const bool) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Number#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1",
+      "nativeName": "Interface_InterfaceModel::Number",
+      "signature": "Interface_InterfaceModel::Number: int (const occ::handle<Standard_Transient> &) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@Interface_InterfaceModel@F@Value#I#1",
+      "nativeName": "Interface_InterfaceModel::Value",
+      "signature": "Interface_InterfaceModel::Value: const occ::handle<Standard_Transient> &(const int) const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@STEPControl_Reader#",
+      "nativeName": "STEPControl_Reader::STEPControl_Reader",
+      "signature": "STEPControl_Reader::STEPControl_Reader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@AddHeaderEntity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#",
+      "nativeName": "StepData_StepModel::AddHeaderEntity",
+      "signature": "StepData_StepModel::AddHeaderEntity: void (const occ::handle<Standard_Transient> &)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@ClearHeader#",
+      "nativeName": "StepData_StepModel::ClearHeader",
+      "signature": "StepData_StepModel::ClearHeader: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@Header#1",
+      "nativeName": "StepData_StepModel::Header",
+      "signature": "StepData_StepModel::Header: Interface_EntityIterator () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@StepData_StepModel@F@StepData_StepModel#",
+      "nativeName": "StepData_StepModel::StepData_StepModel",
+      "signature": "StepData_StepModel::StepData_StepModel: void ()",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@Model#1",
+      "nativeName": "XSControl_Reader::Model",
+      "signature": "XSControl_Reader::Model: occ::handle<Interface_InterfaceModel> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "nativeName": "XSControl_Reader::ReadFile",
+      "signature": "XSControl_Reader::ReadFile: IFSelect_ReturnStatus (const char *const)",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@WS#1",
+      "nativeName": "XSControl_Reader::WS",
+      "signature": "XSControl_Reader::WS: occ::handle<XSControl_WorkSession> () const",
+      "guard": "ATPrivateSession",
+      "reason": "Audited private workflow prerequisite; existing emitted/manual declarations remain reuse."
+    }
+  ]
+}

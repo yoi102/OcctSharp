@@ -21,13 +21,119 @@
     <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\..\docs\BATCH_CH_APPLICATION_PREREQUISITES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_CG_RENDER_RESOURCES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_CE_EXCHANGE_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_CB_DOCUMENTS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_CA_MESH_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BZ_LOCAL_FEATURES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_BY_BOOLEAN_REPAIR_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_BX_TYPED_TOPOLOGY_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_BW_NONUNIFORM_FITTING_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_BV_PERIODIC_PROJECTION_ADMISSION.json" Pack="true" PackagePath="docs\" />
+
+    <None Include="..\..\..\docs\BATCH_AS_DOCUMENT_ATTRIBUTES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AS_DOCUMENT_ATTRIBUTES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_46_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_47_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_48_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AX_XDE_EXCHANGE_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AX_XDE_EXCHANGE_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_49_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_50_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_56_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_57_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_58_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BK_CONFIGURED_MESH_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BJ_LOCAL_STEP_ASSEMBLY_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BI_DIRECT_COLLECTIONS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_59_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_60_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_61_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_62_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_63_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_64_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_65_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_66_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_67_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_69_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_70_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_71_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_72_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_73_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_74_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_75_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_76_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_77_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_78_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_CC_ASSEMBLY_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_CD_STEP_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_79_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_80_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_CF_VIEWER_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_81_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_82_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\NEXT_ROUND_BF_BK_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BH_INTERSECTION_RESULTS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BG_MODELING_RESULTS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BF_NUMERIC_RESULTS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\NEXT_ROUND_AZ_BE_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_51_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BA_ASSEMBLY_DIAGNOSTICS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BA_ASSEMBLY_DIAGNOSTICS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_52_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BB_CURVE_SAMPLING_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BB_CURVE_SAMPLING_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_53_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BC_DOCUMENT_ASSOCIATIONS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BC_DOCUMENT_ASSOCIATIONS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_54_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BD_EXCHANGE_ROOTS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BD_EXCHANGE_ROOTS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_55_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BE_MESH_BOUNDARY_DIAGNOSTICS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BE_MESH_BOUNDARY_DIAGNOSTICS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AZ_FOUNDATION_DIAGNOSTICS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AZ_FOUNDATION_DIAGNOSTICS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AY_POLYGON_BOUNDARIES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AY_POLYGON_BOUNDARIES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AW_GEOMETRY_MODELING_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AW_GEOMETRY_MODELING_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AV_FOUNDATION_VALUES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AV_FOUNDATION_VALUES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AU_SELECTION_WORKSPACES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AU_SELECTION_WORKSPACES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AT_EXCHANGE_SESSIONS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AT_EXCHANGE_SESSIONS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AR_MESH_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AR_MESH_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AQ_HATCHING_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AQ_HATCHING_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AP_MODELING_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AP_MODELING_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_39_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_40_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_41_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_42_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_43_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_45_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_44_COUNTS.json" Pack="true" PackagePath="docs\" />
     <Compile Remove="Generated\**\*.cs" />
-    <Compile Remove="OcctException.cs;OcctRuntime.cs;OcctRuntimeInfo.cs;GpPoint.cs" />
+    <Compile Include="Generated\ViewerRenderingHealth.Generated.cs" />
+    <Compile Include="Generated\Consumers\**\*.cs" />
+    <Compile Remove="OcctException.cs;OcctRuntime.cs;OcctRuntimeInfo.cs;GpPoint.cs;ExchangePathStage.cs" />
     <Compile Remove="Interop\**\*.cs" />
     <Compile Remove="Shape.cs;ShapeFactory.cs;GeometrySnapshots.cs;TopologyAdjacencyMap.cs;ShapeTransform.cs" />
     <Compile Remove="GpTrsf.cs;TopLocLocation.cs;GpVec.cs;GpAx1.cs;GpXyz.cs" />
     <Compile Remove="BoundingBox3d.cs;OrientedBoundingBox3d.cs;ShapeTopologySummary.cs;ShapeValidationReport.cs" />
     <Compile Remove="BooleanHistory.cs;ShapeDistanceResult.cs;InspectionTypes.cs;MeshSnapshot.cs;DetailedMeshSnapshot.cs" />
+    <Compile Remove="FreeformAuthoring.cs;FreeformTypes.cs;ShapeExchange.cs;StepReadResult.cs;StlWriteOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
@@ -51,5 +157,34 @@
           Exclude="..\..\..\docs\STATUS.md"
           Pack="true"
           PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AG_SURFACE_INTERPOLATION_CANDIDATES.json"
+          Pack="true"
+          PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AH_BULK_ANALYSIS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AH_BULK_ANALYSIS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AI_TOPOLOGY_EXCHANGE_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AI_TOPOLOGY_EXCHANGE_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AJ_REPAIR_WORKSPACES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AJ_REPAIR_WORKSPACES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AK_TRANSFER_RECORDS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AL_NUMERIC_MATRICES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AM_SPLINE_WORKSPACES_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AN_WRITER_DIAGNOSTICS_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AO_SDK_BLOCKERS_LEDGER.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AN_WRITER_DIAGNOSTICS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AM_SPLINE_WORKSPACES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AL_NUMERIC_MATRICES_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_AK_TRANSFER_RECORDS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BL_PARAMETERIZED_CONSTRUCTION_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\NEXT_ROUND_BL_BQ_CANDIDATES.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\PROGRESS_PREVIEW_61_REVIEW_COUNTS.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BM_FINITE_EXTREMA_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BN_BOUNDED_TEXT_TRANSFORMS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BO_MESH_PROXIMITY_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BP_LOCAL_STEP_EXPORT_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BQ_WHOLE_ROUND_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BT_COUPLED_COLLECTIONS_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BU_UNIT_DIAGNOSTIC_ADMISSION.json" Pack="true" PackagePath="docs\" />
+    <None Include="..\..\..\docs\BATCH_BU_MANUAL_CALLER_AUDIT.json" Pack="true" PackagePath="docs\" />
   </ItemGroup>
 </Project>

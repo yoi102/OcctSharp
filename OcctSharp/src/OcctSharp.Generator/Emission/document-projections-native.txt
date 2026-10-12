@@ -1,0 +1,87 @@
+#include "OcctSharp.Documents.ProjectionSupport.Generated.hxx"
+#include <TDataStd_NamedData.hxx>
+#include <NCollection_DataMap.hxx>
+#include <NCollection_HArray1.hxx>
+#include <NCollection_List.hxx>
+#include <type_traits>
+using namespace OcctSharpDocumentProjections;
+namespace {
+using Integers=NCollection_DataMap<TCollection_ExtendedString,int>;
+using Reals=NCollection_DataMap<TCollection_ExtendedString,double>;
+using Strings=NCollection_DataMap<TCollection_ExtendedString,TCollection_ExtendedString>;
+using Bytes=NCollection_DataMap<TCollection_ExtendedString,uint8_t>;
+using IntegerArrays=NCollection_DataMap<TCollection_ExtendedString,occ::handle<NCollection_HArray1<int>>>;
+using RealArrays=NCollection_DataMap<TCollection_ExtendedString,occ::handle<NCollection_HArray1<double>>>;
+void Finite(double value){Require(std::isfinite(value),"Nonfinite document real.");}
+template<class Map,class F>void CopyMap(const Map& map,Writer& out,F&& value) {
+ using Item=std::decay_t<decltype(std::declval<typename Map::Iterator>().Value())>;
+ Require(map.Size()<=EntryLimit,"NamedData map exceeds entry limit.");std::vector<std::pair<std::string,Item>> sorted;
+ for(typename Map::Iterator it(map);it.More();it.Next()){auto key=OcctSharp::Native::ExtendedToUtf8(it.Key());Require(key.size()<=EntryLimit,"NamedData key exceeds limit.");sorted.emplace_back(std::move(key),it.Value());}
+ std::sort(sorted.begin(),sorted.end(),[](const auto& a,const auto& b){return a.first<b.first;});out.Number<int32_t>(static_cast<int32_t>(sorted.size()));
+ for(const auto& pair:sorted){out.Text(pair.first);value(pair.second);}
+}
+template<class T>void CopyArray(const occ::handle<NCollection_HArray1<T>>& array,Writer& out) {
+ if(array.IsNull()){out.Number<int32_t>(1);out.Number<int32_t>(-1);return;}
+ int lower=array->Lower(),count=array->Length();Require(count>=0&&count<=ValueLimit&&lower>std::numeric_limits<int>::min()&&int64_t(lower)+count<=std::numeric_limits<int>::max(),"Unsafe stored NamedData array bounds.");
+ out.Number<int32_t>(lower);out.Number<int32_t>(count);
+ for(int n=0;n<count;++n){T value=array->Value(lower+n);if constexpr(std::is_same_v<T,double>)Finite(value);out.Number<T>(value);}
+}
+void CopyData(const occ::handle<TDataStd_NamedData>& data,Writer& out) {
+ out.Number<int32_t>(!data.IsNull());if(data.IsNull())return;
+ CopyMap(data->GetIntegersContainer(),out,[&](int value){out.Number<int32_t>(value);});
+ CopyMap(data->GetRealsContainer(),out,[&](double value){Finite(value);out.Number<double>(value);});
+ CopyMap(data->GetStringsContainer(),out,[&](const TCollection_ExtendedString& value){out.Text(value);});
+ CopyMap(data->GetBytesContainer(),out,[&](uint8_t value){out.Number<int32_t>(value);});
+ CopyMap(data->GetArraysOfIntegersContainer(),out,[&](const auto& value){CopyArray(value,out);});
+ CopyMap(data->GetArraysOfRealsContainer(),out,[&](const auto& value){CopyArray(value,out);});
+}
+template<class Map,class F>Map ParseMap(Reader& input,F&& value) {
+ Map map;int count=input.Count();for(int n=0;n<count;++n){auto key=input.Extended();Require(key.LengthOfCString()<=EntryLimit&&!map.IsBound(key),"Invalid/duplicate NamedData key.");map.Bind(key,value());}return map;
+}
+template<class T>occ::handle<NCollection_HArray1<T>> ParseArray(Reader& input,int64_t& values) {
+ int lower=input.Number<int32_t>(),count=input.Number<int32_t>();Require(count>=-1&&count<=ValueLimit,"Invalid NamedData array size.");
+ if(count==-1){Require(lower==1,"Null array has no custom native bounds.");return {};}
+ Require(lower>std::numeric_limits<int>::min()&&int64_t(lower)+count<=std::numeric_limits<int>::max()&&(values+=count)<=ValueLimit,"NamedData bounds/count exceed safe limits.");
+ occ::handle<NCollection_HArray1<T>> out=new NCollection_HArray1<T>(lower,static_cast<int>(int64_t(lower)+count-1));
+ for(int n=0;n<count;++n){T value=input.Number<T>();if constexpr(std::is_same_v<T,double>)Finite(value);out->SetValue(lower+n,value);}return out;
+}
+occ::handle<TDataStd_NamedData> ParseData(Reader& input,int64_t& values) {
+ int present=input.Number<int32_t>();Require(present==0||present==1,"Invalid NamedData presence flag.");if(!present)return {};
+ auto integers=ParseMap<Integers>(input,[&]{return input.Number<int32_t>();});
+ auto reals=ParseMap<Reals>(input,[&]{double value=input.Number<double>();Finite(value);return value;});
+ auto strings=ParseMap<Strings>(input,[&]{return input.Extended();});
+ auto bytes=ParseMap<Bytes>(input,[&]{int value=input.Number<int32_t>();Require(value>=0&&value<=255,"Invalid NamedData byte.");return static_cast<uint8_t>(value);});
+ auto arrays=ParseMap<IntegerArrays>(input,[&]{return ParseArray<int>(input,values);});
+ auto realArrays=ParseMap<RealArrays>(input,[&]{return ParseArray<double>(input,values);});
+ occ::handle<TDataStd_NamedData> out=new TDataStd_NamedData();
+ out->ChangeIntegers(integers);out->ChangeReals(reals);out->ChangeStrings(strings);out->ChangeBytes(bytes);out->ChangeArraysOfIntegers(arrays);out->ChangeArraysOfReals(realArrays);return out;
+}
+}
+namespace OcctSharpDocumentProjections {
+std::vector<uint8_t> EncodeNamedData(const occ::handle<TDataStd_NamedData>& data){Writer out(1);CopyData(data,out);return std::move(out.bytes);}
+occ::handle<TDataStd_NamedData> DecodeNamedData(const std::vector<uint8_t>& bytes){Reader input(bytes.data(),static_cast<int>(bytes.size()));Require(input.Number<int32_t>()==1&&input.Number<int32_t>()==1,"Invalid persisted NamedData envelope.");int64_t values=0;auto data=ParseData(input,values);input.End();Require(!data.IsNull(),"Persisted NamedData cannot be absent.");return data;}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_document_projection_create_native(void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{occ::handle<TDocStd_Document> doc=new TDocStd_Document(TCollection_ExtendedString("BinXCAF"));(void)doc->Main();doc->SetUndoLimit(32);*result=OcctSharpGenerated::AllocateTDocStdDocument(std::move(doc));});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_document_projection_snapshot(const void* document,int32_t domain,const char* entry,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto doc=Document(document,domain);auto label=Label(doc,entry);BoundedTree(label);Writer out(1);out.Text(Entry(label));
+  NCollection_List<int> tags;TDF_Tool::TagList(label,tags);Require(tags.Size()<=256,"Native tag path exceeds limit.");out.Number<int32_t>(tags.Size());for(NCollection_List<int>::Iterator it(tags);it.More();it.Next())out.Number<int32_t>(it.Value());
+  out.Number<int32_t>(TDF_Tool::NbLabels(label));out.Number<int32_t>(TDF_Tool::NbAttributes(label));out.Number<int32_t>(TDF_Tool::IsSelfContained(label));
+  occ::handle<TDataStd_NamedData> data;label.FindAttribute(TDataStd_NamedData::GetID(),data);CopyData(data,out);*result=Publish(std::move(out),1);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_document_projection_replace(const void* document,int32_t domain,const uint8_t* data,int32_t length) {
+ return Guard([&]{auto doc=Document(document,domain);Command(doc);Reader input(data,length);Require(input.Number<int32_t>()==1&&input.Number<int32_t>()==1,"Wrong NamedData payload version/type.");
+  int count=input.Count();int64_t values=0;std::vector<std::pair<std::string,occ::handle<TDataStd_NamedData>>> updates;std::set<std::string> entries;
+  for(int n=0;n<count;++n){auto entry=input.Text();EntrySyntax(entry.c_str());Require(entries.insert(entry).second,"Duplicate update label.");updates.emplace_back(std::move(entry),ParseData(input,values));}input.End();
+  Atomic(doc,[&]{for(const auto& update:updates){auto label=Label(doc,update.first.c_str());label.ForgetAttribute(TDataStd_NamedData::GetID());if(!update.second.IsNull())label.AddAttribute(update.second,false);}});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_document_projection_payload_size(const void* token,int32_t kind,int32_t* count) {
+ if(!count)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*count=0;return Guard([&]{ReadPayload(token,kind,[&](const auto& bytes){*count=static_cast<int32_t>(bytes.size());});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_document_projection_payload_copy(const void* token,int32_t kind,uint8_t* values,int32_t capacity) {
+ return Guard([&]{ReadPayload(token,kind,[&](const auto& bytes){Require(capacity>=0&&static_cast<size_t>(capacity)>=bytes.size()&&(bytes.empty()||values),"Insufficient projection output buffer.");if(!bytes.empty())std::copy(bytes.begin(),bytes.end(),values);});});
+}
+void OCCTSHARP_CALL occtsharp_document_projection_payload_release(void* token,int32_t kind){Release(token,kind);}

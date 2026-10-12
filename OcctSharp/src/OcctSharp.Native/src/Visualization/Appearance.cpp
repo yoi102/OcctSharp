@@ -1,3 +1,6 @@
+#include "../../generated/Visualization/OcctSharp.ConsumerSharedPresentations.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.Visualization.RenderResourceAdapters.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
 #include "Visualization/Context.hxx"
 #include "Visualization/Presentations.hxx"
 #include "Runtime/Error.hxx"
@@ -19,11 +22,11 @@ Graphic3d_MaterialAspect Material(const OcctSharp_ReviewMaterial& m) {
   RenderRange(m.metallic, 0, 1, "Invalid metallic value."); RenderRange(m.roughness, 0, 1, "Invalid roughness.");
   RenderRange(m.ior, 1, 3, "Invalid material refraction index."); RenderRange(m.emission, 0, 1000, "Invalid emission.");
   const Quantity_Color color(m.red, m.green, m.blue, Quantity_TOC_RGB);
-  Graphic3d_PBRMaterial pbr; pbr.SetColor(Quantity_ColorRGBA(color, static_cast<float>(m.alpha)));
-  pbr.SetMetallic(static_cast<float>(m.metallic)); pbr.SetRoughness(static_cast<float>(m.roughness)); pbr.SetIOR(static_cast<float>(m.ior));
-  pbr.SetEmission(NCollection_Vec3<float>(static_cast<float>(m.red * m.emission), static_cast<float>(m.green * m.emission), static_cast<float>(m.blue * m.emission)));
-  Graphic3d_MaterialAspect result; result.SetDiffuseColor(color); result.SetAmbientColor(color);
-  result.SetTransparency(static_cast<float>(1 - m.alpha)); result.SetPBRMaterial(pbr); return result;
+  Graphic3d_PBRMaterial pbr = OcctSharpGenerated::RenderResourceAdapters::ConstructGraphic3dPBRMaterial(); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_PBRMaterial_SetColor_Bind(pbr)(Quantity_ColorRGBA(color, static_cast<float>(m.alpha)));
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_PBRMaterial_SetMetallic_Bind(pbr)(static_cast<float>(m.metallic)); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_PBRMaterial_SetRoughness_Bind(pbr)(static_cast<float>(m.roughness)); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_PBRMaterial_SetIOR_Bind(pbr)(static_cast<float>(m.ior));
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_PBRMaterial_SetEmission_Bind(pbr)(NCollection_Vec3<float>(static_cast<float>(m.red * m.emission), static_cast<float>(m.green * m.emission), static_cast<float>(m.blue * m.emission)));
+  Graphic3d_MaterialAspect result = OcctSharpGenerated::RenderResourceAdapters::ConstructGraphic3dMaterialAspect(); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_MaterialAspect_SetDiffuseColor_Bind(result)(color); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_MaterialAspect_SetAmbientColor_Bind(result)(color);
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_MaterialAspect_SetTransparency_Bind(result)(static_cast<float>(1 - m.alpha)); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_MaterialAspect_SetPBRMaterial_Bind(result)(pbr); return result;
 }
 void ValidateUv(const TopoDS_Shape& shape, bool planar) {
   bool any = false;
@@ -53,17 +56,17 @@ opencascade::handle<Graphic3d_Texture2D> MakeReviewTexture(OcctSharp_ViewerHandl
     const gp_Vec s(a.plane_s[0], a.plane_s[1], a.plane_s[2]), t(a.plane_t[0], a.plane_t[1], a.plane_t[2]);
     RequireRender(s.Crossed(t).SquareMagnitude() > 1e-24, "Texture mapping planes must be independent.");
     opencascade::handle<Graphic3d_Texture2Dplane> plane = new Graphic3d_Texture2Dplane(image);
-    plane->SetPlaneS(static_cast<float>(a.plane_s[0]), static_cast<float>(a.plane_s[1]), static_cast<float>(a.plane_s[2]), static_cast<float>(a.plane_s[3]));
-    plane->SetPlaneT(static_cast<float>(a.plane_t[0]), static_cast<float>(a.plane_t[1]), static_cast<float>(a.plane_t[2]), static_cast<float>(a.plane_t[3]));
+    OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Texture2Dplane_SetPlaneS_Bind(*(plane))(static_cast<float>(a.plane_s[0]), static_cast<float>(a.plane_s[1]), static_cast<float>(a.plane_s[2]), static_cast<float>(a.plane_s[3]));
+    OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Texture2Dplane_SetPlaneT_Bind(*(plane))(static_cast<float>(a.plane_t[0]), static_cast<float>(a.plane_t[1]), static_cast<float>(a.plane_t[2]), static_cast<float>(a.plane_t[3]));
     texture = plane;
   } else texture = new Graphic3d_Texture2D(image);
   texture->SetColorMap(true); const auto& parameters = texture->GetParams();
   parameters->SetModulate(true); parameters->SetRepeat(a.repeat != 0);
   parameters->SetFilter(static_cast<Graphic3d_TypeOfTextureFilter>(a.filter));
   parameters->SetAnisoFilter(static_cast<Graphic3d_LevelOfTextureAnisotropy>(a.anisotropy));
-  parameters->SetScale(NCollection_Vec2<float>(static_cast<float>(a.scale_s), static_cast<float>(a.scale_t)));
-  parameters->SetTranslation(NCollection_Vec2<float>(static_cast<float>(a.translate_s), static_cast<float>(a.translate_t)));
-  parameters->SetRotation(static_cast<float>(a.rotation)); return texture;
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_TextureParams_SetScale_Bind(*(parameters))(NCollection_Vec2<float>(static_cast<float>(a.scale_s), static_cast<float>(a.scale_t)));
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_TextureParams_SetTranslation_Bind(*(parameters))(NCollection_Vec2<float>(static_cast<float>(a.translate_s), static_cast<float>(a.translate_t)));
+  OcctSharpGenerated::RenderResourceAdapters::Graphic3d_TextureParams_SetRotation_Bind(*(parameters))(static_cast<float>(a.rotation)); return texture;
 }
 void ResetReviewAppearance(OcctSharp_ViewerHandle* viewer, int64_t id) {
   auto found = viewer->Rendering.Appearances.find(id); if (found == viewer->Rendering.Appearances.end()) return;
@@ -87,18 +90,16 @@ void ReplaceReviewTexture(OcctSharp_ViewerHandle* viewer, int64_t id, const open
     change.Entry->Texture = change.Texture;
     if (image.IsNull()) change.Entry->Definition.texture = 0;
     for (const auto& a : change.Entry->Aspects) {
-      a.Override->Aspect()->SetTextureSet(change.Set); a.Override->Aspect()->SetTextureMapOn(!change.Set.IsNull());
+      OcctSharpGenerated::RenderResourceAdapters::Prs3d_ShadingAspect_Aspect_Bind(*(a.Override))()->SetTextureSet(change.Set); OcctSharpGenerated::RenderResourceAdapters::Prs3d_ShadingAspect_Aspect_Bind(*(a.Override))()->SetTextureMapOn(!change.Set.IsNull());
     }
     change.Shape->SynchronizeAspects();
   }
   viewer->View->Invalidate();
 }
 }
-OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_appearance(OcctSharp_ViewerHandle* viewer, int64_t id, const OcctSharp_Appearance* profile) {
-  return Guard([&] {
-    ValidateViewerThread(viewer); const auto shape = FindPresentation(viewer, id);
-    if (!profile) { ResetReviewAppearance(viewer, id); return; }
-    const auto& p = *profile;
+namespace OcctSharp::Native {
+ViewerAppearanceEntry PrepareReviewAppearance(OcctSharp_ViewerHandle* viewer,const opencascade::handle<AIS_ColoredShape>& shape,const OcctSharp_Appearance& p,const ViewerAppearanceEntry* previous)
+{
     RequireRender(p.shading == 0 || p.shading == 3 || p.shading == 4, "Only Unlit, Phong and PBR review shading are supported.");
     RequireRender(p.shading != 4 || ReadRenderCaps(viewer).pbr, "Driver does not support PBR.");
     RequireRender(p.shading != 4 || viewer->View->ShadingModel() == Graphic3d_TypeOfShadingModel_Pbr, "PBR appearances require a PBR view profile.");
@@ -108,32 +109,41 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_appearance(OcctSharp_ViewerHand
     const auto front = Material(p.front), back = Material(p.back);
     ViewerAppearanceEntry staged; staged.Definition = p;
     opencascade::handle<Graphic3d_TextureSet> set;
-    if (p.texture != 0) { ValidateUv(shape->Shape(), p.planar != 0); staged.Texture = MakeReviewTexture(viewer, p, FindTexture(viewer, p.texture)); set = new Graphic3d_TextureSet(staged.Texture); }
-    const auto previous = viewer->Rendering.Appearances.find(id);
-    if (previous != viewer->Rendering.Appearances.end()) staged.Aspects = previous->second.Aspects;
+    if (p.texture != 0) { ValidateUv(OcctSharpGenerated::ViewerAdapters::AIS_Shape_Shape_Bind(*(shape))(), p.planar != 0); staged.Texture = MakeReviewTexture(viewer, p, FindTexture(viewer, p.texture)); set = new Graphic3d_TextureSet(staged.Texture); }
+    if (previous) staged.Aspects = previous->Aspects;
     else {
       const auto add = [&](const opencascade::handle<Prs3d_Drawer>& drawer) {
-        staged.Aspects.push_back({ drawer, drawer->HasOwnShadingAspect() ? drawer->ShadingAspect() : opencascade::handle<Prs3d_ShadingAspect>(), {} });
+        staged.Aspects.push_back({ drawer, drawer->HasOwnShadingAspect() ? OcctSharpGenerated::RenderResourceAdapters::Prs3d_Drawer_ShadingAspect_Bind(*(drawer))() : opencascade::handle<Prs3d_ShadingAspect>(), {} });
       };
-      add(shape->Attributes());
-      for (const auto& drawer : shape->CustomAspectsMap()) add(drawer);
+      add(OcctSharpGenerated::RenderResourceAdapters::PrsMgr_PresentableObject_Attributes_Bind(*(shape))());
+      for (const auto& drawer : OcctSharpGenerated::ViewerAdapters::AIS_ColoredShape_CustomAspectsMap_Bind(*(shape))()) add(drawer);
     }
     for (auto& a : staged.Aspects) {
-      opencascade::handle<Graphic3d_AspectFillArea3d> fill = new Graphic3d_AspectFillArea3d(*a.Drawer->ShadingAspect()->Aspect());
+      opencascade::handle<Graphic3d_AspectFillArea3d> fill = new Graphic3d_AspectFillArea3d(*OcctSharpGenerated::RenderResourceAdapters::Prs3d_ShadingAspect_Aspect_Bind(*(OcctSharpGenerated::RenderResourceAdapters::Prs3d_Drawer_ShadingAspect_Bind(*(a.Drawer))()))());
       fill->SetShadingModel(static_cast<Graphic3d_TypeOfShadingModel>(p.shading));
-      fill->SetFrontMaterial(front); fill->SetBackMaterial(back); fill->SetDistinguish(p.distinguish != 0);
-      fill->SetInteriorColor(Quantity_ColorRGBA(Quantity_Color(p.front.red, p.front.green, p.front.blue, Quantity_TOC_RGB), static_cast<float>(p.front.alpha)));
-      fill->SetBackInteriorColor(Quantity_ColorRGBA(Quantity_Color(p.back.red, p.back.green, p.back.blue, Quantity_TOC_RGB), static_cast<float>(p.back.alpha)));
+      OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Aspects_SetFrontMaterial_Bind(*(fill))(front); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Aspects_SetBackMaterial_Bind(*(fill))(back); fill->SetDistinguish(p.distinguish != 0);
+      OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Aspects_SetInteriorColor_Bind(*(fill))(Quantity_ColorRGBA(Quantity_Color(p.front.red, p.front.green, p.front.blue, Quantity_TOC_RGB), static_cast<float>(p.front.alpha)));
+      OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Aspects_SetBackInteriorColor_Bind(*(fill))(Quantity_ColorRGBA(Quantity_Color(p.back.red, p.back.green, p.back.blue, Quantity_TOC_RGB), static_cast<float>(p.back.alpha)));
       fill->SetFaceCulling(static_cast<Graphic3d_TypeOfBackfacingModel>(p.culling));
-      fill->SetAlphaMode(static_cast<Graphic3d_AlphaMode>(p.alpha_mode), static_cast<float>(p.alpha_cutoff));
+      OcctSharpGenerated::RenderResourceAdapters::Graphic3d_Aspects_SetAlphaMode_Bind(*(fill))(static_cast<Graphic3d_AlphaMode>(p.alpha_mode), static_cast<float>(p.alpha_cutoff));
       fill->SetTextureSet(set); fill->SetTextureMapOn(!set.IsNull()); a.Override = new Prs3d_ShadingAspect(fill);
     }
+    return staged;
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_appearance(OcctSharp_ViewerHandle* viewer, int64_t id, const OcctSharp_Appearance* profile) {
+  return Guard([&] {
+    ValidateViewerThread(viewer); const auto shape = FindPresentation(viewer, id);
+    if (!profile) { ResetReviewAppearance(viewer, id); return; }
+    const auto previous=viewer->Rendering.Appearances.find(id);
+    auto staged=PrepareReviewAppearance(viewer,shape,*profile,previous==viewer->Rendering.Appearances.end()?nullptr:&previous->second);
     std::vector<opencascade::handle<Prs3d_ShadingAspect>> old;
-    for (const auto& a : staged.Aspects) old.push_back(a.Drawer->HasOwnShadingAspect() ? a.Drawer->ShadingAspect() : opencascade::handle<Prs3d_ShadingAspect>());
+    for (const auto& a : staged.Aspects) old.push_back(a.Drawer->HasOwnShadingAspect() ? OcctSharpGenerated::RenderResourceAdapters::Prs3d_Drawer_ShadingAspect_Bind(*(a.Drawer))() : opencascade::handle<Prs3d_ShadingAspect>());
     const bool inserted = previous == viewer->Rendering.Appearances.end();
     auto [entry, unused] = viewer->Rendering.Appearances.try_emplace(id);
     (void)unused;
     for (const auto& a : staged.Aspects) a.Drawer->SetShadingAspect(a.Override);
+    MakePresentationIndependent(shape);
     try { viewer->Context->Redisplay(shape, false); }
     catch (...) { for (size_t i = 0; i < old.size(); ++i) staged.Aspects[i].Drawer->SetShadingAspect(old[i]); if (inserted) viewer->Rendering.Appearances.erase(id); throw; }
     entry->second = std::move(staged);

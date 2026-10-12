@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@FlatBezierKnots#I#S",
+      "nativeName": "BSplCLib::FlatBezierKnots",
+      "signature": "BSplCLib::FlatBezierKnots: const double &(const int)",
+      "guard": "BRStaticSequenceCopy",
+      "reason": "Preserve the existing ABI and managed API; check SDK degree bounds and copy exactly 2*(degree+1) elements from the documented static sequence. No reference escapes."
+    }
+  ],
+  "supportingOperations": []
+}

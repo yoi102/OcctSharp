@@ -1,0 +1,21 @@
+#pragma once
+#include "Visualization/Context.hxx"
+#include <TDocStd_Document.hxx>
+#include <NCollection_IndexedDataMap.hxx>
+#include <TopTools_ShapeMapHasher.hxx>
+
+namespace OcctSharp::Native
+{
+struct ViewerSourceEntry
+{
+  // Original shapes retain exact caller identity but are never rendered.
+  // The copied topology is mutated exclusively by this viewer.
+  NCollection_IndexedDataMap<TopoDS_Shape, TopoDS_Shape, TopTools_ShapeMapHasher> Copies;
+  TopoDS_Shape Original;
+  opencascade::handle<AIS_ColoredShape> Value;
+  opencascade::handle<TDocStd_Document> Styles;
+};
+TopoDS_Shape ResolveSourceSelection(const OcctSharp_ViewerHandle*, int64_t, const TopoDS_Shape&);
+TopoDS_Shape ResolveSourceSubshape(const OcctSharp_ViewerHandle*, int64_t, const TopoDS_Shape&);
+bool ClearSourceSubshapeOverrides(OcctSharp_ViewerHandle*, int64_t, const TopoDS_Shape*);
+}

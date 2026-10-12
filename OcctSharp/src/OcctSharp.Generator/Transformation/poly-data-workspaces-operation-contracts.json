@@ -1,0 +1,358 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@IsDoublePrecision#1",
+      "nativeName": "Poly_ArrayOfNodes::IsDoublePrecision",
+      "signature": "Poly_ArrayOfNodes::IsDoublePrecision: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@Poly_ArrayOfNodes#",
+      "nativeName": "Poly_ArrayOfNodes::Poly_ArrayOfNodes",
+      "signature": "Poly_ArrayOfNodes::Poly_ArrayOfNodes: void ()",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@Poly_ArrayOfNodes#I#",
+      "nativeName": "Poly_ArrayOfNodes::Poly_ArrayOfNodes",
+      "signature": "Poly_ArrayOfNodes::Poly_ArrayOfNodes: void (int)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@SetDoublePrecision#b#",
+      "nativeName": "Poly_ArrayOfNodes::SetDoublePrecision",
+      "signature": "Poly_ArrayOfNodes::SetDoublePrecision: void (bool)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@SetValue#I#&1$@S@gp_Pnt#",
+      "nativeName": "Poly_ArrayOfNodes::SetValue",
+      "signature": "Poly_ArrayOfNodes::SetValue: void (int, const gp_Pnt &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfNodes@F@Value#I#1",
+      "nativeName": "Poly_ArrayOfNodes::Value",
+      "signature": "Poly_ArrayOfNodes::Value: gp_Pnt (int) const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@IsDoublePrecision#1",
+      "nativeName": "Poly_ArrayOfUVNodes::IsDoublePrecision",
+      "signature": "Poly_ArrayOfUVNodes::IsDoublePrecision: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@Poly_ArrayOfUVNodes#",
+      "nativeName": "Poly_ArrayOfUVNodes::Poly_ArrayOfUVNodes",
+      "signature": "Poly_ArrayOfUVNodes::Poly_ArrayOfUVNodes: void ()",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@Poly_ArrayOfUVNodes#I#",
+      "nativeName": "Poly_ArrayOfUVNodes::Poly_ArrayOfUVNodes",
+      "signature": "Poly_ArrayOfUVNodes::Poly_ArrayOfUVNodes: void (int)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@SetDoublePrecision#b#",
+      "nativeName": "Poly_ArrayOfUVNodes::SetDoublePrecision",
+      "signature": "Poly_ArrayOfUVNodes::SetDoublePrecision: void (bool)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@SetValue#I#&1$@S@gp_Pnt2d#",
+      "nativeName": "Poly_ArrayOfUVNodes::SetValue",
+      "signature": "Poly_ArrayOfUVNodes::SetValue: void (int, const gp_Pnt2d &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_ArrayOfUVNodes@F@Value#I#1",
+      "nativeName": "Poly_ArrayOfUVNodes::Value",
+      "signature": "Poly_ArrayOfUVNodes::Value: gp_Pnt2d (int) const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Initialize#I#",
+      "nativeName": "Poly_Connect::Initialize",
+      "signature": "Poly_Connect::Initialize: void (const int)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Load#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#",
+      "nativeName": "Poly_Connect::Load",
+      "signature": "Poly_Connect::Load: void (const occ::handle<Poly_Triangulation> &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@More#1",
+      "nativeName": "Poly_Connect::More",
+      "signature": "Poly_Connect::More: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Next#",
+      "nativeName": "Poly_Connect::Next",
+      "signature": "Poly_Connect::Next: void ()",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Nodes#I#&I#S0_#S0_#1",
+      "nativeName": "Poly_Connect::Nodes",
+      "signature": "Poly_Connect::Nodes: void (const int, int &, int &, int &) const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Poly_Connect#",
+      "nativeName": "Poly_Connect::Poly_Connect",
+      "signature": "Poly_Connect::Poly_Connect: void ()",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Triangle#I#1",
+      "nativeName": "Poly_Connect::Triangle",
+      "signature": "Poly_Connect::Triangle: int (const int) const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Value#1",
+      "nativeName": "Poly_Connect::Value",
+      "signature": "Poly_Connect::Value: int () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MapNodeArray#1",
+      "nativeName": "Poly_Triangulation::MapNodeArray",
+      "signature": "Poly_Triangulation::MapNodeArray: occ::handle<NCollection_HArray1<gp_Pnt>> () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MapNormalArray#1",
+      "nativeName": "Poly_Triangulation::MapNormalArray",
+      "signature": "Poly_Triangulation::MapNormalArray: occ::handle<NCollection_HArray1<float>> () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MapTriangleArray#1",
+      "nativeName": "Poly_Triangulation::MapTriangleArray",
+      "signature": "Poly_Triangulation::MapTriangleArray: occ::handle<NCollection_HArray1<Poly_Triangle>> () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MapUVNodeArray#1",
+      "nativeName": "Poly_Triangulation::MapUVNodeArray",
+      "signature": "Poly_Triangulation::MapUVNodeArray: occ::handle<NCollection_HArray1<gp_Pnt2d>> () const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MinMax#&$@S@Bnd_Box#&1$@S@gp_Trsf#b#1",
+      "nativeName": "Poly_Triangulation::MinMax",
+      "signature": "Poly_Triangulation::MinMax: bool (Bnd_Box &, const gp_Trsf &, const bool) const",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Poly_Triangulation#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@Poly_Triangle#",
+      "nativeName": "Poly_Triangulation::Poly_Triangulation",
+      "signature": "Poly_Triangulation::Poly_Triangulation: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<Poly_Triangle> &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Poly_Triangulation#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#$@S@Poly_Triangle#",
+      "nativeName": "Poly_Triangulation::Poly_Triangulation",
+      "signature": "Poly_Triangulation::Poly_Triangulation: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<Poly_Triangle> &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetCachedMinMax#&1$@S@Bnd_Box#",
+      "nativeName": "Poly_Triangulation::SetCachedMinMax",
+      "signature": "Poly_Triangulation::SetCachedMinMax: void (const Bnd_Box &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetNormals#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#f#",
+      "nativeName": "Poly_Triangulation::SetNormals",
+      "signature": "Poly_Triangulation::SetNormals: void (const occ::handle<NCollection_HArray1<float>> &)",
+      "guard": "ARPrivate",
+      "reason": "Call-private initialized arrays, copied maps/bounds and bounded coherent connectivity; no native storage alias escapes."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@Poly_Connect@F@Triangles#I#&I#S0_#S0_#1",
+      "nativeName": "Poly_Connect::Triangles",
+      "signature": "Poly_Connect::Triangles: void (const int, int &, int &, int &) const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "nativeName": "Poly_Triangle::Get",
+      "signature": "Poly_Triangle::Get: void (int &, int &, int &) const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Poly_Triangle#I#I#I#",
+      "nativeName": "Poly_Triangle::Poly_Triangle",
+      "signature": "Poly_Triangle::Poly_Triangle: void (const int, const int, const int)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@AddUVNodes#",
+      "nativeName": "Poly_Triangulation::AddUVNodes",
+      "signature": "Poly_Triangulation::AddUVNodes: void ()",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Copy#1",
+      "nativeName": "Poly_Triangulation::Copy",
+      "signature": "Poly_Triangulation::Copy: occ::handle<Poly_Triangulation> () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Deflection#1",
+      "nativeName": "Poly_Triangulation::Deflection",
+      "signature": "Poly_Triangulation::Deflection: double () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Deflection#d#",
+      "nativeName": "Poly_Triangulation::Deflection",
+      "signature": "Poly_Triangulation::Deflection: void (const double)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasDeferredData#1",
+      "nativeName": "Poly_Triangulation::HasDeferredData",
+      "signature": "Poly_Triangulation::HasDeferredData: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasNormals#1",
+      "nativeName": "Poly_Triangulation::HasNormals",
+      "signature": "Poly_Triangulation::HasNormals: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasUVNodes#1",
+      "nativeName": "Poly_Triangulation::HasUVNodes",
+      "signature": "Poly_Triangulation::HasUVNodes: bool () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@MeshPurpose#1",
+      "nativeName": "Poly_Triangulation::MeshPurpose",
+      "signature": "Poly_Triangulation::MeshPurpose: Poly_MeshPurpose () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Poly_Triangulation#",
+      "nativeName": "Poly_Triangulation::Poly_Triangulation",
+      "signature": "Poly_Triangulation::Poly_Triangulation: void ()",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@ResizeNodes#I#b#",
+      "nativeName": "Poly_Triangulation::ResizeNodes",
+      "signature": "Poly_Triangulation::ResizeNodes: void (int, bool)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@ResizeTriangles#I#b#",
+      "nativeName": "Poly_Triangulation::ResizeTriangles",
+      "signature": "Poly_Triangulation::ResizeTriangles: void (int, bool)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetDoublePrecision#b#",
+      "nativeName": "Poly_Triangulation::SetDoublePrecision",
+      "signature": "Poly_Triangulation::SetDoublePrecision: void (bool)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetMeshPurpose#i#",
+      "nativeName": "Poly_Triangulation::SetMeshPurpose",
+      "signature": "Poly_Triangulation::SetMeshPurpose: void (const Poly_MeshPurpose)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#",
+      "nativeName": "Poly_Triangulation::SetNode",
+      "signature": "Poly_Triangulation::SetNode: void (int, const gp_Pnt &)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetTriangle#I#&1$@S@Poly_Triangle#",
+      "nativeName": "Poly_Triangulation::SetTriangle",
+      "signature": "Poly_Triangulation::SetTriangle: void (int, const Poly_Triangle &)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#",
+      "nativeName": "Poly_Triangulation::SetUVNode",
+      "signature": "Poly_Triangulation::SetUVNode: void (int, const gp_Pnt2d &)",
+      "guard": "ARPrivate",
+      "reason": "Verified already bound prerequisite; reused without counting new migration."
+    }
+  ]
+}

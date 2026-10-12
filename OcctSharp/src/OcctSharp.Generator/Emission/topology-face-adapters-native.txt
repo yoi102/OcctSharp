@@ -1,0 +1,24 @@
+#pragma once
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <TopoDS_Face.hxx>
+#include <TopoDS_Wire.hxx>
+// Native stack-only receiver; returned TopoDS values retain the SDK topology.
+// Existing callers keep input graphs, validation, errors and publication.
+namespace OcctSharpGenerated {
+class FaceBuilder final {
+ BRepBuilderAPI_MakeFace value;
+public:
+ FaceBuilder()=default;
+ explicit FaceBuilder(const TopoDS_Wire& wire,bool onlyPlane=false):value(wire,onlyPlane){}
+ FaceBuilder(const gp_Pln& plane,const TopoDS_Wire& wire,bool inside=true):value(plane,wire,inside){}
+ FaceBuilder(const occ::handle<Geom_Surface>& surface,double tolerance):value(surface,tolerance){}
+ FaceBuilder(const occ::handle<Geom_Surface>& surface,const TopoDS_Wire& wire,bool inside=true):value(surface,wire,inside){}
+ FaceBuilder(const occ::handle<Geom_Surface>& surface,double u0,double u1,double v0,double v1,double tolerance):value(surface,u0,u1,v0,v1,tolerance){}
+ void Init(const occ::handle<Geom_Surface>& surface,bool bound,double tolerance){value.Init(surface,bound,tolerance);}
+ void Init(const occ::handle<Geom_Surface>& surface,double u0,double u1,double v0,double v1,double tolerance){value.Init(surface,u0,u1,v0,v1,tolerance);}
+ void Add(const TopoDS_Wire& wire){value.Add(wire);}
+ bool IsDone() const {return value.IsDone();}
+ TopoDS_Face Face() const {return value.Face();}
+ TopoDS_Shape Shape(){return value.Shape();}
+};
+}

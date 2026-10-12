@@ -1,0 +1,5728 @@
+[
+  {
+    "StableId": "c:@S@Graphic3d_Aspects@F@SetAlphaMode#$@E@Graphic3d_AlphaMode#f#",
+    "NativeName": "Graphic3d_Aspects::SetAlphaMode",
+    "Kind": "Method",
+    "Header": "Graphic3d_Aspects.hxx",
+    "Line": 67,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_Aspects::SetAlphaMode: void (Graphic3d_AlphaMode, float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theMode",
+        "Type": {
+          "NativeSpelling": "Graphic3d_AlphaMode",
+          "CanonicalSpelling": "Graphic3d_AlphaMode",
+          "BaseNativeSpelling": "Graphic3d_AlphaMode",
+          "BaseCanonicalSpelling": "Graphic3d_AlphaMode",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theAlphaCutoff",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Aspects@F@SetBackInteriorColor#&1$@S@Quantity_ColorRGBA#",
+    "NativeName": "Graphic3d_Aspects::SetBackInteriorColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_Aspects.hxx",
+    "Line": 107,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_Aspects::SetBackInteriorColor: void (const Quantity_ColorRGBA &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_ColorRGBA &",
+          "CanonicalSpelling": "const Quantity_ColorRGBA &",
+          "BaseNativeSpelling": "const Quantity_ColorRGBA",
+          "BaseCanonicalSpelling": "const Quantity_ColorRGBA",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Aspects@F@SetBackMaterial#&1$@S@Graphic3d_MaterialAspect#",
+    "NativeName": "Graphic3d_Aspects::SetBackMaterial",
+    "Kind": "Method",
+    "Header": "Graphic3d_Aspects.hxx",
+    "Line": 128,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_Aspects::SetBackMaterial: void (const Graphic3d_MaterialAspect &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theMaterial",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_MaterialAspect &",
+          "CanonicalSpelling": "const Graphic3d_MaterialAspect &",
+          "BaseNativeSpelling": "const Graphic3d_MaterialAspect",
+          "BaseCanonicalSpelling": "const Graphic3d_MaterialAspect",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Aspects@F@SetFrontMaterial#&1$@S@Graphic3d_MaterialAspect#",
+    "NativeName": "Graphic3d_Aspects::SetFrontMaterial",
+    "Kind": "Method",
+    "Header": "Graphic3d_Aspects.hxx",
+    "Line": 116,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_Aspects::SetFrontMaterial: void (const Graphic3d_MaterialAspect &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theMaterial",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_MaterialAspect &",
+          "CanonicalSpelling": "const Graphic3d_MaterialAspect &",
+          "BaseNativeSpelling": "const Graphic3d_MaterialAspect",
+          "BaseCanonicalSpelling": "const Graphic3d_MaterialAspect",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Aspects@F@SetInteriorColor#&1$@S@Quantity_ColorRGBA#",
+    "NativeName": "Graphic3d_Aspects::SetInteriorColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_Aspects.hxx",
+    "Line": 92,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_Aspects::SetInteriorColor: void (const Quantity_ColorRGBA &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_ColorRGBA &",
+          "CanonicalSpelling": "const Quantity_ColorRGBA &",
+          "BaseNativeSpelling": "const Quantity_ColorRGBA",
+          "BaseCanonicalSpelling": "const Quantity_ColorRGBA",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Angle#1",
+    "NativeName": "Graphic3d_CLight::Angle",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 168,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::Angle: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Color#1",
+    "NativeName": "Graphic3d_CLight::Color",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 52,
+    "Column": 25,
+    "NativeSignature": "Graphic3d_CLight::Color: const Quantity_Color &() const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const Quantity_Color &",
+      "CanonicalSpelling": "const Quantity_Color &",
+      "BaseNativeSpelling": "const Quantity_Color",
+      "BaseCanonicalSpelling": "const Quantity_Color",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Concentration#1",
+    "NativeName": "Graphic3d_CLight::Concentration",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 181,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::Concentration: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@ConstAttenuation#1",
+    "NativeName": "Graphic3d_CLight::ConstAttenuation",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 111,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::ConstAttenuation: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Direction#1",
+    "NativeName": "Graphic3d_CLight::Direction",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 136,
+    "Column": 10,
+    "NativeSignature": "Graphic3d_CLight::Direction: gp_Dir () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "gp_Dir",
+      "CanonicalSpelling": "gp_Dir",
+      "BaseNativeSpelling": "gp_Dir",
+      "BaseCanonicalSpelling": "gp_Dir",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Intensity#1",
+    "NativeName": "Graphic3d_CLight::Intensity",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 189,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::Intensity: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@LinearAttenuation#1",
+    "NativeName": "Graphic3d_CLight::LinearAttenuation",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 120,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::LinearAttenuation: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Position#1",
+    "NativeName": "Graphic3d_CLight::Position",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 88,
+    "Column": 17,
+    "NativeSignature": "Graphic3d_CLight::Position: const gp_Pnt &() const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const gp_Pnt &",
+      "CanonicalSpelling": "const gp_Pnt &",
+      "BaseNativeSpelling": "const gp_Pnt",
+      "BaseCanonicalSpelling": "const gp_Pnt",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@Range#1",
+    "NativeName": "Graphic3d_CLight::Range",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 211,
+    "Column": 9,
+    "NativeSignature": "Graphic3d_CLight::Range: float () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "float",
+      "CanonicalSpelling": "float",
+      "BaseNativeSpelling": "float",
+      "BaseCanonicalSpelling": "float",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetAngle#f#",
+    "NativeName": "Graphic3d_CLight::SetAngle",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 171,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetAngle: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theAngle",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetAttenuation#f#f#",
+    "NativeName": "Graphic3d_CLight::SetAttenuation",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 131,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetAttenuation: void (float, float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theConstAttenuation",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theLinearAttenuation",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetColor#&1$@S@Quantity_Color#",
+    "NativeName": "Graphic3d_CLight::SetColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 55,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetColor: void (const Quantity_Color &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_Color &",
+          "CanonicalSpelling": "const Quantity_Color &",
+          "BaseNativeSpelling": "const Quantity_Color",
+          "BaseCanonicalSpelling": "const Quantity_Color",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetConcentration#f#",
+    "NativeName": "Graphic3d_CLight::SetConcentration",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 184,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetConcentration: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theConcentration",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetDirection#&1$@S@gp_Dir#",
+    "NativeName": "Graphic3d_CLight::SetDirection",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 139,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetDirection: void (const gp_Dir &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theDir",
+        "Type": {
+          "NativeSpelling": "const gp_Dir &",
+          "CanonicalSpelling": "const gp_Dir &",
+          "BaseNativeSpelling": "const gp_Dir",
+          "BaseCanonicalSpelling": "const gp_Dir",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetIntensity#f#",
+    "NativeName": "Graphic3d_CLight::SetIntensity",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 192,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetIntensity: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CLight@F@SetRange#f#",
+    "NativeName": "Graphic3d_CLight::SetRange",
+    "Kind": "Method",
+    "Header": "Graphic3d_CLight.hxx",
+    "Line": 216,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CLight::SetRange: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CView@F@DisplayedStructures#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@S@NCollection_DefaultHasher>#S2_#1",
+    "NativeName": "Graphic3d_CView::DisplayedStructures",
+    "Kind": "Method",
+    "Header": "Graphic3d_CView.hxx",
+    "Line": 159,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_CView::DisplayedStructures: void (NCollection_Map<occ::handle<Graphic3d_Structure>> &) const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theStructures",
+        "Type": {
+          "NativeSpelling": "NCollection_Map<occ::handle<Graphic3d_Structure>> &",
+          "CanonicalSpelling": "NCollection_Map<opencascade::handle<Graphic3d_Structure>> &",
+          "BaseNativeSpelling": "NCollection_Map<occ::handle<Graphic3d_Structure>>",
+          "BaseCanonicalSpelling": "NCollection_Map<opencascade::handle<Graphic3d_Structure>>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": "NCollection_Map",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "occ::handle<Graphic3d_Structure>"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CubeMapOrder@F@Graphic3d_CubeMapOrder#c#c#c#c#c#c#",
+    "NativeName": "Graphic3d_CubeMapOrder::Graphic3d_CubeMapOrder",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_CubeMapOrder.hxx",
+    "Line": 36,
+    "Column": 19,
+    "NativeSignature": "Graphic3d_CubeMapOrder::Graphic3d_CubeMapOrder: void (unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "thePosXLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theNegXLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "thePosYLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 3,
+        "Name": "theNegYLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 4,
+        "Name": "thePosZLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 5,
+        "Name": "theNegZLocation",
+        "Type": {
+          "NativeSpelling": "unsigned char",
+          "CanonicalSpelling": "unsigned char",
+          "BaseNativeSpelling": "unsigned char",
+          "BaseCanonicalSpelling": "unsigned char",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CubeMapOrder@F@Validated#1",
+    "NativeName": "Graphic3d_CubeMapOrder::Validated",
+    "Kind": "Method",
+    "Header": "Graphic3d_CubeMapOrder.hxx",
+    "Line": 52,
+    "Column": 51,
+    "NativeSignature": "Graphic3d_CubeMapOrder::Validated: Graphic3d_ValidatedCubeMapOrder () const",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "Graphic3d_ValidatedCubeMapOrder",
+      "CanonicalSpelling": "Graphic3d_ValidatedCubeMapOrder",
+      "BaseNativeSpelling": "Graphic3d_ValidatedCubeMapOrder",
+      "BaseCanonicalSpelling": "Graphic3d_ValidatedCubeMapOrder",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CubeMapPacked@F@Graphic3d_CubeMapPacked#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#&1$@S@Graphic3d_ValidatedCubeMapOrder#",
+    "NativeName": "Graphic3d_CubeMapPacked::Graphic3d_CubeMapPacked",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_CubeMapPacked.hxx",
+    "Line": 39,
+    "Column": 19,
+    "NativeSignature": "Graphic3d_CubeMapPacked::Graphic3d_CubeMapPacked: void (const occ::handle<Image_PixMap> &, const Graphic3d_ValidatedCubeMapOrder &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theImage",
+        "Type": {
+          "NativeSpelling": "const occ::handle<Image_PixMap> &",
+          "CanonicalSpelling": "const opencascade::handle<Image_PixMap> &",
+          "BaseNativeSpelling": "const occ::handle<Image_PixMap>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Image_PixMap>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "Image_PixMap"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "Image_PixMap"
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theOrder",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ValidatedCubeMapOrder &",
+          "CanonicalSpelling": "const Graphic3d_ValidatedCubeMapOrder &",
+          "BaseNativeSpelling": "const Graphic3d_ValidatedCubeMapOrder",
+          "BaseCanonicalSpelling": "const Graphic3d_ValidatedCubeMapOrder",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_CubeMapSeparate@F@Graphic3d_CubeMapSeparate#&1$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Image_PixMap#",
+    "NativeName": "Graphic3d_CubeMapSeparate::Graphic3d_CubeMapSeparate",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_CubeMapSeparate.hxx",
+    "Line": 34,
+    "Column": 19,
+    "NativeSignature": "Graphic3d_CubeMapSeparate::Graphic3d_CubeMapSeparate: void (const NCollection_Array1<occ::handle<Image_PixMap>> &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theImages",
+        "Type": {
+          "NativeSpelling": "const NCollection_Array1<occ::handle<Image_PixMap>> &",
+          "CanonicalSpelling": "const NCollection_Array1<opencascade::handle<Image_PixMap>> &",
+          "BaseNativeSpelling": "const NCollection_Array1<occ::handle<Image_PixMap>>",
+          "BaseCanonicalSpelling": "const NCollection_Array1<opencascade::handle<Image_PixMap>>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "NCollection_Array1",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "occ::handle<Image_PixMap>"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_MaterialAspect@F@Graphic3d_MaterialAspect#",
+    "NativeName": "Graphic3d_MaterialAspect::Graphic3d_MaterialAspect",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_MaterialAspect.hxx",
+    "Line": 66,
+    "Column": 19,
+    "NativeSignature": "Graphic3d_MaterialAspect::Graphic3d_MaterialAspect: void ()",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_MaterialAspect@F@SetAmbientColor#&1$@S@Quantity_Color#",
+    "NativeName": "Graphic3d_MaterialAspect::SetAmbientColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_MaterialAspect.hxx",
+    "Line": 135,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_MaterialAspect::SetAmbientColor: void (const Quantity_Color &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_Color &",
+          "CanonicalSpelling": "const Quantity_Color &",
+          "BaseNativeSpelling": "const Quantity_Color",
+          "BaseCanonicalSpelling": "const Quantity_Color",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_MaterialAspect@F@SetDiffuseColor#&1$@S@Quantity_Color#",
+    "NativeName": "Graphic3d_MaterialAspect::SetDiffuseColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_MaterialAspect.hxx",
+    "Line": 141,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_MaterialAspect::SetDiffuseColor: void (const Quantity_Color &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_Color &",
+          "CanonicalSpelling": "const Quantity_Color &",
+          "BaseNativeSpelling": "const Quantity_Color",
+          "BaseCanonicalSpelling": "const Quantity_Color",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_MaterialAspect@F@SetPBRMaterial#&1$@S@Graphic3d_PBRMaterial#",
+    "NativeName": "Graphic3d_MaterialAspect::SetPBRMaterial",
+    "Kind": "Method",
+    "Header": "Graphic3d_MaterialAspect.hxx",
+    "Line": 184,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_MaterialAspect::SetPBRMaterial: void (const Graphic3d_PBRMaterial &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "thePBRMaterial",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_PBRMaterial &",
+          "CanonicalSpelling": "const Graphic3d_PBRMaterial &",
+          "BaseNativeSpelling": "const Graphic3d_PBRMaterial",
+          "BaseCanonicalSpelling": "const Graphic3d_PBRMaterial",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_MaterialAspect@F@SetTransparency#f#",
+    "NativeName": "Graphic3d_MaterialAspect::SetTransparency",
+    "Kind": "Method",
+    "Header": "Graphic3d_MaterialAspect.hxx",
+    "Line": 125,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_MaterialAspect::SetTransparency: void (const float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@Graphic3d_PBRMaterial#",
+    "NativeName": "Graphic3d_PBRMaterial::Graphic3d_PBRMaterial",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 36,
+    "Column": 19,
+    "NativeSignature": "Graphic3d_PBRMaterial::Graphic3d_PBRMaterial: void ()",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@SetColor#&1$@S@Quantity_ColorRGBA#",
+    "NativeName": "Graphic3d_PBRMaterial::SetColor",
+    "Kind": "Method",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 75,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_PBRMaterial::SetColor: void (const Quantity_ColorRGBA &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_ColorRGBA &",
+          "CanonicalSpelling": "const Quantity_ColorRGBA &",
+          "BaseNativeSpelling": "const Quantity_ColorRGBA",
+          "BaseCanonicalSpelling": "const Quantity_ColorRGBA",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@SetEmission#&1$@S@NCollection_Vec3>#f#",
+    "NativeName": "Graphic3d_PBRMaterial::SetEmission",
+    "Kind": "Method",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 91,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_PBRMaterial::SetEmission: void (const NCollection_Vec3<float> &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theEmission",
+        "Type": {
+          "NativeSpelling": "const NCollection_Vec3<float> &",
+          "CanonicalSpelling": "const NCollection_Vec3<float> &",
+          "BaseNativeSpelling": "const NCollection_Vec3<float>",
+          "BaseCanonicalSpelling": "const NCollection_Vec3<float>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "NCollection_Vec3",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "float"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@SetIOR#f#",
+    "NativeName": "Graphic3d_PBRMaterial::SetIOR",
+    "Kind": "Method",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 69,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_PBRMaterial::SetIOR: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theIOR",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@SetMetallic#f#",
+    "NativeName": "Graphic3d_PBRMaterial::SetMetallic",
+    "Kind": "Method",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 48,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_PBRMaterial::SetMetallic: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theMetallic",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_PBRMaterial@F@SetRoughness#f#",
+    "NativeName": "Graphic3d_PBRMaterial::SetRoughness",
+    "Kind": "Method",
+    "Header": "Graphic3d_PBRMaterial.hxx",
+    "Line": 62,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_PBRMaterial::SetRoughness: void (float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theRoughness",
+        "Type": {
+          "NativeSpelling": "float",
+          "CanonicalSpelling": "float",
+          "BaseNativeSpelling": "float",
+          "BaseCanonicalSpelling": "float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneS#f#f#f#f#",
+    "NativeName": "Graphic3d_Texture2Dplane::SetPlaneS",
+    "Kind": "Method",
+    "Header": "Graphic3d_Texture2Dplane.hxx",
+    "Line": 44,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_Texture2Dplane::SetPlaneS: void (const float, const float, const float, const float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "A",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "B",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "C",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 3,
+        "Name": "D",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneT#f#f#f#f#",
+    "NativeName": "Graphic3d_Texture2Dplane::SetPlaneT",
+    "Kind": "Method",
+    "Header": "Graphic3d_Texture2Dplane.hxx",
+    "Line": 48,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_Texture2Dplane::SetPlaneT: void (const float, const float, const float, const float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "A",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "B",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "C",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 3,
+        "Name": "D",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_TextureParams@F@SetRotation#f#",
+    "NativeName": "Graphic3d_TextureParams::SetRotation",
+    "Kind": "Method",
+    "Header": "Graphic3d_TextureParams.hxx",
+    "Line": 79,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_TextureParams::SetRotation: void (const float)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theAngleDegrees",
+        "Type": {
+          "NativeSpelling": "const float",
+          "CanonicalSpelling": "const float",
+          "BaseNativeSpelling": "const float",
+          "BaseCanonicalSpelling": "const float",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_TextureParams@F@SetScale#$@S@NCollection_Vec2>#f#",
+    "NativeName": "Graphic3d_TextureParams::SetScale",
+    "Kind": "Method",
+    "Header": "Graphic3d_TextureParams.hxx",
+    "Line": 86,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_TextureParams::SetScale: void (const NCollection_Vec2<float>)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theScale",
+        "Type": {
+          "NativeSpelling": "const NCollection_Vec2<float>",
+          "CanonicalSpelling": "const NCollection_Vec2<float>",
+          "BaseNativeSpelling": "const NCollection_Vec2<float>",
+          "BaseCanonicalSpelling": "const NCollection_Vec2<float>",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "NCollection_Vec2",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "float"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_TextureParams@F@SetTranslation#$@S@NCollection_Vec2>#f#",
+    "NativeName": "Graphic3d_TextureParams::SetTranslation",
+    "Kind": "Method",
+    "Header": "Graphic3d_TextureParams.hxx",
+    "Line": 93,
+    "Column": 24,
+    "NativeSignature": "Graphic3d_TextureParams::SetTranslation: void (const NCollection_Vec2<float>)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theVec",
+        "Type": {
+          "NativeSpelling": "const NCollection_Vec2<float>",
+          "CanonicalSpelling": "const NCollection_Vec2<float>",
+          "BaseNativeSpelling": "const NCollection_Vec2<float>",
+          "BaseCanonicalSpelling": "const NCollection_Vec2<float>",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "NCollection_Vec2",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "float"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#",
+    "NativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 30,
+    "Column": 3,
+    "NativeSignature": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings: void ()",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#&1$@S@Graphic3d_ZLayerSettings#",
+    "NativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+    "Kind": "Constructor",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 26,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings: void (const Graphic3d_ZLayerSettings &)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ZLayerSettings &",
+          "CanonicalSpelling": "const Graphic3d_ZLayerSettings &",
+          "BaseNativeSpelling": "const Graphic3d_ZLayerSettings",
+          "BaseCanonicalSpelling": "const Graphic3d_ZLayerSettings",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@SetClearDepth#b#",
+    "NativeName": "Graphic3d_ZLayerSettings::SetClearDepth",
+    "Kind": "Method",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 145,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_ZLayerSettings::SetClearDepth: void (const bool)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "const bool",
+          "CanonicalSpelling": "const bool",
+          "BaseNativeSpelling": "const bool",
+          "BaseCanonicalSpelling": "const bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthTest#b#",
+    "NativeName": "Graphic3d_ZLayerSettings::SetEnableDepthTest",
+    "Kind": "Method",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 133,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_ZLayerSettings::SetEnableDepthTest: void (const bool)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "const bool",
+          "CanonicalSpelling": "const bool",
+          "BaseNativeSpelling": "const bool",
+          "BaseCanonicalSpelling": "const bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthWrite#b#",
+    "NativeName": "Graphic3d_ZLayerSettings::SetEnableDepthWrite",
+    "Kind": "Method",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 139,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_ZLayerSettings::SetEnableDepthWrite: void (const bool)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "const bool",
+          "CanonicalSpelling": "const bool",
+          "BaseNativeSpelling": "const bool",
+          "BaseCanonicalSpelling": "const bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Graphic3d_ZLayerSettings@F@SetImmediate#b#",
+    "NativeName": "Graphic3d_ZLayerSettings::SetImmediate",
+    "Kind": "Method",
+    "Header": "Graphic3d_ZLayerSettings.hxx",
+    "Line": 114,
+    "Column": 8,
+    "NativeSignature": "Graphic3d_ZLayerSettings::SetImmediate: void (const bool)",
+    "SourcePackage": "Graphic3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theValue",
+        "Type": {
+          "NativeSpelling": "const bool",
+          "CanonicalSpelling": "const bool",
+          "BaseNativeSpelling": "const bool",
+          "BaseCanonicalSpelling": "const bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_AlienPixMap@F@Load#*1c#k#&1$@S@TCollection_AsciiString#",
+    "NativeName": "Image_AlienPixMap::Load",
+    "Kind": "Method",
+    "Header": "Image_AlienPixMap.hxx",
+    "Line": 62,
+    "Column": 24,
+    "NativeSignature": "Image_AlienPixMap::Load: bool (const uint8_t *, const size_t, const TCollection_AsciiString &)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "bool",
+      "CanonicalSpelling": "bool",
+      "BaseNativeSpelling": "bool",
+      "BaseCanonicalSpelling": "bool",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theData",
+        "Type": {
+          "NativeSpelling": "const uint8_t *",
+          "CanonicalSpelling": "const unsigned char *",
+          "BaseNativeSpelling": "const uint8_t",
+          "BaseCanonicalSpelling": "const unsigned char",
+          "Layers": [
+            {
+              "Kind": "PointerIndirection",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theLength",
+        "Type": {
+          "NativeSpelling": "const size_t",
+          "CanonicalSpelling": "const unsigned long long",
+          "BaseNativeSpelling": "const size_t",
+          "BaseCanonicalSpelling": "const unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "theFileName",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@ChangeRow#k#",
+    "NativeName": "Image_PixMap::ChangeRow",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 289,
+    "Column": 12,
+    "NativeSignature": "Image_PixMap::ChangeRow: uint8_t *(size_t)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "uint8_t *",
+      "CanonicalSpelling": "unsigned char *",
+      "BaseNativeSpelling": "uint8_t",
+      "BaseCanonicalSpelling": "unsigned char",
+      "Layers": [
+        {
+          "Kind": "PointerIndirection",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theRow",
+        "Type": {
+          "NativeSpelling": "size_t",
+          "CanonicalSpelling": "unsigned long long",
+          "BaseNativeSpelling": "size_t",
+          "BaseCanonicalSpelling": "unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@InitTrash#$@E@Image_Format#k#k#k#",
+    "NativeName": "Image_PixMap::InitTrash",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 205,
+    "Column": 32,
+    "NativeSignature": "Image_PixMap::InitTrash: bool (Image_Format, const size_t, const size_t, const size_t)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "bool",
+      "CanonicalSpelling": "bool",
+      "BaseNativeSpelling": "bool",
+      "BaseCanonicalSpelling": "bool",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "thePixelFormat",
+        "Type": {
+          "NativeSpelling": "Image_Format",
+          "CanonicalSpelling": "Image_Format",
+          "BaseNativeSpelling": "Image_Format",
+          "BaseCanonicalSpelling": "Image_Format",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theSizeX",
+        "Type": {
+          "NativeSpelling": "const size_t",
+          "CanonicalSpelling": "const unsigned long long",
+          "BaseNativeSpelling": "const size_t",
+          "BaseCanonicalSpelling": "const unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "theSizeY",
+        "Type": {
+          "NativeSpelling": "const size_t",
+          "CanonicalSpelling": "const unsigned long long",
+          "BaseNativeSpelling": "const size_t",
+          "BaseCanonicalSpelling": "const unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 3,
+        "Name": "theSizeRowBytes",
+        "Type": {
+          "NativeSpelling": "const size_t",
+          "CanonicalSpelling": "const unsigned long long",
+          "BaseNativeSpelling": "const size_t",
+          "BaseCanonicalSpelling": "const unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": true,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@PixelColor#I#I#b#1",
+    "NativeName": "Image_PixMap::PixelColor",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 144,
+    "Column": 22,
+    "NativeSignature": "Image_PixMap::PixelColor: Quantity_ColorRGBA (int, int, bool) const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "Quantity_ColorRGBA",
+      "CanonicalSpelling": "Quantity_ColorRGBA",
+      "BaseNativeSpelling": "Quantity_ColorRGBA",
+      "BaseCanonicalSpelling": "Quantity_ColorRGBA",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theX",
+        "Type": {
+          "NativeSpelling": "int",
+          "CanonicalSpelling": "int",
+          "BaseNativeSpelling": "int",
+          "BaseCanonicalSpelling": "int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theY",
+        "Type": {
+          "NativeSpelling": "int",
+          "CanonicalSpelling": "int",
+          "BaseNativeSpelling": "int",
+          "BaseCanonicalSpelling": "int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "theToLinearize",
+        "Type": {
+          "NativeSpelling": "bool",
+          "CanonicalSpelling": "bool",
+          "BaseNativeSpelling": "bool",
+          "BaseCanonicalSpelling": "bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@Row#k#1",
+    "NativeName": "Image_PixMap::Row",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 285,
+    "Column": 18,
+    "NativeSignature": "Image_PixMap::Row: const uint8_t *(size_t) const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const uint8_t *",
+      "CanonicalSpelling": "const unsigned char *",
+      "BaseNativeSpelling": "const uint8_t",
+      "BaseCanonicalSpelling": "const unsigned char",
+      "Layers": [
+        {
+          "Kind": "PointerIndirection",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theRow",
+        "Type": {
+          "NativeSpelling": "size_t",
+          "CanonicalSpelling": "unsigned long long",
+          "BaseNativeSpelling": "size_t",
+          "BaseCanonicalSpelling": "unsigned long long",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@SetPixelColor#I#I#&1$@S@Quantity_ColorRGBA#b#",
+    "NativeName": "Image_PixMap::SetPixelColor",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 179,
+    "Column": 8,
+    "NativeSignature": "Image_PixMap::SetPixelColor: void (const int, const int, const Quantity_ColorRGBA &, const bool)",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theX",
+        "Type": {
+          "NativeSpelling": "const int",
+          "CanonicalSpelling": "const int",
+          "BaseNativeSpelling": "const int",
+          "BaseCanonicalSpelling": "const int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theY",
+        "Type": {
+          "NativeSpelling": "const int",
+          "CanonicalSpelling": "const int",
+          "BaseNativeSpelling": "const int",
+          "BaseCanonicalSpelling": "const int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "theColor",
+        "Type": {
+          "NativeSpelling": "const Quantity_ColorRGBA &",
+          "CanonicalSpelling": "const Quantity_ColorRGBA &",
+          "BaseNativeSpelling": "const Quantity_ColorRGBA",
+          "BaseCanonicalSpelling": "const Quantity_ColorRGBA",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 3,
+        "Name": "theToDeLinearize",
+        "Type": {
+          "NativeSpelling": "const bool",
+          "CanonicalSpelling": "const bool",
+          "BaseNativeSpelling": "const bool",
+          "BaseCanonicalSpelling": "const bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@SizeX#1",
+    "NativeName": "Image_PixMap::SizeX",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 110,
+    "Column": 10,
+    "NativeSignature": "Image_PixMap::SizeX: size_t () const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "size_t",
+      "CanonicalSpelling": "unsigned long long",
+      "BaseNativeSpelling": "size_t",
+      "BaseCanonicalSpelling": "unsigned long long",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Image_PixMap@F@SizeY#1",
+    "NativeName": "Image_PixMap::SizeY",
+    "Kind": "Method",
+    "Header": "Image_PixMap.hxx",
+    "Line": 113,
+    "Column": 10,
+    "NativeSignature": "Image_PixMap::SizeY: size_t () const",
+    "SourcePackage": "Image",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "size_t",
+      "CanonicalSpelling": "unsigned long long",
+      "BaseNativeSpelling": "size_t",
+      "BaseCanonicalSpelling": "unsigned long long",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@OpenGl_GraphicDriver@F@GetSharedContext#b#1",
+    "NativeName": "OpenGl_GraphicDriver::GetSharedContext",
+    "Kind": "Method",
+    "Header": "OpenGl_GraphicDriver.hxx",
+    "Line": 172,
+    "Column": 54,
+    "NativeSignature": "OpenGl_GraphicDriver::GetSharedContext: const occ::handle<OpenGl_Context> &(bool) const",
+    "SourcePackage": "OpenGl",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<OpenGl_Context> &",
+      "CanonicalSpelling": "const opencascade::handle<OpenGl_Context> &",
+      "BaseNativeSpelling": "const occ::handle<OpenGl_Context>",
+      "BaseCanonicalSpelling": "const opencascade::handle<OpenGl_Context>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "OpenGl_Context"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "OpenGl_Context"
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theBound",
+        "Type": {
+          "NativeSpelling": "bool",
+          "CanonicalSpelling": "bool",
+          "BaseNativeSpelling": "bool",
+          "BaseCanonicalSpelling": "bool",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Prs3d_Drawer@F@ShadingAspect#1",
+    "NativeName": "Prs3d_Drawer::ShadingAspect",
+    "Kind": "Method",
+    "Header": "Prs3d_Drawer.hxx",
+    "Line": 414,
+    "Column": 59,
+    "NativeSignature": "Prs3d_Drawer::ShadingAspect: const occ::handle<Prs3d_ShadingAspect> &() const",
+    "SourcePackage": "Prs3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<Prs3d_ShadingAspect> &",
+      "CanonicalSpelling": "const opencascade::handle<Prs3d_ShadingAspect> &",
+      "BaseNativeSpelling": "const occ::handle<Prs3d_ShadingAspect>",
+      "BaseCanonicalSpelling": "const opencascade::handle<Prs3d_ShadingAspect>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "Prs3d_ShadingAspect"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "Prs3d_ShadingAspect"
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@Prs3d_ShadingAspect@F@Aspect#1",
+    "NativeName": "Prs3d_ShadingAspect::Aspect",
+    "Kind": "Method",
+    "Header": "Prs3d_ShadingAspect.hxx",
+    "Line": 79,
+    "Column": 50,
+    "NativeSignature": "Prs3d_ShadingAspect::Aspect: const occ::handle<Graphic3d_AspectFillArea3d> &() const",
+    "SourcePackage": "Prs3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<Graphic3d_AspectFillArea3d> &",
+      "CanonicalSpelling": "const opencascade::handle<Graphic3d_AspectFillArea3d> &",
+      "BaseNativeSpelling": "const occ::handle<Graphic3d_AspectFillArea3d>",
+      "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_AspectFillArea3d>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "Graphic3d_AspectFillArea3d"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "Graphic3d_AspectFillArea3d"
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@TopoDS_Shape#",
+    "NativeName": "PrsDim_DiameterDimension::PrsDim_DiameterDimension",
+    "Kind": "Constructor",
+    "Header": "PrsDim_DiameterDimension.hxx",
+    "Line": 67,
+    "Column": 19,
+    "NativeSignature": "PrsDim_DiameterDimension::PrsDim_DiameterDimension: void (const TopoDS_Shape &)",
+    "SourcePackage": "PrsDim",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theShape",
+        "Type": {
+          "NativeSpelling": "const TopoDS_Shape &",
+          "CanonicalSpelling": "const TopoDS_Shape &",
+          "BaseNativeSpelling": "const TopoDS_Shape",
+          "BaseCanonicalSpelling": "const TopoDS_Shape",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsDim_Dimension@F@SetDisplayUnits#&1$@S@TCollection_AsciiString#",
+    "NativeName": "PrsDim_Dimension::SetDisplayUnits",
+    "Kind": "Method",
+    "Header": "PrsDim_Dimension.hxx",
+    "Line": 325,
+    "Column": 16,
+    "NativeSignature": "PrsDim_Dimension::SetDisplayUnits: void (const TCollection_AsciiString &)",
+    "SourcePackage": "PrsDim",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": true,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsDim_Dimension@F@SetModelUnits#&1$@S@TCollection_AsciiString#",
+    "NativeName": "PrsDim_Dimension::SetModelUnits",
+    "Kind": "Method",
+    "Header": "PrsDim_Dimension.hxx",
+    "Line": 327,
+    "Column": 16,
+    "NativeSignature": "PrsDim_Dimension::SetModelUnits: void (const TCollection_AsciiString &)",
+    "SourcePackage": "PrsDim",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "",
+        "Type": {
+          "NativeSpelling": "const TCollection_AsciiString &",
+          "CanonicalSpelling": "const TCollection_AsciiString &",
+          "BaseNativeSpelling": "const TCollection_AsciiString",
+          "BaseCanonicalSpelling": "const TCollection_AsciiString",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": true,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#&1$@S@gp_Pnt#S0_#&1$@S@gp_Pln#",
+    "NativeName": "PrsDim_LengthDimension::PrsDim_LengthDimension",
+    "Kind": "Constructor",
+    "Header": "PrsDim_LengthDimension.hxx",
+    "Line": 67,
+    "Column": 19,
+    "NativeSignature": "PrsDim_LengthDimension::PrsDim_LengthDimension: void (const gp_Pnt &, const gp_Pnt &, const gp_Pln &)",
+    "SourcePackage": "PrsDim",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theFirstPoint",
+        "Type": {
+          "NativeSpelling": "const gp_Pnt &",
+          "CanonicalSpelling": "const gp_Pnt &",
+          "BaseNativeSpelling": "const gp_Pnt",
+          "BaseCanonicalSpelling": "const gp_Pnt",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theSecondPoint",
+        "Type": {
+          "NativeSpelling": "const gp_Pnt &",
+          "CanonicalSpelling": "const gp_Pnt &",
+          "BaseNativeSpelling": "const gp_Pnt",
+          "BaseCanonicalSpelling": "const gp_Pnt",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 2,
+        "Name": "thePlane",
+        "Type": {
+          "NativeSpelling": "const gp_Pln &",
+          "CanonicalSpelling": "const gp_Pln &",
+          "BaseNativeSpelling": "const gp_Pln",
+          "BaseCanonicalSpelling": "const gp_Pln",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@TopoDS_Shape#",
+    "NativeName": "PrsDim_RadiusDimension::PrsDim_RadiusDimension",
+    "Kind": "Constructor",
+    "Header": "PrsDim_RadiusDimension.hxx",
+    "Line": 55,
+    "Column": 19,
+    "NativeSignature": "PrsDim_RadiusDimension::PrsDim_RadiusDimension: void (const TopoDS_Shape &)",
+    "SourcePackage": "PrsDim",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theShape",
+        "Type": {
+          "NativeSpelling": "const TopoDS_Shape &",
+          "CanonicalSpelling": "const TopoDS_Shape &",
+          "BaseNativeSpelling": "const TopoDS_Shape",
+          "BaseCanonicalSpelling": "const TopoDS_Shape",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@PrsMgr_PresentableObject@F@Attributes#1",
+    "NativeName": "PrsMgr_PresentableObject::Attributes",
+    "Kind": "Method",
+    "Header": "PrsMgr_PresentableObject.hxx",
+    "Line": 193,
+    "Column": 36,
+    "NativeSignature": "PrsMgr_PresentableObject::Attributes: const occ::handle<Prs3d_Drawer> &() const",
+    "SourcePackage": "PrsMgr",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<Prs3d_Drawer> &",
+      "CanonicalSpelling": "const opencascade::handle<Prs3d_Drawer> &",
+      "BaseNativeSpelling": "const occ::handle<Prs3d_Drawer>",
+      "BaseCanonicalSpelling": "const opencascade::handle<Prs3d_Drawer>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "Prs3d_Drawer"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "Prs3d_Drawer"
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_ImageDumpOptions@F@V3d_ImageDumpOptions#",
+    "NativeName": "V3d_ImageDumpOptions::V3d_ImageDumpOptions",
+    "Kind": "Constructor",
+    "Header": "V3d_ImageDumpOptions.hxx",
+    "Line": 39,
+    "Column": 3,
+    "NativeSignature": "V3d_ImageDumpOptions::V3d_ImageDumpOptions: void ()",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": null,
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@ActiveLights#1",
+    "NativeName": "V3d_View::ActiveLights",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 802,
+    "Column": 58,
+    "NativeSignature": "V3d_View::ActiveLights: const NCollection_List<occ::handle<Graphic3d_CLight>> &() const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const NCollection_List<occ::handle<Graphic3d_CLight>> &",
+      "CanonicalSpelling": "const NCollection_List<opencascade::handle<Graphic3d_CLight>> &",
+      "BaseNativeSpelling": "const NCollection_List<occ::handle<Graphic3d_CLight>>",
+      "BaseCanonicalSpelling": "const NCollection_List<opencascade::handle<Graphic3d_CLight>>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "NCollection_List",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "occ::handle<Graphic3d_CLight>"
+        }
+      ],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@ChangeRenderingParams#",
+    "NativeName": "V3d_View::ChangeRenderingParams",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 1064,
+    "Column": 46,
+    "NativeSignature": "V3d_View::ChangeRenderingParams: Graphic3d_RenderingParams &()",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "Graphic3d_RenderingParams &",
+      "CanonicalSpelling": "Graphic3d_RenderingParams &",
+      "BaseNativeSpelling": "Graphic3d_RenderingParams",
+      "BaseCanonicalSpelling": "Graphic3d_RenderingParams",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@IsActiveLight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1",
+    "NativeName": "V3d_View::IsActiveLight",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 286,
+    "Column": 24,
+    "NativeSignature": "V3d_View::IsActiveLight: bool (const occ::handle<V3d_Light> &) const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "bool",
+      "CanonicalSpelling": "bool",
+      "BaseNativeSpelling": "bool",
+      "BaseCanonicalSpelling": "bool",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLight",
+        "Type": {
+          "NativeSpelling": "const occ::handle<V3d_Light> &",
+          "CanonicalSpelling": "const opencascade::handle<Graphic3d_CLight> &",
+          "BaseNativeSpelling": "const occ::handle<V3d_Light>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_CLight>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "V3d_Light"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "V3d_Light"
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@RenderingParams#1",
+    "NativeName": "V3d_View::RenderingParams",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 1061,
+    "Column": 52,
+    "NativeSignature": "V3d_View::RenderingParams: const Graphic3d_RenderingParams &() const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const Graphic3d_RenderingParams &",
+      "CanonicalSpelling": "const Graphic3d_RenderingParams &",
+      "BaseNativeSpelling": "const Graphic3d_RenderingParams",
+      "BaseCanonicalSpelling": "const Graphic3d_RenderingParams",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+    "NativeName": "V3d_View::SetLightOn",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 274,
+    "Column": 24,
+    "NativeSignature": "V3d_View::SetLightOn: void (const occ::handle<V3d_Light> &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLight",
+        "Type": {
+          "NativeSpelling": "const occ::handle<V3d_Light> &",
+          "CanonicalSpelling": "const opencascade::handle<Graphic3d_CLight> &",
+          "BaseNativeSpelling": "const occ::handle<V3d_Light>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_CLight>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "V3d_Light"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "V3d_Light"
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@ToPixMap#&$@S@Image_PixMap#&1$@S@V3d_ImageDumpOptions#",
+    "NativeName": "V3d_View::ToPixMap",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 976,
+    "Column": 24,
+    "NativeSignature": "V3d_View::ToPixMap: bool (Image_PixMap &, const V3d_ImageDumpOptions &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "bool",
+      "CanonicalSpelling": "bool",
+      "BaseNativeSpelling": "bool",
+      "BaseCanonicalSpelling": "bool",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theImage",
+        "Type": {
+          "NativeSpelling": "Image_PixMap &",
+          "CanonicalSpelling": "Image_PixMap &",
+          "BaseNativeSpelling": "Image_PixMap",
+          "BaseCanonicalSpelling": "Image_PixMap",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theParams",
+        "Type": {
+          "NativeSpelling": "const V3d_ImageDumpOptions &",
+          "CanonicalSpelling": "const V3d_ImageDumpOptions &",
+          "BaseNativeSpelling": "const V3d_ImageDumpOptions",
+          "BaseCanonicalSpelling": "const V3d_ImageDumpOptions",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_View@F@View#1",
+    "NativeName": "V3d_View::View",
+    "Kind": "Method",
+    "Header": "V3d_View.hxx",
+    "Line": 894,
+    "Column": 39,
+    "NativeSignature": "V3d_View::View: const occ::handle<Graphic3d_CView> &() const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const occ::handle<Graphic3d_CView> &",
+      "CanonicalSpelling": "const opencascade::handle<Graphic3d_CView> &",
+      "BaseNativeSpelling": "const occ::handle<Graphic3d_CView>",
+      "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_CView>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "occ::handle",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "Graphic3d_CView"
+        }
+      ],
+      "IsOcctHandle": true,
+      "HandleTargetType": "Graphic3d_CView"
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@ActiveLights#1",
+    "NativeName": "V3d_Viewer::ActiveLights",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 302,
+    "Column": 58,
+    "NativeSignature": "V3d_Viewer::ActiveLights: const NCollection_List<occ::handle<Graphic3d_CLight>> &() const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const NCollection_List<occ::handle<Graphic3d_CLight>> &",
+      "CanonicalSpelling": "const NCollection_List<opencascade::handle<Graphic3d_CLight>> &",
+      "BaseNativeSpelling": "const NCollection_List<occ::handle<Graphic3d_CLight>>",
+      "BaseCanonicalSpelling": "const NCollection_List<opencascade::handle<Graphic3d_CLight>>",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": "NCollection_List",
+      "TemplateArguments": [
+        {
+          "Kind": "Type",
+          "Spelling": "occ::handle<Graphic3d_CLight>"
+        }
+      ],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@AddZLayer#&I#&1$@S@Graphic3d_ZLayerSettings#",
+    "NativeName": "V3d_Viewer::AddZLayer",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 200,
+    "Column": 8,
+    "NativeSignature": "V3d_Viewer::AddZLayer: bool (Graphic3d_ZLayerId &, const Graphic3d_ZLayerSettings &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "bool",
+      "CanonicalSpelling": "bool",
+      "BaseNativeSpelling": "bool",
+      "BaseCanonicalSpelling": "bool",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLayerId",
+        "Type": {
+          "NativeSpelling": "Graphic3d_ZLayerId &",
+          "CanonicalSpelling": "int &",
+          "BaseNativeSpelling": "Graphic3d_ZLayerId",
+          "BaseCanonicalSpelling": "int",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theSettings",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ZLayerSettings &",
+          "CanonicalSpelling": "const Graphic3d_ZLayerSettings &",
+          "BaseNativeSpelling": "const Graphic3d_ZLayerSettings",
+          "BaseCanonicalSpelling": "const Graphic3d_ZLayerSettings",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": true
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@GetAllZLayers#&$@S@NCollection_Sequence>#I#1",
+    "NativeName": "V3d_Viewer::GetAllZLayers",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 191,
+    "Column": 24,
+    "NativeSignature": "V3d_Viewer::GetAllZLayers: void (NCollection_Sequence<int> &) const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLayerSeq",
+        "Type": {
+          "NativeSpelling": "NCollection_Sequence<int> &",
+          "CanonicalSpelling": "NCollection_Sequence<int> &",
+          "BaseNativeSpelling": "NCollection_Sequence<int>",
+          "BaseCanonicalSpelling": "NCollection_Sequence<int>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": false
+            }
+          ],
+          "TemplateName": "NCollection_Sequence",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "int"
+            }
+          ],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@SetLightOff#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+    "NativeName": "V3d_Viewer::SetLightOff",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 285,
+    "Column": 24,
+    "NativeSignature": "V3d_Viewer::SetLightOff: void (const occ::handle<V3d_Light> &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLight",
+        "Type": {
+          "NativeSpelling": "const occ::handle<V3d_Light> &",
+          "CanonicalSpelling": "const opencascade::handle<Graphic3d_CLight> &",
+          "BaseNativeSpelling": "const occ::handle<V3d_Light>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_CLight>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "V3d_Light"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "V3d_Light"
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+    "NativeName": "V3d_Viewer::SetLightOn",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 279,
+    "Column": 24,
+    "NativeSignature": "V3d_Viewer::SetLightOn: void (const occ::handle<V3d_Light> &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLight",
+        "Type": {
+          "NativeSpelling": "const occ::handle<V3d_Light> &",
+          "CanonicalSpelling": "const opencascade::handle<Graphic3d_CLight> &",
+          "BaseNativeSpelling": "const occ::handle<V3d_Light>",
+          "BaseCanonicalSpelling": "const opencascade::handle<Graphic3d_CLight>",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": "occ::handle",
+          "TemplateArguments": [
+            {
+              "Kind": "Type",
+              "Spelling": "V3d_Light"
+            }
+          ],
+          "IsOcctHandle": true,
+          "HandleTargetType": "V3d_Light"
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@SetZLayerSettings#I#&1$@S@Graphic3d_ZLayerSettings#",
+    "NativeName": "V3d_Viewer::SetZLayerSettings",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 244,
+    "Column": 24,
+    "NativeSignature": "V3d_Viewer::SetZLayerSettings: void (const Graphic3d_ZLayerId, const Graphic3d_ZLayerSettings &)",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "void",
+      "CanonicalSpelling": "void",
+      "BaseNativeSpelling": "void",
+      "BaseCanonicalSpelling": "void",
+      "Layers": [
+        {
+          "Kind": "Value",
+          "IsConstQualified": false
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLayerId",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ZLayerId",
+          "CanonicalSpelling": "const int",
+          "BaseNativeSpelling": "const Graphic3d_ZLayerId",
+          "BaseCanonicalSpelling": "const int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      },
+      {
+        "Position": 1,
+        "Name": "theSettings",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ZLayerSettings &",
+          "CanonicalSpelling": "const Graphic3d_ZLayerSettings &",
+          "BaseNativeSpelling": "const Graphic3d_ZLayerSettings",
+          "BaseCanonicalSpelling": "const Graphic3d_ZLayerSettings",
+          "Layers": [
+            {
+              "Kind": "LValueReference",
+              "IsConstQualified": false
+            },
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": false,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  },
+  {
+    "StableId": "c:@S@V3d_Viewer@F@ZLayerSettings#I#1",
+    "NativeName": "V3d_Viewer::ZLayerSettings",
+    "Kind": "Method",
+    "Header": "V3d_Viewer.hxx",
+    "Line": 240,
+    "Column": 51,
+    "NativeSignature": "V3d_Viewer::ZLayerSettings: const Graphic3d_ZLayerSettings &(const Graphic3d_ZLayerId) const",
+    "SourcePackage": "V3d",
+    "SourceToolkit": null,
+    "Access": "Public",
+    "ReturnType": {
+      "NativeSpelling": "const Graphic3d_ZLayerSettings &",
+      "CanonicalSpelling": "const Graphic3d_ZLayerSettings &",
+      "BaseNativeSpelling": "const Graphic3d_ZLayerSettings",
+      "BaseCanonicalSpelling": "const Graphic3d_ZLayerSettings",
+      "Layers": [
+        {
+          "Kind": "LValueReference",
+          "IsConstQualified": false
+        },
+        {
+          "Kind": "Value",
+          "IsConstQualified": true
+        }
+      ],
+      "TemplateName": null,
+      "TemplateArguments": [],
+      "IsOcctHandle": false,
+      "HandleTargetType": null
+    },
+    "Parameters": [
+      {
+        "Position": 0,
+        "Name": "theLayerId",
+        "Type": {
+          "NativeSpelling": "const Graphic3d_ZLayerId",
+          "CanonicalSpelling": "const int",
+          "BaseNativeSpelling": "const Graphic3d_ZLayerId",
+          "BaseCanonicalSpelling": "const int",
+          "Layers": [
+            {
+              "Kind": "Value",
+              "IsConstQualified": true
+            }
+          ],
+          "TemplateName": null,
+          "TemplateArguments": [],
+          "IsOcctHandle": false,
+          "HandleTargetType": null
+        },
+        "HasDefaultArgument": false
+      }
+    ],
+    "BaseTypes": [],
+    "EnumValues": [],
+    "EnumUnderlyingType": null,
+    "IsConst": true,
+    "IsStatic": false,
+    "IsVariadic": false,
+    "IsVirtual": false,
+    "IsPureVirtual": false,
+    "IsAbstract": false,
+    "IsTemplated": false,
+    "TemplateParameterListCount": 0,
+    "TemplateSpecializationKind": "Undeclared",
+    "IsDeleted": false,
+    "IsUnavailable": false,
+    "IsDeprecated": false,
+    "IsOverloadedOperator": false,
+    "SupportState": "Pending",
+    "SkipReason": null
+  }
+]

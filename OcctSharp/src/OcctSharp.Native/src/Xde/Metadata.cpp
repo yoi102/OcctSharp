@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Xde/Metadata implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
 #include "Foundation/Text.hxx"
@@ -49,12 +51,12 @@ XdePresentationStyleMap CollectXdePresentationStyles(
 OcctSharp_XdeColor CopyXdeColor(const Quantity_ColorRGBA& color)
 {
   return {
-    color.GetRGB().Red(), color.GetRGB().Green(), color.GetRGB().Blue(), color.Alpha()};
+    OcctSharpGenerated::XdeAdapters::Quantity_Color_Red_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(color)())(), OcctSharpGenerated::XdeAdapters::Quantity_Color_Green_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(color)())(), OcctSharpGenerated::XdeAdapters::Quantity_Color_Blue_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(color)())(), OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_Alpha_Bind(color)()};
 }
 
 OcctSharp_XdeColor CopyXdeColor(const Quantity_Color& color, const double alpha)
 {
-  return {color.Red(), color.Green(), color.Blue(), alpha};
+  return {OcctSharpGenerated::XdeAdapters::Quantity_Color_Red_Bind(color)(), OcctSharpGenerated::XdeAdapters::Quantity_Color_Green_Bind(color)(), OcctSharpGenerated::XdeAdapters::Quantity_Color_Blue_Bind(color)(), alpha};
 }
 
 OcctSharp_XdePresentationStyle CopyXdePresentationStyle(const XCAFPrs_Style& style)
@@ -76,7 +78,7 @@ OcctSharp_XdePresentationStyle CopyXdePresentationStyle(const XCAFPrs_Style& sty
   if (!material.IsNull() && material->HasPbrMaterial())
   {
     result.has_material_color = 1;
-    result.material_color = CopyXdeColor(material->PbrMaterial().BaseColor);
+    result.material_color = CopyXdeColor(OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_PbrMaterial_Bind(*(material))().BaseColor);
   }
   else if (!material.IsNull() && material->HasCommonMaterial())
   {
@@ -96,12 +98,12 @@ bool GetAssignedMaterial(
   opencascade::handle<TCollection_HAsciiString>& densityType)
 {
   opencascade::handle<TDataStd_TreeNode> reference;
-  if (!label.FindAttribute(XCAFDoc::MaterialRefGUID(), reference) || !reference->HasFather())
+  if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,XCAFDoc::MaterialRefGUID(), reference) || !reference->HasFather())
   {
     return false;
   }
   return XCAFDoc_MaterialTool::GetMaterial(
-    reference->Father()->Label(), name, description, density, densityName, densityType);
+    OcctSharpGenerated::DocumentAdapters::TDF_Attribute_Label(*(reference->Father())), name, description, density, densityName, densityType);
 }
 
 std::string MaterialFieldUtf8(const TDF_Label& label, const int32_t field)
@@ -156,7 +158,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_color(
         throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "XDE color channels must be finite values from zero through one.");
       }
     }
-    const Quantity_ColorRGBA nativeColor(
+    const Quantity_ColorRGBA nativeColor = OcctSharpGenerated::XdeAdapters::ConstructQuantityColorRGBA(
       static_cast<float>(color.red),
       static_cast<float>(color.green),
       static_cast<float>(color.blue),
@@ -190,12 +192,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
     const auto try_color = [&](const XCAFDoc_ColorType type)
     {
       occ::handle<TDataStd_TreeNode> reference;
-      if (!label.FindAttribute(XCAFDoc::ColorRefGUID(type), reference)
+      if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(label,XCAFDoc::ColorRefGUID(type), reference)
           || reference.IsNull() || !reference->HasFather()) return false;
       occ::handle<XCAFDoc_Color> attribute;
-      const TDF_Label color_label = reference->Father()->Label();
-      if (color_label.IsNull()
-          || !color_label.FindAttribute(XCAFDoc_Color::GetID(), attribute)
+      const TDF_Label color_label = OcctSharpGenerated::DocumentAdapters::TDF_Attribute_Label(*(reference->Father()));
+      if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(color_label)
+          || !OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(color_label,XCAFDoc_Color::GetID(), attribute)
           || attribute.IsNull()) return false;
       nativeColor = attribute->GetColorRGBA();
       return true;
@@ -206,8 +208,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
     {
       *has_color = 1;
       *color = {
-        nativeColor.GetRGB().Red(), nativeColor.GetRGB().Green(),
-        nativeColor.GetRGB().Blue(), nativeColor.Alpha()};
+        OcctSharpGenerated::XdeAdapters::Quantity_Color_Red_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(nativeColor)())(), OcctSharpGenerated::XdeAdapters::Quantity_Color_Green_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(nativeColor)())(),
+        OcctSharpGenerated::XdeAdapters::Quantity_Color_Blue_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(nativeColor)())(), OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_Alpha_Bind(nativeColor)()};
     }
   });
 }
@@ -484,8 +486,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_visual_material(
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The visual-material alpha mode is invalid.");
 
     occ::handle<XCAFDoc_VisMaterial> material = new XCAFDoc_VisMaterial();
-    XCAFDoc_VisMaterialPBR pbr;
-    pbr.BaseColor = Quantity_ColorRGBA(
+    XCAFDoc_VisMaterialPBR pbr = OcctSharpGenerated::XdeAdapters::ConstructXCAFDocVisMaterialPBR();
+    pbr.BaseColor = OcctSharpGenerated::XdeAdapters::ConstructQuantityColorRGBA(
       static_cast<float>(red), static_cast<float>(green),
       static_cast<float>(blue), static_cast<float>(alpha));
     pbr.Metallic = static_cast<float>(metallic);
@@ -494,15 +496,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_visual_material(
       static_cast<float>(emissive_red), static_cast<float>(emissive_green),
       static_cast<float>(emissive_blue));
     pbr.RefractionIndex = static_cast<float>(refraction_index);
-    material->SetPbrMaterial(pbr);
-    material->SetAlphaMode(
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_SetPbrMaterial_Bind(*(material))(pbr);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_SetAlphaMode_Bind(*(material))(
       static_cast<Graphic3d_AlphaMode>(alpha_mode), static_cast<float>(alpha_cutoff));
     const TCollection_AsciiString material_name = MakeAsciiString(name, name_length);
     material->SetRawName(new TCollection_HAsciiString(material_name));
     const occ::handle<XCAFDoc_VisMaterialTool> tool =
-      XCAFDoc_DocumentTool::VisMaterialTool(document->Document->Main());
-    const TDF_Label material_label = tool->AddMaterial(material, material_name);
-    tool->SetShapeMaterial(ResolveOcafLabel(document, entry), material_label);
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_DocumentTool_VisMaterialTool(document->Document->Main());
+    const TDF_Label material_label = OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterialTool_AddMaterial_Bind(*(tool))(material, material_name);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterialTool_SetShapeMaterial_Bind(*(tool))(ResolveOcafLabel(document, entry), material_label);
   });
 }
 
@@ -532,17 +534,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_info(
   return Guard([&]
   {
     const occ::handle<XCAFDoc_VisMaterial> material =
-      XCAFDoc_VisMaterialTool::GetShapeMaterial(ResolveOcafLabel(document, entry));
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterialTool_GetShapeMaterial(ResolveOcafLabel(document, entry));
     if (material.IsNull()) return;
     XCAFDoc_VisMaterialPBR pbr = material->HasPbrMaterial()
-      ? material->PbrMaterial() : material->ConvertToPbrMaterial();
+      ? OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_PbrMaterial_Bind(*(material))() : OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_ConvertToPbrMaterial_Bind(*(material))();
     if (!pbr.IsDefined) return;
     const Quantity_ColorRGBA base = pbr.BaseColor;
     *has_material = 1;
-    *red = base.GetRGB().Red();
-    *green = base.GetRGB().Green();
-    *blue = base.GetRGB().Blue();
-    *alpha = base.Alpha();
+    *red = OcctSharpGenerated::XdeAdapters::Quantity_Color_Red_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(base)())();
+    *green = OcctSharpGenerated::XdeAdapters::Quantity_Color_Green_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(base)())();
+    *blue = OcctSharpGenerated::XdeAdapters::Quantity_Color_Blue_Bind(OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_GetRGB_Bind(base)())();
+    *alpha = OcctSharpGenerated::XdeAdapters::Quantity_ColorRGBA_Alpha_Bind(base)();
     *metallic = pbr.Metallic;
     *roughness = pbr.Roughness;
     *emissive_red = pbr.EmissiveFactor.r();
@@ -550,7 +552,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_info(
     *emissive_blue = pbr.EmissiveFactor.b();
     *refraction_index = pbr.RefractionIndex;
     *alpha_mode = static_cast<int32_t>(material->AlphaMode());
-    *alpha_cutoff = material->AlphaCutOff();
+    *alpha_cutoff = OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterial_AlphaCutOff_Bind(*(material))();
   });
 }
 
@@ -568,12 +570,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_utf8_le
   return Guard([&]
   {
     TDF_Label material_label;
-    if (!XCAFDoc_VisMaterialTool::GetShapeMaterial(
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterialTool_GetShapeMaterial(
           ResolveOcafLabel(document, entry), material_label)) return;
     *has_material = 1;
     opencascade::handle<TDataStd_Name> name_attribute;
-    if (material_label.FindAttribute(TDataStd_Name::GetID(), name_attribute))
-      *length = name_attribute->Get().LengthOfCString();
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(material_label,OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID(), name_attribute))
+      *length = OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(name_attribute)).LengthOfCString();
   });
 }
 
@@ -584,12 +586,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_to_utf8
   return Guard([&]
   {
     TDF_Label material_label;
-    if (!XCAFDoc_VisMaterialTool::GetShapeMaterial(
+    if (!OcctSharpGenerated::XdeAdapters::XCAFDoc_VisMaterialTool_GetShapeMaterial(
           ResolveOcafLabel(document, entry), material_label))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label has no visual material.");
     opencascade::handle<TDataStd_Name> name_attribute;
-    const std::string name = material_label.FindAttribute(TDataStd_Name::GetID(), name_attribute)
-      ? ExtendedToUtf8(name_attribute->Get()) : std::string();
+    const std::string name = OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(material_label,OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID(), name_attribute)
+      ? ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(name_attribute))) : std::string();
     CopyUtf8Result(name, buffer, capacity, written);
   });
 }
@@ -609,9 +611,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_validation_properties(
   {
     const TDF_Label label = ResolveOcafLabel(document, entry);
     gp_Pnt centroid;
-    properties->has_area = XCAFDoc_Area::Get(label, properties->area) ? 1 : 0;
-    properties->has_volume = XCAFDoc_Volume::Get(label, properties->volume) ? 1 : 0;
-    properties->has_centroid = XCAFDoc_Centroid::Get(label, centroid) ? 1 : 0;
+    properties->has_area = OcctSharpGenerated::XdeAdapters::XCAFDoc_Area_Get(label, properties->area) ? 1 : 0;
+    properties->has_volume = OcctSharpGenerated::XdeAdapters::XCAFDoc_Volume_Get(label, properties->volume) ? 1 : 0;
+    properties->has_centroid = OcctSharpGenerated::XdeAdapters::XCAFDoc_Centroid_Get(label, centroid) ? 1 : 0;
     if (properties->has_centroid != 0)
       properties->centroid = {centroid.X(), centroid.Y(), centroid.Z()};
   });
@@ -645,14 +647,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_validation_properties(
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE centroid must be finite.");
 
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (properties->has_area != 0) XCAFDoc_Area::Set(label, properties->area);
-    else label.ForgetAttribute(XCAFDoc_Area::GetID());
-    if (properties->has_volume != 0) XCAFDoc_Volume::Set(label, properties->volume);
-    else label.ForgetAttribute(XCAFDoc_Volume::GetID());
+    if (properties->has_area != 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_Area_Set(label, properties->area);
+    else OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_Area_GetID());
+    if (properties->has_volume != 0) OcctSharpGenerated::XdeAdapters::XCAFDoc_Volume_Set(label, properties->volume);
+    else OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_Volume_GetID());
     if (properties->has_centroid != 0)
-      XCAFDoc_Centroid::Set(
+      OcctSharpGenerated::XdeAdapters::XCAFDoc_Centroid_Set(
         label,
         gp_Pnt(properties->centroid.x, properties->centroid.y, properties->centroid.z));
-    else label.ForgetAttribute(XCAFDoc_Centroid::GetID());
+    else OcctSharpGenerated::DocumentAdapters::TDF_Label_ForgetAttribute(label,OcctSharpGenerated::XdeAdapters::XCAFDoc_Centroid_GetID());
   });
 }

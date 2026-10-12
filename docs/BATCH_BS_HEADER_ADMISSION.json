@@ -1,0 +1,439 @@
+{
+  "state": "AUDITED_DIAGNOSTIC_CAUSES_NO_BINDING_ADMISSION",
+  "baseline": "BR Preview.68",
+  "inventorySha256": "7EE9AE651B2603D4B7953DD450AA1391038083DCBFE2B465A296970CC8E65528",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "count": 28,
+  "categories": {
+    "MISSING_DEPRECATED_ALIAS_DEPENDENCY": 6,
+    "OPTIONAL_VTK_TOOLCHAIN": 19,
+    "CPPCLI_ONLY": 1,
+    "GLES_PLATFORM_HELPER": 1,
+    "MISSING_RAPIDJSON_DEPENDENCY": 1
+  },
+  "rows": [
+    {
+      "header": "BOPDS_DataMapOfIntegerListOfPaveBlock.hxx",
+      "installedSha256": "E8B7C00CF3F59A5EE13DAEE44A3FF2ACA549CB00D90A24831361BC25829BBDA2",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/BOPDS_DataMapOfIntegerListOfPaveBlock.hxx",
+          "sha256": "E8B7C00CF3F59A5EE13DAEE44A3FF2ACA549CB00D90A24831361BC25829BBDA2",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\BOPDS_DataMapOfIntegerListOfPaveBlock.hxx:24:10: error: 'BOPDS_ListOfPaveBlock.hxx' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\BOPDS_DataMapOfIntegerListOfPaveBlock.hxx:31:34: error: use of undeclared identifier 'BOPDS_ListOfPaveBlock' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    },
+    {
+      "header": "BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx",
+      "installedSha256": "0A1AFD3959C7A3AA145FB04AB6769B31C1165E2DB327CF7A1FD4DB2243E15A37",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx",
+          "sha256": "0A1AFD3959C7A3AA145FB04AB6769B31C1165E2DB327CF7A1FD4DB2243E15A37",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx:25:10: error: 'BOPDS_ListOfPaveBlock.hxx' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx:33:67: error: use of undeclared identifier 'BOPDS_ListOfPaveBlock' [Semantic Issue]\r\n<occt-root>\\inc\\BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx:38:67: error: use of undeclared identifier 'BOPDS_ListOfPaveBlock' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    },
+    {
+      "header": "BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx",
+      "installedSha256": "F5C766C4A9A37C6F7A23675CEE5A7574F137274E171925D8BE34E47F7B2EFCA6",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx",
+          "sha256": "F5C766C4A9A37C6F7A23675CEE5A7574F137274E171925D8BE34E47F7B2EFCA6",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx:26:10: error: 'BOPDS_ListOfPaveBlock.hxx' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx:36:74: error: use of undeclared identifier 'BOPDS_ListOfPaveBlock' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    },
+    {
+      "header": "BOPDS_VectorOfListOfPaveBlock.hxx",
+      "installedSha256": "E201EA2AC6E5554BFBFB4F3D3F862850F36A3EA62EFCFD7F05B62701D7C0588B",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/BOPDS_VectorOfListOfPaveBlock.hxx",
+          "sha256": "E201EA2AC6E5554BFBFB4F3D3F862850F36A3EA62EFCFD7F05B62701D7C0588B",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\BOPDS_VectorOfListOfPaveBlock.hxx:24:10: error: 'BOPDS_ListOfPaveBlock.hxx' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\BOPDS_VectorOfListOfPaveBlock.hxx:31:34: error: use of undeclared identifier 'BOPDS_ListOfPaveBlock' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    },
+    {
+      "header": "Graphic3d_MapIteratorOfMapOfStructure.hxx",
+      "installedSha256": "B2F01C8DF666FAE428639662DA9E83D1CACAA92F753F665ACB2CB104DE443290",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/Graphic3d_MapIteratorOfMapOfStructure.hxx",
+          "sha256": "B2F01C8DF666FAE428639662DA9E83D1CACAA92F753F665ACB2CB104DE443290",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\Graphic3d_MapIteratorOfMapOfStructure.hxx:24:10: error: 'Graphic3d_MapOfStructure.hxx' file not found [Lexical or Preprocessor Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    },
+    {
+      "header": "IVtkDraw_HighlightAndSelectionPipeline.hxx",
+      "installedSha256": "27CC7E7614608147D9535459E9EC18C84582FF90A9D6441F359B2F84FC5CD297",
+      "pinnedSources": [
+        {
+          "path": "src/Draw/TKIVtkDraw/IVtkDraw/IVtkDraw_HighlightAndSelectionPipeline.hxx",
+          "sha256": "27CC7E7614608147D9535459E9EC18C84582FF90A9D6441F359B2F84FC5CD297",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkDraw_HighlightAndSelectionPipeline.hxx:26:10: error: 'vtkActor.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkDraw_HighlightAndSelectionPipeline.hxx:27:10: error: 'vtkPolyData.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkDraw_HighlightAndSelectionPipeline.hxx:28:10: error: 'vtkPolyDataMapper.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkDraw_HighlightAndSelectionPipeline.hxx:29:10: error: 'vtkRenderer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkDraw_HighlightAndSelectionPipeline.hxx:30:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:22:10: error: 'vtkPolyDataAlgorithm.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:32:60: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:45: error: unknown type name 'vtkPolyDataAlgorithm' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:66: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:38:39: error: unknown type name 'vtkIndent' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:19: error: unknown type name 'vtkInformation' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:36: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:60: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]\r\nfatal error: too many errors emitted, stopping now",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkDraw_Interactor.hxx",
+      "installedSha256": "EDD5098E43B6E02C2CDA5A732F94F164D1BD1FFB761000818D73E6C82251CA40",
+      "pinnedSources": [
+        {
+          "path": "src/Draw/TKIVtkDraw/IVtkDraw/IVtkDraw_Interactor.hxx",
+          "sha256": "EDD5098E43B6E02C2CDA5A732F94F164D1BD1FFB761000818D73E6C82251CA40",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkDraw_Interactor.hxx:34:10: error: 'vtkRenderWindowInteractor.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkDraw_Interactor.hxx:35:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:101:25: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:134:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:142:30: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:148:28: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:25:10: error: 'vtkAbstractPropPicker.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:26:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:39:54: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:39: error: unknown type name 'vtkAbstractPropPicker' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:61: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:52:87: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:87:58: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]\r\nfatal error: too many errors emitted, stopping now",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkOCC_SelectableObject.hxx",
+      "installedSha256": "AC33A2E8F94CF4074D6C06C77A338D2CD4A1324802354793DF7149DFF7EDAAA2",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_SelectableObject.hxx",
+          "sha256": "AC33A2E8F94CF4074D6C06C77A338D2CD4A1324802354793DF7149DFF7EDAAA2",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkOCC_Shape.hxx",
+      "installedSha256": "228148BF53AD8A8063B699CE1BC2F660BC541BE2D1B6F03450D24B9201EEEE7F",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_Shape.hxx",
+          "sha256": "228148BF53AD8A8063B699CE1BC2F660BC541BE2D1B6F03450D24B9201EEEE7F",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkOCC_ShapeMesher.hxx",
+      "installedSha256": "3266A08EC43948488E58DD6BDA59D4BEA259EBE1867C7AFF27A68FFD357BEB63",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_ShapeMesher.hxx",
+          "sha256": "3266A08EC43948488E58DD6BDA59D4BEA259EBE1867C7AFF27A68FFD357BEB63",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkOCC_ShapePickerAlgo.hxx",
+      "installedSha256": "3488095B30437AEFAC5F0B228FD9100BAD3D98FA9AC1A80FC71B14DE1FD543DA",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_ShapePickerAlgo.hxx",
+          "sha256": "3488095B30437AEFAC5F0B228FD9100BAD3D98FA9AC1A80FC71B14DE1FD543DA",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools.hxx",
+      "installedSha256": "A2E0F738561CADC4A88905FED5EA8347AF023C05579403448B460BED5BB2B419",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools.hxx",
+          "sha256": "A2E0F738561CADC4A88905FED5EA8347AF023C05579403448B460BED5BB2B419",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools_DisplayModeFilter.hxx",
+      "installedSha256": "8C9DF0D070F3DB6C5D4AE3A59FCF22A9DF18FC390396F61326F0F02E90C648B1",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools_DisplayModeFilter.hxx",
+          "sha256": "8C9DF0D070F3DB6C5D4AE3A59FCF22A9DF18FC390396F61326F0F02E90C648B1",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_DisplayModeFilter.hxx:35:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_DisplayModeFilter.hxx:35:73: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_DisplayModeFilter.hxx:38:36: error: unknown type name 'vtkIndent' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_DisplayModeFilter.hxx:71:19: error: unknown type name 'vtkInformation' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:22:10: error: 'vtkPolyDataAlgorithm.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:32:60: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:45: error: unknown type name 'vtkPolyDataAlgorithm' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:66: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:38:39: error: unknown type name 'vtkIndent' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:19: error: unknown type name 'vtkInformation' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:36: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:60: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:66:34: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]\r\nfatal error: too many errors emitted, stopping now",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools_ShapeDataSource.hxx",
+      "installedSha256": "EC03B5FEC0148540A8669CD763F9A2C51A546FCACC5B5E0E728B7CF0BB51A7BF",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapeDataSource.hxx",
+          "sha256": "EC03B5FEC0148540A8669CD763F9A2C51A546FCACC5B5E0E728B7CF0BB51A7BF",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:24:10: error: 'vtkPolyDataAlgorithm.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:37:58: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:40:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:40:43: error: unknown type name 'vtkPolyDataAlgorithm' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:40:64: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeDataSource.hxx:69:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:100:3: error: unknown type name 'vtkPolyData' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:118:19: error: use of undeclared identifier 'vtkPolyData' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:119:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:120:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:121:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:25:10: error: 'vtkPolyData.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:26:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:27:10: error: 'vtkIdTypeArray.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]\r\nfatal error: too many errors emitted, stopping now",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools_ShapeObject.hxx",
+      "installedSha256": "7A0CCAB2C89304816D28DA14E988ADC0F43408228FBA0901680E0DCBDA691CF0",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapeObject.hxx",
+          "sha256": "7A0CCAB2C89304816D28DA14E988ADC0F43408228FBA0901680E0DCBDA691CF0",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:24:10: error: 'vtkDataObject.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:25:10: error: 'vtkSetGet.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:26:10: error: 'vtkWeakPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:46:54: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:49:39: error: unknown type name 'vtkDataObject' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:49:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:49:53: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:54:10: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:82:28: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapeObject.hxx:89:3: error: no template named 'vtkWeakPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools_ShapePicker.hxx",
+      "installedSha256": "B2B2A0DC0E6029F25D089A87CBEF35571F9BCE37BCFEA102B6624AE68E84343E",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapePicker.hxx",
+          "sha256": "B2B2A0DC0E6029F25D089A87CBEF35571F9BCE37BCFEA102B6624AE68E84343E",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:101:25: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:134:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:142:30: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:148:28: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:171:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:25:10: error: 'vtkAbstractPropPicker.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:26:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:39:54: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:39: error: unknown type name 'vtkAbstractPropPicker' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:42:61: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:52:87: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_ShapePicker.hxx:87:58: error: unknown type name 'vtkActor' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkTools_SubPolyDataFilter.hxx",
+      "installedSha256": "FE828B6E7CB5F0FE91AEFBD443BEC7F1AAD5723DC588A3FE1132CF1641860488",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkTools/IVtkTools_SubPolyDataFilter.hxx",
+          "sha256": "FE828B6E7CB5F0FE91AEFBD443BEC7F1AAD5723DC588A3FE1132CF1641860488",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkTools.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools.hxx:34:17: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:22:10: error: 'vtkPolyDataAlgorithm.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:32:60: error: expected class name [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:3: error: a type specifier is required for all declarations [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:45: error: unknown type name 'vtkPolyDataAlgorithm' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:35:66: error: expected ';' at end of declaration list [Parse Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:38:39: error: unknown type name 'vtkIndent' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:19: error: unknown type name 'vtkInformation' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:36: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:63:60: error: unknown type name 'vtkInformationVector' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkTools_SubPolyDataFilter.hxx:66:34: error: only virtual member functions can be marked 'override' [Semantic Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkVTK_ShapeData.hxx",
+      "installedSha256": "16AD17A68C51B9F6EF30C54EA236C4600479735CC7A6F2E0019A0BE5742E79CB",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkVTK/IVtkVTK_ShapeData.hxx",
+          "sha256": "16AD17A68C51B9F6EF30C54EA236C4600479735CC7A6F2E0019A0BE5742E79CB",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:100:3: error: unknown type name 'vtkPolyData' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:118:19: error: use of undeclared identifier 'vtkPolyData' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:119:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:120:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:121:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:25:10: error: 'vtkPolyData.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:26:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtkVTK_ShapeData.hxx:27:10: error: 'vtkIdTypeArray.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtkVTK_View.hxx",
+      "installedSha256": "E7A49A4E99CC062C32F5CCB275A0D9EB026BC6ED7B290E1BB04BCD35196A303B",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtkVTK/IVtkVTK_View.hxx",
+          "sha256": "E7A49A4E99CC062C32F5CCB275A0D9EB026BC6ED7B290E1BB04BCD35196A303B",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtkVTK_View.hxx:103:3: error: no template named 'vtkSmartPointer' [Semantic Issue]\r\n<occt-root>\\inc\\IVtkVTK_View.hxx:20:10: error: 'vtkSmartPointer.h' file not found [Lexical or Preprocessor Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtk_IShape.hxx",
+      "installedSha256": "58725E27E46BEDE994F4D318FE9E8B513C8F2511B40D684B89DA904066851FD0",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtk/IVtk_IShape.hxx",
+          "sha256": "58725E27E46BEDE994F4D318FE9E8B513C8F2511B40D684B89DA904066851FD0",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtk_IShapeData.hxx",
+      "installedSha256": "9B5C7920B61FCB10F6BB3EA5819D1AB77D9756DF4401241E98FB8889B86C162C",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtk/IVtk_IShapeData.hxx",
+          "sha256": "9B5C7920B61FCB10F6BB3EA5819D1AB77D9756DF4401241E98FB8889B86C162C",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtk_IShapeMesher.hxx",
+      "installedSha256": "F1426F511E62B86E50332F76F2DACEF1BB5541E176FD81B83ED9A957169AC3AB",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtk/IVtk_IShapeMesher.hxx",
+          "sha256": "F1426F511E62B86E50332F76F2DACEF1BB5541E176FD81B83ED9A957169AC3AB",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtk_IShapePickerAlgo.hxx",
+      "installedSha256": "E159004CD89F58F5EFDB4332E884DE5B0A7FD4E419AA644A5E615A4911EC9815",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtk/IVtk_IShapePickerAlgo.hxx",
+          "sha256": "E159004CD89F58F5EFDB4332E884DE5B0A7FD4E419AA644A5E615A4911EC9815",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "IVtk_Types.hxx",
+      "installedSha256": "39D410B9FF14A8695DCF70D5E7D437CA8C9B1EBC67CEFFAD216DD56893C60214",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKIVtk/IVtk/IVtk_Types.hxx",
+          "sha256": "39D410B9FF14A8695DCF70D5E7D437CA8C9B1EBC67CEFFAD216DD56893C60214",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "OPTIONAL_VTK_TOOLCHAIN",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\IVtk_Types.hxx:25:10: error: 'vtkType.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:35:6: error: \"32-bit VTK library can not be linked for 64-bit target platform\" [User-Defined Issue]\r\n<occt-root>\\inc\\IVtk_Types.hxx:39:9: error: unknown type name 'vtkIdType' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires optional VTK headers/toolchain outside this Windows core scope."
+    },
+    {
+      "header": "NCollection_Haft.h",
+      "installedSha256": "775BBE7B4E78EB77405A5DD93AB9572202234D86800988DAB131EA04F8EDC8DA",
+      "pinnedSources": [
+        {
+          "path": "src/FoundationClasses/TKernel/NCollection/NCollection_Haft.h",
+          "sha256": "775BBE7B4E78EB77405A5DD93AB9572202234D86800988DAB131EA04F8EDC8DA",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "CPPCLI_ONLY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\NCollection_Haft.h:19:4: error: This file is usable only in C++/CLI (.NET) programs [User-Defined Issue]\r\n<occt-root>\\inc\\NCollection_Haft.h:24:17: error: expected namespace name [Parse Issue]\r\n<occt-root>\\inc\\NCollection_Haft.h:25:17: error: use of undeclared identifier 'System' [Semantic Issue]\r\n<occt-root>\\inc\\NCollection_Haft.h:41:1: error: expected unqualified-id [Parse Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "C++/CLI is not the native C ABI discovery language."
+    },
+    {
+      "header": "OpenGl_GLESExtensions.hxx",
+      "installedSha256": "B5101E824CBC50F73D03E59762817C3CEFF341A91EE404CB5ED4A46A0B9C89BA",
+      "pinnedSources": [
+        {
+          "path": "src/Visualization/TKOpenGl/OpenGl/OpenGl_GLESExtensions.hxx",
+          "sha256": "B5101E824CBC50F73D03E59762817C3CEFF341A91EE404CB5ED4A46A0B9C89BA",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "GLES_PLATFORM_HELPER",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:120:24: error: typedef redefinition with different types ('void (int, int, int, int, int, const void *)' vs 'void (int)') [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:120:35: error: expected ')' [Parse Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:120:35: error: expected ')' [Parse Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:120:35: error: expected ')' [Parse Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:128:48: error: unknown type name 'GLenum' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:129:55: error: unknown type name 'GLenum' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:130:55: error: unknown type name 'GLuint' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:131:55: error: unknown type name 'GLuint' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:132:55: error: unknown type name 'GLsizei' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:133:55: error: unknown type name 'GLenum' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:135:48: error: unknown type name 'GLenum' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:136:48: error: unknown type name 'GLint' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:137:48: error: unknown type name 'GLint' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:138:48: error: unknown type name 'GLsizei' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:139:48: error: unknown type name 'GLsizei' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:140:48: error: unknown type name 'GLsizei' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:141:48: error: unknown type name 'GLint' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:142:48: error: unknown type name 'GLenum' [Semantic Issue]\r\n<occt-root>\\inc\\OpenGl_GLESExtensions.hxx:143:48: error: unknown type name 'GLenum' [Semantic Issue]\r\nfatal error: too many errors emitted, stopping now",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Requires GLES API macros/context; installed GL types preamble still failed and failure is retained."
+    },
+    {
+      "header": "RWGltf_GltfOStreamWriter.hxx",
+      "installedSha256": "0EB6B23706839188968103118E0D70D36AA69974E83E8152D6DF50B389E351D6",
+      "pinnedSources": [
+        {
+          "path": "src/DataExchange/TKDEGLTF/RWGltf/RWGltf_GltfOStreamWriter.hxx",
+          "sha256": "0EB6B23706839188968103118E0D70D36AA69974E83E8152D6DF50B389E351D6",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_RAPIDJSON_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:19:10: error: 'rapidjson/prettywriter.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:20:10: error: 'rapidjson/ostreamwrapper.h' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:24:41: error: use of undeclared identifier 'rapidjson' [Semantic Issue]\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:24:52: error: unknown template name 'Writer' [Parse Issue]\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:24:59: error: use of undeclared identifier 'rapidjson' [Semantic Issue]\r\n<occt-root>\\inc\\RWGltf_GltfOStreamWriter.hxx:28:28: error: use of undeclared identifier 'rapidjson' [Semantic Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "RapidJSON dependency absent; stream helper is not a promised consumer API."
+    },
+    {
+      "header": "TObj_Container.hxx",
+      "installedSha256": "9F3BD65EB35B1F5CBA93262F67211B03814366A91E09285799BD55BEE9E570CD",
+      "pinnedSources": [
+        {
+          "path": "src/Deprecated/NCollectionAliases/TObj_Container.hxx",
+          "sha256": "9F3BD65EB35B1F5CBA93262F67211B03814366A91E09285799BD55BEE9E570CD",
+          "matchesInstalled": true
+        }
+      ],
+      "category": "MISSING_DEPRECATED_ALIAS_DEPENDENCY",
+      "baselineError": "Clang failed to parse the selected OCCT headers:\r\n<occt-root>\\inc\\TObj_Container.hxx:27:10: error: 'TObj_SequenceOfObject.hxx' file not found [Lexical or Preprocessor Issue]\r\n<occt-root>\\inc\\TObj_Container.hxx:40:49: error: use of undeclared identifier 'TObj_Object' [Semantic Issue]\r\n<occt-root>\\inc\\TObj_Container.hxx:41:72: error: expected unqualified-id [Parse Issue]",
+      "state": "DEFERRED_WITH_EXACT_SOURCE_AND_CAUSE",
+      "reason": "Pinned dependency absent from artifact; no fabricated alias."
+    }
+  ],
+  "classificationHardeningImplemented": true,
+  "parserRepairsAdmitted": 0,
+  "keptExclusions": 28
+}

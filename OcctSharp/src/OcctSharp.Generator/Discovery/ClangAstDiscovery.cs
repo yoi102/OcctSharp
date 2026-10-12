@@ -59,7 +59,8 @@ public sealed class ClangAstDiscovery
                 includeRoot,
                 sourcePath,
                 headers,
-                options.ToolkitByPackage ?? new Dictionary<string, string>(StringComparer.Ordinal));
+                options.ToolkitByPackage ?? new Dictionary<string, string>(StringComparer.Ordinal),
+                options.AdditionalIncludeDirectories);
         }
         finally
         {
@@ -71,9 +72,10 @@ public sealed class ClangAstDiscovery
         string includeRoot,
         string sourcePath,
         IReadOnlyList<string> headers,
-        IReadOnlyDictionary<string, string> toolkitByPackage)
+        IReadOnlyDictionary<string, string> toolkitByPackage,
+        IReadOnlyList<string> additionalIncludeDirectories)
     {
-        string[] arguments = BuildCompilerArguments(includeRoot);
+        string[] arguments = BuildCompilerArguments(includeRoot, additionalIncludeDirectories);
 
         using CXIndex index = CXIndex.Create(excludeDeclarationsFromPch: false, displayDiagnostics: false);
         CXTranslationUnit handle = CXTranslationUnit.Parse(
@@ -121,7 +123,7 @@ public sealed class ClangAstDiscovery
             BindingSupportSummary.Create(eligibleModel));
     }
 
-    private static string[] BuildCompilerArguments(string includeRoot)
+    private static string[] BuildCompilerArguments(string includeRoot, IReadOnlyList<string> additionalIncludeDirectories)
     {
         List<string> arguments =
         [
@@ -137,6 +139,12 @@ public sealed class ClangAstDiscovery
             $"-I{includeRoot}",
         ];
 
+        foreach (string directory in additionalIncludeDirectories)
+        {
+            string full = Path.GetFullPath(directory);
+            if (!Directory.Exists(full)) throw new DirectoryNotFoundException(full);
+            arguments.Add("-I" + full);
+        }
         string? includeEnvironment = Environment.GetEnvironmentVariable("INCLUDE");
         if (!string.IsNullOrWhiteSpace(includeEnvironment))
         {

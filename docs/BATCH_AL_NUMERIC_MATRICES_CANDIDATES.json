@@ -1,0 +1,503 @@
+{
+  "schemaVersion": "1.0",
+  "baseline": "8.0.1-preview.35",
+  "state": "PLANNED_CANDIDATES_NOT_ADMITTED",
+  "inventorySha256": "0079A6D371A20433246CD265758C011AF1BF6759DBDCFC0364962D55F1778EA8",
+  "priorAHAdmissionSha256": "8A1857711C64DD58E1D097C0629D307E3190A008134593DBCDC0789AD9A6A502",
+  "candidateCount": 54,
+  "familyCounts": {
+    "BSplCLib": 6,
+    "math_Gauss": 9,
+    "math_Householder": 9,
+    "math_Matrix": 23,
+    "math_SVD": 7
+  },
+  "declarations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBSpMatrix#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#I#&$@S@math_Matrix#&I#S6_#S",
+      "nativeName": "BSplCLib::BuildBSpMatrix",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL206",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@EvalBsplineBasis#I#I#&1$@S@NCollection_Array1>#d#d#&I#&$@S@math_Matrix#b#S",
+      "nativeName": "BSplCLib::EvalBsplineBasis",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL206",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "header": "BSplCLib.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL208",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Determinant#1",
+      "nativeName": "math_Gauss::Determinant",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Gauss::Dump",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Invert#&$@S@math_Matrix#1",
+      "nativeName": "math_Gauss::Invert",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@IsDone#1",
+      "nativeName": "math_Gauss::IsDone",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Gauss::Solve",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@Solve#&1$@S@math_VectorBase>#d#&S1_#1",
+      "nativeName": "math_Gauss::Solve",
+      "header": "math_Gauss.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&&$@S@math_Gauss#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&1$@S@math_Gauss#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Gauss@F@math_Gauss#&1$@S@math_Matrix#d#&1$@S@Message_ProgressRange#",
+      "nativeName": "math_Gauss::math_Gauss",
+      "header": "math_Gauss.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@AllValues#1",
+      "nativeName": "math_Householder::AllValues",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Householder::Dump",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@IsDone#1",
+      "nativeName": "math_Householder::IsDone",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@Value#&$@S@math_VectorBase>#d#I#1",
+      "nativeName": "math_Householder::Value",
+      "header": "math_Householder.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&&$@S@math_Householder#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Householder#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#I#I#I#I#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Householder@F@math_Householder#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "math_Householder::math_Householder",
+      "header": "math_Householder.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Added#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Added",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Col#I#1",
+      "nativeName": "math_Matrix::Col",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Divided#d#1",
+      "nativeName": "math_Matrix::Divided",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_Matrix::Dump",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Initialized#&1$@S@math_Matrix#",
+      "nativeName": "math_Matrix::Initialized",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Inverse#1",
+      "nativeName": "math_Matrix::Inverse",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#&1$@S@math_VectorBase>#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiplied#d#1",
+      "nativeName": "math_Matrix::Multiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Multiply#&1$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "math_Matrix::Multiply",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Opposite#1",
+      "nativeName": "math_Matrix::Opposite",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Row#I#1",
+      "nativeName": "math_Matrix::Row",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetCol#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetCol",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@SetRow#I#&1$@S@math_VectorBase>#d#",
+      "nativeName": "math_Matrix::SetRow",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Subtracted#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::Subtracted",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiplied#d#1",
+      "nativeName": "math_Matrix::TMultiplied",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@TMultiply#&1$@S@math_Matrix#1",
+      "nativeName": "math_Matrix::TMultiply",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Transposed#1",
+      "nativeName": "math_Matrix::Transposed",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@Value#I#I#",
+      "nativeName": "math_Matrix::Value",
+      "header": "math_Matrix.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#&&$@S@math_Matrix#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#&1$@S@math_Matrix#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#*v#I#I#I#I#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_Matrix@F@math_Matrix#I#I#I#I#",
+      "nativeName": "math_Matrix::math_Matrix",
+      "header": "math_Matrix.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "math_SVD::Dump",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@IsDone#1",
+      "nativeName": "math_SVD::IsDone",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@PseudoInverse#&$@S@math_Matrix#d#",
+      "nativeName": "math_SVD::PseudoInverse",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@Solve#&1$@S@math_VectorBase>#d#&S1_#d#",
+      "nativeName": "math_SVD::Solve",
+      "header": "math_SVD.hxx",
+      "kind": "Method",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL102",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&&$@S@math_SVD#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&1$@S@math_Matrix#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    },
+    {
+      "stableId": "c:@S@math_SVD@F@math_SVD#&1$@S@math_SVD#",
+      "nativeName": "math_SVD::math_SVD",
+      "header": "math_SVD.hxx",
+      "kind": "Constructor",
+      "baselineDisposition": "Blocked",
+      "baselineReason": "BL103",
+      "decision": "NOT_AUDITED"
+    }
+  ]
+}

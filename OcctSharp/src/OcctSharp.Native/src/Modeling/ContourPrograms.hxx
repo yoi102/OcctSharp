@@ -6,7 +6,8 @@
 #include <TopoDS_Vertex.hxx>
 
 namespace OcctSharp::Native::LocalFeatures {
-inline void CopyContours(BRepFilletAPI_LocalOperation& algorithm, const InputGraph& graph,
+template<class Algorithm>
+inline void CopyContours(Algorithm& algorithm, const InputGraph& graph,
   const std::vector<int>& seeds, Result& result) {
   const int count = algorithm.NbContours(); Require(count >= 0 && count <= 256, "Too many finishing contours.");
   for (int ic = 1; ic <= count; ++ic) {

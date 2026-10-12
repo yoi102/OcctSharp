@@ -1,0 +1,2566 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.49",
+  "inventorySha256": "6082B5EDA0AC0904BDEC0DDC33B925292634FBC09B5760FBB04CD01DAB47CA09",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "F410DA88EDB29861651CA0ECA99DD6FCB15DA98C6E492F17A178097019454257",
+  "declarations": [
+    {
+      "stableId": "c:@N@MathLin@F@MatrixInvSqrt#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::MatrixInvSqrt",
+      "signature": "MathLin::MatrixInvSqrt: std::optional<math_Matrix> (const math_Matrix &)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@MatrixPower#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::MatrixPower",
+      "signature": "MathLin::MatrixPower: std::optional<math_Matrix> (const math_Matrix &, double)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@MatrixSqrt#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::MatrixSqrt",
+      "signature": "MathLin::MatrixSqrt: std::optional<math_Matrix> (const math_Matrix &)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SpectralDecomposition#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::SpectralDecomposition",
+      "signature": "MathLin::SpectralDecomposition: EigenResult (const math_Matrix &)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPoly#*1d#I#d#",
+      "nativeName": "MathUtils::EvalPoly",
+      "signature": "MathUtils::EvalPoly: double (const double *, int, double)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPolyDeriv#*1d#I#d#&d#S1_#",
+      "nativeName": "MathUtils::EvalPolyDeriv",
+      "signature": "MathUtils::EvalPolyDeriv: void (const double *, int, double, double &, double &)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EvalPolyDesc#*1d#I#d#",
+      "nativeName": "MathUtils::EvalPolyDesc",
+      "signature": "MathUtils::EvalPolyDesc: double (const double *, int, double)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@GetKronrodPointsAndWeights#I#&$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::GetKronrodPointsAndWeights",
+      "signature": "MathUtils::GetKronrodPointsAndWeights: bool (int, math_Vector &, math_Vector &)",
+      "header": "MathUtils_GaussKronrodWeights.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@GetOrderedGaussPointsAndWeights#I#&$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::GetOrderedGaussPointsAndWeights",
+      "signature": "MathUtils::GetOrderedGaussPointsAndWeights: bool (int, math_Vector &, math_Vector &)",
+      "header": "MathUtils_GaussKronrodWeights.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RefinePolyRoot#*1d#I#d#I#",
+      "nativeName": "MathUtils::RefinePolyRoot",
+      "signature": "MathUtils::RefinePolyRoot: double (const double *, int, double, int)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RefinePolyRootDesc#*1d#I#d#I#",
+      "nativeName": "MathUtils::RefinePolyRootDesc",
+      "signature": "MathUtils::RefinePolyRootDesc: double (const double *, int, double, int)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@RemoveDuplicateRoots#*d#k#d#",
+      "nativeName": "MathUtils::RemoveDuplicateRoots",
+      "signature": "MathUtils::RemoveDuplicateRoots: size_t (double *, size_t, double)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@SortRoots#*d#k#",
+      "nativeName": "MathUtils::SortRoots",
+      "signature": "MathUtils::SortRoots: void (double *, size_t)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const TCollection_ExtendedString &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#I#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const int)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#d#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const double)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Get#",
+      "nativeName": "Message_Msg::Get",
+      "signature": "Message_Msg::Get: const TCollection_ExtendedString &()",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@IsEdited#1",
+      "nativeName": "Message_Msg::IsEdited",
+      "signature": "Message_Msg::IsEdited: bool () const",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void ()",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#&1$@S@Message_Msg#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void (const Message_Msg &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Original#1",
+      "nativeName": "Message_Msg::Original",
+      "signature": "Message_Msg::Original: const TCollection_ExtendedString &() const",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Set#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Set",
+      "signature": "Message_Msg::Set: void (const TCollection_ExtendedString &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Value#1",
+      "nativeName": "Message_Msg::Value",
+      "signature": "Message_Msg::Value: const TCollection_ExtendedString &() const",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const TCollection_AsciiString &, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const TCollection_AsciiString &, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@FirstLocationInSet#&1$@S@TCollection_ExtendedString#I#I#1",
+      "nativeName": "TCollection_ExtendedString::FirstLocationInSet",
+      "signature": "TCollection_ExtendedString::FirstLocationInSet: int (const TCollection_ExtendedString &, const int, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@FirstLocationNotInSet#&1$@S@TCollection_ExtendedString#I#I#1",
+      "nativeName": "TCollection_ExtendedString::FirstLocationNotInSet",
+      "signature": "TCollection_ExtendedString::FirstLocationNotInSet: int (const TCollection_ExtendedString &, const int, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Bounded initialized call-private SDK operation, exact copied outputs and optional completion."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@ConditionNumber#&1$@S@math_Matrix#",
+      "nativeName": "MathLin::ConditionNumber",
+      "signature": "MathLin::ConditionNumber: double (const math_Matrix &)",
+      "header": "MathLin_SVD.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Crout#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::Crout",
+      "signature": "MathLin::Crout: CroutResult (const math_Matrix &, double)",
+      "header": "MathLin_Crout.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Determinant#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::Determinant",
+      "signature": "MathLin::Determinant: LinearResult (const math_Matrix &, double)",
+      "header": "MathLin_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@EigenTridiagonal#&1$@S@math_VectorBase>#d#S0_#I#",
+      "nativeName": "MathLin::EigenTridiagonal",
+      "signature": "MathLin::EigenTridiagonal: EigenResult (const math_Vector &, const math_Vector &, int)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@EigenValues#&1$@S@math_Matrix#b#",
+      "nativeName": "MathLin::EigenValues",
+      "signature": "MathLin::EigenValues: EigenResult (const math_Matrix &, bool)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@GetEigenVector#&1$@N@MathLin@S@EigenResult#I#",
+      "nativeName": "MathLin::GetEigenVector",
+      "signature": "MathLin::GetEigenVector: math_Vector (const EigenResult &, int)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Invert#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::Invert",
+      "signature": "MathLin::Invert: InverseResult (const math_Matrix &, double)",
+      "header": "MathLin_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@InvertCrout#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::InvertCrout",
+      "signature": "MathLin::InvertCrout: InverseResult (const math_Matrix &, double)",
+      "header": "MathLin_Crout.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Jacobi#&1$@S@math_Matrix#b#",
+      "nativeName": "MathLin::Jacobi",
+      "signature": "MathLin::Jacobi: EigenResult (const math_Matrix &, bool)",
+      "header": "MathLin_Jacobi.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@LU#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::LU",
+      "signature": "MathLin::LU: LUResult (const math_Matrix &, double)",
+      "header": "MathLin_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@LeastSquares#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#$@N@MathLin@E@LeastSquaresMethod#d#",
+      "nativeName": "MathLin::LeastSquares",
+      "signature": "MathLin::LeastSquares: LeastSquaresResult (const math_Matrix &, const math_Vector &, LeastSquaresMethod, double)",
+      "header": "MathLin_LeastSquares.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@NumericalRank#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::NumericalRank",
+      "signature": "MathLin::NumericalRank: int (const math_Matrix &, double)",
+      "header": "MathLin_SVD.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@OptimalRegularization#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#d#I#",
+      "nativeName": "MathLin::OptimalRegularization",
+      "signature": "MathLin::OptimalRegularization: double (const math_Matrix &, const math_Vector &, double, double, int)",
+      "header": "MathLin_LeastSquares.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@PseudoInverse#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::PseudoInverse",
+      "signature": "MathLin::PseudoInverse: InverseResult (const math_Matrix &, double)",
+      "header": "MathLin_SVD.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@QR#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::QR",
+      "signature": "MathLin::QR: QRResult (const math_Matrix &, double)",
+      "header": "MathLin_Householder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@RegularizedLeastSquares#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#d#",
+      "nativeName": "MathLin::RegularizedLeastSquares",
+      "signature": "MathLin::RegularizedLeastSquares: LeastSquaresResult (const math_Matrix &, const math_Vector &, double, double)",
+      "header": "MathLin_LeastSquares.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SVD#&1$@S@math_Matrix#d#",
+      "nativeName": "MathLin::SVD",
+      "signature": "MathLin::SVD: SVDResult (const math_Matrix &, double)",
+      "header": "MathLin_SVD.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@Solve#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::Solve",
+      "signature": "MathLin::Solve: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "header": "MathLin_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveCrout#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::SolveCrout",
+      "signature": "MathLin::SolveCrout: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "header": "MathLin_Crout.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveMultiple#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "MathLin::SolveMultiple",
+      "signature": "MathLin::SolveMultiple: LinearMultipleResult (const math_Matrix &, const math_Matrix &, double)",
+      "header": "MathLin_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveQR#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::SolveQR",
+      "signature": "MathLin::SolveQR: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "header": "MathLin_Householder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveQRMultiple#&1$@S@math_Matrix#S0_#d#",
+      "nativeName": "MathLin::SolveQRMultiple",
+      "signature": "MathLin::SolveQRMultiple: LinearMultipleResult (const math_Matrix &, const math_Matrix &, double)",
+      "header": "MathLin_Householder.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@SolveSVD#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathLin::SolveSVD",
+      "signature": "MathLin::SolveSVD: LinearResult (const math_Matrix &, const math_Vector &, double)",
+      "header": "MathLin_SVD.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@F@WeightedLeastSquares#&1$@S@math_Matrix#&1$@S@math_VectorBase>#d#S2_#$@N@MathLin@E@LeastSquaresMethod#d#",
+      "nativeName": "MathLin::WeightedLeastSquares",
+      "signature": "MathLin::WeightedLeastSquares: LeastSquaresResult (const math_Matrix &, const math_Vector &, const math_Vector &, LeastSquaresMethod, double)",
+      "header": "MathLin_LeastSquares.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@N@Internal@F@ComputeWilkinsonShift#&1$@S@math_VectorBase>#d#S0_#I#I#",
+      "nativeName": "MathLin::Internal::ComputeWilkinsonShift",
+      "signature": "MathLin::Internal::ComputeWilkinsonShift: double (const math_Vector &, const math_Vector &, int, int)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@N@Internal@F@FindSubmatrixEnd#&1$@S@math_VectorBase>#d#S0_#I#I#",
+      "nativeName": "MathLin::Internal::FindSubmatrixEnd",
+      "signature": "MathLin::Internal::FindSubmatrixEnd: int (const math_Vector &, const math_Vector &, int, int)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@N@Internal@F@Hypot#d#d#",
+      "nativeName": "MathLin::Internal::Hypot",
+      "signature": "MathLin::Internal::Hypot: double (double, double)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathLin@N@Internal@F@PerformQLStep#&$@S@math_VectorBase>#d#S0_#&$@S@math_Matrix#I#I#d#I#",
+      "nativeName": "MathLin::Internal::PerformQLStep",
+      "signature": "MathLin::Internal::PerformQLStep: bool (math_Vector &, math_Vector &, math_Matrix &, int, int, double, int)",
+      "header": "MathLin_EigenSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@Clamp#d#d#d#",
+      "nativeName": "MathUtils::Clamp",
+      "signature": "MathUtils::Clamp: double (double, double, double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@ComputeScaleFactor#*1d#I#",
+      "nativeName": "MathUtils::ComputeScaleFactor",
+      "signature": "MathUtils::ComputeScaleFactor: double (const double *, int)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@Cube#d#",
+      "nativeName": "MathUtils::Cube",
+      "signature": "MathUtils::Cube: double (double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@CubeRoot#d#",
+      "nativeName": "MathUtils::CubeRoot",
+      "signature": "MathUtils::CubeRoot: double (double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@DepressCubic#d#d#d#&d#S0_#S0_#",
+      "nativeName": "MathUtils::DepressCubic",
+      "signature": "MathUtils::DepressCubic: void (double, double, double, double &, double &, double &)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@DepressQuartic#d#d#d#d#&d#S0_#S0_#S0_#",
+      "nativeName": "MathUtils::DepressQuartic",
+      "signature": "MathUtils::DepressQuartic: void (double, double, double, double, double &, double &, double &, double &)",
+      "header": "MathUtils_Poly.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@DotProduct#&1$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::DotProduct",
+      "signature": "MathUtils::DotProduct: double (const math_Vector &, const math_Vector &)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@EuclideanNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::EuclideanNorm",
+      "signature": "MathUtils::EuclideanNorm: double (const math_Vector &)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@GetGaussPointsAndWeights#I#&$@S@math_VectorBase>#d#S0_#",
+      "nativeName": "MathUtils::GetGaussPointsAndWeights",
+      "signature": "MathUtils::GetGaussPointsAndWeights: bool (int, math_Vector &, math_Vector &)",
+      "header": "MathUtils_Gauss.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@InfinityNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::InfinityNorm",
+      "signature": "MathUtils::InfinityNorm: double (const math_Vector &)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsConverged#d#d#d#&1$@N@MathUtils@S@Config#",
+      "nativeName": "MathUtils::IsConverged",
+      "signature": "MathUtils::IsConverged: bool (double, double, double, const Config &)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsEqual#d#d#d#",
+      "nativeName": "MathUtils::IsEqual",
+      "signature": "MathUtils::IsEqual: bool (double, double, double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsFConverged#d#d#",
+      "nativeName": "MathUtils::IsFConverged",
+      "signature": "MathUtils::IsFConverged: bool (double, double)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsFinite#d#",
+      "nativeName": "MathUtils::IsFinite",
+      "signature": "MathUtils::IsFinite: bool (double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsGradientConverged#&1$@S@math_VectorBase>#d#d#",
+      "nativeName": "MathUtils::IsGradientConverged",
+      "signature": "MathUtils::IsGradientConverged: bool (const math_Vector &, double)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsMinConverged#d#d#d#d#&1$@N@MathUtils@S@Config#",
+      "nativeName": "MathUtils::IsMinConverged",
+      "signature": "MathUtils::IsMinConverged: bool (double, double, double, double, const Config &)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsVectorConverged#&1$@S@math_VectorBase>#d#S0_#d#",
+      "nativeName": "MathUtils::IsVectorConverged",
+      "signature": "MathUtils::IsVectorConverged: bool (const math_Vector &, const math_Vector &, double)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsXConverged#d#d#d#",
+      "nativeName": "MathUtils::IsXConverged",
+      "signature": "MathUtils::IsXConverged: bool (double, double, double)",
+      "header": "MathUtils_Convergence.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@IsZero#d#d#",
+      "nativeName": "MathUtils::IsZero",
+      "signature": "MathUtils::IsZero: bool (double, double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@QuadraticInterpolation#d#d#d#d#",
+      "nativeName": "MathUtils::QuadraticInterpolation",
+      "signature": "MathUtils::QuadraticInterpolation: double (double, double, double, double)",
+      "header": "MathUtils_LineSearch.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@SafeDiv#d#d#d#",
+      "nativeName": "MathUtils::SafeDiv",
+      "signature": "MathUtils::SafeDiv: double (double, double, double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@Sign#d#",
+      "nativeName": "MathUtils::Sign",
+      "signature": "MathUtils::Sign: int (double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@SignTransfer#d#d#",
+      "nativeName": "MathUtils::SignTransfer",
+      "signature": "MathUtils::SignTransfer: double (double, double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@Sqr#d#",
+      "nativeName": "MathUtils::Sqr",
+      "signature": "MathUtils::Sqr: double (double)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@VectorInfNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::VectorInfNorm",
+      "signature": "MathUtils::VectorInfNorm: double (const math_Vector &)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@F@VectorNorm#&1$@S@math_VectorBase>#d#",
+      "nativeName": "MathUtils::VectorNorm",
+      "signature": "MathUtils::VectorNorm: double (const math_Vector &)",
+      "header": "MathUtils_Core.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@N@MathUtils@N@detail@F@Limited#d#&1$@N@MathUtils@S@MinBracketOptions#",
+      "nativeName": "MathUtils::detail::Limited",
+      "signature": "MathUtils::detail::Limited: double (double, const MinBracketOptions &)",
+      "header": "MathUtils_Bracket.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const occ::handle<TCollection_HAsciiString> &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@N@opencascade@S@handle>#$@S@TCollection_HExtendedString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const occ::handle<TCollection_HExtendedString> &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#&1$@S@TCollection_AsciiString#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const TCollection_AsciiString &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Arg#*1C#",
+      "nativeName": "Message_Msg::Arg",
+      "signature": "Message_Msg::Arg: Message_Msg &(const char *const)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void (const TCollection_ExtendedString &)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Message_Msg#*1C#",
+      "nativeName": "Message_Msg::Message_Msg",
+      "signature": "Message_Msg::Message_Msg: void (const char *const)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@Set#*1C#",
+      "nativeName": "Message_Msg::Set",
+      "signature": "Message_Msg::Set: void (const char *const)",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@Message_Msg@F@operator const TCollection_ExtendedString &#",
+      "nativeName": "Message_Msg::operator const TCollection_ExtendedString &",
+      "signature": "Message_Msg::operator const TCollection_ExtendedString &: const TCollection_ExtendedString &()",
+      "header": "Message_Msg.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#&1$@S@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const TCollection_ExtendedString &, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#I#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1W#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const wchar_t *)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#C#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#I#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#d#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const double)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#&1$@S@TCollection_ExtendedString#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const TCollection_ExtendedString &, const char) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1W#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const wchar_t *) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#C#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#I#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#d#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const double) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#I#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EmptyString#S",
+      "nativeName": "TCollection_AsciiString::EmptyString",
+      "signature": "TCollection_AsciiString::EmptyString: const TCollection_AsciiString &() noexcept",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EndsWith#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::EndsWith",
+      "signature": "TCollection_AsciiString::EndsWith: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@EndsWith#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::EndsWith",
+      "signature": "TCollection_AsciiString::EndsWith: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const std::string_view &, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationInSet#*1C#I#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationInSet",
+      "signature": "TCollection_AsciiString::FirstLocationInSet: int (const char *const, const int, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const std::string_view &, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@FirstLocationNotInSet#*1C#I#I#I#1",
+      "nativeName": "TCollection_AsciiString::FirstLocationNotInSet",
+      "signature": "TCollection_AsciiString::FirstLocationNotInSet: int (const char *const, const int, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@HashCode#1",
+      "nativeName": "TCollection_AsciiString::HashCode",
+      "signature": "TCollection_AsciiString::HashCode: size_t () const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#*1C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Insert#I#C#",
+      "nativeName": "TCollection_AsciiString::Insert",
+      "signature": "TCollection_AsciiString::Insert: void (const int, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#*1C#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertAfter#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::InsertAfter",
+      "signature": "TCollection_AsciiString::InsertAfter: void (const int, const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#*1C#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@InsertBefore#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::InsertBefore",
+      "signature": "TCollection_AsciiString::InsertBefore: void (const int, const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsDifferent#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsDifferent",
+      "signature": "TCollection_AsciiString::IsDifferent: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#*1C#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#&1$@S@TCollection_AsciiString#S0_#S",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsEqual#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsEqual",
+      "signature": "TCollection_AsciiString::IsEqual: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsGreater#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsGreater",
+      "signature": "TCollection_AsciiString::IsGreater: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#*1C#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsLess#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::IsLess",
+      "signature": "TCollection_AsciiString::IsLess: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#&1$@S@TCollection_AsciiString#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const std::string_view &, const TCollection_AsciiString &, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#S0_#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const std::string_view &, const std::string_view &, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@S@TCollection_AsciiString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const TCollection_AsciiString &, const std::string_view &, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#&1$@S@TCollection_AsciiString#*1C#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const TCollection_AsciiString &, const char *const, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#&1$@S@TCollection_AsciiString#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const TCollection_AsciiString &, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#I#S0_#I#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const int, const char *const, const int, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@IsSameString#*1C#S0_#b#S",
+      "nativeName": "TCollection_AsciiString::IsSameString",
+      "signature": "TCollection_AsciiString::IsSameString: bool (const char *const, const char *const, const bool)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Location#&1$@S@TCollection_AsciiString#I#I#1",
+      "nativeName": "TCollection_AsciiString::Location",
+      "signature": "TCollection_AsciiString::Location: int (const TCollection_AsciiString &, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Location#I#C#I#I#1",
+      "nativeName": "TCollection_AsciiString::Location",
+      "signature": "TCollection_AsciiString::Location: int (const int, const char, const int, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Move#&&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Move",
+      "signature": "TCollection_AsciiString::Move: void (TCollection_AsciiString &&)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Print#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Print",
+      "signature": "TCollection_AsciiString::Print: void (Standard_OStream &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Read#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::Read",
+      "signature": "TCollection_AsciiString::Read: void (Standard_IStream &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#*1C#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Search#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Search",
+      "signature": "TCollection_AsciiString::Search: int (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#*1C#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SearchFromEnd#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::SearchFromEnd",
+      "signature": "TCollection_AsciiString::SearchFromEnd: int (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#&1$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const TCollection_AsciiString &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#C#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const std::string_view &) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#*1C#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const char *const) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@StartsWith#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::StartsWith",
+      "signature": "TCollection_AsciiString::StartsWith: bool (const char *const, const int) const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Swap#&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::Swap",
+      "signature": "TCollection_AsciiString::Swap: void (TCollection_AsciiString &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&&$@S@TCollection_AsciiString#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (TCollection_AsciiString &&) noexcept",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@N@std@S@basic_string_view>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const std::string_view &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#*1C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_AsciiString#S0_#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_AsciiString &, const TCollection_AsciiString &)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#&1$@S@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const TCollection_ExtendedString &, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#I#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const, const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1W#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const wchar_t *)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#I#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const int)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#I#C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const int, const char)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#d#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const double)",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@operator basic_string_view#1",
+      "nativeName": "TCollection_AsciiString::operator basic_string_view",
+      "signature": "TCollection_AsciiString::operator basic_string_view: std::string_view () const",
+      "header": "TCollection_AsciiString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#&1$@N@std@S@basic_string_view>#q#$@N@std@S@char_traits>#q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const std::u16string_view &)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#C#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#I#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#d#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const double)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#q#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Capitalize#",
+      "nativeName": "TCollection_ExtendedString::Capitalize",
+      "signature": "TCollection_ExtendedString::Capitalize: void ()",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#C#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#I#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#d#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const double) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#q#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Center#I#q#",
+      "nativeName": "TCollection_ExtendedString::Center",
+      "signature": "TCollection_ExtendedString::Center: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ChangeAll#q#q#",
+      "nativeName": "TCollection_ExtendedString::ChangeAll",
+      "signature": "TCollection_ExtendedString::ChangeAll: void (const char16_t, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Clear#",
+      "nativeName": "TCollection_ExtendedString::Clear",
+      "signature": "TCollection_ExtendedString::Clear: void ()",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EmptyString#S",
+      "nativeName": "TCollection_ExtendedString::EmptyString",
+      "signature": "TCollection_ExtendedString::EmptyString: const TCollection_ExtendedString &() noexcept",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EndsWith#*1q#1",
+      "nativeName": "TCollection_ExtendedString::EndsWith",
+      "signature": "TCollection_ExtendedString::EndsWith: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@EndsWith#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::EndsWith",
+      "signature": "TCollection_ExtendedString::EndsWith: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@HashCode#1",
+      "nativeName": "TCollection_ExtendedString::HashCode",
+      "signature": "TCollection_ExtendedString::HashCode: size_t () const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#*1q#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Insert#I#q#",
+      "nativeName": "TCollection_ExtendedString::Insert",
+      "signature": "TCollection_ExtendedString::Insert: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsDifferent#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsDifferent",
+      "signature": "TCollection_ExtendedString::IsDifferent: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsDifferent#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsDifferent",
+      "signature": "TCollection_ExtendedString::IsDifferent: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#&1$@S@TCollection_ExtendedString#S0_#S",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsEqual#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsEqual",
+      "signature": "TCollection_ExtendedString::IsEqual: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsGreater#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsGreater",
+      "signature": "TCollection_ExtendedString::IsGreater: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsGreater#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsGreater",
+      "signature": "TCollection_ExtendedString::IsGreater: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsLess#*1q#1",
+      "nativeName": "TCollection_ExtendedString::IsLess",
+      "signature": "TCollection_ExtendedString::IsLess: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@IsLess#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::IsLess",
+      "signature": "TCollection_ExtendedString::IsLess: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LeftAdjust#",
+      "nativeName": "TCollection_ExtendedString::LeftAdjust",
+      "signature": "TCollection_ExtendedString::LeftAdjust: void ()",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LeftJustify#I#q#",
+      "nativeName": "TCollection_ExtendedString::LeftJustify",
+      "signature": "TCollection_ExtendedString::LeftJustify: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Move#&&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Move",
+      "signature": "TCollection_ExtendedString::Move: void (TCollection_ExtendedString &&)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Print#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "TCollection_ExtendedString::Print",
+      "signature": "TCollection_ExtendedString::Print: void (Standard_OStream &) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RemoveAll#q#",
+      "nativeName": "TCollection_ExtendedString::RemoveAll",
+      "signature": "TCollection_ExtendedString::RemoveAll: void (const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RightAdjust#",
+      "nativeName": "TCollection_ExtendedString::RightAdjust",
+      "signature": "TCollection_ExtendedString::RightAdjust: void ()",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RightJustify#I#q#",
+      "nativeName": "TCollection_ExtendedString::RightJustify",
+      "signature": "TCollection_ExtendedString::RightJustify: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Search#*1q#1",
+      "nativeName": "TCollection_ExtendedString::Search",
+      "signature": "TCollection_ExtendedString::Search: int (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Search#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Search",
+      "signature": "TCollection_ExtendedString::Search: int (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SearchFromEnd#*1q#1",
+      "nativeName": "TCollection_ExtendedString::SearchFromEnd",
+      "signature": "TCollection_ExtendedString::SearchFromEnd: int (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SearchFromEnd#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::SearchFromEnd",
+      "signature": "TCollection_ExtendedString::SearchFromEnd: int (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const TCollection_ExtendedString &)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#q#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@StartsWith#*1q#1",
+      "nativeName": "TCollection_ExtendedString::StartsWith",
+      "signature": "TCollection_ExtendedString::StartsWith: bool (const char16_t *const) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@StartsWith#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::StartsWith",
+      "signature": "TCollection_ExtendedString::StartsWith: bool (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Swap#&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::Swap",
+      "signature": "TCollection_ExtendedString::Swap: void (TCollection_ExtendedString &)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&&$@S@TCollection_ExtendedString#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (TCollection_ExtendedString &&) noexcept",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&1$@N@std@S@basic_string_view>#q#$@N@std@S@char_traits>#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const std::u16string_view &)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const TCollection_AsciiString &, const bool)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1W#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const wchar_t *)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t *const)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t *const, const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#C#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#I#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const int)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#I#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const int, const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#d#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const double)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#q#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t)",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToWideString#1",
+      "nativeName": "TCollection_ExtendedString::ToWideString",
+      "signature": "TCollection_ExtendedString::ToWideString: const wchar_t *() const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Token#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Token",
+      "signature": "TCollection_ExtendedString::Token: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@operator basic_string_view#1",
+      "nativeName": "TCollection_ExtendedString::operator basic_string_view",
+      "signature": "TCollection_ExtendedString::operator basic_string_view: std::u16string_view () const noexcept",
+      "header": "TCollection_ExtendedString.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Redundant AV/AL operation, internal helper, borrowed/mutable alias, global message lookup, unconstrained format or unaudited numerical workflow; not admitted."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const)",
+      "header": "TCollection_AsciiString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Length#1",
+      "nativeName": "TCollection_ExtendedString::Length",
+      "signature": "TCollection_ExtendedString::Length: int () const",
+      "header": "TCollection_ExtendedString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@LengthOfCString#1",
+      "nativeName": "TCollection_ExtendedString::LengthOfCString",
+      "signature": "TCollection_ExtendedString::LengthOfCString: int () const",
+      "header": "TCollection_ExtendedString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1C#b#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char *const, const bool)",
+      "header": "TCollection_ExtendedString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ToUTF8CString#&*C#1",
+      "nativeName": "TCollection_ExtendedString::ToUTF8CString",
+      "signature": "TCollection_ExtendedString::ToUTF8CString: int (Standard_PCharacter &) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Value#I#1",
+      "nativeName": "TCollection_ExtendedString::Value",
+      "signature": "TCollection_ExtendedString::Value: char16_t (const int) const",
+      "header": "TCollection_ExtendedString.hxx",
+      "guard": "AZInitializedCopiedDiagnostics",
+      "reason": "Actually called initialization, copying or private nested numerical prerequisite.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

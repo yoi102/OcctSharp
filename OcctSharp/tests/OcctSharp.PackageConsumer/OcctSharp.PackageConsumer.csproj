@@ -6,6 +6,28 @@
     <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.25</OcctSharpPackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="../Shared/BatchCEExchangeWorkflow.cs" Link="Shared/BatchCEExchangeWorkflow.cs" />
+    <None Include="../Fixtures/OwnedMeshResources/**/*" Link="Fixtures/OwnedMeshResources/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+
+    <Compile Include="../Shared/BatchCDStepWorkflow.cs" Link="Shared/BatchCDStepWorkflow.cs" />
+    <None Include="../Fixtures/ConfiguredStep/fidelity.json" Link="Fixtures/ConfiguredStep/fidelity.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Compile Include="../Shared/BatchCBDocumentWorkflow.cs" Link="Shared/BatchCBDocumentWorkflow.cs" />
+    <Compile Include="../Shared/BatchCCLocatedAssemblyWorkflow.cs" Link="Shared/BatchCCLocatedAssemblyWorkflow.cs" />
+    <Compile Include="../Shared/BatchCCRawAssemblyViewer.cs" Link="Shared/BatchCCRawAssemblyViewer.cs" />
+    <None Include="../Fixtures/LocatedAssembly/*" Link="Fixtures/LocatedAssembly/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Compile Include="../Shared/BatchCBRawDocumentViewer.cs" Link="Shared/BatchCBRawDocumentViewer.cs" />
+    <Compile Include="../Shared/BatchCAMeshWorkflow.cs" Link="Shared/BatchCAMeshWorkflow.cs" />
+    <Compile Include="../Shared/BatchCARawMeshViewer.cs" Link="Shared/BatchCARawMeshViewer.cs" />
+    <Compile Include="../Shared/BatchBZLocalFeatureWorkflow.cs" Link="Shared/BatchBZLocalFeatureWorkflow.cs" />
+    <Compile Include="../Shared/BatchBZRawTopologyViewer.cs" Link="Shared/BatchBZRawTopologyViewer.cs" />
+    <Compile Include="../Shared/BatchBYRawTopologyViewer.cs" Link="Shared/BatchBYRawTopologyViewer.cs" />
+    <Compile Include="../Shared/BatchBYBooleanRepairWorkflow.cs" Link="Shared/BatchBYBooleanRepairWorkflow.cs" />
+    <Compile Include="../Shared/BatchBTCoupledConstraintWorkflow.cs" Link="Shared/BatchBTCoupledConstraintWorkflow.cs" />
+    <Compile Include="../Shared/BatchBXRawTopologyViewer.cs" Link="Shared/BatchBXRawTopologyViewer.cs" />
+    <Compile Include="../Shared/BatchBXTypedTopologyWorkflow.cs" Link="Shared/BatchBXTypedTopologyWorkflow.cs" />
+    <Compile Include="../Shared/BatchBWNonuniformFittingWorkflow.cs" Link="Shared/BatchBWNonuniformFittingWorkflow.cs" />
+    <Compile Include="../Shared/BatchBVPeriodicProjectionWorkflow.cs" Link="Shared/BatchBVPeriodicProjectionWorkflow.cs" />
+    <Compile Include="../Shared/BatchBUUnitWorkflow.cs" Link="Shared/BatchBUUnitWorkflow.cs" />
     <PackageReference Include="OcctSharp" Version="$(OcctSharpPackageVersion)" />
     <Compile Include="../Shared/BatchXProjectionWorkflow.cs" Link="BatchXProjectionWorkflow.cs" />
     <Compile Include="../Shared/BatchYGeometryWorkflow.cs" Link="BatchYGeometryWorkflow.cs" />
@@ -13,6 +35,35 @@
     <Compile Include="../Shared/BatchAAReferenceWorkflow.cs" Link="BatchAAReferenceWorkflow.cs" />
     <Compile Include="../Shared/BatchABOwnedWorkflow.cs" Link="BatchABOwnedWorkflow.cs" />
     <Compile Include="../Shared/BatchACOwnedUtilityWorkflow.cs" Link="BatchACOwnedUtilityWorkflow.cs" />
+    <Compile Include="../Shared/BatchADOwnedDataWorkflow.cs" Link="BatchADOwnedDataWorkflow.cs" />
+    <Compile Include="../Shared/BatchAEExchangeScalarWorkflow.cs" Link="BatchAEExchangeScalarWorkflow.cs" />
+    <Compile Include="../Shared/BatchAFCopiedCollectionsWorkflow.cs" Link="BatchAFCopiedCollectionsWorkflow.cs" />
+    <Compile Include="../Shared/BatchAGSurfaceInterpolationWorkflow.cs" Link="BatchAGSurfaceInterpolationWorkflow.cs" />
+    <Compile Include="../Shared/BatchAHBulkAnalysisWorkflow.cs" Link="BatchAHBulkAnalysisWorkflow.cs" />
+    <Compile Include="../Shared/BatchAITopologyExchangeWorkflow.cs" Link="BatchAITopologyExchangeWorkflow.cs" />
+    <Compile Include="../Shared/BatchAJRepairWorkspaceWorkflow.cs" Link="BatchAJRepairWorkspaceWorkflow.cs" />
+    <Compile Include="../Shared/BatchAKTransferRecordsWorkflow.cs" Link="BatchAKTransferRecordsWorkflow.cs" />
+    <Compile Include="../Shared/BatchARMeshWorkflow.cs" Link="Shared/BatchARMeshWorkflow.cs" />
+    <Compile Include="../Shared/BatchASDocumentWorkflow.cs" Link="Shared/BatchASDocumentWorkflow.cs" />
+    <Compile Include="../Shared/BatchAUDesktopCapture.cs" Link="Shared/BatchAUDesktopCapture.cs" />
+    <Compile Include="../Shared/BatchAUVisibleWindow.cs" Link="Shared/BatchAUVisibleWindow.cs" />
+    <Compile Include="../Shared/BatchAUIntegratedWorkflow.cs" Link="Shared/BatchAUIntegratedWorkflow.cs" />
+    <Compile Include="../Shared/BatchAXMetadataWorkflow.cs" Link="Shared/BatchAXMetadataWorkflow.cs" />
+    <Compile Include="../Shared/BatchAYBoundaryWorkflow.cs" Link="Shared/BatchAYBoundaryWorkflow.cs" />
+    <Compile Include="../Shared/BatchAWGeometryWorkflow.cs" Link="Shared/BatchAWGeometryWorkflow.cs" />
+    <Compile Include="../Shared/BatchBAAssemblyWorkflow.cs" Link="Shared/BatchBAAssemblyWorkflow.cs" />
+    <Compile Include="../Shared/BatchBBSamplingWorkflow.cs" Link="Shared/BatchBBSamplingWorkflow.cs" />
+    <Compile Include="../Shared/BatchBCAssociationWorkflow.cs" Link="Shared/BatchBCAssociationWorkflow.cs" />
+    <Compile Include="../Shared/BatchBDExchangeWorkflow.cs" Link="Shared/BatchBDExchangeWorkflow.cs" />
+    <Compile Include="../Shared/BatchBEMeshWorkflow.cs" Link="Shared/BatchBEMeshWorkflow.cs" />
+    <Compile Include="../Shared/BatchAZDiagnosticWorkflow.cs" Link="Shared/BatchAZDiagnosticWorkflow.cs" />
+    <Compile Include="../Shared/BatchAVFoundationWorkflow.cs" Link="Shared/BatchAVFoundationWorkflow.cs" />
+    <Compile Include="../Shared/BatchATExchangeWorkflow.cs" Link="Shared/BatchATExchangeWorkflow.cs" />
+    <Compile Include="../Shared/BatchAQHatchingWorkflow.cs" Link="Shared/BatchAQHatchingWorkflow.cs" />
+    <Compile Include="../Shared/BatchAPModelingWorkflow.cs" Link="Shared/BatchAPModelingWorkflow.cs" />
+    <Compile Include="../Shared/BatchANWriterWorkflow.cs" Link="Shared/BatchANWriterWorkflow.cs" />
+    <Compile Include="../Shared/BatchAMSplineWorkflow.cs" Link="BatchAMSplineWorkflow.cs" />
+    <Compile Include="../Shared/BatchALNumericWorkflow.cs" Link="BatchALNumericWorkflow.cs" />
     <Compile Include="../Shared/BatchPSurfaceWorkflow.cs" Link="BatchPSurfaceWorkflow.cs" />
     <Compile Include="../Shared/BatchQRepairWorkflow.cs" Link="BatchQRepairWorkflow.cs" />
     <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
@@ -21,5 +72,23 @@
     <Compile Include="../Shared/BatchULocalFeatureWorkflow.cs" Link="BatchULocalFeatureWorkflow.cs" />
     <Compile Include="../Shared/BatchVRegionWorkflow.cs" Link="BatchVRegionWorkflow.cs" />
     <Compile Include="../Shared/BatchWReviewWorkflow.cs" Link="BatchWReviewWorkflow.cs" />
+      <Compile Include="../Shared/BatchBHIntersectionWorkflow.cs" Link="Shared/BatchBHIntersectionWorkflow.cs" />
+    <Compile Include="../Shared/BatchBGModelingWorkflow.cs" Link="Shared/BatchBGModelingWorkflow.cs" />
+    <Compile Include="../Shared/BatchBFNumericWorkflow.cs" Link="Shared/BatchBFNumericWorkflow.cs" />
+    <Compile Include="../Shared/BatchBICollectionWorkflow.cs" Link="Shared/BatchBICollectionWorkflow.cs" />
+    <Compile Include="../Shared/BatchBJLocalStepWorkflow.cs" Link="Shared/BatchBJLocalStepWorkflow.cs" />
+    <None Include="../Fixtures/LocalStep/*" Link="Fixtures/LocalStep/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Compile Include="../Shared/BatchBKConfiguredMeshWorkflow.cs" Link="Shared/BatchBKConfiguredMeshWorkflow.cs" />
+    <Compile Include="../Shared/BatchBKRawMeshViewer.cs" Link="Shared/BatchBKRawMeshViewer.cs" />
+    <Compile Include="../Shared/BatchBKWireChecks.cs" Link="Shared/BatchBKWireChecks.cs" />
+    <Compile Include="../Shared/BatchBLConstructionWorkflow.cs" Link="Shared/BatchBLConstructionWorkflow.cs" />
+    <Compile Include="../Shared/BatchBMFiniteExtremaWorkflow.cs" Link="Shared/BatchBMFiniteExtremaWorkflow.cs" />
+    <Compile Include="../Shared/BatchBNBoundedTextWorkflow.cs" Link="Shared/BatchBNBoundedTextWorkflow.cs" />
+    <Compile Include="../Shared/BatchBOMeshProximityWorkflow.cs" Link="Shared/BatchBOMeshProximityWorkflow.cs" />
+    <Compile Include="../Shared/BatchBPLocalExportWorkflow.cs" Link="Shared/BatchBPLocalExportWorkflow.cs" />
+    <Compile Include="../Shared/BatchBPRawSourceDocument.cs" Link="Shared/BatchBPRawSourceDocument.cs" />
+    <Compile Include="../Shared/BatchBQWholeRoundWorkflow.cs" Link="Shared/BatchBQWholeRoundWorkflow.cs" />
+    <Compile Include="../Shared/BatchBQRawAssemblyViewer.cs" Link="Shared/BatchBQRawAssemblyViewer.cs" />
+    <Compile Include="../Shared/BatchBRCompatibilityWorkflow.cs" Link="Shared/BatchBRCompatibilityWorkflow.cs" />
   </ItemGroup>
 </Project>

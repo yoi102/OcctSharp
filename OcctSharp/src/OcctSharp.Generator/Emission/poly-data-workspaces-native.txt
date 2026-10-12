@@ -1,0 +1,137 @@
+#include "../Foundation/OcctSharp.Foundation.CopiedSupport.Generated.hxx"
+#include "OcctSharp.MeshData.SharedHandles.Generated.h"
+#include <Poly_Triangulation.hxx>
+#include <Poly_ArrayOfNodes.hxx>
+#include <Poly_ArrayOfUVNodes.hxx>
+#include <Poly_Connect.hxx>
+#include <NCollection_HArray1.hxx>
+#include <Bnd_Box.hxx>
+#include <gp_Trsf.hxx>
+#include <array>
+#include <map>
+#include <set>
+using namespace OcctSharpCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_PolyTriangulationHandle* ValidatePolyTriangulation(const OcctSharp_PolyTriangulationHandle*);
+OcctSharp_PolyTriangulationHandle* AllocatePolyTriangulation(opencascade::handle<Poly_Triangulation>);
+}
+namespace {
+constexpr int PolyLimit=1048576;
+struct PolyDataOutput {
+ opencascade::handle<Poly_Triangulation> mesh;
+ std::array<int32_t,8> info{};
+ std::array<double,7> metadata{};
+ std::vector<double> vertices;
+ std::vector<int32_t> triangles,adjacency;
+ std::vector<std::vector<int32_t>> incident;
+};
+void PolyFinite(double value){Require(std::isfinite(value),"Nonfinite Poly channel or metadata.");}
+void PolyFloat(double value){PolyFinite(value);Require(std::abs(value)<=std::numeric_limits<float>::max(),"Poly float conversion overflows.");}
+bool PolyConnectivity(PolyDataOutput& out) {
+ const int nodes=out.info[0],triangles=out.info[1];
+ if(nodes==0||triangles==0){out.info[6]=1;return false;}
+ struct Use{int triangle,from,to;};std::map<std::pair<int,int>,std::vector<Use>> edges;
+ std::vector<std::set<int>> expected(nodes);
+ for(int t=0;t<triangles;++t){int a=out.triangles[t*3],b=out.triangles[t*3+1],c=out.triangles[t*3+2];
+  if(a==b||b==c||c==a){out.info[6]=2;return false;}
+  int v[]={a,b,c};for(int i=0;i<3;++i){expected[v[i]].insert(t);int n=v[(i+1)%3];edges[{std::min(v[i],n),std::max(v[i],n)}].push_back({t,v[i],n});}
+ }
+ for(const auto& entry:edges){const auto& uses=entry.second;if(uses.size()>2){out.info[6]=3;return false;}
+  if(uses.size()==2&&uses[0].from==uses[1].from){out.info[6]=4;return false;}}
+ Poly_Connect connect;connect.Load(out.mesh);
+ std::vector<int32_t> adjacency(triangles*6);std::vector<std::vector<int32_t>> incident(nodes);
+ for(int t=1;t<=triangles;++t){int a,b,c,x,y,z;connect.Triangles(t,a,b,c);connect.Nodes(t,x,y,z);
+  Require(a>=0&&a<=triangles&&b>=0&&b<=triangles&&c>=0&&c<=triangles,"Invalid native triangle adjacency.");
+  Require(x>=0&&x<=nodes&&y>=0&&y<=nodes&&z>=0&&z<=nodes,"Invalid native opposite node.");
+  int values[]={a-1,b-1,c-1,x-1,y-1,z-1};std::copy(values,values+6,adjacency.begin()+(t-1)*6);
+ }
+ for(int n=1;n<=nodes;++n){int seed=connect.Triangle(n);Require(seed>=0&&seed<=triangles,"Invalid native incident seed.");
+  if(expected[n-1].empty()){Require(seed==0,"Unexpected incident seed.");continue;}
+  Require(seed>0,"Missing native incident seed.");std::set<int> visited;connect.Initialize(n);
+  for(size_t step=0;connect.More();connect.Next(),++step){int t=connect.Value();Require(t>=1&&t<=triangles,"Invalid native incident triangle.");
+   if(step>=expected[n-1].size()||!visited.insert(t-1).second){out.info[6]=5;return false;}incident[n-1].push_back(t-1);}
+  if(visited!=expected[n-1]){out.info[6]=5;return false;}
+ }
+ out.adjacency=std::move(adjacency);out.incident=std::move(incident);return true;
+}
+std::shared_ptr<PolyDataOutput> PolyCapture(opencascade::handle<Poly_Triangulation> mesh) {
+ Require(!mesh.IsNull(),"Null Poly copy.");int nodes=mesh->NbNodes(),triangles=mesh->NbTriangles();
+ Require(nodes>=0&&triangles>=0&&int64_t(nodes)+triangles<=PolyLimit,"Excessive Poly counts.");
+ auto out=std::make_shared<PolyDataOutput>();out->mesh=mesh;
+ out->info={nodes,triangles,mesh->HasUVNodes(),mesh->HasNormals(),mesh->IsDoublePrecision(),static_cast<int32_t>(mesh->MeshPurpose()),0,0};
+ out->metadata[0]=mesh->Deflection();PolyFinite(out->metadata[0]);Require(out->metadata[0]>=0,"Negative Poly deflection.");
+ auto mappedNodes=mesh->MapNodeArray();auto mappedUv=mesh->MapUVNodeArray();auto mappedNormals=mesh->MapNormalArray();auto mappedTriangles=mesh->MapTriangleArray();
+ Require(nodes==0||(!mappedNodes.IsNull()&&mappedNodes->Length()==nodes),"Invalid mapped node count.");
+ Require(!out->info[2]||(!mappedUv.IsNull()&&mappedUv->Length()==nodes),"Invalid mapped UV count.");
+ Require(!out->info[3]||(!mappedNormals.IsNull()&&mappedNormals->Length()==nodes*3),"Invalid mapped normal count.");
+ Require(triangles==0||(!mappedTriangles.IsNull()&&mappedTriangles->Length()==triangles),"Invalid mapped triangle count.");
+ out->vertices.resize(nodes*8);
+ for(int n=0;n<nodes;++n){const auto& p=mappedNodes->Value(mappedNodes->Lower()+n);double values[8]={p.X(),p.Y(),p.Z(),0,0,0,0,0};
+  if(out->info[2]){const auto& uv=mappedUv->Value(mappedUv->Lower()+n);values[6]=uv.X();values[7]=uv.Y();}
+  if(out->info[3])for(int i=0;i<3;++i)values[3+i]=mappedNormals->Value(mappedNormals->Lower()+n*3+i);
+  for(double value:values)PolyFinite(value);std::copy(values,values+8,out->vertices.begin()+n*8);
+ }
+ out->triangles.resize(triangles*3);
+ for(int t=0;t<triangles;++t){int a,b,c;mappedTriangles->Value(mappedTriangles->Lower()+t).Get(a,b,c);
+  Require(a>=1&&a<=nodes&&b>=1&&b<=nodes&&c>=1&&c<=nodes,"Poly triangle index out of range.");
+  out->triangles[t*3]=a-1;out->triangles[t*3+1]=b-1;out->triangles[t*3+2]=c-1;}
+ mesh->SetCachedMinMax(Bnd_Box());Bnd_Box bounds;
+ if(mesh->MinMax(bounds,gp_Trsf(),true)&&!bounds.IsVoid()){
+  out->info[7]=1;bounds.Get(out->metadata[1],out->metadata[2],out->metadata[3],out->metadata[4],out->metadata[5],out->metadata[6]);
+  for(double value:out->metadata)PolyFinite(value);
+ }
+ PolyConnectivity(*out);return out;
+}
+}
+void OCCTSHARP_CALL occtsharp_polydata_release(void* token) { OcctSharpOwned::Release(token,typeid(PolyDataOutput)); }
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_create(const double* points,int32_t nodes,const int32_t* indices,int32_t triangles,const double* uv,const double* normals,int32_t useDouble,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(nodes>=0&&triangles>=0&&int64_t(nodes)+triangles<=PolyLimit&&(nodes==0||points)&&(triangles==0||indices)&&(useDouble==0||useDouble==1),"Invalid copied Poly inputs.");
+  for(int i=0;i<nodes*3;++i){PolyFinite(points[i]);if(!useDouble)PolyFloat(points[i]);if(normals)PolyFloat(normals[i]);}
+  if(uv)for(int i=0;i<nodes*2;++i){PolyFinite(uv[i]);if(!useDouble)PolyFloat(uv[i]);}
+  for(int i=0;i<triangles*3;++i)Require(indices[i]>=0&&indices[i]<nodes,"Invalid copied triangle index.");
+  Poly_ArrayOfNodes emptyNodes;Poly_ArrayOfUVNodes emptyUv;emptyNodes.SetDoublePrecision(useDouble!=0);emptyUv.SetDoublePrecision(useDouble!=0);
+  Require(emptyNodes.IsDoublePrecision()==(useDouble!=0)&&emptyUv.IsDoublePrecision()==(useDouble!=0),"Poly array precision mismatch.");
+  Poly_ArrayOfNodes doubleNodes(nodes>0?nodes:1);Poly_ArrayOfUVNodes doubleUv(nodes>0?nodes:1);
+  if(!useDouble&&nodes){emptyNodes.Resize(nodes,false);if(uv)emptyUv.Resize(nodes,false);}
+  NCollection_Array1<gp_Pnt> nodeValues(1,nodes>0?nodes:1);NCollection_Array1<gp_Pnt2d> uvValues(1,nodes>0?nodes:1);
+  for(int n=0;n<nodes;++n){gp_Pnt p(points[n*3],points[n*3+1],points[n*3+2]);doubleNodes.SetValue(n,p);if(!useDouble)emptyNodes.SetValue(n,p);
+   nodeValues.SetValue(n+1,useDouble?doubleNodes.Value(n):emptyNodes.Value(n));
+   if(uv){gp_Pnt2d v(uv[n*2],uv[n*2+1]);doubleUv.SetValue(n,v);if(!useDouble)emptyUv.SetValue(n,v);uvValues.SetValue(n+1,useDouble?doubleUv.Value(n):emptyUv.Value(n));}}
+  opencascade::handle<Poly_Triangulation> mesh;
+  if(nodes&&triangles){NCollection_Array1<Poly_Triangle> facets(1,triangles);for(int t=0;t<triangles;++t)facets.SetValue(t+1,Poly_Triangle(indices[t*3]+1,indices[t*3+1]+1,indices[t*3+2]+1));
+   mesh=uv?new Poly_Triangulation(nodeValues,uvValues,facets):new Poly_Triangulation(nodeValues,facets);}
+  else mesh=new Poly_Triangulation();
+  if(!useDouble||!triangles){opencascade::handle<Poly_Triangulation> converted=new Poly_Triangulation();converted->SetDoublePrecision(useDouble!=0);
+   if(nodes){converted->ResizeNodes(nodes,false);if(uv)converted->AddUVNodes();for(int n=0;n<nodes;++n){converted->SetNode(n+1,nodeValues.Value(n+1));if(uv)converted->SetUVNode(n+1,uvValues.Value(n+1));}}
+   if(triangles){converted->ResizeTriangles(triangles,false);for(int t=0;t<triangles;++t)converted->SetTriangle(t+1,Poly_Triangle(indices[t*3]+1,indices[t*3+1]+1,indices[t*3+2]+1));}mesh=converted;}
+  if(normals&&nodes){opencascade::handle<NCollection_HArray1<float>> values=new NCollection_HArray1<float>(1,nodes*3);for(int i=0;i<nodes*3;++i)values->SetValue(i+1,static_cast<float>(normals[i]));mesh->SetNormals(values);}
+  mesh->Deflection(0);mesh->SetMeshPurpose(Poly_MeshPurpose_NONE);auto output=PolyCapture(mesh);Publication<PolyDataOutput> publication(output);*result=publication.Commit();
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_copy(const void* source,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto original=OcctSharpGenerated::ValidatePolyTriangulation(static_cast<const OcctSharp_PolyTriangulationHandle*>(source))->Value;
+  Require(!original->HasDeferredData()||original->NbNodes()>0,"Materialize deferred Poly data before copying.");auto output=PolyCapture(original->Copy());Publication<PolyDataOutput> publication(output);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_info(const void* token,int32_t* info,int32_t capacity,double* values,int32_t valueCapacity) {
+ return Guard([&]{Require(info&&capacity>=8&&values&&valueCapacity>=7,"Insufficient Poly info buffer.");auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);std::copy(out->info.begin(),out->info.end(),info);std::copy(out->metadata.begin(),out->metadata.end(),values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_vertices(const void* token,double* values,int32_t capacity) {
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);Require(capacity>=0&&static_cast<size_t>(capacity)>=out->vertices.size()&&(values||out->vertices.empty()),"Insufficient Poly vertex buffer.");if(!out->vertices.empty())std::copy(out->vertices.begin(),out->vertices.end(),values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_triangles(const void* token,int32_t* values,int32_t capacity) {
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);Require(capacity>=0&&static_cast<size_t>(capacity)>=out->triangles.size()&&(values||out->triangles.empty()),"Insufficient Poly triangle buffer.");if(!out->triangles.empty())std::copy(out->triangles.begin(),out->triangles.end(),values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_adjacency(const void* token,int32_t* values,int32_t capacity) {
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);Require(out->info[6]==0&&capacity>=0&&static_cast<size_t>(capacity)>=out->adjacency.size()&&values,"Native Poly connectivity is unavailable or buffer is insufficient.");std::copy(out->adjacency.begin(),out->adjacency.end(),values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_incident(const void* token,int32_t node,int32_t* values,int32_t capacity,int32_t* count) {
+ if(!count)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*count=0;
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);Require(out->info[6]==0&&node>=0&&node<out->info[0],"Invalid or unavailable native incident query.");const auto& list=out->incident[node];
+  Require(capacity>=0&&((!values&&capacity==0)||(values&&static_cast<size_t>(capacity)>=list.size())),"Insufficient native incident buffer.");if(values)std::copy(list.begin(),list.end(),values);*count=static_cast<int32_t>(list.size());});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_polydata_triangulation(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto out=OcctSharpOwned::Lease<const PolyDataOutput>(token);*result=OcctSharpGenerated::AllocatePolyTriangulation(out->mesh->Copy());});
+}

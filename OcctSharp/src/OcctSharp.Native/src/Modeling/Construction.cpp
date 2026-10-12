@@ -1,3 +1,4 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 // Native Modeling/Construction implementation. Public contracts and ownership are unchanged.
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
@@ -5,7 +6,7 @@
 #include "Runtime/Shape.hxx"
 #include "Runtime/Validation.hxx"
 #include <BRepBuilderAPI_MakeEdge.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepBuilderAPI_MakePolygon.hxx>
 #include <BRepBuilderAPI_MakeWire.hxx>
 #include <BRepBuilderAPI_Sewing.hxx>
@@ -334,7 +335,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_pipe(
     ValidateUsableShape(profile);
     if (spine->Value.ShapeType() != TopAbs_WIRE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Pipe construction requires a wire spine.");
-    BRepOffsetAPI_MakePipe builder(TopoDS::Wire(spine->Value), profile->Value);
+    OcctSharpGenerated::LocalMakePipeBuilder builder(TopoDS::Wire(spine->Value), profile->Value);
     builder.Build();
     if (!builder.IsDone() || builder.Shape().IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT pipe construction did not complete.");
@@ -424,7 +425,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_planar_face(
     ValidateUsableShape(wire);
     if (wire->Value.ShapeType() != TopAbs_WIRE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Planar face construction requires a wire shape.");
-    BRepBuilderAPI_MakeFace builder(TopoDS::Wire(wire->Value));
+    OcctSharpGenerated::FaceBuilder builder(TopoDS::Wire(wire->Value));
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT planar face construction did not complete.");
     *out_shape = AllocateShape(builder.Shape());
   });

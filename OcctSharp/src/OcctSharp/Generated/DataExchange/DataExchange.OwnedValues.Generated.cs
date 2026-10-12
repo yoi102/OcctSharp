@@ -6,6 +6,172 @@ using OcctSharp.Generated;
 using OcctSharp.Interop;
 using OcctSharp.Values;
 namespace OcctSharp.OwnedValues;
+/// <summary>Owns a stable-address IGESConvGeom_GeomBuilder. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class IGESConvGeomGeomBuilder : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private IGESConvGeomGeomBuilder(OwnedHandle handle) => _handle = handle;
+  static IGESConvGeomGeomBuilder() => NativeLibraryResolver.EnsureRegistered(typeof(IGESConvGeomGeomBuilder).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static IGESConvGeomGeomBuilder FromNative(nint value) {
+    try { return new IGESConvGeomGeomBuilder(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@AddVec#&1$@S@gp_XYZ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_addvec_0")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_addvec_0(OwnedHandle receiver, global::OcctSharp.Values.Coordinates3d arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::AddVec. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddVec(global::OcctSharp.Values.Coordinates3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_addvec_0(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_addvec_0");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@AddXY#&1$@S@gp_XY#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_addxy_1")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_addxy_1(OwnedHandle receiver, global::OcctSharp.Values.Coordinates2d arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::AddXY. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddXY(global::OcctSharp.Values.Coordinates2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_addxy_1(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_addxy_1");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@AddXYZ#&1$@S@gp_XYZ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_addxyz_2")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_addxyz_2(OwnedHandle receiver, global::OcctSharp.Values.Coordinates3d arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::AddXYZ. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddXYZ(global::OcctSharp.Values.Coordinates3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_addxyz_2(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_addxyz_2");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@Clear#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_clear_3")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_clear_3(OwnedHandle receiver);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::Clear. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Clear() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_clear_3(NativeHandle), "occtsharp_owned_igesconvgeom_geombuilder_clear_3");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@EvalXYZ#&1$@S@gp_XYZ#&d#S2_#S2_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_evalxyz_4")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_evalxyz_4(OwnedHandle receiver, global::OcctSharp.Values.Coordinates3d arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, double arg3, out double updatedArg3);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::EvalXYZ. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void EvalXYZ(global::OcctSharp.Values.Coordinates3d arg0, ref double arg1, ref double arg2, ref double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_evalxyz_4(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out double updatedArg3), "occtsharp_owned_igesconvgeom_geombuilder_evalxyz_4");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@IGESConvGeom_GeomBuilder#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_create_5")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_create_5(out nint result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::IGESConvGeom_GeomBuilder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESConvGeomGeomBuilder Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_create_5(out nint result), "occtsharp_owned_igesconvgeom_geombuilder_create_5");
+    var managedResult = IGESConvGeomGeomBuilder.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@IsIdentity#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_isidentity_6")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_isidentity_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::IsIdentity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsIdentity() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_isidentity_6(NativeHandle, out int result), "occtsharp_owned_igesconvgeom_geombuilder_isidentity_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@IsTranslation#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_istranslation_7")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_istranslation_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::IsTranslation. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTranslation() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_istranslation_7(NativeHandle, out int result), "occtsharp_owned_igesconvgeom_geombuilder_istranslation_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@IsZOnly#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_iszonly_8")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_iszonly_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::IsZOnly. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsZOnly() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_iszonly_8(NativeHandle, out int result), "occtsharp_owned_igesconvgeom_geombuilder_iszonly_8");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@MakeCopiousData#I#b#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9(OwnedHandle receiver, int arg0, int arg1, out nint result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::MakeCopiousData. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public IGESGeomCopiousData? MakeCopiousData(int arg0, bool arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9(NativeHandle, arg0, (arg1 ? 1 : 0), out nint result), "occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9");
+    var managedResult = IGESGeomCopiousData.FromNative(result, "occtsharp_owned_igesconvgeom_geombuilder_makecopiousdata_9");
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@MakeTransformation#d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10(OwnedHandle receiver, double arg0, out nint result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::MakeTransformation. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public IGESGeomTransformationMatrix? MakeTransformation(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10(NativeHandle, arg0, out nint result), "occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10");
+    var managedResult = IGESGeomTransformationMatrix.FromNative(result, "occtsharp_owned_igesconvgeom_geombuilder_maketransformation_10");
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@NbPoints#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_nbpoints_11")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_nbpoints_11(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::NbPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_nbpoints_11(NativeHandle, out int result), "occtsharp_owned_igesconvgeom_geombuilder_nbpoints_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@Point#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_point_12")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_point_12(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Coordinates3d result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::Point. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Coordinates3d Point(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_point_12(NativeHandle, arg0, out global::OcctSharp.Values.Coordinates3d result), "occtsharp_owned_igesconvgeom_geombuilder_point_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@Position#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_position_13")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_position_13(OwnedHandle receiver, out global::OcctSharp.Values.Transform3d result);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::Position. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Transform3d Position() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_position_13(NativeHandle, out global::OcctSharp.Values.Transform3d result), "occtsharp_owned_igesconvgeom_geombuilder_position_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax1#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_setposition_14")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_14(OwnedHandle receiver, global::OcctSharp.Values.Axis1 arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(global::OcctSharp.Values.Axis1 arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_14(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_setposition_14");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax2#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_setposition_15")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_15(OwnedHandle receiver, global::OcctSharp.Values.Axis2 arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(global::OcctSharp.Values.Axis2 arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_15(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_setposition_15");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Ax3#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_setposition_16")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_16(OwnedHandle receiver, global::OcctSharp.Values.Axis3 arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(global::OcctSharp.Values.Axis3 arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_16(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_setposition_16");
+  }
+  // Source: c:@S@IGESConvGeom_GeomBuilder@F@SetPosition#&1$@S@gp_Trsf#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesconvgeom_geombuilder_setposition_17")]
+  private static partial NativeStatus Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_17(OwnedHandle receiver, global::OcctSharp.Values.Transform3d arg0);
+  /// <summary>Invokes IGESConvGeom_GeomBuilder::SetPosition. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPosition(global::OcctSharp.Values.Transform3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesconvgeom_geombuilder_setposition_17(NativeHandle, arg0), "occtsharp_owned_igesconvgeom_geombuilder_setposition_17");
+  }
+}
 /// <summary>Owns a stable-address IGESData_DefSwitch. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class IGESDataDefSwitch : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -69,6 +235,437 @@ public sealed partial class IGESDataDefSwitch : IDisposable {
   /// <summary>Invokes IGESData_DefSwitch::Value. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
   public int Value() {
     NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_defswitch_value_5(NativeHandle, out int result), "occtsharp_owned_igesdata_defswitch_value_5");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address IGESData_DirChecker. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class IGESDataDirChecker : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private IGESDataDirChecker(OwnedHandle handle) => _handle = handle;
+  static IGESDataDirChecker() => NativeLibraryResolver.EnsureRegistered(typeof(IGESDataDirChecker).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static IGESDataDirChecker FromNative(nint value) {
+    try { return new IGESDataDirChecker(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@IGESData_DirChecker@F@BlankStatusIgnored#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_blankstatusignored_0")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_blankstatusignored_0(OwnedHandle receiver);
+  /// <summary>Invokes IGESData_DirChecker::BlankStatusIgnored. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void BlankStatusIgnored() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_blankstatusignored_0(NativeHandle), "occtsharp_owned_igesdata_dirchecker_blankstatusignored_0");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@BlankStatusRequired#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_blankstatusrequired_1")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_blankstatusrequired_1(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::BlankStatusRequired. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void BlankStatusRequired(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_blankstatusrequired_1(NativeHandle, arg0), "occtsharp_owned_igesdata_dirchecker_blankstatusrequired_1");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@Color#$@E@IGESData_DefType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_color_2")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_color_2(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::Color. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Color(IGESDataDefType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_color_2(NativeHandle, (int)arg0), "occtsharp_owned_igesdata_dirchecker_color_2");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@Correct#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_correct_3")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_correct_3(OwnedHandle receiver, IGESDataIGESEntityHandle arg0, out int result);
+  /// <summary>Invokes IGESData_DirChecker::Correct. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Correct(IGESDataIGESEntity arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_correct_3(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_igesdata_dirchecker_correct_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_DirChecker@F@GraphicsIgnored#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_graphicsignored_4")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_graphicsignored_4(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::GraphicsIgnored. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void GraphicsIgnored(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_graphicsignored_4(NativeHandle, arg0), "occtsharp_owned_igesdata_dirchecker_graphicsignored_4");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@HierarchyStatusIgnored#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_hierarchystatusignored_5")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_hierarchystatusignored_5(OwnedHandle receiver);
+  /// <summary>Invokes IGESData_DirChecker::HierarchyStatusIgnored. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void HierarchyStatusIgnored() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_hierarchystatusignored_5(NativeHandle), "occtsharp_owned_igesdata_dirchecker_hierarchystatusignored_5");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@HierarchyStatusRequired#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_hierarchystatusrequired_6")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_hierarchystatusrequired_6(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::HierarchyStatusRequired. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void HierarchyStatusRequired(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_hierarchystatusrequired_6(NativeHandle, arg0), "occtsharp_owned_igesdata_dirchecker_hierarchystatusrequired_6");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_create_7")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_create_7(out nint result);
+  /// <summary>Invokes IGESData_DirChecker::IGESData_DirChecker. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESDataDirChecker Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_create_7(out nint result), "occtsharp_owned_igesdata_dirchecker_create_7");
+    var managedResult = IGESDataDirChecker.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_create_8")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_create_8(int arg0, out nint result);
+  /// <summary>Invokes IGESData_DirChecker::IGESData_DirChecker. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESDataDirChecker Create(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_create_8(arg0, out nint result), "occtsharp_owned_igesdata_dirchecker_create_8");
+    var managedResult = IGESDataDirChecker.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_create_9")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_create_9(int arg0, int arg1, out nint result);
+  /// <summary>Invokes IGESData_DirChecker::IGESData_DirChecker. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESDataDirChecker Create(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_create_9(arg0, arg1, out nint result), "occtsharp_owned_igesdata_dirchecker_create_9");
+    var managedResult = IGESDataDirChecker.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_DirChecker@F@IGESData_DirChecker#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_create_10")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_create_10(int arg0, int arg1, int arg2, out nint result);
+  /// <summary>Invokes IGESData_DirChecker::IGESData_DirChecker. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESDataDirChecker Create(int arg0, int arg1, int arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_create_10(arg0, arg1, arg2, out nint result), "occtsharp_owned_igesdata_dirchecker_create_10");
+    var managedResult = IGESDataDirChecker.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_DirChecker@F@LineFont#$@E@IGESData_DefType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_linefont_11")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_linefont_11(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::LineFont. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void LineFont(IGESDataDefType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_linefont_11(NativeHandle, (int)arg0), "occtsharp_owned_igesdata_dirchecker_linefont_11");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@LineWeight#$@E@IGESData_DefType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_lineweight_12")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_lineweight_12(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::LineWeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void LineWeight(IGESDataDefType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_lineweight_12(NativeHandle, (int)arg0), "occtsharp_owned_igesdata_dirchecker_lineweight_12");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@SetDefault#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_setdefault_13")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_setdefault_13(OwnedHandle receiver);
+  /// <summary>Invokes IGESData_DirChecker::SetDefault. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDefault() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_setdefault_13(NativeHandle), "occtsharp_owned_igesdata_dirchecker_setdefault_13");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@Structure#$@E@IGESData_DefType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_structure_14")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_structure_14(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::Structure. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Structure(IGESDataDefType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_structure_14(NativeHandle, (int)arg0), "occtsharp_owned_igesdata_dirchecker_structure_14");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@SubordinateStatusIgnored#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_subordinatestatusignored_15")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_subordinatestatusignored_15(OwnedHandle receiver);
+  /// <summary>Invokes IGESData_DirChecker::SubordinateStatusIgnored. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SubordinateStatusIgnored() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_subordinatestatusignored_15(NativeHandle), "occtsharp_owned_igesdata_dirchecker_subordinatestatusignored_15");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@SubordinateStatusRequired#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_subordinatestatusrequired_16")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_subordinatestatusrequired_16(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::SubordinateStatusRequired. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SubordinateStatusRequired(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_subordinatestatusrequired_16(NativeHandle, arg0), "occtsharp_owned_igesdata_dirchecker_subordinatestatusrequired_16");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@UseFlagIgnored#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_useflagignored_17")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_useflagignored_17(OwnedHandle receiver);
+  /// <summary>Invokes IGESData_DirChecker::UseFlagIgnored. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UseFlagIgnored() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_useflagignored_17(NativeHandle), "occtsharp_owned_igesdata_dirchecker_useflagignored_17");
+  }
+  // Source: c:@S@IGESData_DirChecker@F@UseFlagRequired#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_dirchecker_useflagrequired_18")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_dirchecker_useflagrequired_18(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_DirChecker::UseFlagRequired. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UseFlagRequired(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_dirchecker_useflagrequired_18(NativeHandle, arg0), "occtsharp_owned_igesdata_dirchecker_useflagrequired_18");
+  }
+}
+/// <summary>Owns a stable-address IGESData_GlobalSection. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class IGESDataGlobalSection : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private IGESDataGlobalSection(OwnedHandle handle) => _handle = handle;
+  static IGESDataGlobalSection() => NativeLibraryResolver.EnsureRegistered(typeof(IGESDataGlobalSection).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static IGESDataGlobalSection FromNative(nint value) {
+    try { return new IGESDataGlobalSection(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@IGESData_GlobalSection@F@CascadeUnit#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_cascadeunit_0")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_cascadeunit_0(OwnedHandle receiver, out double result);
+  /// <summary>Invokes IGESData_GlobalSection::CascadeUnit. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double CascadeUnit() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_cascadeunit_0(NativeHandle, out double result), "occtsharp_owned_igesdata_globalsection_cascadeunit_0");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@DraftingStandard#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_draftingstandard_1")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_draftingstandard_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::DraftingStandard. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int DraftingStandard() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_draftingstandard_1(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_draftingstandard_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@HasMaxCoord#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_hasmaxcoord_2")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_hasmaxcoord_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::HasMaxCoord. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasMaxCoord() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_hasmaxcoord_2(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_hasmaxcoord_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@IGESData_GlobalSection#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_create_3(out nint result);
+  /// <summary>Invokes IGESData_GlobalSection::IGESData_GlobalSection. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static IGESDataGlobalSection Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_create_3(out nint result), "occtsharp_owned_igesdata_globalsection_create_3");
+    var managedResult = IGESDataGlobalSection.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@IGESVersion#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_igesversion_4")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_igesversion_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::IGESVersion. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int IGESVersion() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_igesversion_4(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_igesversion_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@IntegerBits#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_integerbits_5")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_integerbits_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::IntegerBits. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int IntegerBits() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_integerbits_5(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_integerbits_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@LineWeightGrad#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_lineweightgrad_6")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_lineweightgrad_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::LineWeightGrad. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int LineWeightGrad() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_lineweightgrad_6(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_lineweightgrad_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxCoord#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxcoord_7")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxcoord_7(OwnedHandle receiver, out double result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxCoord. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxCoord() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxcoord_7(NativeHandle, out double result), "occtsharp_owned_igesdata_globalsection_maxcoord_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxDigitsDouble#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxdigitsdouble_8")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxdigitsdouble_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxDigitsDouble. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MaxDigitsDouble() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxdigitsdouble_8(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_maxdigitsdouble_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxDigitsSingle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxdigitssingle_9")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxdigitssingle_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxDigitsSingle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MaxDigitsSingle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxdigitssingle_9(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_maxdigitssingle_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxLineWeight#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxlineweight_10")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxlineweight_10(OwnedHandle receiver, out double result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxLineWeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxLineWeight() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxlineweight_10(NativeHandle, out double result), "occtsharp_owned_igesdata_globalsection_maxlineweight_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxMaxCoord#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxmaxcoord_11")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxmaxcoord_11(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::MaxMaxCoord. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void MaxMaxCoord(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxmaxcoord_11(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_maxmaxcoord_11");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxPower10Double#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxpower10double_12")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxpower10double_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxPower10Double. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MaxPower10Double() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxpower10double_12(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_maxpower10double_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@MaxPower10Single#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_maxpower10single_13")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_maxpower10single_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::MaxPower10Single. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MaxPower10Single() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_maxpower10single_13(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_maxpower10single_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@Resolution#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_resolution_14")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_resolution_14(OwnedHandle receiver, out double result);
+  /// <summary>Invokes IGESData_GlobalSection::Resolution. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Resolution() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_resolution_14(NativeHandle, out double result), "occtsharp_owned_igesdata_globalsection_resolution_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@Scale#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_scale_15")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_scale_15(OwnedHandle receiver, out double result);
+  /// <summary>Invokes IGESData_GlobalSection::Scale. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Scale() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_scale_15(NativeHandle, out double result), "occtsharp_owned_igesdata_globalsection_scale_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetCascadeUnit#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setcascadeunit_16")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setcascadeunit_16(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetCascadeUnit. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetCascadeUnit(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setcascadeunit_16(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setcascadeunit_16");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetDraftingStandard#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setdraftingstandard_17")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setdraftingstandard_17(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetDraftingStandard. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDraftingStandard(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setdraftingstandard_17(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setdraftingstandard_17");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetIGESVersion#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setigesversion_18")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setigesversion_18(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetIGESVersion. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetIGESVersion(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setigesversion_18(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setigesversion_18");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetIntegerBits#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setintegerbits_19")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setintegerbits_19(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetIntegerBits. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetIntegerBits(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setintegerbits_19(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setintegerbits_19");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetLineWeightGrad#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setlineweightgrad_20")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setlineweightgrad_20(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetLineWeightGrad. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetLineWeightGrad(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setlineweightgrad_20(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setlineweightgrad_20");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxCoord#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxcoord_21")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxcoord_21(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxCoord. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxCoord(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxcoord_21(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxcoord_21");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxDigitsDouble#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxdigitsdouble_22")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxdigitsdouble_22(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxDigitsDouble. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxDigitsDouble(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxdigitsdouble_22(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxdigitsdouble_22");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxDigitsSingle#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxdigitssingle_23")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxdigitssingle_23(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxDigitsSingle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxDigitsSingle(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxdigitssingle_23(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxdigitssingle_23");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxLineWeight#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxlineweight_24")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxlineweight_24(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxLineWeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxLineWeight(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxlineweight_24(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxlineweight_24");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxPower10Double#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxpower10double_25")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxpower10double_25(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxPower10Double. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxPower10Double(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxpower10double_25(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxpower10double_25");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetMaxPower10Single#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setmaxpower10single_26")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setmaxpower10single_26(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetMaxPower10Single. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxPower10Single(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setmaxpower10single_26(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setmaxpower10single_26");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetResolution#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setresolution_27")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setresolution_27(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetResolution. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetResolution(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setresolution_27(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setresolution_27");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetScale#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setscale_28")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setscale_28(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetScale. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetScale(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setscale_28(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setscale_28");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@SetUnitFlag#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_setunitflag_29")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_setunitflag_29(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes IGESData_GlobalSection::SetUnitFlag. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetUnitFlag(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_setunitflag_29(NativeHandle, arg0), "occtsharp_owned_igesdata_globalsection_setunitflag_29");
+  }
+  // Source: c:@S@IGESData_GlobalSection@F@UnitFlag#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_igesdata_globalsection_unitflag_30")]
+  private static partial NativeStatus Native_occtsharp_owned_igesdata_globalsection_unitflag_30(OwnedHandle receiver, out int result);
+  /// <summary>Invokes IGESData_GlobalSection::UnitFlag. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UnitFlag() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_igesdata_globalsection_unitflag_30(NativeHandle, out int result), "occtsharp_owned_igesdata_globalsection_unitflag_30");
     var managedResult = result;
     return managedResult;
   }
@@ -7100,6 +7697,141 @@ public sealed partial class StepBasicUnit : IDisposable {
   public void SetValue(StepBasicNamedUnit arg0) {
     ArgumentNullException.ThrowIfNull(arg0);
     NativeError.ThrowIfFailed(Native_occtsharp_owned_stepbasic_unit_setvalue_12(NativeHandle, arg0.NativeHandle), "occtsharp_owned_stepbasic_unit_setvalue_12");
+  }
+}
+/// <summary>Owns a stable-address StepData_Field. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class StepDataField : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private StepDataField(OwnedHandle handle) => _handle = handle;
+  static StepDataField() => NativeLibraryResolver.EnsureRegistered(typeof(StepDataField).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static StepDataField FromNative(nint value) {
+    try { return new StepDataField(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@StepData_Field@F@Arity#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_arity_0")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_arity_0(OwnedHandle receiver, out int result);
+  /// <summary>Invokes StepData_Field::Arity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Arity() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_arity_0(NativeHandle, out int result), "occtsharp_owned_stepdata_field_arity_0");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Boolean#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_boolean_1")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_boolean_1(OwnedHandle receiver, int arg0, int arg1, out int result);
+  /// <summary>Invokes StepData_Field::Boolean. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Boolean(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_boolean_1(NativeHandle, arg0, arg1, out int result), "occtsharp_owned_stepdata_field_boolean_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Int#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_int_2")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_int_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes StepData_Field::Int. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Int() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_int_2(NativeHandle, out int result), "occtsharp_owned_stepdata_field_int_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Integer#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_integer_3")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_integer_3(OwnedHandle receiver, int arg0, int arg1, out int result);
+  /// <summary>Invokes StepData_Field::Integer. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Integer(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_integer_3(NativeHandle, arg0, arg1, out int result), "occtsharp_owned_stepdata_field_integer_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Kind#b#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_kind_4")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_kind_4(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes StepData_Field::Kind. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Kind(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_kind_4(NativeHandle, (arg0 ? 1 : 0), out int result), "occtsharp_owned_stepdata_field_kind_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Length#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_length_5")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_length_5(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes StepData_Field::Length. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Length(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_length_5(NativeHandle, arg0, out int result), "occtsharp_owned_stepdata_field_length_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Lower#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_lower_6")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_lower_6(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes StepData_Field::Lower. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Lower(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_lower_6(NativeHandle, arg0, out int result), "occtsharp_owned_stepdata_field_lower_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@Real#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_real_7")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_real_7(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes StepData_Field::Real. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Real(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_real_7(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_stepdata_field_real_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@StepData_Field@F@SetBoolean#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_setboolean_8")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_setboolean_8(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes StepData_Field::SetBoolean. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetBoolean(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_setboolean_8(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_stepdata_field_setboolean_8");
+  }
+  // Source: c:@S@StepData_Field@F@SetDerived#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_setderived_9")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_setderived_9(OwnedHandle receiver);
+  /// <summary>Invokes StepData_Field::SetDerived. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDerived() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_setderived_9(NativeHandle), "occtsharp_owned_stepdata_field_setderived_9");
+  }
+  // Source: c:@S@StepData_Field@F@SetInt#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_setint_10")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_setint_10(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes StepData_Field::SetInt. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetInt(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_setint_10(NativeHandle, arg0), "occtsharp_owned_stepdata_field_setint_10");
+  }
+  // Source: c:@S@StepData_Field@F@SetInteger#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_setinteger_11")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_setinteger_11(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes StepData_Field::SetInteger. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetInteger(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_setinteger_11(NativeHandle, arg0), "occtsharp_owned_stepdata_field_setinteger_11");
+  }
+  // Source: c:@S@StepData_Field@F@SetReal#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_setreal_12")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_setreal_12(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes StepData_Field::SetReal. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetReal(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_setreal_12(NativeHandle, arg0), "occtsharp_owned_stepdata_field_setreal_12");
+  }
+  // Source: c:@S@StepData_Field@F@StepData_Field#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_stepdata_field_create_13")]
+  private static partial NativeStatus Native_occtsharp_owned_stepdata_field_create_13(out nint result);
+  /// <summary>Invokes StepData_Field::StepData_Field. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static StepDataField Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_stepdata_field_create_13(out nint result), "occtsharp_owned_stepdata_field_create_13");
+    var managedResult = StepDataField.FromNative(result);
+    return managedResult;
   }
 }
 /// <summary>Owns a stable-address StepDimTol_DatumOrCommonDatum. Synchronize mutation with other calls; dispose to release native storage.</summary>

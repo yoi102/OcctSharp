@@ -1,3 +1,5 @@
+#include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 #include "OcctSharp.Native.Repair.h"
 #include "Documents/Lifecycle.hxx"
 #include "Runtime/Error.hxx"
@@ -28,12 +30,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_xde_subshape_label(
   return Guard([&] {
     ValidateOcafDocument(document); RequireOpenOcafCommand(document);
     auto definition = ResolveOcafLabel(document, definition_entry);
-    RequirePublication(XCAFDoc_ShapeTool::IsSimpleShape(definition), "Subshape metadata requires a simple definition.");
+    RequirePublication(OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsSimpleShape(definition), "Subshape metadata requires a simple definition.");
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> map;
-    TopExp::MapShapes(XCAFDoc_ShapeTool::GetShape(definition), map);
+    TopExp::MapShapes(OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(definition), map);
     RequirePublication(index > 0 && index < map.Extent(), "Subshape metadata index is outside the definition.");
-    auto label = GetXdeShapeTool(document)->AddSubShape(definition, map(index + 1));
-    RequirePublication(!label.IsNull(), "XDE rejected the subshape metadata label.");
+    auto label = OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_AddSubShape_Bind(*(GetXdeShapeTool(document)))(definition, map(index + 1));
+    RequirePublication(!OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label), "XDE rejected the subshape metadata label.");
     CopyLabelEntry(label, entry, capacity, written);
   });
 }
@@ -46,9 +48,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_xde_apply(
     RequirePublication(history_count >= 0 && (history_count == 0 || history) && capacity >= 0
       && conflict_count && mapped_count && occurrence_count && (apply == 0 || apply == 1), "Invalid repair publication buffers.");
     auto tool = GetXdeShapeTool(document); auto definition = ResolveOcafLabel(document, definition_entry);
-    RequirePublication(XCAFDoc_ShapeTool::IsSimpleShape(definition) && !XCAFDoc_ShapeTool::IsReference(definition),
+    RequirePublication(OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsSimpleShape(definition) && !OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_IsReference(definition),
       "Repair publication requires a reusable simple definition, not an occurrence or assembly.");
-    auto original = XCAFDoc_ShapeTool::GetShape(definition);
+    auto original = OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(definition);
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> before, after;
     TopExp::MapShapes(original, before); TopExp::MapShapes(candidate->Value, after);
     std::map<int, std::set<int>> targets;
@@ -62,12 +64,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_xde_apply(
       else targets[relation.source_index].insert(relation.result_index);
     }
     NCollection_Sequence<TDF_Label> children, users;
-    XCAFDoc_ShapeTool::GetSubShapes(definition, children);
-    *occurrence_count = XCAFDoc_ShapeTool::GetUsers(definition, users, false);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetSubShapes(definition, children);
+    *occurrence_count = OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetUsers(definition, users, false);
     std::vector<LabelMapping> mappings; std::set<int> rejected;
     std::map<int, std::vector<int>> reverse;
     for (const auto& child : children) {
-      auto oldShape = XCAFDoc_ShapeTool::GetShape(child); int sourceIndex = before.FindIndex(oldShape) - 1;
+      auto oldShape = OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_GetShape(child); int sourceIndex = before.FindIndex(oldShape) - 1;
       if (sourceIndex < 0 || uncertain.contains(sourceIndex) || targets[sourceIndex].size() != 1) {
         rejected.insert(sourceIndex); continue;
       }
@@ -88,9 +90,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_xde_apply(
     RequirePublication(rejected.empty(), "Ambiguous, deleted or merged metadata prevents atomic repair publication.");
     // Keep label identities, names and color/style assignments on each unambiguous
     // mapped label. Only its TNaming topology changes, within the caller's transaction.
-    tool->SetShape(definition, candidate->Value);
+    OcctSharpGenerated::XdeAdapters::XCAFDoc_ShapeTool_SetShape_Bind(*(tool))(definition, candidate->Value);
     for (const auto& mapping : mappings) {
-      TNaming_Builder naming(mapping.Label); naming.Modify(mapping.Before, mapping.After);
+      OcctSharpGenerated::DocumentAdapters::PrivateTNamingBuilder naming(mapping.Label); OcctSharpGenerated::DocumentAdapters::TNaming_Builder_Modify(naming,mapping.Before, mapping.After);
     }
     tool->UpdateAssemblies();
   });

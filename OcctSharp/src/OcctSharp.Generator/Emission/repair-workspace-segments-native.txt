@@ -1,0 +1,64 @@
+#include "OcctSharp.Modeling.RepairSupport.Generated.hxx"
+using namespace OcctSharpRepair;
+namespace {
+void Patch(int umin,int umax,int vmin,int vmax) {
+ Require(umin>=-32000 && umax<=32000 && vmin>=-32000 && vmax<=32000 && umin<=umax && vmin<=vmax,"Invalid patch-index range.");
+}
+template<class F> void SegmentEdit(Segment& segment,F&& operation) {
+ Require(!segment.retired,"Segment retired.");try{operation();}catch(...){segment.retired=true;throw;}
+}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_create(const void* wiredata,int32_t orientation,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(orientation>=0 && orientation<=3,"Invalid segment orientation.");auto data=OcctSharpOwned::Lease<const WireData>(wiredata);
+  Require(data->value->NbNonManifoldEdges()==0,"Segment Load excludes separate nonmanifold storage; use manifold=false input.");
+  auto segment=std::make_shared<Segment>(data->value,static_cast<TopAbs_Orientation>(orientation));
+  Publication<Segment> publication(segment);*result=publication.Commit();});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_info(const void* token,int32_t* values,int32_t capacity) {
+ if(!values || capacity!=4)return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+ return Guard([&]{auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);Require(!segment->retired,"Segment retired.");
+  int n=segment->value.NbEdges();int info[4]={n,static_cast<int>(segment->value.Orientation()),segment->value.IsVertex()?1:0,n>0 && segment->value.IsClosed()?1:0};std::copy(info,info+4,values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_wiredata(const void* token,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);Require(!segment->retired,"Segment retired.");*result=PublishWireData(CopyWireData(segment->value.WireData()));});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_shape(const void* token,int32_t selector,int32_t index,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);Require(!segment->retired,"Segment retired.");TopoDS_Shape shape;
+  if(selector==0){Index(index,segment->value.NbEdges());shape=segment->value.Edge(index);}
+  else if(selector==1 || selector==2){Require(segment->value.NbEdges()>0,"Empty segment has no endpoints.");shape=selector==1?segment->value.FirstVertex():segment->value.LastVertex();}
+  else{Require(selector==3 && segment->value.IsVertex(),"Segment has no stored vertex.");shape=segment->value.GetVertex();}
+  Require(!shape.IsNull(),"Null segment result.");*result=OcctSharp_Internal_AllocateShape(shape);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_patch(const void* token,int32_t index,int32_t* values,int32_t capacity) {
+ if(!values || capacity!=5)return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+ return Guard([&]{auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);Require(!segment->retired,"Segment retired.");Index(index,segment->value.NbEdges());
+  int data[5]={};segment->value.GetPatchIndex(index,data[0],data[1],data[2],data[3]);data[4]=segment->value.CheckPatchIndex(index)?1:0;std::copy(data,data+5,values);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_set_patch(const void* token,int32_t index,int32_t operation,int32_t umin,int32_t umax,int32_t vmin,int32_t vmax) {
+ return Guard([&]{Patch(umin,umax,vmin,vmax);Require(operation>=0 && operation<=4,"Invalid patch operation.");auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);Index(index,segment->value.NbEdges());
+  int a,b,c,d;segment->value.GetPatchIndex(index,a,b,c,d);
+  if(operation!=0)Patch(operation==1?std::max(a,umin):a,operation==2?std::min(b,umax):b,operation==3?std::max(c,vmin):c,operation==4?std::min(d,vmax):d);
+  SegmentEdit(*segment,[&]{if(operation==0)segment->value.SetPatchIndex(index,umin,umax,vmin,vmax);
+   else if(operation==1)segment->value.DefineIUMin(index,umin);else if(operation==2)segment->value.DefineIUMax(index,umax);
+   else if(operation==3)segment->value.DefineIVMin(index,vmin);else segment->value.DefineIVMax(index,vmax);});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_edit(const void* token,const OcctSharp_ShapeHandle* input,int32_t operation,int32_t index,const int32_t* patch,int32_t capacity) {
+ return Guard([&]{Require(operation>=0 && operation<=3,"Invalid segment edit.");auto shape=Typed(input,operation==3?TopAbs_VERTEX:TopAbs_EDGE);
+  auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);
+  if(operation==0)Index(index,segment->value.NbEdges());
+  if(operation==1 || operation==2){Require(index>=0 && index<=segment->value.NbEdges() && segment->value.NbEdges()<MaxItems,"Invalid segment insertion.");}
+  if(operation==2){Require(patch && capacity==4,"Patch data missing.");Patch(patch[0],patch[1],patch[2],patch[3]);}
+  SegmentEdit(*segment,[&]{if(operation==0)segment->value.SetEdge(index,TopoDS::Edge(shape));
+   else if(operation==1)segment->value.AddEdge(index,TopoDS::Edge(shape));
+   else if(operation==2)segment->value.AddEdge(index,TopoDS::Edge(shape),patch[0],patch[1],patch[2],patch[3]);
+   else segment->value.SetVertex(TopoDS::Vertex(shape));});});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_repair_segment_configure(const void* token,const void* wiredata,int32_t operation,int32_t orientation) {
+ return Guard([&]{Require(operation>=0 && operation<=2,"Invalid segment configuration.");Require(orientation>=0 && orientation<=3,"Invalid orientation.");
+  std::shared_ptr<const WireData> data;if(operation==1){data=OcctSharpOwned::Lease<const WireData>(wiredata);Require(data->value->NbNonManifoldEdges()==0,"Segment Load excludes separate nonmanifold storage.");}
+  auto segment=OcctSharpOwned::Lease<Segment>(token);std::lock_guard<std::mutex> lock(segment->mutex);
+  SegmentEdit(*segment,[&]{if(operation==0)segment->value.Clear();else if(operation==1)segment->value.Load(data->value);else segment->value.Orientation(static_cast<TopAbs_Orientation>(orientation));});});
+}

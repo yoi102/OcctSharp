@@ -1,0 +1,18 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.TopologyAssembly;
+/// <summary>Initialized call-private low-level assembly. Results own independent copied geometry and carry no inferred topology history.</summary>
+public static partial class TopologyAssembler {
+ static TopologyAssembler()=>NativeLibraryResolver.EnsureRegistered(typeof(TopologyAssembler).Assembly);
+ /// <summary>Build a validated independent vertex from finite bounded coordinates and positive tolerance at most one.</summary>
+ public static Shape Vertex(double x,double y,double z,double tolerance=1e-7){NativeError.ThrowIfFailed(VertexNative(x,y,z,tolerance,out var token),"topology_assembly_vertex");return ShapeFactory.FromNativeHandle(token,"topology_assembly_vertex");}
+ /// <summary>Copy an owning curve, initialize both endpoint vertices/parameters and validate a new edge. Synchronize source mutation while copying.</summary>
+ public static Shape Edge(GeomCurve curve,double first,double last,double tolerance=1e-7){ArgumentNullException.ThrowIfNull(curve);return EdgeCore(curve.NativeHandle,0,first,last,tolerance);}
+ /// <summary>Build an independent validated edge from a copied typed BSpline curve.</summary>
+ public static Shape Edge(GeomBSplineCurve curve,double first,double last,double tolerance=1e-7){ArgumentNullException.ThrowIfNull(curve);return EdgeCore(curve.NativeHandle,1,first,last,tolerance);}
+ static Shape EdgeCore(SafeHandle curve,int kind,double first,double last,double tolerance){NativeError.ThrowIfFailed(EdgeNative(curve,kind,first,last,tolerance,out var token),"topology_assembly_edge");return ShapeFactory.FromNativeHandle(token,"topology_assembly_edge");}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_topology_assembly_vertex")]private static partial NativeStatus VertexNative(double x,double y,double z,double tolerance,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_topology_assembly_edge")]private static partial NativeStatus EdgeNative(SafeHandle curve,int kind,double first,double last,double tolerance,out nint result);
+}

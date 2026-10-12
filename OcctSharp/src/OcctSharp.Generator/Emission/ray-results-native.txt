@@ -1,0 +1,51 @@
+#include "OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include "../Foundation/OcctSharp.Foundation.WorkflowResultSupport.Generated.hxx"
+#include <IntCurvesFace_ShapeIntersector.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Iterator.hxx>
+#include <TopExp_Explorer.hxx>
+#include <Geom_Curve.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <GeomAdaptor_Curve.hxx>
+#include <BRepAdaptor_Surface.hxx>
+#include <BRep_Tool.hxx>
+#include <Geom_Surface.hxx>
+#include <TopLoc_Location.hxx>
+#include <gp_Lin.hxx>
+#include <array>
+using namespace OcctSharpTopologyCollections;
+namespace OcctSharpGenerated {
+const OcctSharp_GeomCurveHandle* ValidateGeomCurve(const OcctSharp_GeomCurveHandle*);
+const OcctSharp_GeomBSplineCurveHandle* ValidateGeomBSplineCurve(const OcctSharp_GeomBSplineCurveHandle*);
+OcctSharp_GeomSurfaceHandle* AllocateGeomSurface(occ::handle<Geom_Surface>);
+}
+namespace {
+struct RayHit {std::array<double,6> values;std::array<int32_t,4> info;};
+struct RayOutput {bool done=false;TopoDS_Shape source;NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> faces;std::vector<RayHit> hits;};
+void RayScalar(double value){Require(std::isfinite(value)&&std::abs(value)<=1e12,"Ray scalar must be finite and within budget.");}
+void RayBudget(const TopoDS_Shape& s){std::vector<TopoDS_Shape> pending{s};int visits=0;while(!pending.empty()){Require(++visits<=16384,"Ray input topology budget exceeded.");auto current=pending.back();pending.pop_back();for(TopoDS_Iterator it(current);it.More();it.Next()){Require(pending.size()+visits<16384,"Ray input topology budget exceeded.");pending.push_back(it.Value());}}}
+std::shared_ptr<RayOutput> RayInput(const OcctSharp_ShapeHandle* shape){
+ auto source=ShapeValue(shape);RayBudget(source);NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> original;TopExp::MapShapes(source,TopAbs_FACE,original);int visits=0;for(TopExp_Explorer it(source,TopAbs_FACE);it.More();it.Next())Require(++visits<=256,"Ray face occurrence budget exceeded before copying.");
+ for(int i=1;i<=original.Extent();++i){BRepAdaptor_Surface view(TopoDS::Face(original(i)),true);auto type=view.GetType();Require(type==GeomAbs_Plane||type==GeomAbs_Cylinder||type==GeomAbs_Cone||type==GeomAbs_Sphere||type==GeomAbs_Torus||type==GeomAbs_BSplineSurface||type==GeomAbs_BezierSurface,"Ray surface lacks an audited complexity profile.");if(type==GeomAbs_BSplineSurface||type==GeomAbs_BezierSurface)Require(static_cast<int64_t>(view.NbUPoles())*view.NbVPoles()<=4096&&view.UDegree()<=14&&view.VDegree()<=14,"Ray spline face complexity exceeds budget before copying.");}
+ BRepBuilderAPI_Copy copy(source,true,false);Require(copy.IsDone(),"Ray input geometry copy failed.");auto out=std::make_shared<RayOutput>();out->source=copy.Shape();TopExp::MapShapes(out->source,TopAbs_FACE,out->faces);return out;
+}
+void RayCapture(RayOutput& out,IntCurvesFace_ShapeIntersector& algorithm,double first,double last,int maximum){
+ out.done=algorithm.IsDone();if(!out.done)return;int count=algorithm.NbPnt();Require(count>=0&&count<=maximum,"Ray output count exceeds budget.");std::vector<RayHit> staged;
+ for(int i=1;i<=count;++i){auto p=algorithm.Pnt(i);double u=algorithm.UParameter(i),v=algorithm.VParameter(i),w=algorithm.WParameter(i);std::array<double,6> values{p.X(),p.Y(),p.Z(),u,v,w};for(double x:values)RayScalar(x);Require(w>=first-1e-7&&w<=last+1e-7,"SDK ray hit outside requested finite domain.");int face=out.faces.FindIndex(algorithm.Face(i));Require(face>0,"SDK ray face is outside exact copied shape.");int state=algorithm.State(i),transition=algorithm.Transition(i);Require((state==TopAbs_IN||state==TopAbs_ON)&&transition>=0&&transition<=2,"Invalid SDK ray hit classification.");staged.push_back({values,{face,state,transition,i}});
+ }
+ // Preserve every hit, including coincident boundary/seam hits; SDK ordinal breaks ties.
+ std::stable_sort(staged.begin(),staged.end(),[](const auto& a,const auto& b){return a.values[5]<b.values[5];});out.hits=std::move(staged);
+}
+void RayPublish(const std::shared_ptr<RayOutput>& out,void** token,int32_t* done,int32_t* count){Publication<RayOutput> publication(out);*done=out->done?1:0;*count=static_cast<int>(out->hits.size());*token=publication.Commit();}
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ray_result_create(const OcctSharp_ShapeHandle* shape,const double* line,int32_t capacity,double first,double last,double tolerance,int32_t maximum,void** token,int32_t* done,int32_t* count){
+ if(!token||!done||!count)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*token=nullptr;*done=0;*count=0;return Guard([&]{Require(line&&capacity==6,"Invalid finite ray profile.");for(int i=0;i<6;++i)RayScalar(line[i]);RayScalar(first);RayScalar(last);Require(first<last&&last-first<=1e6&&std::isfinite(tolerance)&&tolerance>0&&tolerance<=1&&maximum>=0&&maximum<=4096,"Invalid ray interval/tolerance/output budget.");gp_Dir direction(line[3],line[4],line[5]);gp_Lin ray(gp_Pnt(line[0],line[1],line[2]),direction);auto out=RayInput(shape);IntCurvesFace_ShapeIntersector algorithm;algorithm.Load(out->source,tolerance);algorithm.Perform(ray,first,last);RayCapture(*out,algorithm,first,last,maximum);RayPublish(out,token,done,count);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_curve_hit_create(const OcctSharp_ShapeHandle* shape,const void* curve,int32_t kind,double first,double last,double tolerance,int32_t maximum,void** token,int32_t* done,int32_t* count){
+ if(!token||!done||!count)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*token=nullptr;*done=0;*count=0;return Guard([&]{RayScalar(first);RayScalar(last);Require((kind==0||kind==1)&&first<last&&last-first<=1e6&&std::isfinite(tolerance)&&tolerance>0&&tolerance<=1&&maximum>=0&&maximum<=4096,"Invalid finite curve-hit profile.");auto value=kind==0?OcctSharpGenerated::ValidateGeomCurve(static_cast<const OcctSharp_GeomCurveHandle*>(curve))->Value:OcctSharpGenerated::ValidateGeomBSplineCurve(static_cast<const OcctSharp_GeomBSplineCurveHandle*>(curve))->Value;Require(first>=value->FirstParameter()&&last<=value->LastParameter(),"Curve-hit interval outside source curve domain.");auto spline=occ::handle<Geom_BSplineCurve>::DownCast(value);if(!spline.IsNull())Require(spline->NbPoles()<=4096&&spline->Degree()<=14,"Curve-hit spline complexity exceeds budget before copying.");auto privateCurve=occ::handle<Geom_Curve>::DownCast(value->Copy());Require(!privateCurve.IsNull(),"Curve-hit input copy failed.");occ::handle<Adaptor3d_Curve> view=new GeomAdaptor_Curve(privateCurve,first,last);auto out=RayInput(shape);IntCurvesFace_ShapeIntersector algorithm;algorithm.Load(out->source,tolerance);algorithm.Perform(view,first,last);RayCapture(*out,algorithm,first,last,maximum);RayPublish(out,token,done,count);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ray_result_copy(const void* token,double* values,int32_t capacity,int32_t* info,int32_t infoCapacity){return Guard([&]{auto out=OcctSharpOwned::Lease<const RayOutput>(token);OcctSharpWorkflowResults::AtomicBuffer<double> a(values,capacity,static_cast<int>(out->hits.size()*6));OcctSharpWorkflowResults::AtomicBuffer<int32_t> b(info,infoCapacity,static_cast<int>(out->hits.size()*4));for(const auto& hit:out->hits){for(double x:hit.values)a.Add(x);for(int x:hit.info)b.Add(x);}a.ValidateFinite();a.Commit();b.Commit();});}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ray_result_face(const void* token,int32_t ordinal,OcctSharp_ShapeHandle** result){if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto out=OcctSharpOwned::Lease<const RayOutput>(token);Require(out->done&&ordinal>=1&&ordinal<=out->faces.Extent(),"Ray face ordinal outside complete copied domain.");BRepBuilderAPI_Copy copy(out->faces(ordinal),true,false);Require(copy.IsDone(),"Ray result face deep copy failed.");*result=OcctSharp_Internal_AllocateShape(copy.Shape());});}
+void OCCTSHARP_CALL occtsharp_ray_result_release(void* token){OcctSharpOwned::Release(token,typeid(RayOutput));}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ray_surface_copy(const OcctSharp_ShapeHandle* source,OcctSharp_GeomSurfaceHandle** result){if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;return Guard([&]{auto face=ShapeValue(source);Require(face.ShapeType()==TopAbs_FACE,"Surface extraction requires exactly a face.");BRepAdaptor_Surface view(TopoDS::Face(face),true);if(view.GetType()==GeomAbs_BSplineSurface||view.GetType()==GeomAbs_BezierSurface)Require(static_cast<int64_t>(view.NbUPoles())*view.NbVPoles()<=4096,"Face surface complexity exceeds copy budget.");TopLoc_Location location;auto value=BRep_Tool::Surface(TopoDS::Face(face),location);Require(!value.IsNull(),"Face has no geometric surface.");auto copy=occ::handle<Geom_Surface>::DownCast(value->Copy());Require(!copy.IsNull(),"Face surface copy failed.");copy->Transform(location.Transformation());*result=OcctSharpGenerated::AllocateGeomSurface(copy);});}

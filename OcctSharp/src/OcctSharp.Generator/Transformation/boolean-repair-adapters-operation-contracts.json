@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpErrors#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpErrors",
+      "signature": "BOPAlgo_Options::DumpErrors: void (Standard_OStream &) const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpWarnings#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpWarnings",
+      "signature": "BOPAlgo_Options::DumpWarnings: void (Standard_OStream &) const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::Modified",
+      "signature": "BRepAlgoAPI_BuilderAlgo::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::Generated",
+      "signature": "BRepAlgoAPI_BuilderAlgo::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::IsDeleted",
+      "signature": "BRepAlgoAPI_BuilderAlgo::IsDeleted: bool (const TopoDS_Shape &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetArguments#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetArguments",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetArguments: void (const NCollection_List<TopoDS_Shape> &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetNonDestructive#b#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive: void (const bool)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#",
+      "nativeName": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse",
+      "signature": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse: void ()",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#",
+      "nativeName": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut",
+      "signature": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut: void ()",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Common@F@BRepAlgoAPI_Common#",
+      "nativeName": "BRepAlgoAPI_Common::BRepAlgoAPI_Common",
+      "signature": "BRepAlgoAPI_Common::BRepAlgoAPI_Common: void ()",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasErrors#1",
+      "nativeName": "BOPAlgo_Options::HasErrors",
+      "signature": "BOPAlgo_Options::HasErrors: bool () const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasWarnings#1",
+      "nativeName": "BOPAlgo_Options::HasWarnings",
+      "signature": "BOPAlgo_Options::HasWarnings: bool () const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetRunParallel#b#",
+      "nativeName": "BOPAlgo_Options::SetRunParallel",
+      "signature": "BOPAlgo_Options::SetRunParallel: void (const bool)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Algo@F@Shape#",
+      "nativeName": "BRepAlgoAPI_Algo::Shape",
+      "signature": "BRepAlgoAPI_Algo::Shape: const TopoDS_Shape &()",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_BooleanOperation::Build",
+      "signature": "BRepAlgoAPI_BooleanOperation::Build: void (const Message_ProgressRange &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@SetTools#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BooleanOperation::SetTools",
+      "signature": "BRepAlgoAPI_BooleanOperation::SetTools: void (const NCollection_List<TopoDS_Shape> &)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Generated#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Generated",
+      "signature": "BRepTools_History::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &) const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@IsRemoved#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::IsRemoved",
+      "signature": "BRepTools_History::IsRemoved: bool (const TopoDS_Shape &) const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Modified#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Modified",
+      "signature": "BRepTools_History::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &) const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetToFillHistory#b#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetToFillHistory",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetToFillHistory: void (const bool)",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_Command::IsDone",
+      "signature": "BRepBuilderAPI_Command::IsDone: bool () const",
+      "guard": "BYPrivateBooleanRepairCopies",
+      "reason": "Initialized private SDK receiver; copied topology lists and bounded owning diagnostic strings; no borrowed ABI objects."
+    }
+  ]
+}

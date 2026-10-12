@@ -1,0 +1,13 @@
+#pragma once
+#include <Geom_Curve.hxx>
+#include <Geom2d_Curve.hxx>
+#include <gp_Pln.hxx>
+namespace OcctSharp::Native {
+// Shared exact planar projection; preserves native offset geometry, never fits.
+opencascade::handle<Geom2d_Curve> ProjectExactSketchCurve(
+  const opencascade::handle<Geom_Curve>&,const gp_Pln&,double,double,double,int);
+opencascade::handle<Geom2d_Curve> ContinueSketchCurve2d(
+  const opencascade::handle<Geom2d_Curve>&,double,double);
+opencascade::handle<Geom_Curve> LiftExactSketchCurve2d(
+  const opencascade::handle<Geom2d_Curve>&,const gp_Pln&);
+}

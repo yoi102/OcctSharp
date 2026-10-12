@@ -1,0 +1,220 @@
+using I = OcctSharp.SketchRegularityInterval;
+
+namespace OcctSharp;
+
+#pragma warning disable CS1591
+
+public enum SketchCurveRegularityState { Certified, Folded, NotCertified }
+
+/// <summary>Conservative whole-domain author-geometry certificate. A positive
+/// result proves nonzero basis speed and positive tangential scale through every
+/// offset stage. It does not prove injectivity, native topology identity or a
+/// unique solution. Failure includes its native parameter bracket and node.</summary>
+public sealed record SketchCurveRegularityResult2d(SketchCurveRegularityState State,
+    double FirstParameter, double LastParameter, int ExpressionNodeIndex, int IntervalsChecked,
+    double MinimumTangentialScale, string Diagnostic)
+{
+    public bool IsCertified => State == SketchCurveRegularityState.Certified;
+}
+
+/// <summary>Outward-rounded interval bounds of analytic homogeneous jets over
+/// immutable author data. No sampling, finite differences or fitted geometry.
+/// Resource exhaustion is NotCertified and never a global no-solution result.</summary>
+public static class SketchCurveRegularity2d
+{
+    public const int MaximumIntervals = 65536;
+    public const int MaximumSubdivisionDepth = 48;
+    private readonly record struct Jet(I Value, I First, I Second)
+    {
+        internal static Jet Constant(I value) => new(value, I.Point(0), I.Point(0));
+        internal static Jet Blend(Jet a, Jet b, I alpha, I slope) => new(
+            a.Value + alpha * (b.Value - a.Value),
+            a.First + alpha * (b.First - a.First) + slope * (b.Value - a.Value),
+            a.Second + alpha * (b.Second - a.Second) + slope * (b.First - a.First));
+        internal static Jet Quotient(Jet numerator, Jet denominator)
+        {
+            var value = numerator.Value / denominator.Value;
+            var first = (numerator.First - value * denominator.First) / denominator.Value;
+            var second = (numerator.Second - value * denominator.Second - first * denominator.First) / denominator.Value;
+            return new(value, first, second);
+        }
+    }
+    private readonly record struct H(Jet X, Jet Y, Jet W)
+    {
+        internal static H Blend(H a, H b, I alpha, I slope) =>
+            new(Jet.Blend(a.X, b.X, alpha, slope), Jet.Blend(a.Y, b.Y, alpha, slope), Jet.Blend(a.W, b.W, alpha, slope));
+    }
+    private sealed record Support(SketchCurve2d Curve, H[] Controls, I[] FlatKnots, double[] KnotValues, int[] Multiplicities);
+    private readonly record struct Window(double First, double Last, int Span, int Depth);
+
+    public static SketchCurveRegularityResult2d Inspect(SketchCurveExpression2d expression)
+    {
+        ArgumentNullException.ThrowIfNull(expression);
+        List<SketchCurveExpression2d> nodes = [];
+        for (var current = expression; current is not null; current = current.Basis) nodes.Add(current);
+        nodes.Reverse();
+        var leaf = nodes[0].Primitive!;
+        var first = expression.FirstParameter; var last = expression.LastParameter;
+        // Cumulative offsets are valid only after all preceding tangential
+        // scales have been proven positive. Direction affects each distance,
+        // not the underlying increasing native parameter.
+        List<(I Distance, int Node)> stages = [];
+        var total = I.Point(0);
+        for (int i = 1; i < nodes.Count; i++)
+            if (nodes[i].Kind == SketchCurveExpressionKind.Offset)
+            {
+                total += I.Point(nodes[i].SignedOffset * (nodes[i].Basis!.Reversed ? -1 : 1));
+                stages.Add((total, i));
+            }
+        if (stages.Count == 0) stages.Add((I.Point(0), 0));
+        int count = 0;
+        int lastUncertainNode = 0;
+        double minimumScale = double.PositiveInfinity;
+        SketchCurveRegularityResult2d Fail(SketchCurveRegularityState state, Window window, int node, string reason) =>
+            new(state, window.First, window.Last, node, count, 0, reason);
+        var support = BuildSupport(leaf);
+        if (support is null) return Fail(SketchCurveRegularityState.NotCertified, new(first, last, 0, 0), 0, "Support exceeds the certification resource bound.");
+        if (leaf.Periodic)
+        {
+            // Certify the entire principal period. This also covers negative,
+            // multiple-period and seam-crossing finite intervals without unsafe
+            // large-double phase reduction. A trimmed periodic curve may be
+            // conservatively refused when another part of its period is unsafe.
+            first = support.KnotValues[0]; last = support.KnotValues[^1];
+        }
+        if (leaf.Kind == SketchCurveKind.BSpline)
+            for (int k = 0; k < support.KnotValues.Length; k++)
+                if (k > 0 && k < support.KnotValues.Length - 1 && support.KnotValues[k] > first && support.KnotValues[k] < last && support.Multiplicities[k] >= leaf.Degree ||
+                    leaf.Periodic && (k == 0 || k == support.KnotValues.Length - 1) && support.Multiplicities[k] >= leaf.Degree)
+                    return Fail(SketchCurveRegularityState.NotCertified, new(support.KnotValues[k], support.KnotValues[k], 0, 0), 0,
+                        "The finite support is not C1 at a spline knot or periodic seam.");
+        var breaks = support.KnotValues.Where(k => k > first && k < last).Prepend(first).Append(last).ToArray();
+        Stack<Window> pending = new();
+        for (int k = breaks.Length - 2; k >= 0; k--)
+            pending.Push(new(breaks[k], breaks[k + 1], FindSpan(support, breaks[k]), 0));
+        while (pending.TryPop(out var window))
+        {
+            if (count == MaximumIntervals)
+                return Fail(SketchCurveRegularityState.NotCertified, window, lastUncertainNode, "A cusp or numerical bound remains unresolved after the whole-domain interval budget; no global no-solution claim.");
+            count++;
+            (I speedSquared, I curvature, bool denominatorPositive) = Bounds(support, new(window.First, window.Last), window.Span);
+            bool proven = denominatorPositive && speedSquared.Finite && speedSquared.Lower > 0 && curvature.Finite;
+            double windowMinimum = double.PositiveInfinity;
+            int uncertainNode = 0;
+            if (proven)
+                foreach (var stage in stages)
+                {
+                    var scale = I.Point(1) + stage.Distance * curvature;
+                    if (scale.Finite && scale.Upper <= 0)
+                        return Fail(SketchCurveRegularityState.Folded, window, stage.Node, "An offset stage has a nonpositive tangential scale throughout this bracket.");
+                    if (!scale.Finite || scale.Lower <= 0) { proven = false; uncertainNode = stage.Node; break; }
+                    windowMinimum = Math.Min(windowMinimum, scale.Lower);
+                }
+            if (proven) { minimumScale = Math.Min(minimumScale, windowMinimum); continue; }
+            lastUncertainNode = uncertainNode;
+            double midpoint = window.First + (window.Last - window.First) / 2;
+            if (window.Depth >= MaximumSubdivisionDepth || midpoint <= window.First || midpoint >= window.Last)
+                return Fail(SketchCurveRegularityState.NotCertified, window, uncertainNode,
+                    "A singular tangent, rational denominator, offset cusp or numerical bound remains unresolved; no sampled acceptance or global no-solution claim.");
+            pending.Push(new(midpoint, window.Last, window.Span, window.Depth + 1));
+            pending.Push(new(window.First, midpoint, window.Span, window.Depth + 1));
+        }
+        return new(SketchCurveRegularityState.Certified, expression.FirstParameter, expression.LastParameter, -1, count, minimumScale,
+            leaf.Periodic ? "Nonzero speed and every offset stage certified over the entire principal period." :
+            "Nonzero speed and every offset stage certified over the whole finite domain.");
+    }
+
+    private static Support? BuildSupport(SketchCurve2d leaf)
+    {
+        if (leaf.Kind is SketchCurveKind.Segment or SketchCurveKind.Circle or SketchCurveKind.Ellipse) return new(leaf, [], [], [], []);
+        var poles = leaf.Poles; var weights = leaf.Weights;
+        if (poles.Count > MaximumIntervals || leaf.Multiplicities.Sum() > MaximumIntervals) return null;
+        // Translation cancels analytically; its floating subtraction is enclosed.
+        // Normalize weights by an enclosed division to reduce overflow risk.
+        double weightScale = weights.Count == 0 ? 1 : weights.Max();
+        var controls = new H[poles.Count];
+        for (int i = 0; i < controls.Length; i++)
+        {
+            var w = I.Point(weights.Count == 0 ? 1 : weights[i]) / I.Point(weightScale);
+            controls[i] = new(Jet.Constant((I.Point(poles[i].X) - I.Point(poles[0].X)) * w),
+                Jet.Constant((I.Point(poles[i].Y) - I.Point(poles[0].Y)) * w), Jet.Constant(w));
+        }
+        if (leaf.Kind == SketchCurveKind.Bezier) return new(leaf, controls, [], [], []);
+        var values = leaf.Knots.ToArray(); var multiplicities = leaf.Multiplicities.ToArray();
+        List<I> knots = [];
+        for (int i = 0; i < values.Length; i++) for (int j = 0; j < multiplicities[i]; j++) knots.Add(I.Point(values[i]));
+        if (leaf.Periodic)
+        {
+            int extra = leaf.Degree + 1 - multiplicities[0];
+            var period = I.Point(values[^1]) - I.Point(values[0]);
+            // Extend the cyclic knot sequence; OCCT's pole zero corresponds to
+            // the first expanded control. Closing controls repeat from pole0.
+            var cycle = knots.Take(knots.Count - multiplicities[^1]).ToArray();
+            List<I> expanded = [];
+            for (int j = -extra; j < 0; j++)
+            {
+                int cycleIndex = ((j % cycle.Length) + cycle.Length) % cycle.Length;
+                int turn = (int)Math.Floor((double)j / cycle.Length);
+                expanded.Add(cycle[cycleIndex] + I.Point(turn) * period);
+            }
+            expanded.AddRange(knots);
+            for (int j = multiplicities[0]; j < multiplicities[0] + extra; j++)
+            {
+                int cycleIndex = j % cycle.Length; int turn = 1 + j / cycle.Length;
+                expanded.Add(cycle[cycleIndex] + I.Point(turn) * period);
+            }
+            knots = expanded;
+            controls = Enumerable.Range(0, controls.Length + extra).Select(j => controls[j % controls.Length]).ToArray();
+        }
+        return new(leaf, controls, knots.ToArray(), values, multiplicities);
+    }
+    private static int FindSpan(Support support, double first)
+    {
+        if (support.FlatKnots.Length == 0) return 0;
+        int span = support.Curve.Degree;
+        // Choose the right-hand span at the exact supplied lower knot. A
+        // midpoint of adjacent doubles can round to the upper knot and skip
+        // an entire real span,including a curvature singularity.
+        while (span < support.Controls.Length - 1 && first >= support.FlatKnots[span + 1].Upper) span++;
+        return span;
+    }
+    private static (I SpeedSquared, I Curvature, bool DenominatorPositive) Bounds(Support support, I parameter, int span)
+    {
+        var leaf = support.Curve;
+        if (leaf.Kind == SketchCurveKind.Segment) return (I.Point(1), I.Point(0), true);
+        if (leaf.Kind == SketchCurveKind.Circle) return (I.Point(leaf.MajorRadius).Square(), I.Point(1) / I.Point(leaf.MajorRadius), true);
+        if (leaf.Kind == SketchCurveKind.Ellipse)
+        {
+            var a = I.Point(leaf.MajorRadius); var b = I.Point(leaf.MinorRadius);
+            var squared = a.Square() * parameter.Sin().Square() + b.Square() * parameter.Cos().Square();
+            squared = new(Math.Max(b.Square().Lower, squared.Lower), Math.Min(a.Square().Upper, squared.Upper));
+            return (squared, a * b / (squared * squared.Sqrt()), true);
+        }
+        int degree = leaf.Degree;
+        H[] values = new H[degree + 1];
+        if (leaf.Kind == SketchCurveKind.Bezier)
+        {
+            Array.Copy(support.Controls, values, values.Length);
+            for (int r = 1; r <= degree; r++) for (int j = 0; j <= degree - r; j++)
+                values[j] = H.Blend(values[j], values[j + 1], parameter, I.Point(1));
+        }
+        else
+        {
+            Array.Copy(support.Controls, span - degree, values, 0, degree + 1);
+            for (int r = 1; r <= degree; r++) for (int j = degree; j >= r; j--)
+            {
+                int index = span - degree + j;
+                var denominator = support.FlatKnots[index + degree - r + 1] - support.FlatKnots[index];
+                var alpha = (parameter - support.FlatKnots[index]) / denominator;
+                values[j] = H.Blend(values[j - 1], values[j], alpha, I.Point(1) / denominator);
+            }
+        }
+        var homogeneous = leaf.Kind == SketchCurveKind.Bezier ? values[0] : values[^1];
+        if (!homogeneous.W.Value.Finite || homogeneous.W.Value.Lower <= 0) return (I.Entire, I.Entire, false);
+        var x = Jet.Quotient(homogeneous.X, homogeneous.W); var y = Jet.Quotient(homogeneous.Y, homogeneous.W);
+        var speed = x.First.Square() + y.First.Square();
+        var curvature = I.Point(2) * (x.First * y.Second - y.First * x.Second) / (speed * speed.Sqrt());
+        return (speed, curvature, true);
+    }
+}
+#pragma warning restore CS1591

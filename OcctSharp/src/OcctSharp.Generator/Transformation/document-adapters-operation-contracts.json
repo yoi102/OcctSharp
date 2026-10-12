@@ -1,0 +1,882 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfIntegers#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetArrayOfIntegers",
+      "signature": "TDataStd_NamedData::GetArrayOfIntegers: const occ::handle<NCollection_HArray1<int>> &(const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfReals#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetArrayOfReals",
+      "signature": "TDataStd_NamedData::GetArrayOfReals: const occ::handle<NCollection_HArray1<double>> &(const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetID#S",
+      "nativeName": "TDataStd_NamedData::GetID",
+      "signature": "TDataStd_NamedData::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetInteger#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetInteger",
+      "signature": "TDataStd_NamedData::GetInteger: int (const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetReal#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetReal",
+      "signature": "TDataStd_NamedData::GetReal: double (const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetString#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetString",
+      "signature": "TDataStd_NamedData::GetString: const TCollection_ExtendedString &(const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfIntegers#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasArrayOfIntegers",
+      "signature": "TDataStd_NamedData::HasArrayOfIntegers: bool (const TCollection_ExtendedString &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfReals#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasArrayOfReals",
+      "signature": "TDataStd_NamedData::HasArrayOfReals: bool (const TCollection_ExtendedString &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasInteger#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasInteger",
+      "signature": "TDataStd_NamedData::HasInteger: bool (const TCollection_ExtendedString &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasReal#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasReal",
+      "signature": "TDataStd_NamedData::HasReal: bool (const TCollection_ExtendedString &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasString#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasString",
+      "signature": "TDataStd_NamedData::HasString: bool (const TCollection_ExtendedString &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_NamedData::Set",
+      "signature": "TDataStd_NamedData::Set: occ::handle<TDataStd_NamedData> (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfIntegers#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#",
+      "nativeName": "TDataStd_NamedData::SetArrayOfIntegers",
+      "signature": "TDataStd_NamedData::SetArrayOfIntegers: void (const TCollection_ExtendedString &, const occ::handle<NCollection_HArray1<int>> &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfReals#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "TDataStd_NamedData::SetArrayOfReals",
+      "signature": "TDataStd_NamedData::SetArrayOfReals: void (const TCollection_ExtendedString &, const occ::handle<NCollection_HArray1<double>> &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetInteger#&1$@S@TCollection_ExtendedString#I#",
+      "nativeName": "TDataStd_NamedData::SetInteger",
+      "signature": "TDataStd_NamedData::SetInteger: void (const TCollection_ExtendedString &, const int)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetReal#&1$@S@TCollection_ExtendedString#d#",
+      "nativeName": "TDataStd_NamedData::SetReal",
+      "signature": "TDataStd_NamedData::SetReal: void (const TCollection_ExtendedString &, const double)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetString#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "TDataStd_NamedData::SetString",
+      "signature": "TDataStd_NamedData::SetString: void (const TCollection_ExtendedString &, const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_CopyTool@F@Copy#&1$@N@opencascade@S@handle>#$@S@TDF_DataSet#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#S",
+      "nativeName": "TDF_CopyTool::Copy",
+      "signature": "TDF_CopyTool::Copy: void (const occ::handle<TDF_DataSet> &, const occ::handle<TDF_RelocationTable> &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddLabel#&1$@S@TDF_Label#",
+      "nativeName": "TDF_DataSet::AddLabel",
+      "signature": "TDF_DataSet::AddLabel: void (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddRoot#&1$@S@TDF_Label#",
+      "nativeName": "TDF_DataSet::AddRoot",
+      "signature": "TDF_DataSet::AddRoot: void (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Attributes#",
+      "nativeName": "TDF_DataSet::Attributes",
+      "signature": "TDF_DataSet::Attributes: NCollection_Map<occ::handle<TDF_Attribute>> &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@ContainsLabel#&1$@S@TDF_Label#1",
+      "nativeName": "TDF_DataSet::ContainsLabel",
+      "signature": "TDF_DataSet::ContainsLabel: bool (const TDF_Label &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Labels#",
+      "nativeName": "TDF_DataSet::Labels",
+      "signature": "TDF_DataSet::Labels: NCollection_Map<TDF_Label> &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAllAttributes#b#1",
+      "nativeName": "TDF_Label::ForgetAllAttributes",
+      "signature": "TDF_Label::ForgetAllAttributes: void (const bool) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasAttribute#1",
+      "nativeName": "TDF_Label::HasAttribute",
+      "signature": "TDF_Label::HasAttribute: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasChild#1",
+      "nativeName": "TDF_Label::HasChild",
+      "signature": "TDF_Label::HasChild: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsDescendant#&1$@S@TDF_Label#1",
+      "nativeName": "TDF_Label::IsDescendant",
+      "signature": "TDF_Label::IsDescendant: bool (const TDF_Label &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Root#1",
+      "nativeName": "TDF_Label::Root",
+      "signature": "TDF_Label::Root: const TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_RelocationTable@F@SetRelocation#&1$@S@TDF_Label#S0_#",
+      "nativeName": "TDF_RelocationTable::SetRelocation",
+      "signature": "TDF_RelocationTable::SetRelocation: void (const TDF_Label &, const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@GetID#S",
+      "nativeName": "TFunction_Function::GetID",
+      "signature": "TFunction_Function::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "nativeName": "TFunction_Function::Set",
+      "signature": "TFunction_Function::Set: occ::handle<TFunction_Function> (const TDF_Label &, const Standard_GUID &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetID#S",
+      "nativeName": "TFunction_GraphNode::GetID",
+      "signature": "TFunction_GraphNode::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetNext#1",
+      "nativeName": "TFunction_GraphNode::GetNext",
+      "signature": "TFunction_GraphNode::GetNext: const NCollection_Map<int> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetPrevious#1",
+      "nativeName": "TFunction_GraphNode::GetPrevious",
+      "signature": "TFunction_GraphNode::GetPrevious: const NCollection_Map<int> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_GraphNode::Set",
+      "signature": "TFunction_GraphNode::Set: occ::handle<TFunction_GraphNode> (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetID#S",
+      "nativeName": "TFunction_Logbook::GetID",
+      "signature": "TFunction_Logbook::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetImpacted#1",
+      "nativeName": "TFunction_Logbook::GetImpacted",
+      "signature": "TFunction_Logbook::GetImpacted: const NCollection_Map<TDF_Label> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetTouched#1",
+      "nativeName": "TFunction_Logbook::GetTouched",
+      "signature": "TFunction_Logbook::GetTouched: const NCollection_Map<TDF_Label> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetValid#1",
+      "nativeName": "TFunction_Logbook::GetValid",
+      "signature": "TFunction_Logbook::GetValid: const NCollection_Map<TDF_Label> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_Logbook::Set",
+      "signature": "TFunction_Logbook::Set: occ::handle<TFunction_Logbook> (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetImpacted#&1$@S@TDF_Label#b#",
+      "nativeName": "TFunction_Logbook::SetImpacted",
+      "signature": "TFunction_Logbook::SetImpacted: void (const TDF_Label &, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetTouched#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Logbook::SetTouched",
+      "signature": "TFunction_Logbook::SetTouched: void (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetValid#&1$@S@TDF_Label#b#",
+      "nativeName": "TFunction_Logbook::SetValid",
+      "signature": "TFunction_Logbook::SetValid: void (const TDF_Label &, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@AddFunction#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Scope::AddFunction",
+      "signature": "TFunction_Scope::AddFunction: bool (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#&1$@S@TDF_Label#1",
+      "nativeName": "TFunction_Scope::GetFunction",
+      "signature": "TFunction_Scope::GetFunction: int (const TDF_Label &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#I#1",
+      "nativeName": "TFunction_Scope::GetFunction",
+      "signature": "TFunction_Scope::GetFunction: const TDF_Label &(const int) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetID#S",
+      "nativeName": "TFunction_Scope::GetID",
+      "signature": "TFunction_Scope::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@HasFunction#&1$@S@TDF_Label#1",
+      "nativeName": "TFunction_Scope::HasFunction",
+      "signature": "TFunction_Scope::HasFunction: bool (const TDF_Label &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@RemoveFunction#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Scope::RemoveFunction",
+      "signature": "TFunction_Scope::RemoveFunction: bool (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_Scope::Set",
+      "signature": "TFunction_Scope::Set: occ::handle<TFunction_Scope> (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Delete#&1$@S@TopoDS_Shape#",
+      "nativeName": "TNaming_Builder::Delete",
+      "signature": "TNaming_Builder::Delete: void (const TopoDS_Shape &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "TNaming_Builder::Generated",
+      "signature": "TNaming_Builder::Generated: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Evolution#1",
+      "nativeName": "TNaming_Iterator::Evolution",
+      "signature": "TNaming_Iterator::Evolution: TNaming_Evolution () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@More#1",
+      "nativeName": "TNaming_Iterator::More",
+      "signature": "TNaming_Iterator::More: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@NewShape#1",
+      "nativeName": "TNaming_Iterator::NewShape",
+      "signature": "TNaming_Iterator::NewShape: const TopoDS_Shape &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Next#",
+      "nativeName": "TNaming_Iterator::Next",
+      "signature": "TNaming_Iterator::Next: void ()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@OldShape#1",
+      "nativeName": "TNaming_Iterator::OldShape",
+      "signature": "TNaming_Iterator::OldShape: const TopoDS_Shape &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@TNaming_Iterator#&1$@S@TDF_Label#I#",
+      "nativeName": "TNaming_Iterator::TNaming_Iterator",
+      "signature": "TNaming_Iterator::TNaming_Iterator: void (const TDF_Label &, const int)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Select#&1$@S@TopoDS_Shape#S0_#b#b#1",
+      "nativeName": "TNaming_Selector::Select",
+      "signature": "TNaming_Selector::Select: bool (const TopoDS_Shape &, const TopoDS_Shape &, const bool, const bool) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Solve#&$@S@NCollection_Map>#$@S@TDF_Label#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "TNaming_Selector::Solve",
+      "signature": "TNaming_Selector::Solve: bool (NCollection_Map<TDF_Label> &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@TNaming_Selector#&1$@S@TDF_Label#",
+      "nativeName": "TNaming_Selector::TNaming_Selector",
+      "signature": "TNaming_Selector::TNaming_Selector: void (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@FindAttribute#&1$@S@Standard_GUID#&$@N@opencascade@S@handle>#$@S@TDF_Attribute#1",
+      "nativeName": "TDF_Label::FindAttribute",
+      "signature": "TDF_Label::FindAttribute: bool (const Standard_GUID &, occ::handle<TDF_Attribute> &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@FindChild#I#b#1",
+      "nativeName": "TDF_Label::FindChild",
+      "signature": "TDF_Label::FindChild: TDF_Label (const int, const bool) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAttribute#&1$@S@Standard_GUID#1",
+      "nativeName": "TDF_Label::ForgetAttribute",
+      "signature": "TDF_Label::ForgetAttribute: bool (const Standard_GUID &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@GetID#S",
+      "nativeName": "TDataStd_RealArray::GetID",
+      "signature": "TDataStd_RealArray::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Application@F@SaveAs#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_ExtendedString#&1$@S@Message_ProgressRange#",
+      "nativeName": "TDocStd_Application::SaveAs",
+      "signature": "TDocStd_Application::SaveAs: PCDM_StoreStatus (const occ::handle<TDocStd_Document> &, const TCollection_ExtendedString &, const Message_ProgressRange &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@ChangeStorageFormat#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDocStd_Document::ChangeStorageFormat",
+      "signature": "TDocStd_Document::ChangeStorageFormat: void (const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetUndos#1",
+      "nativeName": "TDocStd_Document::GetUndos",
+      "signature": "TDocStd_Document::GetUndos: const NCollection_List<occ::handle<TDF_Delta>> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetRedos#1",
+      "nativeName": "TDocStd_Document::GetRedos",
+      "signature": "TDocStd_Document::GetRedos: const NCollection_List<occ::handle<TDF_Delta>> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Tag#1",
+      "nativeName": "TDF_Label::Tag",
+      "signature": "TDF_Label::Tag: int () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Depth#1",
+      "nativeName": "TDF_Label::Depth",
+      "signature": "TDF_Label::Depth: int () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsRoot#1",
+      "nativeName": "TDF_Label::IsRoot",
+      "signature": "TDF_Label::IsRoot: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Father#1",
+      "nativeName": "TDF_Label::Father",
+      "signature": "TDF_Label::Father: const TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsNull#1",
+      "nativeName": "TDF_Label::IsNull",
+      "signature": "TDF_Label::IsNull: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@TDF_ChildIterator#&1$@S@TDF_Label#b#",
+      "nativeName": "TDF_ChildIterator::TDF_ChildIterator",
+      "signature": "TDF_ChildIterator::TDF_ChildIterator: void (const TDF_Label &, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@More#1",
+      "nativeName": "TDF_ChildIterator::More",
+      "signature": "TDF_ChildIterator::More: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@Next#",
+      "nativeName": "TDF_ChildIterator::Next",
+      "signature": "TDF_ChildIterator::Next: void ()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@Value#1",
+      "nativeName": "TDF_ChildIterator::Value",
+      "signature": "TDF_ChildIterator::Value: const TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@TDF_AttributeIterator#&1$@S@TDF_Label#b#",
+      "nativeName": "TDF_AttributeIterator::TDF_AttributeIterator",
+      "signature": "TDF_AttributeIterator::TDF_AttributeIterator: void (const TDF_Label &, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@More#1",
+      "nativeName": "TDF_AttributeIterator::More",
+      "signature": "TDF_AttributeIterator::More: bool () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Next#",
+      "nativeName": "TDF_AttributeIterator::Next",
+      "signature": "TDF_AttributeIterator::Next: void ()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Value#1",
+      "nativeName": "TDF_AttributeIterator::Value",
+      "signature": "TDF_AttributeIterator::Value: occ::handle<TDF_Attribute> () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@Label#1",
+      "nativeName": "TDF_Attribute::Label",
+      "signature": "TDF_Attribute::Label: const TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@GetID#S",
+      "nativeName": "TDataStd_Name::GetID",
+      "signature": "TDataStd_Name::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "nativeName": "TDataStd_Name::Set",
+      "signature": "TDataStd_Name::Set: occ::handle<TDataStd_Name> (const TDF_Label &, const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_GenericExtString@F@Get#1",
+      "nativeName": "TDataStd_GenericExtString::Get",
+      "signature": "TDataStd_GenericExtString::Get: const TCollection_ExtendedString &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Comment@F@GetID#S",
+      "nativeName": "TDataStd_Comment::GetID",
+      "signature": "TDataStd_Comment::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Comment@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "nativeName": "TDataStd_Comment::Set",
+      "signature": "TDataStd_Comment::Set: occ::handle<TDataStd_Comment> (const TDF_Label &, const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@Get#1",
+      "nativeName": "TDataStd_AsciiString::Get",
+      "signature": "TDataStd_AsciiString::Get: const TCollection_AsciiString &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@GetID#S",
+      "nativeName": "TDataStd_AsciiString::GetID",
+      "signature": "TDataStd_AsciiString::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_AsciiString#S",
+      "nativeName": "TDataStd_AsciiString::Set",
+      "signature": "TDataStd_AsciiString::Set: occ::handle<TDataStd_AsciiString> (const TDF_Label &, const TCollection_AsciiString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Integer@F@GetID#S",
+      "nativeName": "TDataStd_Integer::GetID",
+      "signature": "TDataStd_Integer::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Integer@F@Set#&1$@S@TDF_Label#I#S",
+      "nativeName": "TDataStd_Integer::Set",
+      "signature": "TDataStd_Integer::Set: occ::handle<TDataStd_Integer> (const TDF_Label &, const int)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Real@F@GetID#S",
+      "nativeName": "TDataStd_Real::GetID",
+      "signature": "TDataStd_Real::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_Real@F@Set#&1$@S@TDF_Label#d#S",
+      "nativeName": "TDataStd_Real::Set",
+      "signature": "TDataStd_Real::Set: occ::handle<TDataStd_Real> (const TDF_Label &, const double)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@GetID#S",
+      "nativeName": "TDataStd_IntegerArray::GetID",
+      "signature": "TDataStd_IntegerArray::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "nativeName": "TDataStd_IntegerArray::Set",
+      "signature": "TDataStd_IntegerArray::Set: occ::handle<TDataStd_IntegerArray> (const TDF_Label &, const int, const int, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "nativeName": "TDataStd_RealArray::Set",
+      "signature": "TDataStd_RealArray::Set: occ::handle<TDataStd_RealArray> (const TDF_Label &, const int, const int, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Get#1",
+      "nativeName": "TDF_Reference::Get",
+      "signature": "TDF_Reference::Get: TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@GetID#S",
+      "nativeName": "TDF_Reference::GetID",
+      "signature": "TDF_Reference::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Set#&1$@S@TDF_Label#S0_#S",
+      "nativeName": "TDF_Reference::Set",
+      "signature": "TDF_Reference::Set: occ::handle<TDF_Reference> (const TDF_Label &, const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@GetID#S",
+      "nativeName": "TDataStd_ReferenceArray::GetID",
+      "signature": "TDataStd_ReferenceArray::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Set#&1$@S@TDF_Label#I#I#S",
+      "nativeName": "TDataStd_ReferenceArray::Set",
+      "signature": "TDataStd_ReferenceArray::Set: occ::handle<TDataStd_ReferenceArray> (const TDF_Label &, const int, const int)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetValue#I#&1$@S@TDF_Label#",
+      "nativeName": "TDataStd_ReferenceArray::SetValue",
+      "signature": "TDataStd_ReferenceArray::SetValue: void (const int, const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Value#I#1",
+      "nativeName": "TDataStd_ReferenceArray::Value",
+      "signature": "TDataStd_ReferenceArray::Value: TDF_Label (const int) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_TreeNode@F@GetDefaultTreeID#S",
+      "nativeName": "TDataStd_TreeNode::GetDefaultTreeID",
+      "signature": "TDataStd_TreeNode::GetDefaultTreeID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_TreeNode@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_TreeNode::Set",
+      "signature": "TDataStd_TreeNode::Set: occ::handle<TDataStd_TreeNode> (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_NamedShape@F@GetID#S",
+      "nativeName": "TNaming_NamedShape::GetID",
+      "signature": "TNaming_NamedShape::GetID: const Standard_GUID &()",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Tool@F@GetShape#&1$@N@opencascade@S@handle>#$@S@TNaming_NamedShape#S",
+      "nativeName": "TNaming_Tool::GetShape",
+      "signature": "TNaming_Tool::GetShape: TopoDS_Shape (const occ::handle<TNaming_NamedShape> &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@TNaming_Builder#&1$@S@TDF_Label#",
+      "nativeName": "TNaming_Builder::TNaming_Builder",
+      "signature": "TNaming_Builder::TNaming_Builder: void (const TDF_Label &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "TNaming_Builder::Generated",
+      "signature": "TNaming_Builder::Generated: void (const TopoDS_Shape &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@AttributeDeltas#1",
+      "nativeName": "TDF_Delta::AttributeDeltas",
+      "signature": "TDF_Delta::AttributeDeltas: const NCollection_List<occ::handle<TDF_AttributeDelta>> &() const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@Name#1",
+      "nativeName": "TDF_Delta::Name",
+      "signature": "TDF_Delta::Name: TCollection_ExtendedString () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@SetName#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDF_Delta::SetName",
+      "signature": "TDF_Delta::SetName: void (const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeDelta@F@Label#1",
+      "nativeName": "TDF_AttributeDelta::Label",
+      "signature": "TDF_AttributeDelta::Label: TDF_Label () const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S",
+      "nativeName": "TDataStd_ExtStringArray::Set",
+      "signature": "TDataStd_ExtStringArray::Set: occ::handle<TDataStd_ExtStringArray> (const TDF_Label &, const Standard_GUID &, const int, const int, const bool)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@SetValue#I#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringArray::SetValue",
+      "signature": "TDataStd_ExtStringArray::SetValue: void (const int, const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Value#I#1",
+      "nativeName": "TDataStd_ExtStringArray::Value",
+      "signature": "TDataStd_ExtStringArray::Value: const TCollection_ExtendedString &(const int) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Modify#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "TNaming_Builder::Modify",
+      "signature": "TNaming_Builder::Modify: void (const TopoDS_Shape &, const TopoDS_Shape &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@BinMDataStd_NamedDataDriver@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@BinObjMgt_Persistent#&$@S@NCollection_IndexedMap>#$@N@opencascade@S@handle>#$@S@Standard_Transient#$@S@NCollection_DefaultHasher>#S7_#1",
+      "nativeName": "BinMDataStd_NamedDataDriver::Paste",
+      "signature": "BinMDataStd_NamedDataDriver::Paste: void (const occ::handle<TDF_Attribute> &, BinObjMgt_Persistent &, NCollection_IndexedMap<occ::handle<Standard_Transient>> &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@BinMDataStd_NamedDataDriver@F@Paste#&1$@S@BinObjMgt_Persistent#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@BinObjMgt_RRelocationTable#1",
+      "nativeName": "BinMDataStd_NamedDataDriver::Paste",
+      "signature": "BinMDataStd_NamedDataDriver::Paste: bool (const BinObjMgt_Persistent &, const occ::handle<TDF_Attribute> &, BinObjMgt_RRelocationTable &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@TDocStd_Application@F@DefineFormat#&1$@S@TCollection_AsciiString#S0_#S0_#&1$@N@opencascade@S@handle>#$@S@PCDM_RetrievalDriver#&1$@N@opencascade@S@handle>#$@S@PCDM_StorageDriver#",
+      "nativeName": "TDocStd_Application::DefineFormat",
+      "signature": "TDocStd_Application::DefineFormat: void (const TCollection_AsciiString &, const TCollection_AsciiString &, const TCollection_AsciiString &, const occ::handle<PCDM_RetrievalDriver> &, const occ::handle<PCDM_StorageDriver> &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@XmlDrivers_DocumentStorageDriver@F@XmlDrivers_DocumentStorageDriver#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "XmlDrivers_DocumentStorageDriver::XmlDrivers_DocumentStorageDriver",
+      "signature": "XmlDrivers_DocumentStorageDriver::XmlDrivers_DocumentStorageDriver: void (const TCollection_ExtendedString &)",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@XmlMDataStd_NamedDataDriver@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_Persistent#&$@S@XmlObjMgt_SRelocationTable#1",
+      "nativeName": "XmlMDataStd_NamedDataDriver::Paste",
+      "signature": "XmlMDataStd_NamedDataDriver::Paste: void (const occ::handle<TDF_Attribute> &, XmlObjMgt_Persistent &, XmlObjMgt_SRelocationTable &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    },
+    {
+      "stableId": "c:@S@XmlMDataStd_NamedDataDriver@F@Paste#&1$@S@XmlObjMgt_Persistent#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&$@S@XmlObjMgt_RRelocationTable#1",
+      "nativeName": "XmlMDataStd_NamedDataDriver::Paste",
+      "signature": "XmlMDataStd_NamedDataDriver::Paste: bool (const XmlObjMgt_Persistent &, const occ::handle<TDF_Attribute> &, XmlObjMgt_RRelocationTable &) const",
+      "guard": "CBPrivateDocumentOperationProfile",
+      "reason": "Native-private original document attribute/naming/transaction profile; bounded readback, command/epoch/foreign/lifetime/storage and publication policy stay in original caller."
+    }
+  ],
+  "supportingOperations": []
+}

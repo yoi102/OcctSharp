@@ -62,6 +62,27 @@ public sealed class RepairSnapshot : IDisposable
         ThrowIfDisposed(); if ((uint)index >= Topology.Count) throw new ArgumentOutOfRangeException(nameof(index));
         return new(Identity, index);
     }
+    /// <summary>Finds a picked subshape on the original shape, before RepairSnapshot.Create deep-copies it.
+    /// Returns -1 for a foreign subshape. The zero-based result uses the full repair topology map order;
+    /// retain it only with the exact shape asset/revision and verify the snapshot fingerprint.</summary>
+    public static int FindTopologyIndex(Shape source, Shape selected)
+    {
+        ArgumentNullException.ThrowIfNull(source);ArgumentNullException.ThrowIfNull(selected);
+        source.ThrowIfDisposed();selected.ThrowIfDisposed();
+        NativeError.ThrowIfFailed(NativeMethods.RepairFindTopologyIndex(source.Handle,selected.Handle,out int index),"repair_find_topology_index");
+        return index;
+    }
+    /// <summary>Finds the sole source subshape sharing the picked shape's underlying TShape,
+    /// even when a Viewer occurrence has another location. Returns -1 for foreign or ambiguous
+    /// partners. The index is valid only for the exact source BRep and its fingerprint.</summary>
+    public static int FindTopologyPartnerIndex(Shape source, Shape selected)
+    {
+        ArgumentNullException.ThrowIfNull(source);ArgumentNullException.ThrowIfNull(selected);
+        source.ThrowIfDisposed();selected.ThrowIfDisposed();
+        NativeError.ThrowIfFailed(NativeMethods.RepairFindTopologyPartnerIndex(
+            source.Handle,selected.Handle,out int index),"repair_find_topology_partner_index");
+        return index;
+    }
     public Shape CopyShape()
     {
         ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.RepairCopy(shape.Handle, out nint copy), "repair_copy");

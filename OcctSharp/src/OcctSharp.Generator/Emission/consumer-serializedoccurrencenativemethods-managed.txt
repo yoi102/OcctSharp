@@ -1,0 +1,44 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace OcctSharp.Interop;
+
+[StructLayout(LayoutKind.Sequential)]
+internal struct SerializedOccurrenceInfoRaw
+{
+    internal int SchemaVersion, SourceTopologyCount, DecodedTopologyCount, RowCount,
+        PathValueCount, BrepByteCount, TableByteCount, RootKind, RootOrientation, Reserved;
+}
+[StructLayout(LayoutKind.Sequential)]
+internal struct SerializedOccurrenceRowRaw
+{
+    internal int ReferenceIndex, DeclaredSourceTopologyIndex, DecodedTopologyIndex, Kind,
+        Orientation, PathLength, SameIdentityPaths, ExactIdentityPaths, NativePathTokenEqual, Reserved;
+}
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_capture")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SerializedOccurrenceCapture(ShapeHandle root, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_restore")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SerializedOccurrenceRestore(byte* brep, int brepCount, byte* table, int tableCount, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_info")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SerializedOccurrenceInfo(FeatureResultHandle result, out SerializedOccurrenceInfoRaw info);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_row")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SerializedOccurrenceRow(FeatureResultHandle result, int index, out SerializedOccurrenceRowRaw row);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_path")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SerializedOccurrencePath(FeatureResultHandle result, int index, int* path, int capacity, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_buffer")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SerializedOccurrenceBuffer(FeatureResultHandle result, int table, byte* bytes, int capacity, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_member")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SerializedOccurrenceMember(FeatureResultHandle result, int index, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_serialized_occurrence_matches")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SerializedOccurrenceMatches(FeatureResultHandle result, ShapeHandle member, int exact, int* indices, int capacity, out int count);
+}

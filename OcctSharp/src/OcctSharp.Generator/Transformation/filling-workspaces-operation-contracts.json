@@ -1,0 +1,470 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S5_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &, double &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Continuity#1",
+      "nativeName": "GeomFill_AppSurf::Continuity",
+      "signature": "GeomFill_AppSurf::Continuity: GeomAbs_Shape () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@CriteriumWeight#&d#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSurf::CriteriumWeight",
+      "signature": "GeomFill_AppSurf::CriteriumWeight: void (double &, double &, double &) const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@GeomFill_AppSurf#",
+      "nativeName": "GeomFill_AppSurf::GeomFill_AppSurf",
+      "signature": "GeomFill_AppSurf::GeomFill_AppSurf: void ()",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Init#I#I#d#d#I#b#",
+      "nativeName": "GeomFill_AppSurf::Init",
+      "signature": "GeomFill_AppSurf::Init: void (const int, const int, const double, const double, const int, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@IsDone#1",
+      "nativeName": "GeomFill_AppSurf::IsDone",
+      "signature": "GeomFill_AppSurf::IsDone: bool () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@ParType#1",
+      "nativeName": "GeomFill_AppSurf::ParType",
+      "signature": "GeomFill_AppSurf::ParType: Approx_ParametrizationType () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#I#",
+      "nativeName": "GeomFill_AppSurf::Perform",
+      "signature": "GeomFill_AppSurf::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &, const int)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#b#",
+      "nativeName": "GeomFill_AppSurf::Perform",
+      "signature": "GeomFill_AppSurf::Perform: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@PerformSmoothing#&1$@N@opencascade@S@handle>#$@S@GeomFill_Line#&$@S@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_AppSurf::PerformSmoothing",
+      "signature": "GeomFill_AppSurf::PerformSmoothing: void (const occ::handle<GeomFill_Line> &, GeomFill_SectionGenerator &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetContinuity#$@E@GeomAbs_Shape#",
+      "nativeName": "GeomFill_AppSurf::SetContinuity",
+      "signature": "GeomFill_AppSurf::SetContinuity: void (const GeomAbs_Shape)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetCriteriumWeight#d#d#d#",
+      "nativeName": "GeomFill_AppSurf::SetCriteriumWeight",
+      "signature": "GeomFill_AppSurf::SetCriteriumWeight: void (const double, const double, const double)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SetParType#$@E@Approx_ParametrizationType#",
+      "nativeName": "GeomFill_AppSurf::SetParType",
+      "signature": "GeomFill_AppSurf::SetParType: void (const Approx_ParametrizationType)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfPoles#1",
+      "nativeName": "GeomFill_AppSurf::SurfPoles",
+      "signature": "GeomFill_AppSurf::SurfPoles: const NCollection_Array2<gp_Pnt> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfShape#&I#S0_#S0_#S0_#S0_#S0_#1",
+      "nativeName": "GeomFill_AppSurf::SurfShape",
+      "signature": "GeomFill_AppSurf::SurfShape: void (int &, int &, int &, int &, int &, int &) const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfUKnots#1",
+      "nativeName": "GeomFill_AppSurf::SurfUKnots",
+      "signature": "GeomFill_AppSurf::SurfUKnots: const NCollection_Array1<double> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfUMults#1",
+      "nativeName": "GeomFill_AppSurf::SurfUMults",
+      "signature": "GeomFill_AppSurf::SurfUMults: const NCollection_Array1<int> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfVKnots#1",
+      "nativeName": "GeomFill_AppSurf::SurfVKnots",
+      "signature": "GeomFill_AppSurf::SurfVKnots: const NCollection_Array1<double> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfVMults#1",
+      "nativeName": "GeomFill_AppSurf::SurfVMults",
+      "signature": "GeomFill_AppSurf::SurfVMults: const NCollection_Array1<int> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@SurfWeights#1",
+      "nativeName": "GeomFill_AppSurf::SurfWeights",
+      "signature": "GeomFill_AppSurf::SurfWeights: const NCollection_Array2<double> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@Surface#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&$@S@NCollection_Array1>#d#S5_#&$@S@NCollection_Array1>#I#S7_#1",
+      "nativeName": "GeomFill_AppSurf::Surface",
+      "signature": "GeomFill_AppSurf::Surface: void (NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<int> &) const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@TolReached#&d#S0_#1",
+      "nativeName": "GeomFill_AppSurf::TolReached",
+      "signature": "GeomFill_AppSurf::TolReached: void (double &, double &) const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@UDegree#1",
+      "nativeName": "GeomFill_AppSurf::UDegree",
+      "signature": "GeomFill_AppSurf::UDegree: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    },
+    {
+      "stableId": "c:@S@GeomFill_AppSurf@F@VDegree#1",
+      "nativeName": "GeomFill_AppSurf::VDegree",
+      "signature": "GeomFill_AppSurf::VDegree: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private initialized bounded arrays/receivers, copied inputs, completion-gated surface and independent topology; no guessed topology history."
+    }
+  ],
+  "supportingOperations": [
+    {
+      "stableId": "c:@S@GeomConvert@F@CurveToBSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#$@E@Convert_ParameterisationType#S",
+      "nativeName": "GeomConvert::CurveToBSplineCurve",
+      "signature": "GeomConvert::CurveToBSplineCurve: occ::handle<Geom_BSplineCurve> (const occ::handle<Geom_Curve> &, const Convert_ParameterisationType)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_Line@F@GeomFill_Line#I#",
+      "nativeName": "GeomFill_Line::GeomFill_Line",
+      "signature": "GeomFill_Line::GeomFill_Line: void (const int)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_Line@F@NbPoints#1",
+      "nativeName": "GeomFill_Line::NbPoints",
+      "signature": "GeomFill_Line::NbPoints: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_Profiler@F@AddCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "nativeName": "GeomFill_Profiler::AddCurve",
+      "signature": "GeomFill_Profiler::AddCurve: void (const occ::handle<Geom_Curve> &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_Profiler@F@Perform#d#",
+      "nativeName": "GeomFill_Profiler::Perform",
+      "signature": "GeomFill_Profiler::Perform: void (const double)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_SectionGenerator::GeomFill_SectionGenerator",
+      "signature": "GeomFill_SectionGenerator::GeomFill_SectionGenerator: void ()",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@GeomFill_SectionGenerator#&1$@S@GeomFill_SectionGenerator#",
+      "nativeName": "GeomFill_SectionGenerator::GeomFill_SectionGenerator",
+      "signature": "GeomFill_SectionGenerator::GeomFill_SectionGenerator: void (const GeomFill_SectionGenerator &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@GeomFill_SectionGenerator@F@SetParam#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "GeomFill_SectionGenerator::SetParam",
+      "signature": "GeomFill_SectionGenerator::SetParam: void (const occ::handle<NCollection_HArray1<double>> &)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Copy#1",
+      "nativeName": "Geom_BSplineCurve::Copy",
+      "signature": "Geom_BSplineCurve::Copy: occ::handle<Geom_Geometry> () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Degree#1",
+      "nativeName": "Geom_BSplineCurve::Degree",
+      "signature": "Geom_BSplineCurve::Degree: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@FirstParameter#1",
+      "nativeName": "Geom_BSplineCurve::FirstParameter",
+      "signature": "Geom_BSplineCurve::FirstParameter: double () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@IsPeriodic#1",
+      "nativeName": "Geom_BSplineCurve::IsPeriodic",
+      "signature": "Geom_BSplineCurve::IsPeriodic: bool () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Knots#1",
+      "nativeName": "Geom_BSplineCurve::Knots",
+      "signature": "Geom_BSplineCurve::Knots: const NCollection_Array1<double> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@LastParameter#1",
+      "nativeName": "Geom_BSplineCurve::LastParameter",
+      "signature": "Geom_BSplineCurve::LastParameter: double () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Multiplicities#1",
+      "nativeName": "Geom_BSplineCurve::Multiplicities",
+      "signature": "Geom_BSplineCurve::Multiplicities: const NCollection_Array1<int> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@NbKnots#1",
+      "nativeName": "Geom_BSplineCurve::NbKnots",
+      "signature": "Geom_BSplineCurve::NbKnots: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@NbPoles#1",
+      "nativeName": "Geom_BSplineCurve::NbPoles",
+      "signature": "Geom_BSplineCurve::NbPoles: int () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Poles#1",
+      "nativeName": "Geom_BSplineCurve::Poles",
+      "signature": "Geom_BSplineCurve::Poles: const NCollection_Array1<gp_Pnt> &() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Weights#1",
+      "nativeName": "Geom_BSplineCurve::Weights",
+      "signature": "Geom_BSplineCurve::Weights: const NCollection_Array1<double> *() const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Copy#1",
+      "nativeName": "Geom_BSplineSurface::Copy",
+      "signature": "Geom_BSplineSurface::Copy: occ::handle<Geom_Geometry> () const",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#",
+      "nativeName": "Geom_BSplineSurface::Geom_BSplineSurface",
+      "signature": "Geom_BSplineSurface::Geom_BSplineSurface: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_Circle@F@Geom_Circle#&1$@S@gp_Ax2#d#",
+      "nativeName": "Geom_Circle::Geom_Circle",
+      "signature": "Geom_Circle::Geom_Circle: void (const gp_Ax2 &, const double)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    },
+    {
+      "stableId": "c:@S@Geom_TrimmedCurve@F@Geom_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#b#b#",
+      "nativeName": "Geom_TrimmedCurve::Geom_TrimmedCurve",
+      "signature": "Geom_TrimmedCurve::Geom_TrimmedCurve: void (const occ::handle<Geom_Curve> &, const double, const double, const bool, const bool)",
+      "guard": "AWPrivateGeometry",
+      "reason": "Private copied workflow prerequisite; no borrowed output escapes."
+    }
+  ]
+}

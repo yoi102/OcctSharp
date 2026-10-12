@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@Standard_GUID@F@CheckGUIDFormat#*1C#S",
+      "nativeName": "Standard_GUID::CheckGUIDFormat",
+      "signature": "Standard_GUID::CheckGUIDFormat: bool (const char *const)",
+      "guard": "CFDocumentIdentityCopyPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@Standard_GUID#*1C#",
+      "nativeName": "Standard_GUID::Standard_GUID",
+      "signature": "Standard_GUID::Standard_GUID: void (const char *const)",
+      "guard": "CFDocumentIdentityCopyPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@DynamicType#1",
+      "nativeName": "TDF_Attribute::DynamicType",
+      "signature": "TDF_Attribute::DynamicType: const occ::handle<Standard_Type> &() const",
+      "guard": "CFDocumentIdentityCopyPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@ToCString#*C#1",
+      "nativeName": "Standard_GUID::ToCString",
+      "signature": "Standard_GUID::ToCString: void (const Standard_PCharacter) const",
+      "guard": "CFDocumentIdentityCopyPolicy",
+      "reason": "Exact pinned SDK delegation under existing viewer/document thread, registry, parent/epoch validation, initialized inputs, immediate copied return and success-only publication. Borrowed SDK references and fresh ClipPlane allocations remain inside the original policy scope. No public raw pointer or derived SDK receiver."
+    }
+  ],
+  "supportingOperations": []
+}

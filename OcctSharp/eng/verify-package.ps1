@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '8.0.1-preview.28',
+    [string]$PackageVersion = '8.0.1-preview.83',
 
     [switch]$SkipBuild
 )
@@ -135,11 +135,25 @@ if ($LASTEXITCODE -ne 0) {
     throw "Package consumer publish failed with exit code $LASTEXITCODE."
 }
 
+$previousBqEvidence = $env:OCCTSHARP_BATCH_BQ_EVIDENCE
+$bqEvidenceRoot = if (-not [string]::IsNullOrWhiteSpace($previousBqEvidence)) { Split-Path -Parent ([IO.Path]::GetFullPath($previousBqEvidence)) } else { Join-Path $workspaceRoot "artifacts/package-visible/$PackageVersion/round-visible" }
+$bqEnabled = Test-Path -LiteralPath (Join-Path $workspaceRoot 'tests/Shared/BatchBQWholeRoundWorkflow.cs')
+$previousBkEvidence = $env:OCCTSHARP_BATCH_BK_EVIDENCE
+$bkEvidenceRoot = if (-not [string]::IsNullOrWhiteSpace($previousBkEvidence)) {
+    Split-Path -Parent ([IO.Path]::GetFullPath($previousBkEvidence))
+} elseif ($PackageVersion -eq '8.0.1-preview.61') {
+    Join-Path $workspaceRoot 'artifacts/batch-bk/whole-round-visible'
+} else {
+    Join-Path $workspaceRoot "artifacts/package-visible/$PackageVersion/whole-round-visible"
+}
+$bkEnabled = Test-Path -LiteralPath (Join-Path $workspaceRoot 'tests/Shared/BatchBKConfiguredMeshWorkflow.cs')
 $consumerExecutable = Join-Path $publishDirectory 'OcctSharp.PackageConsumer.exe'
 if (-not (Test-Path -LiteralPath $consumerExecutable)) {
     throw "Package consumer executable was not created: '$consumerExecutable'."
 }
 
+if ($bkEnabled) { $env:OCCTSHARP_BATCH_BK_EVIDENCE = Join-Path $bkEvidenceRoot 'facade' }
+if ($bqEnabled) { $env:OCCTSHARP_BATCH_BQ_EVIDENCE = Join-Path $bqEvidenceRoot 'facade' }
 & $consumerExecutable
 if ($LASTEXITCODE -ne 0) {
     throw "Package consumer failed with exit code $LASTEXITCODE."
@@ -179,6 +193,8 @@ if (-not (Test-Path -LiteralPath $moduleConsumerExecutable)) {
     throw "Direct module consumer executable was not created: '$moduleConsumerExecutable'."
 }
 
+if ($bkEnabled) { $env:OCCTSHARP_BATCH_BK_EVIDENCE = Join-Path $bkEvidenceRoot 'module' }
+if ($bqEnabled) { $env:OCCTSHARP_BATCH_BQ_EVIDENCE = Join-Path $bqEvidenceRoot 'module' }
 & $moduleConsumerExecutable
 if ($LASTEXITCODE -ne 0) {
     throw "Direct module consumer failed with exit code $LASTEXITCODE."
@@ -193,5 +209,7 @@ if ($moduleNativeFiles.Count -ne $nativeFiles.Count) {
 Write-Host "Direct module package consumer verified $($moduleNativeFiles.Count) shared native DLLs without the facade package."
 }
 finally {
+    if (Get-Variable previousBqEvidence -ErrorAction SilentlyContinue) { $env:OCCTSHARP_BATCH_BQ_EVIDENCE = $previousBqEvidence }
+    if (Get-Variable previousBkEvidence -ErrorAction SilentlyContinue) { $env:OCCTSHARP_BATCH_BK_EVIDENCE = $previousBkEvidence }
     Pop-Location
 }

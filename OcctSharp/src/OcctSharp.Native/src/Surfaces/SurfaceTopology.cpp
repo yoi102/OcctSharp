@@ -3,7 +3,7 @@
 #include <BRepBuilderAPI_Copy.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <BRepBuilderAPI_MakeWire.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <BRepOffsetAPI_NormalProjection.hxx>
 #include <BRepAlgoAPI_Section.hxx>
 #include <BRepFeat_SplitShape.hxx>
@@ -152,7 +152,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_surface_make_face(
       auto wire = TypedShape(wires[index], TopAbs_WIRE);
       local.push_back(TopoDS::Wire(CopyTopology(wire).Moved(data.location.Inverted())));
     }
-    BRepBuilderAPI_MakeFace builder(data.surface, local[0], true);
+    OcctSharpGenerated::FaceBuilder builder(data.surface, local[0], true);
     for (int index = 1; index < count; ++index) builder.Add(local[index]);
     Require(builder.IsDone(), "Surface trimming failed.");
     auto face = builder.Face().Moved(data.location);
@@ -269,7 +269,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_surface_create_analytic(
         surface = new Geom_ToroidalSurface(frame, radius, secondary);
       }
     }
-    BRepBuilderAPI_MakeFace builder(surface, bounds[0], bounds[1], bounds[2], bounds[3], tolerance);
+    OcctSharpGenerated::FaceBuilder builder(surface, bounds[0], bounds[1], bounds[2], bounds[3], tolerance);
     Require(builder.IsDone(), "Analytic face creation failed."); Result(builder.Face(), output);
   });
 }

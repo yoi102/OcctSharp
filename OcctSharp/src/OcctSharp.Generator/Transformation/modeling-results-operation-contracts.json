@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@HasAncestorFaceOn1#&1$@S@TopoDS_Shape#&S1_#1",
+      "nativeName": "BRepAlgoAPI_Section::HasAncestorFaceOn1",
+      "signature": "BRepAlgoAPI_Section::HasAncestorFaceOn1: bool (const TopoDS_Shape &, TopoDS_Shape &) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@HasAncestorFaceOn2#&1$@S@TopoDS_Shape#&S1_#1",
+      "nativeName": "BRepAlgoAPI_Section::HasAncestorFaceOn2",
+      "signature": "BRepAlgoAPI_Section::HasAncestorFaceOn2: bool (const TopoDS_Shape &, TopoDS_Shape &) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init1#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_Section::Init1",
+      "signature": "BRepAlgoAPI_Section::Init1: void (const TopoDS_Shape &)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Init2#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_Section::Init2",
+      "signature": "BRepAlgoAPI_Section::Init2: void (const TopoDS_Shape &)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@AddWire#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::AddWire",
+      "signature": "BRepOffsetAPI_MakeOffset::AddWire: void (const TopoDS_Wire &)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset",
+      "signature": "BRepOffsetAPI_MakeOffset::BRepOffsetAPI_MakeOffset: void ()",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Generated",
+      "signature": "BRepOffsetAPI_MakeOffset::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Init#&1$@S@TopoDS_Face#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Init",
+      "signature": "BRepOffsetAPI_MakeOffset::Init: void (const TopoDS_Face &, const GeomAbs_JoinType, const bool)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Init#$@E@GeomAbs_JoinType#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::Init",
+      "signature": "BRepOffsetAPI_MakeOffset::Init: void (const GeomAbs_JoinType, const bool)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@SetApprox#b#",
+      "nativeName": "BRepOffsetAPI_MakeOffset::SetApprox",
+      "signature": "BRepOffsetAPI_MakeOffset::SetApprox: void (const bool)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Continuity#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::Continuity",
+      "signature": "BRepOffsetAPI_ThruSections::Continuity: GeomAbs_Shape () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@CriteriumWeight#&d#S0_#S0_#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::CriteriumWeight",
+      "signature": "BRepOffsetAPI_ThruSections::CriteriumWeight: void (double &, double &, double &) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@GeneratedFace#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::GeneratedFace",
+      "signature": "BRepOffsetAPI_ThruSections::GeneratedFace: TopoDS_Shape (const TopoDS_Shape &) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Init#b#b#d#",
+      "nativeName": "BRepOffsetAPI_ThruSections::Init",
+      "signature": "BRepOffsetAPI_ThruSections::Init: void (const bool, const bool, const double)",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@IsMutableInput#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::IsMutableInput",
+      "signature": "BRepOffsetAPI_ThruSections::IsMutableInput: bool () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@MaxDegree#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::MaxDegree",
+      "signature": "BRepOffsetAPI_ThruSections::MaxDegree: int () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@ParType#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::ParType",
+      "signature": "BRepOffsetAPI_ThruSections::ParType: Approx_ParametrizationType () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@UseSmoothing#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::UseSmoothing",
+      "signature": "BRepOffsetAPI_ThruSections::UseSmoothing: bool () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Wires#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::Wires",
+      "signature": "BRepOffsetAPI_ThruSections::Wires: const NCollection_List<TopoDS_Shape> &() const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_PaveFiller@F@PDS#",
+      "nativeName": "BOPAlgo_PaveFiller::PDS",
+      "signature": "BOPAlgo_PaveFiller::PDS: BOPDS_PDS ()",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_Curve@F@PaveBlocks#1",
+      "nativeName": "BOPDS_Curve::PaveBlocks",
+      "signature": "BOPDS_Curve::PaveBlocks: const NCollection_List<occ::handle<BOPDS_PaveBlock>> &() const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@InterfFF#",
+      "nativeName": "BOPDS_DS::InterfFF",
+      "signature": "BOPDS_DS::InterfFF: NCollection_DynamicArray<BOPDS_InterfFF> &()",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@NbShapes#1",
+      "nativeName": "BOPDS_DS::NbShapes",
+      "signature": "BOPDS_DS::NbShapes: int () const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_DS@F@Shape#I#1",
+      "nativeName": "BOPDS_DS::Shape",
+      "signature": "BOPDS_DS::Shape: const TopoDS_Shape &(const int) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_Interf@F@Indices#&I#S0_#1",
+      "nativeName": "BOPDS_Interf::Indices",
+      "signature": "BOPDS_Interf::Indices: void (int &, int &) const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BOPDS_InterfFF@F@Curves#1",
+      "nativeName": "BOPDS_InterfFF::Curves",
+      "signature": "BOPDS_InterfFF::Curves: const NCollection_DynamicArray<BOPDS_Curve> &() const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@DSFiller#1",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::DSFiller",
+      "signature": "BRepAlgoAPI_BuilderAlgo::DSFiller: const BOPAlgo_PPaveFiller &() const",
+      "guard": "BGPrivateModelingSourceDomain",
+      "reason": "Exact initialized private modeling inputs and copied success-only results; bounded complete source-path evidence."
+    }
+  ],
+  "supportingOperations": []
+}

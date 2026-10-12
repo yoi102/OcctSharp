@@ -1,5 +1,7 @@
+#include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Documents/Lifecycle implementation. Public contracts and ownership are unchanged.
 #include "Documents/Lifecycle.hxx"
+#include "Documents/NamedDataPersistence.hxx"
 #include "Foundation/Text.hxx"
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
@@ -47,7 +49,7 @@ TDF_Label ResolveOcafLabel(const OcctSharp_OcafDocumentHandle* document, const c
   }
   TDF_Label label;
   TDF_Tool::Label(document->Document->GetData(), entry, label, false);
-  if (label.IsNull())
+  if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label))
   {
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The OCAF label entry does not exist.");
   }
@@ -66,7 +68,7 @@ void RequireOpenOcafCommand(const OcctSharp_OcafDocumentHandle* document)
 
 void CopyLabelEntry(const TDF_Label& label, char* buffer, const int32_t capacity, int32_t* written)
 {
-  if (label.IsNull())
+  if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(label))
   {
     throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT returned a null XDE label.");
   }
@@ -90,8 +92,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_create(
   return Guard([&]
   {
     opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
-    BinDrivers::DefineFormat(application);
-    XmlDrivers::DefineFormat(application);
+    ConfigureSafeNamedDataDrivers(application);
     opencascade::handle<TDocStd_Document> document;
     application->NewDocument(TCollection_ExtendedString("BinOcaf"), document);
     if (document.IsNull())
@@ -118,8 +119,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_open(
   {
     ValidatePath(file_path);
     opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
-    BinDrivers::DefineFormat(application);
-    XmlDrivers::DefineFormat(application);
+    ConfigureSafeNamedDataDrivers(application);
     opencascade::handle<TDocStd_Document> document;
     const PCDM_ReaderStatus status = application->Open(
       TCollection_ExtendedString(file_path, true), document);
@@ -147,7 +147,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_save(
         OCCTSHARP_STATUS_INVALID_ARGUMENT,
         "The OCAF transaction must be committed or aborted before saving.");
     }
-    const PCDM_StoreStatus status = document->Application->SaveAs(
+    const PCDM_StoreStatus status = OcctSharpGenerated::DocumentAdapters::TDocStd_Application_SaveAs(*(document->Application),
       document->Document, TCollection_ExtendedString(file_path, true));
     if (status != PCDM_SS_OK)
     {
@@ -244,11 +244,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_add_child(
     RequireOpenOcafCommand(document);
     const TDF_Label parent = ResolveOcafLabel(document, parent_entry);
     const TDF_Label child = TDF_TagSource::NewChild(parent);
-    if (child.IsNull())
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_IsNull(child))
     {
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null OCAF child label.");
     }
-    *child_tag = child.Tag();
+    *child_tag = OcctSharpGenerated::DocumentAdapters::TDF_Label_Tag(child);
   });
 }
 
@@ -274,7 +274,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_set_name(
   {
     ValidateOcafDocument(document);
     RequireOpenOcafCommand(document);
-    TDataStd_Name::Set(ResolveOcafLabel(document, entry), MakeExtendedUtf8(utf8, length));
+    OcctSharpGenerated::DocumentAdapters::TDataStd_Name_Set(ResolveOcafLabel(document, entry), MakeExtendedUtf8(utf8, length));
   });
 }
 
@@ -294,10 +294,10 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_name_utf8_length(
   return Guard([&]
   {
     opencascade::handle<TDataStd_Name> name;
-    if (ResolveOcafLabel(document, entry).FindAttribute(TDataStd_Name::GetID(), name))
+    if (OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID(), name))
     {
       *has_name = 1;
-      *length = name->Get().LengthOfCString();
+      *length = OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(name)).LengthOfCString();
     }
   });
 }
@@ -312,11 +312,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_name_to_utf8(
   return Guard([&]
   {
     opencascade::handle<TDataStd_Name> name;
-    if (!ResolveOcafLabel(document, entry).FindAttribute(TDataStd_Name::GetID(), name))
+    if (!OcctSharpGenerated::DocumentAdapters::TDF_Label_FindAttribute(ResolveOcafLabel(document, entry),OcctSharpGenerated::DocumentAdapters::TDataStd_Name_GetID(), name))
     {
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The OCAF label has no name attribute.");
     }
-    CopyUtf8Result(ExtendedToUtf8(name->Get()), buffer, capacity, written);
+    CopyUtf8Result(ExtendedToUtf8(OcctSharpGenerated::DocumentAdapters::TDataStd_GenericExtString_Get(*(name))), buffer, capacity, written);
   });
 }
 

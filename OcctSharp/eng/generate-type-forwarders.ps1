@@ -17,7 +17,7 @@ $moduleNames = @(
     'Documents', 'Visualization', 'DataExchange', 'Xde', 'IVtk', 'Draw'
 )
 $forwarderPath = Join-Path $workspaceRoot 'src\OcctSharp\Compatibility\TypeForwarders.Generated.cs'
-$checkPath = Join-Path $workspaceRoot 'artifacts\generator-reports\type-forwarders.check.cs'
+$checkPath = Join-Path $workspaceRoot ("artifacts\generator-reports\type-forwarders.check.$([Guid]::NewGuid().ToString('N')).cs")
 $outputPath = if ($Check) { $checkPath } else { $forwarderPath }
 
 Push-Location -LiteralPath $workspaceRoot
@@ -53,5 +53,8 @@ try {
     }
 }
 finally {
+    if ($Check -and (Test-Path -LiteralPath $checkPath -PathType Leaf)) {
+        Remove-Item -LiteralPath $checkPath -Force
+    }
     Pop-Location
 }

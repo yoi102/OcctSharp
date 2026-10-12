@@ -1,9 +1,10 @@
+#include "../../generated/Modeling/OcctSharp.Modeling.LocalFeatureAdapters.Generated.hxx"
 #include "Modeling/GuidedAuthoring.hxx"
 #include "Modeling/ScalarLaws.hxx"
 #include <BRepOffsetAPI_MakePipeShell.hxx>
 #include <BRepTools_WireExplorer.hxx>
 #include <BRepAdaptor_Curve.hxx>
-#include <BRepBuilderAPI_MakeFace.hxx>
+#include "../../generated/Modeling/OcctSharp.Modeling.TopologyFaceAdapters.Generated.hxx"
 #include <Geom2d_Curve.hxx>
 #include <TopExp_Explorer.hxx>
 #include <TopoDS_Wire.hxx>
@@ -27,7 +28,7 @@ void Support(const TopoDS_Wire& spine, const TopoDS_Shape& support) {
     Require(supported, "Every spine edge must have a pcurve on an explicitly supplied support face.");
   }
 }
-void Frame(BRepOffsetAPI_MakePipeShell& builder, const TopoDS_Wire& spine,
+void Frame(OcctSharpGenerated::LocalMakePipeShellBuilder& builder, const TopoDS_Wire& spine,
   const InputGraph& graph, const OcctSharp_SweepOptions& o) {
   switch (o.frame) {
     case 0: builder.SetMode(false); break;
@@ -80,7 +81,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_sweep(const OcctSharp_ShapeHand
       const auto& profile = graph.At(section.shape_index);
       if (o.contact == 2) {
         Require(profile.ShapeType() == TopAbs_WIRE, "Border contact requires a planar wire section.");
-        BRepBuilderAPI_MakeFace plane(TopoDS::Wire(profile), true);
+        OcctSharpGenerated::FaceBuilder plane(TopoDS::Wire(profile), true);
         // BRepFill_PipeShell::Add assumes this planar face exists and otherwise
         // dereferences a null surface. Reject the unsupported input before Add.
         Require(plane.IsDone() && !plane.Shape().IsNull()
@@ -102,7 +103,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_sweep(const OcctSharp_ShapeHand
     auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
     OcctSharp_AuthoringInfo state{}; state.continuity_limit = o.frame == 6 && o.contact != 0 ? 0 : -1;
     try {
-      BRepOffsetAPI_MakePipeShell builder(spine); builder.SetIsBuildHistory(true); Frame(builder, spine, graph, o);
+      OcctSharpGenerated::LocalMakePipeShellBuilder builder(spine); builder.SetIsBuildHistory(true); Frame(builder, spine, graph, o);
       builder.SetTolerance(o.tolerance_3d, o.tolerance_boundary, o.tolerance_angular);
       builder.SetMaxDegree(o.maximum_degree); builder.SetMaxSegments(o.maximum_segments); builder.SetForceApproxC1(o.force_c1 != 0);
       builder.SetTransitionMode(static_cast<BRepBuilderAPI_TransitionMode>(o.transition));

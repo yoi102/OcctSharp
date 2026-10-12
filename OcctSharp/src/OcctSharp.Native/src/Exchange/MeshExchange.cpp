@@ -1,3 +1,5 @@
+#include "../../generated/DataExchange/OcctSharp.DataExchange.MeshExchangeAdapters.Generated.hxx"
+#include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 #include "Mesh/MeshAuthoring.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Shape.hxx"
@@ -49,7 +51,7 @@ public:
         if (NormalNodes.contains(i)) normal = myNormals.Value(i - 1);
         const float scale = std::max({std::abs(normal.x()), std::abs(normal.y()), std::abs(normal.z())});
         if (scale > 0) { normal /= scale; normal.Normalize(); } else Disclosures |= 2;
-        mesh->SetNormal(i, normal);
+        OcctSharpGenerated::MeshSetNormal(*mesh, i, normal);
       }
     }
     return mesh;
@@ -92,11 +94,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_read_editable(const char* path, i
         bool binary = 84ULL + 50ULL * count == size || std::string(header, 5) != "solid";
         if (binary) Require(count <= MaximumElements && 84ULL + 50ULL * count == size, "Binary STL has an invalid or excessive facet count.");
       }
-      mesh = RWStl::ReadFile(path); *disclosures = 4;
+      mesh = OcctSharpGenerated::MeshExchangeAdapters::RWStl_ReadFile(path); *disclosures = 4;
     } else {
       CopiedObjReader reader; reader.SetCreateShapes(false); reader.SetSinglePrecision(false);
-      reader.SetMemoryLimit(static_cast<size_t>(std::min<int64_t>(maximumBytes * 8, 1073741824)));
-      Require(reader.Read(TCollection_AsciiString(path), Message_ProgressRange()), "OCCT could not read editable OBJ.");
+      OcctSharpGenerated::MeshExchangeAdapters::RWObj_Reader_SetMemoryLimit_Bind(reader)(static_cast<size_t>(std::min<int64_t>(maximumBytes * 8, 1073741824)));
+      Require(OcctSharpGenerated::MeshExchangeAdapters::RWObj_Reader_Read_Bind(reader)(TCollection_AsciiString(path), Message_ProgressRange()), "OCCT could not read editable OBJ.");
       mesh = reader.GetTriangulation(); *disclosures = reader.Disclosures | 8;
     }
     Require(!mesh.IsNull() && mesh->NbNodes() > 0 && mesh->NbNodes() <= MaximumElements && mesh->NbTriangles() > 0 &&
@@ -110,7 +112,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_write_stl(const OcctSharp_Authore
   return Guard([&] {
     ValidatePath(path); Require(binary == 0 || binary == 1, "STL binary flag must be Boolean.");
     auto mesh = Build(vertices, vertexCount, triangles, triangleCount); OSD_Path file(path);
-    bool written = binary ? RWStl::WriteBinary(mesh, file) : RWStl::WriteAscii(mesh, file);
+    bool written = binary ? OcctSharpGenerated::MeshExchangeAdapters::RWStl_WriteBinary(mesh, file) : OcctSharpGenerated::MeshExchangeAdapters::RWStl_WriteAscii(mesh, file);
     if (!written) throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the authored STL mesh.");
   });
 }
@@ -124,18 +126,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_convert_coordinates(const OcctSha
       (sourceUp == 0 || sourceUp == 1) && (targetUp == 0 || targetUp == 1) && (sourceLeft == 0 || sourceLeft == 1) &&
       (targetLeft == 0 || targetLeft == 1) && capacity >= count && (count == 0 || output), "Invalid coordinate conversion request.");
     RWMesh_CoordinateSystemConverter converter;
-    converter.SetInputLengthUnit(sourceUnit); converter.SetOutputLengthUnit(targetUnit);
-    converter.SetInputCoordinateSystem(sourceUp == 0 ? RWMesh_CoordinateSystem_posYfwd_posZup : RWMesh_CoordinateSystem_negZfwd_posYup);
-    converter.SetOutputCoordinateSystem(targetUp == 0 ? RWMesh_CoordinateSystem_posYfwd_posZup : RWMesh_CoordinateSystem_negZfwd_posYup);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetInputLengthUnit_Bind(converter)(sourceUnit); OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetOutputLengthUnit_Bind(converter)(targetUnit);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetInputCoordinateSystem_Bind(converter)(sourceUp == 0 ? RWMesh_CoordinateSystem_posYfwd_posZup : RWMesh_CoordinateSystem_negZfwd_posYup);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetOutputCoordinateSystem_Bind(converter)(targetUp == 0 ? RWMesh_CoordinateSystem_posYfwd_posZup : RWMesh_CoordinateSystem_negZfwd_posYup);
     std::vector<OcctSharp_AuthoredVertex> result; result.reserve(count);
     for (int i = 0; i < count; ++i) {
-      auto v = vertices[i]; gp_XYZ p(sourceLeft ? -v.x : v.x, v.y, v.z); converter.TransformPosition(p);
+      auto v = vertices[i]; gp_XYZ p(sourceLeft ? -v.x : v.x, v.y, v.z); OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_TransformPosition_Bind(converter)(p);
       v.x = targetLeft ? -p.X() : p.X(); v.y = p.Y(); v.z = p.Z();
       if (v.flags & 1) {
         double scale = std::max({std::abs(v.nx), std::abs(v.ny), std::abs(v.nz)});
         gp_XYZ n((sourceLeft ? -v.nx : v.nx) / scale, v.ny / scale, v.nz / scale); n.Normalize();
         NCollection_Vec3<float> normal(static_cast<float>(n.X()), static_cast<float>(n.Y()), static_cast<float>(n.Z()));
-        converter.TransformNormal(normal); normal.Normalize();
+        OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_TransformNormal_Bind(converter)(normal); normal.Normalize();
         v.nx = targetLeft ? -normal.x() : normal.x(); v.ny = normal.y(); v.nz = normal.z();
       }
       result.push_back(v);
@@ -151,24 +153,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_mesh_write_document(const OcctSharp_Oc
     Require(format >= 1 && format <= 3 && (binary == 0 || binary == 1) && channels >= 0 && channels <= 3,
       "Unsupported discrete document format or channel flags.");
     Require(!document->Document->HasOpenCommand(), "Commit the document transaction before discrete export.");
-    RWMesh_CoordinateSystemConverter converter; converter.SetInputLengthUnit(0.001);
-    converter.SetInputCoordinateSystem(RWMesh_CoordinateSystem_posYfwd_posZup);
-    converter.SetOutputLengthUnit(format == 2 ? 1.0 : 0.001);
-    converter.SetOutputCoordinateSystem(format == 2 ? RWMesh_CoordinateSystem_negZfwd_posYup : RWMesh_CoordinateSystem_posYfwd_posZup);
+    RWMesh_CoordinateSystemConverter converter; OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetInputLengthUnit_Bind(converter)(0.001);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetInputCoordinateSystem_Bind(converter)(RWMesh_CoordinateSystem_posYfwd_posZup);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetOutputLengthUnit_Bind(converter)(format == 2 ? 1.0 : 0.001);
+    OcctSharpGenerated::MeshExchangeAdapters::RWMesh_CoordinateSystemConverter_SetOutputCoordinateSystem_Bind(converter)(format == 2 ? RWMesh_CoordinateSystem_negZfwd_posYup : RWMesh_CoordinateSystem_posYfwd_posZup);
     NCollection_IndexedDataMap<TCollection_AsciiString, TCollection_AsciiString> metadata;
     bool written = false;
     if (format == 1) {
-      RWObj_CafWriter writer{TCollection_AsciiString(path)}; writer.SetCoordinateSystemConverter(converter);
-      written = writer.Perform(document->Document, metadata, Message_ProgressRange());
+      RWObj_CafWriter writer = OcctSharpGenerated::MeshExchangeAdapters::ConstructRWObjCafWriter(TCollection_AsciiString(path)); OcctSharpGenerated::MeshExchangeAdapters::RWObj_CafWriter_SetCoordinateSystemConverter_Bind(writer)(converter);
+      written = OcctSharpGenerated::MeshExchangeAdapters::RWObj_CafWriter_Perform_Bind(writer)(document->Document, metadata, Message_ProgressRange());
     } else if (format == 2) {
-      RWGltf_CafWriter writer(TCollection_AsciiString(path), binary != 0); writer.SetCoordinateSystemConverter(converter);
+      RWGltf_CafWriter writer = OcctSharpGenerated::MeshExchangeAdapters::ConstructRWGltfCafWriter(TCollection_AsciiString(path), binary != 0); OcctSharpGenerated::MeshExchangeAdapters::RWGltf_CafWriter_SetCoordinateSystemConverter_Bind(writer)(converter);
       writer.SetForcedUVExport(true);
-      written = writer.Perform(document->Document, metadata, Message_ProgressRange());
+      written = OcctSharpGenerated::MeshExchangeAdapters::RWGltf_CafWriter_Perform_Bind(writer)(document->Document, metadata, Message_ProgressRange());
     } else {
-      RWPly_CafWriter writer{TCollection_AsciiString(path)}; writer.SetCoordinateSystemConverter(converter);
+      RWPly_CafWriter writer = OcctSharpGenerated::MeshExchangeAdapters::ConstructRWPlyCafWriter(TCollection_AsciiString(path)); OcctSharpGenerated::MeshExchangeAdapters::RWPly_CafWriter_SetCoordinateSystemConverter_Bind(writer)(converter);
       writer.SetDoublePrecision(true); writer.SetNormals((channels & 1) != 0); writer.SetTexCoords((channels & 2) != 0);
       writer.SetColors(true); writer.SetPartId(true);
-      written = writer.Perform(document->Document, metadata, Message_ProgressRange());
+      written = OcctSharpGenerated::MeshExchangeAdapters::RWPly_CafWriter_Perform_Bind(writer)(document->Document, metadata, Message_ProgressRange());
     }
     if (!written) throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the existing discrete document triangulation.");
   });

@@ -1,0 +1,142 @@
+#include "OcctSharp.Native.Internal.hxx"
+#include "OcctSharp.Modeling.TopologyCollectionsSupport.Generated.hxx"
+#include <BRepLib_MakeEdge.hxx>
+#include <BRepLib.hxx>
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRep_Tool.hxx>
+#include <BRepTools.hxx>
+#include <BRep_Builder.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Compound.hxx>
+#include <Geom_Curve.hxx>
+#include <Geom2d_Curve.hxx>
+#include <Geom_Surface.hxx>
+#include <Geom2d_BSplineCurve.hxx>
+#include <Geom_BSplineSurface.hxx>
+#include <gp_Lin.hxx>
+#include <gp_Circ.hxx>
+#include <gp_Elips.hxx>
+#include <gp_Hypr.hxx>
+#include <gp_Parab.hxx>
+#include <gp_Pln.hxx>
+#include <gp_Cylinder.hxx>
+#include <gp_Cone.hxx>
+#include <gp_Sphere.hxx>
+#include <gp_Torus.hxx>
+#include <array>
+using namespace OcctSharpTopologyCollections;
+namespace OcctSharpGenerated {
+ const OcctSharp_GeomCurveHandle* ValidateGeomCurve(const OcctSharp_GeomCurveHandle*);
+ const OcctSharp_Geom2dCurveHandle* ValidateGeom2dCurve(const OcctSharp_Geom2dCurveHandle*);
+ const OcctSharp_GeomSurfaceHandle* ValidateGeomSurface(const OcctSharp_GeomSurfaceHandle*);
+ const OcctSharp_Geom2dBSplineCurveHandle* ValidateGeom2dBSplineCurve(const OcctSharp_Geom2dBSplineCurveHandle*);
+ const OcctSharp_GeomBSplineSurfaceHandle* ValidateGeomBSplineSurface(const OcctSharp_GeomBSplineSurfaceHandle*);
+ OcctSharp_Geom2dCurveHandle* AllocateGeom2dCurve(occ::handle<Geom2d_Curve>);
+ OcctSharp_GeomSurfaceHandle* AllocateGeomSurface(occ::handle<Geom_Surface>);
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_copy_spline_pcurve(const OcctSharp_Geom2dBSplineCurveHandle* source,OcctSharp_Geom2dCurveHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto value=OcctSharpGenerated::ValidateGeom2dBSplineCurve(source)->Value;Require(value->NbPoles()<=4096&&value->NbKnots()<=4096,"Pcurve copy exceeds complexity budget.");auto copy=occ::handle<Geom2d_Curve>::DownCast(value->Copy());Require(!copy.IsNull(),"Typed pcurve copy failed.");*result=OcctSharpGenerated::AllocateGeom2dCurve(copy);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_copy_spline_surface(const OcctSharp_GeomBSplineSurfaceHandle* source,OcctSharp_GeomSurfaceHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{auto value=OcctSharpGenerated::ValidateGeomBSplineSurface(source)->Value;Require(int64_t(value->NbUPoles())*value->NbVPoles()<=4096&&value->NbUKnots()<=4096&&value->NbVKnots()<=4096,"Surface copy exceeds complexity budget.");auto copy=occ::handle<Geom_Surface>::DownCast(value->Copy());Require(!copy.IsNull(),"Typed surface copy failed.");*result=OcctSharpGenerated::AllocateGeomSurface(copy);});
+}
+namespace {
+struct ConstructionOutput {
+ bool done=false; int error=0,kind=0; std::array<TopoDS_Shape,3> shapes;
+ std::array<double,4> bounds{};
+ opencascade::handle<Geom_Curve> curve; opencascade::handle<Geom2d_Curve> pcurve;
+ opencascade::handle<Geom_Surface> surface; TopLoc_Location location;
+};
+void FiniteValues(const double* data,int size,int capacity){Require(data && capacity>=size,"Missing construction values.");for(int i=0;i<size;++i)Require(std::isfinite(data[i]) && std::abs(data[i])<=1e12,"Nonfinite/excessive construction value.");}
+gp_Ax2 ConstructionFrame(const double* p){
+ FiniteValues(p,9,9);gp_Vec normal(p[3],p[4],p[5]),x(p[6],p[7],p[8]);
+ Require(normal.SquareMagnitude()>1e-24 && x.SquareMagnitude()>1e-24,"Zero construction direction.");
+ normal.Normalize();x.Normalize();Require(std::abs(normal.Dot(x))<=1e-10,"Construction axes must be orthogonal.");
+ return gp_Ax2(gp_Pnt(p[0],p[1],p[2]),gp_Dir(normal),gp_Dir(x));
+}
+std::array<TopoDS_Vertex,2> ConstructionVertices(const OcctSharp_ShapeHandle* first,const OcctSharp_ShapeHandle* last){
+ auto a=ShapeValue(first),b=ShapeValue(last);Require(a.ShapeType()==TopAbs_VERTEX && b.ShapeType()==TopAbs_VERTEX,"Endpoints must be vertices.");
+ TopoDS_Compound graph;BRep_Builder builder;builder.MakeCompound(graph);builder.Add(graph,a);builder.Add(graph,b);
+ BRepBuilderAPI_Copy copy(graph,true,false);Require(copy.IsDone(),"Endpoint graph copy failed.");
+ return {TopoDS::Vertex(copy.ModifiedShape(a)),TopoDS::Vertex(copy.ModifiedShape(b))};
+}
+void CaptureConstructionEdge(BRepLib_MakeEdge& maker,std::shared_ptr<ConstructionOutput>& output,const opencascade::handle<Geom_Surface>& surface={}){
+ output->done=maker.IsDone();output->error=maker.Error();
+ if(!output->done)return;
+ auto edge=maker.Edge();Require(!edge.IsNull(),"Completed edge is null.");
+ if(!surface.IsNull()){
+  double first=0,last=0;bool stored=false;
+  output->pcurve=BRep_Tool::CurveOnSurface(edge,surface,TopLoc_Location(),first,last,&stored);
+  Require(!output->pcurve.IsNull() && stored,"Missing stored constructed pcurve.");output->surface=surface;
+  Require(BRepLib::BuildCurve3d(edge),"Constructed pcurve has no complete 3D representation.");
+ }
+ double first=0,last=0;BRep_Tool::Range(edge,first,last);
+ Require(std::isfinite(first) && std::isfinite(last) && first<last,"Invalid native edge range.");output->bounds={first,last,0,0};
+ double cf=0,cl=0;output->curve=BRep_Tool::Curve(edge,output->location,cf,cl);Require(!output->curve.IsNull(),"Missing completed 3D curve.");
+ output->shapes={edge,maker.Vertex1(),maker.Vertex2()};
+}
+}
+void OCCTSHARP_CALL occtsharp_parameterized_release(void* token) {
+ OcctSharpOwned::Release(token,typeid(ConstructionOutput));
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_edge(int32_t mode,int32_t analyticKind,const OcctSharp_GeomCurveHandle* curve,const OcctSharp_Geom2dCurveHandle* pcurve,const OcctSharp_GeomSurfaceHandle* surface,const OcctSharp_ShapeHandle* firstVertex,const OcctSharp_ShapeHandle* lastVertex,const double* data,int32_t capacity,double first,double last,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{
+  Require(mode>=0 && mode<=5 && std::isfinite(first) && std::isfinite(last) && std::abs(first)<=1e12 && std::abs(last)<=1e12 && first!=last,"Invalid finite edge interval.");
+  auto output=std::make_shared<ConstructionOutput>();
+  if(mode==0 || mode==1){
+   auto source=OcctSharpGenerated::ValidateGeomCurve(curve)->Value;
+   auto copied=opencascade::handle<Geom_Curve>::DownCast(source->Copy());Require(!copied.IsNull(),"Curve copy failed.");
+   if(mode==0){FiniteValues(data,6,capacity);BRepLib_MakeEdge maker(copied,gp_Pnt(data[0],data[1],data[2]),gp_Pnt(data[3],data[4],data[5]),first,last);CaptureConstructionEdge(maker,output);}
+   else{auto vertices=ConstructionVertices(firstVertex,lastVertex);BRepLib_MakeEdge maker(copied,vertices[0],vertices[1],first,last);CaptureConstructionEdge(maker,output);}
+  }else if(mode>=2 && mode<=4){
+   auto c=opencascade::handle<Geom2d_Curve>::DownCast(OcctSharpGenerated::ValidateGeom2dCurve(pcurve)->Value->Copy());
+   auto s=opencascade::handle<Geom_Surface>::DownCast(OcctSharpGenerated::ValidateGeomSurface(surface)->Value->Copy());Require(!c.IsNull() && !s.IsNull(),"Pcurve/surface copy failed.");
+   if(mode==2){FiniteValues(data,6,capacity);BRepLib_MakeEdge maker(c,s,gp_Pnt(data[0],data[1],data[2]),gp_Pnt(data[3],data[4],data[5]),first,last);CaptureConstructionEdge(maker,output,s);}
+   else if(mode==3){auto vertices=ConstructionVertices(firstVertex,lastVertex);BRepLib_MakeEdge maker(c,s,vertices[0],vertices[1],first,last);CaptureConstructionEdge(maker,output,s);}
+   else{BRepLib_MakeEdge maker(c,s,first,last);CaptureConstructionEdge(maker,output,s);}
+  }else{
+   Require(analyticKind>=0 && analyticKind<=4,"Invalid analytic curve kind.");FiniteValues(data,11,capacity);auto frame=ConstructionFrame(data);double a=data[9],b=data[10];
+   if(analyticKind==0){BRepLib_MakeEdge maker(gp_Lin(frame.Location(),frame.XDirection()),first,last);CaptureConstructionEdge(maker,output);}
+   else if(analyticKind==1){Require(a>0,"Circle radius must be positive.");BRepLib_MakeEdge maker(gp_Circ(frame,a),first,last);CaptureConstructionEdge(maker,output);}
+   else if(analyticKind==2){Require(a>=b && b>0,"Invalid ellipse radii.");BRepLib_MakeEdge maker(gp_Elips(frame,a,b),first,last);CaptureConstructionEdge(maker,output);}
+   else if(analyticKind==3){Require(a>0 && b>0,"Invalid hyperbola radii.");BRepLib_MakeEdge maker(gp_Hypr(frame,a,b),first,last);CaptureConstructionEdge(maker,output);}
+   else{Require(a>0,"Parabola focal length must be positive.");BRepLib_MakeEdge maker(gp_Parab(frame,a),first,last);CaptureConstructionEdge(maker,output);}
+  }
+  Publication<ConstructionOutput> publication(output);*result=publication.Commit();
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_face(int32_t kind,const double* data,int32_t capacity,const double* bounds,int32_t count,void** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{
+  Require(kind>=0 && kind<=4,"Invalid analytic surface kind.");FiniteValues(data,11,capacity);FiniteValues(bounds,4,count);
+  Require(bounds[0]<bounds[1] && bounds[2]<bounds[3],"Face ranges must be increasing.");
+  auto frame=ConstructionFrame(data);double a=data[9],b=data[10];auto output=std::make_shared<ConstructionOutput>();output->kind=1;
+  auto capture=[&](BRepBuilderAPI_MakeFace& maker){output->done=maker.IsDone();output->error=maker.Error();if(output->done){auto face=maker.Face();Require(!face.IsNull(),"Completed face is null.");output->shapes[0]=face;BRepTools::UVBounds(face,output->bounds[0],output->bounds[1],output->bounds[2],output->bounds[3]);output->surface=BRep_Tool::Surface(face,output->location);Require(!output->surface.IsNull(),"Missing completed surface.");for(double x:output->bounds)Require(std::isfinite(x),"Nonfinite native face range.");}};
+  auto axis=gp_Ax3(frame);double u0=bounds[0],u1=bounds[1],v0=bounds[2],v1=bounds[3];
+  if(kind==0){BRepBuilderAPI_MakeFace maker(gp_Pln(axis),u0,u1,v0,v1);capture(maker);}
+  else if(kind==1){Require(a>0,"Cylinder radius must be positive.");BRepBuilderAPI_MakeFace maker(gp_Cylinder(axis,a),u0,u1,v0,v1);capture(maker);}
+  else if(kind==2){Require(a>=0 && std::abs(b)>1e-12 && std::abs(b)<1.5707963267948966-1e-12,"Invalid cone radius/angle.");BRepBuilderAPI_MakeFace maker(gp_Cone(axis,b,a),u0,u1,v0,v1);capture(maker);}
+  else if(kind==3){Require(a>0,"Sphere radius must be positive.");BRepBuilderAPI_MakeFace maker(gp_Sphere(axis,a),u0,u1,v0,v1);capture(maker);}
+  else{Require(a>b && b>0,"Torus requires major > minor > 0.");BRepBuilderAPI_MakeFace maker(gp_Torus(axis,a,b),u0,u1,v0,v1);capture(maker);}
+  Publication<ConstructionOutput> publication(output);*result=publication.Commit();
+ });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_snapshot(const void* token,int32_t* info,int32_t capacity,double* bounds,int32_t count) {
+ return Guard([&]{Require(info && capacity>=6 && bounds && count>=4,"Insufficient construction snapshot buffer.");auto output=OcctSharpOwned::Lease<const ConstructionOutput>(token);const int32_t fields[]={output->done?1:0,output->error,output->kind,!output->pcurve.IsNull()?1:0,output->done?static_cast<int>(output->shapes[0].Orientation()):-1,output->done && output->kind==0 && !output->shapes[1].IsNull() && !output->shapes[2].IsNull() && output->shapes[1].IsSame(output->shapes[2])?1:0};std::copy(std::begin(fields),std::end(fields),info);std::copy(output->bounds.begin(),output->bounds.end(),bounds);});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_shape(const void* token,int32_t role,OcctSharp_ShapeHandle** result) {
+ if(!result)return OCCTSHARP_STATUS_INVALID_ARGUMENT;*result=nullptr;
+ return Guard([&]{Require(role>=0 && role<3,"Invalid construction shape role.");auto output=OcctSharpOwned::Lease<const ConstructionOutput>(token);Require(output->done,"No completed construction topology.");if(!output->shapes[role].IsNull()){BRepBuilderAPI_Copy copy(output->shapes[role],true,false);Require(copy.IsDone(),"Result geometry copy failed.");*result=OcctSharp_Internal_AllocateShape(copy.Shape());}});
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_parameterized_sample(const void* token,double first,double second,int32_t pcurve,double* values,int32_t capacity) {
+ return Guard([&]{Require(values && capacity>=5 && std::isfinite(first) && std::isfinite(second) && (pcurve==0 || pcurve==1),"Invalid construction sample buffer/parameter.");auto output=OcctSharpOwned::Lease<const ConstructionOutput>(token);Require(output->done,"No completed construction geometry.");Require(first>=output->bounds[0] && first<=output->bounds[1],"Parameter outside native range.");gp_Pnt point;gp_Pnt2d uv(0,0);
+  if(pcurve){Require(!output->pcurve.IsNull() && output->kind==0,"Construction has no stored pcurve.");uv=output->pcurve->Value(first);point=output->surface->Value(uv.X(),uv.Y());}
+  else if(output->kind==0){point=output->curve->Value(first);point.Transform(output->location.Transformation());}
+  else{Require(second>=output->bounds[2] && second<=output->bounds[3],"V outside native range.");point=output->surface->Value(first,second);point.Transform(output->location.Transformation());}
+  const double data[]={point.X(),point.Y(),point.Z(),uv.X(),uv.Y()};for(double x:data)Require(std::isfinite(x),"Nonfinite construction sample.");std::copy(std::begin(data),std::end(data),values);
+ });
+}

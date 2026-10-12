@@ -1,0 +1,1296 @@
+{
+  "baseline": "8.0.1-preview.31",
+  "state": "PLANNED_CANDIDATES_NOT_ADMITTED",
+  "scope": "AH bulk analysis, conversion and approximation",
+  "baselineInventorySha256": "16FD37367E1F6C22468F1D8AE25D1BD83F913E3C76047409480450A04D53DEDA",
+  "declarations": [
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBSpMatrix#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#I#&$@S@math_Matrix#&I#S6_#S",
+      "nativeName": "BSplCLib::BuildBSpMatrix",
+      "signature": "BSplCLib::BuildBSpMatrix: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const int, math_Matrix &, int &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildBoor#I#I#I#&1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildBoor",
+      "signature": "BSplCLib::BuildBoor: void (const int, const int, const int, const NCollection_Array1<double> &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&S3_#*S1_#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildCache#d#d#b#I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#&$@S@NCollection_Array2>#d#S",
+      "nativeName": "BSplCLib::BuildCache",
+      "signature": "BSplCLib::BuildCache: void (const double, const double, const bool, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildEval#I#I#&1$@S@NCollection_Array1>#d#*1S1_#&d#S",
+      "nativeName": "BSplCLib::BuildEval",
+      "signature": "BSplCLib::BuildEval: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildKnots#I#I#b#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::BuildKnots",
+      "signature": "BSplCLib::BuildKnots: void (const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BuildSchoenbergPoints#I#&1$@S@NCollection_Array1>#d#&S1_#S",
+      "nativeName": "BSplCLib::BuildSchoenbergPoints",
+      "signature": "BSplCLib::BuildSchoenbergPoints: void (const int, const NCollection_Array1<double> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD0#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CacheD0",
+      "signature": "BSplCLib::CacheD0: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD1#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CacheD1",
+      "signature": "BSplCLib::CacheD1: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD2#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CacheD2",
+      "signature": "BSplCLib::CacheD2: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CacheD3#d#I#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CacheD3",
+      "signature": "BSplCLib::CacheD3: void (const double, const int, const double, const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::CoefsD0",
+      "signature": "BSplCLib::CoefsD0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::CoefsD1",
+      "signature": "BSplCLib::CoefsD1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::CoefsD2",
+      "signature": "BSplCLib::CoefsD2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@CoefsD3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::CoefsD3",
+      "signature": "BSplCLib::CoefsD3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D0#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::D0",
+      "signature": "BSplCLib::D0: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D1#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S",
+      "nativeName": "BSplCLib::D1",
+      "signature": "BSplCLib::D1: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D2#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S",
+      "nativeName": "BSplCLib::D2",
+      "signature": "BSplCLib::D2: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S6_#S6_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&S2_#&$@S@gp_Vec2d#S9_#S9_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Pnt2d &, gp_Vec2d &, gp_Vec2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@D3#d#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S5_#S5_#S5_#S",
+      "nativeName": "BSplCLib::D3",
+      "signature": "BSplCLib::D3: void (const double, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#&S2_#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#*1$@S@NCollection_Array1>#I#&$@S@gp_Vec2d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, gp_Vec2d &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@DN#d#I#I#I#b#&1$@S@NCollection_Array1>#d#*1S1_#S0_#*1$@S@NCollection_Array1>#I#&d#S",
+      "nativeName": "BSplCLib::DN",
+      "signature": "BSplCLib::DN: void (const double, const int, const int, const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#I#&I#I#&1$@S@NCollection_Array1>#d#I#&d#S3_#S3_#S3_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const int, int &, const int, const NCollection_Array1<double> &, const int, double &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, gp_Pnt &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#b#b#&I#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S1_#&S5_#&d#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const bool, const bool, int &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, gp_Pnt2d &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@EvalBsplineBasis#I#I#&1$@S@NCollection_Array1>#d#d#&I#&$@S@math_Matrix#b#S",
+      "nativeName": "BSplCLib::EvalBsplineBasis",
+      "signature": "BSplCLib::EvalBsplineBasis: int (const int, const int, const NCollection_Array1<double> &, const double, int &, math_Matrix &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FirstUKnotIndex#I#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::FirstUKnotIndex",
+      "signature": "BSplCLib::FirstUKnotIndex: int (const int, const NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FlatIndex#I#I#&1$@S@NCollection_Array1>#I#b#S",
+      "nativeName": "BSplCLib::FlatIndex",
+      "signature": "BSplCLib::FlatIndex: int (const int, const int, const NCollection_Array1<int> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionMultiply#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionMultiply",
+      "signature": "BSplCLib::FunctionMultiply: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#S2_#I#&S5_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> &, const int, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#I#&d#S2_#I#S4_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const int, double &, const NCollection_Array1<double> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@FunctionReparameterise#&1$@S@BSplCLib_EvaluatorFunction#I#&1$@S@NCollection_Array1>#d#S2_#S2_#I#&S3_#&I#S",
+      "nativeName": "BSplCLib::FunctionReparameterise",
+      "signature": "BSplCLib::FunctionReparameterise: void (const BSplCLib_EvaluatorFunction &, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@GetPole#I#I#I#I#&d#&I#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::GetPole",
+      "signature": "BSplCLib::GetPole: void (const int, const int, const int, const int, double &, int &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Hunt#&1$@S@NCollection_Array1>#d#d#&I#S",
+      "nativeName": "BSplCLib::Hunt",
+      "signature": "BSplCLib::Hunt: void (const NCollection_Array1<double> &, const double, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegree#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#S",
+      "nativeName": "BSplCLib::IncreaseDegree",
+      "signature": "BSplCLib::IncreaseDegree: void (const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IncreaseDegreeCountKnots#I#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::IncreaseDegreeCountKnots",
+      "signature": "BSplCLib::IncreaseDegreeCountKnots: int (const int, const int, const bool, const NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnot#I#d#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::InsertKnot",
+      "signature": "BSplCLib::InsertKnot: void (const int, const double, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#S5_#*1S7_#&S1_#*S4_#&S4_#&S7_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@InsertKnots#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&S1_#S5_#&S3_#d#b#S",
+      "nativeName": "BSplCLib::InsertKnots",
+      "signature": "BSplCLib::InsertKnots: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&S1_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Interpolate#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#&d#S4_#&I#S",
+      "nativeName": "BSplCLib::Interpolate",
+      "signature": "BSplCLib::Interpolate: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, double &, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Intervals#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#I#d#d#d#*S1_#S",
+      "nativeName": "BSplCLib::Intervals",
+      "signature": "BSplCLib::Intervals: int (const NCollection_Array1<double> &, const NCollection_Array1<int> &, int, bool, int, double, double, double, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@IsRational#&1$@S@NCollection_Array1>#d#I#I#d#S",
+      "nativeName": "BSplCLib::IsRational",
+      "signature": "BSplCLib::IsRational: bool (const NCollection_Array1<double> &, const int, const int, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotAnalysis#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&$@E@GeomAbs_BSplKnotDistribution#&I#S",
+      "nativeName": "BSplCLib::KnotAnalysis",
+      "signature": "BSplCLib::KnotAnalysis: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, GeomAbs_BSplKnotDistribution &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotForm#&1$@S@NCollection_Array1>#d#I#I#S",
+      "nativeName": "BSplCLib::KnotForm",
+      "signature": "BSplCLib::KnotForm: BSplCLib_KnotDistribution (const NCollection_Array1<double> &, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequence#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#b#S",
+      "nativeName": "BSplCLib::KnotSequence",
+      "signature": "BSplCLib::KnotSequence: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequence#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#&S1_#S",
+      "nativeName": "BSplCLib::KnotSequence",
+      "signature": "BSplCLib::KnotSequence: void (const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const bool, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotSequenceLength#&1$@S@NCollection_Array1>#I#I#b#S",
+      "nativeName": "BSplCLib::KnotSequenceLength",
+      "signature": "BSplCLib::KnotSequenceLength: int (const NCollection_Array1<int> &, const int, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Knots#&1$@S@NCollection_Array1>#d#&S1_#&$@S@NCollection_Array1>#I#b#S",
+      "nativeName": "BSplCLib::Knots",
+      "signature": "BSplCLib::Knots: void (const NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@KnotsLength#&1$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplCLib::KnotsLength",
+      "signature": "BSplCLib::KnotsLength: int (const NCollection_Array1<double> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LastUKnotIndex#I#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::LastUKnotIndex",
+      "signature": "BSplCLib::LastUKnotIndex: int (const int, const NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const bool, const int, const int, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#d#b#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const double, const bool, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@LocateParameter#I#&1$@S@NCollection_Array1>#d#d#b#I#I#&I#&d#S",
+      "nativeName": "BSplCLib::LocateParameter",
+      "signature": "BSplCLib::LocateParameter: void (const int, const NCollection_Array1<double> &, const double, const bool, const int, const int, int &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MergeBSplineKnots#d#d#d#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#S0_#S2_#&I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#S",
+      "nativeName": "BSplCLib::MergeBSplineKnots",
+      "signature": "BSplCLib::MergeBSplineKnots: void (const double, const double, const double, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, int &, occ::handle<NCollection_HArray1<double>> &, occ::handle<NCollection_HArray1<int>> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MinKnotMult#&1$@S@NCollection_Array1>#I#I#I#S",
+      "nativeName": "BSplCLib::MinKnotMult",
+      "signature": "BSplCLib::MinKnotMult: int (const NCollection_Array1<int> &, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec &, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec2d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "signature": "BSplCLib::MovePoint: void (const double, const gp_Vec2d &, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, int &, int &, NCollection_Array1<gp_Pnt2d> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec &, const gp_Vec &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec2d#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const gp_Vec2d &, const gp_Vec2d &, const double, const int, const int, const int, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#I#&d#S0_#d#I#I#I#S0_#*1$@S@NCollection_Array1>#d#&1S2_#S0_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "signature": "BSplCLib::MovePointAndTangent: void (const double, const int, double &, double &, const double, const int, const int, const int, double &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, double &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MultForm#&1$@S@NCollection_Array1>#I#I#I#S",
+      "nativeName": "BSplCLib::MultForm",
+      "signature": "BSplCLib::MultForm: BSplCLib_MultDistribution (const NCollection_Array1<int> &, const int, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NbPoles#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::NbPoles",
+      "signature": "BSplCLib::NbPoles: int (const int, const bool, const NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoMults#S",
+      "nativeName": "BSplCLib::NoMults",
+      "signature": "BSplCLib::NoMults: NCollection_Array1<int> *()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@NoWeights#S",
+      "nativeName": "BSplCLib::NoWeights",
+      "signature": "BSplCLib::NoWeights: NCollection_Array1<double> *()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PoleIndex#I#I#b#&1$@S@NCollection_Array1>#I#S",
+      "nativeName": "BSplCLib::PoleIndex",
+      "signature": "BSplCLib::PoleIndex: int (const int, const int, const bool, const NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&S1_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt> &, NCollection_Array1<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&S1_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<gp_Pnt2d> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PolesCoefficients#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::PolesCoefficients",
+      "signature": "BSplCLib::PolesCoefficients: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareInsertKnots#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#*1S3_#&I#S5_#d#b#S",
+      "nativeName": "BSplCLib::PrepareInsertKnots",
+      "signature": "BSplCLib::PrepareInsertKnots: bool (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, int &, int &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareTrimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#d#d#&I#S4_#S",
+      "nativeName": "BSplCLib::PrepareTrimming",
+      "signature": "BSplCLib::PrepareTrimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const double, const double, int &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@PrepareUnperiodize#I#&1$@S@NCollection_Array1>#I#&I#S2_#S",
+      "nativeName": "BSplCLib::PrepareUnperiodize",
+      "signature": "BSplCLib::PrepareUnperiodize: void (const int, const NCollection_Array1<int> &, int &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RaiseMultiplicity#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#S",
+      "nativeName": "BSplCLib::RaiseMultiplicity",
+      "signature": "BSplCLib::RaiseMultiplicity: void (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S4_#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S4_#&S7_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@RemoveKnot#I#I#I#b#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#&S1_#S4_#&S3_#d#S",
+      "nativeName": "BSplCLib::RemoveKnot",
+      "signature": "BSplCLib::RemoveKnot: bool (const int, const int, const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#I#&1S4_#I#d#&d#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const int, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Resolution#&d#I#I#*1$@S@NCollection_Array1>#d#&1S2_#I#d#S0_#S",
+      "nativeName": "BSplCLib::Resolution",
+      "signature": "BSplCLib::Resolution: void (double &, const int, const int, const NCollection_Array1<double> *, const NCollection_Array1<double> &, const int, const double, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, NCollection_Array1<gp_Pnt2d> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@SolveBandedSystem#&1$@S@math_Matrix#I#I#b#&$@S@NCollection_Array1>#$@S@gp_Pnt2d#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "BSplCLib::SolveBandedSystem",
+      "signature": "BSplCLib::SolveBandedSystem: int (const math_Matrix &, const int, const int, const bool, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@TangExtendToConstraint#&1$@S@NCollection_Array1>#d#d#I#&d#I#I#S0_#I#b#&I#S3_#S2_#S2_#S",
+      "nativeName": "BSplCLib::TangExtendToConstraint",
+      "signature": "BSplCLib::TangExtendToConstraint: void (const NCollection_Array1<double> &, const double, const int, double &, const int, const int, const NCollection_Array1<double> &, const int, const bool, int &, int &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S1_#d#d#&S1_#&S3_#&S5_#*S1_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Trimming#I#b#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S0_#d#d#&S1_#&S3_#S4_#S",
+      "nativeName": "BSplCLib::Trimming",
+      "signature": "BSplCLib::Trimming: void (const int, const bool, const int, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const double, const double, NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@UnitWeights#I#S",
+      "nativeName": "BSplCLib::UnitWeights",
+      "signature": "BSplCLib::UnitWeights: NCollection_Array1<double> (const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1S3_#&S1_#&S3_#&S5_#*S3_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<gp_Pnt2d> &, const NCollection_Array1<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<gp_Pnt2d> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Unperiodize#I#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#S2_#&S1_#&S3_#S5_#S",
+      "nativeName": "BSplCLib::Unperiodize",
+      "signature": "BSplCLib::Unperiodize: void (const int, const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array1<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@BuildCache#d#d#d#d#b#b#I#I#I#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S3_#*S6_#S",
+      "nativeName": "BSplSLib::BuildCache",
+      "signature": "BSplSLib::BuildCache: void (const double, const double, const double, const double, const bool, const bool, const int, const int, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@BuildCache#d#d#d#d#b#b#I#I#I#I#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S6_#S",
+      "nativeName": "BSplSLib::BuildCache",
+      "signature": "BSplSLib::BuildCache: void (const double, const double, const double, const double, const bool, const bool, const int, const int, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<double> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD0#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#S",
+      "nativeName": "BSplSLib::CacheD0",
+      "signature": "BSplSLib::CacheD0: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD1#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplSLib::CacheD1",
+      "signature": "BSplSLib::CacheD1: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CacheD2#d#d#I#I#d#d#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S6_#S6_#S",
+      "nativeName": "BSplSLib::CacheD2",
+      "signature": "BSplSLib::CacheD2: void (const double, const double, const int, const int, const double, const double, const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD0#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#S",
+      "nativeName": "BSplSLib::CoefsD0",
+      "signature": "BSplSLib::CoefsD0: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD1#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S",
+      "nativeName": "BSplSLib::CoefsD1",
+      "signature": "BSplSLib::CoefsD1: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@CoefsD2#d#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S2_#&$@S@gp_Vec#S6_#S6_#S6_#S6_#S",
+      "nativeName": "BSplSLib::CoefsD2",
+      "signature": "BSplSLib::CoefsD2: void (const double, const double, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D0#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#S",
+      "nativeName": "BSplSLib::D0",
+      "signature": "BSplSLib::D0: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D1#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S",
+      "nativeName": "BSplSLib::D1",
+      "signature": "BSplSLib::D1: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D2#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S10_#S10_#S10_#S",
+      "nativeName": "BSplSLib::D2",
+      "signature": "BSplSLib::D2: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@D3#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#S10_#S10_#S10_#S10_#S10_#S10_#S10_#S",
+      "nativeName": "BSplSLib::D3",
+      "signature": "BSplSLib::D3: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@DN#d#d#I#I#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&$@S@gp_Vec#S",
+      "nativeName": "BSplSLib::DN",
+      "signature": "BSplSLib::DN: void (const double, const double, const int, const int, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Vec &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@FunctionMultiply#&1$@S@BSplSLib_EvaluatorFunction#I#I#&1$@S@NCollection_Array1>#d#S2_#*1$@S@NCollection_Array1>#I#S4_#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#S2_#S2_#I#I#&S7_#&S10_#&I#S",
+      "nativeName": "BSplSLib::FunctionMultiply",
+      "signature": "BSplSLib::FunctionMultiply: void (const BSplSLib_EvaluatorFunction &, const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const int, const int, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@GetPoles#&1$@S@NCollection_Array1>#d#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#b#S",
+      "nativeName": "BSplSLib::GetPoles",
+      "signature": "BSplSLib::GetPoles: void (const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@GetPoles#&1$@S@NCollection_Array1>#d#&$@S@NCollection_Array2>#$@S@gp_Pnt#b#S",
+      "nativeName": "BSplSLib::GetPoles",
+      "signature": "BSplSLib::GetPoles: void (const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@HomogeneousD0#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&d#&S2_#S",
+      "nativeName": "BSplSLib::HomogeneousD0",
+      "signature": "BSplSLib::HomogeneousD0: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, double &, gp_Pnt &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@HomogeneousD1#d#d#I#I#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#*1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#&S2_#&$@S@gp_Vec#S10_#&d#S12_#S12_#S",
+      "nativeName": "BSplSLib::HomogeneousD1",
+      "signature": "BSplSLib::HomogeneousD1: void (const double, const double, const int, const int, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const NCollection_Array1<int> *, const int, const int, const bool, const bool, const bool, const bool, gp_Pnt &, gp_Vec &, gp_Vec &, double &, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@IncreaseDegree#b#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S6_#&S8_#S",
+      "nativeName": "BSplSLib::IncreaseDegree",
+      "signature": "BSplSLib::IncreaseDegree: void (const bool, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@InsertKnots#b#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#S5_#*1S8_#&S1_#*S4_#&S6_#&S8_#d#b#S",
+      "nativeName": "BSplSLib::InsertKnots",
+      "signature": "BSplSLib::InsertKnots: void (const bool, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array1<int> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array2>#d#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Interpolate#I#I#&1$@S@NCollection_Array1>#d#S0_#S0_#S0_#&$@S@NCollection_Array2>#$@S@gp_Pnt#&I#S",
+      "nativeName": "BSplSLib::Interpolate",
+      "signature": "BSplSLib::Interpolate: void (const int, const int, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, int &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@IsRational#&1$@S@NCollection_Array2>#d#I#I#I#I#d#S",
+      "nativeName": "BSplSLib::IsRational",
+      "signature": "BSplSLib::IsRational: bool (const NCollection_Array2<double> &, const int, const int, const int, const int, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Iso#d#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#*1$@S@NCollection_Array1>#I#I#b#&$@S@NCollection_Array1>#S2_#*S6_#S",
+      "nativeName": "BSplSLib::Iso",
+      "signature": "BSplSLib::Iso: void (const double, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> *, const int, const bool, NCollection_Array1<gp_Pnt> &, NCollection_Array1<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@MovePoint#d#d#&1$@S@gp_Vec#I#I#I#I#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S7_#&I#S9_#S9_#S9_#&S3_#S",
+      "nativeName": "BSplSLib::MovePoint",
+      "signature": "BSplSLib::MovePoint: void (const double, const double, const gp_Vec &, const int, const int, const int, const int, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, const NCollection_Array1<double> &, const NCollection_Array1<double> &, int &, int &, int &, int &, NCollection_Array2<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@NoWeights#S",
+      "nativeName": "BSplSLib::NoWeights",
+      "signature": "BSplSLib::NoWeights: NCollection_Array2<double> *()",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@PolesCoefficients#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&S1_#S",
+      "nativeName": "BSplSLib::PolesCoefficients",
+      "signature": "BSplSLib::PolesCoefficients: void (const NCollection_Array2<gp_Pnt> &, NCollection_Array2<gp_Pnt> &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@PolesCoefficients#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S1_#*S4_#S",
+      "nativeName": "BSplSLib::PolesCoefficients",
+      "signature": "BSplSLib::PolesCoefficients: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@RemoveKnot#b#I#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#&S1_#*S4_#&S6_#&S8_#d#S",
+      "nativeName": "BSplSLib::RemoveKnot",
+      "signature": "BSplSLib::RemoveKnot: bool (const bool, const int, const int, const int, const bool, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<int> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *, NCollection_Array1<double> &, NCollection_Array1<int> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Resolution#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#b#b#d#&d#S9_#S",
+      "nativeName": "BSplSLib::Resolution",
+      "signature": "BSplSLib::Resolution: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, const NCollection_Array1<double> &, const NCollection_Array1<double> &, const NCollection_Array1<int> &, const NCollection_Array1<int> &, const int, const int, const bool, const bool, const bool, const bool, const double, double &, double &)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Reverse#&$@S@NCollection_Array2>#$@S@gp_Pnt#I#b#S",
+      "nativeName": "BSplSLib::Reverse",
+      "signature": "BSplSLib::Reverse: void (NCollection_Array2<gp_Pnt> &, const int, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Reverse#&$@S@NCollection_Array2>#d#I#b#S",
+      "nativeName": "BSplSLib::Reverse",
+      "signature": "BSplSLib::Reverse: void (NCollection_Array2<double> &, const int, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@SetPoles#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplSLib::SetPoles",
+      "signature": "BSplSLib::SetPoles: void (const NCollection_Array2<gp_Pnt> &, NCollection_Array1<double> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@SetPoles#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&$@S@NCollection_Array1>#d#b#S",
+      "nativeName": "BSplSLib::SetPoles",
+      "signature": "BSplSLib::SetPoles: void (const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> &, NCollection_Array1<double> &, const bool)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@UnitWeights#I#I#S",
+      "nativeName": "BSplSLib::UnitWeights",
+      "signature": "BSplSLib::UnitWeights: NCollection_Array2<double> (const int, const int)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@Unperiodize#b#I#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array2>#$@S@gp_Pnt#*1$@S@NCollection_Array2>#d#&S1_#&S3_#&S5_#*S8_#S",
+      "nativeName": "BSplSLib::Unperiodize",
+      "signature": "BSplSLib::Unperiodize: void (const bool, const int, const NCollection_Array1<int> &, const NCollection_Array1<double> &, const NCollection_Array2<gp_Pnt> &, const NCollection_Array2<double> *, NCollection_Array1<int> &, NCollection_Array1<double> &, NCollection_Array2<gp_Pnt> &, NCollection_Array2<double> *)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#S",
+      "nativeName": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom2d_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#d#S",
+      "nativeName": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "Geom2dConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom2d_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, const double, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "Geom2dConvert::ConcatC1",
+      "signature": "Geom2dConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#d#S",
+      "nativeName": "Geom2dConvert::ConcatC1",
+      "signature": "Geom2dConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@Geom2dConvert@F@ConcatG1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "Geom2dConvert::ConcatG1",
+      "signature": "Geom2dConvert::ConcatG1: void (NCollection_Array1<occ::handle<Geom2d_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<occ::handle<Geom2d_BSplineCurve>>> &, bool &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#S",
+      "nativeName": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@C0BSplineToArrayOfC1BSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#d#d#S",
+      "nativeName": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve",
+      "signature": "GeomConvert::C0BSplineToArrayOfC1BSplineCurve: void (const occ::handle<Geom_BSplineCurve> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, const double, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "GeomConvert::ConcatC1",
+      "signature": "GeomConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatC1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#d#S",
+      "nativeName": "GeomConvert::ConcatC1",
+      "signature": "GeomConvert::ConcatC1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<int>> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@ConcatG1#&$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#&1$@S@NCollection_Array1>#d#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S2_#&b#d#S",
+      "nativeName": "GeomConvert::ConcatG1",
+      "signature": "GeomConvert::ConcatG1: void (NCollection_Array1<occ::handle<Geom_BSplineCurve>> &, const NCollection_Array1<double> &, occ::handle<NCollection_HArray1<occ::handle<Geom_BSplineCurve>>> &, bool &, const double)",
+      "baselineDisposition": "Blocked",
+      "gate": "Audit sized outputs, aliasing, period/degree relationships, kernel symbols and complete sampled-error/conversion workflows."
+    }
+  ]
+}

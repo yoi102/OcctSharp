@@ -1,0 +1,2159 @@
+{
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED",
+  "baseline": "8.0.1-preview.54",
+  "inventorySha256": "0835BB63B923C1DC6204D07D28F74B39D9F4EABC17999D7C71981C4EB277B0C2",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "111C8D3A28B50720502BB20F2AA0CA439E49192BE12757695C2D95F8B8ED7C7A",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@MaxFaceTolerance#&1$@S@TopoDS_Face#S",
+      "nativeName": "BRepMesh_ShapeTool::MaxFaceTolerance",
+      "signature": "BRepMesh_ShapeTool::MaxFaceTolerance: double (const TopoDS_Face &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@Range#&1$@S@TopoDS_Edge#&$@N@opencascade@S@handle>#$@S@Geom_Curve#&d#S5_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::Range",
+      "signature": "BRepMesh_ShapeTool::Range: bool (const TopoDS_Edge &, occ::handle<Geom_Curve> &, double &, double &, const bool)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@Range#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&d#S7_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::Range",
+      "signature": "BRepMesh_ShapeTool::Range: bool (const TopoDS_Edge &, const TopoDS_Face &, occ::handle<Geom2d_Curve> &, double &, double &, const bool)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UVPoints#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#&$@S@gp_Pnt2d#S4_#b#S",
+      "nativeName": "BRepMesh_ShapeTool::UVPoints",
+      "signature": "BRepMesh_ShapeTool::UVPoints: bool (const TopoDS_Edge &, const TopoDS_Face &, gp_Pnt2d &, gp_Pnt2d &, const bool)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@GetFreeNodes#&$@S@NCollection_List>#I#1",
+      "nativeName": "Poly_CoherentTriangulation::GetFreeNodes",
+      "signature": "Poly_CoherentTriangulation::GetFreeNodes: bool (NCollection_List<int> &) const",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Nodes#1",
+      "nativeName": "Poly_Polygon2D::Nodes",
+      "signature": "Poly_Polygon2D::Nodes: const NCollection_Array1<gp_Pnt2d> &() const",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Poly_Polygon2D#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#",
+      "nativeName": "Poly_Polygon2D::Poly_Polygon2D",
+      "signature": "Poly_Polygon2D::Poly_Polygon2D: void (const NCollection_Array1<gp_Pnt2d> &)",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangles#1",
+      "nativeName": "Poly_Triangulation::Triangles",
+      "signature": "Poly_Triangulation::Triangles: const NCollection_Array1<Poly_Triangle> &() const",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "ADMITTED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Bounded copied arrays/triangulation or exact private face/edge graph; detached numeric/adjacency/UV diagnostics only, with no inferred source topology."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AbortViewAnimation#",
+      "nativeName": "AIS_ViewController::AbortViewAnimation",
+      "signature": "AIS_ViewController::AbortViewAnimation: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@AddTouchPoint#k#&1$@S@NCollection_Vec2>#d#b#",
+      "nativeName": "AIS_ViewController::AddTouchPoint",
+      "signature": "AIS_ViewController::AddTouchPoint: void (size_t, const NCollection_Vec2<double> &, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeInputBuffer#$@E@AIS_ViewInputBufferType#",
+      "nativeName": "AIS_ViewController::ChangeInputBuffer",
+      "signature": "AIS_ViewController::ChangeInputBuffer: AIS_ViewInputBuffer &(AIS_ViewInputBufferType)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeMouseGestureMap#",
+      "nativeName": "AIS_ViewController::ChangeMouseGestureMap",
+      "signature": "AIS_ViewController::ChangeMouseGestureMap: NCollection_DataMap<unsigned int, AIS_MouseGesture> &()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ChangeMouseSelectionSchemes#",
+      "nativeName": "AIS_ViewController::ChangeMouseSelectionSchemes",
+      "signature": "AIS_ViewController::ChangeMouseSelectionSchemes: NCollection_DataMap<unsigned int, AIS_SelectionScheme> &()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FetchNavigationKeys#d#d#",
+      "nativeName": "AIS_ViewController::FetchNavigationKeys",
+      "signature": "AIS_ViewController::FetchNavigationKeys: AIS_WalkDelta (double, double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FitAllAuto#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::FitAllAuto",
+      "signature": "AIS_ViewController::FitAllAuto: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@FlushViewEvents#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#",
+      "nativeName": "AIS_ViewController::FlushViewEvents",
+      "signature": "AIS_ViewController::FlushViewEvents: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@HandleViewEvents#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::HandleViewEvents",
+      "signature": "AIS_ViewController::HandleViewEvents: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@HasPreviousMoveTo#1",
+      "nativeName": "AIS_ViewController::HasPreviousMoveTo",
+      "signature": "AIS_ViewController::HasPreviousMoveTo: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@InputBuffer#$@E@AIS_ViewInputBufferType#1",
+      "nativeName": "AIS_ViewController::InputBuffer",
+      "signature": "AIS_ViewController::InputBuffer: const AIS_ViewInputBuffer &(AIS_ViewInputBufferType) const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@IsContinuousRedraw#1",
+      "nativeName": "AIS_ViewController::IsContinuousRedraw",
+      "signature": "AIS_ViewController::IsContinuousRedraw: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyDown#i#d#d#",
+      "nativeName": "AIS_ViewController::KeyDown",
+      "signature": "AIS_ViewController::KeyDown: void (Aspect_VKey, double, double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyFromAxis#i#i#d#d#",
+      "nativeName": "AIS_ViewController::KeyFromAxis",
+      "signature": "AIS_ViewController::KeyFromAxis: void (Aspect_VKey, Aspect_VKey, double, double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@KeyUp#i#d#",
+      "nativeName": "AIS_ViewController::KeyUp",
+      "signature": "AIS_ViewController::KeyUp: void (Aspect_VKey, double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MinZoomDistance#1",
+      "nativeName": "AIS_ViewController::MinZoomDistance",
+      "signature": "AIS_ViewController::MinZoomDistance: double () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseAcceleration#1",
+      "nativeName": "AIS_ViewController::MouseAcceleration",
+      "signature": "AIS_ViewController::MouseAcceleration: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseDoubleClickInterval#1",
+      "nativeName": "AIS_ViewController::MouseDoubleClickInterval",
+      "signature": "AIS_ViewController::MouseDoubleClickInterval: double () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseGestureMap#1",
+      "nativeName": "AIS_ViewController::MouseGestureMap",
+      "signature": "AIS_ViewController::MouseGestureMap: const NCollection_DataMap<unsigned int, AIS_MouseGesture> &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@MouseSelectionSchemes#1",
+      "nativeName": "AIS_ViewController::MouseSelectionSchemes",
+      "signature": "AIS_ViewController::MouseSelectionSchemes: const NCollection_DataMap<unsigned int, AIS_SelectionScheme> &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@NavigationMode#1",
+      "nativeName": "AIS_ViewController::NavigationMode",
+      "signature": "AIS_ViewController::NavigationMode: AIS_NavigationMode () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ObjectsAnimation#1",
+      "nativeName": "AIS_ViewController::ObjectsAnimation",
+      "signature": "AIS_ViewController::ObjectsAnimation: const occ::handle<AIS_Animation> &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnObjectDragged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_DragAction#",
+      "nativeName": "AIS_ViewController::OnObjectDragged",
+      "signature": "AIS_ViewController::OnObjectDragged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, AIS_DragAction)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnSelectionChanged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::OnSelectionChanged",
+      "signature": "AIS_ViewController::OnSelectionChanged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OnSubviewChanged#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#S3_#",
+      "nativeName": "AIS_ViewController::OnSubviewChanged",
+      "signature": "AIS_ViewController::OnSubviewChanged: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@OrbitAcceleration#1",
+      "nativeName": "AIS_ViewController::OrbitAcceleration",
+      "signature": "AIS_ViewController::OrbitAcceleration: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@PreviousMoveTo#1",
+      "nativeName": "AIS_ViewController::PreviousMoveTo",
+      "signature": "AIS_ViewController::PreviousMoveTo: const NCollection_Vec2<int> &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessClose#",
+      "nativeName": "AIS_ViewController::ProcessClose",
+      "signature": "AIS_ViewController::ProcessClose: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessConfigure#b#",
+      "nativeName": "AIS_ViewController::ProcessConfigure",
+      "signature": "AIS_ViewController::ProcessConfigure: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessExpose#",
+      "nativeName": "AIS_ViewController::ProcessExpose",
+      "signature": "AIS_ViewController::ProcessExpose: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessFocus#b#",
+      "nativeName": "AIS_ViewController::ProcessFocus",
+      "signature": "AIS_ViewController::ProcessFocus: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ProcessInput#",
+      "nativeName": "AIS_ViewController::ProcessInput",
+      "signature": "AIS_ViewController::ProcessInput: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@RemoveTouchPoint#k#b#",
+      "nativeName": "AIS_ViewController::RemoveTouchPoint",
+      "signature": "AIS_ViewController::RemoveTouchPoint: bool (size_t, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ResetPreviousMoveTo#",
+      "nativeName": "AIS_ViewController::ResetPreviousMoveTo",
+      "signature": "AIS_ViewController::ResetPreviousMoveTo: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ResetViewInput#",
+      "nativeName": "AIS_ViewController::ResetViewInput",
+      "signature": "AIS_ViewController::ResetViewInput: void ()",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@RotationMode#1",
+      "nativeName": "AIS_ViewController::RotationMode",
+      "signature": "AIS_ViewController::RotationMode: AIS_RotationMode () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SelectInViewer#&1$@S@NCollection_Sequence>#$@S@NCollection_Vec2>#I#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_ViewController::SelectInViewer",
+      "signature": "AIS_ViewController::SelectInViewer: void (const NCollection_Sequence<NCollection_Vec2<int>> &, const AIS_SelectionScheme)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SelectInViewer#&1$@S@NCollection_Vec2>#I#$@E@AIS_SelectionScheme#",
+      "nativeName": "AIS_ViewController::SelectInViewer",
+      "signature": "AIS_ViewController::SelectInViewer: void (const NCollection_Vec2<int> &, const AIS_SelectionScheme)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowDragging#b#",
+      "nativeName": "AIS_ViewController::SetAllowDragging",
+      "signature": "AIS_ViewController::SetAllowDragging: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowHighlight#b#",
+      "nativeName": "AIS_ViewController::SetAllowHighlight",
+      "signature": "AIS_ViewController::SetAllowHighlight: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowPanning#b#",
+      "nativeName": "AIS_ViewController::SetAllowPanning",
+      "signature": "AIS_ViewController::SetAllowPanning: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowRotation#b#",
+      "nativeName": "AIS_ViewController::SetAllowRotation",
+      "signature": "AIS_ViewController::SetAllowRotation: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowTouchZRotation#b#",
+      "nativeName": "AIS_ViewController::SetAllowTouchZRotation",
+      "signature": "AIS_ViewController::SetAllowTouchZRotation: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowZFocus#b#",
+      "nativeName": "AIS_ViewController::SetAllowZFocus",
+      "signature": "AIS_ViewController::SetAllowZFocus: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetAllowZooming#b#",
+      "nativeName": "AIS_ViewController::SetAllowZooming",
+      "signature": "AIS_ViewController::SetAllowZooming: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetContinuousRedraw#b#",
+      "nativeName": "AIS_ViewController::SetContinuousRedraw",
+      "signature": "AIS_ViewController::SetContinuousRedraw: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetDisplayXRAuxDevices#b#",
+      "nativeName": "AIS_ViewController::SetDisplayXRAuxDevices",
+      "signature": "AIS_ViewController::SetDisplayXRAuxDevices: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetDisplayXRHands#b#",
+      "nativeName": "AIS_ViewController::SetDisplayXRHands",
+      "signature": "AIS_ViewController::SetDisplayXRHands: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetInvertPitch#b#",
+      "nativeName": "AIS_ViewController::SetInvertPitch",
+      "signature": "AIS_ViewController::SetInvertPitch: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetLockOrbitZUp#b#",
+      "nativeName": "AIS_ViewController::SetLockOrbitZUp",
+      "signature": "AIS_ViewController::SetLockOrbitZUp: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMinZoomDistance#d#",
+      "nativeName": "AIS_ViewController::SetMinZoomDistance",
+      "signature": "AIS_ViewController::SetMinZoomDistance: void (double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMouseAcceleration#f#",
+      "nativeName": "AIS_ViewController::SetMouseAcceleration",
+      "signature": "AIS_ViewController::SetMouseAcceleration: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetMouseDoubleClickInterval#d#",
+      "nativeName": "AIS_ViewController::SetMouseDoubleClickInterval",
+      "signature": "AIS_ViewController::SetMouseDoubleClickInterval: void (double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetNavigationMode#$@E@AIS_NavigationMode#",
+      "nativeName": "AIS_ViewController::SetNavigationMode",
+      "signature": "AIS_ViewController::SetNavigationMode: void (AIS_NavigationMode)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetObjectsAnimation#&1$@N@opencascade@S@handle>#$@S@AIS_Animation#",
+      "nativeName": "AIS_ViewController::SetObjectsAnimation",
+      "signature": "AIS_ViewController::SetObjectsAnimation: void (const occ::handle<AIS_Animation> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetOrbitAcceleration#f#",
+      "nativeName": "AIS_ViewController::SetOrbitAcceleration",
+      "signature": "AIS_ViewController::SetOrbitAcceleration: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetPauseObjectsAnimation#b#",
+      "nativeName": "AIS_ViewController::SetPauseObjectsAnimation",
+      "signature": "AIS_ViewController::SetPauseObjectsAnimation: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetRotationMode#$@E@AIS_RotationMode#",
+      "nativeName": "AIS_ViewController::SetRotationMode",
+      "signature": "AIS_ViewController::SetRotationMode: void (AIS_RotationMode)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetShowPanAnchorPoint#b#",
+      "nativeName": "AIS_ViewController::SetShowPanAnchorPoint",
+      "signature": "AIS_ViewController::SetShowPanAnchorPoint: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetShowRotateCenter#b#",
+      "nativeName": "AIS_ViewController::SetShowRotateCenter",
+      "signature": "AIS_ViewController::SetShowRotateCenter: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetStickToRayOnRotation#b#",
+      "nativeName": "AIS_ViewController::SetStickToRayOnRotation",
+      "signature": "AIS_ViewController::SetStickToRayOnRotation: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetStickToRayOnZoom#b#",
+      "nativeName": "AIS_ViewController::SetStickToRayOnZoom",
+      "signature": "AIS_ViewController::SetStickToRayOnZoom: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetThrustSpeed#f#",
+      "nativeName": "AIS_ViewController::SetThrustSpeed",
+      "signature": "AIS_ViewController::SetThrustSpeed: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetTouchToleranceScale#f#",
+      "nativeName": "AIS_ViewController::SetTouchToleranceScale",
+      "signature": "AIS_ViewController::SetTouchToleranceScale: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetViewAnimation#&1$@N@opencascade@S@handle>#$@S@AIS_AnimationCamera#",
+      "nativeName": "AIS_ViewController::SetViewAnimation",
+      "signature": "AIS_ViewController::SetViewAnimation: void (const occ::handle<AIS_AnimationCamera> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetWalkSpeedAbsolute#f#",
+      "nativeName": "AIS_ViewController::SetWalkSpeedAbsolute",
+      "signature": "AIS_ViewController::SetWalkSpeedAbsolute: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@SetWalkSpeedRelative#f#",
+      "nativeName": "AIS_ViewController::SetWalkSpeedRelative",
+      "signature": "AIS_ViewController::SetWalkSpeedRelative: void (float)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ThrustSpeed#1",
+      "nativeName": "AIS_ViewController::ThrustSpeed",
+      "signature": "AIS_ViewController::ThrustSpeed: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowDragging#1",
+      "nativeName": "AIS_ViewController::ToAllowDragging",
+      "signature": "AIS_ViewController::ToAllowDragging: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowHighlight#1",
+      "nativeName": "AIS_ViewController::ToAllowHighlight",
+      "signature": "AIS_ViewController::ToAllowHighlight: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowPanning#1",
+      "nativeName": "AIS_ViewController::ToAllowPanning",
+      "signature": "AIS_ViewController::ToAllowPanning: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowRotation#1",
+      "nativeName": "AIS_ViewController::ToAllowRotation",
+      "signature": "AIS_ViewController::ToAllowRotation: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowTouchZRotation#1",
+      "nativeName": "AIS_ViewController::ToAllowTouchZRotation",
+      "signature": "AIS_ViewController::ToAllowTouchZRotation: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowZFocus#1",
+      "nativeName": "AIS_ViewController::ToAllowZFocus",
+      "signature": "AIS_ViewController::ToAllowZFocus: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToAllowZooming#1",
+      "nativeName": "AIS_ViewController::ToAllowZooming",
+      "signature": "AIS_ViewController::ToAllowZooming: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToDisplayXRAuxDevices#1",
+      "nativeName": "AIS_ViewController::ToDisplayXRAuxDevices",
+      "signature": "AIS_ViewController::ToDisplayXRAuxDevices: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToDisplayXRHands#1",
+      "nativeName": "AIS_ViewController::ToDisplayXRHands",
+      "signature": "AIS_ViewController::ToDisplayXRHands: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToInvertPitch#1",
+      "nativeName": "AIS_ViewController::ToInvertPitch",
+      "signature": "AIS_ViewController::ToInvertPitch: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToLockOrbitZUp#1",
+      "nativeName": "AIS_ViewController::ToLockOrbitZUp",
+      "signature": "AIS_ViewController::ToLockOrbitZUp: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToPauseObjectsAnimation#1",
+      "nativeName": "AIS_ViewController::ToPauseObjectsAnimation",
+      "signature": "AIS_ViewController::ToPauseObjectsAnimation: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToShowPanAnchorPoint#1",
+      "nativeName": "AIS_ViewController::ToShowPanAnchorPoint",
+      "signature": "AIS_ViewController::ToShowPanAnchorPoint: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToShowRotateCenter#1",
+      "nativeName": "AIS_ViewController::ToShowRotateCenter",
+      "signature": "AIS_ViewController::ToShowRotateCenter: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToStickToRayOnRotation#1",
+      "nativeName": "AIS_ViewController::ToStickToRayOnRotation",
+      "signature": "AIS_ViewController::ToStickToRayOnRotation: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ToStickToRayOnZoom#1",
+      "nativeName": "AIS_ViewController::ToStickToRayOnZoom",
+      "signature": "AIS_ViewController::ToStickToRayOnZoom: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@TouchToleranceScale#1",
+      "nativeName": "AIS_ViewController::TouchToleranceScale",
+      "signature": "AIS_ViewController::TouchToleranceScale: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@Update3dMouse#&1$@S@WNT_HIDSpaceMouse#",
+      "nativeName": "AIS_ViewController::Update3dMouse",
+      "signature": "AIS_ViewController::Update3dMouse: bool (const WNT_HIDSpaceMouse &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseButtons#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMouseButtons",
+      "signature": "AIS_ViewController::UpdateMouseButtons: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseClick#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMouseClick",
+      "signature": "AIS_ViewController::UpdateMouseClick: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMousePosition#&1$@S@NCollection_Vec2>#I#i#i#b#",
+      "nativeName": "AIS_ViewController::UpdateMousePosition",
+      "signature": "AIS_ViewController::UpdateMousePosition: bool (const NCollection_Vec2<int> &, Aspect_VKeyMouse, Aspect_VKeyFlags, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateMouseScroll#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::UpdateMouseScroll",
+      "signature": "AIS_ViewController::UpdateMouseScroll: bool (const Aspect_ScrollDelta &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdatePolySelection#&1$@S@NCollection_Vec2>#I#b#",
+      "nativeName": "AIS_ViewController::UpdatePolySelection",
+      "signature": "AIS_ViewController::UpdatePolySelection: void (const NCollection_Vec2<int> &, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateRubberBand#&1$@S@NCollection_Vec2>#I#S0_#",
+      "nativeName": "AIS_ViewController::UpdateRubberBand",
+      "signature": "AIS_ViewController::UpdateRubberBand: void (const NCollection_Vec2<int> &, const NCollection_Vec2<int> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateTouchPoint#k#&1$@S@NCollection_Vec2>#d#",
+      "nativeName": "AIS_ViewController::UpdateTouchPoint",
+      "signature": "AIS_ViewController::UpdateTouchPoint: void (size_t, const NCollection_Vec2<double> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateViewOrientation#$@E@V3d_TypeOfOrientation#b#",
+      "nativeName": "AIS_ViewController::UpdateViewOrientation",
+      "signature": "AIS_ViewController::UpdateViewOrientation: void (V3d_TypeOfOrientation, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateZRotation#d#",
+      "nativeName": "AIS_ViewController::UpdateZRotation",
+      "signature": "AIS_ViewController::UpdateZRotation: bool (double)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@UpdateZoom#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::UpdateZoom",
+      "signature": "AIS_ViewController::UpdateZoom: bool (const Aspect_ScrollDelta &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@ViewAnimation#1",
+      "nativeName": "AIS_ViewController::ViewAnimation",
+      "signature": "AIS_ViewController::ViewAnimation: const occ::handle<AIS_AnimationCamera> &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@WalkSpeedAbsolute#1",
+      "nativeName": "AIS_ViewController::WalkSpeedAbsolute",
+      "signature": "AIS_ViewController::WalkSpeedAbsolute: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@WalkSpeedRelative#1",
+      "nativeName": "AIS_ViewController::WalkSpeedRelative",
+      "signature": "AIS_ViewController::WalkSpeedRelative: float () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleCameraActions#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@AIS_WalkDelta#",
+      "nativeName": "AIS_ViewController::handleCameraActions",
+      "signature": "AIS_ViewController::handleCameraActions: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const AIS_WalkDelta &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleMoveTo#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleMoveTo",
+      "signature": "AIS_ViewController::handleMoveTo: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleNavigationKeys#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleNavigationKeys",
+      "signature": "AIS_ViewController::handleNavigationKeys: AIS_WalkDelta (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleOrbitRotation#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Pnt#b#",
+      "nativeName": "AIS_ViewController::handleOrbitRotation",
+      "signature": "AIS_ViewController::handleOrbitRotation: void (const occ::handle<V3d_View> &, const gp_Pnt &, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handlePanning#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handlePanning",
+      "signature": "AIS_ViewController::handlePanning: void (const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewOrientationKeys#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleViewOrientationKeys",
+      "signature": "AIS_ViewController::handleViewOrientationKeys: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewRedraw#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleViewRedraw",
+      "signature": "AIS_ViewController::handleViewRedraw: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleViewRotation#&1$@N@opencascade@S@handle>#$@S@V3d_View#d#d#d#b#",
+      "nativeName": "AIS_ViewController::handleViewRotation",
+      "signature": "AIS_ViewController::handleViewRotation: void (const occ::handle<V3d_View> &, double, double, double, bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRHighlight#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRHighlight",
+      "signature": "AIS_ViewController::handleXRHighlight: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRInput#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@AIS_WalkDelta#",
+      "nativeName": "AIS_ViewController::handleXRInput",
+      "signature": "AIS_ViewController::handleXRInput: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const AIS_WalkDelta &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRMoveTo#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@gp_Trsf#b#",
+      "nativeName": "AIS_ViewController::handleXRMoveTo",
+      "signature": "AIS_ViewController::handleXRMoveTo: int (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &, const gp_Trsf &, const bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRPicking#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRPicking",
+      "signature": "AIS_ViewController::handleXRPicking: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRPresentations#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRPresentations",
+      "signature": "AIS_ViewController::handleXRPresentations: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRTeleport#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRTeleport",
+      "signature": "AIS_ViewController::handleXRTeleport: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleXRTurnPad#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleXRTurnPad",
+      "signature": "AIS_ViewController::handleXRTurnPad: void (const occ::handle<AIS_InteractiveContext> &, const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZFocusScroll#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@Aspect_ScrollDelta#",
+      "nativeName": "AIS_ViewController::handleZFocusScroll",
+      "signature": "AIS_ViewController::handleZFocusScroll: void (const occ::handle<V3d_View> &, const Aspect_ScrollDelta &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZRotate#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "nativeName": "AIS_ViewController::handleZRotate",
+      "signature": "AIS_ViewController::handleZRotate: void (const occ::handle<V3d_View> &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@handleZoom#&1$@N@opencascade@S@handle>#$@S@V3d_View#&1$@S@Aspect_ScrollDelta#*1$@S@gp_Pnt#",
+      "nativeName": "AIS_ViewController::handleZoom",
+      "signature": "AIS_ViewController::handleZoom: void (const occ::handle<V3d_View> &, const Aspect_ScrollDelta &, const gp_Pnt *)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@hasPanningAnchorPoint#1",
+      "nativeName": "AIS_ViewController::hasPanningAnchorPoint",
+      "signature": "AIS_ViewController::hasPanningAnchorPoint: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@panningAnchorPoint#1",
+      "nativeName": "AIS_ViewController::panningAnchorPoint",
+      "signature": "AIS_ViewController::panningAnchorPoint: const gp_Pnt &() const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@setAskNextFrame#b#",
+      "nativeName": "AIS_ViewController::setAskNextFrame",
+      "signature": "AIS_ViewController::setAskNextFrame: void (bool)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@setPanningAnchorPoint#&1$@S@gp_Pnt#",
+      "nativeName": "AIS_ViewController::setPanningAnchorPoint",
+      "signature": "AIS_ViewController::setPanningAnchorPoint: void (const gp_Pnt &)",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@AIS_ViewController@F@toAskNextFrame#1",
+      "nativeName": "AIS_ViewController::toAskNextFrame",
+      "signature": "AIS_ViewController::toAskNextFrame: bool () const",
+      "header": "AIS_ViewController.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@AddInFace#&1$@S@TopoDS_Face#&$@N@opencascade@S@handle>#$@S@Poly_Triangulation#S",
+      "nativeName": "BRepMesh_ShapeTool::AddInFace",
+      "signature": "BRepMesh_ShapeTool::AddInFace: void (const TopoDS_Face &, occ::handle<Poly_Triangulation> &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@BRepMesh_ShapeTool#&&$@S@BRepMesh_ShapeTool#",
+      "nativeName": "BRepMesh_ShapeTool::BRepMesh_ShapeTool",
+      "signature": "BRepMesh_ShapeTool::BRepMesh_ShapeTool: void (BRepMesh_ShapeTool &&)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@BRepMesh_ShapeTool#&1$@S@BRepMesh_ShapeTool#",
+      "nativeName": "BRepMesh_ShapeTool::BRepMesh_ShapeTool",
+      "signature": "BRepMesh_ShapeTool::BRepMesh_ShapeTool: void (const BRepMesh_ShapeTool &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@BoxMaxDimension#&1$@S@Bnd_Box#&d#S",
+      "nativeName": "BRepMesh_ShapeTool::BoxMaxDimension",
+      "signature": "BRepMesh_ShapeTool::BoxMaxDimension: void (const Bnd_Box &, double &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@CheckAndUpdateFlags#&1$@N@opencascade@S@handle>#$@S@IMeshData_Edge#&1$@N@opencascade@S@handle>#$@S@IMeshData_PCurve#S",
+      "nativeName": "BRepMesh_ShapeTool::CheckAndUpdateFlags",
+      "signature": "BRepMesh_ShapeTool::CheckAndUpdateFlags: void (const IMeshData::IEdgeHandle &, const IMeshData::IPCurveHandle &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@NullifyEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#S",
+      "nativeName": "BRepMesh_ShapeTool::NullifyEdge",
+      "signature": "BRepMesh_ShapeTool::NullifyEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@NullifyEdge#&1$@S@TopoDS_Edge#&1$@S@TopLoc_Location#S",
+      "nativeName": "BRepMesh_ShapeTool::NullifyEdge",
+      "signature": "BRepMesh_ShapeTool::NullifyEdge: void (const TopoDS_Edge &, const TopLoc_Location &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@NullifyFace#&1$@S@TopoDS_Face#S",
+      "nativeName": "BRepMesh_ShapeTool::NullifyFace",
+      "signature": "BRepMesh_ShapeTool::NullifyFace: void (const TopoDS_Face &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#S",
+      "nativeName": "BRepMesh_ShapeTool::UpdateEdge",
+      "signature": "BRepMesh_ShapeTool::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_Polygon3D> &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#S",
+      "nativeName": "BRepMesh_ShapeTool::UpdateEdge",
+      "signature": "BRepMesh_ShapeTool::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_PolygonOnTriangulation#S2_#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@TopLoc_Location#S",
+      "nativeName": "BRepMesh_ShapeTool::UpdateEdge",
+      "signature": "BRepMesh_ShapeTool::UpdateEdge: void (const TopoDS_Edge &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_PolygonOnTriangulation> &, const occ::handle<Poly_Triangulation> &, const TopLoc_Location &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@UseLocation#&1$@S@gp_Pnt#&1$@S@TopLoc_Location#S",
+      "nativeName": "BRepMesh_ShapeTool::UseLocation",
+      "signature": "BRepMesh_ShapeTool::UseLocation: gp_Pnt (const gp_Pnt &, const TopLoc_Location &)",
+      "header": "BRepMesh_ShapeTool.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@get_type_descriptor#S",
+      "nativeName": "BRepMesh_ShapeTool::get_type_descriptor",
+      "signature": "BRepMesh_ShapeTool::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_ShapeTool@F@get_type_name#S",
+      "nativeName": "BRepMesh_ShapeTool::get_type_name",
+      "signature": "BRepMesh_ShapeTool::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@AddLink#&1$@S@Poly_CoherentTriangle#I#",
+      "nativeName": "Poly_CoherentTriangulation::AddLink",
+      "signature": "Poly_CoherentTriangulation::AddLink: Poly_CoherentLink *(const Poly_CoherentTriangle &, const int)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@ChangeNode#I#",
+      "nativeName": "Poly_CoherentTriangulation::ChangeNode",
+      "signature": "Poly_CoherentTriangulation::ChangeNode: Poly_CoherentNode &(const int)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Dump#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "Poly_CoherentTriangulation::Dump",
+      "signature": "Poly_CoherentTriangulation::Dump: void (Standard_OStream &) const",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@FindTriangle#&1$@S@Poly_CoherentLink#**1$@S@Poly_CoherentTriangle#1",
+      "nativeName": "Poly_CoherentTriangulation::FindTriangle",
+      "signature": "Poly_CoherentTriangulation::FindTriangle: bool (const Poly_CoherentLink &, const Poly_CoherentTriangle **) const",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Node#I#1",
+      "nativeName": "Poly_CoherentTriangulation::Node",
+      "signature": "Poly_CoherentTriangulation::Node: const Poly_CoherentNode &(const int) const",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@S@Poly_CoherentTriangulation#",
+      "nativeName": "Poly_CoherentTriangulation::Poly_CoherentTriangulation",
+      "signature": "Poly_CoherentTriangulation::Poly_CoherentTriangulation: void (const Poly_CoherentTriangulation &)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@RemoveDegenerated#d#*$@S@NCollection_List>#$@S@Poly_CoherentTriangulation@S@TwoIntegers#",
+      "nativeName": "Poly_CoherentTriangulation::RemoveDegenerated",
+      "signature": "Poly_CoherentTriangulation::RemoveDegenerated: bool (const double, NCollection_List<TwoIntegers> *)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@RemoveLink#&$@S@Poly_CoherentLink#",
+      "nativeName": "Poly_CoherentTriangulation::RemoveLink",
+      "signature": "Poly_CoherentTriangulation::RemoveLink: void (Poly_CoherentLink &)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@get_type_descriptor#S",
+      "nativeName": "Poly_CoherentTriangulation::get_type_descriptor",
+      "signature": "Poly_CoherentTriangulation::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@get_type_name#S",
+      "nativeName": "Poly_CoherentTriangulation::get_type_name",
+      "signature": "Poly_CoherentTriangulation::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@ChangeNodes#",
+      "nativeName": "Poly_Polygon2D::ChangeNodes",
+      "signature": "Poly_Polygon2D::ChangeNodes: NCollection_Array1<gp_Pnt2d> &()",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "Poly_Polygon2D::DumpJson",
+      "signature": "Poly_Polygon2D::DumpJson: void (Standard_OStream &, int) const",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Poly_Polygon2D#&&$@S@Poly_Polygon2D#",
+      "nativeName": "Poly_Polygon2D::Poly_Polygon2D",
+      "signature": "Poly_Polygon2D::Poly_Polygon2D: void (Poly_Polygon2D &&)",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Poly_Polygon2D#&1$@S@Poly_Polygon2D#",
+      "nativeName": "Poly_Polygon2D::Poly_Polygon2D",
+      "signature": "Poly_Polygon2D::Poly_Polygon2D: void (const Poly_Polygon2D &)",
+      "header": "Poly_Polygon2D.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@get_type_descriptor#S",
+      "nativeName": "Poly_Polygon2D::get_type_descriptor",
+      "signature": "Poly_Polygon2D::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@get_type_name#S",
+      "nativeName": "Poly_Polygon2D::get_type_name",
+      "signature": "Poly_Polygon2D::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@CachedMinMax#1",
+      "nativeName": "Poly_Triangulation::CachedMinMax",
+      "signature": "Poly_Triangulation::CachedMinMax: const Bnd_Box &() const",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@ChangeTriangle#I#",
+      "nativeName": "Poly_Triangulation::ChangeTriangle",
+      "signature": "Poly_Triangulation::ChangeTriangle: Poly_Triangle &(const int)",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@ChangeTriangles#",
+      "nativeName": "Poly_Triangulation::ChangeTriangles",
+      "signature": "Poly_Triangulation::ChangeTriangles: NCollection_Array1<Poly_Triangle> &()",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "Poly_Triangulation::DumpJson",
+      "signature": "Poly_Triangulation::DumpJson: void (Standard_OStream &, int) const",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@InternalNodes#",
+      "nativeName": "Poly_Triangulation::InternalNodes",
+      "signature": "Poly_Triangulation::InternalNodes: Poly_ArrayOfNodes &()",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@InternalNormals#",
+      "nativeName": "Poly_Triangulation::InternalNormals",
+      "signature": "Poly_Triangulation::InternalNormals: NCollection_Array1<NCollection_Vec3<float>> &()",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@InternalTriangles#",
+      "nativeName": "Poly_Triangulation::InternalTriangles",
+      "signature": "Poly_Triangulation::InternalTriangles: NCollection_Array1<Poly_Triangle> &()",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@InternalUVNodes#",
+      "nativeName": "Poly_Triangulation::InternalUVNodes",
+      "signature": "Poly_Triangulation::InternalUVNodes: Poly_ArrayOfUVNodes &()",
+      "header": "Poly_Triangulation.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@get_type_descriptor#S",
+      "nativeName": "Poly_Triangulation::get_type_descriptor",
+      "signature": "Poly_Triangulation::get_type_descriptor: const occ::handle<Standard_Type> &()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@get_type_name#S",
+      "nativeName": "Poly_Triangulation::get_type_name",
+      "signature": "Poly_Triangulation::get_type_name: const char *()",
+      "header": "Standard_Type.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@Build#",
+      "nativeName": "SelectMgr_RectangularFrustum::Build",
+      "signature": "SelectMgr_RectangularFrustum::Build: void ()",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@CopyWithBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1",
+      "nativeName": "SelectMgr_RectangularFrustum::CopyWithBuilder",
+      "signature": "SelectMgr_RectangularFrustum::CopyWithBuilder: occ::handle<SelectMgr_BaseIntersector> (const occ::handle<SelectMgr_FrustumBuilder> &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@DetectedPoint#d#1",
+      "nativeName": "SelectMgr_RectangularFrustum::DetectedPoint",
+      "signature": "SelectMgr_RectangularFrustum::DetectedPoint: gp_Pnt (const double) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@DistToGeometryCenter#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_RectangularFrustum::DistToGeometryCenter",
+      "signature": "SelectMgr_RectangularFrustum::DistToGeometryCenter: double (const gp_Pnt &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@DumpJson#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#I#1",
+      "nativeName": "SelectMgr_RectangularFrustum::DumpJson",
+      "signature": "SelectMgr_RectangularFrustum::DumpJson: void (Standard_OStream &, int) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetFarPnt#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetFarPnt",
+      "signature": "SelectMgr_RectangularFrustum::GetFarPnt: const gp_Pnt &() const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetMousePosition#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetMousePosition",
+      "signature": "SelectMgr_RectangularFrustum::GetMousePosition: const gp_Pnt2d &() const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetNearPnt#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetNearPnt",
+      "signature": "SelectMgr_RectangularFrustum::GetNearPnt: const gp_Pnt &() const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetPlanes#&$@S@NCollection_DynamicArray>#$@S@NCollection_Vec4>#d#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetPlanes",
+      "signature": "SelectMgr_RectangularFrustum::GetPlanes: void (NCollection_DynamicArray<NCollection_Vec4<double>> &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetVertices#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetVertices",
+      "signature": "SelectMgr_RectangularFrustum::GetVertices: const gp_Pnt *() const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@GetViewRayDirection#1",
+      "nativeName": "SelectMgr_RectangularFrustum::GetViewRayDirection",
+      "signature": "SelectMgr_RectangularFrustum::GetViewRayDirection: const gp_Dir &() const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@Init#&1$@S@gp_Pnt2d#",
+      "nativeName": "SelectMgr_RectangularFrustum::Init",
+      "signature": "SelectMgr_RectangularFrustum::Init: void (const gp_Pnt2d &)",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@Init#&1$@S@gp_Pnt2d#S0_#",
+      "nativeName": "SelectMgr_RectangularFrustum::Init",
+      "signature": "SelectMgr_RectangularFrustum::Init: void (const gp_Pnt2d &, const gp_Pnt2d &)",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@IsScalable#1",
+      "nativeName": "SelectMgr_RectangularFrustum::IsScalable",
+      "signature": "SelectMgr_RectangularFrustum::IsScalable: bool () const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsBox",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsBox#&1$@S@NCollection_Vec3>#d#S0_#*b#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsBox",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsBox: bool (const NCollection_Vec3<double> &, const NCollection_Vec3<double> &, bool *) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsCircle",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsCircle: bool (const double, const gp_Trsf &, const bool, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsCircle",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsCircle: bool (const double, const gp_Trsf &, const bool, bool *) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsCylinder",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsCylinder: bool (const double, const double, const double, const gp_Trsf &, const bool, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsCylinder",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsCylinder: bool (const double, const double, const double, const gp_Trsf &, const bool, bool *) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsPoint#&1$@S@gp_Pnt#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsPoint",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsPoint: bool (const gp_Pnt &, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsPoint#&1$@S@gp_Pnt#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsPoint",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsPoint: bool (const gp_Pnt &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsPolygon#&1$@S@NCollection_Array1>#$@S@gp_Pnt#$@E@Select3D_TypeOfSensitivity#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsPolygon",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsPolygon: bool (const NCollection_Array1<gp_Pnt> &, Select3D_TypeOfSensitivity, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsSegment#&1$@S@gp_Pnt#S0_#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsSegment",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsSegment: bool (const gp_Pnt &, const gp_Pnt &, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsSphere#&1$@S@gp_Pnt#d#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsSphere",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsSphere: bool (const gp_Pnt &, const double, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsSphere#&1$@S@gp_Pnt#d#*b#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsSphere",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsSphere: bool (const gp_Pnt &, const double, bool *) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@OverlapsTriangle#&1$@S@gp_Pnt#S0_#S0_#$@E@Select3D_TypeOfSensitivity#&1$@S@SelectMgr_ViewClipRange#&$@S@SelectBasics_PickResult#1",
+      "nativeName": "SelectMgr_RectangularFrustum::OverlapsTriangle",
+      "signature": "SelectMgr_RectangularFrustum::OverlapsTriangle: bool (const gp_Pnt &, const gp_Pnt &, const gp_Pnt &, Select3D_TypeOfSensitivity, const SelectMgr_ViewClipRange &, SelectBasics_PickResult &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@ScaleAndTransform#I#&1$@S@gp_GTrsf#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1",
+      "nativeName": "SelectMgr_RectangularFrustum::ScaleAndTransform",
+      "signature": "SelectMgr_RectangularFrustum::ScaleAndTransform: occ::handle<SelectMgr_BaseIntersector> (const int, const gp_GTrsf &, const occ::handle<SelectMgr_FrustumBuilder> &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@SelectMgr_RectangularFrustum#",
+      "nativeName": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum",
+      "signature": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum: void ()",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@SelectMgr_RectangularFrustum#&&$@S@SelectMgr_RectangularFrustum#",
+      "nativeName": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum",
+      "signature": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum: void (SelectMgr_RectangularFrustum &&)",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@SelectMgr_RectangularFrustum#&1$@S@SelectMgr_RectangularFrustum#",
+      "nativeName": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum",
+      "signature": "SelectMgr_RectangularFrustum::SelectMgr_RectangularFrustum: void (const SelectMgr_RectangularFrustum &)",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@isIntersectCircle#d#&1$@S@gp_Pnt#&1$@S@gp_Trsf#&1$@S@NCollection_Array1>#S1_#1",
+      "nativeName": "SelectMgr_RectangularFrustum::isIntersectCircle",
+      "signature": "SelectMgr_RectangularFrustum::isIntersectCircle: bool (const double, const gp_Pnt &, const gp_Trsf &, const NCollection_Array1<gp_Pnt> &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_RectangularFrustum@F@isSegmentsIntersect#&1$@S@gp_Pnt#S0_#S0_#S0_#1",
+      "nativeName": "SelectMgr_RectangularFrustum::isSegmentsIntersect",
+      "signature": "SelectMgr_RectangularFrustum::isSegmentsIntersect: bool (const gp_Pnt &, const gp_Pnt &, const gp_Pnt &, const gp_Pnt &) const",
+      "header": "SelectMgr_RectangularFrustum.hxx",
+      "baselineDisposition": "Blocked",
+      "decision": "DEFERRED",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Mutable or borrowed mesh buffers/links, raw graphics/input state, unproved pointer/parent/thread history, redundant owning overloads and external topology association remain deferred; existing Viewer/selection workflows reused."
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy",
+      "signature": "BRepBuilderAPI_Copy::BRepBuilderAPI_Copy: void (const TopoDS_Shape &, const bool, const bool)",
+      "header": "BRepBuilderAPI_Copy.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#",
+      "nativeName": "Poly_CoherentTriangulation::Poly_CoherentTriangulation",
+      "signature": "Poly_CoherentTriangulation::Poly_CoherentTriangulation: void (const occ::handle<Poly_Triangulation> &, const occ::handle<NCollection_BaseAllocator> &)",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Copy#1",
+      "nativeName": "Poly_Polygon2D::Copy",
+      "signature": "Poly_Polygon2D::Copy: occ::handle<Poly_Polygon2D> () const",
+      "header": "Poly_Polygon2D.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Deflection#1",
+      "nativeName": "Poly_Polygon2D::Deflection",
+      "signature": "Poly_Polygon2D::Deflection: double () const",
+      "header": "Poly_Polygon2D.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@Deflection#d#",
+      "nativeName": "Poly_Polygon2D::Deflection",
+      "signature": "Poly_Polygon2D::Deflection: void (const double)",
+      "header": "Poly_Polygon2D.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon2D@F@NbNodes#1",
+      "nativeName": "Poly_Polygon2D::NbNodes",
+      "signature": "Poly_Polygon2D::NbNodes: int () const",
+      "header": "Poly_Polygon2D.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "nativeName": "Poly_Triangle::Get",
+      "signature": "Poly_Triangle::Get: void (int &, int &, int &) const",
+      "header": "Poly_Triangle.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Manual"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Copy#1",
+      "nativeName": "Poly_Triangulation::Copy",
+      "signature": "Poly_Triangulation::Copy: occ::handle<Poly_Triangulation> () const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasDeferredData#1",
+      "nativeName": "Poly_Triangulation::HasDeferredData",
+      "signature": "Poly_Triangulation::HasDeferredData: bool () const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@HasGeometry#1",
+      "nativeName": "Poly_Triangulation::HasGeometry",
+      "signature": "Poly_Triangulation::HasGeometry: bool () const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbNodes#1",
+      "nativeName": "Poly_Triangulation::NbNodes",
+      "signature": "Poly_Triangulation::NbNodes: int () const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@NbTriangles#1",
+      "nativeName": "Poly_Triangulation::NbTriangles",
+      "signature": "Poly_Triangulation::NbTriangles: int () const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Node#I#1",
+      "nativeName": "Poly_Triangulation::Node",
+      "signature": "Poly_Triangulation::Node: gp_Pnt (int) const",
+      "header": "Poly_Triangulation.hxx",
+      "guard": "BEExactCopiedMesh",
+      "reason": "Actually called bounded polygon/native coherent initializer, copy or exact ordinal projection prerequisite; existing operations reused.",
+      "baselineDisposition": "Emitted"
+    }
+  ]
+}

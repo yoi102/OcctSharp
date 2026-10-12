@@ -1,0 +1,15 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace OcctSharp.Interop;
+
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_render_health")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerRenderingHealth(ViewerHandle viewer, out int flags);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_invalidate_gpu_resources")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus InvalidateViewerGpuResources(ViewerHandle viewer);
+}

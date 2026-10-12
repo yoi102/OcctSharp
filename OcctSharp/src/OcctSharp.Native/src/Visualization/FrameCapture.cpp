@@ -1,3 +1,5 @@
+#include "../../generated/Visualization/OcctSharp.Visualization.RenderResourceAdapters.Generated.hxx"
+#include "../../generated/Visualization/OcctSharp.Visualization.ViewerAdapters.Generated.hxx"
 #include "Visualization/Context.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Validation.hxx"
@@ -21,7 +23,7 @@ class CaptureBuffer final {
   bool singleLayer, immediateFront, immediateUpdate;
 public:
   CaptureBuffer(const opencascade::handle<V3d_View>& v, int width, int height)
-    : view(v), driverView(v->View()), original(driverView->FBO()),
+    : view(v), driverView(OcctSharpGenerated::RenderResourceAdapters::V3d_View_View_Bind(*(v))()), original(driverView->FBO()),
       layer(driverView->ZLayerTarget()), singleLayer(driverView->ZLayerRedrawMode()) {
     buffer = driverView->FBOCreate(width, height);
     RequireRender(!buffer.IsNull(), "Cannot allocate an offscreen framebuffer; screen fallback is not supported.");
@@ -46,7 +48,7 @@ class CaptureCamera final {
   double autoScale;
 public:
   opencascade::handle<Graphic3d_Camera> Value;
-  explicit CaptureCamera(const opencascade::handle<V3d_View>& v) : view(v), original(v->Camera()),
+  explicit CaptureCamera(const opencascade::handle<V3d_View>& v) : view(v), original(OcctSharpGenerated::ViewerAdapters::V3d_View_Camera_Bind(*(v))()),
     autoDepth(v->AutoZFitMode()), autoScale(v->AutoZFitScaleFactor()), Value(new Graphic3d_Camera(original)) {
     view->SetAutoZFitMode(false); view->SetCamera(Value);
   }
@@ -62,19 +64,19 @@ class CaptureLayers final {
 public:
   explicit CaptureLayers(OcctSharp_ViewerHandle* v) : viewer(v) {}
   void Through(int target) {
-    NCollection_Sequence<int> sequence; viewer->Viewer->GetAllZLayers(sequence);
+    NCollection_Sequence<int> sequence; OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_GetAllZLayers_Bind(*(viewer->Viewer))(sequence);
     std::unordered_set<int> excluded; bool passed = false;
     for (const int id : sequence) { if (passed) excluded.insert(id); if (id == target) passed = true; }
     RequireRender(passed, "Capture layer is not present in drawing order.");
     NCollection_Map<opencascade::handle<Graphic3d_Structure>> structures;
-    viewer->View->View()->DisplayedStructures(structures);
+    OcctSharpGenerated::RenderResourceAdapters::Graphic3d_CView_DisplayedStructures_Bind(*(OcctSharpGenerated::RenderResourceAdapters::V3d_View_View_Bind(*(viewer->View))()))(structures);
     for (const auto& s : structures) if (s->IsVisible() && excluded.contains(s->GetZLayer())) hidden.push_back(s);
-    for (int id : excluded) settings.emplace_back(id,viewer->Viewer->ZLayerSettings(id));
+    for (int id : excluded) settings.emplace_back(id,OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_ZLayerSettings_Bind(*(viewer->Viewer))(id));
     for (const auto& s : hidden) s->SetVisible(false);
-    for (const auto& [id, original] : settings) { auto value = original; value.SetClearDepth(false); viewer->Viewer->SetZLayerSettings(id,value); }
+    for (const auto& [id, original] : settings) { auto value = OcctSharpGenerated::RenderResourceAdapters::ConstructGraphic3dZLayerSettings(original); OcctSharpGenerated::RenderResourceAdapters::Graphic3d_ZLayerSettings_SetClearDepth_Bind(value)(false); OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_SetZLayerSettings_Bind(*(viewer->Viewer))(id,value); }
   }
   ~CaptureLayers() {
-    for (const auto& [id, value] : settings) viewer->Viewer->SetZLayerSettings(id,value);
+    for (const auto& [id, value] : settings) OcctSharpGenerated::RenderResourceAdapters::V3d_Viewer_SetZLayerSettings_Bind(*(viewer->Viewer))(id,value);
     for (const auto& s : hidden) s->SetVisible(true);
   }
 };
@@ -89,7 +91,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_frame_capture(OcctSharp_ViewerH
     const auto caps = ReadRenderCaps(viewer); const int maxTile = std::min(caps.max_dump_x, caps.max_dump_y);
     RequireRender(r.tile_size == 0 || (r.tile_size >= 16 && r.tile_size <= maxTile), "Unsupported capture tile size.");
     RequireRender(r.layer >= -1 && (r.layer != -1 || !r.single_layer), "Single-layer capture requires an explicit layer.");
-    V3d_ImageDumpOptions options; options.Width = r.width; options.Height = r.height;
+    V3d_ImageDumpOptions options = OcctSharpGenerated::RenderResourceAdapters::ConstructV3dImageDumpOptions(); options.Width = r.width; options.Height = r.height;
     options.BufferType = r.depth ? Graphic3d_BT_Depth : Graphic3d_BT_RGBA;
     options.TileSize = r.tile_size; options.ToAdjustAspect = r.adjust_aspect != 0;
     options.TargetZLayerId = r.layer == -1 ? Graphic3d_ZLayerId_BotOSD : ReviewLayerId(viewer, r.layer);
@@ -106,13 +108,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_frame_capture(OcctSharp_ViewerH
     OcctSharp_FrameInfo metadata{}; metadata.width = r.width; metadata.height = r.height; metadata.stride = r.width * 4;
     metadata.zero_to_one_depth = camera.Value->IsZeroToOneDepth() ? 1 : 0;
     metadata.near_plane = camera.Value->ZNear(); metadata.far_plane = camera.Value->ZFar();
-    const auto inverse = (camera.Value->ProjectionMatrix() * camera.Value->OrientationMatrix()).Inverted();
+    const auto inverse = (OcctSharpGenerated::ViewerAdapters::Graphic3d_Camera_ProjectionMatrix_Bind(*(camera.Value))() * OcctSharpGenerated::ViewerAdapters::Graphic3d_Camera_OrientationMatrix_Bind(*(camera.Value))()).Inverted();
     for (int row = 0; row < 4; ++row) for (int col = 0; col < 4; ++col) metadata.inverse_view_projection[row * 4 + col] = inverse.GetValue(row, col);
-    Image_PixMap pixels; RequireRender(viewer->View->ToPixMap(pixels, options), "OCCT could not capture the requested framebuffer.");
-    RequireRender(pixels.SizeX() == static_cast<size_t>(r.width) && pixels.SizeY() == static_cast<size_t>(r.height) &&
+    Image_PixMap pixels; RequireRender(OcctSharpGenerated::RenderResourceAdapters::V3d_View_ToPixMap_Bind(*(viewer->View))(pixels, options), "OCCT could not capture the requested framebuffer.");
+    RequireRender(OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeX_Bind(pixels)() == static_cast<size_t>(r.width) && OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_SizeY_Bind(pixels)() == static_cast<size_t>(r.height) &&
       pixels.Format() == (r.depth ? Image_Format_GrayF : Image_Format_RGBA), "Unexpected framebuffer dimensions or pixel format.");
     std::vector<uint8_t> copy(static_cast<size_t>(length));
-    for (int row = 0; row < r.height; ++row) std::memcpy(copy.data() + static_cast<size_t>(row) * metadata.stride, pixels.Row(row), metadata.stride);
+    for (int row = 0; row < r.height; ++row) std::memcpy(copy.data() + static_cast<size_t>(row) * metadata.stride, OcctSharpGenerated::RenderResourceAdapters::Image_PixMap_Row_Bind(pixels)(row), metadata.stride);
     std::memcpy(output, copy.data(), copy.size()); *info = metadata;
   });
 }

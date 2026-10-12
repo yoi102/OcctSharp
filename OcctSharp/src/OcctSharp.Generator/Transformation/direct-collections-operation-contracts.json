@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@GetID#S",
+      "nativeName": "TDataStd_BooleanArray::GetID",
+      "signature": "TDataStd_BooleanArray::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@ID#1",
+      "nativeName": "TDataStd_BooleanArray::ID",
+      "signature": "TDataStd_BooleanArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@InternalArray#1",
+      "nativeName": "TDataStd_BooleanArray::InternalArray",
+      "signature": "TDataStd_BooleanArray::InternalArray: const occ::handle<NCollection_HArray1<uint8_t>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_BooleanArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_BooleanArray::SetID",
+      "signature": "TDataStd_BooleanArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#c#b#",
+      "nativeName": "TDataStd_ByteArray::ChangeArray",
+      "signature": "TDataStd_ByteArray::ChangeArray: void (const occ::handle<NCollection_HArray1<uint8_t>> &, const bool)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@GetID#S",
+      "nativeName": "TDataStd_ByteArray::GetID",
+      "signature": "TDataStd_ByteArray::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@ID#1",
+      "nativeName": "TDataStd_ByteArray::ID",
+      "signature": "TDataStd_ByteArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@InternalArray#1",
+      "nativeName": "TDataStd_ByteArray::InternalArray",
+      "signature": "TDataStd_ByteArray::InternalArray: const occ::handle<NCollection_HArray1<uint8_t>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ByteArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ByteArray::SetID",
+      "signature": "TDataStd_ByteArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Array#1",
+      "nativeName": "TDataStd_ExtStringArray::Array",
+      "signature": "TDataStd_ExtStringArray::Array: const occ::handle<NCollection_HArray1<TCollection_ExtendedString>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@TCollection_ExtendedString#b#",
+      "nativeName": "TDataStd_ExtStringArray::ChangeArray",
+      "signature": "TDataStd_ExtStringArray::ChangeArray: void (const occ::handle<NCollection_HArray1<TCollection_ExtendedString>> &, const bool)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@GetID#S",
+      "nativeName": "TDataStd_ExtStringArray::GetID",
+      "signature": "TDataStd_ExtStringArray::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@ID#1",
+      "nativeName": "TDataStd_ExtStringArray::ID",
+      "signature": "TDataStd_ExtStringArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ExtStringArray::SetID",
+      "signature": "TDataStd_ExtStringArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@Append#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_ExtStringList::Append",
+      "signature": "TDataStd_ExtStringList::Append: void (const TCollection_ExtendedString &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@GetID#S",
+      "nativeName": "TDataStd_ExtStringList::GetID",
+      "signature": "TDataStd_ExtStringList::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@ID#1",
+      "nativeName": "TDataStd_ExtStringList::ID",
+      "signature": "TDataStd_ExtStringList::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@List#1",
+      "nativeName": "TDataStd_ExtStringList::List",
+      "signature": "TDataStd_ExtStringList::List: const NCollection_List<TCollection_ExtendedString> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ExtStringList::SetID",
+      "signature": "TDataStd_ExtStringList::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Array#1",
+      "nativeName": "TDataStd_IntegerArray::Array",
+      "signature": "TDataStd_IntegerArray::Array: const occ::handle<NCollection_HArray1<int>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#b#",
+      "nativeName": "TDataStd_IntegerArray::ChangeArray",
+      "signature": "TDataStd_IntegerArray::ChangeArray: void (const occ::handle<NCollection_HArray1<int>> &, const bool)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@ID#1",
+      "nativeName": "TDataStd_IntegerArray::ID",
+      "signature": "TDataStd_IntegerArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_IntegerArray::SetID",
+      "signature": "TDataStd_IntegerArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@GetID#S",
+      "nativeName": "TDataStd_IntegerList::GetID",
+      "signature": "TDataStd_IntegerList::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@ID#1",
+      "nativeName": "TDataStd_IntegerList::ID",
+      "signature": "TDataStd_IntegerList::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@List#1",
+      "nativeName": "TDataStd_IntegerList::List",
+      "signature": "TDataStd_IntegerList::List: const NCollection_List<int> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_IntegerList::SetID",
+      "signature": "TDataStd_IntegerList::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Array#1",
+      "nativeName": "TDataStd_RealArray::Array",
+      "signature": "TDataStd_RealArray::Array: const occ::handle<NCollection_HArray1<double>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@ChangeArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#b#",
+      "nativeName": "TDataStd_RealArray::ChangeArray",
+      "signature": "TDataStd_RealArray::ChangeArray: void (const occ::handle<NCollection_HArray1<double>> &, const bool)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@ID#1",
+      "nativeName": "TDataStd_RealArray::ID",
+      "signature": "TDataStd_RealArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_RealArray::SetID",
+      "signature": "TDataStd_RealArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@GetID#S",
+      "nativeName": "TDataStd_RealList::GetID",
+      "signature": "TDataStd_RealList::GetID: const Standard_GUID &()",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@ID#1",
+      "nativeName": "TDataStd_RealList::ID",
+      "signature": "TDataStd_RealList::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@List#1",
+      "nativeName": "TDataStd_RealList::List",
+      "signature": "TDataStd_RealList::List: const NCollection_List<double> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealList@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_RealList::SetID",
+      "signature": "TDataStd_RealList::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@ID#1",
+      "nativeName": "TDataStd_ReferenceArray::ID",
+      "signature": "TDataStd_ReferenceArray::ID: const Standard_GUID &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@InternalArray#1",
+      "nativeName": "TDataStd_ReferenceArray::InternalArray",
+      "signature": "TDataStd_ReferenceArray::InternalArray: const occ::handle<NCollection_HArray1<TDF_Label>> &() const",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetID#&1$@S@Standard_GUID#",
+      "nativeName": "TDataStd_ReferenceArray::SetID",
+      "signature": "TDataStd_ReferenceArray::SetID: void (const Standard_GUID &)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetInternalArray#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@TDF_Label#b#",
+      "nativeName": "TDataStd_ReferenceArray::SetInternalArray",
+      "signature": "TDataStd_ReferenceArray::SetInternalArray: void (const occ::handle<NCollection_HArray1<TDF_Label>> &, const bool)",
+      "guard": "BIDirectCollectionTransaction",
+      "reason": "Direct typed attributes, GUID identity, copied bounded values and atomic caller-command replacement."
+    }
+  ],
+  "supportingOperations": []
+}

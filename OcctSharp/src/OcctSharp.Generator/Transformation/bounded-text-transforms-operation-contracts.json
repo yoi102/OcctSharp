@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "owners": [],
+  "operations": [
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@AssignCat#*1C#I#",
+      "nativeName": "TCollection_AsciiString::AssignCat",
+      "signature": "TCollection_AsciiString::AssignCat: void (const char *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Cat#*1C#I#1",
+      "nativeName": "TCollection_AsciiString::Cat",
+      "signature": "TCollection_AsciiString::Cat: TCollection_AsciiString (const char *const, const int) const",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@Copy#*1C#I#",
+      "nativeName": "TCollection_AsciiString::Copy",
+      "signature": "TCollection_AsciiString::Copy: void (const char *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@SetValue#I#*1C#I#",
+      "nativeName": "TCollection_AsciiString::SetValue",
+      "signature": "TCollection_AsciiString::SetValue: void (const int, const char *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_AsciiString@F@TCollection_AsciiString#*1C#I#",
+      "nativeName": "TCollection_AsciiString::TCollection_AsciiString",
+      "signature": "TCollection_AsciiString::TCollection_AsciiString: void (const char *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@AssignCat#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::AssignCat",
+      "signature": "TCollection_ExtendedString::AssignCat: void (const char16_t *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Cat#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Cat",
+      "signature": "TCollection_ExtendedString::Cat: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@ChangeAll#q#q#",
+      "nativeName": "TCollection_ExtendedString::ChangeAll",
+      "signature": "TCollection_ExtendedString::ChangeAll: void (const char16_t, const char16_t)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Copy#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Copy",
+      "signature": "TCollection_ExtendedString::Copy: void (const char16_t *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Prepend#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::Prepend",
+      "signature": "TCollection_ExtendedString::Prepend: void (const char16_t *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@RemoveAll#q#",
+      "nativeName": "TCollection_ExtendedString::RemoveAll",
+      "signature": "TCollection_ExtendedString::RemoveAll: void (const char16_t)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@SetValue#I#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::SetValue",
+      "signature": "TCollection_ExtendedString::SetValue: void (const int, const char16_t *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@TCollection_ExtendedString#*1q#I#",
+      "nativeName": "TCollection_ExtendedString::TCollection_ExtendedString",
+      "signature": "TCollection_ExtendedString::TCollection_ExtendedString: void (const char16_t *const, const int)",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    },
+    {
+      "stableId": "c:@S@TCollection_ExtendedString@F@Token#*1q#I#1",
+      "nativeName": "TCollection_ExtendedString::Token",
+      "signature": "TCollection_ExtendedString::Token: TCollection_ExtendedString (const char16_t *const, const int) const",
+      "guard": "BNBoundedTextTransforms",
+      "reason": "Explicit bounded private input/transform with independent copied output and atomic bounded batch publication."
+    }
+  ],
+  "supportingOperations": []
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "BW frozen Preview72",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "663F9E19CCFBCD1A506CE9327742C3A05C4F64D88605EA036AC8AC4C0867A8E3",
+  "declarations": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Add#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Add",
+      "signature": "BRepBuilderAPI_MakeFace::Add: void (const TopoDS_Wire &)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void ()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const TopoDS_Wire &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const TopoDS_Wire &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#&1$@S@TopoDS_Wire#b#",
+      "nativeName": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace",
+      "signature": "BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace: void (const gp_Pln &, const TopoDS_Wire &, const bool)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::Face",
+      "signature": "BRepBuilderAPI_MakeFace::Face: const TopoDS_Face &() const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Init",
+      "signature": "BRepBuilderAPI_MakeFace::Init: void (const occ::handle<Geom_Surface> &, const bool, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#",
+      "nativeName": "BRepBuilderAPI_MakeFace::Init",
+      "signature": "BRepBuilderAPI_MakeFace::Init: void (const occ::handle<Geom_Surface> &, const double, const double, const double, const double, const double)",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeFace::IsDone",
+      "signature": "BRepBuilderAPI_MakeFace::IsDone: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "nativeName": "BRepBuilderAPI_MakeShape::Shape",
+      "signature": "BRepBuilderAPI_MakeShape::Shape: const TopoDS_Shape &()",
+      "baselineDisposition": "Manual",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@Copy#1",
+      "nativeName": "Geom2d_BSplineCurve::Copy",
+      "signature": "Geom2d_BSplineCurve::Copy: occ::handle<Geom2d_Geometry> () const",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Copy#1",
+      "nativeName": "Geom_BSplineSurface::Copy",
+      "signature": "Geom_BSplineSurface::Copy: occ::handle<Geom_Geometry> () const",
+      "baselineDisposition": "Emitted"
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@NbKnots#1",
+      "nativeName": "Geom2d_BSplineCurve::NbKnots",
+      "signature": "Geom2d_BSplineCurve::NbKnots: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@NbPoles#1",
+      "nativeName": "Geom2d_BSplineCurve::NbPoles",
+      "signature": "Geom2d_BSplineCurve::NbPoles: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@NbUKnots#1",
+      "nativeName": "Geom_BSplineSurface::NbUKnots",
+      "signature": "Geom_BSplineSurface::NbUKnots: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@NbUPoles#1",
+      "nativeName": "Geom_BSplineSurface::NbUPoles",
+      "signature": "Geom_BSplineSurface::NbUPoles: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@NbVKnots#1",
+      "nativeName": "Geom_BSplineSurface::NbVKnots",
+      "signature": "Geom_BSplineSurface::NbVKnots: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@NbVPoles#1",
+      "nativeName": "Geom_BSplineSurface::NbVPoles",
+      "signature": "Geom_BSplineSurface::NbVPoles: int () const",
+      "baselineDisposition": "Emitted",
+      "reason": "Already emitted complexity budget query; no migration credit."
+    }
+  ],
+  "generatedSdkDelta": 0,
+  "manualToEmitted": 12,
+  "manualDelta": -12,
+  "affectedGeneratedFiles": [
+    {
+      "path": "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.ParameterizedConstruction.Generated.cpp",
+      "baselineSha256": "632A1F4D1A4CCCC9DF18AED0051087E80D113DA4158BCF965DD71AA9AF866934",
+      "reason": "Typed spline owning copy adapters and bounded coupled pcurve overloads; legacy constructor entry/profile behavior retained; no registry token reinterpretation."
+    },
+    {
+      "path": "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.ParameterizedConstruction.Generated.h",
+      "baselineSha256": "11929BF30E736FFEBB06A0FE63B2FE854575AFD67D5AB06FC6C10AFD796506D0",
+      "reason": "Typed spline owning copy adapters and bounded coupled pcurve overloads; legacy constructor entry/profile behavior retained; no registry token reinterpretation."
+    },
+    {
+      "path": "src/OcctSharp/Generated/Modeling/Modeling.ParameterizedConstruction.Generated.cs",
+      "baselineSha256": "BCDC61F666DFEB9E170AD309DEDCE159D19C11C06EF73320D8DAC35B03778B4A",
+      "reason": "Typed spline owning copy adapters and bounded coupled pcurve overloads; legacy constructor entry/profile behavior retained; no registry token reinterpretation."
+    }
+  ],
+  "callerFiles": [
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Construction.cpp",
+      "sha256": "489D09FCC051F112EB1F7145E83E8379D7638EB1BA70C72F6AAF022245014635"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Freeform.cpp",
+      "sha256": "CAD8F1088061B856B4D4B7BE92D0982E72921EEAF8A18C38AAC373DE6ACAD425"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/GeometryInspection.cpp",
+      "sha256": "4F14314626C32D3EA9A13553280B12228A93CB6BE4016B06F06EB25E4D8C61BF"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/GuidedSweep.cpp",
+      "sha256": "9ABB30ABFEE7099D2A5B5C1ED35124EFC4068894992EA6AC43A131B033811321"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/RepairBoundaries.cpp",
+      "sha256": "E5F3C919573B28A13EC9BC1F486236D4759A32849E4AD101AA32046ABB9A19DB"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Sketch.cpp",
+      "sha256": "BB7CEEF0CCC016EE367ABED884048CE1195359BD4CFBE6EF3B68CE0C64F779AB"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/PatchConversion.cpp",
+      "sha256": "F53F09B7F662C7E5403955960A3301DC8FAAC419D4FBA5AF704C834E75C177DE"
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/SurfaceTopology.cpp",
+      "sha256": "7625C417566B9AF8B0E33EED90094B7973F4DD2929F07266EB992153137724AD"
+    }
+  ],
+  "outcome": "Exact generated face adapters plus typed spline-to-pcurve copies and complete independent topology/readback/Viewer workflow",
+  "shapeGetterBoundary": "BRepBuilderAPI_MakeShape::Shape admitted only for initialized FaceBuilder profiles; other manual builder orchestration remains unchanged and is not claimed converted by caller instance."
+}

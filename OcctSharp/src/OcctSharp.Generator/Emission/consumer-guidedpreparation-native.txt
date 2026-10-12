@@ -1,0 +1,86 @@
+#include "OcctSharp.ConsumerGuidedPreparation.Generated.h"
+#include "Modeling/GuidedAuthoring.hxx"
+#include <BRepTools_WireExplorer.hxx>
+#include <BRepTools_ReShape.hxx>
+#include <BRepBuilderAPI_MakeEdge.hxx>
+#include <BRepBuilderAPI_MakeWire.hxx>
+#include <Geom_OffsetCurve.hxx>
+#include <Geom_TrimmedCurve.hxx>
+#include <Geom_BSplineCurve.hxx>
+#include <GeomConvert_ApproxCurve.hxx>
+#include <TopoDS_Wire.hxx>
+#include <TopoDS_Edge.hxx>
+#include <TopoDS_Vertex.hxx>
+#include <TopLoc_Location.hxx>
+#include <TopExp_Explorer.hxx>
+#include <algorithm>
+
+using namespace OcctSharp::Native;
+using namespace OcctSharp::Native::Authoring;
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_prepare_offset_curves(
+  const OcctSharp_ShapeHandle* input, double tolerance, int32_t maximumSegments, int32_t maximumDegree,
+  OcctSharp_AuthoringInfo* info, OcctSharp_FeatureResultHandle** output) {
+  if (output) *output = nullptr;
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info && output, "A guided curve preparation output is null."); Positive(tolerance);
+    Require(maximumSegments >= 1 && maximumSegments <= 512 && maximumDegree >= 2 && maximumDegree <= 25,
+      "Guided curve preparation controls exceed their bounded limits.");
+    const OcctSharp_ShapeHandle* inputs[]{input}; InputGraph graph(inputs, 1);
+    const auto& source = graph.Typed(0, TopAbs_WIRE);
+    Require(BRepCheck_Analyzer(source, true).IsValid(), "Guided curve preparation requires a valid source wire.");
+    auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
+    OcctSharp_AuthoringInfo state{}; state.ready = 1; state.continuity_limit = -1;
+    BRepBuilderAPI_MakeWire builder;
+    occ::handle<BRepTools_ReShape> correspondence = new BRepTools_ReShape();
+    ShapeMap visited;
+    double maximumError = 0; int convertedCount = 0;
+    for (BRepTools_WireExplorer it(TopoDS::Wire(source)); it.More(); it.Next()) {
+      const auto edge = it.Current();
+      Require(!visited.Contains(edge), "A guided wire repeats an edge identity."); visited.Add(edge);
+      const auto forward = TopoDS::Edge(edge.Oriented(TopAbs_FORWARD));
+      TopLoc_Location location; double first, last;
+      const auto curve = BRep_Tool::Curve(forward, location, first, last);
+      Require(!curve.IsNull() && std::isfinite(first) && std::isfinite(last) && first < last,
+        "A guided curve preparation edge has no finite regular 3D curve.");
+      auto basis = curve;
+      while (!occ::handle<Geom_TrimmedCurve>::DownCast(basis).IsNull())
+        basis = occ::handle<Geom_TrimmedCurve>::DownCast(basis)->BasisCurve();
+      if (occ::handle<Geom_OffsetCurve>::DownCast(basis).IsNull()) { builder.Add(edge); continue; }
+      const occ::handle<Geom_Curve> finite = new Geom_TrimmedCurve(curve, first, last);
+      GeomConvert_ApproxCurve approximation(finite, tolerance, GeomAbs_C2, maximumSegments, maximumDegree);
+      Require(approximation.IsDone() && std::isfinite(approximation.MaxError()) &&
+        approximation.MaxError() >= 0 && approximation.MaxError() <= tolerance,
+        "Native offset-curve conversion did not satisfy its declared approximation tolerance.");
+      auto converted = approximation.Curve();
+      Require(!converted.IsNull(), "Native offset-curve conversion has no curve.");
+      if (!location.IsIdentity())
+        converted = occ::handle<Geom_BSplineCurve>::DownCast(converted->Transformed(location.Transformation()));
+      Require(converted->FirstParameter() == first && converted->LastParameter() == last,
+        "Native offset-curve conversion changed the supplied parameter interval.");
+      TopoDS_Vertex a, b; TopExp::Vertices(forward, a, b);
+      Require(!a.IsNull() && !b.IsNull(), "A guided offset edge has no explicit endpoint identities.");
+      BRepBuilderAPI_MakeEdge rebuilt(converted, a, b, first, last);
+      Require(rebuilt.IsDone(), "The converted guided edge could not retain its source vertices.");
+      const auto replacement = TopoDS::Edge(rebuilt.Edge().Oriented(edge.Orientation()));
+      correspondence->Replace(edge, replacement); builder.Add(replacement);
+      maximumError = std::max(maximumError, approximation.MaxError()); ++convertedCount;
+    }
+    int sourceEdges = 0; for (TopExp_Explorer it(source, TopAbs_EDGE); it.More(); it.Next()) ++sourceEdges;
+    Require(visited.Extent() == sourceEdges && builder.IsDone(), "A disconnected or repeated guided wire is not accepted.");
+    result->Result = builder.Wire().Oriented(source.Orientation());
+    const auto topology = Map(source);
+    for (int i = 1; i <= topology.Extent(); ++i) {
+      const auto& original = topology(i);
+      const auto prepared = original.ShapeType() == TopAbs_WIRE ? result->Result : correspondence->Apply(original);
+      Add(*result, prepared, 0, 0, i - 1, original.ShapeType());
+    }
+    Add(*result, source, 7, 0);
+    state.done = 1; state.error_available = 1; state.approximation_error = maximumError;
+    state.section_count = convertedCount;
+    result->Message = convertedCount ? "Native offset curves converted within the reported approximation tolerance; author inputs are unchanged." :
+      "Independent source wire copied; no offset-curve approximation was required.";
+    Finish(*result, state); *output = RegisterFeatureResult(std::move(result)); *info = state;
+  });
+}

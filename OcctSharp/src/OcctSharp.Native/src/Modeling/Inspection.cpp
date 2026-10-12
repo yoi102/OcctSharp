@@ -430,11 +430,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
       case 1:
         if (kind != TopAbs_FACE && kind != TopAbs_SHELL)
           throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Area inspection requires a face or shell.");
+        if (RequiresInspectionSpanPartition(shape->Value))
+        { ComputeAdaptiveProperties(shape->Value, property_kind, 1.0e-9, *properties); return; }
         BRepGProp::SurfaceProperties(shape->Value, result);
         break;
       case 2:
         if (kind != TopAbs_SOLID && kind != TopAbs_COMPSOLID && kind != TopAbs_COMPOUND)
           throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Volume inspection requires a solid, compsolid, or compound.");
+        if (RequiresInspectionSpanPartition(shape->Value))
+        { ComputeAdaptiveProperties(shape->Value, property_kind, 1.0e-9, *properties); return; }
         BRepGProp::VolumeProperties(shape->Value, result, true);
         break;
       default:
@@ -443,6 +447,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
     properties->mass = result.Mass();
     properties->center = CopyPoint(result.CentreOfMass());
     CopyInertia(result.MatrixOfInertia(), *properties);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_adaptive_inspection_properties(
+  const OcctSharp_ShapeHandle* shape, const int32_t property_kind, const double relative_tolerance,
+  OcctSharp_InspectionProperties* properties, double* estimated_relative_error)
+{
+  if (properties == nullptr || estimated_relative_error == nullptr)
+  { SetLastError("An adaptive inspection output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *properties = {};
+  *estimated_relative_error = 0;
+  if (!std::isfinite(relative_tolerance) || relative_tolerance < 1.0e-12 || relative_tolerance > 1.0e-3
+      || (property_kind != 1 && property_kind != 2))
+  { SetLastError("Adaptive inspection requires area/volume and a relative tolerance in [1e-12, 1e-3]."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    RequireExactFaceSupport(shape->Value);
+    const TopAbs_ShapeEnum kind = shape->Value.ShapeType();
+    if ((property_kind == 1 && kind != TopAbs_FACE && kind != TopAbs_SHELL)
+        || (property_kind == 2 && kind != TopAbs_SOLID && kind != TopAbs_COMPSOLID && kind != TopAbs_COMPOUND))
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "The shape does not support the requested adaptive property.");
+    OcctSharp_InspectionProperties result{};
+    const double error = ComputeAdaptiveProperties(shape->Value, property_kind, relative_tolerance, result);
+    *properties = result;
+    *estimated_relative_error = error;
   });
 }
 

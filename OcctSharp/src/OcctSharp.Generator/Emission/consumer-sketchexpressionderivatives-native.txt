@@ -1,0 +1,102 @@
+#include "OcctSharp.ConsumerSketchExpressionDerivatives.Generated.hxx"
+#include "Runtime/Error.hxx"
+#include <Geom2d_BSplineCurve.hxx>
+#include <Geom2d_BezierCurve.hxx>
+#include <Geom2d_TrimmedCurve.hxx>
+#include <Geom2d_OffsetCurve.hxx>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+using namespace OcctSharp::Native;
+namespace {
+void Require(bool value,const char* message){if(!value)throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT,message);}
+struct H {double x{},y{},w{};};
+using Series=std::vector<gp_Vec2d>;
+H Blend(const H& a,const H& b,double alpha,const H& da,const H& db,double slope) {
+  return{a.x+alpha*(b.x-a.x)+slope*(db.x-da.x),a.y+alpha*(b.y-a.y)+slope*(db.y-da.y),a.w+alpha*(b.w-a.w)+slope*(db.w-da.w)};
+}
+Series Quotient(const std::vector<H>& homogeneous) {
+  Require(std::isfinite(homogeneous[0].w)&&homogeneous[0].w>0,"Exact derivative has a singular rational denominator.");
+  Series result(homogeneous.size());
+  for(std::size_t k=0;k<result.size();++k) {
+    gp_Vec2d value(homogeneous[k].x,homogeneous[k].y);
+    for(std::size_t j=1;j<=k;++j)value-=result[k-j]*homogeneous[j].w;
+    result[k]=value/homogeneous[0].w;
+  }
+  return result;
+}
+Series BezierSeries(const occ::handle<Geom2d_BezierCurve>& curve,double u,int order) {
+  const int degree=curve->Degree();
+  std::vector<std::vector<H>> values(static_cast<std::size_t>(degree+1),std::vector<H>(static_cast<std::size_t>(order+1)));
+  for(int j=0;j<=degree;++j){const auto point=curve->Pole(j+1);const auto w=curve->Weight(j+1);values[static_cast<std::size_t>(j)][0]={point.X()*w,point.Y()*w,w};}
+  for(int r=1;r<=degree;++r)for(int j=0;j<=degree-r;++j)for(int k=order;k>=0;--k) {
+    auto& a=values[static_cast<std::size_t>(j)];const auto& b=values[static_cast<std::size_t>(j+1)];
+    a[static_cast<std::size_t>(k)]=Blend(a[static_cast<std::size_t>(k)],b[static_cast<std::size_t>(k)],u,
+      k?a[static_cast<std::size_t>(k-1)]:H{},k?b[static_cast<std::size_t>(k-1)]:H{},k?1:0);
+  }
+  return Quotient(values[0]);
+}
+Series SplineSeries(occ::handle<Geom2d_BSplineCurve> curve,double u,int order) {
+  if(curve->IsPeriodic()) {
+    const auto first=curve->FirstParameter(),last=curve->LastParameter(),period=curve->Period();
+    if(u<first||u>last)u=first+std::fmod(std::fmod(u-first,period)+period,period);
+    curve=occ::handle<Geom2d_BSplineCurve>::DownCast(curve->Copy());curve->Segment(first,last);
+  }
+  const int degree=curve->Degree(),n=curve->NbPoles()-1;
+  std::vector<double> knots;
+  for(int i=1;i<=curve->NbKnots();++i)for(int j=0;j<curve->Multiplicity(i);++j)knots.push_back(curve->Knot(i));
+  Require(knots.size()==static_cast<std::size_t>(n+degree+2),"Invalid exact derivative spline knot relationship.");
+  int span=degree;while(span<n&&u>=knots[static_cast<std::size_t>(span+1)])++span;
+  std::vector<std::vector<H>> values(static_cast<std::size_t>(degree+1),std::vector<H>(static_cast<std::size_t>(order+1)));
+  for(int j=0;j<=degree;++j) {
+    const int i=span-degree+j+1;const auto point=curve->Pole(i);const double w=curve->Weight(i);
+    values[static_cast<std::size_t>(j)][0]={point.X()*w,point.Y()*w,w};
+  }
+  for(int r=1;r<=degree;++r)for(int j=degree;j>=r;--j) {
+    const int i=span-degree+j;const double denominator=knots[static_cast<std::size_t>(i+degree-r+1)]-knots[static_cast<std::size_t>(i)];
+    Require(denominator>0,"Exact derivative selected a degenerate spline span.");
+    const double alpha=(u-knots[static_cast<std::size_t>(i)])/denominator,slope=1/denominator;
+    auto& b=values[static_cast<std::size_t>(j)];const auto& a=values[static_cast<std::size_t>(j-1)];
+    for(int k=order;k>=0;--k)b[static_cast<std::size_t>(k)]=Blend(a[static_cast<std::size_t>(k)],b[static_cast<std::size_t>(k)],alpha,
+      k?a[static_cast<std::size_t>(k-1)]:H{},k?b[static_cast<std::size_t>(k-1)]:H{},k?slope:0);
+  }
+  return Quotient(values.back());
+}
+Series Taylor(const occ::handle<Geom2d_Curve>& curve,double u,int order,int depth) {
+  Require(!curve.IsNull()&&depth<=64&&order<=67,"Exact derivative tree exceeds its resource bound.");
+  if(const auto trim=occ::handle<Geom2d_TrimmedCurve>::DownCast(curve);!trim.IsNull())return Taylor(trim->BasisCurve(),u,order,depth+1);
+  if(const auto offset=occ::handle<Geom2d_OffsetCurve>::DownCast(curve);!offset.IsNull()) {
+    const auto basis=Taylor(offset->BasisCurve(),u,order+1,depth+1);
+    Series velocity(static_cast<std::size_t>(order+1)),result(static_cast<std::size_t>(order+1));
+    std::vector<double> squared(result.size()),speed(result.size()),inverse(result.size());
+    for(int k=0;k<=order;++k)velocity[static_cast<std::size_t>(k)]=basis[static_cast<std::size_t>(k+1)]*static_cast<double>(k+1);
+    for(int k=0;k<=order;++k)for(int j=0;j<=k;++j)squared[static_cast<std::size_t>(k)]+=velocity[static_cast<std::size_t>(j)].Dot(velocity[static_cast<std::size_t>(k-j)]);
+    speed[0]=std::sqrt(squared[0]);Require(std::isfinite(speed[0])&&speed[0]>0,"Exact offset derivative has a singular basis tangent.");inverse[0]=1/speed[0];
+    for(int k=1;k<=order;++k) {
+      double remainder=squared[static_cast<std::size_t>(k)];for(int j=1;j<k;++j)remainder-=speed[static_cast<std::size_t>(j)]*speed[static_cast<std::size_t>(k-j)];
+      speed[static_cast<std::size_t>(k)]=remainder/(2*speed[0]);
+      for(int j=1;j<=k;++j)inverse[static_cast<std::size_t>(k)]-=speed[static_cast<std::size_t>(j)]*inverse[static_cast<std::size_t>(k-j)]/speed[0];
+    }
+    for(int k=0;k<=order;++k) {
+      gp_Vec2d normal;
+      for(int j=0;j<=k;++j){const auto& v=velocity[static_cast<std::size_t>(j)];normal+=gp_Vec2d(v.Y(),-v.X())*inverse[static_cast<std::size_t>(k-j)];}
+      result[static_cast<std::size_t>(k)]=basis[static_cast<std::size_t>(k)]+normal*offset->Offset();
+    }
+    return result;
+  }
+  if(const auto spline=occ::handle<Geom2d_BSplineCurve>::DownCast(curve);!spline.IsNull())return SplineSeries(spline,u,order);
+  if(const auto bezier=occ::handle<Geom2d_BezierCurve>::DownCast(curve);!bezier.IsNull())return BezierSeries(bezier,u,order);
+  Series result(static_cast<std::size_t>(order+1));const auto point=curve->Value(u);result[0]=gp_Vec2d(point.X(),point.Y());
+  double factorial=1;
+  for(int k=1;k<=order;++k){factorial*=k;result[static_cast<std::size_t>(k)]=curve->DN(u,k)/factorial;}
+  return result;
+}
+}
+namespace OcctSharp::Native {
+gp_Vec2d ExactSketchDerivative2d(const occ::handle<Geom2d_Curve>& curve,double parameter,int order) {
+  Require(order>=1&&order<=3,"Exact sketch derivative order must be1..3.");
+  const auto coefficients=Taylor(curve,parameter,order,0);double factorial=1;for(int k=1;k<=order;++k)factorial*=k;
+  const auto result=coefficients[static_cast<std::size_t>(order)]*factorial;
+  Require(std::isfinite(result.X())&&std::isfinite(result.Y()),"Exact sketch derivative is not finite.");return result;
+}
+}

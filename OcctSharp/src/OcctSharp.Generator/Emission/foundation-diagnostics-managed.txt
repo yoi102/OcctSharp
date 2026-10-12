@@ -1,0 +1,78 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using System.Text;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.CopiedCollections;
+using OcctSharp.Interop;
+namespace OcctSharp.FoundationValues;
+
+/// <summary>Copied optional result of a symmetric matrix operation. Status -1 means no SDK value; -2 means nonfinite output.</summary>
+public sealed record MatrixDiagnosticResult(bool IsDone,int Status,CopiedGrid<double>? Matrix,IReadOnlyList<double> Eigenvalues);
+/// <summary>Copied polynomial value and derivative.</summary>
+public sealed record PolynomialEvaluation(double Value,double Derivative);
+/// <summary>Refined estimate, residual and derivative. A refinement estimate alone does not prove a root.</summary>
+public sealed record PolynomialRefinement(double Estimate,double Residual,double Derivative);
+/// <summary>Independent SDK quadrature points and weights on [-1,1]. Unfinished requests contain no samples.</summary>
+public sealed record QuadratureResult(bool IsDone,IReadOnlyList<double> Points,IReadOnlyList<double> Weights);
+/// <summary>Independent message text before, during and after filling absent placeholders with UNKNOWN.</summary>
+public sealed record MessageDiagnostic(string Original,string Value,string Complete,bool IsEdited,int UnresolvedArguments);
+
+/// <summary>Bounded call-private SDK diagnostics. No borrowed values or mutable SDK receivers escape.</summary>
+public static partial class SdkDiagnostics {
+ const int TextLimit=65536;
+ static readonly UTF8Encoding Utf8=new(false,true);
+ static void Ready(){NativeLibraryResolver.EnsureRegistered(typeof(SdkDiagnostics).Assembly);OcctRuntime.EnsureCompatible();}
+ static T[] Bounded<T>(IEnumerable<T> input,int limit){ArgumentNullException.ThrowIfNull(input);if(input.TryGetNonEnumeratedCount(out int count)&&count>limit)throw new ArgumentOutOfRangeException(nameof(input));var values=input.Take(limit+1).ToArray();if(values.Length>limit)throw new ArgumentOutOfRangeException(nameof(input));return values;}
+ static byte[] Encode(string text,int limit=TextLimit){ArgumentNullException.ThrowIfNull(text);if(text.Length>limit||text.Contains('\0'))throw new ArgumentException("Invalid bounded diagnostic text.",nameof(text));var bytes=Utf8.GetBytes(text);if(bytes.Length>limit)throw new ArgumentOutOfRangeException(nameof(text));return bytes;}
+ static unsafe MatrixDiagnosticResult Matrix(CopiedGrid<double> input,int operation,double power){
+  ArgumentNullException.ThrowIfNull(input);if(input.Rows!=input.Columns||input.Rows<1||input.Rows>128)throw new ArgumentException("Matrix must be square and at most 128 by 128.",nameof(input));
+  if(!double.IsFinite(power)||Math.Abs(power)>1024)throw new ArgumentOutOfRangeException(nameof(power));var values=input.ToArray();var output=new double[checked(values.Length+(operation==0?input.Rows:0))];Ready();
+  fixed(double* a=values,b=output){NativeError.ThrowIfFailed(MatrixNative(a,input.Rows,operation,power,b,output.Length,out int done,out int status),"diagnostics_matrix");
+   if(done==0)return new(false,status,null,Array.Empty<double>());int offset=operation==0?input.Rows:0;return new(true,status,new(output[offset..],input.Rows,input.Columns,input.RowLower,input.ColumnLower),Array.AsReadOnly(output[..offset]));}
+ }
+ /// <summary>SDK spectral decomposition of a finite exactly symmetric copied matrix; eigenvectors are columns.</summary>
+ public static MatrixDiagnosticResult SpectralDecomposition(CopiedGrid<double> matrix)=>Matrix(matrix,0,0);
+ /// <summary>Optional SDK square root. Negative eigenvalues or nonfinite output produce no matrix.</summary>
+ public static MatrixDiagnosticResult MatrixSquareRoot(CopiedGrid<double> matrix)=>Matrix(matrix,1,0);
+ /// <summary>Optional SDK inverse square root. Singular matrices produce no matrix.</summary>
+ public static MatrixDiagnosticResult MatrixInverseSquareRoot(CopiedGrid<double> matrix)=>Matrix(matrix,2,0);
+ /// <summary>Optional SDK real matrix power with exponent magnitude at most 1024.</summary>
+ public static MatrixDiagnosticResult MatrixPower(CopiedGrid<double> matrix,double exponent)=>Matrix(matrix,3,exponent);
+ static unsafe double[] Polynomial(IEnumerable<double> coefficients,int operation,double x,int iterations,double tolerance){var values=Bounded(coefficients,operation==5?4096:257);if(values.Length==0)throw new ArgumentException("At least one coefficient is required.",nameof(coefficients));var output=new double[Math.Max(values.Length,3)];Ready();fixed(double* a=values,b=output){NativeError.ThrowIfFailed(PolynomialNative(a,values.Length,operation,x,iterations,tolerance,b,output.Length,out int written),"diagnostics_polynomial");if(written<0||written>output.Length)throw new InvalidOperationException("Invalid copied polynomial output count.");return output[..written];}}
+ /// <summary>SDK Horner evaluation and derivative. Up to 257 coefficients, constant term first unless descending is true.</summary>
+ public static PolynomialEvaluation EvaluatePolynomial(IEnumerable<double> coefficients,double x,bool descending=false){var v=Polynomial(coefficients,descending?1:0,x,0,0);return new(v[0],v[1]);}
+ /// <summary>SDK Newton refinement, at most 64 iterations. Descending input is limited to degree four by the SDK work array.</summary>
+ public static PolynomialRefinement RefinePolynomialRoot(IEnumerable<double> coefficients,double initialEstimate,int iterations=5,bool descending=false){var v=Polynomial(coefficients,descending?3:2,initialEstimate,iterations,0);return new(v[0],v[1],v[2]);}
+ /// <summary>Copies, sorts and removes SDK duplicate roots within a finite tolerance in [0,1]. At most 4096 roots.</summary>
+ public static IReadOnlyList<double> NormalizeRoots(IEnumerable<double> roots,double tolerance=1e-10)=>Array.AsReadOnly(Polynomial(roots,5,0,0,tolerance));
+ /// <summary>Ordered SDK Gauss quadrature with at most 61 points. Results are detached.</summary>
+ public static QuadratureResult GaussQuadrature(int count)=>Quadrature(count,false);
+ /// <summary>SDK Kronrod quadrature for an odd count from 3 through 61. Unsupported SDK counts return IsDone=false.</summary>
+ public static QuadratureResult KronrodQuadrature(int count)=>Quadrature(count,true);
+ static unsafe QuadratureResult Quadrature(int count,bool kronrod){if(count<1||count>61||kronrod&&(count<3||count%2==0))throw new ArgumentOutOfRangeException(nameof(count));var p=new double[count];var w=new double[count];Ready();fixed(double* a=p,b=w){NativeError.ThrowIfFailed(QuadratureNative(count,kronrod?1:0,a,b,count,out int done),"diagnostics_quadrature");return done==0?new(false,Array.Empty<double>(),Array.Empty<double>()):new(true,Array.AsReadOnly(p),Array.AsReadOnly(w));}}
+ /// <summary>One-based SDK set search within an inclusive range. Unicode positions count UTF16 units; sets contain BMP characters.</summary>
+ public static unsafe int FirstLocationInSet(string text,string characters,int start,int end,bool outside=false,bool unicode=true){var a=Encode(text);var b=Encode(characters);Ready();fixed(byte* p=a,q=b){NativeError.ThrowIfFailed(TextSetNative(p,a.Length,q,b.Length,start,end,outside?1:0,unicode?1:0,out int position),"diagnostics_text_set");return position;}}
+ /// <summary>Format a private Message_Msg copy. Supports %s, %d, %f, %e, %g and %.0f through %.17f, at most 32 placeholders. Arguments are ordered within each type; missing arguments become UNKNOWN. Real magnitudes are at most 1e12.</summary>
+ public static unsafe MessageDiagnostic Message(string body,IEnumerable<string>? strings=null,IEnumerable<int>? integers=null,IEnumerable<double>? reals=null){
+  var format=Encode(body,16384);var text=strings is null?Array.Empty<string>():Bounded(strings,32);var ints=integers is null?Array.Empty<int>():Bounded(integers,32);var numbers=reals is null?Array.Empty<double>():Bounded(reals,32);
+  var parts=text.Select(x=>Encode(x)).ToArray();var sizes=parts.Select(x=>x.Length).ToArray();if(sizes.Sum()>TextLimit)throw new ArgumentOutOfRangeException(nameof(strings));var packed=new byte[sizes.Sum()];int offset=0;foreach(var part in parts){part.CopyTo(packed,offset);offset+=part.Length;}Ready();nint token;
+  fixed(byte* a=format,b=packed)fixed(int* c=sizes,d=ints)fixed(double* e=numbers)NativeError.ThrowIfFailed(MessageNative(a,format.Length,b,packed.Length,c,sizes.Length,d,ints.Length,e,numbers.Length,out token),"diagnostics_message_create");
+  DiagnosticMessageHandle? allocated=null;
+  try{using var handle=allocated=new DiagnosticMessageHandle(token);NativeError.ThrowIfFailed(MessageInfoNative(handle,out int edited,out int unresolved),"diagnostics_message_info");
+   string Read(int which){NativeError.ThrowIfFailed(MessageTextNative(handle,which,null,0,out int length),"diagnostics_message_size");if(length<0||length>TextLimit)throw new InvalidOperationException("Invalid diagnostic message length.");var bytes=new byte[Math.Max(1,length)];fixed(byte* p=bytes)NativeError.ThrowIfFailed(MessageTextNative(handle,which,p,bytes.Length,out length),"diagnostics_message_text");return Utf8.GetString(bytes,0,length);}
+   return new(Read(0),Read(1),Read(2),edited!=0,unresolved);
+  }catch{if(allocated is null)DiagnosticMessageHandle.Release(token);throw;}
+ }
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_matrix")]private static unsafe partial NativeStatus MatrixNative(double* input,int n,int operation,double exponent,double* output,int capacity,out int done,out int status);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_polynomial")]private static unsafe partial NativeStatus PolynomialNative(double* input,int count,int operation,double x,int iterations,double tolerance,double* output,int capacity,out int written);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_quadrature")]private static unsafe partial NativeStatus QuadratureNative(int count,int kronrod,double* points,double* weights,int capacity,out int done);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_text_set")]private static unsafe partial NativeStatus TextSetNative(byte* text,int size,byte* characters,int characterSize,int start,int end,int outside,int unicode,out int position);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_message_create")]private static unsafe partial NativeStatus MessageNative(byte* format,int size,byte* text,int textSize,int* sizes,int strings,int* integers,int integerCount,double* reals,int realCount,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_message_info")]private static partial NativeStatus MessageInfoNative(DiagnosticMessageHandle handle,out int edited,out int unresolved);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_message_text")]private static unsafe partial NativeStatus MessageTextNative(DiagnosticMessageHandle handle,int which,byte* buffer,int capacity,out int length);
+}
+internal sealed partial class DiagnosticMessageHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal DiagnosticMessageHandle(nint token):base(true){SetHandle(token);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_diagnostics_message_release")]internal static partial void Release(nint token);
+}

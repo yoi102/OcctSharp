@@ -1,0 +1,1 @@
+{"state":"PASS","cases":[{"file":"bad-depth.xbf","root":"0:1:1:14","depth":26},{"file":"bad-expanded.xbf","root":"0:1:1:18","leaves":65536}]}

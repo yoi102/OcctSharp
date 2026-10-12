@@ -1,5 +1,284 @@
 # Special Cases
 
+## CH exact consumer prerequisites
+
+The full application additionally requires the viewer shared-source family:
+source topology/style copying, exact selection correspondence, per-instance
+graphics detachment and staged style refresh. These outputs are bounded generated
+support templates under ADR-0139. Targeted hooks remain in the existing manual
+Context/Presentations/Selection/Appearance owners; prior generated delegates are
+retained. No inventory credit is assigned to these support APIs. SC-067 adds
+original offset basis/support knot intervals and controlled offset moments;
+the29 reproduced precision failures pass all original tolerances after repair.
+
+The exact-consumer-v1 support emitter and BATCH_CH_APPLICATION_PREREQUISITES.json
+admit26 hash-pinned outputs from selected SDK26 sources. Templates retain the
+audited algorithms, not new OCCT declaration credit. Private Features.hxx only
+adds two shared payload slots and forward declarations to the existing owner;
+no unrelated private authoring fields or second registry are imported. Public
+ABI1.117 guards distinguish this support from historical private ABI numbers.
+Compilation and full application acceptance are still pending; see BATCH_CH_APPLICATION.md.
+
+## BY private Boolean/repair orchestration
+
+The existing manual occtsharp_boolean_topology_history and occtsharp_repair_execute
+composition exports remain in their accepted ABI/registry boundary. BY replaces
+19 exact SDK declaration calls with TM058 generated private adapters, preserving
+input copying, exact source/final-map correspondence, every history path and
+success-only publication. Other Boolean callers and four deferred profiles remain
+manual orchestration. Copied bounded SDK diagnostics extend the existing result
+Message; no new manual StableId or public borrowed receiver is added. See
+[BY](BATCH_BY_BOOLEAN_REPAIR.md) and its exact admission for ownership/credit limits.
+
+BR (2026-10-11) replaces the SC-061 FlatBezierKnots implementation with exact
+generated TM053 whole-sequence copying, preserving existing ABI/API. Its Manual
+configuration is removed; it must not return to generic scalar-reference emission.
+Foundation Text/Collections/Transient adapters now also originate in explicit
+generator compatibility templates, without adding SDK declaration credit.
+See [BR](BATCH_BR_GENERATOR_COMPATIBILITY.md) and [ADR-0135](adr/0135-generated-compatible-legacy-adapters.md).
+
+2026-10-06 current A5 status: latest acceptedA4/B17/C5/D5/E4/F5g;A5 NOT_ACCEPTED,whole A-F IN_PROGRESS,G deferred. Fourteen immutable local .14 packages and independent NuGet78 pass,retaining all75 cases and20 original precision checks plusvalidDDS/two truncation cases. Package/cache/lock SHA512,actual13 SDK/62 native,237 frozen packaging inputs,221 Markdown/two candidateJSON,licenses and unchanged dependency graph are verified. Initial verifier incorrectly equated all224 docinputs withpackagedMarkdown;an intermediate audit missed the two explicitly packagedJSON. Both are retained;final audit exactly follows the project excludingSTATUS and includingJSON. Old pack/consumer narrative versions remain as historical text;structured14 versions,nuspec,runtime and allpayloads are verified. Old13 packages/snapshots are unchanged.
+
+Formal Cadoryx now uses .14 after force-evaluate/locked restore and Release zero-warning/error build. Application freeze9 binds852 source/436 payload,17 shared app/13 SDK/62 native;only dependencyprops/five lockfiles differ fromfreeze8,productioncode unchanged. Same-candidate real WPF generalwindow passes with emptybindings,actual62 native,original240-second deadline and12 docking/close cycles. Source/exactface-edge/twoviewer/rectanglefeedback39 pass;onlySDK identity/narrative changes,all39 behavior assertions retained. All60 complete480x320 PNGs equal previously reviewedframes byname/fullhash,andresources returntozero.
+
+New14 freeze9 full2928 a5-full-6 remains live;terminal is not collected. Actual62 testhostnative paths/hashes are bound;process44860/38596 wasconfirmed live. Old13 full2928 is not thisrun. Newcandidate direct/formalOpen remainNOT RUN,6482ms target isnotmet,complete material/driver-failure andphysicalinput remainpending. SDKsource56,Release/actualDebug789,Generator205,headers50,exports41086/forwarders4152 remain separately verified. Evidence: OcctSharp/artifacts/cadoryx-a5/package-consumer-verification-5.json andCadoryx/artifacts/a5-application-verification-3.json,a5-full-6-live-1.json.
+
+## Earlier progress records (historical state)
+
+2026-10-06 private A5 .14 texture validation: formal .13 application freeze8 complete2928/2928 passes with zero failures/skips and all accepted B17 cases;852 source/436 payload and actual62 native bindings match. Same freeze feedback39/full60 PNG/general WPF evidence remains separate. Independent .13 consumer75 produces57 PASS/18 FAIL: all prior51 and six file-removal lifecycles pass; six material slots each accept three corrupt nonempty encodings during source creation and refresh. Twelve base/emissive/occlusion/common-diffuse refreshes change retained frames; metallic-roughness/normal remain identical under this profile but also accept bad data. Other viewer/selection and recovery hold. Actual13 SDK/62 native and package/cache/lock bindings are verified. The failed audit assumption that every slot must alter this profile is retained; original75 assertions/results are unchanged.
+
+Isolated private .14 now validates detached encoded textures before publishing source styles, with per-source deduplication and a compressed-image reader path; original encoded ownership and exact BRep/copy/transform proof remain. Release native and managed zero-warning/error builds pass. Source53 contains all prior29 plus24; full786 contains all prior762 with zero failures/skips. Both actual62 native sets match frozen6;965 source inputs have two changed originals/two additions,184 original generated files unchanged and61 native dependencies unchanged. All18 malformed create/refresh attempts now reject without changing retained frames,selected instance or other viewer, and recovery passes. Initial managed analyzer errors/freeze-classifier failure remain; fixes preserve behavioral assertions. Actual Debug,compressed-texture positive fixtures,50 private headers,exports/Generator,immutable14 packages/consumers and formal Cadoryx14 integration remain NOT RUN. Formal .13 packages/application are unchanged. New app freeze8 benchmarks,6482ms target,complete driver/material matrices and physical input remain pending. Latest accepted A4/B17/C5/D5/E4/F5g;A5 NOT_ACCEPTED;whole A-F IN_PROGRESS;G deferred. Evidence: OcctSharp/artifacts/cadoryx-a5/texture-validation-full-verification-1.json,package-consumer-negative-verification-2.json and Cadoryx/artifacts/a5-full-verification-5.json.
+
+2026-10-06 A5 imported source and encoded texture snapshots: frozen .12
+Release755/755 contains all previous750 plus five added cases, and focus22/22
+passes. Four actual STEP/IGES workflows exercise shaded/wireframe source refresh,
+two-level shared STEP assembly structure, caller/file release, exact full frames
+and original whole/face/edge identities. This is a constructed exchange fixture
+matrix, not complete vendor/PMI/texture interoperability acceptance.
+The external glTF base-color texture first-display test reproduced a borrowed
+file dependency. Source material snapshots now copy encoded file, buffer and
+file-slice bytes into viewer-owned buffers. All six common/PBR texture slots
+reuse exact owned bytes, retain scalar metadata, and use never-reused GPU IDs.
+Public native build18/run15 passes25/25 including buffer mutation, caller-file
+removal, file slices and inactive cached-mode release. All34 PNGs are reviewed:
+33 match prior reviewed frames byte-for-byte and one new frame is directly read.
+Imported STEP whole selection exposed old-source OpenGL connections in cached
+wireframe after shaded-mode refresh. Four crash/Aborted runs are retained.
+Recompute all cached modes before retiring the previous source; imported four
+cases now pass without changing exact selection or full-frame assertions.
+Frozen961 sources have23 changes/additions;14 managed/62 native and all62 actual
+loaded native DLLs are bound. Standalone private headers48/48 pass. Release
+exports remain five additions over .11/no removals. The existing script
+regenerates/checks4152 unchanged forwarders; all generated source stays .11.
+Debug, packages/consumers, complete material/PBR import fidelity, rendering
+failure injection, application integration and6.482s timing remain pending.
+Cadoryx stays .11; A5 NOT_ACCEPTED, complete A-F IN_PROGRESS, G deferred.
+Evidence: Cadoryx artifacts/a5-sdk-verification-6.json and SDK sdk-freeze-3.json.
+
+
+2026-10-06 A5 explicit source-style refresh: the private .12 SDK now exposes
+ViewerSource.RefreshStyles(XdeLabel). Exact original topology membership,
+native partner, twelve placement coefficients and root orientation are required.
+Staged per-viewer styles rebase existing instances and explicit root/subshape
+overrides without replacing AIS objects or logical IDs. Review appearances and
+textures bind to new owned drawers; reset restores the refreshed source.
+Newly hidden topology is deselected; unchanged selected native owners are reused.
+Frozen Release750/750 contains all previous741 plus nine added cases; focus17/17,
+direct public OCCT build16/run13 22/22 and standalone private headers47/47 pass.
+Release exports add exactly five names over .11 with no removals; actual Debug
+and Release-Debug comparison have not run. Frozen959 sources have21 changes;
+14 managed/62 native and all62 actually loaded native DLLs are bound. Generated
+source and4152 script-regenerated/check forwarders are byte-identical to .11.
+Thirty-three native PNGs include31 identical reviewed frames and two new frames
+directly reviewed. The transparent-face fixture failure and explicit-zero-alpha
+implementation failure remain; the latter fix retains the original assertion.
+The SDK appearance helper stages allocation before swaps. Invalid-input atomic
+rejection is tested; driver/render failure injection is NOT RUN.
+Cadoryx stays .11. Imported hierarchy/material/texture fidelity, Debug, immutable
+packages/independent consumers, application integration and6.482s timing remain
+pending. A5 NOT_ACCEPTED; complete A-F IN_PROGRESS; G deferred by the user.
+Evidence: Cadoryx artifacts/a5-sdk-verification-4.json and SDK sdk-freeze-2.json.
+Frozen parent packaging documents remain .11; no new package is claimed.
+
+
+## SC-070: Independent XDE presentation channels and explicit metadata copy
+
+Cadoryx C3 proves that the existing label Color property collapses the direct
+general/surface/curve channels, and its setter writes all three. The manual
+GetPresentationColors/SetPresentationColor adapter preserves those channels
+and copied native visibility. CopyPresentationMetadata copies only direct
+colors, layers, physical/visual materials and visibility to a fresh destination
+label inside an open transaction. It accepts explicit same/cross-document
+labels, rejects existing presentation assignments and identical labels, and
+does not copy geometry, names, validation properties, PMI or arbitrary attrs.
+This operation asserts no topology correspondence: Cadoryx must independently
+prove its immutable source and result maps and their native histories before
+using a label as a style source. Native XCAFDoc_Editor::CloneMetaData runs with
+other-attribute cloning disabled. No new owner or global registry is added;
+SafeHandles retain each document for its call. Abort on failure. Four additive
+C exports include native visibility setting; source normalization explicitly
+preserves hidden subshape assignments. XCAF unconditionally clones Name, so
+the copier restores the destination Name including its absence. Final private
+.10 Release and actual Debug pass 713/713 each, presentation tests 12/12,
+Generator 205/205 and solution Release zero warnings/errors. The 41,081 export
+names match Debug/Release, four additions and zero removals. Fourteen immutable
+packages pass sixteen isolated scenarios, binding 13 managed/62 native DLLs
+to exact Runtime Release output. Two first-consumer raw BRep fingerprint
+failures on native reopen are retained; ordered maps and every canonical BRep
+slot pass the existing bounded direction/p-curve roundoff witness. .9 is not
+overwritten. Application/UI/storage/STEP and external CAD remain in progress.
+## SC-069: Exact transform and compound history for Cadoryx multiple copies
+
+The locked Cadoryx `.curve-inspection.8` consumer proves that Shape transforms
+and CreateCompound return geometry without a full source/result map. The new
+`ShapeHistoryModeling` adapter reuses the existing owning LocalFeatureResult
+contract. `BRepBuilderAPI_Transform::ModifiedShape` supplies each exact rigid or
+reflection relation; compound relations use actual TShape/location membership
+after one private input-graph copy. Every face, edge and vertex of every ordered
+source argument is accounted for. Shared targets retain all source arguments.
+
+The exact diagnostic-copy correspondence must prove the returned full-map order.
+If that proof fails, valid geometry has no Evolution support; missing history
+never becomes a successful empty map. No scaling, geometric matching, nearest
+face, index fallback or automatic selected-topology rebinding is introduced.
+The two additive C exports reuse the existing feature-result release path and
+SafeHandle call-bound input retention. This is a manual consumer adapter, not a
+new generated migration batch or a claim that Cadoryx styles are implemented.
+Local .9 evidence: 12 focused cases; Release and actual Debug runtime701/701 each; Generator205/205; nine isolated immutable package consumer scenarios with13 managed/62 native payload matches. Fresh generation matches169 existing outputs andadds six bulk/curve files; the manifest is not byte-equal, and those additions werenot compiled into .9. Application styles remain unfinished.
+
+## Batch AJ reuse of existing exceptions
+
+AJ introduces no new Manual stable-ID disposition. The
+[admission matrix](BATCH_AJ_REPAIR_WORKSPACES_ADMISSION.json) records its **25**
+reused Manual prerequisites, their exact original special-case IDs, **43** reused
+Emitted prerequisites and the single new generated Oriented prerequisite.
+Generator-owned exceptions and SDK exclusions are in the
+[AJ contract](BATCH_AJ_REPAIR_WORKSPACES.md), not hand-edited generated output.
+
+## Batch AI reuse of existing exceptions
+
+AI introduces no new Manual stable-ID disposition. Its private generated
+topology/exchange workflow reuses **20** existing Manual operations recorded in
+SC-033, SC-042, SC-046 and SC-051, plus one already-emitted prerequisite.
+The [AI admission matrix](BATCH_AI_TOPOLOGY_EXCHANGE_ADMISSION.json) lists each
+exact supporting ID, baseline disposition and special-case record separately
+from the 47 admitted candidates and nine newly generated prerequisites.
+These reused dependencies do not increase the Manual or migration counts.
+
+## SC-067: Adaptive inspection over exact knot spans (Cadoryx B9)
+
+The 2026-10-06 B17 repair evaluates each exact support in a call-local translated
+frame before D1, then applies its original location's linear part to points and
+derivatives. Original pcurves, parameter domains, topology, orientation, all ten
+moments and numerical/work budgets remain unchanged. Current-root focused/full
+Release probes pass 38/38 and 837/837. Private .10-based .11 Release/actual Debug
+Runtime pass 733/733 each, Generator205, headers45, unchanged41081 exports and
+solution Release build pass; fourteen immutable packages and the independent
+NuGet-only20-case consumer bind13 public managed/62 loaded native DLLs.
+Application integration remains pending. Generated payload remains .10's with
+its historical169-existing/6-added discrepancy; no new clean-regeneration
+claim is made. See [B17 local moment repair](CADORYX_B17_LOCAL_MOMENT_INSPECTION.md).
+
+The pinned BRepGProp default integration gives area 40.16627917704744 for a
+nonuniform cubic region whose piecewise polynomial integral is 40.208.
+Adaptive surface integration alone fixes area, but adaptive volume returns
+120.55981020444732 instead of 120.624 while reporting an unrealistically tiny
+error. Tight Gauss-Kronrod centroid/inertia integration can take over 40 seconds
+for this small prism. These failures are retained in the native precision probe.
+
+The manual inspection adapter detects finite-continuity curves/pcurves/surfaces.
+Area keeps a private exact CN partition, avoiding the SDK continuity tool that
+removed knots and retained stale indices. Volume integrates the ORIGINAL
+surfaces and trimming pcurves directly: topological splitting is not an
+accuracy-preserving prerequisite because it can rebuild pcurves within BRep
+tolerances. Exact pcurve CN spans, U support knots, V-knot crossings and finite
+support-domain crossings define the integration intervals. Reversed boundary
+parameters match BRepGProp_Face::Load. No source geometry, topology identity,
+repair, fit or triangulation is introduced.
+
+Ten normalized divergence moments share 8/16-point adaptive Gauss evaluations,
+with propagated inner/roundoff uncertainty and a final global mass/moment error
+check. The reference point matches SDK adaptive GProp's vertex mean, since
+tolerance-closed imported boundaries can retain a residual flux. Two million
+evaluations are allowed PER smooth boundary interval; normal detailed geometry
+can have hundreds of faces, boundaries and spans. Depth 20 retains unresolved
+local error; only a passing combined global error permits success. Work-budget
+exhaustion and unmet global accuracy remain explicit failures. The existing
+API keeps analytical default integration for shapes without finite continuity
+breaks; InspectAdaptiveProperties uses the controlled volume path for conics,
+rational geometry and any finite continuity break.
+
+The earlier GK queue regressions and `.3/.4/.5` large-import failures remain
+recorded in [Cadoryx inspection regression](CADORYX_INSPECTION_REGRESSION.md).
+The additive copied
+InspectAdaptiveProperties API accepts [1e-12,1e-3] and reports OCCT's numerical
+convergence estimate separately from geometric tolerance. Release and actual
+Debug Runtime are each 671/671, including exact Boolean mass/centroid, translated
+circular-wire volume/inertia and unchanged original fingerprint. The first local
+consumer found two circular-volume regressions; its immutable `.1` package and
+failure evidence remain. Revised immutable
+`8.0.1-preview.31.cadoryx.curve-inspection.2` consumers passed 48/48 with all
+62 native DLL hashes verified. Cadoryx B9 passed its final 1192/1192 application
+tests and 13 production window gates; binding logs were empty and 27 B9 screenshots
+were inspected. These application results belong to the suffixed package, not
+the later Preview.32/AH counts. Physical pointer and external-CAD acceptance remain
+unverified. Evidence: Cadoryx `artifacts/occt-capability-b9-2/package-audit.json`
+and `artifacts/b9-final-verification.json`.
+
+## SC-068: Copied point versus overlap intersection classification (Cadoryx B9)
+
+Legacy SketchModeling.Intersect emits isolated points plus coincident segment
+boundaries, and Intersect(a,a) intentionally means self-intersection. It cannot
+distinguish one or more overlap intervals from contacts using that point list.
+The additive InspectIntersections explicitly treats its arguments as two operands
+and copies Geom2dAPI_InterCurveCurve's point and segment counts separately. It
+preserves legacy endpoint enumeration and rejects algorithm failure. All curve
+definitions are immutable; the result holds copied values only. The additive C
+declaration is in OcctSharp.SketchInspection.h. No generated source is hand-edited.
+
+## SC-066: Constant-height surface fitting and pinned grid boundaries
+
+The exact AG catalogue wraps GeomAPI_PointsToBSplineSurface in SurfaceFitOwner.
+Pinned OCCT 8.0.1 builds chord parameters from scalar height alone, producing NaN
+for constant heights despite IsDone. The generated template supplies an exact planar
+B-spline with physical X/Y domains and requested minimum degree (3 for Interpolate).
+Nonconstant grids retain the pinned fitting path. Both returned handles and earlier
+results survive reinitialization/disposal. This exception is generator-owned, with
+flat/nonflat transitions and domain/degree/evaluation tests.
+
+Pinned Bezier Before insertion calls After(index-1), so accepted indices are
+2..count+1. Bezier SetWeightCol and weighted SetPoleCol require a full one-based column
+despite the header's partial-edit wording. Grid output assignment reports one-based replacement bounds.
+These exact preconditions and output semantics are recorded in the shared generation
+rules and [Batch AG](BATCH_AG_SURFACE_INTERPOLATION.md).
+
+The existing manual freeform and geometry-only exchange APIs are linked into
+Modeling and DataExchange for the AG direct consumer. This relocation adds no
+native binding exception or stable-ID migration; facade compatibility is maintained
+by generated type forwarders and the aggregate API audit, as recorded in ADR-0098.
+
+## SC-065: Exact picked subshape to repair full-map index
+
+Cadoryx needs to bind a Viewer-picked edge or face to one exact upstream BRep.
+`RepairSnapshot.Create` deep-copies its source, so OCCT `IsSame` cannot match a
+Viewer selection against `CopySubshape`. The manual
+`occtsharp_repair_find_topology_index` helper instead calls `TopExp::MapShapes`
+on the original shape and `FindIndex` on the selected native subshape, returning
+the same zero-based map order as `RepairTopology` or -1 for a foreign shape.
+`RepairSnapshot.FindTopologyIndex` exposes only the copied integer; callers
+must bind it to the exact asset/revision/fingerprint and recheck the selected
+kind. This is an integration helper rather than an additional migrated OCCT
+declaration, so the generator stable-ID inventory is unchanged.
+
+## SC-064: Owned point index preconditions
+
+The pinned SDK Release Hatch sequence accessor can access invalid memory instead of
+raising an OCCT exception for an invalid index. The owned-operation emitter checks
+the exact `HatchGen_PointOnHatching::Point`, `RemPoint` and
+`IGESConvGeom_GeomBuilder::Point` stable IDs against `1..NbPoints()` before calling
+the SDK. Failure uses the contained native error path without publishing a result or
+mutating the collection. These are generated declarations, not manual bindings.
+
 ## SC-063: Batch Z singular value inverse preconditions
 
 The generated geometric-operation rule adds no manual stable IDs. On the pinned SDK,
@@ -55,9 +334,12 @@ C ABI binding and contributes no emitted declaration ID or managed API signature
 The generic X type rules do not override SDK-specific return semantics or binary availability.
 
 - `c:@S@BSplCLib@F@FlatBezierKnots#I#S`: BSplCLib.hxx documents a pointer to a
-  statically allocated flat-knot array despite the `const double&` spelling. Keep
-  Blocked/BL209 (ReferenceSequenceContract), not a scalar getter. A future sized buffer
-  projection must include degree bounds and all knots. No Manual ID is counted here.
+  statically allocated flat-knot array despite the `const double&` spelling. The
+  scalar generator remains ineligible. The Geometry manual binding now copies exactly
+  `2 * (degree + 1)` values through `occtsharp_bsplclib_flat_bezier_knots`, after
+  checking the OCCT degree bound and caller capacity. No static array pointer escapes;
+  the exact stable ID is recorded as Manual under SC-061. Other sequence-start
+  references remain blocked pending their own length and lifetime contracts.
 - `c:@S@Cocoa_Window@F@VirtualKeyFromNative#I#S`: X exposed this unsigned return
   signature, but the Windows link fails with LNK2019 for
   `?VirtualKeyFromNative@Cocoa_Window@@SAIH@Z`; an exact scan of the 62 bundled Release
@@ -79,6 +361,15 @@ Existing Emitted/Manual calls are reused. Abstract CView FBO virtuals dispatch o
 against the existing concrete driver; their SK015 pure-virtual declaration exclusions
 remain unchanged. Auxiliary CView/Structure, colored drawers and driver helpers extend
 the implementation dependency closure, not the frozen 54-root decision scope.
+
+Cadoryx ViewCube target-camera queries are manual Viewer bridge exceptions:
+`occtsharp_viewer_get_cube_target_camera` and
+`occtsharp_viewer_get_projection_target_camera` copy the current
+`Graphic3d_Camera`, compute the canonical direction on the detached copy,
+and return copied coordinates. They retain the existing viewer thread/owner
+contract and never call `V3d_View::SetProj` on the displayed view. An
+unwindowed `V3d_View` proved unsafe in a real Viewer test; the detached camera
+preserves the current target and viewing distance without rendering a frame.
 
 Ambient lights reject headlight mode; global lights are removed individually because
 the SDK bulk overload throws while membership still exists. Replacement texture sets
@@ -2214,3 +2505,371 @@ No native builder, iterator or registry category escapes. Both input groups are
 nonempty, inputs are bounded to 256, and algorithms run non-destructively without
 parallel mutation. Missing final membership remains explicit. The existing feature
 API is unchanged. Validation status is recorded in BOOLEAN_TOPOLOGY_HISTORY.md.
+
+## Cadoryx view cube: viewer-owned interactive presentation
+
+The hand-written Viewer bridge composes OCCT `AIS_ViewCube` into its existing
+`AIS_InteractiveContext`. Generated `AISViewCube` handles alone cannot attach a
+cube to the viewer-owned context or expose an `AIS_ViewCubeOwner` hit without
+breaking context ownership. Four additive C exports show/hide the cube, copy
+its detected 0–25 orientation, copy an orientation-or-roll-arrow action, and
+set an orientation on the view. No cube handle or detected owner crosses the
+ABI; the viewer owns and releases the cube and two 2D persisted `AIS_Shape`
+arrows. The arrows draw 45-degree arcs at the cube's upper-right side. They
+are displayed only when the camera looks squarely at one of the six principal
+faces; camera changes from both viewer and review-camera paths synchronize
+visibility. Native hit detection checks `HasDetected()` before accessing the
+detected interactive object; otherwise an empty corner hit can crash OCCT.
+OCCT highlights detected cube owners and the arrows use a distinct dynamic
+highlight style. Automatic OCCT click animation is disabled so the consuming
+UI can drive its own cancellable camera animation. Hit requests outside the
+upper-right 190-pixel region return without changing AIS model hover detection.
+
+The viewer-owned cube also exposes managed `ViewerCubeAppearance` and hover
+state. Two manual C exports copy UTF-8 face labels/font settings into the
+existing `AIS_ViewCube` and switch idle transparency without exposing an AIS
+handle. Labels can change while displayed for application language switches.
+The bridge preserves arrows and 26-direction hit testing while hiding the
+decorative axis trihedron.
+
+## Viewer presentation overlay for CAD handles
+
+`ViewerPresentation.SetOverlay(bool)` is one manual viewer-owned C ABI operation.
+It switches an existing AIS presentation between OCCT's default and Topmost
+Z-layers without exposing an AIS handle or changing ownership. Cadoryx uses it
+for draggable balls and their connecting lines so model depth cannot hide the
+controls. It does not change document geometry, picking modes, or camera state.
+
+The occurrence gizmo uses the existing viewer-owned `ViewerManipulator`. Its
+presentation is assigned to the Topmost Z-layer on attach. `SetPart` now asks
+the OCCT interactive context to recompute the manipulator presentation and
+active selection after changing an axis flag: without this, only hit testing
+changes and old arrows/rings/cubes remain visible until an unrelated redraw.
+Cadoryx combines `EnabledModes`, `SetPart`, and `ZoomPersistence` to show one
+mode at a time with stable screen size. The manipulator remains native-local;
+these settings do not alter serialized shapes or transfer AIS ownership.
+
+## Cadoryx C3 plane reflection adapter
+
+`GpTrsf.CreatePlaneMirror` and `occtsharp_trsf_create_plane_mirror` are a
+manual composition of `gp_Trsf::SetMirror(gp_Ax2)`. Finite origin and finite,
+nonzero normal are checked before allocation; an output pointer is cleared
+before guarded work. Generated declarations are unchanged. Reflection uses
+the existing exact BRep transform adapter, which handles negative determinant
+and topology orientation. No quaternion, mesh or BRep text approximation is
+used. Focused tests cover axis/oblique mirrors, involution, volume/centroid,
+source/transform disposal, BRep roundtrip and raw ABI errors. Current evidence
+and remaining delivery gates are recorded in STATUS.
+
+Cadoryx C3 STEP roundtrip exposed an existing presentation recovery defect:
+pretransfer appended styled solids to the geometry result list, and fallback
+recovery added extra scene roots. `PreTransferStepStyleTargets` now clears only
+the result list after caching binders, allowing STEPCAF to transfer product
+roots once. Recovery matches exact native topology partners in transferred
+part definitions, requiring a unique match, and attaches subshape styles there.
+It never creates new product geometry from a style target. Orientation/location
+are resolved through exact source identity, not distance or mesh comparison.
+This extends the accepted Preview.12 style boundary without new ABI/ownership.
+
+## Cadoryx A5: viewer-source snapshots and shared computed graphics
+
+The isolated `.12` candidate adds four hand-written source creation/display/
+release C functions and the friendly viewer-parent `ViewerSource`. Generic
+generated AIS bindings cannot register independent instances in the friendly
+viewer's private presentation registry or return its exact original topology.
+The existing registry is retained using a private `AIS_ColoredShape` subclass
+whose graphics connect to the source until a style mutation detaches them.
+`BRepBuilderAPI_Copy` supplies the original/copy proof; selection never infers
+identity from geometry distance. The candidate bumps ABI to 1.76 / bridge
+0.84.0 and has no generated native binding edits.
+
+Ownership and source-entry release rules are in OWNERSHIP and ADR-0102.
+Direct public C++ build15/run12 passes20/20; frozen source-snapshot SDK
+Release741/741 and focused9/9 pass, with all62 actual loaded native DLLs bound.
+The original733 cases and eight added cases executed; default-drawer
+initialization, exact identity location and detected native-owner location
+were fixed, retaining the access violation and later two failed runs. The
+script regenerated/checks4152 unchanged type forwarders. Actual Debug,
+imported hierarchies/textures, mutable source refresh, all editing entry points,
+immutable packages, Cadoryx integration and fixed-model performance remain
+pending. This exception is not declared locally accepted or released.
+The 19 focused mirror, style, STEP/XDE, assembly/lifetime/real-HWND and IGES
+regressions pass with the actual Release bridge; full delivery gates remain
+distinct in STATUS.
+
+## Cadoryx C3 exact transformed XDE definition (2026-10-02)
+
+`XdeDocument.CopyTransformedDefinition` and the additive manual export
+`occtsharp_xde_copy_transformed_definition` copy a simple reusable definition
+under a rigid placement or plane reflection. Source root location is removed
+explicitly and composed into the requested transform before the owning exact
+geometry copy. `BRepBuilderAPI_Transform::ModifiedShape` supplies each labeled
+subshape correspondence; missing, nonmember, duplicate or wrong-kind results
+fail. No traversal index, closest point or geometric-similarity matching is used.
+An explicit new destination shape label avoids XCAF same-document deduplication
+and located reference labels that cannot own face metadata. Names, visibility,
+colors, layers and physical/visual materials are copied. Arbitrary attributes,
+source validation properties and PMI are not copied as transformed evidence.
+An open destination transaction is required and must be aborted on failure.
+Assemblies, reference labels and scaling are rejected. No new public owner type
+or facade forwarder is required; the operation belongs to the existing XDE module.
+Release exact-copy/mirror/style regressions pass 12/12, including located sources,
+identity/rigid copies, same/cross-document use and STEP reopening. See STATUS
+for later Debug and immutable local package evidence.
+
+## Cadoryx D2 copied self-interference inspection (2026-10-01)
+
+Shape.GetSelfInterferenceReport uses one additive manual C export, occtsharp_shape_self_interference. BOPAlgo_ArgumentAnalyzer SelfInterMode runs on an independent BRepBuilderAPI_Copy geometry graph. Other analysis modes are explicitly disabled. Native algorithm errors fail the call; copied non-self/unknown fault records prevent IsClear. Counts are fault records, not intersection pairs, topology indices or history correspondences. This check is distinct from BRepCheck_Analyzer local validity and neither replaces the other. Regenerated facade forwarders expose the new copied report type. Release native/managed builds, ten focused semantics/lifetime/mirror tests, complete Release Runtime 609/609, additive export delta, new immutable sweep.1 packages and two isolated consumers passed. Debug native and full delivery remain NOT RUN; see STATUS for matching bridge hashes and Cadoryx locked-package evidence.
+
+## Cadoryx A5 explicit styles and override rebasing
+
+The fifth manual source export, occtsharp_viewer_source_refresh_xde, replaces
+only styles for exact unchanged original topology/placement. Friendly sources
+use the existing registry and private subclass. Explicit root/subshape review
+overrides and appearance baselines are rebuilt against new owned source drawers.
+Selected native owner reuse requires exact copied topology; newly hidden owners
+are removed from selection. The new-source zero-transparency route preserves
+the caller's explicit opaque override instead of Context.UnsetTransparency.
+Ordinary display routes retain their existing behavior. Release750/750, focus17,
+direct22, headers47 and additive Release exports5 pass; Debug/packages, complex
+imports and whole downstream A5 remain incomplete. No generated binding edits.
+
+## Cadoryx A5 imported sources and encoded texture ownership
+
+The viewer-source manual bridge now clones encoded Image_Texture payloads for
+all six XCAF material texture slots; imported glTF base-color first-display after
+caller file deletion is verified. Native byte/slice/caller-buffer mutation tests
+bind the same private helper header. Source refresh updates all cached graphics
+modes before retiring prior source AIS objects, preserving OpenGL connection
+lifetime for imported compound whole selection. There are still exactly five
+additive source exports; no generated source or inventory classification changes.
+Release755/755, focus22/22, native25/25, headers48 and Release exports pass. Four
+older imported runs are Aborted, not passes. Actual Debug/packaged consumers,
+complete vendor/PBR fidelity and Cadoryx A5 acceptance remain incomplete.
+
+## Batch AK generated transfer workflow
+
+No new Manual exception. The exact generated contract and admission matrix preserve one reused Manual support operation without counting it as migrated. SDK missing/unsafe iterator, recursive record and index paths are recorded in BATCH_AK_TRANSFER_RECORDS_ADMISSION.json.
+
+## Batch AS facade projection attachment
+
+OcafDocument.Projections and XdeDocument.Projections/AttributeProjections attach
+their existing Modeling-owned document SafeHandle to generated TM025/026 views.
+This is an internal adapter between existing native owner domains, preserving
+all assembly identities and existing transaction/history/persistence code.
+It introduces no manually implemented SDK call or new Manual StableId. Cached
+views are recreated after view disposal; parent disposal invalidates every view.
+Generated templates implement native operations and every copied payload.
+
+## SC-062: private document persistence fidelity adapters
+
+Nine exact Blocked-to-Manual declarations in
+[AS admission](BATCH_AS_DOCUMENT_ATTRIBUTES_ADMISSION.json),
+manualSupportingOperations, support Documents/NamedDataPersistence.cpp only:
+binary and XML NamedData Paste read/write (4), TDocStd_Application::DefineFormat
+(1), XML generic/XCAF document storage constructors (2), XCAFDoc_Note::Set and
+XCAFDoc_NoteComment::Set retrieval mutators (2). Existing driver constructors,
+AttributeDrivers and table registration are reused emitted calls, not new IDs.
+These private C++ callbacks are application-local and expose no public managed
+mutable driver/attribute or global factory. See ADR-0111 for driver defects,
+bounded extensions and external compatibility limits. The facade attachment
+above still contributes no Manual SDK call; persistence support is separate.
+
+The internal codec's BinObjMgt position/length, LDOM attribute/string access,
+XmlObjMgt element borrowing and C++ stream operators are serialization
+infrastructure, not general .NET DOM/buffer bindings. Their borrowed values
+are used only during the SDK-supplied Paste callback and never escape to managed
+code. Their existing Blocked/Skipped dispositions remain unchanged; SC-062 does
+not claim that those unsafe general APIs have been migrated. The nine Manual
+IDs describe the constrained document persistence boundary, not every private
+C++ helper invocation. Twenty-one existing emitted persistence calls are audited
+separately from the sixteen reused projection dependencies.
+
+The XML writer also uses its inherited protected AddNamespace helper to declare
+the pinned note driver's existing class-name prefix. Its protected/Skipped
+classification stays unchanged; no general namespace editor is exposed. This
+repairs well-formed namespace syntax without changing native attribute names.
+
+AX extends the existing SC-062 application-local XML persistence adapter registration with a generated ExactXmlColor driver. It preserves the SDK Color attribute and nearest-name payload while storing bounded versioned exact RGBA in the same XML node. OcctSharp-aware retrieval validates the complete extension before setting the color; legacy files use the SDK driver and external readers may retain only nearest colors. The generated closed workflow remains Manual +0; this registration is not a general .NET DOM binding.
+BI private Bin/XML driver integration registers generated direct-attribute adapters through Documents/NamedDataPersistence.cpp. Five empty array types use disclosed versioned persistence envelopes; complete binary ReferenceArray slots correct the pinned null-slot omission. No new Manual binding StableId is added. Empty logical BooleanArray remains unsupported. See [BI](BATCH_BI_DIRECT_COLLECTIONS.md).
+BJ keeps SDK external readers private, preflights the full graph before recursive transfer and adds no Manual StableId. The pinned cache binds after recursion and cannot prevent cycles. Custom basic repair parameters are not claimed to propagate. See [BJ](BATCH_BJ_LOCAL_STEP_ASSEMBLY.md).
+BK glTF requires meters/Y-up wire coordinates; textures/compression are deferred and Common-to-PBR/hierarchy format loss is disclosed. Exact definition writeback is necessary because ControlledMeshing produces independent copies. See [BK](BATCH_BK_CONFIGURED_MESH.md).
+BL privately supplies a complete 3D representation for pcurve edges, verifies stored pcurve identity and copies native ranges/orientation. It infers no topology history and adds no Manual StableId. See [BL](BATCH_BL_PARAMETERIZED_CONSTRUCTION.md).
+BM preserves native completion, parallel distance-only rows, separate CC endpoint combinations and single-solution configuration without claiming numerical completeness or topology history. No Manual StableId is added. See [BM](BATCH_BM_FINITE_EXTREMA.md).
+BN rejects UTF16 surrogate splits, invalid encoding/NUL and unbounded enumeration; overwrite reserves input plus replacement UTF8 bytes before mutation. Model Unicode names remain distinct from filesystem names. No Manual StableId is added. See [BN](BATCH_BN_BOUNDED_TEXT_TRANSFORMS.md).
+BO uses a private ProximityValueTool after finite ShapeProximity mesh initialization, avoiding its uninitialized failed value-mode status copy. Standalone Polygon3D primitives and partial/deferred/degenerate meshes are rejected. Approximate layer thickness has no certified error bound. No Manual StableId added. See [BO](BATCH_BO_MESH_PROXIMITY.md).
+
+BO MSVC exports the SDK default-constructor closure ??_FBRepExtrema_ShapeProximity@@QEAAXXZ alongside six bounded C exports. This is counted in exact native compatibility and Debug parity, not as another managed API or migrated StableId. See [BO](BATCH_BO_MESH_PROXIMITY.md).
+BP uses a hash-pinned generator transformation of the private SDK STEPCAF writer, preserving copyright, to separate canonical filenames from Unicode model names and copy complete external private settings. Writer and external-file fields remain private. Geometry is deep copied without source meshes; document units are copied explicitly, defaulting to declared profile millimeters when absent. Located assembly definitions are rejected; located components of identity definitions are retained. The generator pins the original private writer source hashes and enforces its 6000-line native/1000-line header bounds; independent compilation and the unchanged manual layout checker remain required. No Manual StableId is added. See [BP](BATCH_BP_LOCAL_STEP_EXPORT.md).
+
+BP additionally records the MSVC SDK default-constructor closure `??_FGeomToStep_MakeAxis2Placement3d@@QEAAXXZ` alongside its three C exports. This internal compiler helper receives no additional StableId or managed API credit; all four exported names and configuration parity are verified.
+
+## Cadoryx A5 private SDK28: copied rendering health (2026-10-11)
+
+This is an isolated manual bridge candidate based on the accepted private SDK27;
+it is not part of public BQ Preview.67 or a completed Cadoryx A5 delivery.
+The proposed package is `8.0.1-preview.31.cadoryx.render-health.28`, ABI 1.87,
+bridge 0.95.0. See the [frozen workspace](../OcctSharp/artifacts/cadoryx-a5-render-health-28-draft-1/workspace-preparation-1.json).
+
+`occtsharp_viewer_render_health` and `occtsharp_viewer_invalidate_gpu_resources`
+are the two manual exceptions. Managed `OcctViewer.GetRenderingHealth()` returns
+copied flags; `InvalidateGpuResources()` explicitly calls this viewer's
+`Graphic3d_StructureManager::SetDeviceLost()`. Both retain the existing live-viewer
+registry and owner-thread guards. The managed call requires native ABI >=1.87.
+No source shape, presentation handle, driver or OpenGL context is returned.
+
+The read observes `StructureManager::IsDeviceLost()` and this driver's
+`GetSharedContext(false)`: a missing context is distinct from an existing context
+whose `IsValid()` is false. OCCT documents `IsValid()` as initialization state;
+these flags are not a diagnosis of physical GPU removal. Reading does not clear
+flags, bind a context, redraw, restart a viewer or mutate modeling/history.
+Initial context absence alone does not authorize application recovery. Marking
+presentation data for reupload does not destroy a context or remove a physical
+device. Tests must keep camera, complete frame and retained presentation/source
+identity, and must prove isolation from another viewer.
+
+For a valid output pointer the C read zeros the output before viewer validation
+and publishes flags only after all reads succeed. A null output pointer returns
+invalid-argument without dereference. Raw null/stale/foreign-thread failures,
+managed wrong-thread/disposed ownership, old1346 plus12 expected1358, actual
+Release/Debug native, exports/API, packages and public consumers remain required.
+Current source and syntax preparation are not compile/runtime evidence. The
+[WPF recovery revision4](../../Cadoryx/artifacts/a5-wpf-render-health-recovery-draft-4/preparation-4.json)
+is likewise source only; complete two-pane/fault/close/recreation-failure images,
+subsequent modeling/history/save/reopen and zero assets remain NOT RUN.
+
+
+SDK28 build/runtime continuation (2026-10-11): both actual native/managed0,
+exports+2/API+8 and actual focused12 each passed;20 full320 PNGs directly reviewed.
+All1031 sources including generated4176 forwarders are exact: the copied health
+enum lives in the facade and needs no self-forwarder. Original false guard FAIL
+was retained and the same completed build independently audited without replay.
+Full Release1358 passed; Debug full status is tracked in STATUS. Actual missing
+or invalid context fault injection, physical GPU removal, private packages,
+public consumers and WPF automatic recovery remain separate NOT RUN gates.
+
+## Cadoryx SDK29 generation successor to the frozen SDK28 manual draft
+
+The [SDK29 generator inputs](../OcctSharp/artifacts/cadoryx-a5-render-health-generated-29-draft-1/preparation-1.json)
+move the rendering-health C ABI header, implementation and managed NativeMethods
+into explicit generator resources and the standard generate entry. SDK28's two
+manual exports above remain historical candidate facts; they are not silently
+reclassified or rewritten. The successor emits bounded support glue only and
+adds no OCCT declaration StableIds or coverage credit. The old facade workflow,
+viewer registry/thread checks, C ABI exception containment, zero-on-failed-read
+output and no-borrowed-graphics-handle rule remain the contract. Unknown/duplicate
+workflow configuration, other SDK versions and changed pinned headers must fail
+before output writes. The existing legacy interop assembly owner is retained.
+
+This successor is source preparation with syntax evidence, not accepted
+generation, compilation or runtime. Two complete generations with exact old
+output/StableId preservation, both rule suites, actual native/managed builds,
+export/API compatibility and lifetime/consumer/WPF acceptance are still required.
+The manual high-level facade remains a documented cross-family workflow under
+ADR-0074; generating low-level glue is not whole-library migration.
+
+## BV projection helper migration
+
+The17 exact identities in [BV admission](BATCH_BV_PERIODIC_PROJECTION_ADMISSION.json)
+previously recorded under SC-033/SC-039/SC-048/SC-053/SC-056 move to TM055 generated
+call-private helpers. Only these current Manual overrides are removed; historical
+batch records and the other declarations in those cases remain unchanged. Existing
+high-level C ABI workflows remain manual caller orchestration with identical
+validation, transforms, clipping, errors and output contracts. No new Manual
+exception is introduced and the shared IDs are counted once.
+
+## BW fitting helper migration
+
+The18 exact Manual identities in [BW admission](BATCH_BW_NONUNIFORM_FITTING_ADMISSION.json)
+move to TM056 generated native private helpers. Only these overrides are removed;
+historical exceptions and other identities remain. Freeform and PatchConversion
+retain their manual orchestration and original error/topology contracts.
+No new Manual binding exception is introduced. AppSweep remains deferred for the
+reproduced fixed SDK transform defect; it receives no migration credit.
+
+## BX MakeFace helper migration
+
+The12 exact identities in [BX admission](BATCH_BX_TYPED_TOPOLOGY_ADMISSION.json)
+move to TM057 generated stack helpers used by eight existing callers. Historical
+exceptions remain; other manual MakeShape callers are unchanged. The shared
+Shape getter is admitted only through initialized FaceBuilder profiles, without
+a generic public MakeShape receiver. Typed pcurve copies reuse eight already
+emitted SDK operations. No new Manual exception or SDK declaration is claimed.
+
+## BZ local-feature helper migration
+
+The111 exact Manual identities in [BZ admission](BATCH_BZ_LOCAL_FEATURES_ADMISSION.json)
+move to TM059 private generated adapters across nine callers. Historical exception
+records and all other identities remain. Five base supports are reused and four
+stay Manual without migration credit. Existing C ABI caller orchestration, source
+isolation, diagnostics and lifetime policy remain manual; only receiver typing
+and the shared contour copier signature change. There is no new Manual exception
+or SDK declaration. Section DTO copying, sampled-law approximation and the pinned
+unsafe draft-limit rejection remain explicit.
+
+## CA generated mesh adapters and remaining manual boundary
+
+TM060 owns 24 exact mesh operations and reuses 6 Emitted support identities.
+Original C exports, registry/publication, validation, transformation, normal/UV
+channel presence and 5-million element limits remain the audited manual policy.
+The generated native-private profile does not add public mutable receivers.
+Paired polygon arrays retain normalized 1-based indices; no unequal-bound promise
+is introduced. Weld/normal precision remains the pinned SDK float precision.
+Parameters mesher profiles expose IsDone only, with no new IsModified guarantee.
+
+## CB generated document operations and retained storage policy
+
+TM061 replaces125 exact Manual overrides from [CB admission](BATCH_CB_DOCUMENTS_ADMISSION.json).
+Seventeen caller files change only semantic delegation/private constructor types;
+twelve remain byte-identical. Original transaction/epoch/context/UTF-8/budget and
+application-local binary/XML driver policy remain manual and auditable.
+XmlDrivers::DefineFormat stays Manual because its SDK-default registration is
+unused and cannot replace the current exact extension drivers. No new Manual
+exception is introduced. Facade-free storage tests use the existing public C ABI
+owner; no new facade-free managed storage API or SDK declaration is claimed.
+
+## CC generated XDE operations and retained policy
+
+TM062 replaces137 exact Manual overrides from [CC admission](BATCH_CC_ASSEMBLY_ADMISSION.json),
+including131 XDE and6 color operations. Original exported ABI, owner/domain/thread/
+command guards, bounded copies and publication remain in the audited callers.
+SDK value construction returns the original SDK base type. Unused
+XmlXCAFDrivers::DefineFormat remains Manual; application-local exact drivers stay.
+No new Manual exception is introduced. Facade-free XBF input uses the existing
+public C ABI owner. Located assembly normalization is generated per ADR-0137.
+
+## CD exact STEP delegates and configured writer
+
+TM063 replaces11 exact Manual overrides under the original private reader/call
+owners. No new manual binding exception is added; shape/reader registry release,
+finite units, root mappings, exception Guard and success-only publication remain.
+Configured STEPCAF uses the existing dual document-domain context and projection
+payload owner. No session/SDK model/attribute handle escapes; the file is staged
+before replacement. Precise supported and lost fields are documented in
+[CD](BATCH_CD_STEP.md). No public architecture/ownership category changes.
+
+## CE private exchange adapters and owned mesh resources
+
+TM064 replaces34 precise Manual declarations without exposing mutable sessions;
+six provider session overloads remain deferred. Original policy receivers retain
+validation, exception and publication behavior. TM065 keeps buffer write pointers
+call-local and embeds Image_Texture/NCollection_Buffer handles in the native
+material graph, independent of managed result/temp files. Targeted texture snapshots
+are copied immutable managed data. See [CE](BATCH_CE_EXCHANGE.md) and
+[ADR-0138](adr/0138-owned-mesh-resource-import.md). No new Manual StableId is added.
+Existing manual IO infrastructure ExchangePathStage is compiled once in Runtime
+and reused by facade IGES and geometry-only STL; its implementation is unchanged.
+
+## CF: SC-041/SC-045/SC-057/SC-060 generator origin correction
+
+40 precise original Manual SDK rows move to TM066/TM067 per
+[admission](BATCH_CF_VIEWER_ADMISSION.json). Existing viewer registry, thread,
+input, C ABI errors and document identity copying policies stay manual; these
+policies are not additional SDK declaration IDs. Canonical nested receiver types
+are qualified at namespace emission. No new manual binding exception is added.
+
+## CG SC-060 generation migration
+
+80 exact existing Manual calls move to TM068; viewer registry, owner-thread,
+input/device policy and bounded support templates remain explicit infrastructure.
+See [CG admission](BATCH_CG_RENDER_RESOURCES_ADMISSION.json). No new Manual SDK row.

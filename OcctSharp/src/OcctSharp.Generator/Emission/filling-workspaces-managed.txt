@@ -1,0 +1,94 @@
+#nullable enable
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+using OcctSharp.Generated;
+using OcctSharp.Interop;
+namespace OcctSharp.FillingWorkspaces;
+/// <summary>Private section approximation configuration. Strategy 0 ordinary, 1 spline, 2 smoothing, 3 bounded poles.</summary>
+public sealed record FillingOptions(int MinimumDegree=3,int MaximumDegree=8,int Iterations=5,GeomAbsShape Continuity=GeomAbsShape.GeomAbs_C2,ApproxParametrizationType Parametrization=ApproxParametrizationType.Approx_IsoParametric,int Strategy=0,int MaximumPoles=64,double Tolerance3d=1e-6,double Tolerance2d=1e-6,double PositionWeight=.4,double TangentWeight=.2,double CurvatureWeight=.4);
+internal sealed partial class FillingHandle:SafeHandleZeroOrMinusOneIsInvalid {
+ internal FillingHandle(nint value):base(true){SetHandle(value);}
+ protected override bool ReleaseHandle(){Release(handle);return true;}
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_filling_release")]internal static partial void Release(nint token);
+}
+/// <summary>Owns a private completed approximation; diagnostics are independent copied values and survive disposal.</summary>
+public sealed partial class FillingResult:IDisposable {
+ readonly FillingHandle handle;
+ internal unsafe FillingResult(nint token,double[]? requestedParameters=null){FillingHandle? allocated=null;try{handle=allocated=new(token);RequestedSectionParameters=Array.AsReadOnly((double[])(requestedParameters??[]).Clone());int* info=stackalloc int[8];double* values=stackalloc double[5];NativeError.ThrowIfFailed(Info(handle,info,8,values,5),"filling_info");IsDone=info[0]!=0;UDegree=info[1];VDegree=info[2];UPoles=info[3];VPoles=info[4];KnotCount=info[5];Parametrization=(ApproxParametrizationType)info[6];Continuity=(GeomAbsShape)info[7];Reached3d=values[0];Reached2d=values[1];CriterionWeights=Array.AsReadOnly(new[]{values[2],values[3],values[4]});}catch{if(allocated is null)FillingHandle.Release(token);else allocated.Dispose();throw;}}
+ /// <summary>Independent explicit section parameters; empty when the legacy uniform/sweep entry was used. Retained even for an unfinished approximation.</summary>
+ public IReadOnlyList<double> RequestedSectionParameters {get;}
+ /// <summary>Whether native approximation succeeded; failure publishes diagnostics only.</summary>
+ public bool IsDone {get;}
+ /// <summary>Completed U degree, zero on failure.</summary>
+ public int UDegree {get;}
+ /// <summary>Completed V degree, zero on failure.</summary>
+ public int VDegree {get;}
+ /// <summary>Completed U pole count.</summary>
+ public int UPoles {get;}
+ /// <summary>Completed V pole count.</summary>
+ public int VPoles {get;}
+ /// <summary>Combined U and V knot count.</summary>
+ public int KnotCount {get;}
+ /// <summary>Actual native parametrization setting.</summary>
+ public ApproxParametrizationType Parametrization {get;}
+ /// <summary>Actual native continuity setting.</summary>
+ public GeomAbsShape Continuity {get;}
+ /// <summary>Reached 3D tolerance, zero when unfinished.</summary>
+ public double Reached3d {get;}
+ /// <summary>Reached 2D tolerance, zero when unfinished.</summary>
+ public double Reached2d {get;}
+ /// <summary>Copied position/tangent/curvature criteria.</summary>
+ public IReadOnlyList<double> CriterionWeights {get;}
+ /// <summary>Return a new independently owning surface; unfinished or disposed results throw.</summary>
+ public GeomBSplineSurface CreateSurface(){ObjectDisposedException.ThrowIf(handle.IsClosed,this);if(!IsDone)throw new InvalidOperationException("Filling did not complete.");NativeError.ThrowIfFailed(Surface(handle,out nint token),"filling_surface");return GeomBSplineSurface.FromNative(token,"filling_surface")??throw new InvalidOperationException("Completed surface is null.");}
+ /// <summary>Release native storage. Prior surface copies remain independent.</summary>
+ public void Dispose()=>handle.Dispose();
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_filling_info")]private static unsafe partial NativeStatus Info(FillingHandle token,int* info,int capacity,double* values,int valueCapacity);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_filling_surface")]private static partial NativeStatus Surface(FillingHandle token,out nint result);
+}
+/// <summary>Bounded copied section lofts and radius sweeps. Retain and synchronize input curve mutation while copying starts.</summary>
+public static partial class SurfaceFilling {
+ static SurfaceFilling()=>NativeLibraryResolver.EnsureRegistered(typeof(SurfaceFilling).Assembly);
+ /// <summary>Loft two to 128 owning nonperiodic BSpline sections using private harmonized copies. Uniform explicit section parameters are used.</summary>
+ public static FillingResult Loft(IReadOnlyList<GeomBSplineCurve> sections,FillingOptions? options=null){ArgumentNullException.ThrowIfNull(sections);if(sections.Count<2||sections.Count>128)throw new ArgumentOutOfRangeException(nameof(sections));return Run(sections,options??new(),false,0);}
+ /// <summary>Loft copied sections at finite strictly ascending explicit parameters. Strategies0,1,3 preserve their mapping; two sections require spline1. Smoothing2 is rejected because the fixed SDK ignores the mapping. Domain width must be at least1e-9.</summary>
+ public static FillingResult LoftWithParameters(IReadOnlyList<GeomBSplineCurve> sections,ReadOnlySpan<double> parameters,FillingOptions? options=null){
+  ArgumentNullException.ThrowIfNull(sections);if(sections.Count<2||sections.Count>128||parameters.Length!=sections.Count)throw new ArgumentException("Explicit loft section/parameter counts must match within2..128.");
+  var o=options??new();if(o.Strategy==2)throw new ArgumentException("Explicit parameter mapping is unsupported for SDK smoothing.",nameof(options));
+  if(sections.Count==2&&o.Strategy!=1)throw new ArgumentException("Two-section explicit loft requires the SDK spline strategy.",nameof(options));
+  var copied=parameters.ToArray();for(int i=0;i<copied.Length;++i)if(!double.IsFinite(copied[i])||Math.Abs(copied[i])>1e12||(i>0&&copied[i]<=copied[i-1]))throw new ArgumentException("Finite strictly ascending section parameters are required.",nameof(parameters));
+  if(copied[^1]-copied[0]<1e-9)throw new ArgumentException("Loft parameter domain is too small.",nameof(parameters));
+  return Run(sections,o,false,0,copied);
+ }
+ /// <summary>Approximate a constant-radius pipe along one bounded nonperiodic BSpline path.</summary>
+ public static FillingResult Sweep(GeomBSplineCurve path,double radius,FillingOptions? options=null){ArgumentNullException.ThrowIfNull(path);return Run(new[]{path},options??new(),true,radius);}
+ static unsafe FillingResult Run(IReadOnlyList<GeomBSplineCurve> inputs,FillingOptions o,bool sweep,double radius,double[]? sectionParameters=null){
+  var handles=new SafeHandle[inputs.Count];var retained=new bool[inputs.Count];var pointers=new nint[inputs.Count];
+  var flags=new[]{o.MinimumDegree,o.MaximumDegree,o.Iterations,(int)o.Continuity,(int)o.Parametrization,o.Strategy,o.MaximumPoles};var values=new[]{o.Tolerance3d,o.Tolerance2d,o.PositionWeight,o.TangentWeight,o.CurvatureWeight,radius};
+  try{for(int i=0;i<inputs.Count;++i){handles[i]=(inputs[i]??throw new ArgumentException("Null filling curve.",nameof(inputs))).NativeHandle;handles[i].DangerousAddRef(ref retained[i]);pointers[i]=handles[i].DangerousGetHandle();}
+   fixed(nint* p=pointers)fixed(int* f=flags)fixed(double* v=values,s=sectionParameters){
+    NativeStatus status=sectionParameters is null?Create(p,pointers.Length,f,flags.Length,v,values.Length,sweep?1:0,out var token):CreateParameterized(p,pointers.Length,f,flags.Length,v,values.Length,s,sectionParameters.Length,out token);
+    NativeError.ThrowIfFailed(status,sectionParameters is null?"filling_create":"filling_create_parameterized");return new(token,sectionParameters);
+   }
+  }finally{for(int i=handles.Length-1;i>=0;--i)if(retained[i])handles[i].DangerousRelease();}
+ }
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_filling_create")]private static unsafe partial NativeStatus Create(nint* inputs,int count,int* options,int optionCount,double* values,int valueCount,int sweep,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_filling_create_parameterized")]private static unsafe partial NativeStatus CreateParameterized(nint* inputs,int count,int* options,int optionCount,double* values,int valueCount,double* parameters,int parameterCount,out nint result);
+}
+/// <summary>Copied sample-major rows; within each sample, position then derivatives, each with Dimension components.</summary>
+public sealed record SplineSamples(int Dimension,int DerivativeOrder,int SampleCount,IReadOnlyList<double> Values);
+/// <summary>Direct bounded SDK spline kernel evaluation for scalar, 2D and 3D clamped nonperiodic data and 2D/3D Bezier data.</summary>
+public static partial class SplineKernel {
+ static SplineKernel()=>NativeLibraryResolver.EnsureRegistered(typeof(SplineKernel).Assembly);
+ /// <summary>Evaluate copied poles and optional rational weights at finite in-domain parameters. Empty knots select Bezier, whose degree equals poles minus one.</summary>
+ public static unsafe SplineSamples Evaluate(IReadOnlyList<double> poles,int dimension,int degree,IReadOnlyList<double> parameters,int derivativeOrder=0,IReadOnlyList<double>? knots=null,IReadOnlyList<int>? multiplicities=null,IReadOnlyList<double>? weights=null){
+  ArgumentNullException.ThrowIfNull(poles);ArgumentNullException.ThrowIfNull(parameters);if(dimension<1||dimension>3||poles.Count%dimension!=0||poles.Count>12288||parameters.Count==0||parameters.Count>1048576||derivativeOrder<0||derivativeOrder>3)throw new ArgumentOutOfRangeException(nameof(dimension));
+  int length=checked(parameters.Count*dimension*(derivativeOrder+1));if(length>1048576)throw new ArgumentOutOfRangeException(nameof(parameters));
+  var data=poles.ToArray();var sample=parameters.ToArray();var k=knots?.ToArray()??[];var m=multiplicities?.ToArray()??[];var w=weights?.ToArray()??[];if(k.Length!=m.Length||k.Length>4096||w.Length>4096)throw new ArgumentException("Invalid knot/weight capacities.");
+  fixed(double* p=data,t=sample,u=k,a=w)fixed(int* b=m){NativeError.ThrowIfFailed(EvaluateNative(p,data.Length/dimension,dimension,a,w.Length,u,b,k.Length,degree,t,sample.Length,derivativeOrder,k.Length==0?1:0,out nint token),"spline_kernel_evaluate");
+   FillingHandle? allocated=null;try{using var handle=allocated=new FillingHandle(token);var output=new double[length];fixed(double* q=output)NativeError.ThrowIfFailed(Copy(handle,q,output.Length),"spline_kernel_copy");return new(dimension,derivativeOrder,sample.Length,Array.AsReadOnly(output));}catch{if(allocated is null)FillingHandle.Release(token);throw;}
+  }
+ }
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_kernel_evaluate")]private static unsafe partial NativeStatus EvaluateNative(double* coordinates,int poles,int dimension,double* weights,int weightCount,double* knots,int* multiplicities,int knotCount,int degree,double* parameters,int parameterCount,int order,int bezier,out nint result);
+ [LibraryImport("OcctSharp.Native",EntryPoint="occtsharp_spline_kernel_copy")]private static unsafe partial NativeStatus Copy(FillingHandle token,double* values,int capacity);
+}

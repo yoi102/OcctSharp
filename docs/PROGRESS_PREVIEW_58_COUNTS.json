@@ -1,0 +1,511 @@
+{
+  "schemaVersion": "1.0",
+  "state": "RECONCILED_ACCOUNTING_NOT_PRODUCT_COMPLETION",
+  "date": "2026-10-10",
+  "baseline": "8.0.1-preview.58",
+  "frozenDeliveryVerified": false,
+  "inputs": [
+    {
+      "path": "OcctSharp/artifacts/generator-reports/full-inventory.json",
+      "sha256": "67417C8D306B1A63677ED2F8B60DC1FE022AA7EE69B10EAE072624F5FAF44354"
+    },
+    {
+      "path": "OcctSharp/artifacts/generator-determinism/gp-pnt-discovery-1.json",
+      "sha256": "8B21F613546047F7774D63EEF4DBFC641536F89FE53A6DB9AF0BB37475072D6C"
+    },
+    {
+      "path": "OcctSharp/artifacts/batch-bf/parser-repair-new-discovery.json",
+      "sha256": "83DB25D3C7EBD51110BAF184F8773038678F068FDA44ADF6908EE7371D3682BB"
+    },
+    {
+      "path": "OcctSharp/src/OcctSharp.Generator/Transformation/OcctProductModuleClassifier.cs",
+      "sha256": "CA8C159A76260974472B759BE627C29FF299E07A94D1B880EBB4E86F1C4D631B"
+    },
+    {
+      "path": "OcctSharp/eng/report-migration-progress.py",
+      "sha256": "87546ABCE2B650DF74BFAA9F8C6A90A295A080F7F726B748792CCCB7681ACE0A"
+    }
+  ],
+  "total": 116366,
+  "states": {
+    "Blocked": 38524,
+    "Emitted": 27208,
+    "Manual": 1227,
+    "Skipped": 49407
+  },
+  "pending": 0,
+  "implementedDeclarations": 28435,
+  "nonSkippedDenominator": 66959,
+  "allInventoryCoveragePercent": 24.4358,
+  "nonSkippedCoveragePercent": 42.4663,
+  "semanticScan": true,
+  "fullScanComplete": false,
+  "parserFailures": 28,
+  "finalClassificationComplete": true,
+  "discoveryRows": 116357,
+  "moduleFallbacks": [
+    {
+      "stableId": "c:@F@ExprIntrp_GetDegree#",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrp_GetResult#",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrp_SetDegree",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrp_SetResult",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrp_start_string",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrp_stop_string",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrperror",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrplex",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    },
+    {
+      "stableId": "c:@F@ExprIntrpparse",
+      "module": "Foundation",
+      "rule": "PackageRules: Expr prefix -> Foundation"
+    }
+  ],
+  "limitations": [
+    "Declaration counts are not product-completion percentages.",
+    "Blocked includes intentionally deferred/internal APIs, not promised migration scope.",
+    "Skipped is not a remaining implementation queue.",
+    "Declarations undiscovered in failed headers have no known denominator.",
+    "Final Pending=0 does not mean the full semantic scan succeeded."
+  ],
+  "blockedReasons": {
+    "NonTransientReceiverOwnership": 14511,
+    "NonTransientValueConstruction": 5489,
+    "UnmappedValueType": 5133,
+    "BorrowedOrOutputReference": 5008,
+    "RawPointerLifetime": 3547,
+    "UnselectedHandleTarget": 2537,
+    "RValueReferenceTransfer": 1277,
+    "TemplateInstantiationProjection": 475,
+    "MissingToolkitProvenance": 421,
+    "UnverifiedFreeFunctionExport": 117,
+    "CallableEligibilityInvariant": 8,
+    "CrossModuleProjectionContract": 1
+  },
+  "skippedReasons": {
+    "Operator": 21588,
+    "TypeMetadata": 11611,
+    "NonPublic": 4528,
+    "DestructorLifecycleBoundary": 4188,
+    "NonBindableDeclaringType": 2890,
+    "TestHarness": 1995,
+    "PureVirtualDispatch": 1050,
+    "Deleted": 864,
+    "AbstractTypeConstruction": 458,
+    "Template": 119,
+    "OptionalExternalDependency": 47,
+    "AnonymousOrUnnameableEnum": 41,
+    "ArtifactUnavailable": 17,
+    "Variadic": 6,
+    "InternalHeaderFunction": 4,
+    "SuppressedConstruction": 1
+  },
+  "modules": [
+    {
+      "module": "Foundation",
+      "states": {
+        "Emitted": 3708,
+        "Manual": 10,
+        "Blocked": 7177,
+        "Skipped": 15592
+      },
+      "total": 26487,
+      "implemented": 3718,
+      "nonSkippedDenominator": 10895,
+      "nonSkippedCoveragePercent": 34.13,
+      "blockedReasons": {
+        "RawPointerLifetime": 2743,
+        "BorrowedOrOutputReference": 2637,
+        "NonTransientReceiverOwnership": 823,
+        "NonTransientValueConstruction": 453,
+        "UnmappedValueType": 231,
+        "MissingToolkitProvenance": 143,
+        "TemplateInstantiationProjection": 63,
+        "UnselectedHandleTarget": 43,
+        "RValueReferenceTransfer": 40,
+        "UnverifiedFreeFunctionExport": 1
+      },
+      "topBlockedFamilies": {
+        "TCollection_AsciiString": 91,
+        "TCollection_ExtendedString": 69,
+        "OSD_File": 29,
+        "TCollection_HAsciiString": 29,
+        "MathUtils": 24,
+        "Message_Messenger": 22,
+        "ExprIntrp_Analysis": 21,
+        "MathLin": 20,
+        "TCollection_HExtendedString": 19,
+        "Units_Measurement": 19,
+        "Message": 18,
+        "Resource_Manager": 18
+      }
+    },
+    {
+      "module": "Geometry",
+      "states": {
+        "Emitted": 6234,
+        "Manual": 195,
+        "Blocked": 5331,
+        "Skipped": 5217
+      },
+      "total": 16977,
+      "implemented": 6429,
+      "nonSkippedDenominator": 11760,
+      "nonSkippedCoveragePercent": 54.67,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 2537,
+        "NonTransientValueConstruction": 1445,
+        "UnmappedValueType": 487,
+        "BorrowedOrOutputReference": 391,
+        "UnselectedHandleTarget": 147,
+        "TemplateInstantiationProjection": 139,
+        "RValueReferenceTransfer": 88,
+        "RawPointerLifetime": 79,
+        "MissingToolkitProvenance": 9,
+        "CallableEligibilityInvariant": 8,
+        "CrossModuleProjectionContract": 1
+      },
+      "topBlockedFamilies": {
+        "BSplCLib": 73,
+        "AdvApp2Var_MathBase": 39,
+        "Adaptor3d_HSurfaceTool": 38,
+        "AppDef_Variational": 37,
+        "GeomFill_AppSweep": 34,
+        "PLib": 32,
+        "BiTgte_Blend": 30,
+        "Approx_SweepApproximation": 29,
+        "GeomToIGES_GeomSurface": 29,
+        "Extrema_Curve2dTool": 28,
+        "Extrema_CurveTool": 27,
+        "Geom2dHatch_Hatching": 26
+      }
+    },
+    {
+      "module": "Modeling",
+      "states": {
+        "Emitted": 3037,
+        "Manual": 573,
+        "Blocked": 11420,
+        "Skipped": 8978
+      },
+      "total": 24008,
+      "implemented": 3610,
+      "nonSkippedDenominator": 15030,
+      "nonSkippedCoveragePercent": 24.02,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 6565,
+        "NonTransientValueConstruction": 2082,
+        "UnmappedValueType": 1338,
+        "BorrowedOrOutputReference": 479,
+        "UnselectedHandleTarget": 321,
+        "MissingToolkitProvenance": 230,
+        "RValueReferenceTransfer": 126,
+        "UnverifiedFreeFunctionExport": 116,
+        "RawPointerLifetime": 95,
+        "TemplateInstantiationProjection": 68
+      },
+      "topBlockedFamilies": {
+        "BRepGraphInc_Storage": 247,
+        "TopOpeBRepBuild_Builder": 182,
+        "TopOpeBRepDS_DataStructure": 99,
+        "BOPDS_DS": 75,
+        "BOPTools_AlgoTools": 55,
+        "TopOpeBRep_FacesFiller": 51,
+        "HLRBRep_BSurfaceTool": 50,
+        "TopOpeBRepTool_TOOL": 50,
+        "TopOpeBRep_VPointInter": 49,
+        "TopOpeBRep_LineInter": 48,
+        "TopOpeBRepDS_BuildTool": 47,
+        "BRepLib_MakeEdge": 46
+      }
+    },
+    {
+      "module": "MeshData",
+      "states": {
+        "Emitted": 153,
+        "Manual": 22,
+        "Blocked": 124,
+        "Skipped": 235
+      },
+      "total": 534,
+      "implemented": 175,
+      "nonSkippedDenominator": 299,
+      "nonSkippedCoveragePercent": 58.53,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 50,
+        "BorrowedOrOutputReference": 23,
+        "NonTransientValueConstruction": 20,
+        "UnselectedHandleTarget": 14,
+        "UnmappedValueType": 7,
+        "RawPointerLifetime": 5,
+        "RValueReferenceTransfer": 4,
+        "TemplateInstantiationProjection": 1
+      },
+      "topBlockedFamilies": {
+        "Poly_CoherentNode": 16,
+        "Poly": 12,
+        "Poly_CoherentTriangle": 12,
+        "Poly_CoherentLink": 9,
+        "Poly_CoherentTriPtr": 9,
+        "Poly_ArrayOfNodes": 8,
+        "Poly_ArrayOfUVNodes": 8,
+        "Poly_CoherentTriangulation": 8,
+        "Poly_PolygonOnTriangulation": 8,
+        "Poly_Triangulation": 8,
+        "Poly_MergeNodesTool": 6,
+        "Poly_Polygon3D": 5
+      }
+    },
+    {
+      "module": "Mesh",
+      "states": {
+        "Emitted": 181,
+        "Manual": 2,
+        "Blocked": 307,
+        "Skipped": 572
+      },
+      "total": 1062,
+      "implemented": 183,
+      "nonSkippedDenominator": 490,
+      "nonSkippedCoveragePercent": 37.35,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 104,
+        "UnmappedValueType": 83,
+        "NonTransientValueConstruction": 50,
+        "BorrowedOrOutputReference": 39,
+        "UnselectedHandleTarget": 20,
+        "RValueReferenceTransfer": 5,
+        "TemplateInstantiationProjection": 4,
+        "RawPointerLifetime": 2
+      },
+      "topBlockedFamilies": {
+        "BRepMesh_Delaun": 24,
+        "BRepMesh_DataStructureOfDelaun": 19,
+        "BRepMesh_VertexInspector": 16,
+        "BRepMesh_DefaultRangeSplitter": 15,
+        "BRepMesh_CircleTool": 14,
+        "BRepMesh_ShapeTool": 12,
+        "BRepMesh_PairOfIndex": 11,
+        "BRepMesh_SelectorOfDataStructureOfDelaun": 11,
+        "BRepMesh_VertexTool": 10,
+        "BRepMesh_CircleInspector": 9,
+        "BRepMesh_Triangle": 9,
+        "BRepMesh_GeomTool": 8
+      }
+    },
+    {
+      "module": "Documents",
+      "states": {
+        "Emitted": 1501,
+        "Manual": 126,
+        "Blocked": 2311,
+        "Skipped": 3337
+      },
+      "total": 7275,
+      "implemented": 1627,
+      "nonSkippedDenominator": 3938,
+      "nonSkippedCoveragePercent": 41.32,
+      "blockedReasons": {
+        "UnmappedValueType": 587,
+        "NonTransientReceiverOwnership": 569,
+        "BorrowedOrOutputReference": 448,
+        "UnselectedHandleTarget": 314,
+        "NonTransientValueConstruction": 249,
+        "RValueReferenceTransfer": 94,
+        "RawPointerLifetime": 31,
+        "TemplateInstantiationProjection": 17,
+        "MissingToolkitProvenance": 2
+      },
+      "topBlockedFamilies": {
+        "BinObjMgt_Persistent": 58,
+        "FSD_BinaryFile": 50,
+        "CDF_Store": 28,
+        "FSD_File": 28,
+        "BinTools_ShapeSet": 27,
+        "CDM_Document": 24,
+        "Storage_Data": 24,
+        "Storage_HeaderData": 21,
+        "BinTools_IStream": 20,
+        "StdStorage_HeaderData": 20,
+        "TNaming_Identifier": 20,
+        "TDataStd_ExtStringList": 19
+      }
+    },
+    {
+      "module": "DataExchange",
+      "states": {
+        "Emitted": 7638,
+        "Manual": 51,
+        "Blocked": 7987,
+        "Skipped": 8998
+      },
+      "total": 24674,
+      "implemented": 7689,
+      "nonSkippedDenominator": 15676,
+      "nonSkippedCoveragePercent": 49.05,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 2906,
+        "UnmappedValueType": 1437,
+        "UnselectedHandleTarget": 1162,
+        "NonTransientValueConstruction": 899,
+        "RValueReferenceTransfer": 776,
+        "RawPointerLifetime": 420,
+        "BorrowedOrOutputReference": 328,
+        "MissingToolkitProvenance": 30,
+        "TemplateInstantiationProjection": 29
+      },
+      "topBlockedFamilies": {
+        "IGESData_ParamReader": 61,
+        "IFSelect_WorkSession": 55,
+        "StepData_StepWriter": 52,
+        "StepToGeom": 48,
+        "STEPConstruct_Part": 46,
+        "IGESToBRep_CurveAndSurface": 45,
+        "IFSelect_SessionFile": 38,
+        "STEPConstruct_RenderingProperties": 38,
+        "STEPConstruct_AP203Context": 37,
+        "IFSelect_ContextModif": 33,
+        "XSControl_Utils": 33,
+        "DE_Wrapper": 32
+      }
+    },
+    {
+      "module": "Xde",
+      "states": {
+        "Emitted": 619,
+        "Manual": 132,
+        "Blocked": 617,
+        "Skipped": 566
+      },
+      "total": 1934,
+      "implemented": 751,
+      "nonSkippedDenominator": 1368,
+      "nonSkippedCoveragePercent": 54.9,
+      "blockedReasons": {
+        "UnmappedValueType": 256,
+        "BorrowedOrOutputReference": 138,
+        "UnselectedHandleTarget": 83,
+        "NonTransientReceiverOwnership": 73,
+        "NonTransientValueConstruction": 34,
+        "RValueReferenceTransfer": 27,
+        "TemplateInstantiationProjection": 5,
+        "RawPointerLifetime": 1
+      },
+      "topBlockedFamilies": {
+        "XCAFDoc_ShapeTool": 41,
+        "XCAFDoc_ColorTool": 35,
+        "XCAFDoc_NotesTool": 32,
+        "XCAFDoc_LayerTool": 27,
+        "XCAFDoc": 24,
+        "STEPCAFControl_Writer": 23,
+        "STEPCAFControl_Reader": 22,
+        "XCAFPrs_DocumentExplorer": 19,
+        "XCAFDoc_DimTolTool": 18,
+        "XCAFDoc_DocumentTool": 17,
+        "XCAFDoc_VisMaterialTool": 15,
+        "XCAFDoc_MaterialTool": 14
+      }
+    },
+    {
+      "module": "Visualization",
+      "states": {
+        "Emitted": 4137,
+        "Manual": 116,
+        "Blocked": 3231,
+        "Skipped": 4106
+      },
+      "total": 11590,
+      "implemented": 4253,
+      "nonSkippedDenominator": 7484,
+      "nonSkippedCoveragePercent": 56.83,
+      "blockedReasons": {
+        "NonTransientReceiverOwnership": 884,
+        "UnmappedValueType": 707,
+        "BorrowedOrOutputReference": 506,
+        "UnselectedHandleTarget": 433,
+        "NonTransientValueConstruction": 257,
+        "RawPointerLifetime": 171,
+        "TemplateInstantiationProjection": 149,
+        "RValueReferenceTransfer": 117,
+        "MissingToolkitProvenance": 7
+      },
+      "topBlockedFamilies": {
+        "AIS_ViewController": 122,
+        "TPrsStd_ConstraintTools": 44,
+        "OpenGl_Context": 42,
+        "OpenGl_ShaderProgram": 41,
+        "Graphic3d_GraduatedTrihedron": 33,
+        "SelectMgr_RectangularFrustum": 33,
+        "Graphic3d_CView": 30,
+        "V3d_View": 29,
+        "V3d_Viewer": 29,
+        "OpenGl_View": 28,
+        "AIS_ColorScale": 27,
+        "Graphic3d_Aspects": 27
+      }
+    },
+    {
+      "module": "IVtk",
+      "states": {
+        "Emitted": 0,
+        "Manual": 0,
+        "Blocked": 0,
+        "Skipped": 47
+      },
+      "total": 47,
+      "implemented": 0,
+      "nonSkippedDenominator": 0,
+      "nonSkippedCoveragePercent": null,
+      "blockedReasons": {},
+      "topBlockedFamilies": {}
+    },
+    {
+      "module": "Draw",
+      "states": {
+        "Emitted": 0,
+        "Manual": 0,
+        "Blocked": 19,
+        "Skipped": 1759
+      },
+      "total": 1778,
+      "implemented": 0,
+      "nonSkippedDenominator": 19,
+      "nonSkippedCoveragePercent": 0.0,
+      "blockedReasons": {
+        "BorrowedOrOutputReference": 19
+      },
+      "topBlockedFamilies": {
+        "QABugs": 19
+      }
+    }
+  ]
+}

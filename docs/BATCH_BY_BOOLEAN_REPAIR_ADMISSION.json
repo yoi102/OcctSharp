@@ -1,0 +1,345 @@
+{
+  "schemaVersion": "1.0",
+  "state": "IMPLEMENTED_LOCAL_GATES_PASSED_FINAL_FREEZE_REQUIRED",
+  "baseline": "BX frozen Preview73",
+  "sdkSourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sdkSourceIdentitySha256": "DA9C861F6C5D2405F40CBE1B39F3C4B0870D72700108C704528F952864605827",
+  "declarations": [
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpErrors#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpErrors",
+      "signature": "BOPAlgo_Options::DumpErrors: void (Standard_OStream &) const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpWarnings#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpWarnings",
+      "signature": "BOPAlgo_Options::DumpWarnings: void (Standard_OStream &) const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::Modified",
+      "signature": "BRepAlgoAPI_BuilderAlgo::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::Generated",
+      "signature": "BRepAlgoAPI_BuilderAlgo::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::IsDeleted",
+      "signature": "BRepAlgoAPI_BuilderAlgo::IsDeleted: bool (const TopoDS_Shape &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetArguments#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetArguments",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetArguments: void (const NCollection_List<TopoDS_Shape> &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetNonDestructive#b#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetNonDestructive: void (const bool)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#",
+      "nativeName": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse",
+      "signature": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse: void ()",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#",
+      "nativeName": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut",
+      "signature": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut: void ()",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Common@F@BRepAlgoAPI_Common#",
+      "nativeName": "BRepAlgoAPI_Common::BRepAlgoAPI_Common",
+      "signature": "BRepAlgoAPI_Common::BRepAlgoAPI_Common: void ()",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasErrors#1",
+      "nativeName": "BOPAlgo_Options::HasErrors",
+      "signature": "BOPAlgo_Options::HasErrors: bool () const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasWarnings#1",
+      "nativeName": "BOPAlgo_Options::HasWarnings",
+      "signature": "BOPAlgo_Options::HasWarnings: bool () const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetRunParallel#b#",
+      "nativeName": "BOPAlgo_Options::SetRunParallel",
+      "signature": "BOPAlgo_Options::SetRunParallel: void (const bool)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Algo@F@Shape#",
+      "nativeName": "BRepAlgoAPI_Algo::Shape",
+      "signature": "BRepAlgoAPI_Algo::Shape: const TopoDS_Shape &()",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_BooleanOperation::Build",
+      "signature": "BRepAlgoAPI_BooleanOperation::Build: void (const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@SetTools#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepAlgoAPI_BooleanOperation::SetTools",
+      "signature": "BRepAlgoAPI_BooleanOperation::SetTools: void (const NCollection_List<TopoDS_Shape> &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Generated#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Generated",
+      "signature": "BRepTools_History::Generated: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &) const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@IsRemoved#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::IsRemoved",
+      "signature": "BRepTools_History::IsRemoved: bool (const TopoDS_Shape &) const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Modified#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Modified",
+      "signature": "BRepTools_History::Modified: const NCollection_List<TopoDS_Shape> &(const TopoDS_Shape &) const",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "ManualToEmitted",
+      "reason": "Initialized call-local Boolean owner or existing nonnull repair-history owner; return copied owning lists/topology and bounded diagnostic text.",
+      "decision": "ADMITTED",
+      "transition": "ManualToEmitted"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse",
+      "signature": "BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse: void (const TopoDS_Shape &, const TopoDS_Shape &, const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "DEFERRED",
+      "reason": "Other feature/legacy caller instances need their own full ownership audit; this batch preserves their direct SDK code.",
+      "decision": "DEFERRED",
+      "transition": "Unchanged"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut",
+      "signature": "BRepAlgoAPI_Cut::BRepAlgoAPI_Cut: void (const TopoDS_Shape &, const TopoDS_Shape &, const Message_ProgressRange &)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "DEFERRED",
+      "reason": "Other feature/legacy caller instances need their own full ownership audit; this batch preserves their direct SDK code.",
+      "decision": "DEFERRED",
+      "transition": "Unchanged"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetFuzzyValue#d#",
+      "nativeName": "BOPAlgo_Options::SetFuzzyValue",
+      "signature": "BOPAlgo_Options::SetFuzzyValue: void (const double)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "DEFERRED",
+      "reason": "Other feature/legacy caller instances need their own full ownership audit; this batch preserves their direct SDK code.",
+      "decision": "DEFERRED",
+      "transition": "Unchanged"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetGlue#$@E@BOPAlgo_GlueEnum#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetGlue",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetGlue: void (const BOPAlgo_GlueEnum)",
+      "baselineDisposition": "Manual",
+      "proposedDecision": "DEFERRED",
+      "reason": "Other feature/legacy caller instances need their own full ownership audit; this batch preserves their direct SDK code.",
+      "decision": "DEFERRED",
+      "transition": "Unchanged"
+    }
+  ],
+  "prerequisites": [],
+  "reused": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetToFillHistory#b#",
+      "nativeName": "BRepAlgoAPI_BuilderAlgo::SetToFillHistory",
+      "signature": "BRepAlgoAPI_BuilderAlgo::SetToFillHistory: void (const bool)",
+      "baselineDisposition": "Emitted",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_Command::IsDone",
+      "signature": "BRepBuilderAPI_Command::IsDone: bool () const",
+      "baselineDisposition": "Manual",
+      "decision": "REUSED_NO_MIGRATION_CREDIT"
+    }
+  ],
+  "generatedSdkDelta": 0,
+  "manualToEmitted": 19,
+  "manualDelta": -19,
+  "affectedGeneratedFiles": [],
+  "callerFiles": [
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/BooleanTopologyHistory.cpp",
+      "sha256": "C9FF26ABEC16F930A4461F79401894A783FBD8C6CEABC064BE811F034D31A08F",
+      "matchedFamilies": [
+        "BRepAlgoAPI_BooleanOperation",
+        "BRepAlgoAPI_Common",
+        "BRepAlgoAPI_Cut",
+        "BRepAlgoAPI_Fuse"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/RepairExecution.cpp",
+      "sha256": "FFF2E8A5B5041BB0135C78E8F6E272AE704C5CA8950B77DEE9CD580ABE32FF55",
+      "reason": "History receiver reached indirectly through the existing private Outcome owner"
+    }
+  ],
+  "unchangedRelevantCallers": [
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Features.cpp",
+      "sha256": "1FF0E42E379B3E4271B6295DCA3D8F79B9C58603BBFFE0E4822C409C24A198A3",
+      "matchedFamilies": [
+        "BRepAlgoAPI_BooleanOperation",
+        "BRepAlgoAPI_Common",
+        "BRepAlgoAPI_Cut",
+        "BRepAlgoAPI_Fuse",
+        "BRepTools_History"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Inspection.cpp",
+      "sha256": "524811FAA7D28416AEFE020DC18398E767D43F4C73C5EF5AB874638506B8165F",
+      "matchedFamilies": [
+        "BRepAlgoAPI_Common"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/LocalDraft.cpp",
+      "sha256": "67D22B6243A3E91C4690851CC5BDFB7DBC672702F082539E5CEE8C26C0A7491F",
+      "matchedFamilies": [
+        "BRepTools_History"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Operations.cpp",
+      "sha256": "54314ED1DD677872C8AECADA3B53BB7A3C98BE2196BE5CBCC43ADFA6F9E26B69",
+      "matchedFamilies": [
+        "BRepAlgoAPI_BooleanOperation",
+        "BRepAlgoAPI_Common",
+        "BRepAlgoAPI_Cut",
+        "BRepAlgoAPI_Fuse"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/Repair.hxx",
+      "sha256": "AA8A65EBABCFB79D12BE8A508D24C669954FEBD6C83B6C4050816DE2F9335129",
+      "matchedFamilies": [
+        "BRepTools_History"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Modeling/RibSlotFeatures.cpp",
+      "sha256": "26E2BEB401FFEC26080AA4BD84419D7DE6327AF7597CD524B3605E303C2AE9E3",
+      "matchedFamilies": [
+        "BRepAlgoAPI_Common",
+        "BRepAlgoAPI_Cut",
+        "BRepAlgoAPI_Fuse"
+      ]
+    },
+    {
+      "path": "src/OcctSharp.Native/src/Surfaces/SurfaceCurves.cpp",
+      "sha256": "34DF3D2790CA5A8ED41D92E00B911DED19DED97ACCC1EF3093700DFFC0344D65",
+      "matchedFamilies": [
+        "BRepAlgoAPI_Common"
+      ]
+    }
+  ],
+  "outcome": "Bounded detached SDK errors/warnings plus Boolean-to-repair public workflow retaining split/shared/deleted/all successor paths, scoped identities, independent topology, failure rejection and actual STEP/Viewer readback.",
+  "diagnosticBudget": {
+    "perKindBytes": 65536,
+    "atomicFailure": true
+  },
+  "topologyListBudget": 1000000,
+  "supportingManualCredit": "BRepBuilderAPI_Command::IsDone remains Manual; emitted helper source comments identify it but manifest SourceStableIds exclude it.",
+  "historySourceDomain": "Nonnull FACE/EDGE/VERTEX/SOLID as the fixed OCCT8.0.1 IsSupportedType specifies; container/null sources reject before SDK assertions."
+}

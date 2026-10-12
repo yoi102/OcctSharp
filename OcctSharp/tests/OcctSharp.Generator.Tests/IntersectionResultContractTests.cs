@@ -1,0 +1,10 @@
+using OcctSharp.Generator.Emission;
+using OcctSharp.Generator.Model;
+using OcctSharp.Generator.Transformation;
+namespace OcctSharp.Generator.Tests;
+public sealed class IntersectionResultContractTests {
+ static ClosedWorkflowOperationContract Contract(bool surface)=>surface?ClosedWorkflowOperationContract.SurfaceIntersections:ClosedWorkflowOperationContract.RayResults;
+ static BindingDeclaration Declaration(CopiedCollectionOperationContract.Operation op,bool surface)=>new(op.StableId,op.NativeName,op.StableId=="c:@S@IntCurvesFace_ShapeIntersector@F@IntCurvesFace_ShapeIntersector#"?BindingDeclarationKind.Constructor:BindingDeclarationKind.Method,"Test.hxx",1,1){NativeSignature=op.Signature,Access=BindingAccess.Public,ProductModule=surface?OcctProductModule.Geometry:OcctProductModule.Modeling};
+ [Theory][InlineData(false)][InlineData(true)]public void ExactIntersectionContractsRejectSignatureAndReceiverDrift(bool surface){var contract=Contract(surface);foreach(var op in contract.Operations.Values){var d=Declaration(op,surface);Assert.True(contract.Contains(d));Assert.False(contract.Contains(d with{NativeSignature=d.NativeSignature+" "}));Assert.False(contract.Contains(d with{Access=BindingAccess.Protected}));Assert.False(contract.Contains(d with{IsDeleted=true}));Assert.False(contract.Contains(d with{IsVariadic=true}));Assert.False(contract.Contains(d with{SupportState=BindingSupportState.Manual}));}}
+ [Theory][InlineData(false,13)][InlineData(true,3)]public void CoupledProfilesRequireCompleteExactClosureAndEmitDeterministically(bool surface,int count){var contract=Contract(surface);var rows=contract.Operations.Values.Select(x=>Declaration(x,surface)).ToArray();var a=ClosedWorkflowOperationEmitter.Emit("8.0.1",new(rows),contract);var b=ClosedWorkflowOperationEmitter.Emit("8.0.1",new(rows.Reverse()),contract);Assert.Equal(3,a.Files.Count);Assert.Equal(count,a.SourceStableIds.Count);Assert.Equal(a.Files.Select(x=>x.Content),b.Files.Select(x=>x.Content));Assert.Throws<InvalidDataException>(()=>ClosedWorkflowOperationEmitter.Emit("8.0.1",new(rows.Skip(1)),contract));}
+}
